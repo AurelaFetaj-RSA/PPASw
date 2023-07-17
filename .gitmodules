@@ -1,0 +1,3 @@
+[submodule "ConfigurationTool"]
+	path = ConfigurationTool
+	url = https://github.com/Robot-System-Automation/ConfigurationTool
