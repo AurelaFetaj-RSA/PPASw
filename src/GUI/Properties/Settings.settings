@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GUI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="UpdateGUILed" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5000</Value>
+    </Setting>
+    <Setting Name="SplashScreenFilepath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\Work\Github\FUTURE_SERVER\FutureServerFramework\GUI\bin\Debug\splash.jpg</Value>
+    </Setting>
+    <Setting Name="RSAUserRecipePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\PRODUCTION\Programs\R2</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
