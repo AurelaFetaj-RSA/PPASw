@@ -736,7 +736,7 @@
     <value>Bottom, Left, Right</value>
   </data>
   <data name="dataGridViewRobotConsole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 371</value>
+    <value>18, 373</value>
   </data>
   <data name="dataGridViewRobotConsole.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>62</value>
@@ -1102,7 +1102,7 @@
     <value>Bottom, Left, Right</value>
   </data>
   <data name="dataGridViewOUAConsole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 371</value>
+    <value>15, 373</value>
   </data>
   <data name="dataGridViewOUAConsole.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>62</value>
@@ -1420,7 +1420,7 @@
     <value>62</value>
   </data>
   <data name="dataGridViewRSWareUserConsole.Size" type="System.Drawing.Size, System.Drawing">
-    <value>36085, 180</value>
+    <value>36177, 180</value>
   </data>
   <data name="dataGridViewRSWareUserConsole.TabIndex" type="System.Int32, mscorlib">
     <value>126</value>
@@ -2167,7 +2167,7 @@
     <value>Verdana, 12pt</value>
   </data>
   <data name="tabControlAddNewRecipe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 28</value>
+    <value>20, 29</value>
   </data>
   <data name="tabControlAddNewRecipe.Size" type="System.Drawing.Size, System.Drawing">
     <value>580, 600</value>
@@ -4962,7 +4962,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageHide.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="tabPageHelp.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 129</value>
@@ -5003,7 +5003,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageHelp.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tabPageSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 129</value>
@@ -5044,7 +5044,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageSettings.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5115,7 +5115,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;TabPageDiagnostic.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="tabPage4.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 129</value>
@@ -5156,7 +5156,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="tabPageConsole.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 129</value>
@@ -5194,7 +5194,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageConsole.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>0</value>
   </data>
   <data name="tabPageRecipe.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 129</value>

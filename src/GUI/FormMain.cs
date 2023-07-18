@@ -60,6 +60,7 @@ namespace GUI
             _splashScreen?.WriteOnTextboxAsync($"Update GUI syncrozionation Thread Started");
 
             tabControlMain.SelectedPage = tabPageMain;
+
         }
 
         public void Start()
