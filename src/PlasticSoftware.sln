@@ -3,13 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConfigurationTool", "ConfigurationTool", "{1BB7F22D-6EEB-49F6-BF79-B69A390A2B27}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Utils", "Utils", "{7A4AAE7D-B55D-40A1-88BA-F64FC73764D4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RSACommon", "..\ConfigurationTool\RSACommon\RSACommon\RSACommon.csproj", "{AA7764F7-D3A9-42FD-9EEF-0AB1424B14E8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roman", "..\..\FUTURE_SERVER\FutureServerFramework\GUI\Roman.csproj", "{F856DBE4-EED1-4F71-BEFB-CFC77870D393}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,18 +29,6 @@ Global
 		{AA7764F7-D3A9-42FD-9EEF-0AB1424B14E8}.Release|x64.Build.0 = Release|x64
 		{AA7764F7-D3A9-42FD-9EEF-0AB1424B14E8}.Release|x86.ActiveCfg = Release|Any CPU
 		{AA7764F7-D3A9-42FD-9EEF-0AB1424B14E8}.Release|x86.Build.0 = Release|Any CPU
-		{F856DBE4-EED1-4F71-BEFB-CFC77870D393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F856DBE4-EED1-4F71-BEFB-CFC77870D393}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F856DBE4-EED1-4F71-BEFB-CFC77870D393}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{F856DBE4-EED1-4F71-BEFB-CFC77870D393}.Debug|x64.Build.0 = Debug|Any CPU
-		{F856DBE4-EED1-4F71-BEFB-CFC77870D393}.Debug|x86.ActiveCfg = Debug|x86
-		{F856DBE4-EED1-4F71-BEFB-CFC77870D393}.Debug|x86.Build.0 = Debug|x86
-		{F856DBE4-EED1-4F71-BEFB-CFC77870D393}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F856DBE4-EED1-4F71-BEFB-CFC77870D393}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F856DBE4-EED1-4F71-BEFB-CFC77870D393}.Release|x64.ActiveCfg = Release|Any CPU
-		{F856DBE4-EED1-4F71-BEFB-CFC77870D393}.Release|x64.Build.0 = Release|Any CPU
-		{F856DBE4-EED1-4F71-BEFB-CFC77870D393}.Release|x86.ActiveCfg = Release|x86
-		{F856DBE4-EED1-4F71-BEFB-CFC77870D393}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
