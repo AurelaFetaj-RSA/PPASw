@@ -76,6 +76,7 @@ namespace GUI
             RSACustomEvents.KeepAliveOkEvent += RSACustomEvents_KeepAliveOkEvent;
             RSACustomEvents.ServiceDisconnectionEvent += RSACustomEvents_ServiceDisconnectionEvent;
             RSACustomEvents.AckTimeoutEvent += RSACustomEvents_AckTimeoutEvent;
+
         }
 
         public void StartUpdateTask()
