@@ -26,6 +26,7 @@ using Newtonsoft.Json.Linq;
 using System.Timers;
 using Opc.UaFx;
 using OpcCustom;
+using RSACommon.Service;
 
 namespace GUI
 {
@@ -45,8 +46,6 @@ namespace GUI
         {
             _splashScreen = splashScreen;
             _splashScreen?.WriteOnTextboxAsync($"Initialization...");
-
-            LidorSystems.IntegralUI.Containers.TabControl.License(LidorLicenseKey.Key);
 
             SetEvent();
 
