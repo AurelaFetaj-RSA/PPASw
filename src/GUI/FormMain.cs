@@ -46,6 +46,8 @@ namespace GUI
             _splashScreen = splashScreen;
             _splashScreen?.WriteOnTextboxAsync($"Initialization...");
 
+            LidorSystems.IntegralUI.Containers.TabControl.License(LidorLicenseKey.Key);
+
             SetEvent();
 
             InitCore();
