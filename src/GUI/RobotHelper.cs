@@ -27,30 +27,33 @@ namespace GUI
     public partial class FormMain : Form
     {
         Dictionary<string, DiagnosticWindowsControl> DiagnosticVariableGroupbox = new Dictionary<string, DiagnosticWindowsControl>();
-        public async Task UpdateGraphicsGUI(TimeSpan interval, CancellationTokenSource cancellationToken)
-        {
 
-            //while(true)
-            //{
-            //    if (myCore.ApiSharedList.GetWebSharedUserInstance(myRSAUser) != null)
-            //    {
-            //        //TODO: RSWare è connesso?
-            //        //lbLedUserConnection.State = (myCore.ApiSharedList.GetWebSharedUserInstance(myRSAUser).clientisconnected ) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            //    }
+        //public async Task UpdateGraphicsGUI(TimeSpan interval, CancellationTokenSource cancellationToken)
+        //{
 
-            //    FutureOpcServerCustom service = null;
+        //    //while(true)
+        //    //{
+        //    //    if (myCore.ApiSharedList.GetWebSharedUserInstance(myRSAUser) != null)
+        //    //    {
+        //    //        //TODO: RSWare è connesso?
+        //    //        //lbLedUserConnection.State = (myCore.ApiSharedList.GetWebSharedUserInstance(myRSAUser).clientisconnected ) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+        //    //    }
 
-            //    if ((service = (FutureOpcServerCustom)myCore.FindPerType(typeof(FutureOpcServerCustom))) != null)
-            //        if (service != null)
-            //        {
-            //            //TODO: c'è il client MES connesso?
-            //            //lbLedMESConnection.State = (myCore.OpcServerService.clientisconnected ) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            //        }
-            //    //UpdateRobotLamp();
-            //    await Task.Delay(interval, cancellationToken.Token);
-            //}
-        }
+        //    //    FutureOpcServerCustom service = null;
 
+        //    //    if ((service = (FutureOpcServerCustom)myCore.FindPerType(typeof(FutureOpcServerCustom))) != null)
+        //    //        if (service != null)
+        //    //        {
+        //    //            //TODO: c'è il client MES connesso?
+        //    //            //lbLedMESConnection.State = (myCore.OpcServerService.clientisconnected ) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+        //    //        }
+        //    //    //UpdateRobotLamp();
+        //    //    await Task.Delay(interval, cancellationToken.Token);
+        //    //}
+        //}
+
+
+        /*
         public async Task UpdateDiagnosticGUI(TimeSpan interval, CancellationTokenSource cancellationToken)
         {
 
@@ -70,7 +73,7 @@ namespace GUI
                 await Task.Delay(interval, cancellationToken.Token);
             }
         }
-
+        */
 
         private void StartDiagnosticGUI()
         {
@@ -136,23 +139,24 @@ namespace GUI
             }
         }
 
+        /*
         public async Task UpdateRobotStatus()
         {
-            //int toReadInfo = await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("job_result");
-            //int jobId = await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("job_id");
+            int toReadInfo = await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("job_result");
+            int jobId = await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("job_id");
 
-            //if (toReadInfo != 0)
-            //{
-            //    IService service = myCore.ServiceList.Find(t => t.GetType() == typeof(FutureOpcServerCustom));
+            if (toReadInfo != 0)
+            {
+                IService service = myCore.ServiceList.Find(t => t.GetType() == typeof(FutureOpcServerCustom));
 
-            //    if(service != null)
-            //    {
-            //        (service as FutureOpcServerCustom)?.M2FNodeManager?.SendCommandJobEnded((PasubioCommands)toReadInfo, jobId);
-            //    }
-            //    myRobot.SetVariable("job_result",0);
-            //}
+                if (service != null)
+                {
+                    (service as FutureOpcServerCustom)?.M2FNodeManager?.SendCommandJobEnded((PasubioCommands)toReadInfo, jobId);
+                }
+                myRobot.SetVariable("job_result", 0);
+            }
         }
-
+        */
 
         public void UpdateRobotLamp()
         {

@@ -61,7 +61,6 @@ namespace GUI
             _splashScreen?.WriteOnTextboxAsync($"Update GUI syncrozionation Thread Started");
 
             tabControlMain.SelectedPage = tabPageMain;
-
         }
 
         public void Start()
@@ -83,9 +82,9 @@ namespace GUI
         public void StartUpdateTask()
         {
 
-            Task.Run(async () => await UpdateGraphicsGUI(TimeSpan.FromMilliseconds(Settings.Default.UpdateGUILed), _cancellationTokenSource));
-            Task.Run(async () => await UpdateDiagnosticGUI(TimeSpan.FromMilliseconds(myCore.DiagnosticConfigurator.Configuration.DiagnosticPolling), _cancellationTokenSource));
-            Task.Run(async () => await UpdateRobutStatus(TimeSpan.FromMilliseconds(1000), _cancellationTokenSource));
+            //.Run(async () => await UpdateGraphicsGUI(TimeSpan.FromMilliseconds(Settings.Default.UpdateGUILed), _cancellationTokenSource));
+            //Task.Run(async () => await UpdateDiagnosticGUI(TimeSpan.FromMilliseconds(myCore.DiagnosticConfigurator.Configuration.DiagnosticPolling), _cancellationTokenSource));
+            //Task.Run(async () => await UpdateRobutStatus(TimeSpan.FromMilliseconds(1000), _cancellationTokenSource));
             
         }
 
