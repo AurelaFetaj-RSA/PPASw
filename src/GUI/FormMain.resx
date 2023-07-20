@@ -367,7 +367,7 @@
     <value>splitContainer2.Panel2</value>
   </data>
   <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="splitContainer2.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 43</value>
@@ -395,6 +395,57 @@
   </data>
   <data name="splitContainer2.Panel1MinSize" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="Client.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Client.Location" type="System.Drawing.Point, System.Drawing">
+    <value>524, 78</value>
+  </data>
+  <data name="Client.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 31</value>
+  </data>
+  <data name="Client.TabIndex" type="System.Int32, mscorlib">
+    <value>124</value>
+  </data>
+  <data name="Client.Text" xml:space="preserve">
+    <value>Open Client</value>
+  </data>
+  <data name="&gt;&gt;Client.Name" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="&gt;&gt;Client.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Client.Parent" xml:space="preserve">
+    <value>splitContainer2.Panel2</value>
+  </data>
+  <data name="&gt;&gt;Client.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="openConfigFormTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>524, 41</value>
+  </data>
+  <data name="openConfigFormTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 31</value>
+  </data>
+  <data name="openConfigFormTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>123</value>
+  </data>
+  <data name="openConfigFormTextbox.Text" xml:space="preserve">
+    <value>Open Config</value>
+  </data>
+  <data name="&gt;&gt;openConfigFormTextbox.Name" xml:space="preserve">
+    <value>openConfigFormTextbox</value>
+  </data>
+  <data name="&gt;&gt;openConfigFormTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openConfigFormTextbox.Parent" xml:space="preserve">
+    <value>splitContainer2.Panel2</value>
+  </data>
+  <data name="&gt;&gt;openConfigFormTextbox.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="splitContainer3.Location" type="System.Drawing.Point, System.Drawing">
     <value>24, 318</value>
@@ -562,7 +613,7 @@
     <value>splitContainer2.Panel2</value>
   </data>
   <data name="&gt;&gt;splitContainer3.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;splitContainer2.Panel2.Name" xml:space="preserve">
     <value>splitContainer2.Panel2</value>
@@ -736,7 +787,7 @@
     <value>Bottom, Left, Right</value>
   </data>
   <data name="dataGridViewRobotConsole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 401</value>
+    <value>18, 405</value>
   </data>
   <data name="dataGridViewRobotConsole.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>62</value>
@@ -1102,7 +1153,7 @@
     <value>Bottom, Left, Right</value>
   </data>
   <data name="dataGridViewOUAConsole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 401</value>
+    <value>15, 405</value>
   </data>
   <data name="dataGridViewOUAConsole.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>62</value>
@@ -1420,7 +1471,7 @@
     <value>62</value>
   </data>
   <data name="dataGridViewRSWareUserConsole.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37465, 180</value>
+    <value>37649, 180</value>
   </data>
   <data name="dataGridViewRSWareUserConsole.TabIndex" type="System.Int32, mscorlib">
     <value>126</value>
@@ -2167,7 +2218,7 @@
     <value>Verdana, 12pt</value>
   </data>
   <data name="tabControlAddNewRecipe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 43</value>
+    <value>20, 45</value>
   </data>
   <data name="tabControlAddNewRecipe.Size" type="System.Drawing.Size, System.Drawing">
     <value>580, 600</value>
@@ -5194,7 +5245,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageConsole.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="tabPageRecipe.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 129</value>
@@ -5235,7 +5286,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageRecipe.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="labelLoginLevel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5453,7 +5504,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageMain.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>0</value>
   </data>
   <data name="tabControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>

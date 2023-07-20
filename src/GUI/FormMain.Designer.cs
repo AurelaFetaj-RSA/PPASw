@@ -94,6 +94,8 @@
             this.lbLedSM_M = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLedSMID = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.Client = new System.Windows.Forms.Button();
+            this.openConfigFormTextbox = new System.Windows.Forms.Button();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.handshakeMESLed = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLedRobotConnection = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -456,9 +458,24 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.splitContainer2.Panel2.Controls.Add(this.Client);
+            this.splitContainer2.Panel2.Controls.Add(this.openConfigFormTextbox);
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
             this.splitContainer2.Panel2.Controls.Add(this.splitContainer1);
             this.splitContainer2.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer2_Panel2_Paint);
+            // 
+            // Client
+            // 
+            resources.ApplyResources(this.Client, "Client");
+            this.Client.Name = "Client";
+            this.Client.UseVisualStyleBackColor = true;
+            // 
+            // openConfigFormTextbox
+            // 
+            resources.ApplyResources(this.openConfigFormTextbox, "openConfigFormTextbox");
+            this.openConfigFormTextbox.Name = "openConfigFormTextbox";
+            this.openConfigFormTextbox.UseVisualStyleBackColor = true;
+            this.openConfigFormTextbox.Click += new System.EventHandler(this.openConfigFormTextbox_Click);
             // 
             // splitContainer3
             // 
@@ -2996,14 +3013,14 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageConsole);
+            this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Controls.Add(this.tabPageHide);
             this.tabControlMain.Controls.Add(this.tabPageHelp);
             this.tabControlMain.Controls.Add(this.tabPageSettings);
             this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
             this.tabControlMain.Controls.Add(this.tabPage4);
+            this.tabControlMain.Controls.Add(this.tabPageConsole);
             this.tabControlMain.Controls.Add(this.tabPageRecipe);
-            this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlMain, "tabControlMain");
             controlFormatStyle1.BorderCornerRadius = 5;
@@ -3031,7 +3048,7 @@
             this.tabPageHelp,
             this.tabPageHide});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageConsole;
+            this.tabControlMain.SelectedPage = this.tabPageMain;
             tabPageColorStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle27.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle27.TabImage = ((System.Drawing.Image)(resources.GetObject("tabPageColorStyle27.TabImage")));
@@ -3319,6 +3336,8 @@
         private System.Windows.Forms.Label labelManageRobotCode;
         private System.Windows.Forms.Label labelManageArticleCode;
         private System.Windows.Forms.TextBox textBoxManageArticleName;
+        private System.Windows.Forms.Button openConfigFormTextbox;
+        private System.Windows.Forms.Button Client;
     }
 }
 

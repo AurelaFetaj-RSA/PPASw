@@ -76,20 +76,26 @@ namespace GUI
         {
 
             int xCoord = 10;
-            MatrixPanel diagnosticMatrix = new MatrixPanel(xCoord, 5, this.TabPageDiagnostic.Width - 5, this.TabPageDiagnostic.Height - 150, myCore.DiagnosticConfigurator.Configuration.DiagnosticFormRow, myCore.DiagnosticConfigurator.Configuration.DiagnosticFormColumn, this.TabPageDiagnostic);
 
-            foreach (string value in myCore.DiagnosticConfigurator.VariableList)
+            if(myCore.DiagnosticConfigurator != null && myCore.DiagnosticConfigurator.IsActive)
             {
-                DiagnosticWindowsControl form = new DiagnosticWindowsControl(0, 0, value, null, null);
-                DiagnosticVariableGroupbox[value] = form;
 
-                if (!diagnosticMatrix.AddElements(form, 5, 5))
+                MatrixPanel diagnosticMatrix = new MatrixPanel(xCoord, 5, this.TabPageDiagnostic.Width - 5, this.TabPageDiagnostic.Height - 150, myCore.DiagnosticConfigurator.Configuration.DiagnosticFormRow, myCore.DiagnosticConfigurator.Configuration.DiagnosticFormColumn, this.TabPageDiagnostic);
+
+                foreach (string value in myCore.DiagnosticConfigurator.VariableList)
                 {
-                    MessageBox.Show("Too much Diagnostic Variable for Panel Matrix");
-                    break;
-                }
+                    DiagnosticWindowsControl form = new DiagnosticWindowsControl(0, 0, value, null, null);
+                    DiagnosticVariableGroupbox[value] = form;
 
+                    if (!diagnosticMatrix.AddElements(form, 5, 5))
+                    {
+                        MessageBox.Show("Too much Diagnostic Variable for Panel Matrix");
+                        break;
+                    }
+
+                }
             }
+
         }
 
         public int counter = 0;
