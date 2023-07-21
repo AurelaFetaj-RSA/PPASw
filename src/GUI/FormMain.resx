@@ -787,7 +787,7 @@
     <value>Bottom, Left, Right</value>
   </data>
   <data name="dataGridViewRobotConsole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 405</value>
+    <value>18, 411</value>
   </data>
   <data name="dataGridViewRobotConsole.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>62</value>
@@ -1153,7 +1153,7 @@
     <value>Bottom, Left, Right</value>
   </data>
   <data name="dataGridViewOUAConsole.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 405</value>
+    <value>15, 411</value>
   </data>
   <data name="dataGridViewOUAConsole.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>62</value>
@@ -1471,7 +1471,7 @@
     <value>62</value>
   </data>
   <data name="dataGridViewRSWareUserConsole.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37649, 180</value>
+    <value>37925, 180</value>
   </data>
   <data name="dataGridViewRSWareUserConsole.TabIndex" type="System.Int32, mscorlib">
     <value>126</value>
@@ -2218,7 +2218,7 @@
     <value>Verdana, 12pt</value>
   </data>
   <data name="tabControlAddNewRecipe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 45</value>
+    <value>20, 48</value>
   </data>
   <data name="tabControlAddNewRecipe.Size" type="System.Drawing.Size, System.Drawing">
     <value>580, 600</value>

@@ -40,6 +40,8 @@ namespace GUI
         private LidorSystems.IntegralUI.Containers.TabPage lastPage { get; set; } = null;
         private readonly SplashScreen _splashScreen = null;
         private Form _configForm { get; set; } = null;
+        private Form _clientForm { get; set; } = null;
+        
 
         CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
         public FormMain(SplashScreen splashScreen)
@@ -189,6 +191,14 @@ namespace GUI
             {
                 _splashScreen?.WriteOnTextboxAsync($"Service: {service.Name} loaded");
             }
+
+            OpcClientService ccService = (OpcClientService)myCore.FindPerType(typeof(OpcClientService));
+
+            if(ccService != null) 
+            {
+                ccService.SetObjectData(new PlasticOpcClientConfig().Config());
+            }
+
 
             /*
             myRSAUser = new RSWareUser()
@@ -422,8 +432,24 @@ namespace GUI
             if (_configForm == null)
                 _configForm = new ServiceSetup();
 
-            _configForm.Activate();
             _configForm.Show();
+            _configForm.Activate();
+
+        }
+
+        private void Client_Click(object sender, EventArgs e)
+        {
+
+
+            if (_clientForm == null || _clientForm.IsDisposed)
+            {
+                OpcClientService clientService = (OpcClientService)myCore.FindPerType(typeof(OpcClientService));
+                _clientForm = new ClientTest(clientService);
+            }
+
+            _clientForm.Show();
+            _clientForm.Activate();
+
         }
     }
 }

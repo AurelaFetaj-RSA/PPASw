@@ -469,6 +469,7 @@
             resources.ApplyResources(this.Client, "Client");
             this.Client.Name = "Client";
             this.Client.UseVisualStyleBackColor = true;
+            this.Client.Click += new System.EventHandler(this.Client_Click);
             // 
             // openConfigFormTextbox
             // 
