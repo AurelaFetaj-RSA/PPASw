@@ -29,53 +29,43 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle8 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
+            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle7 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle2 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle3 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Nascondi");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle2 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle4 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle5 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle6 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Varie");
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle7 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle3 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle8 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle9 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle10 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Impostazioni");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle4 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle11 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle12 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle13 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Diagnostic");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle5 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle14 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle15 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle16 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("I/O");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle6 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle17 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle18 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle19 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Console ");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle7 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle20 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle21 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle22 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Ricette");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle8 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle23 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle24 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle25 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Principale");
             LidorSystems.IntegralUI.Style.ControlColorStyle controlColorStyle1 = new LidorSystems.IntegralUI.Style.ControlColorStyle();
-            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle1 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
+            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle9 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemColorStyle toolItemColorStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolItemColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle9 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
@@ -85,73 +75,12 @@
             LidorSystems.IntegralUI.Controls.ToolButton toolButton1 = new LidorSystems.IntegralUI.Controls.ToolButton();
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolTipStyle toolTipStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolTipStyle();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.lbLedSM_Pr = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedSM_Err = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedSM_Setup = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedSM_Em = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedSM_ML = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedSM_M = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedSMID = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.handshakeMESLed = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedRobotConnection = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedUserConnection = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedMESConnection = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.splitContainerRobot = new System.Windows.Forms.SplitContainer();
-            this.ReconnectionRobotBtn = new System.Windows.Forms.Button();
-            this.memoryDumpBtn = new System.Windows.Forms.Button();
-            this.labelReceiveRobotConsole = new System.Windows.Forms.Label();
-            this.dataGridViewRobotConsole = new System.Windows.Forms.DataGridView();
-            this.buttonSendCommandRobotConsole = new System.Windows.Forms.Button();
-            this.textBoxCommandRobotConsole = new System.Windows.Forms.TextBox();
-            this.labelCommandOUAConsole = new System.Windows.Forms.Label();
-            this.labelIDRobotConsole = new System.Windows.Forms.Label();
-            this.comboBoxIDRobotConsole = new System.Windows.Forms.ComboBox();
-            this.splitContainerOPENUA = new System.Windows.Forms.SplitContainer();
-            this.textBoxCommandMsgOUAConsole = new System.Windows.Forms.TextBox();
-            this.labelMessageOUAConsole = new System.Windows.Forms.Label();
-            this.labelIDResultOUAConsole = new System.Windows.Forms.Label();
-            this.comboBoxIDResultOUAConsole = new System.Windows.Forms.ComboBox();
-            this.labelReceiveOUAConsole = new System.Windows.Forms.Label();
-            this.dataGridViewOUAConsole = new System.Windows.Forms.DataGridView();
-            this.buttonSendResetAckOUAConsole = new System.Windows.Forms.Button();
-            this.buttonSendSetAckOUAConsole = new System.Windows.Forms.Button();
-            this.buttonSendCommandOUAConsole = new System.Windows.Forms.Button();
-            this.textBoxLeatherIDOUAConsole = new System.Windows.Forms.TextBox();
-            this.labelIDLeatherOUAConsole = new System.Windows.Forms.Label();
-            this.labelIDCommandOUAConsole = new System.Windows.Forms.Label();
-            this.comboBoxIDCommandOUAConsole = new System.Windows.Forms.ComboBox();
-            this.splitContainerRSWare = new System.Windows.Forms.SplitContainer();
-            this.labelReceiveUserConsole = new System.Windows.Forms.Label();
-            this.dataGridViewRSWareUserConsole = new System.Windows.Forms.DataGridView();
-            this.buttonSendResetAckUserConsole = new System.Windows.Forms.Button();
-            this.buttonSendSetAckUserConsole = new System.Windows.Forms.Button();
-            this.buttonSendCommandUserConsole = new System.Windows.Forms.Button();
-            this.textBoxCommandParametersUserConsole = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelIDCommandConsole = new System.Windows.Forms.Label();
-            this.comboBoxIDCommandUserConsole = new System.Windows.Forms.ComboBox();
-            this.labelIDUserConsole = new System.Windows.Forms.Label();
-            this.comboBoxIDUserConsole = new System.Windows.Forms.ComboBox();
-            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.tabControlAddNewRecipe = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.comboBoxManageModelName = new System.Windows.Forms.ComboBox();
-            this.buttonInsertArticle = new System.Windows.Forms.Button();
-            this.labelManageRobotCode = new System.Windows.Forms.Label();
-            this.labelManageArticleCode = new System.Windows.Forms.Label();
-            this.textBoxManageArticleName = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabControlSearchByArticle = new System.Windows.Forms.TabControl();
-            this.tabPageFindArticle = new System.Windows.Forms.TabPage();
-            this.buttonRefreshByArticleName = new System.Windows.Forms.Button();
-            this.buttonSearchByArticleName = new System.Windows.Forms.Button();
-            this.labelArticleName = new System.Windows.Forms.Label();
-            this.textBoxSearchArticle = new System.Windows.Forms.TextBox();
+            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle6 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
+            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle5 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
+            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle4 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
+            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle3 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
+            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle2 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
+            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle1 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.splitContainerIO = new System.Windows.Forms.SplitContainer();
             this.lbLed2046 = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -250,764 +179,121 @@
             this.lbLed1003 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed1004 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed1001 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.trueTransparentPanelAuto = new LidorSystems.IntegralUI.Controls.TrueTransparentPanel();
+            this.transparentPanelM1 = new LidorSystems.IntegralUI.Controls.TransparentPanel();
+            this.handshakeMESLed = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedRobotConnection = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedUserConnection = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedMESConnection = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.tabPageHide = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageHelp = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageSettings = new LidorSystems.IntegralUI.Containers.TabPage();
             this.TabPageDiagnostic = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageConsole = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageRecipe = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageMain = new LidorSystems.IntegralUI.Containers.TabPage();
             this.labelLoginLevel = new System.Windows.Forms.Label();
-            this.buttonParking = new System.Windows.Forms.Button();
-            this.buttonLogin = new System.Windows.Forms.Button();
-            this.buttonStopAuto = new System.Windows.Forms.Button();
             this.labelDateTime = new System.Windows.Forms.Label();
-            this.buttonStartAuto = new System.Windows.Forms.Button();
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
-            this.splitContainer4.Panel2.SuspendLayout();
-            this.splitContainer4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerRobot)).BeginInit();
-            this.splitContainerRobot.Panel2.SuspendLayout();
-            this.splitContainerRobot.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRobotConsole)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerOPENUA)).BeginInit();
-            this.splitContainerOPENUA.Panel2.SuspendLayout();
-            this.splitContainerOPENUA.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOUAConsole)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerRSWare)).BeginInit();
-            this.splitContainerRSWare.Panel2.SuspendLayout();
-            this.splitContainerRSWare.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRSWareUserConsole)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
-            this.splitContainer5.Panel2.SuspendLayout();
-            this.splitContainer5.SuspendLayout();
-            this.tabControlAddNewRecipe.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabControlSearchByArticle.SuspendLayout();
-            this.tabPageFindArticle.SuspendLayout();
+            this.comboBoxM1PrgName = new System.Windows.Forms.ComboBox();
+            this.checkBoxM1Inclusion = new System.Windows.Forms.CheckBox();
+            this.lbLedM1Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.labelM1Param1Value = new System.Windows.Forms.Label();
+            this.labelM1Param1Name = new System.Windows.Forms.Label();
+            this.lbLedM1Ready = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedM1HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.labelM1Name = new System.Windows.Forms.Label();
+            this.transparentPanelM2 = new LidorSystems.IntegralUI.Controls.TransparentPanel();
+            this.labelM2Name = new System.Windows.Forms.Label();
+            this.lbLedM2HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedM2Ready = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.labelM2Param1Value = new System.Windows.Forms.Label();
+            this.labelM2Param1Name = new System.Windows.Forms.Label();
+            this.lbLedM2Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.checkBoxM2Inclusion = new System.Windows.Forms.CheckBox();
+            this.comboBoxM2PrgName = new System.Windows.Forms.ComboBox();
+            this.transparentPanelM3 = new LidorSystems.IntegralUI.Controls.TransparentPanel();
+            this.labelM3Name = new System.Windows.Forms.Label();
+            this.lbLedM3HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedM3Ready = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.labelM3Param1Value = new System.Windows.Forms.Label();
+            this.labelM3Param1Name = new System.Windows.Forms.Label();
+            this.lbLedM3Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.checkBoxM3Inclusion = new System.Windows.Forms.CheckBox();
+            this.comboBoxM3PrgName = new System.Windows.Forms.ComboBox();
+            this.transparentPanelM4 = new LidorSystems.IntegralUI.Controls.TransparentPanel();
+            this.labelM4Name = new System.Windows.Forms.Label();
+            this.lbLedM4HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedM4Ready = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.labelM4Param1Value = new System.Windows.Forms.Label();
+            this.labelM4Param1Name = new System.Windows.Forms.Label();
+            this.lbLedM4Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.checkBoxM4Inclusion = new System.Windows.Forms.CheckBox();
+            this.comboBoxM4PrgName = new System.Windows.Forms.ComboBox();
+            this.transparentPanelM5 = new LidorSystems.IntegralUI.Controls.TransparentPanel();
+            this.labelM5Name = new System.Windows.Forms.Label();
+            this.lbLedM5HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedM5Ready = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.labelM5Param1Value = new System.Windows.Forms.Label();
+            this.labelM5Param1Name = new System.Windows.Forms.Label();
+            this.lbLedM5Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.checkBoxM5Inclusion = new System.Windows.Forms.CheckBox();
+            this.comboBoxM5PrgName = new System.Windows.Forms.ComboBox();
+            this.transparentPanelM6 = new LidorSystems.IntegralUI.Controls.TransparentPanel();
+            this.labelM6Name = new System.Windows.Forms.Label();
+            this.lbLedM6HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedM6Ready = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.labelM6Param1Value = new System.Windows.Forms.Label();
+            this.labelM6Param1Name = new System.Windows.Forms.Label();
+            this.lbLedM6Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.checkBoxM6Inclusion = new System.Windows.Forms.CheckBox();
+            this.comboBoxM6PrgName = new System.Windows.Forms.ComboBox();
+            this.lbLedAirPressure = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedPLCConnection = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedLineStatus = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedEmergency = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbButtonPause = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.lbButtonStartStop = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.transparentPanelLine = new LidorSystems.IntegralUI.Controls.TransparentPanel();
+            this.lbLedLineReady = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.labelPieceCounter = new LidorSystems.IntegralUI.Controls.Label();
+            this.buttonResetCounter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerIO)).BeginInit();
             this.splitContainerIO.Panel2.SuspendLayout();
             this.splitContainerIO.SuspendLayout();
-            this.TabPageDiagnostic.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trueTransparentPanelAuto)).BeginInit();
+            this.trueTransparentPanelAuto.ContentPanel.SuspendLayout();
+            this.trueTransparentPanelAuto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transparentPanelM1)).BeginInit();
+            this.transparentPanelM1.ContentPanel.SuspendLayout();
+            this.transparentPanelM1.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.tabPageConsole.SuspendLayout();
-            this.tabPageRecipe.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).BeginInit();
             this.tabControlMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transparentPanelM2)).BeginInit();
+            this.transparentPanelM2.ContentPanel.SuspendLayout();
+            this.transparentPanelM2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transparentPanelM3)).BeginInit();
+            this.transparentPanelM3.ContentPanel.SuspendLayout();
+            this.transparentPanelM3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transparentPanelM4)).BeginInit();
+            this.transparentPanelM4.ContentPanel.SuspendLayout();
+            this.transparentPanelM4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transparentPanelM5)).BeginInit();
+            this.transparentPanelM5.ContentPanel.SuspendLayout();
+            this.transparentPanelM5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transparentPanelM6)).BeginInit();
+            this.transparentPanelM6.ContentPanel.SuspendLayout();
+            this.transparentPanelM6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transparentPanelLine)).BeginInit();
+            this.transparentPanelLine.ContentPanel.SuspendLayout();
+            this.transparentPanelLine.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.labelPieceCounter)).BeginInit();
             this.SuspendLayout();
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.splitContainer1, "splitContainer1");
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Khaki;
-            resources.ApplyResources(this.splitContainer1.Panel1, "splitContainer1.Panel1");
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Cornsilk;
-            this.splitContainer1.Panel2.Controls.Add(this.lbLedSM_Pr);
-            this.splitContainer1.Panel2.Controls.Add(this.lbLedSM_Err);
-            this.splitContainer1.Panel2.Controls.Add(this.lbLedSM_Setup);
-            this.splitContainer1.Panel2.Controls.Add(this.lbLedSM_Em);
-            this.splitContainer1.Panel2.Controls.Add(this.lbLedSM_ML);
-            this.splitContainer1.Panel2.Controls.Add(this.lbLedSM_M);
-            this.splitContainer1.Panel2.Controls.Add(this.lbLedSMID);
-            // 
-            // lbLedSM_Pr
-            // 
-            this.lbLedSM_Pr.BackColor = System.Drawing.Color.Cornsilk;
-            this.lbLedSM_Pr.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedSM_Pr, "lbLedSM_Pr");
-            this.lbLedSM_Pr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLedSM_Pr.Label = "produzione";
-            this.lbLedSM_Pr.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedSM_Pr.LedColor = System.Drawing.Color.Lime;
-            this.lbLedSM_Pr.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLedSM_Pr.Name = "lbLedSM_Pr";
-            this.lbLedSM_Pr.Renderer = null;
-            this.lbLedSM_Pr.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedSM_Pr.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedSM_Err
-            // 
-            this.lbLedSM_Err.BackColor = System.Drawing.Color.Cornsilk;
-            this.lbLedSM_Err.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedSM_Err, "lbLedSM_Err");
-            this.lbLedSM_Err.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLedSM_Err.Label = "errore";
-            this.lbLedSM_Err.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedSM_Err.LedColor = System.Drawing.Color.Lime;
-            this.lbLedSM_Err.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLedSM_Err.Name = "lbLedSM_Err";
-            this.lbLedSM_Err.Renderer = null;
-            this.lbLedSM_Err.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedSM_Err.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedSM_Setup
-            // 
-            this.lbLedSM_Setup.BackColor = System.Drawing.Color.Cornsilk;
-            this.lbLedSM_Setup.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedSM_Setup, "lbLedSM_Setup");
-            this.lbLedSM_Setup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLedSM_Setup.Label = "setup";
-            this.lbLedSM_Setup.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedSM_Setup.LedColor = System.Drawing.Color.Lime;
-            this.lbLedSM_Setup.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLedSM_Setup.Name = "lbLedSM_Setup";
-            this.lbLedSM_Setup.Renderer = null;
-            this.lbLedSM_Setup.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedSM_Setup.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedSM_Em
-            // 
-            this.lbLedSM_Em.BackColor = System.Drawing.Color.Cornsilk;
-            this.lbLedSM_Em.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedSM_Em, "lbLedSM_Em");
-            this.lbLedSM_Em.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLedSM_Em.Label = "emergenza";
-            this.lbLedSM_Em.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedSM_Em.LedColor = System.Drawing.Color.Lime;
-            this.lbLedSM_Em.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLedSM_Em.Name = "lbLedSM_Em";
-            this.lbLedSM_Em.Renderer = null;
-            this.lbLedSM_Em.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedSM_Em.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedSM_ML
-            // 
-            this.lbLedSM_ML.BackColor = System.Drawing.Color.Cornsilk;
-            this.lbLedSM_ML.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedSM_ML, "lbLedSM_ML");
-            this.lbLedSM_ML.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLedSM_ML.Label = "mancato carico";
-            this.lbLedSM_ML.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedSM_ML.LedColor = System.Drawing.Color.Lime;
-            this.lbLedSM_ML.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLedSM_ML.Name = "lbLedSM_ML";
-            this.lbLedSM_ML.Renderer = null;
-            this.lbLedSM_ML.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedSM_ML.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedSM_M
-            // 
-            this.lbLedSM_M.BackColor = System.Drawing.Color.Cornsilk;
-            this.lbLedSM_M.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedSM_M, "lbLedSM_M");
-            this.lbLedSM_M.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLedSM_M.Label = "manutenzione";
-            this.lbLedSM_M.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedSM_M.LedColor = System.Drawing.Color.Lime;
-            this.lbLedSM_M.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLedSM_M.Name = "lbLedSM_M";
-            this.lbLedSM_M.Renderer = null;
-            this.lbLedSM_M.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedSM_M.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedSMID
-            // 
-            this.lbLedSMID.BackColor = System.Drawing.Color.Cornsilk;
-            this.lbLedSMID.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedSMID, "lbLedSMID");
-            this.lbLedSMID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLedSMID.Label = "idle";
-            this.lbLedSMID.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedSMID.LedColor = System.Drawing.Color.Lime;
-            this.lbLedSMID.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLedSMID.Name = "lbLedSMID";
-            this.lbLedSMID.Renderer = null;
-            this.lbLedSMID.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedSMID.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.splitContainer2, "splitContainer2");
-            this.splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.BackColor = System.Drawing.Color.DarkRed;
-            resources.ApplyResources(this.splitContainer2.Panel1, "splitContainer2.Panel1");
-            this.splitContainer2.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer2.Panel2.Controls.Add(this.splitContainer1);
-            this.splitContainer2.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer2_Panel2_Paint);
-            // 
-            // splitContainer3
-            // 
-            this.splitContainer3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.splitContainer3, "splitContainer3");
-            this.splitContainer3.Name = "splitContainer3";
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.BackColor = System.Drawing.Color.Khaki;
-            resources.ApplyResources(this.splitContainer3.Panel1, "splitContainer3.Panel1");
-            this.splitContainer3.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.BackColor = System.Drawing.Color.Cornsilk;
-            this.splitContainer3.Panel2.Controls.Add(this.handshakeMESLed);
-            this.splitContainer3.Panel2.Controls.Add(this.lbLedRobotConnection);
-            this.splitContainer3.Panel2.Controls.Add(this.lbLedUserConnection);
-            this.splitContainer3.Panel2.Controls.Add(this.lbLedMESConnection);
-            // 
-            // handshakeMESLed
-            // 
-            this.handshakeMESLed.BackColor = System.Drawing.Color.Cornsilk;
-            this.handshakeMESLed.BlinkInterval = 500;
-            resources.ApplyResources(this.handshakeMESLed, "handshakeMESLed");
-            this.handshakeMESLed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.handshakeMESLed.Label = "MES HandShake Last Message";
-            this.handshakeMESLed.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.handshakeMESLed.LedColor = System.Drawing.Color.Lime;
-            this.handshakeMESLed.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.handshakeMESLed.Name = "handshakeMESLed";
-            this.handshakeMESLed.Renderer = null;
-            this.handshakeMESLed.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            this.handshakeMESLed.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedRobotConnection
-            // 
-            this.lbLedRobotConnection.BackColor = System.Drawing.Color.Cornsilk;
-            this.lbLedRobotConnection.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedRobotConnection, "lbLedRobotConnection");
-            this.lbLedRobotConnection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLedRobotConnection.Label = "connessione robot";
-            this.lbLedRobotConnection.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedRobotConnection.LedColor = System.Drawing.Color.Lime;
-            this.lbLedRobotConnection.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLedRobotConnection.Name = "lbLedRobotConnection";
-            this.lbLedRobotConnection.Renderer = null;
-            this.lbLedRobotConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            this.lbLedRobotConnection.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedUserConnection
-            // 
-            this.lbLedUserConnection.BackColor = System.Drawing.Color.Cornsilk;
-            this.lbLedUserConnection.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedUserConnection, "lbLedUserConnection");
-            this.lbLedUserConnection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLedUserConnection.Label = "connessione RSWare";
-            this.lbLedUserConnection.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedUserConnection.LedColor = System.Drawing.Color.Lime;
-            this.lbLedUserConnection.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLedUserConnection.Name = "lbLedUserConnection";
-            this.lbLedUserConnection.Renderer = null;
-            this.lbLedUserConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            this.lbLedUserConnection.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedMESConnection
-            // 
-            this.lbLedMESConnection.BackColor = System.Drawing.Color.Cornsilk;
-            this.lbLedMESConnection.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedMESConnection, "lbLedMESConnection");
-            this.lbLedMESConnection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLedMESConnection.Label = "connessione MES";
-            this.lbLedMESConnection.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedMESConnection.LedColor = System.Drawing.Color.Lime;
-            this.lbLedMESConnection.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLedMESConnection.Name = "lbLedMESConnection";
-            this.lbLedMESConnection.Renderer = null;
-            this.lbLedMESConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            this.lbLedMESConnection.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // splitContainer4
-            // 
-            this.splitContainer4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.splitContainer4, "splitContainer4");
-            this.splitContainer4.Name = "splitContainer4";
-            // 
-            // splitContainer4.Panel1
-            // 
-            this.splitContainer4.Panel1.BackColor = System.Drawing.Color.DarkRed;
-            resources.ApplyResources(this.splitContainer4.Panel1, "splitContainer4.Panel1");
-            this.splitContainer4.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
-            // 
-            // splitContainer4.Panel2
-            // 
-            this.splitContainer4.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.splitContainer4.Panel2.Controls.Add(this.splitContainerRobot);
-            this.splitContainer4.Panel2.Controls.Add(this.splitContainerOPENUA);
-            this.splitContainer4.Panel2.Controls.Add(this.splitContainerRSWare);
-            // 
-            // splitContainerRobot
-            // 
-            this.splitContainerRobot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.splitContainerRobot, "splitContainerRobot");
-            this.splitContainerRobot.Name = "splitContainerRobot";
-            // 
-            // splitContainerRobot.Panel1
-            // 
-            this.splitContainerRobot.Panel1.BackColor = System.Drawing.Color.Khaki;
-            resources.ApplyResources(this.splitContainerRobot.Panel1, "splitContainerRobot.Panel1");
-            this.splitContainerRobot.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
-            // 
-            // splitContainerRobot.Panel2
-            // 
-            this.splitContainerRobot.Panel2.BackColor = System.Drawing.Color.Cornsilk;
-            this.splitContainerRobot.Panel2.Controls.Add(this.ReconnectionRobotBtn);
-            this.splitContainerRobot.Panel2.Controls.Add(this.memoryDumpBtn);
-            this.splitContainerRobot.Panel2.Controls.Add(this.labelReceiveRobotConsole);
-            this.splitContainerRobot.Panel2.Controls.Add(this.dataGridViewRobotConsole);
-            this.splitContainerRobot.Panel2.Controls.Add(this.buttonSendCommandRobotConsole);
-            this.splitContainerRobot.Panel2.Controls.Add(this.textBoxCommandRobotConsole);
-            this.splitContainerRobot.Panel2.Controls.Add(this.labelCommandOUAConsole);
-            this.splitContainerRobot.Panel2.Controls.Add(this.labelIDRobotConsole);
-            this.splitContainerRobot.Panel2.Controls.Add(this.comboBoxIDRobotConsole);
-            // 
-            // ReconnectionRobotBtn
-            // 
-            resources.ApplyResources(this.ReconnectionRobotBtn, "ReconnectionRobotBtn");
-            this.ReconnectionRobotBtn.Name = "ReconnectionRobotBtn";
-            this.ReconnectionRobotBtn.UseVisualStyleBackColor = true;
-            this.ReconnectionRobotBtn.Click += new System.EventHandler(this.ReconnectionRobotBtn_Click);
-            // 
-            // memoryDumpBtn
-            // 
-            resources.ApplyResources(this.memoryDumpBtn, "memoryDumpBtn");
-            this.memoryDumpBtn.Name = "memoryDumpBtn";
-            this.memoryDumpBtn.UseVisualStyleBackColor = true;
-            this.memoryDumpBtn.Click += new System.EventHandler(this.memoryDumpBtn_Click);
-            // 
-            // labelReceiveRobotConsole
-            // 
-            resources.ApplyResources(this.labelReceiveRobotConsole, "labelReceiveRobotConsole");
-            this.labelReceiveRobotConsole.Name = "labelReceiveRobotConsole";
-            // 
-            // dataGridViewRobotConsole
-            // 
-            resources.ApplyResources(this.dataGridViewRobotConsole, "dataGridViewRobotConsole");
-            this.dataGridViewRobotConsole.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.dataGridViewRobotConsole.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewRobotConsole.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRobotConsole.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewRobotConsole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRobotConsole.Name = "dataGridViewRobotConsole";
-            this.dataGridViewRobotConsole.RowHeadersVisible = false;
-            this.dataGridViewRobotConsole.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            // 
-            // buttonSendCommandRobotConsole
-            // 
-            resources.ApplyResources(this.buttonSendCommandRobotConsole, "buttonSendCommandRobotConsole");
-            this.buttonSendCommandRobotConsole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonSendCommandRobotConsole.Name = "buttonSendCommandRobotConsole";
-            this.buttonSendCommandRobotConsole.UseVisualStyleBackColor = true;
-            this.buttonSendCommandRobotConsole.Click += new System.EventHandler(this.buttonSendCommandRobotConsole_Click);
-            // 
-            // textBoxCommandRobotConsole
-            // 
-            resources.ApplyResources(this.textBoxCommandRobotConsole, "textBoxCommandRobotConsole");
-            this.textBoxCommandRobotConsole.Name = "textBoxCommandRobotConsole";
-            // 
-            // labelCommandOUAConsole
-            // 
-            resources.ApplyResources(this.labelCommandOUAConsole, "labelCommandOUAConsole");
-            this.labelCommandOUAConsole.Name = "labelCommandOUAConsole";
-            // 
-            // labelIDRobotConsole
-            // 
-            resources.ApplyResources(this.labelIDRobotConsole, "labelIDRobotConsole");
-            this.labelIDRobotConsole.Name = "labelIDRobotConsole";
-            // 
-            // comboBoxIDRobotConsole
-            // 
-            this.comboBoxIDRobotConsole.FormattingEnabled = true;
-            this.comboBoxIDRobotConsole.Items.AddRange(new object[] {
-            resources.GetString("comboBoxIDRobotConsole.Items"),
-            resources.GetString("comboBoxIDRobotConsole.Items1"),
-            resources.GetString("comboBoxIDRobotConsole.Items2")});
-            resources.ApplyResources(this.comboBoxIDRobotConsole, "comboBoxIDRobotConsole");
-            this.comboBoxIDRobotConsole.Name = "comboBoxIDRobotConsole";
-            // 
-            // splitContainerOPENUA
-            // 
-            this.splitContainerOPENUA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.splitContainerOPENUA, "splitContainerOPENUA");
-            this.splitContainerOPENUA.Name = "splitContainerOPENUA";
-            // 
-            // splitContainerOPENUA.Panel1
-            // 
-            this.splitContainerOPENUA.Panel1.BackColor = System.Drawing.Color.Khaki;
-            // 
-            // splitContainerOPENUA.Panel2
-            // 
-            this.splitContainerOPENUA.Panel2.BackColor = System.Drawing.Color.Cornsilk;
-            this.splitContainerOPENUA.Panel2.Controls.Add(this.textBoxCommandMsgOUAConsole);
-            this.splitContainerOPENUA.Panel2.Controls.Add(this.labelMessageOUAConsole);
-            this.splitContainerOPENUA.Panel2.Controls.Add(this.labelIDResultOUAConsole);
-            this.splitContainerOPENUA.Panel2.Controls.Add(this.comboBoxIDResultOUAConsole);
-            this.splitContainerOPENUA.Panel2.Controls.Add(this.labelReceiveOUAConsole);
-            this.splitContainerOPENUA.Panel2.Controls.Add(this.dataGridViewOUAConsole);
-            this.splitContainerOPENUA.Panel2.Controls.Add(this.buttonSendResetAckOUAConsole);
-            this.splitContainerOPENUA.Panel2.Controls.Add(this.buttonSendSetAckOUAConsole);
-            this.splitContainerOPENUA.Panel2.Controls.Add(this.buttonSendCommandOUAConsole);
-            this.splitContainerOPENUA.Panel2.Controls.Add(this.textBoxLeatherIDOUAConsole);
-            this.splitContainerOPENUA.Panel2.Controls.Add(this.labelIDLeatherOUAConsole);
-            this.splitContainerOPENUA.Panel2.Controls.Add(this.labelIDCommandOUAConsole);
-            this.splitContainerOPENUA.Panel2.Controls.Add(this.comboBoxIDCommandOUAConsole);
-            // 
-            // textBoxCommandMsgOUAConsole
-            // 
-            resources.ApplyResources(this.textBoxCommandMsgOUAConsole, "textBoxCommandMsgOUAConsole");
-            this.textBoxCommandMsgOUAConsole.Name = "textBoxCommandMsgOUAConsole";
-            // 
-            // labelMessageOUAConsole
-            // 
-            resources.ApplyResources(this.labelMessageOUAConsole, "labelMessageOUAConsole");
-            this.labelMessageOUAConsole.Name = "labelMessageOUAConsole";
-            // 
-            // labelIDResultOUAConsole
-            // 
-            resources.ApplyResources(this.labelIDResultOUAConsole, "labelIDResultOUAConsole");
-            this.labelIDResultOUAConsole.Name = "labelIDResultOUAConsole";
-            // 
-            // comboBoxIDResultOUAConsole
-            // 
-            this.comboBoxIDResultOUAConsole.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBoxIDResultOUAConsole, "comboBoxIDResultOUAConsole");
-            this.comboBoxIDResultOUAConsole.Name = "comboBoxIDResultOUAConsole";
-            // 
-            // labelReceiveOUAConsole
-            // 
-            resources.ApplyResources(this.labelReceiveOUAConsole, "labelReceiveOUAConsole");
-            this.labelReceiveOUAConsole.Name = "labelReceiveOUAConsole";
-            // 
-            // dataGridViewOUAConsole
-            // 
-            resources.ApplyResources(this.dataGridViewOUAConsole, "dataGridViewOUAConsole");
-            this.dataGridViewOUAConsole.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.dataGridViewOUAConsole.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewOUAConsole.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8.25F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewOUAConsole.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewOUAConsole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewOUAConsole.Name = "dataGridViewOUAConsole";
-            this.dataGridViewOUAConsole.RowHeadersVisible = false;
-            this.dataGridViewOUAConsole.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            // 
-            // buttonSendResetAckOUAConsole
-            // 
-            resources.ApplyResources(this.buttonSendResetAckOUAConsole, "buttonSendResetAckOUAConsole");
-            this.buttonSendResetAckOUAConsole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonSendResetAckOUAConsole.Name = "buttonSendResetAckOUAConsole";
-            this.buttonSendResetAckOUAConsole.UseVisualStyleBackColor = true;
-            // 
-            // buttonSendSetAckOUAConsole
-            // 
-            resources.ApplyResources(this.buttonSendSetAckOUAConsole, "buttonSendSetAckOUAConsole");
-            this.buttonSendSetAckOUAConsole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonSendSetAckOUAConsole.Name = "buttonSendSetAckOUAConsole";
-            this.buttonSendSetAckOUAConsole.UseVisualStyleBackColor = true;
-            // 
-            // buttonSendCommandOUAConsole
-            // 
-            resources.ApplyResources(this.buttonSendCommandOUAConsole, "buttonSendCommandOUAConsole");
-            this.buttonSendCommandOUAConsole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonSendCommandOUAConsole.Name = "buttonSendCommandOUAConsole";
-            this.buttonSendCommandOUAConsole.UseVisualStyleBackColor = true;
-            // 
-            // textBoxLeatherIDOUAConsole
-            // 
-            resources.ApplyResources(this.textBoxLeatherIDOUAConsole, "textBoxLeatherIDOUAConsole");
-            this.textBoxLeatherIDOUAConsole.Name = "textBoxLeatherIDOUAConsole";
-            // 
-            // labelIDLeatherOUAConsole
-            // 
-            resources.ApplyResources(this.labelIDLeatherOUAConsole, "labelIDLeatherOUAConsole");
-            this.labelIDLeatherOUAConsole.Name = "labelIDLeatherOUAConsole";
-            // 
-            // labelIDCommandOUAConsole
-            // 
-            resources.ApplyResources(this.labelIDCommandOUAConsole, "labelIDCommandOUAConsole");
-            this.labelIDCommandOUAConsole.Name = "labelIDCommandOUAConsole";
-            // 
-            // comboBoxIDCommandOUAConsole
-            // 
-            this.comboBoxIDCommandOUAConsole.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBoxIDCommandOUAConsole, "comboBoxIDCommandOUAConsole");
-            this.comboBoxIDCommandOUAConsole.Name = "comboBoxIDCommandOUAConsole";
-            // 
-            // splitContainerRSWare
-            // 
-            this.splitContainerRSWare.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.splitContainerRSWare, "splitContainerRSWare");
-            this.splitContainerRSWare.Name = "splitContainerRSWare";
-            // 
-            // splitContainerRSWare.Panel1
-            // 
-            this.splitContainerRSWare.Panel1.BackColor = System.Drawing.Color.Khaki;
-            resources.ApplyResources(this.splitContainerRSWare.Panel1, "splitContainerRSWare.Panel1");
-            this.splitContainerRSWare.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
-            // 
-            // splitContainerRSWare.Panel2
-            // 
-            this.splitContainerRSWare.Panel2.BackColor = System.Drawing.Color.Cornsilk;
-            this.splitContainerRSWare.Panel2.Controls.Add(this.labelReceiveUserConsole);
-            this.splitContainerRSWare.Panel2.Controls.Add(this.dataGridViewRSWareUserConsole);
-            this.splitContainerRSWare.Panel2.Controls.Add(this.buttonSendResetAckUserConsole);
-            this.splitContainerRSWare.Panel2.Controls.Add(this.buttonSendSetAckUserConsole);
-            this.splitContainerRSWare.Panel2.Controls.Add(this.buttonSendCommandUserConsole);
-            this.splitContainerRSWare.Panel2.Controls.Add(this.textBoxCommandParametersUserConsole);
-            this.splitContainerRSWare.Panel2.Controls.Add(this.label3);
-            this.splitContainerRSWare.Panel2.Controls.Add(this.labelIDCommandConsole);
-            this.splitContainerRSWare.Panel2.Controls.Add(this.comboBoxIDCommandUserConsole);
-            this.splitContainerRSWare.Panel2.Controls.Add(this.labelIDUserConsole);
-            this.splitContainerRSWare.Panel2.Controls.Add(this.comboBoxIDUserConsole);
-            // 
-            // labelReceiveUserConsole
-            // 
-            resources.ApplyResources(this.labelReceiveUserConsole, "labelReceiveUserConsole");
-            this.labelReceiveUserConsole.Name = "labelReceiveUserConsole";
-            // 
-            // dataGridViewRSWareUserConsole
-            // 
-            resources.ApplyResources(this.dataGridViewRSWareUserConsole, "dataGridViewRSWareUserConsole");
-            this.dataGridViewRSWareUserConsole.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(232)))), ((int)(((byte)(232)))));
-            this.dataGridViewRSWareUserConsole.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewRSWareUserConsole.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewRSWareUserConsole.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewRSWareUserConsole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewRSWareUserConsole.Name = "dataGridViewRSWareUserConsole";
-            this.dataGridViewRSWareUserConsole.RowHeadersVisible = false;
-            this.dataGridViewRSWareUserConsole.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            // 
-            // buttonSendResetAckUserConsole
-            // 
-            resources.ApplyResources(this.buttonSendResetAckUserConsole, "buttonSendResetAckUserConsole");
-            this.buttonSendResetAckUserConsole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonSendResetAckUserConsole.Name = "buttonSendResetAckUserConsole";
-            this.buttonSendResetAckUserConsole.UseVisualStyleBackColor = true;
-            this.buttonSendResetAckUserConsole.Click += new System.EventHandler(this.buttonSendResetAckUserConsole_Click);
-            // 
-            // buttonSendSetAckUserConsole
-            // 
-            resources.ApplyResources(this.buttonSendSetAckUserConsole, "buttonSendSetAckUserConsole");
-            this.buttonSendSetAckUserConsole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonSendSetAckUserConsole.Name = "buttonSendSetAckUserConsole";
-            this.buttonSendSetAckUserConsole.UseVisualStyleBackColor = true;
-            this.buttonSendSetAckUserConsole.Click += new System.EventHandler(this.buttonSendSetAckUserConsole_Click);
-            // 
-            // buttonSendCommandUserConsole
-            // 
-            resources.ApplyResources(this.buttonSendCommandUserConsole, "buttonSendCommandUserConsole");
-            this.buttonSendCommandUserConsole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonSendCommandUserConsole.Name = "buttonSendCommandUserConsole";
-            this.buttonSendCommandUserConsole.UseVisualStyleBackColor = true;
-            this.buttonSendCommandUserConsole.Click += new System.EventHandler(this.buttonSendCommandUserConsole_Click);
-            // 
-            // textBoxCommandParametersUserConsole
-            // 
-            resources.ApplyResources(this.textBoxCommandParametersUserConsole, "textBoxCommandParametersUserConsole");
-            this.textBoxCommandParametersUserConsole.Name = "textBoxCommandParametersUserConsole";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // labelIDCommandConsole
-            // 
-            resources.ApplyResources(this.labelIDCommandConsole, "labelIDCommandConsole");
-            this.labelIDCommandConsole.Name = "labelIDCommandConsole";
-            // 
-            // comboBoxIDCommandUserConsole
-            // 
-            this.comboBoxIDCommandUserConsole.FormattingEnabled = true;
-            this.comboBoxIDCommandUserConsole.Items.AddRange(new object[] {
-            resources.GetString("comboBoxIDCommandUserConsole.Items"),
-            resources.GetString("comboBoxIDCommandUserConsole.Items1"),
-            resources.GetString("comboBoxIDCommandUserConsole.Items2"),
-            resources.GetString("comboBoxIDCommandUserConsole.Items3")});
-            resources.ApplyResources(this.comboBoxIDCommandUserConsole, "comboBoxIDCommandUserConsole");
-            this.comboBoxIDCommandUserConsole.Name = "comboBoxIDCommandUserConsole";
-            // 
-            // labelIDUserConsole
-            // 
-            resources.ApplyResources(this.labelIDUserConsole, "labelIDUserConsole");
-            this.labelIDUserConsole.Name = "labelIDUserConsole";
-            // 
-            // comboBoxIDUserConsole
-            // 
-            this.comboBoxIDUserConsole.FormattingEnabled = true;
-            resources.ApplyResources(this.comboBoxIDUserConsole, "comboBoxIDUserConsole");
-            this.comboBoxIDUserConsole.Name = "comboBoxIDUserConsole";
-            // 
-            // splitContainer5
-            // 
-            this.splitContainer5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.splitContainer5, "splitContainer5");
-            this.splitContainer5.Name = "splitContainer5";
-            // 
-            // splitContainer5.Panel1
-            // 
-            this.splitContainer5.Panel1.BackColor = System.Drawing.Color.DarkRed;
-            resources.ApplyResources(this.splitContainer5.Panel1, "splitContainer5.Panel1");
-            this.splitContainer5.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
-            // 
-            // splitContainer5.Panel2
-            // 
-            this.splitContainer5.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.splitContainer5.Panel2.Controls.Add(this.tabControlAddNewRecipe);
-            // 
-            // tabControlAddNewRecipe
-            // 
-            resources.ApplyResources(this.tabControlAddNewRecipe, "tabControlAddNewRecipe");
-            this.tabControlAddNewRecipe.Controls.Add(this.tabPage1);
-            this.tabControlAddNewRecipe.Controls.Add(this.tabPage2);
-            this.tabControlAddNewRecipe.Name = "tabControlAddNewRecipe";
-            this.tabControlAddNewRecipe.SelectedIndex = 0;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.tabPage1.Controls.Add(this.comboBoxManageModelName);
-            this.tabPage1.Controls.Add(this.buttonInsertArticle);
-            this.tabPage1.Controls.Add(this.labelManageRobotCode);
-            this.tabPage1.Controls.Add(this.labelManageArticleCode);
-            this.tabPage1.Controls.Add(this.textBoxManageArticleName);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.Name = "tabPage1";
-            // 
-            // comboBoxManageModelName
-            // 
-            resources.ApplyResources(this.comboBoxManageModelName, "comboBoxManageModelName");
-            this.comboBoxManageModelName.FormattingEnabled = true;
-            this.comboBoxManageModelName.Name = "comboBoxManageModelName";
-            // 
-            // buttonInsertArticle
-            // 
-            resources.ApplyResources(this.buttonInsertArticle, "buttonInsertArticle");
-            this.buttonInsertArticle.Name = "buttonInsertArticle";
-            this.buttonInsertArticle.UseVisualStyleBackColor = true;
-            // 
-            // labelManageRobotCode
-            // 
-            resources.ApplyResources(this.labelManageRobotCode, "labelManageRobotCode");
-            this.labelManageRobotCode.Name = "labelManageRobotCode";
-            // 
-            // labelManageArticleCode
-            // 
-            resources.ApplyResources(this.labelManageArticleCode, "labelManageArticleCode");
-            this.labelManageArticleCode.Name = "labelManageArticleCode";
-            // 
-            // textBoxManageArticleName
-            // 
-            resources.ApplyResources(this.textBoxManageArticleName, "textBoxManageArticleName");
-            this.textBoxManageArticleName.Name = "textBoxManageArticleName";
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Controls.Add(this.tabControlSearchByArticle);
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.Name = "tabPage2";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 12F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            // 
-            // tabControlSearchByArticle
-            // 
-            this.tabControlSearchByArticle.Controls.Add(this.tabPageFindArticle);
-            resources.ApplyResources(this.tabControlSearchByArticle, "tabControlSearchByArticle");
-            this.tabControlSearchByArticle.Name = "tabControlSearchByArticle";
-            this.tabControlSearchByArticle.SelectedIndex = 0;
-            // 
-            // tabPageFindArticle
-            // 
-            this.tabPageFindArticle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.tabPageFindArticle.Controls.Add(this.buttonRefreshByArticleName);
-            this.tabPageFindArticle.Controls.Add(this.buttonSearchByArticleName);
-            this.tabPageFindArticle.Controls.Add(this.labelArticleName);
-            this.tabPageFindArticle.Controls.Add(this.textBoxSearchArticle);
-            resources.ApplyResources(this.tabPageFindArticle, "tabPageFindArticle");
-            this.tabPageFindArticle.Name = "tabPageFindArticle";
-            // 
-            // buttonRefreshByArticleName
-            // 
-            resources.ApplyResources(this.buttonRefreshByArticleName, "buttonRefreshByArticleName");
-            this.buttonRefreshByArticleName.Name = "buttonRefreshByArticleName";
-            this.buttonRefreshByArticleName.UseVisualStyleBackColor = true;
-            // 
-            // buttonSearchByArticleName
-            // 
-            resources.ApplyResources(this.buttonSearchByArticleName, "buttonSearchByArticleName");
-            this.buttonSearchByArticleName.Name = "buttonSearchByArticleName";
-            this.buttonSearchByArticleName.UseVisualStyleBackColor = true;
-            // 
-            // labelArticleName
-            // 
-            resources.ApplyResources(this.labelArticleName, "labelArticleName");
-            this.labelArticleName.Name = "labelArticleName";
-            // 
-            // textBoxSearchArticle
-            // 
-            resources.ApplyResources(this.textBoxSearchArticle, "textBoxSearchArticle");
-            this.textBoxSearchArticle.Name = "textBoxSearchArticle";
             // 
             // splitContainer6
             // 
@@ -2617,6 +1903,114 @@
             this.lbLed1001.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
             this.lbLed1001.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
             // 
+            // trueTransparentPanelAuto
+            // 
+            // 
+            // trueTransparentPanelAuto.ContentPanel
+            // 
+            this.trueTransparentPanelAuto.ContentPanel.Controls.Add(this.transparentPanelLine);
+            this.trueTransparentPanelAuto.ContentPanel.Controls.Add(this.transparentPanelM6);
+            this.trueTransparentPanelAuto.ContentPanel.Controls.Add(this.transparentPanelM5);
+            this.trueTransparentPanelAuto.ContentPanel.Controls.Add(this.transparentPanelM4);
+            this.trueTransparentPanelAuto.ContentPanel.Controls.Add(this.transparentPanelM3);
+            this.trueTransparentPanelAuto.ContentPanel.Controls.Add(this.transparentPanelM2);
+            this.trueTransparentPanelAuto.ContentPanel.Controls.Add(this.transparentPanelM1);
+            resources.ApplyResources(this.trueTransparentPanelAuto.ContentPanel, "trueTransparentPanelAuto.ContentPanel");
+            this.trueTransparentPanelAuto.ContentPanel.Name = "ContentPanel";
+            this.trueTransparentPanelAuto.ContentPanel.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("trueTransparentPanelAuto.ContentPanel.TextBounds")));
+            this.trueTransparentPanelAuto.ContentPanel.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.trueTransparentPanelAuto.Controls.Add(this.handshakeMESLed);
+            this.trueTransparentPanelAuto.Controls.Add(this.lbLedRobotConnection);
+            this.trueTransparentPanelAuto.Controls.Add(this.lbLedUserConnection);
+            this.trueTransparentPanelAuto.Controls.Add(this.lbLedMESConnection);
+            this.trueTransparentPanelAuto.ExcludeInnerRegion = false;
+            controlFormatStyle8.BorderCornerRadius = 10;
+            controlFormatStyle8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.trueTransparentPanelAuto.FormatStyle = controlFormatStyle8;
+            resources.ApplyResources(this.trueTransparentPanelAuto, "trueTransparentPanelAuto");
+            this.trueTransparentPanelAuto.Name = "trueTransparentPanelAuto";
+            // 
+            // transparentPanelM1
+            // 
+            // 
+            // transparentPanelM1.ContentPanel
+            // 
+            this.transparentPanelM1.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.transparentPanelM1.ContentPanel.Controls.Add(this.labelM1Name);
+            this.transparentPanelM1.ContentPanel.Controls.Add(this.lbLedM1HomingDone);
+            this.transparentPanelM1.ContentPanel.Controls.Add(this.lbLedM1Ready);
+            this.transparentPanelM1.ContentPanel.Controls.Add(this.labelM1Param1Value);
+            this.transparentPanelM1.ContentPanel.Controls.Add(this.labelM1Param1Name);
+            this.transparentPanelM1.ContentPanel.Controls.Add(this.lbLedM1Status);
+            this.transparentPanelM1.ContentPanel.Controls.Add(this.checkBoxM1Inclusion);
+            this.transparentPanelM1.ContentPanel.Controls.Add(this.comboBoxM1PrgName);
+            resources.ApplyResources(this.transparentPanelM1.ContentPanel, "transparentPanelM1.ContentPanel");
+            this.transparentPanelM1.ContentPanel.Name = "ContentPanel";
+            controlFormatStyle7.BorderCornerRadius = 5;
+            this.transparentPanelM1.FormatStyle = controlFormatStyle7;
+            resources.ApplyResources(this.transparentPanelM1, "transparentPanelM1");
+            this.transparentPanelM1.Name = "transparentPanelM1";
+            // 
+            // handshakeMESLed
+            // 
+            this.handshakeMESLed.BackColor = System.Drawing.Color.Cornsilk;
+            this.handshakeMESLed.BlinkInterval = 500;
+            resources.ApplyResources(this.handshakeMESLed, "handshakeMESLed");
+            this.handshakeMESLed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.handshakeMESLed.Label = "MES HandShake Last Message";
+            this.handshakeMESLed.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.handshakeMESLed.LedColor = System.Drawing.Color.Lime;
+            this.handshakeMESLed.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.handshakeMESLed.Name = "handshakeMESLed";
+            this.handshakeMESLed.Renderer = null;
+            this.handshakeMESLed.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+            this.handshakeMESLed.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedRobotConnection
+            // 
+            this.lbLedRobotConnection.BackColor = System.Drawing.Color.Cornsilk;
+            this.lbLedRobotConnection.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedRobotConnection, "lbLedRobotConnection");
+            this.lbLedRobotConnection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLedRobotConnection.Label = "connessione robot";
+            this.lbLedRobotConnection.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedRobotConnection.LedColor = System.Drawing.Color.Lime;
+            this.lbLedRobotConnection.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLedRobotConnection.Name = "lbLedRobotConnection";
+            this.lbLedRobotConnection.Renderer = null;
+            this.lbLedRobotConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+            this.lbLedRobotConnection.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedUserConnection
+            // 
+            this.lbLedUserConnection.BackColor = System.Drawing.Color.Cornsilk;
+            this.lbLedUserConnection.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedUserConnection, "lbLedUserConnection");
+            this.lbLedUserConnection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLedUserConnection.Label = "connessione RSWare";
+            this.lbLedUserConnection.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedUserConnection.LedColor = System.Drawing.Color.Lime;
+            this.lbLedUserConnection.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLedUserConnection.Name = "lbLedUserConnection";
+            this.lbLedUserConnection.Renderer = null;
+            this.lbLedUserConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+            this.lbLedUserConnection.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedMESConnection
+            // 
+            this.lbLedMESConnection.BackColor = System.Drawing.Color.Cornsilk;
+            this.lbLedMESConnection.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedMESConnection, "lbLedMESConnection");
+            this.lbLedMESConnection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLedMESConnection.Label = "connessione MES";
+            this.lbLedMESConnection.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedMESConnection.LedColor = System.Drawing.Color.Lime;
+            this.lbLedMESConnection.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLedMESConnection.Name = "lbLedMESConnection";
+            this.lbLedMESConnection.Renderer = null;
+            this.lbLedMESConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+            this.lbLedMESConnection.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
             // tabPageHide
             // 
             tabPageFormatStyle1.BorderCornerRadius = 5;
@@ -2647,12 +2041,8 @@
             tabPageColorStyle3.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageHide.SelectedStyle = tabPageColorStyle3;
             this.tabPageHide.StyleFromParent = false;
-            treeNode1.Name = "";
-            treeNode1.Tag = this.tabPageHide;
-            resources.ApplyResources(treeNode1, "treeNode1");
-            this.tabPageHide.Tag = treeNode1;
             this.tabPageHide.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageHide.TextBounds")));
-            this.tabPageHide.TextSize = new System.Drawing.SizeF(119.9258F, 32.16796F);
+            this.tabPageHide.TextSize = new System.Drawing.SizeF(63.48827F, 32.16796F);
             this.tabPageHide.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageHide_Paint);
             // 
             // tabPageHelp
@@ -2686,12 +2076,8 @@
             tabPageColorStyle6.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageHelp.SelectedStyle = tabPageColorStyle6;
             this.tabPageHelp.StyleFromParent = false;
-            treeNode2.Name = "";
-            treeNode2.Tag = this.tabPageHelp;
-            resources.ApplyResources(treeNode2, "treeNode2");
-            this.tabPageHelp.Tag = treeNode2;
             this.tabPageHelp.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageHelp.TextBounds")));
-            this.tabPageHelp.TextSize = new System.Drawing.SizeF(71.80857F, 32.16796F);
+            this.tabPageHelp.TextSize = new System.Drawing.SizeF(80.41013F, 32.16796F);
             // 
             // tabPageSettings
             // 
@@ -2733,16 +2119,11 @@
             tabPageColorStyle10.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageSettings.SelectedStyle = tabPageColorStyle10;
             this.tabPageSettings.StyleFromParent = false;
-            treeNode3.Name = "";
-            treeNode3.Tag = this.tabPageSettings;
-            resources.ApplyResources(treeNode3, "treeNode3");
-            this.tabPageSettings.Tag = treeNode3;
             this.tabPageSettings.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageSettings.TextBounds")));
-            this.tabPageSettings.TextSize = new System.Drawing.SizeF(167.5156F, 32.16796F);
+            this.tabPageSettings.TextSize = new System.Drawing.SizeF(94.00388F, 32.16796F);
             // 
             // TabPageDiagnostic
             // 
-            this.TabPageDiagnostic.Controls.Add(this.label2);
             tabPageFormatStyle4.BorderCornerRadius = 5;
             tabPageFormatStyle4.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 40);
@@ -2772,20 +2153,8 @@
             tabPageColorStyle13.TextShadowColor = System.Drawing.Color.Transparent;
             this.TabPageDiagnostic.SelectedStyle = tabPageColorStyle13;
             this.TabPageDiagnostic.StyleFromParent = false;
-            treeNode4.Name = "";
-            treeNode4.Tag = this.TabPageDiagnostic;
-            resources.ApplyResources(treeNode4, "treeNode4");
-            this.TabPageDiagnostic.Tag = treeNode4;
             this.TabPageDiagnostic.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("TabPageDiagnostic.TextBounds")));
-            this.TabPageDiagnostic.TextSize = new System.Drawing.SizeF(137F, 32.16796F);
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.BackColor = System.Drawing.Color.Yellow;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.ForeColor = System.Drawing.Color.Crimson;
-            this.label2.Name = "label2";
+            this.TabPageDiagnostic.TextSize = new System.Drawing.SizeF(49.08593F, 32.16796F);
             // 
             // tabPage4
             // 
@@ -2819,16 +2188,11 @@
             tabPageColorStyle16.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPage4.SelectedStyle = tabPageColorStyle16;
             this.tabPage4.StyleFromParent = false;
-            treeNode5.Name = "";
-            treeNode5.Tag = this.tabPage4;
-            resources.ApplyResources(treeNode5, "treeNode5");
-            this.tabPage4.Tag = treeNode5;
             this.tabPage4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage4.TextBounds")));
-            this.tabPage4.TextSize = new System.Drawing.SizeF(49.08593F, 32.16796F);
+            this.tabPage4.TextSize = new System.Drawing.SizeF(60.58202F, 32.16796F);
             // 
             // tabPageConsole
             // 
-            this.tabPageConsole.Controls.Add(this.splitContainer4);
             tabPageFormatStyle6.BorderCornerRadius = 5;
             tabPageFormatStyle6.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 40);
@@ -2858,16 +2222,11 @@
             tabPageColorStyle19.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageConsole.SelectedStyle = tabPageColorStyle19;
             this.tabPageConsole.StyleFromParent = false;
-            treeNode6.Name = "";
-            treeNode6.Tag = this.tabPageConsole;
-            resources.ApplyResources(treeNode6, "treeNode6");
-            this.tabPageConsole.Tag = treeNode6;
             this.tabPageConsole.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageConsole.TextBounds")));
-            this.tabPageConsole.TextSize = new System.Drawing.SizeF(105.3008F, 32.16796F);
+            this.tabPageConsole.TextSize = new System.Drawing.SizeF(81.33591F, 32.16796F);
             // 
             // tabPageRecipe
             // 
-            this.tabPageRecipe.Controls.Add(this.splitContainer5);
             tabPageFormatStyle7.BorderCornerRadius = 5;
             tabPageFormatStyle7.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 40);
@@ -2897,22 +2256,14 @@
             tabPageColorStyle22.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageRecipe.SelectedStyle = tabPageColorStyle22;
             this.tabPageRecipe.StyleFromParent = false;
-            treeNode7.Name = "";
-            treeNode7.Tag = this.tabPageRecipe;
-            resources.ApplyResources(treeNode7, "treeNode7");
-            this.tabPageRecipe.Tag = treeNode7;
             this.tabPageRecipe.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageRecipe.TextBounds")));
-            this.tabPageRecipe.TextSize = new System.Drawing.SizeF(93.79295F, 32.16796F);
+            this.tabPageRecipe.TextSize = new System.Drawing.SizeF(109.3789F, 32.16796F);
             // 
             // tabPageMain
             // 
+            this.tabPageMain.Controls.Add(this.trueTransparentPanelAuto);
             this.tabPageMain.Controls.Add(this.labelLoginLevel);
-            this.tabPageMain.Controls.Add(this.buttonParking);
-            this.tabPageMain.Controls.Add(this.splitContainer2);
-            this.tabPageMain.Controls.Add(this.buttonLogin);
-            this.tabPageMain.Controls.Add(this.buttonStopAuto);
             this.tabPageMain.Controls.Add(this.labelDateTime);
-            this.tabPageMain.Controls.Add(this.buttonStartAuto);
             tabPageFormatStyle8.BorderCornerRadius = 5;
             tabPageFormatStyle8.ContentSpacing = 0;
             tabPageFormatStyle8.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2935,7 +2286,7 @@
             tabPageColorStyle24.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageMain.NormalStyle = tabPageColorStyle24;
             this.tabPageMain.ParentPage = null;
-            tabPageColorStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle25.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle25.BorderColor = System.Drawing.Color.Transparent;
             tabPageColorStyle25.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
@@ -2944,51 +2295,21 @@
             tabPageColorStyle25.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageMain.SelectedStyle = tabPageColorStyle25;
             this.tabPageMain.StyleFromParent = false;
-            treeNode8.Name = "";
-            treeNode8.Tag = this.tabPageMain;
-            resources.ApplyResources(treeNode8, "treeNode8");
-            this.tabPageMain.Tag = treeNode8;
             this.tabPageMain.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageMain.TextBounds")));
-            this.tabPageMain.TextSize = new System.Drawing.SizeF(127.3086F, 32.16796F);
+            this.tabPageMain.TextSize = new System.Drawing.SizeF(133.5781F, 32.16796F);
             this.tabPageMain.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageMain_Paint);
             // 
             // labelLoginLevel
             // 
             resources.ApplyResources(this.labelLoginLevel, "labelLoginLevel");
+            this.labelLoginLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.labelLoginLevel.Name = "labelLoginLevel";
-            // 
-            // buttonParking
-            // 
-            resources.ApplyResources(this.buttonParking, "buttonParking");
-            this.buttonParking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonParking.Name = "buttonParking";
-            this.buttonParking.UseVisualStyleBackColor = true;
-            // 
-            // buttonLogin
-            // 
-            resources.ApplyResources(this.buttonLogin, "buttonLogin");
-            this.buttonLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.UseVisualStyleBackColor = true;
-            // 
-            // buttonStopAuto
-            // 
-            resources.ApplyResources(this.buttonStopAuto, "buttonStopAuto");
-            this.buttonStopAuto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonStopAuto.Name = "buttonStopAuto";
-            this.buttonStopAuto.UseVisualStyleBackColor = true;
             // 
             // labelDateTime
             // 
             resources.ApplyResources(this.labelDateTime, "labelDateTime");
+            this.labelDateTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.labelDateTime.Name = "labelDateTime";
-            // 
-            // buttonStartAuto
-            // 
-            resources.ApplyResources(this.buttonStartAuto, "buttonStartAuto");
-            this.buttonStartAuto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.buttonStartAuto.Name = "buttonStartAuto";
-            this.buttonStartAuto.UseVisualStyleBackColor = true;
             // 
             // tabControlMain
             // 
@@ -2996,20 +2317,20 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageConsole);
+            this.tabControlMain.Controls.Add(this.tabPageMain);
+            this.tabControlMain.Controls.Add(this.tabPageRecipe);
             this.tabControlMain.Controls.Add(this.tabPageHide);
             this.tabControlMain.Controls.Add(this.tabPageHelp);
             this.tabControlMain.Controls.Add(this.tabPageSettings);
             this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
             this.tabControlMain.Controls.Add(this.tabPage4);
-            this.tabControlMain.Controls.Add(this.tabPageRecipe);
-            this.tabControlMain.Controls.Add(this.tabPageMain);
+            this.tabControlMain.Controls.Add(this.tabPageConsole);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlMain, "tabControlMain");
-            controlFormatStyle1.BorderCornerRadius = 5;
-            controlFormatStyle1.BorderLineStyle = LidorSystems.IntegralUI.Style.LineStyle.None;
-            controlFormatStyle1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlMain.FormatStyle = controlFormatStyle1;
+            controlFormatStyle9.BorderCornerRadius = 5;
+            controlFormatStyle9.BorderLineStyle = LidorSystems.IntegralUI.Style.LineStyle.None;
+            controlFormatStyle9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlMain.FormatStyle = controlFormatStyle9;
             this.tabControlMain.Name = "tabControlMain";
             tabPageColorStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle26.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
@@ -3031,7 +2352,7 @@
             this.tabPageHelp,
             this.tabPageHide});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageConsole;
+            this.tabControlMain.SelectedPage = this.tabPageMain;
             tabPageColorStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle27.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle27.TabImage = ((System.Drawing.Image)(resources.GetObject("tabPageColorStyle27.TabImage")));
@@ -3043,23 +2364,22 @@
             tabStripStyle1.BorderColor = System.Drawing.Color.Transparent;
             tabStripStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.TabStripStyle = tabStripStyle1;
-            toolLabel1.Bounds = new System.Drawing.Rectangle(2, 2, 254, 122);
+            toolLabel1.Bounds = new System.Drawing.Rectangle(2, 29, 91, 44);
             toolLabel1.ContentSize = new System.Drawing.Size(0, 0);
             toolLabel1.DisplayStyle = LidorSystems.IntegralUI.Controls.ToolDisplayStyle.Image;
             toolLabel1.Enabled = false;
             toolLabel1.Image = ((System.Drawing.Image)(resources.GetObject("toolLabel1.Image")));
             toolLabel1.Key = "RSA";
             toolLabel1.Name = "toolLabelRSA";
-            toolLabel1.Size = new System.Drawing.Size(254, 122);
-            toolLabel1.Text = "FUTURE";
-            toolButton1.Bounds = new System.Drawing.Rectangle(0, 0, 0, 0);
+            toolLabel1.Size = new System.Drawing.Size(91, 44);
+            toolLabel1.Text = "PBoots";
+            toolButton1.Bounds = new System.Drawing.Rectangle(113, 29, 0, 0);
             toolButton1.ContentSize = new System.Drawing.Size(0, 0);
-            toolButton1.DisplayStyle = LidorSystems.IntegralUI.Controls.ToolDisplayStyle.Image;
+            toolButton1.DisplayStyle = LidorSystems.IntegralUI.Controls.ToolDisplayStyle.None;
             toolButton1.Enabled = false;
             toolButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolButton1.Image")));
             toolButton1.Size = new System.Drawing.Size(0, 0);
             toolButton1.Text = "toolButt";
-            toolButton1.Visible = false;
             this.tabControlMain.ToolBar.AddRange(new object[] {
             toolLabel1,
             toolButton1});
@@ -3070,7 +2390,736 @@
             this.tabControlMain.ToolTipStyle = toolTipStyle1;
             this.tabControlMain.SelectedPageChanged += new LidorSystems.IntegralUI.ObjectEventHandler(this.tabControlMain_SelectedPageChanged);
             this.tabControlMain.ToolItemClicked += new LidorSystems.IntegralUI.ObjectClickEventHandler(this.tabControlMain_ToolItemClicked);
-            this.tabControlMain.Resize += new System.EventHandler(this.tabControlMain_Resize);
+            // 
+            // comboBoxM1PrgName
+            // 
+            resources.ApplyResources(this.comboBoxM1PrgName, "comboBoxM1PrgName");
+            this.comboBoxM1PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.comboBoxM1PrgName.FormattingEnabled = true;
+            this.comboBoxM1PrgName.Name = "comboBoxM1PrgName";
+            // 
+            // checkBoxM1Inclusion
+            // 
+            resources.ApplyResources(this.checkBoxM1Inclusion, "checkBoxM1Inclusion");
+            this.checkBoxM1Inclusion.Checked = true;
+            this.checkBoxM1Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxM1Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.checkBoxM1Inclusion.FlatAppearance.BorderSize = 0;
+            this.checkBoxM1Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM1Inclusion.Name = "checkBoxM1Inclusion";
+            this.checkBoxM1Inclusion.UseVisualStyleBackColor = true;
+            // 
+            // lbLedM1Status
+            // 
+            this.lbLedM1Status.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM1Status.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM1Status, "lbLedM1Status");
+            this.lbLedM1Status.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM1Status.Label = "status";
+            this.lbLedM1Status.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM1Status.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM1Status.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM1Status.Name = "lbLedM1Status";
+            this.lbLedM1Status.Renderer = null;
+            this.lbLedM1Status.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM1Status.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // labelM1Param1Value
+            // 
+            resources.ApplyResources(this.labelM1Param1Value, "labelM1Param1Value");
+            this.labelM1Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM1Param1Value.Name = "labelM1Param1Value";
+            // 
+            // labelM1Param1Name
+            // 
+            resources.ApplyResources(this.labelM1Param1Name, "labelM1Param1Name");
+            this.labelM1Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM1Param1Name.Name = "labelM1Param1Name";
+            // 
+            // lbLedM1Ready
+            // 
+            this.lbLedM1Ready.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM1Ready.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM1Ready, "lbLedM1Ready");
+            this.lbLedM1Ready.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM1Ready.Label = "ready";
+            this.lbLedM1Ready.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM1Ready.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM1Ready.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM1Ready.Name = "lbLedM1Ready";
+            this.lbLedM1Ready.Renderer = null;
+            this.lbLedM1Ready.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM1Ready.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedM1HomingDone
+            // 
+            this.lbLedM1HomingDone.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM1HomingDone.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM1HomingDone, "lbLedM1HomingDone");
+            this.lbLedM1HomingDone.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM1HomingDone.Label = "homing done";
+            this.lbLedM1HomingDone.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM1HomingDone.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM1HomingDone.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM1HomingDone.Name = "lbLedM1HomingDone";
+            this.lbLedM1HomingDone.Renderer = null;
+            this.lbLedM1HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM1HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // labelM1Name
+            // 
+            resources.ApplyResources(this.labelM1Name, "labelM1Name");
+            this.labelM1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM1Name.Name = "labelM1Name";
+            // 
+            // transparentPanelM2
+            // 
+            // 
+            // transparentPanelM2.ContentPanel
+            // 
+            this.transparentPanelM2.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.transparentPanelM2.ContentPanel.Controls.Add(this.labelM2Name);
+            this.transparentPanelM2.ContentPanel.Controls.Add(this.lbLedM2HomingDone);
+            this.transparentPanelM2.ContentPanel.Controls.Add(this.lbLedM2Ready);
+            this.transparentPanelM2.ContentPanel.Controls.Add(this.labelM2Param1Value);
+            this.transparentPanelM2.ContentPanel.Controls.Add(this.labelM2Param1Name);
+            this.transparentPanelM2.ContentPanel.Controls.Add(this.lbLedM2Status);
+            this.transparentPanelM2.ContentPanel.Controls.Add(this.checkBoxM2Inclusion);
+            this.transparentPanelM2.ContentPanel.Controls.Add(this.comboBoxM2PrgName);
+            resources.ApplyResources(this.transparentPanelM2.ContentPanel, "transparentPanelM2.ContentPanel");
+            this.transparentPanelM2.ContentPanel.Name = "ContentPanel";
+            controlFormatStyle6.BorderCornerRadius = 5;
+            this.transparentPanelM2.FormatStyle = controlFormatStyle6;
+            resources.ApplyResources(this.transparentPanelM2, "transparentPanelM2");
+            this.transparentPanelM2.Name = "transparentPanelM2";
+            // 
+            // labelM2Name
+            // 
+            resources.ApplyResources(this.labelM2Name, "labelM2Name");
+            this.labelM2Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM2Name.Name = "labelM2Name";
+            // 
+            // lbLedM2HomingDone
+            // 
+            this.lbLedM2HomingDone.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM2HomingDone.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM2HomingDone, "lbLedM2HomingDone");
+            this.lbLedM2HomingDone.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM2HomingDone.Label = "homing done";
+            this.lbLedM2HomingDone.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM2HomingDone.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM2HomingDone.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM2HomingDone.Name = "lbLedM2HomingDone";
+            this.lbLedM2HomingDone.Renderer = null;
+            this.lbLedM2HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM2HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedM2Ready
+            // 
+            this.lbLedM2Ready.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM2Ready.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM2Ready, "lbLedM2Ready");
+            this.lbLedM2Ready.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM2Ready.Label = "ready";
+            this.lbLedM2Ready.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM2Ready.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM2Ready.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM2Ready.Name = "lbLedM2Ready";
+            this.lbLedM2Ready.Renderer = null;
+            this.lbLedM2Ready.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM2Ready.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // labelM2Param1Value
+            // 
+            resources.ApplyResources(this.labelM2Param1Value, "labelM2Param1Value");
+            this.labelM2Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM2Param1Value.Name = "labelM2Param1Value";
+            // 
+            // labelM2Param1Name
+            // 
+            resources.ApplyResources(this.labelM2Param1Name, "labelM2Param1Name");
+            this.labelM2Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM2Param1Name.Name = "labelM2Param1Name";
+            // 
+            // lbLedM2Status
+            // 
+            this.lbLedM2Status.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM2Status.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM2Status, "lbLedM2Status");
+            this.lbLedM2Status.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM2Status.Label = "status";
+            this.lbLedM2Status.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM2Status.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM2Status.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM2Status.Name = "lbLedM2Status";
+            this.lbLedM2Status.Renderer = null;
+            this.lbLedM2Status.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM2Status.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // checkBoxM2Inclusion
+            // 
+            resources.ApplyResources(this.checkBoxM2Inclusion, "checkBoxM2Inclusion");
+            this.checkBoxM2Inclusion.Checked = true;
+            this.checkBoxM2Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxM2Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.checkBoxM2Inclusion.FlatAppearance.BorderSize = 0;
+            this.checkBoxM2Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM2Inclusion.Name = "checkBoxM2Inclusion";
+            this.checkBoxM2Inclusion.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxM2PrgName
+            // 
+            resources.ApplyResources(this.comboBoxM2PrgName, "comboBoxM2PrgName");
+            this.comboBoxM2PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.comboBoxM2PrgName.FormattingEnabled = true;
+            this.comboBoxM2PrgName.Name = "comboBoxM2PrgName";
+            // 
+            // transparentPanelM3
+            // 
+            // 
+            // transparentPanelM3.ContentPanel
+            // 
+            this.transparentPanelM3.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.transparentPanelM3.ContentPanel.Controls.Add(this.labelM3Name);
+            this.transparentPanelM3.ContentPanel.Controls.Add(this.lbLedM3HomingDone);
+            this.transparentPanelM3.ContentPanel.Controls.Add(this.lbLedM3Ready);
+            this.transparentPanelM3.ContentPanel.Controls.Add(this.labelM3Param1Value);
+            this.transparentPanelM3.ContentPanel.Controls.Add(this.labelM3Param1Name);
+            this.transparentPanelM3.ContentPanel.Controls.Add(this.lbLedM3Status);
+            this.transparentPanelM3.ContentPanel.Controls.Add(this.checkBoxM3Inclusion);
+            this.transparentPanelM3.ContentPanel.Controls.Add(this.comboBoxM3PrgName);
+            resources.ApplyResources(this.transparentPanelM3.ContentPanel, "transparentPanelM3.ContentPanel");
+            this.transparentPanelM3.ContentPanel.Name = "ContentPanel";
+            controlFormatStyle5.BorderCornerRadius = 5;
+            this.transparentPanelM3.FormatStyle = controlFormatStyle5;
+            resources.ApplyResources(this.transparentPanelM3, "transparentPanelM3");
+            this.transparentPanelM3.Name = "transparentPanelM3";
+            // 
+            // labelM3Name
+            // 
+            resources.ApplyResources(this.labelM3Name, "labelM3Name");
+            this.labelM3Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM3Name.Name = "labelM3Name";
+            // 
+            // lbLedM3HomingDone
+            // 
+            this.lbLedM3HomingDone.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM3HomingDone.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM3HomingDone, "lbLedM3HomingDone");
+            this.lbLedM3HomingDone.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM3HomingDone.Label = "homing done";
+            this.lbLedM3HomingDone.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM3HomingDone.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM3HomingDone.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM3HomingDone.Name = "lbLedM3HomingDone";
+            this.lbLedM3HomingDone.Renderer = null;
+            this.lbLedM3HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM3HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedM3Ready
+            // 
+            this.lbLedM3Ready.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM3Ready.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM3Ready, "lbLedM3Ready");
+            this.lbLedM3Ready.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM3Ready.Label = "ready";
+            this.lbLedM3Ready.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM3Ready.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM3Ready.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM3Ready.Name = "lbLedM3Ready";
+            this.lbLedM3Ready.Renderer = null;
+            this.lbLedM3Ready.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM3Ready.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // labelM3Param1Value
+            // 
+            resources.ApplyResources(this.labelM3Param1Value, "labelM3Param1Value");
+            this.labelM3Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM3Param1Value.Name = "labelM3Param1Value";
+            // 
+            // labelM3Param1Name
+            // 
+            resources.ApplyResources(this.labelM3Param1Name, "labelM3Param1Name");
+            this.labelM3Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM3Param1Name.Name = "labelM3Param1Name";
+            // 
+            // lbLedM3Status
+            // 
+            this.lbLedM3Status.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM3Status.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM3Status, "lbLedM3Status");
+            this.lbLedM3Status.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM3Status.Label = "status";
+            this.lbLedM3Status.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM3Status.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM3Status.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM3Status.Name = "lbLedM3Status";
+            this.lbLedM3Status.Renderer = null;
+            this.lbLedM3Status.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM3Status.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // checkBoxM3Inclusion
+            // 
+            resources.ApplyResources(this.checkBoxM3Inclusion, "checkBoxM3Inclusion");
+            this.checkBoxM3Inclusion.Checked = true;
+            this.checkBoxM3Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxM3Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.checkBoxM3Inclusion.FlatAppearance.BorderSize = 0;
+            this.checkBoxM3Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM3Inclusion.Name = "checkBoxM3Inclusion";
+            this.checkBoxM3Inclusion.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxM3PrgName
+            // 
+            resources.ApplyResources(this.comboBoxM3PrgName, "comboBoxM3PrgName");
+            this.comboBoxM3PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.comboBoxM3PrgName.FormattingEnabled = true;
+            this.comboBoxM3PrgName.Name = "comboBoxM3PrgName";
+            // 
+            // transparentPanelM4
+            // 
+            // 
+            // transparentPanelM4.ContentPanel
+            // 
+            this.transparentPanelM4.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.transparentPanelM4.ContentPanel.Controls.Add(this.labelM4Name);
+            this.transparentPanelM4.ContentPanel.Controls.Add(this.lbLedM4HomingDone);
+            this.transparentPanelM4.ContentPanel.Controls.Add(this.lbLedM4Ready);
+            this.transparentPanelM4.ContentPanel.Controls.Add(this.labelM4Param1Value);
+            this.transparentPanelM4.ContentPanel.Controls.Add(this.labelM4Param1Name);
+            this.transparentPanelM4.ContentPanel.Controls.Add(this.lbLedM4Status);
+            this.transparentPanelM4.ContentPanel.Controls.Add(this.checkBoxM4Inclusion);
+            this.transparentPanelM4.ContentPanel.Controls.Add(this.comboBoxM4PrgName);
+            resources.ApplyResources(this.transparentPanelM4.ContentPanel, "transparentPanelM4.ContentPanel");
+            this.transparentPanelM4.ContentPanel.Name = "ContentPanel";
+            controlFormatStyle4.BorderCornerRadius = 5;
+            this.transparentPanelM4.FormatStyle = controlFormatStyle4;
+            resources.ApplyResources(this.transparentPanelM4, "transparentPanelM4");
+            this.transparentPanelM4.Name = "transparentPanelM4";
+            // 
+            // labelM4Name
+            // 
+            resources.ApplyResources(this.labelM4Name, "labelM4Name");
+            this.labelM4Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM4Name.Name = "labelM4Name";
+            // 
+            // lbLedM4HomingDone
+            // 
+            this.lbLedM4HomingDone.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM4HomingDone.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM4HomingDone, "lbLedM4HomingDone");
+            this.lbLedM4HomingDone.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM4HomingDone.Label = "homing done";
+            this.lbLedM4HomingDone.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM4HomingDone.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM4HomingDone.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM4HomingDone.Name = "lbLedM4HomingDone";
+            this.lbLedM4HomingDone.Renderer = null;
+            this.lbLedM4HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM4HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedM4Ready
+            // 
+            this.lbLedM4Ready.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM4Ready.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM4Ready, "lbLedM4Ready");
+            this.lbLedM4Ready.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM4Ready.Label = "ready";
+            this.lbLedM4Ready.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM4Ready.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM4Ready.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM4Ready.Name = "lbLedM4Ready";
+            this.lbLedM4Ready.Renderer = null;
+            this.lbLedM4Ready.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM4Ready.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // labelM4Param1Value
+            // 
+            resources.ApplyResources(this.labelM4Param1Value, "labelM4Param1Value");
+            this.labelM4Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM4Param1Value.Name = "labelM4Param1Value";
+            // 
+            // labelM4Param1Name
+            // 
+            resources.ApplyResources(this.labelM4Param1Name, "labelM4Param1Name");
+            this.labelM4Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM4Param1Name.Name = "labelM4Param1Name";
+            // 
+            // lbLedM4Status
+            // 
+            this.lbLedM4Status.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM4Status.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM4Status, "lbLedM4Status");
+            this.lbLedM4Status.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM4Status.Label = "status";
+            this.lbLedM4Status.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM4Status.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM4Status.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM4Status.Name = "lbLedM4Status";
+            this.lbLedM4Status.Renderer = null;
+            this.lbLedM4Status.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM4Status.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // checkBoxM4Inclusion
+            // 
+            resources.ApplyResources(this.checkBoxM4Inclusion, "checkBoxM4Inclusion");
+            this.checkBoxM4Inclusion.Checked = true;
+            this.checkBoxM4Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxM4Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.checkBoxM4Inclusion.FlatAppearance.BorderSize = 0;
+            this.checkBoxM4Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM4Inclusion.Name = "checkBoxM4Inclusion";
+            this.checkBoxM4Inclusion.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxM4PrgName
+            // 
+            resources.ApplyResources(this.comboBoxM4PrgName, "comboBoxM4PrgName");
+            this.comboBoxM4PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.comboBoxM4PrgName.FormattingEnabled = true;
+            this.comboBoxM4PrgName.Name = "comboBoxM4PrgName";
+            // 
+            // transparentPanelM5
+            // 
+            // 
+            // transparentPanelM5.ContentPanel
+            // 
+            this.transparentPanelM5.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.transparentPanelM5.ContentPanel.Controls.Add(this.labelM5Name);
+            this.transparentPanelM5.ContentPanel.Controls.Add(this.lbLedM5HomingDone);
+            this.transparentPanelM5.ContentPanel.Controls.Add(this.lbLedM5Ready);
+            this.transparentPanelM5.ContentPanel.Controls.Add(this.labelM5Param1Value);
+            this.transparentPanelM5.ContentPanel.Controls.Add(this.labelM5Param1Name);
+            this.transparentPanelM5.ContentPanel.Controls.Add(this.lbLedM5Status);
+            this.transparentPanelM5.ContentPanel.Controls.Add(this.checkBoxM5Inclusion);
+            this.transparentPanelM5.ContentPanel.Controls.Add(this.comboBoxM5PrgName);
+            resources.ApplyResources(this.transparentPanelM5.ContentPanel, "transparentPanelM5.ContentPanel");
+            this.transparentPanelM5.ContentPanel.Name = "ContentPanel";
+            controlFormatStyle3.BorderCornerRadius = 5;
+            this.transparentPanelM5.FormatStyle = controlFormatStyle3;
+            resources.ApplyResources(this.transparentPanelM5, "transparentPanelM5");
+            this.transparentPanelM5.Name = "transparentPanelM5";
+            // 
+            // labelM5Name
+            // 
+            resources.ApplyResources(this.labelM5Name, "labelM5Name");
+            this.labelM5Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM5Name.Name = "labelM5Name";
+            // 
+            // lbLedM5HomingDone
+            // 
+            this.lbLedM5HomingDone.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM5HomingDone.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM5HomingDone, "lbLedM5HomingDone");
+            this.lbLedM5HomingDone.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM5HomingDone.Label = "homing done";
+            this.lbLedM5HomingDone.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM5HomingDone.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM5HomingDone.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM5HomingDone.Name = "lbLedM5HomingDone";
+            this.lbLedM5HomingDone.Renderer = null;
+            this.lbLedM5HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM5HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedM5Ready
+            // 
+            this.lbLedM5Ready.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM5Ready.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM5Ready, "lbLedM5Ready");
+            this.lbLedM5Ready.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM5Ready.Label = "ready";
+            this.lbLedM5Ready.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM5Ready.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM5Ready.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM5Ready.Name = "lbLedM5Ready";
+            this.lbLedM5Ready.Renderer = null;
+            this.lbLedM5Ready.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM5Ready.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // labelM5Param1Value
+            // 
+            resources.ApplyResources(this.labelM5Param1Value, "labelM5Param1Value");
+            this.labelM5Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM5Param1Value.Name = "labelM5Param1Value";
+            // 
+            // labelM5Param1Name
+            // 
+            resources.ApplyResources(this.labelM5Param1Name, "labelM5Param1Name");
+            this.labelM5Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM5Param1Name.Name = "labelM5Param1Name";
+            // 
+            // lbLedM5Status
+            // 
+            this.lbLedM5Status.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM5Status.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM5Status, "lbLedM5Status");
+            this.lbLedM5Status.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM5Status.Label = "status";
+            this.lbLedM5Status.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM5Status.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM5Status.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM5Status.Name = "lbLedM5Status";
+            this.lbLedM5Status.Renderer = null;
+            this.lbLedM5Status.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM5Status.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // checkBoxM5Inclusion
+            // 
+            resources.ApplyResources(this.checkBoxM5Inclusion, "checkBoxM5Inclusion");
+            this.checkBoxM5Inclusion.Checked = true;
+            this.checkBoxM5Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxM5Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.checkBoxM5Inclusion.FlatAppearance.BorderSize = 0;
+            this.checkBoxM5Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM5Inclusion.Name = "checkBoxM5Inclusion";
+            this.checkBoxM5Inclusion.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxM5PrgName
+            // 
+            resources.ApplyResources(this.comboBoxM5PrgName, "comboBoxM5PrgName");
+            this.comboBoxM5PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.comboBoxM5PrgName.FormattingEnabled = true;
+            this.comboBoxM5PrgName.Name = "comboBoxM5PrgName";
+            // 
+            // transparentPanelM6
+            // 
+            // 
+            // transparentPanelM6.ContentPanel
+            // 
+            this.transparentPanelM6.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.transparentPanelM6.ContentPanel.Controls.Add(this.labelM6Name);
+            this.transparentPanelM6.ContentPanel.Controls.Add(this.lbLedM6HomingDone);
+            this.transparentPanelM6.ContentPanel.Controls.Add(this.lbLedM6Ready);
+            this.transparentPanelM6.ContentPanel.Controls.Add(this.labelM6Param1Value);
+            this.transparentPanelM6.ContentPanel.Controls.Add(this.labelM6Param1Name);
+            this.transparentPanelM6.ContentPanel.Controls.Add(this.lbLedM6Status);
+            this.transparentPanelM6.ContentPanel.Controls.Add(this.checkBoxM6Inclusion);
+            this.transparentPanelM6.ContentPanel.Controls.Add(this.comboBoxM6PrgName);
+            resources.ApplyResources(this.transparentPanelM6.ContentPanel, "transparentPanelM6.ContentPanel");
+            this.transparentPanelM6.ContentPanel.Name = "ContentPanel";
+            controlFormatStyle2.BorderCornerRadius = 5;
+            this.transparentPanelM6.FormatStyle = controlFormatStyle2;
+            resources.ApplyResources(this.transparentPanelM6, "transparentPanelM6");
+            this.transparentPanelM6.Name = "transparentPanelM6";
+            // 
+            // labelM6Name
+            // 
+            resources.ApplyResources(this.labelM6Name, "labelM6Name");
+            this.labelM6Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM6Name.Name = "labelM6Name";
+            // 
+            // lbLedM6HomingDone
+            // 
+            this.lbLedM6HomingDone.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM6HomingDone.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM6HomingDone, "lbLedM6HomingDone");
+            this.lbLedM6HomingDone.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM6HomingDone.Label = "homing done";
+            this.lbLedM6HomingDone.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM6HomingDone.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM6HomingDone.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM6HomingDone.Name = "lbLedM6HomingDone";
+            this.lbLedM6HomingDone.Renderer = null;
+            this.lbLedM6HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM6HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedM6Ready
+            // 
+            this.lbLedM6Ready.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM6Ready.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM6Ready, "lbLedM6Ready");
+            this.lbLedM6Ready.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM6Ready.Label = "ready";
+            this.lbLedM6Ready.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM6Ready.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM6Ready.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM6Ready.Name = "lbLedM6Ready";
+            this.lbLedM6Ready.Renderer = null;
+            this.lbLedM6Ready.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM6Ready.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // labelM6Param1Value
+            // 
+            resources.ApplyResources(this.labelM6Param1Value, "labelM6Param1Value");
+            this.labelM6Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM6Param1Value.Name = "labelM6Param1Value";
+            // 
+            // labelM6Param1Name
+            // 
+            resources.ApplyResources(this.labelM6Param1Name, "labelM6Param1Name");
+            this.labelM6Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM6Param1Name.Name = "labelM6Param1Name";
+            // 
+            // lbLedM6Status
+            // 
+            this.lbLedM6Status.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM6Status.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM6Status, "lbLedM6Status");
+            this.lbLedM6Status.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM6Status.Label = "status";
+            this.lbLedM6Status.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM6Status.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedM6Status.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM6Status.Name = "lbLedM6Status";
+            this.lbLedM6Status.Renderer = null;
+            this.lbLedM6Status.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM6Status.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // checkBoxM6Inclusion
+            // 
+            resources.ApplyResources(this.checkBoxM6Inclusion, "checkBoxM6Inclusion");
+            this.checkBoxM6Inclusion.Checked = true;
+            this.checkBoxM6Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxM6Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.checkBoxM6Inclusion.FlatAppearance.BorderSize = 0;
+            this.checkBoxM6Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM6Inclusion.Name = "checkBoxM6Inclusion";
+            this.checkBoxM6Inclusion.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxM6PrgName
+            // 
+            resources.ApplyResources(this.comboBoxM6PrgName, "comboBoxM6PrgName");
+            this.comboBoxM6PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.comboBoxM6PrgName.FormattingEnabled = true;
+            this.comboBoxM6PrgName.Name = "comboBoxM6PrgName";
+            // 
+            // lbLedAirPressure
+            // 
+            this.lbLedAirPressure.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedAirPressure.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedAirPressure, "lbLedAirPressure");
+            this.lbLedAirPressure.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLedAirPressure.Label = "air pressure";
+            this.lbLedAirPressure.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedAirPressure.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedAirPressure.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedAirPressure.Name = "lbLedAirPressure";
+            this.lbLedAirPressure.Renderer = null;
+            this.lbLedAirPressure.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedAirPressure.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedPLCConnection
+            // 
+            this.lbLedPLCConnection.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedPLCConnection.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedPLCConnection, "lbLedPLCConnection");
+            this.lbLedPLCConnection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLedPLCConnection.Label = "PLC connection";
+            this.lbLedPLCConnection.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedPLCConnection.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedPLCConnection.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedPLCConnection.Name = "lbLedPLCConnection";
+            this.lbLedPLCConnection.Renderer = null;
+            this.lbLedPLCConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+            this.lbLedPLCConnection.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedLineStatus
+            // 
+            this.lbLedLineStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedLineStatus.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedLineStatus, "lbLedLineStatus");
+            this.lbLedLineStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLedLineStatus.Label = "line status";
+            this.lbLedLineStatus.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedLineStatus.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedLineStatus.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedLineStatus.Name = "lbLedLineStatus";
+            this.lbLedLineStatus.Renderer = null;
+            this.lbLedLineStatus.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedLineStatus.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedEmergency
+            // 
+            this.lbLedEmergency.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedEmergency.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedEmergency, "lbLedEmergency");
+            this.lbLedEmergency.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLedEmergency.Label = "emergency";
+            this.lbLedEmergency.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedEmergency.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedEmergency.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedEmergency.Name = "lbLedEmergency";
+            this.lbLedEmergency.Renderer = null;
+            this.lbLedEmergency.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedEmergency.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbButtonPause
+            // 
+            this.lbButtonPause.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonPause.ButtonColor = System.Drawing.Color.LightSkyBlue;
+            resources.ApplyResources(this.lbButtonPause, "lbButtonPause");
+            this.lbButtonPause.Label = "PAUSE";
+            this.lbButtonPause.Name = "lbButtonPause";
+            this.lbButtonPause.Renderer = null;
+            this.lbButtonPause.RepeatInterval = 100;
+            this.lbButtonPause.RepeatState = false;
+            this.lbButtonPause.StartRepeatInterval = 500;
+            this.lbButtonPause.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonPause.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            // 
+            // lbButtonStartStop
+            // 
+            this.lbButtonStartStop.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonStartStop.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonStartStop, "lbButtonStartStop");
+            this.lbButtonStartStop.ForeColor = System.Drawing.Color.White;
+            this.lbButtonStartStop.Label = "START";
+            this.lbButtonStartStop.Name = "lbButtonStartStop";
+            this.lbButtonStartStop.Renderer = null;
+            this.lbButtonStartStop.RepeatInterval = 100;
+            this.lbButtonStartStop.RepeatState = false;
+            this.lbButtonStartStop.StartRepeatInterval = 500;
+            this.lbButtonStartStop.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonStartStop.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            // 
+            // transparentPanelLine
+            // 
+            // 
+            // transparentPanelLine.ContentPanel
+            // 
+            this.transparentPanelLine.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.transparentPanelLine.ContentPanel.Controls.Add(this.buttonResetCounter);
+            this.transparentPanelLine.ContentPanel.Controls.Add(this.labelPieceCounter);
+            this.transparentPanelLine.ContentPanel.Controls.Add(this.lbLedLineReady);
+            this.transparentPanelLine.ContentPanel.Controls.Add(this.lbButtonStartStop);
+            this.transparentPanelLine.ContentPanel.Controls.Add(this.lbLedLineStatus);
+            this.transparentPanelLine.ContentPanel.Controls.Add(this.lbLedAirPressure);
+            this.transparentPanelLine.ContentPanel.Controls.Add(this.lbLedEmergency);
+            this.transparentPanelLine.ContentPanel.Controls.Add(this.lbButtonPause);
+            this.transparentPanelLine.ContentPanel.Controls.Add(this.lbLedPLCConnection);
+            resources.ApplyResources(this.transparentPanelLine.ContentPanel, "transparentPanelLine.ContentPanel");
+            this.transparentPanelLine.ContentPanel.Name = "ContentPanel";
+            controlFormatStyle1.BorderCornerRadius = 5;
+            this.transparentPanelLine.FormatStyle = controlFormatStyle1;
+            resources.ApplyResources(this.transparentPanelLine, "transparentPanelLine");
+            this.transparentPanelLine.Name = "transparentPanelLine";
+            // 
+            // lbLedLineReady
+            // 
+            this.lbLedLineReady.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedLineReady.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedLineReady, "lbLedLineReady");
+            this.lbLedLineReady.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLedLineReady.Label = "ready";
+            this.lbLedLineReady.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedLineReady.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLedLineReady.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedLineReady.Name = "lbLedLineReady";
+            this.lbLedLineReady.Renderer = null;
+            this.lbLedLineReady.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedLineReady.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // labelPieceCounter
+            // 
+            this.labelPieceCounter.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.labelPieceCounter, "labelPieceCounter");
+            this.labelPieceCounter.Name = "labelPieceCounter";
+            // 
+            // buttonResetCounter
+            // 
+            this.buttonResetCounter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            resources.ApplyResources(this.buttonResetCounter, "buttonResetCounter");
+            this.buttonResetCounter.Name = "buttonResetCounter";
+            this.buttonResetCounter.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
@@ -3080,58 +3129,47 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
-            this.splitContainer4.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
-            this.splitContainer4.ResumeLayout(false);
-            this.splitContainerRobot.Panel2.ResumeLayout(false);
-            this.splitContainerRobot.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerRobot)).EndInit();
-            this.splitContainerRobot.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRobotConsole)).EndInit();
-            this.splitContainerOPENUA.Panel2.ResumeLayout(false);
-            this.splitContainerOPENUA.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerOPENUA)).EndInit();
-            this.splitContainerOPENUA.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewOUAConsole)).EndInit();
-            this.splitContainerRSWare.Panel2.ResumeLayout(false);
-            this.splitContainerRSWare.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerRSWare)).EndInit();
-            this.splitContainerRSWare.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRSWareUserConsole)).EndInit();
-            this.splitContainer5.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
-            this.splitContainer5.ResumeLayout(false);
-            this.tabControlAddNewRecipe.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabControlSearchByArticle.ResumeLayout(false);
-            this.tabPageFindArticle.ResumeLayout(false);
-            this.tabPageFindArticle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
             this.splitContainer6.ResumeLayout(false);
             this.splitContainerIO.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerIO)).EndInit();
             this.splitContainerIO.ResumeLayout(false);
-            this.TabPageDiagnostic.ResumeLayout(false);
-            this.TabPageDiagnostic.PerformLayout();
+            this.trueTransparentPanelAuto.ContentPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.trueTransparentPanelAuto)).EndInit();
+            this.trueTransparentPanelAuto.ResumeLayout(false);
+            this.transparentPanelM1.ContentPanel.ResumeLayout(false);
+            this.transparentPanelM1.ContentPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transparentPanelM1)).EndInit();
+            this.transparentPanelM1.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
-            this.tabPageConsole.ResumeLayout(false);
-            this.tabPageRecipe.ResumeLayout(false);
             this.tabPageMain.ResumeLayout(false);
             this.tabPageMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).EndInit();
             this.tabControlMain.ResumeLayout(false);
+            this.transparentPanelM2.ContentPanel.ResumeLayout(false);
+            this.transparentPanelM2.ContentPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transparentPanelM2)).EndInit();
+            this.transparentPanelM2.ResumeLayout(false);
+            this.transparentPanelM3.ContentPanel.ResumeLayout(false);
+            this.transparentPanelM3.ContentPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transparentPanelM3)).EndInit();
+            this.transparentPanelM3.ResumeLayout(false);
+            this.transparentPanelM4.ContentPanel.ResumeLayout(false);
+            this.transparentPanelM4.ContentPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transparentPanelM4)).EndInit();
+            this.transparentPanelM4.ResumeLayout(false);
+            this.transparentPanelM5.ContentPanel.ResumeLayout(false);
+            this.transparentPanelM5.ContentPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transparentPanelM5)).EndInit();
+            this.transparentPanelM5.ResumeLayout(false);
+            this.transparentPanelM6.ContentPanel.ResumeLayout(false);
+            this.transparentPanelM6.ContentPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.transparentPanelM6)).EndInit();
+            this.transparentPanelM6.ResumeLayout(false);
+            this.transparentPanelLine.ContentPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.transparentPanelLine)).EndInit();
+            this.transparentPanelLine.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.labelPieceCounter)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3147,70 +3185,11 @@
         private LidorSystems.IntegralUI.Containers.TabPage tabPage4;
         private LidorSystems.IntegralUI.Containers.TabPage tabPageConsole;
         private LidorSystems.IntegralUI.Containers.TabPage tabPageRecipe;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedSM_Pr;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedSM_Setup;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedSM_ML;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedSMID;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedSM_M;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedSM_Err;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedSM_Em;
-        private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label labelDateTime;
-        private System.Windows.Forms.Button buttonLogin;
         private System.Windows.Forms.Label labelLoginLevel;
-        private System.Windows.Forms.Button buttonParking;
-        private System.Windows.Forms.Button buttonStopAuto;
-        private System.Windows.Forms.Button buttonStartAuto;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.SplitContainer splitContainer3;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedRobotConnection;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedUserConnection;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedMESConnection;
-        private System.Windows.Forms.SplitContainer splitContainer4;
-        private System.Windows.Forms.SplitContainer splitContainerRobot;
-        private System.Windows.Forms.Label labelReceiveRobotConsole;
-        private System.Windows.Forms.DataGridView dataGridViewRobotConsole;
-        private System.Windows.Forms.Button buttonSendCommandRobotConsole;
-        private System.Windows.Forms.TextBox textBoxCommandRobotConsole;
-        private System.Windows.Forms.Label labelCommandOUAConsole;
-        private System.Windows.Forms.Label labelIDRobotConsole;
-        private System.Windows.Forms.ComboBox comboBoxIDRobotConsole;
-        private System.Windows.Forms.SplitContainer splitContainerOPENUA;
-        private System.Windows.Forms.SplitContainer splitContainerRSWare;
-        private System.Windows.Forms.Label labelReceiveUserConsole;
-        private System.Windows.Forms.DataGridView dataGridViewRSWareUserConsole;
-        private System.Windows.Forms.Button buttonSendResetAckUserConsole;
-        private System.Windows.Forms.Button buttonSendSetAckUserConsole;
-        private System.Windows.Forms.Button buttonSendCommandUserConsole;
-        private System.Windows.Forms.TextBox textBoxCommandParametersUserConsole;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label labelIDCommandConsole;
-        private System.Windows.Forms.ComboBox comboBoxIDCommandUserConsole;
-        private System.Windows.Forms.Label labelIDUserConsole;
-        private System.Windows.Forms.ComboBox comboBoxIDUserConsole;
-        private System.Windows.Forms.SplitContainer splitContainer5;
-        private System.Windows.Forms.TabControl tabControlAddNewRecipe;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TabControl tabControlSearchByArticle;
-        private System.Windows.Forms.TabPage tabPageFindArticle;
-        private System.Windows.Forms.Button buttonRefreshByArticleName;
-        private System.Windows.Forms.Button buttonSearchByArticleName;
-        private System.Windows.Forms.Label labelArticleName;
-        private System.Windows.Forms.TextBox textBoxSearchArticle;
-        private System.Windows.Forms.TextBox textBoxCommandMsgOUAConsole;
-        private System.Windows.Forms.Label labelMessageOUAConsole;
-        private System.Windows.Forms.Label labelIDResultOUAConsole;
-        private System.Windows.Forms.ComboBox comboBoxIDResultOUAConsole;
-        private System.Windows.Forms.Label labelReceiveOUAConsole;
-        private System.Windows.Forms.DataGridView dataGridViewOUAConsole;
-        private System.Windows.Forms.Button buttonSendResetAckOUAConsole;
-        private System.Windows.Forms.Button buttonSendSetAckOUAConsole;
-        private System.Windows.Forms.Button buttonSendCommandOUAConsole;
-        private System.Windows.Forms.TextBox textBoxLeatherIDOUAConsole;
-        private System.Windows.Forms.Label labelIDLeatherOUAConsole;
-        private System.Windows.Forms.Label labelIDCommandOUAConsole;
-        private System.Windows.Forms.ComboBox comboBoxIDCommandOUAConsole;
         private System.Windows.Forms.SplitContainer splitContainerIO;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed1020;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed1019;
@@ -3309,16 +3288,72 @@
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2043;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2044;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2041;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button memoryDumpBtn;
-        private System.Windows.Forms.Button ReconnectionRobotBtn;
         private LBSoft.IndustrialCtrls.Leds.LBLed handshakeMESLed;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ComboBox comboBoxManageModelName;
-        private System.Windows.Forms.Button buttonInsertArticle;
-        private System.Windows.Forms.Label labelManageRobotCode;
-        private System.Windows.Forms.Label labelManageArticleCode;
-        private System.Windows.Forms.TextBox textBoxManageArticleName;
+        private LidorSystems.IntegralUI.Controls.TrueTransparentPanel trueTransparentPanelAuto;
+        private LidorSystems.IntegralUI.Controls.TransparentPanel transparentPanelM1;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM1Status;
+        private System.Windows.Forms.CheckBox checkBoxM1Inclusion;
+        private System.Windows.Forms.ComboBox comboBoxM1PrgName;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM1HomingDone;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM1Ready;
+        private System.Windows.Forms.Label labelM1Param1Value;
+        private System.Windows.Forms.Label labelM1Param1Name;
+        private LidorSystems.IntegralUI.Controls.TransparentPanel transparentPanelM6;
+        private System.Windows.Forms.Label labelM6Name;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM6HomingDone;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM6Ready;
+        private System.Windows.Forms.Label labelM6Param1Value;
+        private System.Windows.Forms.Label labelM6Param1Name;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM6Status;
+        private System.Windows.Forms.CheckBox checkBoxM6Inclusion;
+        private System.Windows.Forms.ComboBox comboBoxM6PrgName;
+        private LidorSystems.IntegralUI.Controls.TransparentPanel transparentPanelM5;
+        private System.Windows.Forms.Label labelM5Name;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM5HomingDone;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM5Ready;
+        private System.Windows.Forms.Label labelM5Param1Value;
+        private System.Windows.Forms.Label labelM5Param1Name;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM5Status;
+        private System.Windows.Forms.CheckBox checkBoxM5Inclusion;
+        private System.Windows.Forms.ComboBox comboBoxM5PrgName;
+        private LidorSystems.IntegralUI.Controls.TransparentPanel transparentPanelM4;
+        private System.Windows.Forms.Label labelM4Name;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM4HomingDone;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM4Ready;
+        private System.Windows.Forms.Label labelM4Param1Value;
+        private System.Windows.Forms.Label labelM4Param1Name;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM4Status;
+        private System.Windows.Forms.CheckBox checkBoxM4Inclusion;
+        private System.Windows.Forms.ComboBox comboBoxM4PrgName;
+        private LidorSystems.IntegralUI.Controls.TransparentPanel transparentPanelM3;
+        private System.Windows.Forms.Label labelM3Name;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM3HomingDone;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM3Ready;
+        private System.Windows.Forms.Label labelM3Param1Value;
+        private System.Windows.Forms.Label labelM3Param1Name;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM3Status;
+        private System.Windows.Forms.CheckBox checkBoxM3Inclusion;
+        private System.Windows.Forms.ComboBox comboBoxM3PrgName;
+        private LidorSystems.IntegralUI.Controls.TransparentPanel transparentPanelM2;
+        private System.Windows.Forms.Label labelM2Name;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM2HomingDone;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM2Ready;
+        private System.Windows.Forms.Label labelM2Param1Value;
+        private System.Windows.Forms.Label labelM2Param1Name;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM2Status;
+        private System.Windows.Forms.CheckBox checkBoxM2Inclusion;
+        private System.Windows.Forms.ComboBox comboBoxM2PrgName;
+        private System.Windows.Forms.Label labelM1Name;
+        private LidorSystems.IntegralUI.Controls.TransparentPanel transparentPanelLine;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedLineReady;
+        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonStartStop;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedLineStatus;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedAirPressure;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedEmergency;
+        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonPause;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedPLCConnection;
+        private System.Windows.Forms.Button buttonResetCounter;
+        private LidorSystems.IntegralUI.Controls.Label labelPieceCounter;
     }
 }
 

@@ -65,7 +65,7 @@ namespace GUI
 
         public void Start()
         {
-            myCore.Start();
+            //myCore.Start();
         }
 
         public void SetEvent()
@@ -241,10 +241,6 @@ namespace GUI
         private void InitGUI()
         {
             InitLastParameter();
-
-            InitRobotConsoleDT();
-            InitRSWareUserConsoleDT();
-            InitOpenUAConsoleDT();
         }
 
         public static void LinkEventManager(IServerShared toLink)
@@ -311,66 +307,9 @@ namespace GUI
         }
         #endregion
 
-        private void buttonSendCommandUserConsole_Click(object sender, EventArgs e)
-        {
-            //getcommandid
-            //sulla base dell'id instanzio l'oggetto, rif. RecipeCommand
-            //ID combobox = 0 CSTAA
-            //new 
-            switch (comboBoxIDCommandUserConsole.SelectedIndex)
-            {
-                case 0:
-                    myRSAUser.MakeCommand(new StartAutomaticCommand(), "");
-                    break;
-                case 1:
-                    myRSAUser.MakeCommand(new StopAutomaticCommand(), "");
-                    break;
-                case 2:
-                    myRSAUser.MakeCommand(new ParkingCommand(), "");
-                    break;
-                case 3:
-                    myRSAUser.MakeCommand(new RecipeCommand(), textBoxCommandParametersUserConsole.Text);
-                    break;                
-                default:
-                    break;
-            }
-            
-        }
+       
 
-        private void buttonSendCommandRobotConsole_Click(object sender, EventArgs e)
-        {
-            string strRet = "";
-
-            myRobot.SetCommand(textBoxCommandRobotConsole.Text, ref strRet);
-            AddMessageToDT(textBoxCommandRobotConsole.Text, strRet, dataGridViewRobotConsole);
-        }
-
-        private void tabControlMain_Resize(object sender, EventArgs e)
-        {
-            if (WindowState != FormWindowState.Minimized)
-            {
-                if(lastPage != null)
-                    tabControlMain.SelectedPage = lastPage;
-                else
-                    tabControlMain.SelectedPage = tabPageMain;
-            }
-        }
-        private void diagnosticSetupBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void diagnosticSetupBtn_Click_1(object sender, EventArgs e)
-        {
-            //if(File.Exists(filePathDiagnosticFileTxtbox.Text))
-            //{
-            //    Properties.Settings.Default.DiagnosticFilePath = filePathDiagnosticFileTxtbox.Text;
-            //    Properties.Settings.Default.Save();
-
-            //    StartDiagnosticGUI(Properties.Settings.Default.DiagnosticFilePath);
-            //}
-
-        }
+     
 
         private void memoryDumpBtn_Click(object sender, EventArgs e)
         {
