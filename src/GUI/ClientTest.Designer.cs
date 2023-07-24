@@ -44,6 +44,7 @@
             this.textBoxLogTxtbox = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.jobAltoBtn = new System.Windows.Forms.Button();
+            this.ReadJogAltoBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // connectBtn
@@ -176,19 +177,30 @@
             // 
             // jobAltoBtn
             // 
-            this.jobAltoBtn.Location = new System.Drawing.Point(16, 278);
+            this.jobAltoBtn.Location = new System.Drawing.Point(13, 275);
             this.jobAltoBtn.Name = "jobAltoBtn";
-            this.jobAltoBtn.Size = new System.Drawing.Size(75, 23);
+            this.jobAltoBtn.Size = new System.Drawing.Size(74, 40);
             this.jobAltoBtn.TabIndex = 15;
             this.jobAltoBtn.Text = "Write Jog Alto";
             this.jobAltoBtn.UseVisualStyleBackColor = true;
             this.jobAltoBtn.Click += new System.EventHandler(this.jobAltoBtn_Click);
+            // 
+            // ReadJogAltoBtn
+            // 
+            this.ReadJogAltoBtn.Location = new System.Drawing.Point(123, 275);
+            this.ReadJogAltoBtn.Name = "ReadJogAltoBtn";
+            this.ReadJogAltoBtn.Size = new System.Drawing.Size(74, 40);
+            this.ReadJogAltoBtn.TabIndex = 16;
+            this.ReadJogAltoBtn.Text = "Read Jog Alto";
+            this.ReadJogAltoBtn.UseVisualStyleBackColor = true;
+            this.ReadJogAltoBtn.Click += new System.EventHandler(this.ReadJogAltoBtn_Click);
             // 
             // ClientTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 621);
+            this.Controls.Add(this.ReadJogAltoBtn);
             this.Controls.Add(this.jobAltoBtn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBoxLogTxtbox);
@@ -232,5 +244,6 @@
         private System.Windows.Forms.TextBox textBoxLogTxtbox;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button jobAltoBtn;
+        private System.Windows.Forms.Button ReadJogAltoBtn;
     }
 }

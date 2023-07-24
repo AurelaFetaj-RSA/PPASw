@@ -1,4 +1,5 @@
-﻿using RSACommon;
+﻿using Opc.UaFx;
+using RSACommon;
 using RSACommon.Service;
 using System;
 using System.Collections.Generic;
@@ -119,6 +120,21 @@ namespace GUI
 
         private async void Connect()
         {
+            if(_clientUri == null)
+            {
+                try
+                {
+                    _clientUri = Helper.BuildUri(schemeTxtbox.Text, hostTxtbox.Text, Int32.Parse(portTxtbox.Text));
+                    AddressLabel.Text = _clientUri.AbsoluteUri;
+                    await Task.Run(() => ThreadSafeWriteMessage($"Automatically generated URI: {_clientUri.AbsoluteUri}"));
+                }
+                catch(System.UriFormatException ex)
+                {
+                    await Task.Run(() => ThreadSafeWriteMessage($"Error generatig URI H:{hostTxtbox.Text}, S:{schemeTxtbox.Text}, P:{Int32.Parse(portTxtbox.Text)}"));
+                    return;
+                }
+            }
+
             bool connectionResult = await _client.Connect(_clientUri.AbsoluteUri);
 
             if (connectionResult)
@@ -153,9 +169,36 @@ namespace GUI
             await Task.Run(() => ThreadSafeWriteMessage("End the folder browsing"));
         }
 
-        private void jobAltoBtn_Click(object sender, EventArgs e)
+        private async void jobAltoBtn_Click(object sender, EventArgs e)
         {
-            _client.Client.WriteNode(_client.ObjectsData.ClientDataConfig.OpcClientData["pc_jog_alto"].OpcString, (bool)true);
+            string keyToSend = "pc_jog_basso";
+
+            var readResult = await _client.Send<bool>(keyToSend, true);
+
+            if(readResult.OpcResult)
+            {
+                await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void ReadJogAltoBtn_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pc_jog_basso";
+
+            var readResult = await _client.Read<bool>(keyToSend);
+
+            if (readResult.OpcResult)
+            {
+                await Task.Run(() => ThreadSafeWriteMessage($"{keyToSend}: { readResult.Value}"));
+            }
+            else
+            {
+                await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
         }
     }
 }
