@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 using WebApi;
 using RSACommon.Logger;
 using RSACommon.WebApiDefinitions;
@@ -35,6 +36,8 @@ namespace GUI
     {
         //core instance
         public static Core myCore;
+        OpcClientService ccService = null;
+
         private LidorSystems.IntegralUI.Containers.TabPage lastPage { get; set; } = null;
         private readonly SplashScreen _splashScreen = null;
         private Form _configForm { get; set; } = null;
@@ -163,7 +166,7 @@ namespace GUI
 
         }
 
-        private void InitCore()
+        private async void InitCore()
         {
             myCore = new Core("PlasticCore");
             myCore.LoadConfiguration(myCore.ConfigFile);
@@ -202,14 +205,18 @@ namespace GUI
                 _splashScreen?.WriteOnTextboxAsync($"Service: {service.Name} loaded");
             }
 
-            OpcClientService ccService = (OpcClientService)myCore.FindPerType(typeof(OpcClientService));
+            ccService = (OpcClientService)myCore.FindPerType(typeof(OpcClientService));
 
             if(ccService != null) 
             {
                 ccService.SetObjectData(new PlasticOpcClientConfig().Config());
             }
 
-            InitServices();
+            if (await ccService.Connect())
+            {
+
+            }
+
             _splashScreen?.WriteOnTextboxAsync($"Core Configuration ended");
             _splashScreen?.WriteOnTextboxAsync($"Core Started");
         }
@@ -246,34 +253,25 @@ namespace GUI
         private void InitGUI()
         {
             InitLastParameter();
-        }
+        }     
 
-        public static void LinkEventManager(IServerShared toLink)
+        private async void Connect()
         {
-            if (toLink is WebApiRSWareSharedClass webApiSharedClass)
+            
+
+            bool connectionResult = await ccService.Connect();
+
+            if (connectionResult)
             {
-                webApiSharedClass.OnAckChangeValueEvent += WebApiSharedClass_OnAckChangeValueEvent;
-                webApiSharedClass.OnErrorChangeValueEvent += WebApiSharedClass_OnErrorChangeValueEvent;
-                webApiSharedClass.OnCommandReadEvent += WebApiSharedClass_OnCommandReadEvent;
+                //await Task.Run(() => ThreadSafeWriteMessage("Connected"));
+
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWritkeMessage("Failed to connect"));
             }
         }
 
-
-        private static void WebApiSharedClass_OnAckChangeValueEvent(object sender, RSACommon.WebApiDefinitions.AckChangeEventArgs e)
-        {
-            myCore.Log?.Info($"{e.User}{e.AckValue}");
-        }
-
-        private static void WebApiSharedClass_OnErrorChangeValueEvent(object sender, RSACommon.WebApiDefinitions.ErrorEventArgs e)
-        {
-            myCore.Log?.Info($"{e.User}{e.EventError}");            
-            //AddMessageToDT(e.User, e.EventError, dataGridViewRSWareUserConsole);
-        }
-
-        private static void WebApiSharedClass_OnCommandReadEvent(object sender, CommandRequestedEventArgs e)
-        {
-            myCore.Log?.Info($"{e.User}{e.Command.CommandString}");            
-        }
 
         #region(* GUI callback *)
 
@@ -377,6 +375,35 @@ namespace GUI
             _clientForm.Show();
             _clientForm.Activate();
 
+        }
+
+        private async void buttonM2SmallClampOpening_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pc_open_small_clamp";
+            string keyToSend1 = "pc_chiusura_pinza_bordo_stivale";
+
+            
+            var readResult1 = await ccService.Send(keyToSend1, false);
+            var readResult = await ccService.Send(keyToSend, true);       
+            
+        }
+
+        private async void buttonM2SmallClampClosing_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pc_chiusura_pinza_bordo_stivale";
+            string keyToSend1 = "pc_apertura_pinza_bordo_stivale";
+
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+
+            var readResult1 = await ccService.Send(keyToSend1, false);
+
+            if (readResult1.OpcResult)
+            {
+                sw.Stop();
+                myCore.Log.Debug(sw.ElapsedMilliseconds);
+            }
+            var readResult = await ccService.Send(keyToSend, true);            
         }
     }
 }

@@ -3243,12 +3243,14 @@
             resources.ApplyResources(this.buttonM2SmallClampClosing, "buttonM2SmallClampClosing");
             this.buttonM2SmallClampClosing.Name = "buttonM2SmallClampClosing";
             this.buttonM2SmallClampClosing.UseVisualStyleBackColor = true;
+            this.buttonM2SmallClampClosing.Click += new System.EventHandler(this.buttonM2SmallClampClosing_Click);
             // 
             // buttonM2SmallClampOpening
             // 
             resources.ApplyResources(this.buttonM2SmallClampOpening, "buttonM2SmallClampOpening");
             this.buttonM2SmallClampOpening.Name = "buttonM2SmallClampOpening";
             this.buttonM2SmallClampOpening.UseVisualStyleBackColor = true;
+            this.buttonM2SmallClampOpening.Click += new System.EventHandler(this.buttonM2SmallClampOpening_Click);
             // 
             // tabPageRecipe
             // 
@@ -3343,12 +3345,12 @@
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
             this.tabControlMain.Controls.Add(this.tabPageConsole);
-            this.tabControlMain.Controls.Add(this.tabPageHide);
-            this.tabControlMain.Controls.Add(this.tabPageHelp);
+            this.tabControlMain.Controls.Add(this.tabPageRecipe);
+            this.tabControlMain.Controls.Add(this.tabPage4);
             this.tabControlMain.Controls.Add(this.tabPageSettings);
             this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
-            this.tabControlMain.Controls.Add(this.tabPage4);
-            this.tabControlMain.Controls.Add(this.tabPageRecipe);
+            this.tabControlMain.Controls.Add(this.tabPageHide);
+            this.tabControlMain.Controls.Add(this.tabPageHelp);
             this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlMain, "tabControlMain");

@@ -5990,7 +5990,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageHide.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="tabPageHelp.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>
@@ -6025,7 +6025,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageHelp.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="tabPageSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>
@@ -6130,7 +6130,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>2</value>
   </data>
   <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -6826,7 +6826,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageRecipe.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>1</value>
   </data>
   <data name="labelLoginLevel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
