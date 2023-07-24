@@ -70,9 +70,9 @@ namespace GUI
             //myCore.Start();
         }
 
-        public void SetEvent()
+        public async void SetEvent()
         {
-
+            
         }
 
         public void StartUpdateTask()
@@ -80,7 +80,7 @@ namespace GUI
 
             //.Run(async () => await UpdateGraphicsGUI(TimeSpan.FromMilliseconds(Settings.Default.UpdateGUILed), _cancellationTokenSource));
             //Task.Run(async () => await UpdateDiagnosticGUI(TimeSpan.FromMilliseconds(myCore.DiagnosticConfigurator.Configuration.DiagnosticPolling), _cancellationTokenSource));
-            //Task.Run(async () => await UpdateRobutStatus(TimeSpan.FromMilliseconds(1000), _cancellationTokenSource));
+            Task.Run(async () => await UpdateOPCUAStatus(TimeSpan.FromMilliseconds(1000), _cancellationTokenSource));
             
         }
 

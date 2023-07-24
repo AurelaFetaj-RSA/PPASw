@@ -64,7 +64,7 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pc_numero_cicli", $"ns=2;s=Tags.Pad_print_interna/pc_numero_cicli", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pc_ready", $"ns=2;s=Tags.Pad_print_interna/pc_ready", typeof(bool)));
 
-            ClientDataConfig.Add(new OpcObjectData("pc_stato_macchina", $"ns=2;s=Tags.Pad_print_interna/pc_stato_macchina", typeof(short)));
+            ClientDataConfig.Add(new OpcObjectData("pcM2Status", $"ns=2;s=Tags.Pad_print_interna/pc_stato_macchina", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pc_allarmi_generali ", $"ns=2;s=Tags.Pad_print_interna/pc_allarmi_generali", typeof(short[])));
             ClientDataConfig.Add(new OpcObjectData("pc_allarmi_timeout", $"ns=2;s=Tags.Pad_print_interna/pc_allarmi_timeout", typeof(short[])));
             ClientDataConfig.Add(new OpcObjectData("pc_input", $"ns=2;s=Tags.Pad_print_interna/pc_input", typeof(bool[])));

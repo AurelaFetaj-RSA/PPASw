@@ -52,7 +52,7 @@ namespace GUI
             MainForm.TopMost = false;
 
             MainForm.Start();
-            //MainForm.StartUpdateTask();
+            MainForm.StartUpdateTask();
         }
 
     }

@@ -20,7 +20,7 @@ using System.Windows.Forms;
 using Diagnostic;
 using Diagnostic.State;
 using OpcCustom;
-
+using RSACommon.Service;
 
 namespace GUI
 {
@@ -67,6 +67,16 @@ namespace GUI
             while (true)
             {
                 await UpdateRobotStatus();
+                await Task.Delay(interval, cancellationToken.Token);
+            }
+        }
+
+        public async Task UpdateOPCUAStatus(TimeSpan interval, CancellationTokenSource cancellationToken)
+        {
+
+            while (true)
+            {
+                await UpdateOPCUAStatus();
                 await Task.Delay(interval, cancellationToken.Token);
             }
         }
@@ -148,9 +158,40 @@ namespace GUI
             //}
         }
 
+        public async Task UpdateOPCUAStatus()
+        {
+            lbLedPLCConnection.State = (ccService.IsActive) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+            OpcClientService.ClientResult varResult = await ccService.Read("pcM2Status");
+
+            if ((short)varResult.Value == 0)
+            {
+                lbLedLineStatus.LedColor = Color.Red;
+            }
+
+            if ((short)varResult.Value == 1)
+            {
+                lbLedLineStatus.LedColor = Color.Green;
+            }
+
+            if ((short)varResult.Value == 2)
+            {
+                lbLedLineStatus.LedColor = Color.Yellow;
+            }
+
+            if ((short)varResult.Value == 3)
+            {
+                lbLedLineStatus.LedColor = Color.Blue;
+            }
+
+            if ((short)varResult.Value == 4)
+            {
+                lbLedLineStatus.LedColor = Color.Orange;
+            }
+        }
 
         public void UpdateRobotLamp()
         {
+
             //if (myRobot != null)
             //{
                 //lbLedRobotConnection.State = (myRobot.IsConnected) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
