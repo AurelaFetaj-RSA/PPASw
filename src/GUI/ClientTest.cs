@@ -173,7 +173,7 @@ namespace GUI
         {
             string keyToSend = "pc_jog_basso";
 
-            var readResult = await _client.Send<bool>(keyToSend, true);
+            var readResult = await _client.Send(keyToSend, jogAltoCheckbox.Checked);
 
             if(readResult.OpcResult)
             {
@@ -189,11 +189,69 @@ namespace GUI
         {
             string keyToSend = "pc_jog_basso";
 
-            var readResult = await _client.Read<bool>(keyToSend);
+            var readResult = await _client.Read(keyToSend);
 
             if (readResult.OpcResult)
             {
                 await Task.Run(() => ThreadSafeWriteMessage($"{keyToSend}: { readResult.Value}"));
+            }
+            else
+            {
+                await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void button3_Click(object sender, EventArgs e)
+        {
+            int[] arrayToSend = new int[5];
+
+            arrayToSend[0] = -1;
+            arrayToSend[1] = short.Parse(quota1.Text);
+            arrayToSend[2] = short.Parse(quota2.Text);
+            arrayToSend[3] = short.Parse(quota3.Text);
+            arrayToSend[4] = short.Parse(quota4.Text);
+
+            string keyToSend = "pc_quota_longitudinale";
+
+            var readResult = await _client.Send(keyToSend, arrayToSend);
+
+            if (readResult.OpcResult)
+            {
+                await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void readQuotaLong_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pc_quota_longitudinale";
+
+            var readResult = await _client.Read(keyToSend);
+
+            if (readResult.OpcResult)
+            {
+                var readValue = readResult.Value as short[];
+
+                await Task.Run(() => ThreadSafeWriteMessage($"{keyToSend}: {readValue[0]} {readValue[1]} {readValue[2]} {readValue[3]} {readValue[4]}"));
+            }
+            else
+            {
+                await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void pcPercVeloBtn_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pc_percentuale_velocità_in_manuale";
+
+            var readResult = await _client.Send(keyToSend, short.Parse(velocitTxtbox.Text));
+
+            if (readResult.OpcResult)
+            {
+                await Task.Run(() => ThreadSafeWriteMessage("Value set"));
             }
             else
             {

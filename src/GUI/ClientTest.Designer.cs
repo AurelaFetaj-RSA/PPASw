@@ -45,6 +45,17 @@
             this.button2 = new System.Windows.Forms.Button();
             this.jobAltoBtn = new System.Windows.Forms.Button();
             this.ReadJogAltoBtn = new System.Windows.Forms.Button();
+            this.jogAltoCheckbox = new System.Windows.Forms.CheckBox();
+            this.writeQuotaLong = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.quota4 = new System.Windows.Forms.TextBox();
+            this.quota3 = new System.Windows.Forms.TextBox();
+            this.quota2 = new System.Windows.Forms.TextBox();
+            this.quota1 = new System.Windows.Forms.TextBox();
+            this.readQuotaLong = new System.Windows.Forms.Button();
+            this.pcPercVeloBtn = new System.Windows.Forms.Button();
+            this.velocitTxtbox = new System.Windows.Forms.TextBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // connectBtn
@@ -158,10 +169,10 @@
             // 
             // textBoxLogTxtbox
             // 
-            this.textBoxLogTxtbox.Location = new System.Drawing.Point(448, 16);
+            this.textBoxLogTxtbox.Location = new System.Drawing.Point(493, 12);
             this.textBoxLogTxtbox.Multiline = true;
             this.textBoxLogTxtbox.Name = "textBoxLogTxtbox";
-            this.textBoxLogTxtbox.Size = new System.Drawing.Size(354, 593);
+            this.textBoxLogTxtbox.Size = new System.Drawing.Size(629, 593);
             this.textBoxLogTxtbox.TabIndex = 13;
             this.textBoxLogTxtbox.TextChanged += new System.EventHandler(this.textBoxLogTxtbox_TextChanged);
             // 
@@ -181,25 +192,124 @@
             this.jobAltoBtn.Name = "jobAltoBtn";
             this.jobAltoBtn.Size = new System.Drawing.Size(74, 40);
             this.jobAltoBtn.TabIndex = 15;
-            this.jobAltoBtn.Text = "Write Jog Alto";
+            this.jobAltoBtn.Text = "Write Jog Basso";
             this.jobAltoBtn.UseVisualStyleBackColor = true;
             this.jobAltoBtn.Click += new System.EventHandler(this.jobAltoBtn_Click);
             // 
             // ReadJogAltoBtn
             // 
-            this.ReadJogAltoBtn.Location = new System.Drawing.Point(123, 275);
+            this.ReadJogAltoBtn.Location = new System.Drawing.Point(15, 321);
             this.ReadJogAltoBtn.Name = "ReadJogAltoBtn";
             this.ReadJogAltoBtn.Size = new System.Drawing.Size(74, 40);
             this.ReadJogAltoBtn.TabIndex = 16;
-            this.ReadJogAltoBtn.Text = "Read Jog Alto";
+            this.ReadJogAltoBtn.Text = "Read Jog Basso";
             this.ReadJogAltoBtn.UseVisualStyleBackColor = true;
             this.ReadJogAltoBtn.Click += new System.EventHandler(this.ReadJogAltoBtn_Click);
+            // 
+            // jogAltoCheckbox
+            // 
+            this.jogAltoCheckbox.AutoSize = true;
+            this.jogAltoCheckbox.Location = new System.Drawing.Point(102, 288);
+            this.jogAltoCheckbox.Name = "jogAltoCheckbox";
+            this.jogAltoCheckbox.Size = new System.Drawing.Size(97, 17);
+            this.jogAltoCheckbox.TabIndex = 17;
+            this.jogAltoCheckbox.Text = "Jog Alto Status";
+            this.jogAltoCheckbox.UseVisualStyleBackColor = true;
+            // 
+            // writeQuotaLong
+            // 
+            this.writeQuotaLong.Location = new System.Drawing.Point(6, 19);
+            this.writeQuotaLong.Name = "writeQuotaLong";
+            this.writeQuotaLong.Size = new System.Drawing.Size(102, 31);
+            this.writeQuotaLong.TabIndex = 18;
+            this.writeQuotaLong.Text = "Write Quota Long";
+            this.writeQuotaLong.UseVisualStyleBackColor = true;
+            this.writeQuotaLong.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.readQuotaLong);
+            this.groupBox1.Controls.Add(this.quota4);
+            this.groupBox1.Controls.Add(this.writeQuotaLong);
+            this.groupBox1.Controls.Add(this.quota3);
+            this.groupBox1.Controls.Add(this.quota2);
+            this.groupBox1.Controls.Add(this.quota1);
+            this.groupBox1.Location = new System.Drawing.Point(16, 367);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(230, 135);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
+            // quota4
+            // 
+            this.quota4.Location = new System.Drawing.Point(114, 99);
+            this.quota4.Name = "quota4";
+            this.quota4.Size = new System.Drawing.Size(100, 20);
+            this.quota4.TabIndex = 26;
+            this.quota4.Text = "155";
+            // 
+            // quota3
+            // 
+            this.quota3.Location = new System.Drawing.Point(114, 73);
+            this.quota3.Name = "quota3";
+            this.quota3.Size = new System.Drawing.Size(100, 20);
+            this.quota3.TabIndex = 25;
+            this.quota3.Text = "132";
+            // 
+            // quota2
+            // 
+            this.quota2.Location = new System.Drawing.Point(114, 47);
+            this.quota2.Name = "quota2";
+            this.quota2.Size = new System.Drawing.Size(100, 20);
+            this.quota2.TabIndex = 24;
+            this.quota2.Text = "150";
+            // 
+            // quota1
+            // 
+            this.quota1.Location = new System.Drawing.Point(114, 21);
+            this.quota1.Name = "quota1";
+            this.quota1.Size = new System.Drawing.Size(100, 20);
+            this.quota1.TabIndex = 23;
+            this.quota1.Text = "100";
+            // 
+            // readQuotaLong
+            // 
+            this.readQuotaLong.Location = new System.Drawing.Point(6, 56);
+            this.readQuotaLong.Name = "readQuotaLong";
+            this.readQuotaLong.Size = new System.Drawing.Size(102, 31);
+            this.readQuotaLong.TabIndex = 27;
+            this.readQuotaLong.Text = "Read Quota Long";
+            this.readQuotaLong.UseVisualStyleBackColor = true;
+            this.readQuotaLong.Click += new System.EventHandler(this.readQuotaLong_Click);
+            // 
+            // pcPercVeloBtn
+            // 
+            this.pcPercVeloBtn.Location = new System.Drawing.Point(275, 275);
+            this.pcPercVeloBtn.Name = "pcPercVeloBtn";
+            this.pcPercVeloBtn.Size = new System.Drawing.Size(93, 40);
+            this.pcPercVeloBtn.TabIndex = 24;
+            this.pcPercVeloBtn.Text = "Write % velocita manuale";
+            this.pcPercVeloBtn.UseVisualStyleBackColor = true;
+            this.pcPercVeloBtn.Click += new System.EventHandler(this.pcPercVeloBtn_Click);
+            // 
+            // velocitTxtbox
+            // 
+            this.velocitTxtbox.Location = new System.Drawing.Point(374, 286);
+            this.velocitTxtbox.Name = "velocitTxtbox";
+            this.velocitTxtbox.Size = new System.Drawing.Size(100, 20);
+            this.velocitTxtbox.TabIndex = 25;
+            this.velocitTxtbox.Text = "100";
             // 
             // ClientTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 621);
+            this.ClientSize = new System.Drawing.Size(1125, 617);
+            this.Controls.Add(this.velocitTxtbox);
+            this.Controls.Add(this.pcPercVeloBtn);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.jogAltoCheckbox);
             this.Controls.Add(this.ReadJogAltoBtn);
             this.Controls.Add(this.jobAltoBtn);
             this.Controls.Add(this.button2);
@@ -221,6 +331,8 @@
             this.Name = "ClientTest";
             this.Text = "ClientTest";
             this.Load += new System.EventHandler(this.ClientTest_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,5 +357,15 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button jobAltoBtn;
         private System.Windows.Forms.Button ReadJogAltoBtn;
+        private System.Windows.Forms.CheckBox jogAltoCheckbox;
+        private System.Windows.Forms.Button writeQuotaLong;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox quota4;
+        private System.Windows.Forms.TextBox quota3;
+        private System.Windows.Forms.TextBox quota2;
+        private System.Windows.Forms.TextBox quota1;
+        private System.Windows.Forms.Button readQuotaLong;
+        private System.Windows.Forms.Button pcPercVeloBtn;
+        private System.Windows.Forms.TextBox velocitTxtbox;
     }
 }
