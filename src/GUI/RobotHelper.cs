@@ -107,7 +107,7 @@ namespace GUI
 
         public async Task CheckDiagnostic()
         {
-            return ;
+            return;
             //List<string> variableList = myCore.DiagnosticConfigurator.DiagnosticStatus.Keys.ToList();
 
             //foreach(string diagnosticVariableName in variableList)
@@ -158,150 +158,550 @@ namespace GUI
             //}
         }
 
+        #region (* machines status *)
         public async Task UpdateOPCUAStatus()
         {
-            lbLedPLCConnection.State = (ccService.IsActive) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            OpcClientService.ClientResult varResult = await ccService.Read("pcM2Status");
+            //opcua M1 status
+            OpcClientService.ClientResult varResult = await ccService.Read("pcM1Status");
 
-            if ((short)varResult.Value == 0)
+            if (varResult.OpcResult) UpdateOPCUAM1Lamp((short)varResult.Value);
+            else
             {
-                lbLedLineStatus.LedColor = Color.Red;
+                //todo
             }
 
-            if ((short)varResult.Value == 1)
+            //opcua M2 status
+            varResult = await ccService.Read("pcM2Status");
+
+            if (varResult.OpcResult) UpdateOPCUAM2Lamp((short)varResult.Value);
+            else
             {
-                lbLedLineStatus.LedColor = Color.Green;
+                //todo
             }
 
-            if ((short)varResult.Value == 2)
+            //opcua M3 status
+            varResult = await ccService.Read("pcM3Status");
+
+            if (varResult.OpcResult) UpdateOPCUAM3Lamp((short)varResult.Value);
+            else
             {
-                lbLedLineStatus.LedColor = Color.Yellow;
+                //todo
             }
 
-            if ((short)varResult.Value == 3)
+            //opcua M4 status
+            varResult = await ccService.Read("pcM4Status");
+
+            if (varResult.OpcResult) UpdateOPCUAM4Lamp((short)varResult.Value);
+            else
             {
-                lbLedLineStatus.LedColor = Color.Blue;
+                //todo
             }
 
-            if ((short)varResult.Value == 4)
+            //opcua M5 status
+            varResult = await ccService.Read("pcM5Status");
+
+            if (varResult.OpcResult) UpdateOPCUAM5Lamp((short)varResult.Value);
+            else
             {
-                lbLedLineStatus.LedColor = Color.Orange;
+                //todo
+            }
+
+            //opcua M6 status
+            varResult = await ccService.Read("pcM6Status");
+
+            if (varResult.OpcResult) UpdateOPCUAM6Lamp((short)varResult.Value);
+            else
+            {
+                //todo
+            }
+
+            //opcua M1 ready
+            varResult = await ccService.Read("pcM1Ready");
+
+            if (varResult.OpcResult) UpdateOPCUAM1ReadyLamp((short)varResult.Value);
+            else
+            {
+                //todo
+            }
+
+            //opcua M2 ready
+            varResult = await ccService.Read("pcM2Ready");
+
+            if (varResult.OpcResult) UpdateOPCUAM2ReadyLamp((short)varResult.Value);
+            else
+            {
+                //todo
+            }
+
+            //opcua M3 ready
+            varResult = await ccService.Read("pcM3Ready");
+
+            if (varResult.OpcResult) UpdateOPCUAM3ReadyLamp((short)varResult.Value);
+            else
+            {
+                //todo
+            }
+
+            //opcua M4 ready
+            varResult = await ccService.Read("pcM4Ready");
+
+            if (varResult.OpcResult) UpdateOPCUAM4ReadyLamp((short)varResult.Value);
+            else
+            {
+                //todo
+            }
+
+            //opcua M5 ready
+            varResult = await ccService.Read("pcM5Ready");
+
+            if (varResult.OpcResult) UpdateOPCUAM5ReadyLamp((short)varResult.Value);
+            else
+            {
+                //todo
+            }
+
+            //opcua M6 ready
+            varResult = await ccService.Read("pcM6Ready");
+
+            if (varResult.OpcResult) UpdateOPCUAM6ReadyLamp((short)varResult.Value);
+            else
+            {
+                //todo
+            }
+
+            //opcua M1 homing done
+            varResult = await ccService.Read("pcM1HomingDone");
+
+            if (varResult.OpcResult) UpdateOPCUAM1HomingDoneLamp((short)varResult.Value);
+            else
+            {
+                //todo
+            }
+
+            //opcua M2 homing done
+            varResult = await ccService.Read("pcM2HomingDone");
+
+            if (varResult.OpcResult) UpdateOPCUAM2HomingDoneLamp((short)varResult.Value);
+            else
+            {
+                //todo
+            }
+
+            //opcua M3 homing done
+            varResult = await ccService.Read("pcM3HomingDone");
+
+            if (varResult.OpcResult) UpdateOPCUAM3HomingDoneLamp((short)varResult.Value);
+            else
+            {
+                //todo
+            }
+
+            //opcua M4 homing done
+            varResult = await ccService.Read("pcM4HomingDone");
+
+            if (varResult.OpcResult) UpdateOPCUAM4HomingDoneLamp((short)varResult.Value);
+            else
+            {
+                //todo
+            }
+
+            //opcua M5 homing done
+            varResult = await ccService.Read("pcM5HomingDone");
+
+            if (varResult.OpcResult) UpdateOPCUAM5HomingDoneLamp((short)varResult.Value);
+            else
+            {
+                //todo
+            }
+
+            //opcua M6 homing done
+            varResult = await ccService.Read("pcM6HomingDone");
+
+            if (varResult.OpcResult) UpdateOPCUAM6HomingDoneLamp((short)varResult.Value);
+            else
+            {
+                //todo
             }
         }
 
-        public void UpdateRobotLamp()
+        public void UpdateOPCUAM1Lamp(short value)
         {
+            if (value == 0)
+            {
+                lbLedM1Status.LedColor = Color.Red;
+                lbLedM1Status.Label = "emergency";
+            }
 
-            //if (myRobot != null)
-            //{
-                //lbLedRobotConnection.State = (myRobot.IsConnected) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+            if (value == 1)
+            {
+                lbLedM1Status.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM1Status.Label = "automatic";
+            }
 
+            if (value == 2)
+            {
+                lbLedM1Status.LedColor = Color.Orange;
+                lbLedM1Status.Label = "manual";
+            }
 
+            if (value == 3)
+            {
+                lbLedM1Status.LedColor = Color.Blue;
+                lbLedM1Status.Label = "in cycle";
+            }
 
-                /*
-                lbLed1001.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1001)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1002.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1002)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1003.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1003)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1004.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1004)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1005.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1005)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1006.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1006)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1007.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1007)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1008.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1008)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1009.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1009)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1010.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1010)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1011.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1011)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1012.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1012)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1013.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1013)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1014.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1014)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1015.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1015)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1016.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1016)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1017.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1017)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1018.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1018)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1019.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1019)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1020.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1020)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1021.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1021)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1022.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1022)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1023.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1023)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1024.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1024)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1025.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1025)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1026.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1026)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1027.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1027)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1028.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1028)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1029.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1029)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1030.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1030)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1031.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1031)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1032.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1032)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1033.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1033)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1034.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1034)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1035.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1035)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1036.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1036)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1037.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1037)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1038.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1038)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1039.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1039)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1040.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1040)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1041.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1041)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1042.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1042)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1043.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1043)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1044.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1044)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1045.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1045)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1046.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1046)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1047.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1047)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1048.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(1048)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                //Output
-                lbLed2001.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2001)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2002.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2002)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2003.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2003)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2004.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2004)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2005.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2005)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2006.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2006)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2007.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2007)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2008.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2008)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2009.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2009)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2010.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2010)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2011.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2011)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2012.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2012)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2013.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2013)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2014.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2014)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2015.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2015)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2016.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2016)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2017.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2017)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2018.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2018)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2019.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2019)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2020.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2020)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2021.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2021)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2022.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2022)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2023.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2023)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2024.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2024)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2025.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2025)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2026.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2026)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2027.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2027)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2028.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2028)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2029.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2029)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2030.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2030)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2031.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2031)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2032.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2032)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2033.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2033)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2034.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2034)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2035.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2035)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2036.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2036)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2037.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2037)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2038.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2038)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2039.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2039)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2040.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2040)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2041.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2041)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2042.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2042)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2043.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2043)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2044.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2044)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2045.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2045)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2046.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2046)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2047.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2047)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2048.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2048)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                */
-
-            //    return;
-
-            //}
+            if (value == 4)
+            {
+                lbLedM1Status.LedColor = Color.Red;
+                lbLedM1Status.Label = "in alarm";
+            }
         }
+
+        public void UpdateOPCUAM2Lamp(short value)
+        {
+            if (value == 0)
+            {
+                lbLedM2Status.LedColor = Color.Red;
+                lbLedM2Status.Label = "emergency";
+            }
+
+            if (value == 1)
+            {
+                lbLedM2Status.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM2Status.Label = "automatic";
+            }
+
+            if (value == 2)
+            {
+                lbLedM2Status.LedColor = Color.Orange;
+                lbLedM2Status.Label = "manual";
+            }
+
+            if (value == 3)
+            {
+                lbLedM2Status.LedColor = Color.Blue;
+                lbLedM2Status.Label = "in cycle";
+            }
+
+            if (value == 4)
+            {
+                lbLedM2Status.LedColor = Color.Red;
+                lbLedM2Status.Label = "in alarm";
+            }
+        }
+
+        public void UpdateOPCUAM3Lamp(short value)
+        {
+            if (value == 0)
+            {
+                lbLedM3Status.LedColor = Color.Red;
+                lbLedM3Status.Label = "emergency";
+            }
+
+            if (value == 1)
+            {
+                lbLedM3Status.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM3Status.Label = "automatic";
+            }
+
+            if (value == 2)
+            {
+                lbLedM3Status.LedColor = Color.Orange;
+                lbLedM3Status.Label = "manual";
+            }
+
+            if (value == 3)
+            {
+                lbLedM3Status.LedColor = Color.Blue;
+                lbLedM3Status.Label = "in cycle";
+            }
+
+            if (value == 4)
+            {
+                lbLedM3Status.LedColor = Color.Red;
+                lbLedM3Status.Label = "in alarm";
+            }
+        }
+
+        public void UpdateOPCUAM4Lamp(short value)
+        {
+            if (value == 0)
+            {
+                lbLedM4Status.LedColor = Color.Red;
+                lbLedM4Status.Label = "emergency";
+            }
+
+            if (value == 1)
+            {
+                lbLedM4Status.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM4Status.Label = "automatic";
+            }
+
+            if (value == 2)
+            {
+                lbLedM4Status.LedColor = Color.Orange;
+                lbLedM4Status.Label = "manual";
+            }
+
+            if (value == 3)
+            {
+                lbLedM4Status.LedColor = Color.Blue;
+                lbLedM4Status.Label = "in cycle";
+            }
+
+            if (value == 4)
+            {
+                lbLedM4Status.LedColor = Color.Red;
+                lbLedM4Status.Label = "in alarm";
+            }
+        }
+
+        public void UpdateOPCUAM5Lamp(short value)
+        {
+            if (value == 0)
+            {
+                lbLedM5Status.LedColor = Color.Red;
+                lbLedM5Status.Label = "emergency";
+            }
+
+            if (value == 1)
+            {
+                lbLedM5Status.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM5Status.Label = "automatic";
+            }
+
+            if (value == 2)
+            {
+                lbLedM5Status.LedColor = Color.Orange;
+                lbLedM5Status.Label = "manual";
+            }
+
+            if (value == 3)
+            {
+                lbLedM5Status.LedColor = Color.Blue;
+                lbLedM5Status.Label = "in cycle";
+            }
+
+            if (value == 4)
+            {
+                lbLedM5Status.LedColor = Color.Red;
+                lbLedM5Status.Label = "in alarm";
+            }
+        }
+
+        public void UpdateOPCUAM6Lamp(short value)
+        {
+            if (value == 0)
+            {
+                lbLedM6Status.LedColor = Color.Red;
+                lbLedM6Status.Label = "emergency";
+            }
+
+            if (value == 1)
+            {
+                lbLedM6Status.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM6Status.Label = "automatic";
+            }
+
+            if (value == 2)
+            {
+                lbLedM6Status.LedColor = Color.Orange;
+                lbLedM6Status.Label = "manual";
+            }
+
+            if (value == 3)
+            {
+                lbLedM6Status.LedColor = Color.Blue;
+                lbLedM6Status.Label = "in cycle";
+            }
+
+            if (value == 4)
+            {
+                lbLedM6Status.LedColor = Color.Red;
+                lbLedM6Status.Label = "in alarm";
+            }
+        }
+
+        public void UpdateOPCUAM1ReadyLamp(short value)
+        {
+            if (value == 0)
+            {
+                lbLedM1Ready.LedColor = Color.Red;
+                lbLedM1Ready.Label = "not ready";
+            }
+
+            if (value == 1)
+            {
+                lbLedM1Ready.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM1Ready.Label = "ready";
+            }
+        }
+
+        public void UpdateOPCUAM2ReadyLamp(short value)
+        {
+            if (value == 0)
+            {
+                lbLedM2Ready.LedColor = Color.Red;
+                lbLedM2Ready.Label = "not ready";
+            }
+
+            if (value == 1)
+            {
+                lbLedM2Ready.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM2Ready.Label = "ready";
+            }
+        }
+
+        public void UpdateOPCUAM3ReadyLamp(short value)
+        {
+            if (value == 0)
+            {
+                lbLedM3Ready.LedColor = Color.Red;
+                lbLedM3Ready.Label = "not ready";
+            }
+
+            if (value == 1)
+            {
+                lbLedM3Ready.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM3Ready.Label = "ready";
+            }
+        }
+
+        public void UpdateOPCUAM4ReadyLamp(short value)
+        {
+            if (value == 0)
+            {
+                lbLedM4Ready.LedColor = Color.Red;
+                lbLedM4Ready.Label = "not ready";
+            }
+
+            if (value == 1)
+            {
+                lbLedM4Ready.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM4Ready.Label = "ready";
+            }
+        }
+
+        public void UpdateOPCUAM5ReadyLamp(short value)
+        {
+            if (value == 0)
+            {
+                lbLedM5Ready.LedColor = Color.Red;
+                lbLedM5Ready.Label = "not ready";
+            }
+
+            if (value == 1)
+            {
+                lbLedM5Ready.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM5Ready.Label = "ready";
+            }
+        }
+
+        public void UpdateOPCUAM6ReadyLamp(short value)
+        {
+            if (value == 0)
+            {
+                lbLedM6Ready.LedColor = Color.Red;
+                lbLedM6Ready.Label = "not ready";
+            }
+
+            if (value == 1)
+            {
+                lbLedM6Ready.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM6Ready.Label = "ready";
+            }
+        }
+
+        public void UpdateOPCUAM1HomingDoneLamp(short value)
+        {
+            if (value == 0)
+            {
+                lbLedM1HomingDone.LedColor = Color.Red;
+                lbLedM1HomingDone.Label = "homing not done";
+            }
+
+            if (value == 1)
+            {
+                lbLedM1HomingDone.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM1HomingDone.Label = "homing done";
+            }
+        }
+
+        public void UpdateOPCUAM2HomingDoneLamp(short value)
+        {
+            if (value == 0)
+            {
+                lbLedM2HomingDone.LedColor = Color.Red;
+                lbLedM2HomingDone.Label = "homing not done";
+            }
+
+            if (value == 1)
+            {
+                lbLedM2HomingDone.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM2HomingDone.Label = "homing done";
+            }
+        }
+
+        public void UpdateOPCUAM3HomingDoneLamp(short value)
+        {
+            if (value == 0)
+            {
+                lbLedM3HomingDone.LedColor = Color.Red;
+                lbLedM3HomingDone.Label = "homing not done";
+            }
+
+            if (value == 1)
+            {
+                lbLedM3HomingDone.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM3HomingDone.Label = "homing done";
+            }
+        }
+
+        public void UpdateOPCUAM4HomingDoneLamp(short value)
+        {
+            if (value == 0)
+            {
+                lbLedM4HomingDone.LedColor = Color.Red;
+                lbLedM4HomingDone.Label = "homing not done";
+            }
+
+            if (value == 1)
+            {
+                lbLedM4HomingDone.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM4HomingDone.Label = "homing done";
+            }
+        }
+
+        public void UpdateOPCUAM5HomingDoneLamp(short value)
+        {
+            if (value == 0)
+            {
+                lbLedM5HomingDone.LedColor = Color.Red;
+                lbLedM5HomingDone.Label = "homing not done";
+            }
+
+            if (value == 1)
+            {
+                lbLedM5HomingDone.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM5HomingDone.Label = "homing done";
+            }
+        }
+
+        public void UpdateOPCUAM6HomingDoneLamp(short value)
+        {
+            if (value == 0)
+            {
+                lbLedM6HomingDone.LedColor = Color.Red;
+                lbLedM6HomingDone.Label = "homing not done";
+            }
+
+            if (value == 1)
+            {
+                lbLedM6HomingDone.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM6HomingDone.Label = "homing done";
+            }
+        }
+        #endregion
+
     }
 }

@@ -405,5 +405,163 @@ namespace GUI
             }
             var readResult = await ccService.Send(keyToSend, true);            
         }
+
+        private async void lbButtonM2JogUp_Click(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM2JogDown";
+            var readResult1 = await ccService.Send(keyToSend, false);
+            if (readResult1.OpcResult)
+            {
+            }
+
+            keyToSend = "pcM2JogUp";
+            var readResult2 = await ccService.Send(keyToSend, true);
+            if (readResult2.OpcResult)
+            {
+            }
+        }
+
+        private async void lbButtonM2JogDown_Click(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM2JogUp";
+            var readResult1 = await ccService.Send(keyToSend, false);
+            if (readResult1.OpcResult)
+            {
+            }
+
+            keyToSend = "pcM2JogDown";
+            var readResult2 = await ccService.Send(keyToSend, true);
+            if (readResult2.OpcResult)
+            {
+            }
+        }
+
+        private async void numericUpDownM2JogSpeed_ValueChanged(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2JogSpeed";
+
+            var readResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM2JogSpeed.Value.ToString()));
+
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void buttonM2JogReset_Click(object sender, EventArgs e)
+        {            
+            string keyToSend = null;
+
+            keyToSend = "pcM2JogReset";
+            var readResult = await ccService.Send(keyToSend, true);
+            //todo: chi lo mette a false
+        }
+
+        private async void buttonM2StartQuote_Click(object sender, EventArgs e)
+        {            
+            string keyToSend = null;
+
+            keyToSend = "pcM2QuoteStart";
+            var readResult = await ccService.Send(keyToSend, true);
+            //todo: chi lo mette a false
+        }
+
+        private async void checkBoxM2Inclusion_CheckedChanged(object sender, EventArgs e)
+        {            
+            string keyToSend = null;
+
+            keyToSend = "pcM2Inclusion";
+            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void checkBoxM1Inclusion_CheckedChanged(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM1Inclusion";
+            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void checkBoxM3Inclusion_CheckedChanged(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM3Inclusion";
+            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void checkBoxM4Inclusion_CheckedChanged(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM4Inclusion";
+            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void checkBoxM5Inclusion_CheckedChanged(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM5Inclusion";
+            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void checkBoxM6Inclusion_CheckedChanged(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM6Inclusion";
+            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
     }
 }

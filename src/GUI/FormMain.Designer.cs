@@ -62,6 +62,8 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle17 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle18 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle19 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle7 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle20 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle21 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -256,11 +258,13 @@
             this.tabPageConsole = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlM = new LidorSystems.IntegralUI.Containers.TabControl();
             this.tabPageM2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.buttonM2JogReset = new System.Windows.Forms.Button();
+            this.numericUpDownM2JogSpeed = new System.Windows.Forms.NumericUpDown();
             this.dataGridViewM2Points = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ColumnM2PointID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMeQuote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnM2Speed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnM2Register = new System.Windows.Forms.DataGridViewButtonColumn();
             this.lbLed3 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed1 = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -321,6 +325,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabControlM)).BeginInit();
             this.tabControlM.SuspendLayout();
             this.tabPageM2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2JogSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2Points)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualQuote)).BeginInit();
@@ -2197,6 +2202,7 @@
             this.checkBoxM6Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.checkBoxM6Inclusion.Name = "checkBoxM6Inclusion";
             this.checkBoxM6Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM6Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM6Inclusion_CheckedChanged);
             // 
             // comboBoxM6PrgName
             // 
@@ -2299,6 +2305,7 @@
             this.checkBoxM5Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.checkBoxM5Inclusion.Name = "checkBoxM5Inclusion";
             this.checkBoxM5Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM5Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM5Inclusion_CheckedChanged);
             // 
             // comboBoxM5PrgName
             // 
@@ -2401,6 +2408,7 @@
             this.checkBoxM4Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.checkBoxM4Inclusion.Name = "checkBoxM4Inclusion";
             this.checkBoxM4Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM4Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM4Inclusion_CheckedChanged);
             // 
             // comboBoxM4PrgName
             // 
@@ -2503,6 +2511,7 @@
             this.checkBoxM3Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.checkBoxM3Inclusion.Name = "checkBoxM3Inclusion";
             this.checkBoxM3Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM3Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM3Inclusion_CheckedChanged);
             // 
             // comboBoxM3PrgName
             // 
@@ -2605,6 +2614,7 @@
             this.checkBoxM2Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.checkBoxM2Inclusion.Name = "checkBoxM2Inclusion";
             this.checkBoxM2Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM2Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM2Inclusion_CheckedChanged);
             // 
             // comboBoxM2PrgName
             // 
@@ -2707,6 +2717,7 @@
             this.checkBoxM1Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.checkBoxM1Inclusion.Name = "checkBoxM1Inclusion";
             this.checkBoxM1Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM1Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM1Inclusion_CheckedChanged);
             // 
             // comboBoxM1PrgName
             // 
@@ -3003,6 +3014,8 @@
             // 
             // tabPageM2
             // 
+            this.tabPageM2.Controls.Add(this.buttonM2JogReset);
+            this.tabPageM2.Controls.Add(this.numericUpDownM2JogSpeed);
             this.tabPageM2.Controls.Add(this.dataGridViewM2Points);
             this.tabPageM2.Controls.Add(this.lbLed3);
             this.tabPageM2.Controls.Add(this.lbLed2);
@@ -3030,37 +3043,71 @@
             this.tabPageM2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageM2.TextBounds")));
             this.tabPageM2.TextSize = new System.Drawing.SizeF(59.70865F, 13.82519F);
             // 
+            // buttonM2JogReset
+            // 
+            resources.ApplyResources(this.buttonM2JogReset, "buttonM2JogReset");
+            this.buttonM2JogReset.Name = "buttonM2JogReset";
+            this.buttonM2JogReset.UseVisualStyleBackColor = true;
+            this.buttonM2JogReset.Click += new System.EventHandler(this.buttonM2JogReset_Click);
+            // 
+            // numericUpDownM2JogSpeed
+            // 
+            resources.ApplyResources(this.numericUpDownM2JogSpeed, "numericUpDownM2JogSpeed");
+            this.numericUpDownM2JogSpeed.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownM2JogSpeed.Name = "numericUpDownM2JogSpeed";
+            this.numericUpDownM2JogSpeed.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownM2JogSpeed.ValueChanged += new System.EventHandler(this.numericUpDownM2JogSpeed_ValueChanged);
+            // 
             // dataGridViewM2Points
             // 
             this.dataGridViewM2Points.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewM2Points.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
+            this.ColumnM2PointID,
+            this.ColumnMeQuote,
+            this.ColumnM2Speed,
+            this.ColumnM2Register});
             resources.ApplyResources(this.dataGridViewM2Points, "dataGridViewM2Points");
             this.dataGridViewM2Points.Name = "dataGridViewM2Points";
             this.dataGridViewM2Points.RowHeadersVisible = false;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewM2Points.RowsDefaultCellStyle = dataGridViewCellStyle2;
             // 
-            // Column1
+            // ColumnM2PointID
             // 
-            resources.ApplyResources(this.Column1, "Column1");
-            this.Column1.Name = "Column1";
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColumnM2PointID.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ColumnM2PointID.Frozen = true;
+            resources.ApplyResources(this.ColumnM2PointID, "ColumnM2PointID");
+            this.ColumnM2PointID.Name = "ColumnM2PointID";
+            this.ColumnM2PointID.ReadOnly = true;
+            this.ColumnM2PointID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnM2PointID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column2
+            // ColumnMeQuote
             // 
-            resources.ApplyResources(this.Column2, "Column2");
-            this.Column2.Name = "Column2";
+            this.ColumnMeQuote.Frozen = true;
+            resources.ApplyResources(this.ColumnMeQuote, "ColumnMeQuote");
+            this.ColumnMeQuote.Name = "ColumnMeQuote";
             // 
-            // Column3
+            // ColumnM2Speed
             // 
-            resources.ApplyResources(this.Column3, "Column3");
-            this.Column3.Name = "Column3";
+            this.ColumnM2Speed.Frozen = true;
+            resources.ApplyResources(this.ColumnM2Speed, "ColumnM2Speed");
+            this.ColumnM2Speed.Name = "ColumnM2Speed";
             // 
-            // Column4
+            // ColumnM2Register
             // 
-            resources.ApplyResources(this.Column4, "Column4");
-            this.Column4.Name = "Column4";
+            resources.ApplyResources(this.ColumnM2Register, "ColumnM2Register");
+            this.ColumnM2Register.Name = "ColumnM2Register";
             // 
             // lbLed3
             // 
@@ -3153,6 +3200,7 @@
             resources.ApplyResources(this.buttonM2StartQuote, "buttonM2StartQuote");
             this.buttonM2StartQuote.Name = "buttonM2StartQuote";
             this.buttonM2StartQuote.UseVisualStyleBackColor = true;
+            this.buttonM2StartQuote.Click += new System.EventHandler(this.buttonM2StartQuote_Click);
             // 
             // lbButtonM2JogDown
             // 
@@ -3168,6 +3216,7 @@
             this.lbButtonM2JogDown.StartRepeatInterval = 500;
             this.lbButtonM2JogDown.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
             this.lbButtonM2JogDown.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2JogDown.Click += new System.EventHandler(this.lbButtonM2JogDown_Click);
             // 
             // lbButtonM2JogUp
             // 
@@ -3183,6 +3232,7 @@
             this.lbButtonM2JogUp.StartRepeatInterval = 500;
             this.lbButtonM2JogUp.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
             this.lbButtonM2JogUp.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2JogUp.Click += new System.EventHandler(this.lbButtonM2JogUp_Click);
             // 
             // buttonM2ResetServo
             // 
@@ -3467,6 +3517,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabControlM)).EndInit();
             this.tabControlM.ResumeLayout(false);
             this.tabPageM2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2JogSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2Points)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualQuote)).EndInit();
@@ -3681,10 +3732,12 @@
         private System.Windows.Forms.NumericUpDown numericUpDownM2ManualSpeed;
         private System.Windows.Forms.NumericUpDown numericUpDownM2ManualQuote;
         private System.Windows.Forms.DataGridView dataGridViewM2Points;
-        private System.Windows.Forms.DataGridViewImageColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewButtonColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2PointID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMeQuote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2Speed;
+        private System.Windows.Forms.DataGridViewButtonColumn ColumnM2Register;
+        private System.Windows.Forms.NumericUpDown numericUpDownM2JogSpeed;
+        private System.Windows.Forms.Button buttonM2JogReset;
     }
 }
 
