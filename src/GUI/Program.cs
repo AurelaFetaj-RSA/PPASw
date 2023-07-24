@@ -1,4 +1,5 @@
 ﻿using GUI.Properties;
+using RSACommon;
 using RSACommon.GraphicsForm;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,8 @@ namespace GUI
         [STAThread]
         static void Main()
         {
+            LidorSystems.IntegralUI.Containers.TabControl.License(LidorLicenseKey.Key);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
@@ -47,7 +50,6 @@ namespace GUI
             MainForm.TopMost = true;
             MainForm.Activate();
             MainForm.TopMost = false;
-
 
             MainForm.Start();
             //MainForm.StartUpdateTask();

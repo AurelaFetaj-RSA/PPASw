@@ -26,6 +26,7 @@ using Newtonsoft.Json.Linq;
 using System.Timers;
 using Opc.UaFx;
 using OpcCustom;
+using RSACommon.Service;
 
 namespace GUI
 {
@@ -37,8 +38,10 @@ namespace GUI
         public static WebApiSharedList sharedLst;
         IRobot<IRobotVariable> myRobot;
         private LidorSystems.IntegralUI.Containers.TabPage lastPage { get; set; } = null;
-
-        readonly SplashScreen _splashScreen = null;
+        private readonly SplashScreen _splashScreen = null;
+        private Form _configForm { get; set; } = null;
+        private Form _clientForm { get; set; } = null;
+        
 
         CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
         public FormMain(SplashScreen splashScreen)
@@ -60,7 +63,6 @@ namespace GUI
             _splashScreen?.WriteOnTextboxAsync($"Update GUI syncrozionation Thread Started");
 
             tabControlMain.SelectedPage = tabPageMain;
-
         }
 
         public void Start()
@@ -82,9 +84,9 @@ namespace GUI
         public void StartUpdateTask()
         {
 
-            Task.Run(async () => await UpdateGraphicsGUI(TimeSpan.FromMilliseconds(Settings.Default.UpdateGUILed), _cancellationTokenSource));
-            Task.Run(async () => await UpdateDiagnosticGUI(TimeSpan.FromMilliseconds(myCore.DiagnosticConfigurator.Configuration.DiagnosticPolling), _cancellationTokenSource));
-            Task.Run(async () => await UpdateRobutStatus(TimeSpan.FromMilliseconds(1000), _cancellationTokenSource));
+            //.Run(async () => await UpdateGraphicsGUI(TimeSpan.FromMilliseconds(Settings.Default.UpdateGUILed), _cancellationTokenSource));
+            //Task.Run(async () => await UpdateDiagnosticGUI(TimeSpan.FromMilliseconds(myCore.DiagnosticConfigurator.Configuration.DiagnosticPolling), _cancellationTokenSource));
+            //Task.Run(async () => await UpdateRobutStatus(TimeSpan.FromMilliseconds(1000), _cancellationTokenSource));
             
         }
 
@@ -172,7 +174,7 @@ namespace GUI
 
         private void InitCore()
         {
-            myCore = new Core("Core1x") { ApiSharedList = new WebApiSharedList()};
+            myCore = new Core("PlasticCore");
             myCore.LoadConfiguration(myCore.ConfigFile);
 
             _splashScreen?.WriteOnTextboxAsync($"Init Core Configuration");
@@ -181,19 +183,22 @@ namespace GUI
             LoggerConfigurator loadedloggerConfigurator = new LoggerConfigurator("LoggerConfigurations.json").Load().SetAllLogName(logName).Save();
 
             myCore.AddScoped<Diagnostic.Core.Diagnostic>();
+            myCore.AddScoped<OpcClientService>();
 
-            /*
-            myCore.AddScoped<WebApiCore>();
-            myCore.AddScoped<FutureOpcServerCustom>();
-            myCore.AddScoped<Kawasaki>();
-
-            */
             var listOfService = myCore.CreateServiceList(myCore.CoreConfigurations, loadedloggerConfigurator);
 
             foreach(var service in listOfService)
             {
                 _splashScreen?.WriteOnTextboxAsync($"Service: {service.Name} loaded");
             }
+
+            OpcClientService ccService = (OpcClientService)myCore.FindPerType(typeof(OpcClientService));
+
+            if(ccService != null) 
+            {
+                ccService.SetObjectData(new PlasticOpcClientConfig().Config());
+            }
+
 
             /*
             myRSAUser = new RSWareUser()
@@ -358,6 +363,31 @@ namespace GUI
 
         private void splitContainer2_Panel2_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void openConfigFormTextbox_Click(object sender, EventArgs e)
+        {
+            if (_configForm == null)
+                _configForm = new ServiceSetup();
+
+            _configForm.Show();
+            _configForm.Activate();
+
+        }
+
+        private void Client_Click(object sender, EventArgs e)
+        {
+
+
+            if (_clientForm == null || _clientForm.IsDisposed)
+            {
+                OpcClientService clientService = (OpcClientService)myCore.FindPerType(typeof(OpcClientService));
+                _clientForm = new ClientTest(clientService);
+            }
+
+            _clientForm.Show();
+            _clientForm.Activate();
 
         }
     }
