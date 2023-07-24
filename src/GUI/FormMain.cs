@@ -27,6 +27,7 @@ using System.Timers;
 using Opc.UaFx;
 using OpcCustom;
 using RSACommon.Service;
+using RSACommon.Configuration;
 
 namespace GUI
 {
@@ -34,15 +35,11 @@ namespace GUI
     {
         //core instance
         public static Core myCore;
-        RSWareUser myRSAUser;
-        public static WebApiSharedList sharedLst;
-        IRobot<IRobotVariable> myRobot;
         private LidorSystems.IntegralUI.Containers.TabPage lastPage { get; set; } = null;
         private readonly SplashScreen _splashScreen = null;
         private Form _configForm { get; set; } = null;
         private Form _clientForm { get; set; } = null;
         
-
         CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
         public FormMain(SplashScreen splashScreen)
         {
@@ -72,12 +69,6 @@ namespace GUI
 
         public void SetEvent()
         {
-            RSACustomEvents.OPCServerSubscriptionEvent += RSACustomEvents_OPCSubscriptionEvent;
-            RSACustomEvents.KeepAliveTimeoutEvent += RSACustomEvents_KeepAliveTimeoutEvent;
-            RSACustomEvents.ServiceConnectionEvent += RSACustomEvents_ServiceConnectionEvent;
-            RSACustomEvents.KeepAliveOkEvent += RSACustomEvents_KeepAliveOkEvent;
-            RSACustomEvents.ServiceDisconnectionEvent += RSACustomEvents_ServiceDisconnectionEvent;
-            RSACustomEvents.AckTimeoutEvent += RSACustomEvents_AckTimeoutEvent;
 
         }
 
@@ -185,9 +176,28 @@ namespace GUI
             myCore.AddScoped<Diagnostic.Core.Diagnostic>();
             myCore.AddScoped<OpcClientService>();
 
+
+            //OpcClientConfiguration Config = new OpcClientConfiguration()
+            //{
+            //    ServiceName = "OpcClient",
+            //    Active = true,
+            //    Host = "192.168.0.38",
+            //    Port = 48011,
+            //    DefaultKeepAliveFutureValueExpected = 0,
+            //    DefaultKeepAliveFutureValueToSet = 1,
+            //    Scheme = "opc.tcp",
+            //    TimeoutMilliseconds = 5000,
+            //    DisconnectionTimeoutMilliseconds = 5000
+            //};
+
+            //CoreConfigurations newConfiguration = new CoreConfigurations();
+            //newConfiguration.ServiceConfigurations.Add(Config);
+
+            //myCore.AddScoped<RSACommon.Service.OpcClientService>();
+            //myCore.CreateServiceList(newConfiguration, null);
             var listOfService = myCore.CreateServiceList(myCore.CoreConfigurations, loadedloggerConfigurator);
 
-            foreach(var service in listOfService)
+            foreach (var service in listOfService)
             {
                 _splashScreen?.WriteOnTextboxAsync($"Service: {service.Name} loaded");
             }
@@ -198,16 +208,6 @@ namespace GUI
             {
                 ccService.SetObjectData(new PlasticOpcClientConfig().Config());
             }
-
-
-            /*
-            myRSAUser = new RSWareUser()
-            {
-                Ip = "",
-                Name = "RSWare",
-                FolderPath = Settings.Default.RSAUserRecipePath
-            };
-            */
 
             InitServices();
             _splashScreen?.WriteOnTextboxAsync($"Core Configuration ended");
@@ -297,19 +297,7 @@ namespace GUI
         private void tabPageHide_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void buttonSendSetAckUserConsole_Click(object sender, EventArgs e)
-        {
-            IServerShared webAPI = myCore.ApiSharedList.GetWebSharedUserInstance(myRSAUser);
-            webAPI.AckStatus = ACK.Ok;
-        }
- 
-        private void buttonSendResetAckUserConsole_Click(object sender, EventArgs e)
-        {
-            IServerShared webAPI = myCore.ApiSharedList.GetWebSharedUserInstance(myRSAUser);
-            webAPI.AckStatus = ACK.Free;
-        }
+        }     
         #endregion
 
        

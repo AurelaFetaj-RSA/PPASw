@@ -48,11 +48,11 @@
             this.jogAltoCheckbox = new System.Windows.Forms.CheckBox();
             this.writeQuotaLong = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.readQuotaLong = new System.Windows.Forms.Button();
             this.quota4 = new System.Windows.Forms.TextBox();
             this.quota3 = new System.Windows.Forms.TextBox();
             this.quota2 = new System.Windows.Forms.TextBox();
             this.quota1 = new System.Windows.Forms.TextBox();
-            this.readQuotaLong = new System.Windows.Forms.Button();
             this.pcPercVeloBtn = new System.Windows.Forms.Button();
             this.velocitTxtbox = new System.Windows.Forms.TextBox();
             this.readPercVelocitaManuelBtn = new System.Windows.Forms.Button();
@@ -242,6 +242,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // readQuotaLong
+            // 
+            this.readQuotaLong.Location = new System.Drawing.Point(6, 56);
+            this.readQuotaLong.Name = "readQuotaLong";
+            this.readQuotaLong.Size = new System.Drawing.Size(102, 31);
+            this.readQuotaLong.TabIndex = 27;
+            this.readQuotaLong.Text = "Read Quota Long";
+            this.readQuotaLong.UseVisualStyleBackColor = true;
+            this.readQuotaLong.Click += new System.EventHandler(this.readQuotaLong_Click);
+            // 
             // quota4
             // 
             this.quota4.Location = new System.Drawing.Point(114, 99);
@@ -273,16 +283,6 @@
             this.quota1.Size = new System.Drawing.Size(100, 20);
             this.quota1.TabIndex = 23;
             this.quota1.Text = "100";
-            // 
-            // readQuotaLong
-            // 
-            this.readQuotaLong.Location = new System.Drawing.Point(6, 56);
-            this.readQuotaLong.Name = "readQuotaLong";
-            this.readQuotaLong.Size = new System.Drawing.Size(102, 31);
-            this.readQuotaLong.TabIndex = 27;
-            this.readQuotaLong.Text = "Read Quota Long";
-            this.readQuotaLong.UseVisualStyleBackColor = true;
-            this.readQuotaLong.Click += new System.EventHandler(this.readQuotaLong_Click);
             // 
             // pcPercVeloBtn
             // 
@@ -341,7 +341,7 @@
             this.Controls.Add(this.connectBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ClientTest";
-            this.Text = "ClientTest";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.ClientTest_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

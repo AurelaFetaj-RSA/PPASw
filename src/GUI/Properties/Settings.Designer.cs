@@ -12,7 +12,7 @@ namespace GUI.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.6.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.2.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -37,18 +37,6 @@ namespace GUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Work\\Github\\FUTURE_SERVER\\FutureServerFramework\\GUI\\bin\\Debug\\splash.jpg")]
-        public string SplashScreenFilepath {
-            get {
-                return ((string)(this["SplashScreenFilepath"]));
-            }
-            set {
-                this["SplashScreenFilepath"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("C:\\PRODUCTION\\Programs\\R2")]
         public string RSAUserRecipePath {
             get {
@@ -56,6 +44,18 @@ namespace GUI.Properties {
             }
             set {
                 this["RSAUserRecipePath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Work\\Github\\PPASw\\src\\GUI\\bin\\Debug\\splash.jpg")]
+        public string SplashScreenFilepath {
+            get {
+                return ((string)(this["SplashScreenFilepath"]));
+            }
+            set {
+                this["SplashScreenFilepath"] = value;
             }
         }
     }

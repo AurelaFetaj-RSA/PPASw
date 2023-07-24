@@ -256,6 +256,16 @@
             this.tabPageConsole = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlM = new LidorSystems.IntegralUI.Containers.TabControl();
             this.tabPageM2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.dataGridViewM2Points = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.lbLed3 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed1 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.numericUpDownM2ManualSpeed = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownM2ManualQuote = new System.Windows.Forms.NumericUpDown();
             this.buttonM2PrintCycle = new System.Windows.Forms.Button();
             this.buttonM2StartQuote = new System.Windows.Forms.Button();
             this.lbButtonM2JogDown = new LBSoft.IndustrialCtrls.Buttons.LBButton();
@@ -311,6 +321,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabControlM)).BeginInit();
             this.tabControlM.SuspendLayout();
             this.tabPageM2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2Points)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualSpeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualQuote)).BeginInit();
             this.tabPageMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).BeginInit();
             this.tabControlMain.SuspendLayout();
@@ -2990,6 +3003,12 @@
             // 
             // tabPageM2
             // 
+            this.tabPageM2.Controls.Add(this.dataGridViewM2Points);
+            this.tabPageM2.Controls.Add(this.lbLed3);
+            this.tabPageM2.Controls.Add(this.lbLed2);
+            this.tabPageM2.Controls.Add(this.lbLed1);
+            this.tabPageM2.Controls.Add(this.numericUpDownM2ManualSpeed);
+            this.tabPageM2.Controls.Add(this.numericUpDownM2ManualQuote);
             this.tabPageM2.Controls.Add(this.buttonM2PrintCycle);
             this.tabPageM2.Controls.Add(this.buttonM2StartQuote);
             this.tabPageM2.Controls.Add(this.lbButtonM2JogDown);
@@ -3010,6 +3029,118 @@
             this.tabPageM2.ParentPage = null;
             this.tabPageM2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageM2.TextBounds")));
             this.tabPageM2.TextSize = new System.Drawing.SizeF(59.70865F, 13.82519F);
+            // 
+            // dataGridViewM2Points
+            // 
+            this.dataGridViewM2Points.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewM2Points.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            resources.ApplyResources(this.dataGridViewM2Points, "dataGridViewM2Points");
+            this.dataGridViewM2Points.Name = "dataGridViewM2Points";
+            this.dataGridViewM2Points.RowHeadersVisible = false;
+            // 
+            // Column1
+            // 
+            resources.ApplyResources(this.Column1, "Column1");
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            resources.ApplyResources(this.Column2, "Column2");
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            resources.ApplyResources(this.Column3, "Column3");
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            resources.ApplyResources(this.Column4, "Column4");
+            this.Column4.Name = "Column4";
+            // 
+            // lbLed3
+            // 
+            this.lbLed3.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed3.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed3, "lbLed3");
+            this.lbLed3.ForeColor = System.Drawing.Color.Black;
+            this.lbLed3.Label = "homing done";
+            this.lbLed3.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed3.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLed3.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLed3.Name = "lbLed3";
+            this.lbLed3.Renderer = null;
+            this.lbLed3.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed3.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLed2
+            // 
+            this.lbLed2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2, "lbLed2");
+            this.lbLed2.ForeColor = System.Drawing.Color.Black;
+            this.lbLed2.Label = "pinza grande aperta";
+            this.lbLed2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLed2.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLed2.Name = "lbLed2";
+            this.lbLed2.Renderer = null;
+            this.lbLed2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLed1
+            // 
+            this.lbLed1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed1, "lbLed1");
+            this.lbLed1.ForeColor = System.Drawing.Color.Black;
+            this.lbLed1.Label = "pinza piccola aperta";
+            this.lbLed1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLed1.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLed1.Name = "lbLed1";
+            this.lbLed1.Renderer = null;
+            this.lbLed1.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed1.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // numericUpDownM2ManualSpeed
+            // 
+            resources.ApplyResources(this.numericUpDownM2ManualSpeed, "numericUpDownM2ManualSpeed");
+            this.numericUpDownM2ManualSpeed.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownM2ManualSpeed.Name = "numericUpDownM2ManualSpeed";
+            this.numericUpDownM2ManualSpeed.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownM2ManualQuote
+            // 
+            resources.ApplyResources(this.numericUpDownM2ManualQuote, "numericUpDownM2ManualQuote");
+            this.numericUpDownM2ManualQuote.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownM2ManualQuote.Minimum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownM2ManualQuote.Name = "numericUpDownM2ManualQuote";
+            this.numericUpDownM2ManualQuote.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // buttonM2PrintCycle
             // 
@@ -3211,7 +3342,6 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Controls.Add(this.tabPageConsole);
             this.tabControlMain.Controls.Add(this.tabPageHide);
             this.tabControlMain.Controls.Add(this.tabPageHelp);
@@ -3219,6 +3349,7 @@
             this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
             this.tabControlMain.Controls.Add(this.tabPage4);
             this.tabControlMain.Controls.Add(this.tabPageRecipe);
+            this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlMain, "tabControlMain");
             controlFormatStyle9.BorderCornerRadius = 5;
@@ -3246,7 +3377,7 @@
             this.tabPageHelp,
             this.tabPageHide});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageMain;
+            this.tabControlMain.SelectedPage = this.tabPageConsole;
             tabPageColorStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle27.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle27.TabImage = ((System.Drawing.Image)(resources.GetObject("tabPageColorStyle27.TabImage")));
@@ -3334,6 +3465,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabControlM)).EndInit();
             this.tabControlM.ResumeLayout(false);
             this.tabPageM2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2Points)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualSpeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualQuote)).EndInit();
             this.tabPageMain.ResumeLayout(false);
             this.tabPageMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).EndInit();
@@ -3539,6 +3673,16 @@
         private System.Windows.Forms.Button buttonM2BigClampOpening;
         private System.Windows.Forms.Button buttonM2SmallClampClosing;
         private System.Windows.Forms.Button buttonM2SmallClampOpening;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed3;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed1;
+        private System.Windows.Forms.NumericUpDown numericUpDownM2ManualSpeed;
+        private System.Windows.Forms.NumericUpDown numericUpDownM2ManualQuote;
+        private System.Windows.Forms.DataGridView dataGridViewM2Points;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewButtonColumn Column4;
     }
 }
 

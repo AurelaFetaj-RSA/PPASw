@@ -97,37 +97,38 @@ namespace GUI
 
         public async Task CheckDiagnostic()
         {
-            List<string> variableList = myCore.DiagnosticConfigurator.DiagnosticStatus.Keys.ToList();
+            return ;
+            //List<string> variableList = myCore.DiagnosticConfigurator.DiagnosticStatus.Keys.ToList();
 
-            foreach(string diagnosticVariableName in variableList)
-            {
-                //int value = await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>(diagnosticVariableName);
-                string command = KawasakiMemoryVariable.MakeCommand(KawasakiCommand.ty, diagnosticVariableName);
+            //foreach(string diagnosticVariableName in variableList)
+            //{
+            //    //int value = await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>(diagnosticVariableName);
+            //    string command = KawasakiMemoryVariable.MakeCommand(KawasakiCommand.ty, diagnosticVariableName);
 
-                if (myRobot == null)
-                    return;
+            //    if (myRobot == null)
+            //        return;
 
 
-                int value = await myRobot?.ReadCommandAsync<int>(command);
+            //    int value = await myRobot?.ReadCommandAsync<int>(command);
 
-                if (myCore.DiagnosticConfigurator.DiagnosticResult(diagnosticVariableName, value, out DiagnosticState state))
-                {
+            //    if (myCore.DiagnosticConfigurator.DiagnosticResult(diagnosticVariableName, value, out DiagnosticState state))
+            //    {
 
-                    //controllo aggiunto per tracciare solo la variazione di Stato.
-                    if(!_lastState.ContainsKey(diagnosticVariableName) || _lastState[diagnosticVariableName] != value)
-                    {
-                        string stateOutput = state.DiagnosticMessage;
+            //        //controllo aggiunto per tracciare solo la variazione di Stato.
+            //        if(!_lastState.ContainsKey(diagnosticVariableName) || _lastState[diagnosticVariableName] != value)
+            //        {
+            //            string stateOutput = state.DiagnosticMessage;
 
-                        if (DiagnosticVariableGroupbox.Count != 0)
-                        {
-                            DiagnosticVariableGroupbox[diagnosticVariableName].ThreadSafeWriteMessage($"| {value:000} | {stateOutput}");
-                        }
+            //            if (DiagnosticVariableGroupbox.Count != 0)
+            //            {
+            //                DiagnosticVariableGroupbox[diagnosticVariableName].ThreadSafeWriteMessage($"| {value:000} | {stateOutput}");
+            //            }
 
-                        _lastState[diagnosticVariableName] = value;
-                    }
+            //            _lastState[diagnosticVariableName] = value;
+            //        }
 
-                }
-            }
+            //    }
+            //}
         }
 
         public async Task UpdateRobotStatus()
@@ -150,8 +151,8 @@ namespace GUI
 
         public void UpdateRobotLamp()
         {
-            if (myRobot != null)
-            {
+            //if (myRobot != null)
+            //{
                 //lbLedRobotConnection.State = (myRobot.IsConnected) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
 
 
@@ -257,9 +258,9 @@ namespace GUI
                 lbLed2048.State = (await myRobot.VirtualizedMemory.GetMemoryValueAsync<int>("sig(2048)") == -1) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 */
 
-                return;
+            //    return;
 
-            }
+            //}
         }
     }
 }
