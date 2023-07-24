@@ -55,6 +55,7 @@
             this.readQuotaLong = new System.Windows.Forms.Button();
             this.pcPercVeloBtn = new System.Windows.Forms.Button();
             this.velocitTxtbox = new System.Windows.Forms.TextBox();
+            this.readPercVelocitaManuelBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -295,17 +296,28 @@
             // 
             // velocitTxtbox
             // 
-            this.velocitTxtbox.Location = new System.Drawing.Point(374, 286);
+            this.velocitTxtbox.Location = new System.Drawing.Point(387, 275);
             this.velocitTxtbox.Name = "velocitTxtbox";
             this.velocitTxtbox.Size = new System.Drawing.Size(100, 20);
             this.velocitTxtbox.TabIndex = 25;
             this.velocitTxtbox.Text = "100";
+            // 
+            // readPercVelocitaManuelBtn
+            // 
+            this.readPercVelocitaManuelBtn.Location = new System.Drawing.Point(275, 321);
+            this.readPercVelocitaManuelBtn.Name = "readPercVelocitaManuelBtn";
+            this.readPercVelocitaManuelBtn.Size = new System.Drawing.Size(93, 40);
+            this.readPercVelocitaManuelBtn.TabIndex = 26;
+            this.readPercVelocitaManuelBtn.Text = "Read % velocita manuale";
+            this.readPercVelocitaManuelBtn.UseVisualStyleBackColor = true;
+            this.readPercVelocitaManuelBtn.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // ClientTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 617);
+            this.Controls.Add(this.readPercVelocitaManuelBtn);
             this.Controls.Add(this.velocitTxtbox);
             this.Controls.Add(this.pcPercVeloBtn);
             this.Controls.Add(this.groupBox1);
@@ -367,5 +379,6 @@
         private System.Windows.Forms.Button readQuotaLong;
         private System.Windows.Forms.Button pcPercVeloBtn;
         private System.Windows.Forms.TextBox velocitTxtbox;
+        private System.Windows.Forms.Button readPercVelocitaManuelBtn;
     }
 }

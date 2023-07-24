@@ -203,7 +203,7 @@ namespace GUI
 
         private async void button3_Click(object sender, EventArgs e)
         {
-            int[] arrayToSend = new int[5];
+            short[] arrayToSend = new short[5];
 
             arrayToSend[0] = -1;
             arrayToSend[1] = short.Parse(quota1.Text);
@@ -252,6 +252,23 @@ namespace GUI
             if (readResult.OpcResult)
             {
                 await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void button3_Click_1(object sender, EventArgs e)
+        {
+            string keyToSend = "pc_percentuale_velocità_in_manuale";
+
+            var readResult = await _client.Read(keyToSend);
+
+            if (readResult.OpcResult)
+            {
+
+                await Task.Run(() => ThreadSafeWriteMessage($"{keyToSend}: {readResult.Value}"));
             }
             else
             {

@@ -26,7 +26,7 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pc_reset_homing", $"ns=2;s=Tags.Pad_print_interna/pc_reset_homing", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pc_start_programma_in_test", $"ns=2;s=Tags.Pad_print_interna/pc_start_programma_in_test", typeof(bool)));
 
-            ClientDataConfig.Add(new OpcObjectData("pc_numero_punto_in_teaching", $"ns=2;s=Tags.Pad_print_interna/pc_numero_punto_in_teaching", typeof(int)));
+            ClientDataConfig.Add(new OpcObjectData("pc_numero_punto_in_teaching", $"ns=2;s=Tags.Pad_print_interna/pc_numero_punto_in_teaching", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pc_vai_a_punto_in_teaching", $"ns=2;s=Tags.Pad_print_interna/pc_vai_a_punto_in_teaching", typeof(int[])));
             ClientDataConfig.Add(new OpcObjectData("pc_apertura_pinza_bordo_stivale", $"ns=2;s=Tags.Pad_print_interna/pc_apertura_pinza_bordo_stivale", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pc_chiusura_pinza_bordo_stivale", $"ns=2;s=Tags.Pad_print_interna/pc_chiusura_pinza_bordo_stivale", typeof(bool)));
@@ -39,18 +39,18 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pc_start_stop_nastro_lavoro", $"ns=2;s=Tags.Pad_print_interna/pc_start_stop_nastro_lavoro", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pc_start_stop_nastro_uscita", $"ns=2;s=Tags.Pad_print_interna/pc_start_stop_nastro_uscita", typeof(bool)));
 
-            ClientDataConfig.Add(new OpcObjectData("pc_percentuale_velocità_in_manuale", $"ns=2;s=Tags.Pad_print_interna/pc_percentuale_velocit__in_manuale", typeof(int)));
-            ClientDataConfig.Add(new OpcObjectData("pc_quota_finale_asse_in_manuale", $"ns=2;s=Tags.Pad_print_interna/pc_quota_finale_asse_in_manuale", typeof(int)));
+            ClientDataConfig.Add(new OpcObjectData("pc_percentuale_velocità_in_manuale", $"ns=2;s=Tags.Pad_print_interna/pc_percentuale_velocit__in_manuale", typeof(short)));
+            ClientDataConfig.Add(new OpcObjectData("pc_quota_finale_asse_in_manuale", $"ns=2;s=Tags.Pad_print_interna/pc_quota_finale_asse_in_manuale", typeof(short)));
 
             ClientDataConfig.Add(new OpcObjectData("pc_inclusione_esclusione_generale", $"ns=2;s=Tags.Pad_print_interna/pc_percentuale_velocità_in_manuale", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pc_inclusione_esclusione_da_ricetta", $"ns=2;s=Tags.Pad_print_interna/pc_quota_finale_asse_in_manuale", typeof(bool)));
 
-            ClientDataConfig.Add(new OpcObjectData("pc_quota_longitudinale", $"ns=2;s=Tags.Pad_print_interna/pc_quota_longitudinale", typeof(int[])));
+            ClientDataConfig.Add(new OpcObjectData("pc_quota_longitudinale", $"ns=2;s=Tags.Pad_print_interna/pc_quota_longitudinale", typeof(short[])));
             ClientDataConfig.Add(new OpcObjectData("pc_velocità", $"ns=2;s=Tags.Pad_print_interna/pc_velocità", typeof(int[])));
-            ClientDataConfig.Add(new OpcObjectData("pc_quota_longitudinale_in_test", $"ns=2;s=Tags.Pad_print_interna/pc_quota_longitudinale_in_test", typeof(int[])));
-            ClientDataConfig.Add(new OpcObjectData("pc_velocità_in_test", $"ns=2;s=Tags.Pad_print_interna/pc_velocità_in_test", typeof(int[])));
-            ClientDataConfig.Add(new OpcObjectData("pc_quota_longitudinale_in_teaching", $"ns=2;s=Tags.Pad_print_interna/pc_quota_longitudinale_in_teaching", typeof(int[])));
-            ClientDataConfig.Add(new OpcObjectData("pc_velocità_in_teaching", $"ns=2;s=Tags.Pad_print_interna/pc_velocità_in_teaching", typeof(int[])));
+            ClientDataConfig.Add(new OpcObjectData("pc_quota_longitudinale_in_test", $"ns=2;s=Tags.Pad_print_interna/pc_quota_longitudinale_in_test", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pc_velocità_in_test", $"ns=2;s=Tags.Pad_print_interna/pc_velocità_in_test", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pc_quota_longitudinale_in_teaching", $"ns=2;s=Tags.Pad_print_interna/pc_quota_longitudinale_in_teaching", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pc_velocità_in_teaching", $"ns=2;s=Tags.Pad_print_interna/pc_velocità_in_teaching", typeof(short[])));
 
             ClientDataConfig.Add(new OpcObjectData("pc_start_stop", $"ns=2;s=Tags.Pad_print_interna/pc_start_stop", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pc_pausa", $"ns=2;s=Tags.Pad_print_interna/pc_pausa", typeof(bool)));
@@ -60,11 +60,11 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pc_punto_3_raggiunto", $"ns=2;s=Tags.Pad_print_interna/pc_punto_3_raggiunto", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pc_punto_4_raggiunto", $"ns=2;s=Tags.Pad_print_interna/pc_punto_4_raggiunto", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pc_homing_done", $"ns=2;s=Tags.Pad_print_interna/pc_homing_done", typeof(bool)));
-            ClientDataConfig.Add(new OpcObjectData("pc_quota_attuale_asse", $"ns=2;s=Tags.Pad_print_interna/pc_quota_attuale_asse", typeof(int)));
-            ClientDataConfig.Add(new OpcObjectData("pc_numero_cicli", $"ns=2;s=Tags.Pad_print_interna/pc_numero_cicli", typeof(int)));
+            ClientDataConfig.Add(new OpcObjectData("pc_quota_attuale_asse", $"ns=2;s=Tags.Pad_print_interna/pc_quota_attuale_asse", typeof(short)));
+            ClientDataConfig.Add(new OpcObjectData("pc_numero_cicli", $"ns=2;s=Tags.Pad_print_interna/pc_numero_cicli", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pc_ready", $"ns=2;s=Tags.Pad_print_interna/pc_ready", typeof(bool)));
 
-            ClientDataConfig.Add(new OpcObjectData("pc_stato_macchina", $"ns=2;s=Tags.Pad_print_interna/pc_stato_macchina", typeof(int)));
+            ClientDataConfig.Add(new OpcObjectData("pc_stato_macchina", $"ns=2;s=Tags.Pad_print_interna/pc_stato_macchina", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pc_allarmi_generali ", $"ns=2;s=Tags.Pad_print_interna/pc_allarmi_generali", typeof(short[])));
             ClientDataConfig.Add(new OpcObjectData("pc_allarmi_timeout", $"ns=2;s=Tags.Pad_print_interna/pc_allarmi_timeout", typeof(short[])));
             ClientDataConfig.Add(new OpcObjectData("pc_input", $"ns=2;s=Tags.Pad_print_interna/pc_input", typeof(bool[])));
