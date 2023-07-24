@@ -254,28 +254,28 @@
             this.TabPageDiagnostic = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPage4 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageConsole = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.tabControlM = new LidorSystems.IntegralUI.Containers.TabControl();
+            this.tabPageM2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.buttonM2PrintCycle = new System.Windows.Forms.Button();
+            this.buttonM2StartQuote = new System.Windows.Forms.Button();
+            this.lbButtonM2JogDown = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.lbButtonM2JogUp = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.buttonM2ResetServo = new System.Windows.Forms.Button();
+            this.buttonM2ResetHome = new System.Windows.Forms.Button();
+            this.buttonM2Home = new System.Windows.Forms.Button();
+            this.buttonM2ContrastClosing = new System.Windows.Forms.Button();
+            this.buttonM2ContrastOpening = new System.Windows.Forms.Button();
+            this.buttonM2CenteringClampsClosing = new System.Windows.Forms.Button();
+            this.buttonM2CenteringClampsOpening = new System.Windows.Forms.Button();
+            this.buttonM2BigGripperClosing = new System.Windows.Forms.Button();
+            this.buttonM2BigClampOpening = new System.Windows.Forms.Button();
+            this.buttonM2SmallClampClosing = new System.Windows.Forms.Button();
+            this.buttonM2SmallClampOpening = new System.Windows.Forms.Button();
             this.tabPageRecipe = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageMain = new LidorSystems.IntegralUI.Containers.TabPage();
             this.labelLoginLevel = new System.Windows.Forms.Label();
             this.labelDateTime = new System.Windows.Forms.Label();
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
-            this.tabControlM = new LidorSystems.IntegralUI.Containers.TabControl();
-            this.tabPageM2 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.buttonM2SmallClampOpening = new System.Windows.Forms.Button();
-            this.buttonM2SmallClampClosing = new System.Windows.Forms.Button();
-            this.buttonM2BigClampOpening = new System.Windows.Forms.Button();
-            this.buttonM2BigGripperClosing = new System.Windows.Forms.Button();
-            this.buttonM2CenteringClampsOpening = new System.Windows.Forms.Button();
-            this.buttonM2CenteringClampsClosing = new System.Windows.Forms.Button();
-            this.buttonM2ContrastOpening = new System.Windows.Forms.Button();
-            this.buttonM2ContrastClosing = new System.Windows.Forms.Button();
-            this.buttonM2Home = new System.Windows.Forms.Button();
-            this.buttonM2ResetHome = new System.Windows.Forms.Button();
-            this.buttonM2ResetServo = new System.Windows.Forms.Button();
-            this.lbButtonM2JogUp = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.lbButtonM2JogDown = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.buttonM2StartQuote = new System.Windows.Forms.Button();
-            this.buttonM2PrintCycle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerIO)).BeginInit();
@@ -308,12 +308,12 @@
             this.transparentPanelM1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPageConsole.SuspendLayout();
-            this.tabPageMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).BeginInit();
-            this.tabControlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlM)).BeginInit();
             this.tabControlM.SuspendLayout();
             this.tabPageM2.SuspendLayout();
+            this.tabPageMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).BeginInit();
+            this.tabControlMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer6
@@ -2977,6 +2977,148 @@
             this.tabPageConsole.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageConsole.TextBounds")));
             this.tabPageConsole.TextSize = new System.Drawing.SizeF(81.33591F, 32.16796F);
             // 
+            // tabControlM
+            // 
+            this.tabControlM.Controls.Add(this.tabPageM2);
+            this.tabControlM.Cursor = System.Windows.Forms.Cursors.Default;
+            resources.ApplyResources(this.tabControlM, "tabControlM");
+            this.tabControlM.Name = "tabControlM";
+            this.tabControlM.Pages.AddRange(new object[] {
+            this.tabPageM2});
+            this.tabControlM.ScrollPos = new System.Drawing.Point(0, 0);
+            this.tabControlM.SelectedPage = this.tabPageM2;
+            // 
+            // tabPageM2
+            // 
+            this.tabPageM2.Controls.Add(this.buttonM2PrintCycle);
+            this.tabPageM2.Controls.Add(this.buttonM2StartQuote);
+            this.tabPageM2.Controls.Add(this.lbButtonM2JogDown);
+            this.tabPageM2.Controls.Add(this.lbButtonM2JogUp);
+            this.tabPageM2.Controls.Add(this.buttonM2ResetServo);
+            this.tabPageM2.Controls.Add(this.buttonM2ResetHome);
+            this.tabPageM2.Controls.Add(this.buttonM2Home);
+            this.tabPageM2.Controls.Add(this.buttonM2ContrastClosing);
+            this.tabPageM2.Controls.Add(this.buttonM2ContrastOpening);
+            this.tabPageM2.Controls.Add(this.buttonM2CenteringClampsClosing);
+            this.tabPageM2.Controls.Add(this.buttonM2CenteringClampsOpening);
+            this.tabPageM2.Controls.Add(this.buttonM2BigGripperClosing);
+            this.tabPageM2.Controls.Add(this.buttonM2BigClampOpening);
+            this.tabPageM2.Controls.Add(this.buttonM2SmallClampClosing);
+            this.tabPageM2.Controls.Add(this.buttonM2SmallClampOpening);
+            resources.ApplyResources(this.tabPageM2, "tabPageM2");
+            this.tabPageM2.Name = "tabPageM2";
+            this.tabPageM2.ParentPage = null;
+            this.tabPageM2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageM2.TextBounds")));
+            this.tabPageM2.TextSize = new System.Drawing.SizeF(59.70865F, 13.82519F);
+            // 
+            // buttonM2PrintCycle
+            // 
+            resources.ApplyResources(this.buttonM2PrintCycle, "buttonM2PrintCycle");
+            this.buttonM2PrintCycle.Name = "buttonM2PrintCycle";
+            this.buttonM2PrintCycle.UseVisualStyleBackColor = true;
+            // 
+            // buttonM2StartQuote
+            // 
+            resources.ApplyResources(this.buttonM2StartQuote, "buttonM2StartQuote");
+            this.buttonM2StartQuote.Name = "buttonM2StartQuote";
+            this.buttonM2StartQuote.UseVisualStyleBackColor = true;
+            // 
+            // lbButtonM2JogDown
+            // 
+            this.lbButtonM2JogDown.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM2JogDown.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM2JogDown, "lbButtonM2JogDown");
+            this.lbButtonM2JogDown.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM2JogDown.Label = "JOG DOWN";
+            this.lbButtonM2JogDown.Name = "lbButtonM2JogDown";
+            this.lbButtonM2JogDown.Renderer = null;
+            this.lbButtonM2JogDown.RepeatInterval = 100;
+            this.lbButtonM2JogDown.RepeatState = false;
+            this.lbButtonM2JogDown.StartRepeatInterval = 500;
+            this.lbButtonM2JogDown.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM2JogDown.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            // 
+            // lbButtonM2JogUp
+            // 
+            this.lbButtonM2JogUp.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM2JogUp.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM2JogUp, "lbButtonM2JogUp");
+            this.lbButtonM2JogUp.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM2JogUp.Label = "JOG UP";
+            this.lbButtonM2JogUp.Name = "lbButtonM2JogUp";
+            this.lbButtonM2JogUp.Renderer = null;
+            this.lbButtonM2JogUp.RepeatInterval = 100;
+            this.lbButtonM2JogUp.RepeatState = false;
+            this.lbButtonM2JogUp.StartRepeatInterval = 500;
+            this.lbButtonM2JogUp.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM2JogUp.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            // 
+            // buttonM2ResetServo
+            // 
+            resources.ApplyResources(this.buttonM2ResetServo, "buttonM2ResetServo");
+            this.buttonM2ResetServo.Name = "buttonM2ResetServo";
+            this.buttonM2ResetServo.UseVisualStyleBackColor = true;
+            // 
+            // buttonM2ResetHome
+            // 
+            resources.ApplyResources(this.buttonM2ResetHome, "buttonM2ResetHome");
+            this.buttonM2ResetHome.Name = "buttonM2ResetHome";
+            this.buttonM2ResetHome.UseVisualStyleBackColor = true;
+            // 
+            // buttonM2Home
+            // 
+            resources.ApplyResources(this.buttonM2Home, "buttonM2Home");
+            this.buttonM2Home.Name = "buttonM2Home";
+            this.buttonM2Home.UseVisualStyleBackColor = true;
+            // 
+            // buttonM2ContrastClosing
+            // 
+            resources.ApplyResources(this.buttonM2ContrastClosing, "buttonM2ContrastClosing");
+            this.buttonM2ContrastClosing.Name = "buttonM2ContrastClosing";
+            this.buttonM2ContrastClosing.UseVisualStyleBackColor = true;
+            // 
+            // buttonM2ContrastOpening
+            // 
+            resources.ApplyResources(this.buttonM2ContrastOpening, "buttonM2ContrastOpening");
+            this.buttonM2ContrastOpening.Name = "buttonM2ContrastOpening";
+            this.buttonM2ContrastOpening.UseVisualStyleBackColor = true;
+            // 
+            // buttonM2CenteringClampsClosing
+            // 
+            resources.ApplyResources(this.buttonM2CenteringClampsClosing, "buttonM2CenteringClampsClosing");
+            this.buttonM2CenteringClampsClosing.Name = "buttonM2CenteringClampsClosing";
+            this.buttonM2CenteringClampsClosing.UseVisualStyleBackColor = true;
+            // 
+            // buttonM2CenteringClampsOpening
+            // 
+            resources.ApplyResources(this.buttonM2CenteringClampsOpening, "buttonM2CenteringClampsOpening");
+            this.buttonM2CenteringClampsOpening.Name = "buttonM2CenteringClampsOpening";
+            this.buttonM2CenteringClampsOpening.UseVisualStyleBackColor = true;
+            // 
+            // buttonM2BigGripperClosing
+            // 
+            resources.ApplyResources(this.buttonM2BigGripperClosing, "buttonM2BigGripperClosing");
+            this.buttonM2BigGripperClosing.Name = "buttonM2BigGripperClosing";
+            this.buttonM2BigGripperClosing.UseVisualStyleBackColor = true;
+            // 
+            // buttonM2BigClampOpening
+            // 
+            resources.ApplyResources(this.buttonM2BigClampOpening, "buttonM2BigClampOpening");
+            this.buttonM2BigClampOpening.Name = "buttonM2BigClampOpening";
+            this.buttonM2BigClampOpening.UseVisualStyleBackColor = true;
+            // 
+            // buttonM2SmallClampClosing
+            // 
+            resources.ApplyResources(this.buttonM2SmallClampClosing, "buttonM2SmallClampClosing");
+            this.buttonM2SmallClampClosing.Name = "buttonM2SmallClampClosing";
+            this.buttonM2SmallClampClosing.UseVisualStyleBackColor = true;
+            // 
+            // buttonM2SmallClampOpening
+            // 
+            resources.ApplyResources(this.buttonM2SmallClampOpening, "buttonM2SmallClampOpening");
+            this.buttonM2SmallClampOpening.Name = "buttonM2SmallClampOpening";
+            this.buttonM2SmallClampOpening.UseVisualStyleBackColor = true;
+            // 
             // tabPageRecipe
             // 
             tabPageFormatStyle7.BorderCornerRadius = 5;
@@ -3069,14 +3211,14 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageConsole);
             this.tabControlMain.Controls.Add(this.tabPageMain);
-            this.tabControlMain.Controls.Add(this.tabPageRecipe);
+            this.tabControlMain.Controls.Add(this.tabPageConsole);
             this.tabControlMain.Controls.Add(this.tabPageHide);
             this.tabControlMain.Controls.Add(this.tabPageHelp);
             this.tabControlMain.Controls.Add(this.tabPageSettings);
             this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
             this.tabControlMain.Controls.Add(this.tabPage4);
+            this.tabControlMain.Controls.Add(this.tabPageRecipe);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlMain, "tabControlMain");
             controlFormatStyle9.BorderCornerRadius = 5;
@@ -3104,7 +3246,7 @@
             this.tabPageHelp,
             this.tabPageHide});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageConsole;
+            this.tabControlMain.SelectedPage = this.tabPageMain;
             tabPageColorStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle27.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle27.TabImage = ((System.Drawing.Image)(resources.GetObject("tabPageColorStyle27.TabImage")));
@@ -3142,148 +3284,6 @@
             this.tabControlMain.ToolTipStyle = toolTipStyle1;
             this.tabControlMain.SelectedPageChanged += new LidorSystems.IntegralUI.ObjectEventHandler(this.tabControlMain_SelectedPageChanged);
             this.tabControlMain.ToolItemClicked += new LidorSystems.IntegralUI.ObjectClickEventHandler(this.tabControlMain_ToolItemClicked);
-            // 
-            // tabControlM
-            // 
-            this.tabControlM.Controls.Add(this.tabPageM2);
-            this.tabControlM.Cursor = System.Windows.Forms.Cursors.Default;
-            resources.ApplyResources(this.tabControlM, "tabControlM");
-            this.tabControlM.Name = "tabControlM";
-            this.tabControlM.Pages.AddRange(new object[] {
-            this.tabPageM2});
-            this.tabControlM.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlM.SelectedPage = this.tabPageM2;
-            // 
-            // tabPageM2
-            // 
-            this.tabPageM2.Controls.Add(this.buttonM2PrintCycle);
-            this.tabPageM2.Controls.Add(this.buttonM2StartQuote);
-            this.tabPageM2.Controls.Add(this.lbButtonM2JogDown);
-            this.tabPageM2.Controls.Add(this.lbButtonM2JogUp);
-            this.tabPageM2.Controls.Add(this.buttonM2ResetServo);
-            this.tabPageM2.Controls.Add(this.buttonM2ResetHome);
-            this.tabPageM2.Controls.Add(this.buttonM2Home);
-            this.tabPageM2.Controls.Add(this.buttonM2ContrastClosing);
-            this.tabPageM2.Controls.Add(this.buttonM2ContrastOpening);
-            this.tabPageM2.Controls.Add(this.buttonM2CenteringClampsClosing);
-            this.tabPageM2.Controls.Add(this.buttonM2CenteringClampsOpening);
-            this.tabPageM2.Controls.Add(this.buttonM2BigGripperClosing);
-            this.tabPageM2.Controls.Add(this.buttonM2BigClampOpening);
-            this.tabPageM2.Controls.Add(this.buttonM2SmallClampClosing);
-            this.tabPageM2.Controls.Add(this.buttonM2SmallClampOpening);
-            resources.ApplyResources(this.tabPageM2, "tabPageM2");
-            this.tabPageM2.Name = "tabPageM2";
-            this.tabPageM2.ParentPage = null;
-            this.tabPageM2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageM2.TextBounds")));
-            this.tabPageM2.TextSize = new System.Drawing.SizeF(59.70865F, 13.82519F);
-            // 
-            // buttonM2SmallClampOpening
-            // 
-            resources.ApplyResources(this.buttonM2SmallClampOpening, "buttonM2SmallClampOpening");
-            this.buttonM2SmallClampOpening.Name = "buttonM2SmallClampOpening";
-            this.buttonM2SmallClampOpening.UseVisualStyleBackColor = true;
-            // 
-            // buttonM2SmallClampClosing
-            // 
-            resources.ApplyResources(this.buttonM2SmallClampClosing, "buttonM2SmallClampClosing");
-            this.buttonM2SmallClampClosing.Name = "buttonM2SmallClampClosing";
-            this.buttonM2SmallClampClosing.UseVisualStyleBackColor = true;
-            // 
-            // buttonM2BigClampOpening
-            // 
-            resources.ApplyResources(this.buttonM2BigClampOpening, "buttonM2BigClampOpening");
-            this.buttonM2BigClampOpening.Name = "buttonM2BigClampOpening";
-            this.buttonM2BigClampOpening.UseVisualStyleBackColor = true;
-            // 
-            // buttonM2BigGripperClosing
-            // 
-            resources.ApplyResources(this.buttonM2BigGripperClosing, "buttonM2BigGripperClosing");
-            this.buttonM2BigGripperClosing.Name = "buttonM2BigGripperClosing";
-            this.buttonM2BigGripperClosing.UseVisualStyleBackColor = true;
-            // 
-            // buttonM2CenteringClampsOpening
-            // 
-            resources.ApplyResources(this.buttonM2CenteringClampsOpening, "buttonM2CenteringClampsOpening");
-            this.buttonM2CenteringClampsOpening.Name = "buttonM2CenteringClampsOpening";
-            this.buttonM2CenteringClampsOpening.UseVisualStyleBackColor = true;
-            // 
-            // buttonM2CenteringClampsClosing
-            // 
-            resources.ApplyResources(this.buttonM2CenteringClampsClosing, "buttonM2CenteringClampsClosing");
-            this.buttonM2CenteringClampsClosing.Name = "buttonM2CenteringClampsClosing";
-            this.buttonM2CenteringClampsClosing.UseVisualStyleBackColor = true;
-            // 
-            // buttonM2ContrastOpening
-            // 
-            resources.ApplyResources(this.buttonM2ContrastOpening, "buttonM2ContrastOpening");
-            this.buttonM2ContrastOpening.Name = "buttonM2ContrastOpening";
-            this.buttonM2ContrastOpening.UseVisualStyleBackColor = true;
-            // 
-            // buttonM2ContrastClosing
-            // 
-            resources.ApplyResources(this.buttonM2ContrastClosing, "buttonM2ContrastClosing");
-            this.buttonM2ContrastClosing.Name = "buttonM2ContrastClosing";
-            this.buttonM2ContrastClosing.UseVisualStyleBackColor = true;
-            // 
-            // buttonM2Home
-            // 
-            resources.ApplyResources(this.buttonM2Home, "buttonM2Home");
-            this.buttonM2Home.Name = "buttonM2Home";
-            this.buttonM2Home.UseVisualStyleBackColor = true;
-            // 
-            // buttonM2ResetHome
-            // 
-            resources.ApplyResources(this.buttonM2ResetHome, "buttonM2ResetHome");
-            this.buttonM2ResetHome.Name = "buttonM2ResetHome";
-            this.buttonM2ResetHome.UseVisualStyleBackColor = true;
-            // 
-            // buttonM2ResetServo
-            // 
-            resources.ApplyResources(this.buttonM2ResetServo, "buttonM2ResetServo");
-            this.buttonM2ResetServo.Name = "buttonM2ResetServo";
-            this.buttonM2ResetServo.UseVisualStyleBackColor = true;
-            // 
-            // lbButtonM2JogUp
-            // 
-            this.lbButtonM2JogUp.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonM2JogUp.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            resources.ApplyResources(this.lbButtonM2JogUp, "lbButtonM2JogUp");
-            this.lbButtonM2JogUp.ForeColor = System.Drawing.Color.White;
-            this.lbButtonM2JogUp.Label = "JOG UP";
-            this.lbButtonM2JogUp.Name = "lbButtonM2JogUp";
-            this.lbButtonM2JogUp.Renderer = null;
-            this.lbButtonM2JogUp.RepeatInterval = 100;
-            this.lbButtonM2JogUp.RepeatState = false;
-            this.lbButtonM2JogUp.StartRepeatInterval = 500;
-            this.lbButtonM2JogUp.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonM2JogUp.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            // 
-            // lbButtonM2JogDown
-            // 
-            this.lbButtonM2JogDown.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonM2JogDown.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            resources.ApplyResources(this.lbButtonM2JogDown, "lbButtonM2JogDown");
-            this.lbButtonM2JogDown.ForeColor = System.Drawing.Color.White;
-            this.lbButtonM2JogDown.Label = "JOG DOWN";
-            this.lbButtonM2JogDown.Name = "lbButtonM2JogDown";
-            this.lbButtonM2JogDown.Renderer = null;
-            this.lbButtonM2JogDown.RepeatInterval = 100;
-            this.lbButtonM2JogDown.RepeatState = false;
-            this.lbButtonM2JogDown.StartRepeatInterval = 500;
-            this.lbButtonM2JogDown.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonM2JogDown.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            // 
-            // buttonM2StartQuote
-            // 
-            resources.ApplyResources(this.buttonM2StartQuote, "buttonM2StartQuote");
-            this.buttonM2StartQuote.Name = "buttonM2StartQuote";
-            this.buttonM2StartQuote.UseVisualStyleBackColor = true;
-            // 
-            // buttonM2PrintCycle
-            // 
-            resources.ApplyResources(this.buttonM2PrintCycle, "buttonM2PrintCycle");
-            this.buttonM2PrintCycle.Name = "buttonM2PrintCycle";
-            this.buttonM2PrintCycle.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
@@ -3331,13 +3331,13 @@
             this.transparentPanelM1.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPageConsole.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tabControlM)).EndInit();
+            this.tabControlM.ResumeLayout(false);
+            this.tabPageM2.ResumeLayout(false);
             this.tabPageMain.ResumeLayout(false);
             this.tabPageMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).EndInit();
             this.tabControlMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tabControlM)).EndInit();
-            this.tabControlM.ResumeLayout(false);
-            this.tabPageM2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
