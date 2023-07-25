@@ -161,17 +161,27 @@ namespace GUI
         #region (* machines status *)
         public async Task UpdateOPCUAStatus()
         {
-            //opcua M1 status
-            OpcClientService.ClientResult varResult = await ccService.Read("pcM1Status");
+            List<string> keys = new List<string>();
+            keys.Add("pcM1Status");
+            keys.Add("pcM2Status");
+            keys.Add("pcM3Status");
+            keys.Add("pcM4Status");
+            keys.Add("pcM5Status");
+            keys.Add("pcM6Status");
 
-            if (varResult.OpcResult) UpdateOPCUAM1Lamp((short)varResult.Value);
+            var varRresultS = await ccService.Read(keys);
+
+            //opcua M1 status
+            //OpcClientService.ClientResult varResult = await ccService.Read("pcM1Status");
+
+            if (varRresultS["pcM1Status"].OpcResult) UpdateOPCUAM1Lamp((short)varRresultS["pcM1Status"].Value);
             else
             {
                 //todo
             }
 
             //opcua M2 status
-            varResult = await ccService.Read("pcM2Status");
+            var varResult = await ccService.Read("pcM2Status");
 
             if (varResult.OpcResult) UpdateOPCUAM2Lamp((short)varResult.Value);
             else
@@ -326,6 +336,7 @@ namespace GUI
 
         public void UpdateOPCUAM1Lamp(short value)
         {
+
             if (value == 0)
             {
                 lbLedM1Status.LedColor = Color.Red;
@@ -701,6 +712,36 @@ namespace GUI
                 lbLedM6HomingDone.Label = "homing done";
             }
         }
+
+        #region (* send M1 teaching package *)
+        public async void OPCUAM1TeachPckSend(short pointID, short[] pointQuote, short[] pointSpeed, bool[] pointReg)
+        {
+            List<string> keys = new List<string>();
+            keys.Add("pcM2TeachPointID");
+            keys.Add("pcM2TeachQuote");
+            keys.Add("pcM2TeachSpeed");            
+            keys.Add("pcM2TeachPointReg");
+            
+            List<object> obj = new List<object>()
+            {
+                pointID,
+                new short[] {0, pointQuote[1], pointQuote[2], pointQuote[3], pointQuote[4]},
+                new short[] {0, pointSpeed[1], pointSpeed[2], pointSpeed[3], pointSpeed[4]},
+                new bool[] {false, pointReg[1], pointReg[2], pointReg[3], pointReg[4] }
+            };
+
+            Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
+            try
+            {
+                sendResult = await ccService.Send(keys, obj);
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
+        #endregion
+
         #endregion
 
     }

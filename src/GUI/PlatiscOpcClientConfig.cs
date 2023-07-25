@@ -27,8 +27,8 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM2ResetHoming", $"ns=2;s=Tags.Pad_print_interna/pc_reset_homing", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pc_start_programma_in_test", $"ns=2;s=Tags.Pad_print_interna/pc_start_programma_in_test", typeof(bool)));
 
-            ClientDataConfig.Add(new OpcObjectData("pc_numero_punto_in_teaching", $"ns=2;s=Tags.Pad_print_interna/pc_numero_punto_in_teaching", typeof(short)));
-            ClientDataConfig.Add(new OpcObjectData("pc_vai_a_punto_in_teaching", $"ns=2;s=Tags.Pad_print_interna/pc_vai_a_punto_in_teaching", typeof(int[])));
+            ClientDataConfig.Add(new OpcObjectData("pcM2TeachPointID", $"ns=2;s=Tags.Pad_print_interna/pc_numero_punto_in_teaching", typeof(short)));
+            ClientDataConfig.Add(new OpcObjectData("pcM2TeachPointReg", $"ns=2;s=Tags.Pad_print_interna/pc_vai_a_punto_in_teaching", typeof(int[])));
             ClientDataConfig.Add(new OpcObjectData("pc_apertura_pinza_bordo_stivale", $"ns=2;s=Tags.Pad_print_interna/pc_apertura_pinza_bordo_stivale", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pc_chiusura_pinza_bordo_stivale", $"ns=2;s=Tags.Pad_print_interna/pc_chiusura_pinza_bordo_stivale", typeof(bool)));
 
@@ -50,8 +50,8 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pc_velocità", $"ns=2;s=Tags.Pad_print_interna/pc_velocità", typeof(int[])));
             ClientDataConfig.Add(new OpcObjectData("pc_quota_longitudinale_in_test", $"ns=2;s=Tags.Pad_print_interna/pc_quota_longitudinale_in_test", typeof(short[])));
             ClientDataConfig.Add(new OpcObjectData("pc_velocità_in_test", $"ns=2;s=Tags.Pad_print_interna/pc_velocità_in_test", typeof(short[])));
-            ClientDataConfig.Add(new OpcObjectData("pc_quota_longitudinale_in_teaching", $"ns=2;s=Tags.Pad_print_interna/pc_quota_longitudinale_in_teaching", typeof(short[])));
-            ClientDataConfig.Add(new OpcObjectData("pc_velocità_in_teaching", $"ns=2;s=Tags.Pad_print_interna/pc_velocità_in_teaching", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pcM2TeachQuote", $"ns=2;s=Tags.Pad_print_interna/pc_quota_longitudinale_in_teaching", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pcM2TeachSpeed", $"ns=2;s=Tags.Pad_print_interna/pc_velocit__in_teaching", typeof(short[])));
 
             ClientDataConfig.Add(new OpcObjectData("pc_start_stop", $"ns=2;s=Tags.Pad_print_interna/pc_start_stop", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pc_pausa", $"ns=2;s=Tags.Pad_print_interna/pc_pausa", typeof(bool)));

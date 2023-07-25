@@ -224,6 +224,22 @@ namespace GUI
         private void InitLastParameter()
         {
             //filePathDiagnosticFileTxtbox.Text = Settings.Default.DiagnosticFilePath;
+            dataGridViewM2Points.Rows.Add(3);
+            dataGridViewM2Points.Rows[0].Cells[0].Value = 1;
+            dataGridViewM2Points.Rows[1].Cells[0].Value = 2;
+            dataGridViewM2Points.Rows[2].Cells[0].Value = 3;
+            dataGridViewM2Points.Rows[3].Cells[0].Value = 4;
+
+            dataGridViewM2Points.Rows[0].Cells[1].Value = 100;
+            dataGridViewM2Points.Rows[1].Cells[1].Value = 200;
+            dataGridViewM2Points.Rows[2].Cells[1].Value = 300;
+            dataGridViewM2Points.Rows[3].Cells[1].Value = 400;
+
+            dataGridViewM2Points.Rows[0].Cells[2].Value = 10;
+            dataGridViewM2Points.Rows[1].Cells[2].Value = 20;
+            dataGridViewM2Points.Rows[2].Cells[2].Value = 30;
+            dataGridViewM2Points.Rows[3].Cells[2].Value = 40;
+            dataGridViewM2Points.ClearSelection();
         }
 
         private void InitServices()
@@ -661,53 +677,37 @@ namespace GUI
 
         private void dataGridViewM2Points_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //get selected row index
-            int currentRow = int.Parse(e.RowIndex.ToString());
-            int idPoint = currentRow;
-            short idQuote = (short)(dataGridViewM2Points[1, currentRow].Value);
-            short idSpeed = (short)(dataGridViewM2Points[2, currentRow].Value);
-
-            if (idPoint < 1 || idPoint > 4)
+            int i = 0;
+            short[] quote = new short[5];
+            short[] speed = new short[5];
+            try
             {
-                //todo message
-                return;
+                //get selected row index
+                int currentRow = int.Parse(e.RowIndex.ToString());
+
+                short idPoint = (short)currentRow;
+                for (i = 0; i <= dataGridViewM2Points.RowCount - 1; i++)
+                {
+                    quote[i+1] = short.Parse(dataGridViewM2Points[1, i].Value.ToString());
+                    speed[i+1] = short.Parse(dataGridViewM2Points[2, i].Value.ToString());                    
+                }
+
+                if (idPoint < 0 || idPoint > 4)
+                {
+                    //todo message
+                    return;
+                }
+
+                // edit button
+                if ((e.ColumnIndex == 3) & currentRow >= 0)
+                {
+                    OPCUAM1TeachPckSend(++idPoint, quote, speed, new bool[] { true, false, false, false });
+                }
             }
+            catch(Exception ex)
+            {
 
-            //try
-            //{
-            //    //get recipe name
-            //    recipeName = dataGridViewDevice1[0, currentRow].Value.ToString();
-            //}
-            //catch (Exception Ex)
-            //{
-            //    Message msg = new Message(Severity.Error, Ex.Message, DateTime.Now);
-            //    AddMessage(msg, glacialListDebugger);
-            //    return;
-            //}
-            //// edit button
-            //if (dataGridViewDevice1.Columns[e.ColumnIndex] == editButtonD1 && currentRow >= 0)
-            //{
-            //    //get recipe param
-            //    string param1 = dataGridViewDevice1[1, currentRow].Value.ToString();
-            //    string param2 = dataGridViewDevice1[2, currentRow].Value.ToString();
-            //    string param3 = dataGridViewDevice1[3, currentRow].Value.ToString();
-            //    string param4 = dataGridViewDevice1[4, currentRow].Value.ToString();
-
-            //    //update db
-            //    try
-            //    {
-            //        myRSA.GetDBL().GetRecipeD1Table().UpdateDeviceByRecipeName(recipeName, param1, param2, param3, param4, myRSA.GetDBL().GetConnection());
-            //    }
-            //    catch (Exception Ex)
-            //    {
-            //        Message msg = new Message(Severity.Error, Ex.Message, DateTime.Now);
-            //        AddMessage(msg, glacialListDebugger);
-            //        return;
-            //    }
-            //    //update datagrid
-            //    string queryString = "SELECT recipe_code, param1, param2, param3, param4 FROM recipe_D1";
-            //    loadDevice1DataGrid(queryString);
-            //}
+            }
         }
     }
 }

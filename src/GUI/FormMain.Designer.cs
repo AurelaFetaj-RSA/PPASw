@@ -3074,11 +3074,13 @@
             this.ColumnMeQuote,
             this.ColumnM2Speed,
             this.ColumnM2Register});
+            this.dataGridViewM2Points.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             resources.ApplyResources(this.dataGridViewM2Points, "dataGridViewM2Points");
             this.dataGridViewM2Points.Name = "dataGridViewM2Points";
             this.dataGridViewM2Points.RowHeadersVisible = false;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewM2Points.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewM2Points.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridViewM2Points.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM2Points_CellContentClick);
             // 
             // ColumnM2PointID
