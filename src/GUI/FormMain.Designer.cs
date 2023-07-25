@@ -183,6 +183,7 @@
             this.lbLed1001 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.trueTransparentPanelAuto = new LidorSystems.IntegralUI.Controls.TrueTransparentPanel();
             this.transparentPanelLine = new LidorSystems.IntegralUI.Controls.TransparentPanel();
+            this.clientTestOpc = new System.Windows.Forms.Button();
             this.buttonResetCounter = new System.Windows.Forms.Button();
             this.labelPieceCounter = new LidorSystems.IntegralUI.Controls.Label();
             this.lbLedLineReady = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -1975,6 +1976,7 @@
             // transparentPanelLine.ContentPanel
             // 
             this.transparentPanelLine.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.transparentPanelLine.ContentPanel.Controls.Add(this.clientTestOpc);
             this.transparentPanelLine.ContentPanel.Controls.Add(this.buttonResetCounter);
             this.transparentPanelLine.ContentPanel.Controls.Add(this.labelPieceCounter);
             this.transparentPanelLine.ContentPanel.Controls.Add(this.lbLedLineReady);
@@ -1990,6 +1992,13 @@
             this.transparentPanelLine.FormatStyle = controlFormatStyle1;
             resources.ApplyResources(this.transparentPanelLine, "transparentPanelLine");
             this.transparentPanelLine.Name = "transparentPanelLine";
+            // 
+            // clientTestOpc
+            // 
+            resources.ApplyResources(this.clientTestOpc, "clientTestOpc");
+            this.clientTestOpc.Name = "clientTestOpc";
+            this.clientTestOpc.UseVisualStyleBackColor = true;
+            this.clientTestOpc.Click += new System.EventHandler(this.Client_Click);
             // 
             // buttonResetCounter
             // 
@@ -3746,6 +3755,7 @@
         private System.Windows.Forms.DataGridViewButtonColumn ColumnM2Register;
         private System.Windows.Forms.NumericUpDown numericUpDownM2JogSpeed;
         private System.Windows.Forms.Button buttonM2JogReset;
+        private System.Windows.Forms.Button clientTestOpc;
     }
 }
 

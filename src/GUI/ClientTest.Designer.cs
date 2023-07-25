@@ -56,6 +56,9 @@
             this.pcPercVeloBtn = new System.Windows.Forms.Button();
             this.velocitTxtbox = new System.Windows.Forms.TextBox();
             this.readPercVelocitaManuelBtn = new System.Windows.Forms.Button();
+            this.readMultiploBtn = new System.Windows.Forms.Button();
+            this.cleanLogBtn = new System.Windows.Forms.Button();
+            this.writeMultiploBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -312,11 +315,44 @@
             this.readPercVelocitaManuelBtn.UseVisualStyleBackColor = true;
             this.readPercVelocitaManuelBtn.Click += new System.EventHandler(this.button3_Click_1);
             // 
+            // readMultiploBtn
+            // 
+            this.readMultiploBtn.Location = new System.Drawing.Point(297, 20);
+            this.readMultiploBtn.Name = "readMultiploBtn";
+            this.readMultiploBtn.Size = new System.Drawing.Size(93, 34);
+            this.readMultiploBtn.TabIndex = 27;
+            this.readMultiploBtn.Text = "Read Multiplo";
+            this.readMultiploBtn.UseVisualStyleBackColor = true;
+            this.readMultiploBtn.Click += new System.EventHandler(this.readMultiploBtn_Click);
+            // 
+            // cleanLogBtn
+            // 
+            this.cleanLogBtn.Location = new System.Drawing.Point(1064, 558);
+            this.cleanLogBtn.Name = "cleanLogBtn";
+            this.cleanLogBtn.Size = new System.Drawing.Size(49, 37);
+            this.cleanLogBtn.TabIndex = 28;
+            this.cleanLogBtn.Text = "Clean";
+            this.cleanLogBtn.UseVisualStyleBackColor = true;
+            this.cleanLogBtn.Click += new System.EventHandler(this.cleanLogBtn_Click);
+            // 
+            // writeMultiploBtn
+            // 
+            this.writeMultiploBtn.Location = new System.Drawing.Point(297, 61);
+            this.writeMultiploBtn.Name = "writeMultiploBtn";
+            this.writeMultiploBtn.Size = new System.Drawing.Size(93, 34);
+            this.writeMultiploBtn.TabIndex = 29;
+            this.writeMultiploBtn.Text = "Write Multiplo";
+            this.writeMultiploBtn.UseVisualStyleBackColor = true;
+            this.writeMultiploBtn.Click += new System.EventHandler(this.writeMultiploBtn_Click);
+            // 
             // ClientTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1125, 617);
+            this.Controls.Add(this.writeMultiploBtn);
+            this.Controls.Add(this.cleanLogBtn);
+            this.Controls.Add(this.readMultiploBtn);
             this.Controls.Add(this.readPercVelocitaManuelBtn);
             this.Controls.Add(this.velocitTxtbox);
             this.Controls.Add(this.pcPercVeloBtn);
@@ -380,5 +416,8 @@
         private System.Windows.Forms.Button pcPercVeloBtn;
         private System.Windows.Forms.TextBox velocitTxtbox;
         private System.Windows.Forms.Button readPercVelocitaManuelBtn;
+        private System.Windows.Forms.Button readMultiploBtn;
+        private System.Windows.Forms.Button cleanLogBtn;
+        private System.Windows.Forms.Button writeMultiploBtn;
     }
 }

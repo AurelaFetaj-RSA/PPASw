@@ -2823,6 +2823,30 @@
   <data name="&gt;&gt;splitContainerIO.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="clientTestOpc.Location" type="System.Drawing.Point, System.Drawing">
+    <value>503, 24</value>
+  </data>
+  <data name="clientTestOpc.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 28</value>
+  </data>
+  <data name="clientTestOpc.TabIndex" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="clientTestOpc.Text" xml:space="preserve">
+    <value>Open Client</value>
+  </data>
+  <data name="&gt;&gt;clientTestOpc.Name" xml:space="preserve">
+    <value>clientTestOpc</value>
+  </data>
+  <data name="&gt;&gt;clientTestOpc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clientTestOpc.Parent" xml:space="preserve">
+    <value>transparentPanelLine.ContentPanel</value>
+  </data>
+  <data name="&gt;&gt;clientTestOpc.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="buttonResetCounter.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -2851,7 +2875,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;buttonResetCounter.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="labelPieceCounter.Location" type="System.Drawing.Point, System.Drawing">
     <value>233, 20</value>
@@ -2875,7 +2899,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;labelPieceCounter.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lbLedLineReady.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2902,7 +2926,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbLedLineReady.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="lbButtonStartStop.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 39.75pt, style=Bold</value>
@@ -2926,7 +2950,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbButtonStartStop.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lbLedLineStatus.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2953,7 +2977,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbLedLineStatus.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lbLedAirPressure.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2980,7 +3004,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbLedAirPressure.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="lbLedEmergency.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -3007,7 +3031,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbLedEmergency.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lbButtonPause.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 39.75pt, style=Bold</value>
@@ -3031,7 +3055,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbButtonPause.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="lbLedPLCConnection.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -3058,7 +3082,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbLedPLCConnection.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="transparentPanelLine.ContentPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 2</value>

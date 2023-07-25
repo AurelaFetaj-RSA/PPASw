@@ -12,7 +12,7 @@ namespace GUI.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.2.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.6.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -56,6 +56,30 @@ namespace GUI.Properties {
             }
             set {
                 this["SplashScreenFilepath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("opc.tcp://192.168.0.38:48011")]
+        public string OpcClient_1_URI {
+            get {
+                return ((string)(this["OpcClient_1_URI"]));
+            }
+            set {
+                this["OpcClient_1_URI"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("opc.tcp://localhost:6000")]
+        public string OpcClient_2_URI {
+            get {
+                return ((string)(this["OpcClient_2_URI"]));
+            }
+            set {
+                this["OpcClient_2_URI"] = value;
             }
         }
     }
