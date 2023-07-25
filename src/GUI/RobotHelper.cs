@@ -157,31 +157,42 @@ namespace GUI
             //    myRobot.SetVariable("job_result",0);
             //}
         }
+        
+        public void WriteOnLabelAsync(string textToAppend, Label lbl)
+        {
+            if (lbl.InvokeRequired)
+            {
+                lbl.Invoke((MethodInvoker)delegate
+                {
+                    lbl.Text = textToAppend;
+                });
+            }
+        }
 
         #region (* machines status *)
         public async Task UpdateOPCUAStatus()
         {
-            List<string> keys = new List<string>();
-            keys.Add("pcM1Status");
-            keys.Add("pcM2Status");
-            keys.Add("pcM3Status");
-            keys.Add("pcM4Status");
-            keys.Add("pcM5Status");
-            keys.Add("pcM6Status");
+            //List<string> keys = new List<string>();
+            //keys.Add("pcM1Status");
+            //keys.Add("pcM2Status");
+            //keys.Add("pcM3Status");
+            //keys.Add("pcM4Status");
+            //keys.Add("pcM5Status");
+            //keys.Add("pcM6Status");
 
-            var varRresultS = await ccService.Read(keys);
+            //var varRresultS = await ccService.Read(keys);
 
             //opcua M1 status
-            //OpcClientService.ClientResult varResult = await ccService.Read("pcM1Status");
+            var varResult = await ccService.Read("pcM1Status");
 
-            if (varRresultS["pcM1Status"].OpcResult) UpdateOPCUAM1Lamp((short)varRresultS["pcM1Status"].Value);
+            if (varResult.OpcResult) UpdateOPCUAM1Lamp((short)varResult.Value);
             else
             {
                 //todo
             }
 
             //opcua M2 status
-            var varResult = await ccService.Read("pcM2Status");
+            varResult = await ccService.Read("pcM2Status");
 
             if (varResult.OpcResult) UpdateOPCUAM2Lamp((short)varResult.Value);
             else
@@ -237,7 +248,7 @@ namespace GUI
             //opcua M2 ready
             varResult = await ccService.Read("pcM2Ready");
 
-            if (varResult.OpcResult) UpdateOPCUAM2ReadyLamp((short)varResult.Value);
+            if (varResult.OpcResult) UpdateOPCUAM2ReadyLamp((bool)varResult.Value);
             else
             {
                 //todo
@@ -246,7 +257,7 @@ namespace GUI
             //opcua M3 ready
             varResult = await ccService.Read("pcM3Ready");
 
-            if (varResult.OpcResult) UpdateOPCUAM3ReadyLamp((short)varResult.Value);
+            if (varResult.OpcResult) UpdateOPCUAM3ReadyLamp((bool)varResult.Value);
             else
             {
                 //todo
@@ -255,7 +266,7 @@ namespace GUI
             //opcua M4 ready
             varResult = await ccService.Read("pcM4Ready");
 
-            if (varResult.OpcResult) UpdateOPCUAM4ReadyLamp((short)varResult.Value);
+            if (varResult.OpcResult) UpdateOPCUAM4ReadyLamp((bool)varResult.Value);
             else
             {
                 //todo
@@ -264,7 +275,7 @@ namespace GUI
             //opcua M5 ready
             varResult = await ccService.Read("pcM5Ready");
 
-            if (varResult.OpcResult) UpdateOPCUAM5ReadyLamp((short)varResult.Value);
+            if (varResult.OpcResult) UpdateOPCUAM5ReadyLamp((bool)varResult.Value);
             else
             {
                 //todo
@@ -273,7 +284,7 @@ namespace GUI
             //opcua M6 ready
             varResult = await ccService.Read("pcM6Ready");
 
-            if (varResult.OpcResult) UpdateOPCUAM6ReadyLamp((short)varResult.Value);
+            if (varResult.OpcResult) UpdateOPCUAM6ReadyLamp((bool)varResult.Value);
             else
             {
                 //todo
@@ -282,7 +293,7 @@ namespace GUI
             //opcua M1 homing done
             varResult = await ccService.Read("pcM1HomingDone");
 
-            if (varResult.OpcResult) UpdateOPCUAM1HomingDoneLamp((short)varResult.Value);
+            if (varResult.OpcResult) UpdateOPCUAM1HomingDoneLamp((bool)varResult.Value);
             else
             {
                 //todo
@@ -291,7 +302,7 @@ namespace GUI
             //opcua M2 homing done
             varResult = await ccService.Read("pcM2HomingDone");
 
-            if (varResult.OpcResult) UpdateOPCUAM2HomingDoneLamp((short)varResult.Value);
+            if (varResult.OpcResult) UpdateOPCUAM2HomingDoneLamp((bool)varResult.Value);
             else
             {
                 //todo
@@ -300,7 +311,7 @@ namespace GUI
             //opcua M3 homing done
             varResult = await ccService.Read("pcM3HomingDone");
 
-            if (varResult.OpcResult) UpdateOPCUAM3HomingDoneLamp((short)varResult.Value);
+            if (varResult.OpcResult) UpdateOPCUAM3HomingDoneLamp((bool)varResult.Value);
             else
             {
                 //todo
@@ -309,7 +320,7 @@ namespace GUI
             //opcua M4 homing done
             varResult = await ccService.Read("pcM4HomingDone");
 
-            if (varResult.OpcResult) UpdateOPCUAM4HomingDoneLamp((short)varResult.Value);
+            if (varResult.OpcResult) UpdateOPCUAM4HomingDoneLamp((bool)varResult.Value);
             else
             {
                 //todo
@@ -318,7 +329,7 @@ namespace GUI
             //opcua M5 homing done
             varResult = await ccService.Read("pcM5HomingDone");
 
-            if (varResult.OpcResult) UpdateOPCUAM5HomingDoneLamp((short)varResult.Value);
+            if (varResult.OpcResult) UpdateOPCUAM5HomingDoneLamp((bool)varResult.Value);
             else
             {
                 //todo
@@ -327,10 +338,31 @@ namespace GUI
             //opcua M6 homing done
             varResult = await ccService.Read("pcM6HomingDone");
 
-            if (varResult.OpcResult) UpdateOPCUAM6HomingDoneLamp((short)varResult.Value);
+            if (varResult.OpcResult) UpdateOPCUAM6HomingDoneLamp((bool)varResult.Value);
             else
             {
                 //todo
+            }
+
+            //current axis quote
+            varResult = await ccService.Read("pcM2CurrentAxisQuote");
+            if (varResult.OpcResult) UpdateM2CurrentAxisQuote((short)varResult.Value);
+            else
+            {
+                //todo
+            }           
+
+        }
+
+        public void UpdateM2CurrentAxisQuote(short value)
+        {
+            try
+            {
+                WriteOnLabelAsync(value.ToString() + " " + "(mm)", labelM2TeachAxisQuoteValue);
+            }
+            catch(Exception EX)
+            {
+
             }
         }
 
@@ -548,165 +580,160 @@ namespace GUI
             }
         }
 
-        public void UpdateOPCUAM2ReadyLamp(short value)
+        public void UpdateOPCUAM2ReadyLamp(bool value)
         {
-            if (value == 0)
+            if (!value)
             {
                 lbLedM2Ready.LedColor = Color.Red;
                 lbLedM2Ready.Label = "not ready";
             }
 
-            if (value == 1)
+            else
             {
                 lbLedM2Ready.LedColor = Color.FromArgb(195, 222, 155);
                 lbLedM2Ready.Label = "ready";
             }
         }
 
-        public void UpdateOPCUAM3ReadyLamp(short value)
+        public void UpdateOPCUAM3ReadyLamp(bool value)
         {
-            if (value == 0)
+            if (!value)
             {
                 lbLedM3Ready.LedColor = Color.Red;
                 lbLedM3Ready.Label = "not ready";
             }
-
-            if (value == 1)
+            else
             {
                 lbLedM3Ready.LedColor = Color.FromArgb(195, 222, 155);
                 lbLedM3Ready.Label = "ready";
             }
         }
 
-        public void UpdateOPCUAM4ReadyLamp(short value)
+        public void UpdateOPCUAM4ReadyLamp(bool value)
         {
-            if (value == 0)
+            if (!value)
             {
                 lbLedM4Ready.LedColor = Color.Red;
                 lbLedM4Ready.Label = "not ready";
             }
-
-            if (value == 1)
+            else
             {
                 lbLedM4Ready.LedColor = Color.FromArgb(195, 222, 155);
                 lbLedM4Ready.Label = "ready";
             }
         }
 
-        public void UpdateOPCUAM5ReadyLamp(short value)
+        public void UpdateOPCUAM5ReadyLamp(bool value)
         {
-            if (value == 0)
+            if (!value)
             {
                 lbLedM5Ready.LedColor = Color.Red;
                 lbLedM5Ready.Label = "not ready";
             }
-
-            if (value == 1)
+            else
             {
                 lbLedM5Ready.LedColor = Color.FromArgb(195, 222, 155);
                 lbLedM5Ready.Label = "ready";
             }
         }
 
-        public void UpdateOPCUAM6ReadyLamp(short value)
+        public void UpdateOPCUAM6ReadyLamp(bool value)
         {
-            if (value == 0)
+            if (!value)
             {
                 lbLedM6Ready.LedColor = Color.Red;
                 lbLedM6Ready.Label = "not ready";
             }
-
-            if (value == 1)
+            else            
             {
                 lbLedM6Ready.LedColor = Color.FromArgb(195, 222, 155);
                 lbLedM6Ready.Label = "ready";
             }
         }
 
-        public void UpdateOPCUAM1HomingDoneLamp(short value)
+        public void UpdateOPCUAM1HomingDoneLamp(bool value)
         {
-            if (value == 0)
+            if (!value)
             {
                 lbLedM1HomingDone.LedColor = Color.Red;
                 lbLedM1HomingDone.Label = "homing not done";
             }
 
-            if (value == 1)
+            else
             {
                 lbLedM1HomingDone.LedColor = Color.FromArgb(195, 222, 155);
                 lbLedM1HomingDone.Label = "homing done";
             }
         }
 
-        public void UpdateOPCUAM2HomingDoneLamp(short value)
+        public void UpdateOPCUAM2HomingDoneLamp(bool value)
         {
-            if (value == 0)
+            if (!value)
             {
                 lbLedM2HomingDone.LedColor = Color.Red;
                 lbLedM2HomingDone.Label = "homing not done";
             }
 
-            if (value == 1)
+            else
             {
                 lbLedM2HomingDone.LedColor = Color.FromArgb(195, 222, 155);
                 lbLedM2HomingDone.Label = "homing done";
             }
         }
 
-        public void UpdateOPCUAM3HomingDoneLamp(short value)
+        public void UpdateOPCUAM3HomingDoneLamp(bool value)
         {
-            if (value == 0)
+            if (!value)
             {
                 lbLedM3HomingDone.LedColor = Color.Red;
                 lbLedM3HomingDone.Label = "homing not done";
             }
 
-            if (value == 1)
+            else
             {
                 lbLedM3HomingDone.LedColor = Color.FromArgb(195, 222, 155);
                 lbLedM3HomingDone.Label = "homing done";
             }
         }
 
-        public void UpdateOPCUAM4HomingDoneLamp(short value)
+        public void UpdateOPCUAM4HomingDoneLamp(bool value)
         {
-            if (value == 0)
+            if (!value)
             {
                 lbLedM4HomingDone.LedColor = Color.Red;
                 lbLedM4HomingDone.Label = "homing not done";
             }
 
-            if (value == 1)
+            else
             {
                 lbLedM4HomingDone.LedColor = Color.FromArgb(195, 222, 155);
                 lbLedM4HomingDone.Label = "homing done";
             }
         }
 
-        public void UpdateOPCUAM5HomingDoneLamp(short value)
+        public void UpdateOPCUAM5HomingDoneLamp(bool value)
         {
-            if (value == 0)
+            if (!value)
             {
                 lbLedM5HomingDone.LedColor = Color.Red;
                 lbLedM5HomingDone.Label = "homing not done";
             }
 
-            if (value == 1)
+            else
             {
                 lbLedM5HomingDone.LedColor = Color.FromArgb(195, 222, 155);
                 lbLedM5HomingDone.Label = "homing done";
             }
         }
 
-        public void UpdateOPCUAM6HomingDoneLamp(short value)
+        public void UpdateOPCUAM6HomingDoneLamp(bool value)
         {
-            if (value == 0)
+            if (!value)
             {
                 lbLedM6HomingDone.LedColor = Color.Red;
                 lbLedM6HomingDone.Label = "homing not done";
             }
-
-            if (value == 1)
+            else
             {
                 lbLedM6HomingDone.LedColor = Color.FromArgb(195, 222, 155);
                 lbLedM6HomingDone.Label = "homing done";
@@ -725,9 +752,9 @@ namespace GUI
             List<object> obj = new List<object>()
             {
                 pointID,
-                new short[] {0, pointQuote[1], pointQuote[2], pointQuote[3], pointQuote[4]},
-                new short[] {0, pointSpeed[1], pointSpeed[2], pointSpeed[3], pointSpeed[4]},
-                new bool[] {false, pointReg[1], pointReg[2], pointReg[3], pointReg[4] }
+                pointQuote,
+                pointSpeed,
+                pointReg
             };
 
             Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();

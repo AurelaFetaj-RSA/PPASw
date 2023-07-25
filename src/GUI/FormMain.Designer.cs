@@ -259,6 +259,10 @@
             this.tabPageConsole = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlM = new LidorSystems.IntegralUI.Containers.TabControl();
             this.tabPageM2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.labelM2TeachAxisQuoteValue = new System.Windows.Forms.Label();
+            this.labelM2TeachAxisQuoteName = new System.Windows.Forms.Label();
+            this.lbButtonM2StartStopExitBelt = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.lbButtonM2StartStopWorkingBelt = new LBSoft.IndustrialCtrls.Buttons.LBButton();
             this.buttonM2JogReset = new System.Windows.Forms.Button();
             this.numericUpDownM2JogSpeed = new System.Windows.Forms.NumericUpDown();
             this.dataGridViewM2Points = new System.Windows.Forms.DataGridView();
@@ -3023,6 +3027,10 @@
             // 
             // tabPageM2
             // 
+            this.tabPageM2.Controls.Add(this.labelM2TeachAxisQuoteValue);
+            this.tabPageM2.Controls.Add(this.labelM2TeachAxisQuoteName);
+            this.tabPageM2.Controls.Add(this.lbButtonM2StartStopExitBelt);
+            this.tabPageM2.Controls.Add(this.lbButtonM2StartStopWorkingBelt);
             this.tabPageM2.Controls.Add(this.buttonM2JogReset);
             this.tabPageM2.Controls.Add(this.numericUpDownM2JogSpeed);
             this.tabPageM2.Controls.Add(this.dataGridViewM2Points);
@@ -3052,6 +3060,48 @@
             this.tabPageM2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageM2.TextBounds")));
             this.tabPageM2.TextSize = new System.Drawing.SizeF(59.70865F, 13.82519F);
             // 
+            // labelM2TeachAxisQuoteValue
+            // 
+            resources.ApplyResources(this.labelM2TeachAxisQuoteValue, "labelM2TeachAxisQuoteValue");
+            this.labelM2TeachAxisQuoteValue.Name = "labelM2TeachAxisQuoteValue";
+            // 
+            // labelM2TeachAxisQuoteName
+            // 
+            resources.ApplyResources(this.labelM2TeachAxisQuoteName, "labelM2TeachAxisQuoteName");
+            this.labelM2TeachAxisQuoteName.Name = "labelM2TeachAxisQuoteName";
+            // 
+            // lbButtonM2StartStopExitBelt
+            // 
+            this.lbButtonM2StartStopExitBelt.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM2StartStopExitBelt.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM2StartStopExitBelt, "lbButtonM2StartStopExitBelt");
+            this.lbButtonM2StartStopExitBelt.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM2StartStopExitBelt.Label = "start/stop exit belt";
+            this.lbButtonM2StartStopExitBelt.Name = "lbButtonM2StartStopExitBelt";
+            this.lbButtonM2StartStopExitBelt.Renderer = null;
+            this.lbButtonM2StartStopExitBelt.RepeatInterval = 100;
+            this.lbButtonM2StartStopExitBelt.RepeatState = false;
+            this.lbButtonM2StartStopExitBelt.StartRepeatInterval = 500;
+            this.lbButtonM2StartStopExitBelt.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM2StartStopExitBelt.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2StartStopExitBelt.Click += new System.EventHandler(this.lbButtonM2StartStopExitBelt_Click);
+            // 
+            // lbButtonM2StartStopWorkingBelt
+            // 
+            this.lbButtonM2StartStopWorkingBelt.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM2StartStopWorkingBelt.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM2StartStopWorkingBelt, "lbButtonM2StartStopWorkingBelt");
+            this.lbButtonM2StartStopWorkingBelt.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM2StartStopWorkingBelt.Label = "start/stop working belt";
+            this.lbButtonM2StartStopWorkingBelt.Name = "lbButtonM2StartStopWorkingBelt";
+            this.lbButtonM2StartStopWorkingBelt.Renderer = null;
+            this.lbButtonM2StartStopWorkingBelt.RepeatInterval = 100;
+            this.lbButtonM2StartStopWorkingBelt.RepeatState = false;
+            this.lbButtonM2StartStopWorkingBelt.StartRepeatInterval = 500;
+            this.lbButtonM2StartStopWorkingBelt.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM2StartStopWorkingBelt.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2StartStopWorkingBelt.Click += new System.EventHandler(this.lbButtonM2StartStopWorkingBelt_Click);
+            // 
             // buttonM2JogReset
             // 
             resources.ApplyResources(this.buttonM2JogReset, "buttonM2JogReset");
@@ -3077,6 +3127,7 @@
             // 
             // dataGridViewM2Points
             // 
+            this.dataGridViewM2Points.AllowUserToAddRows = false;
             this.dataGridViewM2Points.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewM2Points.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnM2PointID,
@@ -3208,6 +3259,7 @@
             resources.ApplyResources(this.buttonM2PrintCycle, "buttonM2PrintCycle");
             this.buttonM2PrintCycle.Name = "buttonM2PrintCycle";
             this.buttonM2PrintCycle.UseVisualStyleBackColor = true;
+            this.buttonM2PrintCycle.Click += new System.EventHandler(this.buttonM2PrintCycle_Click);
             // 
             // buttonM2StartQuote
             // 
@@ -3274,36 +3326,42 @@
             resources.ApplyResources(this.buttonM2ContrastClosing, "buttonM2ContrastClosing");
             this.buttonM2ContrastClosing.Name = "buttonM2ContrastClosing";
             this.buttonM2ContrastClosing.UseVisualStyleBackColor = true;
+            this.buttonM2ContrastClosing.Click += new System.EventHandler(this.buttonM2ContrastClosing_Click);
             // 
             // buttonM2ContrastOpening
             // 
             resources.ApplyResources(this.buttonM2ContrastOpening, "buttonM2ContrastOpening");
             this.buttonM2ContrastOpening.Name = "buttonM2ContrastOpening";
             this.buttonM2ContrastOpening.UseVisualStyleBackColor = true;
+            this.buttonM2ContrastOpening.Click += new System.EventHandler(this.buttonM2ContrastOpening_Click);
             // 
             // buttonM2CenteringClampsClosing
             // 
             resources.ApplyResources(this.buttonM2CenteringClampsClosing, "buttonM2CenteringClampsClosing");
             this.buttonM2CenteringClampsClosing.Name = "buttonM2CenteringClampsClosing";
             this.buttonM2CenteringClampsClosing.UseVisualStyleBackColor = true;
+            this.buttonM2CenteringClampsClosing.Click += new System.EventHandler(this.buttonM2CenteringClampsClosing_Click);
             // 
             // buttonM2CenteringClampsOpening
             // 
             resources.ApplyResources(this.buttonM2CenteringClampsOpening, "buttonM2CenteringClampsOpening");
             this.buttonM2CenteringClampsOpening.Name = "buttonM2CenteringClampsOpening";
             this.buttonM2CenteringClampsOpening.UseVisualStyleBackColor = true;
+            this.buttonM2CenteringClampsOpening.Click += new System.EventHandler(this.buttonM2CenteringClampsOpening_Click);
             // 
             // buttonM2BigGripperClosing
             // 
             resources.ApplyResources(this.buttonM2BigGripperClosing, "buttonM2BigGripperClosing");
             this.buttonM2BigGripperClosing.Name = "buttonM2BigGripperClosing";
             this.buttonM2BigGripperClosing.UseVisualStyleBackColor = true;
+            this.buttonM2BigGripperClosing.Click += new System.EventHandler(this.buttonM2BigGripperClosing_Click);
             // 
             // buttonM2BigClampOpening
             // 
             resources.ApplyResources(this.buttonM2BigClampOpening, "buttonM2BigClampOpening");
             this.buttonM2BigClampOpening.Name = "buttonM2BigClampOpening";
             this.buttonM2BigClampOpening.UseVisualStyleBackColor = true;
+            this.buttonM2BigClampOpening.Click += new System.EventHandler(this.buttonM2BigClampOpening_Click);
             // 
             // buttonM2SmallClampClosing
             // 
@@ -3412,13 +3470,13 @@
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
             this.tabControlMain.Controls.Add(this.tabPageConsole);
+            this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Controls.Add(this.tabPageHide);
             this.tabControlMain.Controls.Add(this.tabPageHelp);
             this.tabControlMain.Controls.Add(this.tabPageSettings);
             this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
             this.tabControlMain.Controls.Add(this.tabPage4);
             this.tabControlMain.Controls.Add(this.tabPageRecipe);
-            this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlMain, "tabControlMain");
             controlFormatStyle9.BorderCornerRadius = 5;
@@ -3534,6 +3592,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabControlM)).EndInit();
             this.tabControlM.ResumeLayout(false);
             this.tabPageM2.ResumeLayout(false);
+            this.tabPageM2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2JogSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2Points)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualSpeed)).EndInit();
@@ -3756,6 +3815,10 @@
         private System.Windows.Forms.NumericUpDown numericUpDownM2JogSpeed;
         private System.Windows.Forms.Button buttonM2JogReset;
         private System.Windows.Forms.Button clientTestOpc;
+        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM2StartStopExitBelt;
+        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM2StartStopWorkingBelt;
+        private System.Windows.Forms.Label labelM2TeachAxisQuoteValue;
+        private System.Windows.Forms.Label labelM2TeachAxisQuoteName;
     }
 }
 

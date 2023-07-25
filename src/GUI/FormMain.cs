@@ -42,7 +42,7 @@ namespace GUI
         private readonly SplashScreen _splashScreen = null;
         private Form _configForm { get; set; } = null;
         private Form _clientForm { get; set; } = null;
-        
+
         CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
         public FormMain(SplashScreen splashScreen)
         {
@@ -72,7 +72,7 @@ namespace GUI
 
         public async void SetEvent()
         {
-            
+
         }
 
         public void StartUpdateTask()
@@ -81,7 +81,7 @@ namespace GUI
             //.Run(async () => await UpdateGraphicsGUI(TimeSpan.FromMilliseconds(Settings.Default.UpdateGUILed), _cancellationTokenSource));
             //Task.Run(async () => await UpdateDiagnosticGUI(TimeSpan.FromMilliseconds(myCore.DiagnosticConfigurator.Configuration.DiagnosticPolling), _cancellationTokenSource));
             Task.Run(async () => await UpdateOPCUAStatus(TimeSpan.FromMilliseconds(1000), _cancellationTokenSource));
-            
+
         }
 
 
@@ -200,14 +200,24 @@ namespace GUI
             //myCore.CreateServiceList(newConfiguration, null);
             var listOfService = myCore.CreateServiceList(myCore.CoreConfigurations, loadedloggerConfigurator);
 
+
+            List<IService> listFound = myCore.FindPerType(typeof(OpcClientService));
+
+            foreach (IService serv in listFound)
+            {
+                if (serv.ServiceURI == new Uri(Properties.Settings.Default.OpcClient_1_URI) && serv is OpcClientService clientOpcService)
+                {
+                    ccService = clientOpcService;
+                    break;
+                }
+            }
+
             foreach (var service in listOfService)
             {
                 _splashScreen?.WriteOnTextboxAsync($"Service: {service.Name} loaded");
             }
 
-            ccService = (OpcClientService)myCore.FindPerType(typeof(OpcClientService));
-
-            if(ccService != null) 
+            if (ccService != null)
             {
                 ccService.SetObjectData(new PlasticOpcClientConfig().Config());
             }
@@ -224,7 +234,7 @@ namespace GUI
         private void InitLastParameter()
         {
             //filePathDiagnosticFileTxtbox.Text = Settings.Default.DiagnosticFilePath;
-            dataGridViewM2Points.Rows.Add(3);
+            dataGridViewM2Points.Rows.Add(4);
             dataGridViewM2Points.Rows[0].Cells[0].Value = 1;
             dataGridViewM2Points.Rows[1].Cells[0].Value = 2;
             dataGridViewM2Points.Rows[2].Cells[0].Value = 3;
@@ -269,31 +279,13 @@ namespace GUI
         private void InitGUI()
         {
             InitLastParameter();
-        }     
-
-        private async void Connect()
-        {
-            
-
-            bool connectionResult = await ccService.Connect();
-
-            if (connectionResult)
-            {
-                //await Task.Run(() => ThreadSafeWriteMessage("Connected"));
-
-            }
-            else
-            {
-                //await Task.Run(() => ThreadSafeWritkeMessage("Failed to connect"));
-            }
         }
-
 
         #region(* GUI callback *)
 
         private void tabControlMain_SelectedPageChanged(object sender, LidorSystems.IntegralUI.ObjectEventArgs e)
         {
-           
+
             //I will not save the state if is hide
             if (tabControlMain.SelectedPage.Key == "Hide")
             {
@@ -311,12 +303,12 @@ namespace GUI
         private void tabPageHide_Paint(object sender, PaintEventArgs e)
         {
 
-        }     
+        }
         #endregion
 
-       
 
-     
+
+
 
         private void memoryDumpBtn_Click(object sender, EventArgs e)
         {
@@ -384,7 +376,7 @@ namespace GUI
 
             if (_clientForm == null || _clientForm.IsDisposed)
             {
-                OpcClientService clientService = (OpcClientService)myCore.FindPerType(typeof(OpcClientService));
+                OpcClientService clientService = (OpcClientService)myCore.FindPerType(typeof(OpcClientService))[0];
                 _clientForm = new ClientTest(clientService);
             }
 
@@ -395,31 +387,25 @@ namespace GUI
 
         private async void buttonM2SmallClampOpening_Click(object sender, EventArgs e)
         {
-            string keyToSend = "pc_open_small_clamp";
-            string keyToSend1 = "pc_chiusura_pinza_bordo_stivale";
+            string keyToSend = "pcM2SmallClampOpening";
 
-            
-            var readResult1 = await ccService.Send(keyToSend1, false);
-            var readResult = await ccService.Send(keyToSend, true);       
-            
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
         }
 
         private async void buttonM2SmallClampClosing_Click(object sender, EventArgs e)
         {
-            string keyToSend = "pc_chiusura_pinza_bordo_stivale";
-            string keyToSend1 = "pc_apertura_pinza_bordo_stivale";
+            string keyToSend = "pcM2SmallClampClosing";
 
-            Stopwatch sw = new Stopwatch();
-            sw.Start();
+            var readResult = await ccService.Send(keyToSend, true);
 
-            var readResult1 = await ccService.Send(keyToSend1, false);
-
-            if (readResult1.OpcResult)
+            if (readResult.OpcResult)
             {
-                sw.Stop();
-                myCore.Log.Debug(sw.ElapsedMilliseconds);
+
             }
-            var readResult = await ccService.Send(keyToSend, true);            
         }
 
         private async void lbButtonM2JogUp_Click(object sender, EventArgs e)
@@ -473,7 +459,7 @@ namespace GUI
         }
 
         private async void buttonM2JogReset_Click(object sender, EventArgs e)
-        {            
+        {
             string keyToSend = null;
 
             keyToSend = "pcM2JogReset";
@@ -482,7 +468,7 @@ namespace GUI
         }
 
         private async void buttonM2StartQuote_Click(object sender, EventArgs e)
-        {            
+        {
             string keyToSend = null;
 
             //quote 
@@ -506,7 +492,7 @@ namespace GUI
         }
 
         private async void checkBoxM2Inclusion_CheckedChanged(object sender, EventArgs e)
-        {            
+        {
             string keyToSend = null;
 
             keyToSend = "pcM2Inclusion";
@@ -596,7 +582,7 @@ namespace GUI
         }
 
         private async void numericUpDownM2ManualSpeed_ValueChanged(object sender, EventArgs e)
-        {            
+        {
             string keyToSend = "pcM2ManualSpeed";
 
             var readResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM2ManualSpeed.Value.ToString()));
@@ -685,11 +671,11 @@ namespace GUI
                 //get selected row index
                 int currentRow = int.Parse(e.RowIndex.ToString());
 
-                short idPoint = (short)currentRow;
+                short idPoint = (short)(currentRow + 1);
                 for (i = 0; i <= dataGridViewM2Points.RowCount - 1; i++)
                 {
-                    quote[i+1] = short.Parse(dataGridViewM2Points[1, i].Value.ToString());
-                    speed[i+1] = short.Parse(dataGridViewM2Points[2, i].Value.ToString());                    
+                    quote[i + 1] = short.Parse(dataGridViewM2Points[1, i].Value.ToString());
+                    speed[i + 1] = short.Parse(dataGridViewM2Points[2, i].Value.ToString());
                 }
 
                 if (idPoint < 0 || idPoint > 4)
@@ -701,12 +687,119 @@ namespace GUI
                 // edit button
                 if ((e.ColumnIndex == 3) & currentRow >= 0)
                 {
-                    OPCUAM1TeachPckSend(++idPoint, quote, speed, new bool[] { true, false, false, false });
+                    OPCUAM1TeachPckSend(idPoint, quote, speed, new bool[] { false, true, false, false, false });
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
+            }
+        }
+
+        private async void buttonM2BigClampOpening_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2BigClampOpening";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM2BigGripperClosing_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2BigClampOpening";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM2CenteringClampsOpening_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2CentrClampOpening";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM2CenteringClampsClosing_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2CentrClampClosing";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM2ContrastOpening_Click(object sender, EventArgs e)
+        {            
+            string keyToSend = "pcM2ContrOpening";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM2ContrastClosing_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2ContrClosing";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM2PrintCycle_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2Print";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void lbButtonM2StartStopWorkingBelt_Click(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM2StartStopWorkingBelt";
+            if (lbButtonM2StartStopWorkingBelt.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void lbButtonM2StartStopExitBelt_Click(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM2StartStopExitBelt";
+            if (lbButtonM2StartStopWorkingBelt.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
             }
         }
     }

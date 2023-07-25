@@ -6014,7 +6014,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageHide.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="tabPageHelp.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>
@@ -6049,7 +6049,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageHelp.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="tabPageSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>
@@ -6084,7 +6084,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageSettings.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="TabPageDiagnostic.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>
@@ -6119,7 +6119,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;TabPageDiagnostic.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="tabPage4.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>
@@ -6154,7 +6154,118 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteValue.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteValue.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteValue.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>792, 500</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteValue.TabIndex" type="System.Int32, mscorlib">
+    <value>103</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteValue.Text" xml:space="preserve">
+    <value>9999</value>
+  </data>
+  <data name="&gt;&gt;labelM2TeachAxisQuoteValue.Name" xml:space="preserve">
+    <value>labelM2TeachAxisQuoteValue</value>
+  </data>
+  <data name="&gt;&gt;labelM2TeachAxisQuoteValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelM2TeachAxisQuoteValue.Parent" xml:space="preserve">
+    <value>tabPageM2</value>
+  </data>
+  <data name="&gt;&gt;labelM2TeachAxisQuoteValue.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>617, 500</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 18</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteName.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteName.Text" xml:space="preserve">
+    <value>axis quote (mm)</value>
+  </data>
+  <data name="&gt;&gt;labelM2TeachAxisQuoteName.Name" xml:space="preserve">
+    <value>labelM2TeachAxisQuoteName</value>
+  </data>
+  <data name="&gt;&gt;labelM2TeachAxisQuoteName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelM2TeachAxisQuoteName.Parent" xml:space="preserve">
+    <value>tabPageM2</value>
+  </data>
+  <data name="&gt;&gt;labelM2TeachAxisQuoteName.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbButtonM2StartStopExitBelt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM2StartStopExitBelt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>322, 500</value>
+  </data>
+  <data name="lbButtonM2StartStopExitBelt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 73</value>
+  </data>
+  <data name="lbButtonM2StartStopExitBelt.TabIndex" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartStopExitBelt.Name" xml:space="preserve">
+    <value>lbButtonM2StartStopExitBelt</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartStopExitBelt.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartStopExitBelt.Parent" xml:space="preserve">
+    <value>tabPageM2</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartStopExitBelt.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbButtonM2StartStopWorkingBelt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM2StartStopWorkingBelt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 500</value>
+  </data>
+  <data name="lbButtonM2StartStopWorkingBelt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 73</value>
+  </data>
+  <data name="lbButtonM2StartStopWorkingBelt.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartStopWorkingBelt.Name" xml:space="preserve">
+    <value>lbButtonM2StartStopWorkingBelt</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartStopWorkingBelt.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartStopWorkingBelt.Parent" xml:space="preserve">
+    <value>tabPageM2</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartStopWorkingBelt.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="buttonM2JogReset.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 9.75pt</value>
@@ -6184,7 +6295,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;buttonM2JogReset.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="numericUpDownM2JogSpeed.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 21.75pt</value>
@@ -6208,7 +6319,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;numericUpDownM2JogSpeed.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <metadata name="ColumnM2PointID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -6253,7 +6364,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;dataGridViewM2Points.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="lbLed3.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -6280,7 +6391,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;lbLed3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="lbLed2.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -6307,7 +6418,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;lbLed2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="lbLed1.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -6334,7 +6445,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;lbLed1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="numericUpDownM2ManualSpeed.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 21.75pt</value>
@@ -6358,7 +6469,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;numericUpDownM2ManualSpeed.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>10</value>
   </data>
   <data name="numericUpDownM2ManualQuote.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 21.75pt</value>
@@ -6382,7 +6493,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;numericUpDownM2ManualQuote.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>11</value>
   </data>
   <data name="buttonM2PrintCycle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -6409,7 +6520,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;buttonM2PrintCycle.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>12</value>
   </data>
   <data name="buttonM2StartQuote.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -6436,7 +6547,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;buttonM2StartQuote.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>13</value>
   </data>
   <data name="lbButtonM2JogDown.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 39.75pt, style=Bold</value>
@@ -6460,7 +6571,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;lbButtonM2JogDown.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>14</value>
   </data>
   <data name="lbButtonM2JogUp.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 39.75pt, style=Bold</value>
@@ -6484,7 +6595,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;lbButtonM2JogUp.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>15</value>
   </data>
   <data name="buttonM2ResetServo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -6511,7 +6622,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;buttonM2ResetServo.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>16</value>
   </data>
   <data name="buttonM2ResetHome.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -6538,7 +6649,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;buttonM2ResetHome.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>17</value>
   </data>
   <data name="buttonM2Home.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -6565,7 +6676,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;buttonM2Home.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>18</value>
   </data>
   <data name="buttonM2ContrastClosing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -6592,7 +6703,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;buttonM2ContrastClosing.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>19</value>
   </data>
   <data name="buttonM2ContrastOpening.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -6619,7 +6730,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;buttonM2ContrastOpening.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>20</value>
   </data>
   <data name="buttonM2CenteringClampsClosing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -6646,7 +6757,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;buttonM2CenteringClampsClosing.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>21</value>
   </data>
   <data name="buttonM2CenteringClampsOpening.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -6673,7 +6784,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;buttonM2CenteringClampsOpening.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>22</value>
   </data>
   <data name="buttonM2BigGripperClosing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -6700,7 +6811,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;buttonM2BigGripperClosing.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>23</value>
   </data>
   <data name="buttonM2BigClampOpening.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -6727,7 +6838,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;buttonM2BigClampOpening.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>24</value>
   </data>
   <data name="buttonM2SmallClampClosing.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 9.75pt</value>
@@ -6757,7 +6868,7 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;buttonM2SmallClampClosing.ZOrder" xml:space="preserve">
-    <value>21</value>
+    <value>25</value>
   </data>
   <data name="buttonM2SmallClampOpening.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 9.75pt</value>
@@ -6784,13 +6895,13 @@
     <value>tabPageM2</value>
   </data>
   <data name="&gt;&gt;buttonM2SmallClampOpening.ZOrder" xml:space="preserve">
-    <value>22</value>
+    <value>26</value>
   </data>
   <data name="tabPageM2.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 22</value>
   </data>
   <data name="tabPageM2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>981, 463</value>
+    <value>981, 604</value>
   </data>
   <data name="tabPageM2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6822,7 +6933,7 @@
     <value>7, 9</value>
   </data>
   <data name="tabControlM.Size" type="System.Drawing.Size, System.Drawing">
-    <value>987, 489</value>
+    <value>987, 630</value>
   </data>
   <data name="tabControlM.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -6910,7 +7021,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageRecipe.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="labelLoginLevel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7005,7 +7116,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageMain.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>1</value>
   </data>
   <data name="tabControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
