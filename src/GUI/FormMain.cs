@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 using WebApi;
 using RSACommon.Logger;
 using RSACommon.WebApiDefinitions;
@@ -35,11 +36,13 @@ namespace GUI
     {
         //core instance
         public static Core myCore;
+        OpcClientService ccService = null;
+
         private LidorSystems.IntegralUI.Containers.TabPage lastPage { get; set; } = null;
         private readonly SplashScreen _splashScreen = null;
         private Form _configForm { get; set; } = null;
         private Form _clientForm { get; set; } = null;
-        
+
         CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
         public FormMain(SplashScreen splashScreen)
         {
@@ -67,7 +70,7 @@ namespace GUI
             //myCore.Start();
         }
 
-        public void SetEvent()
+        public async void SetEvent()
         {
 
         }
@@ -77,8 +80,8 @@ namespace GUI
 
             //.Run(async () => await UpdateGraphicsGUI(TimeSpan.FromMilliseconds(Settings.Default.UpdateGUILed), _cancellationTokenSource));
             //Task.Run(async () => await UpdateDiagnosticGUI(TimeSpan.FromMilliseconds(myCore.DiagnosticConfigurator.Configuration.DiagnosticPolling), _cancellationTokenSource));
-            //Task.Run(async () => await UpdateRobutStatus(TimeSpan.FromMilliseconds(1000), _cancellationTokenSource));
-            
+            Task.Run(async () => await UpdateOPCUAStatus(TimeSpan.FromMilliseconds(1000), _cancellationTokenSource));
+
         }
 
 
@@ -163,7 +166,7 @@ namespace GUI
 
         }
 
-        private void InitCore()
+        private async void InitCore()
         {
             myCore = new Core("PlasticCore");
             myCore.LoadConfiguration(myCore.ConfigFile);
@@ -197,19 +200,33 @@ namespace GUI
             //myCore.CreateServiceList(newConfiguration, null);
             var listOfService = myCore.CreateServiceList(myCore.CoreConfigurations, loadedloggerConfigurator);
 
+
+            List<IService> listFound = myCore.FindPerType(typeof(OpcClientService));
+
+            foreach (IService serv in listFound)
+            {
+                if (serv.ServiceURI == new Uri(Properties.Settings.Default.OpcClient_1_URI) && serv is OpcClientService clientOpcService)
+                {
+                    ccService = clientOpcService;
+                    break;
+                }
+            }
+
             foreach (var service in listOfService)
             {
                 _splashScreen?.WriteOnTextboxAsync($"Service: {service.Name} loaded");
             }
 
-            OpcClientService ccService = (OpcClientService)myCore.FindPerType(typeof(OpcClientService));
-
-            if(ccService != null) 
+            if (ccService != null)
             {
                 ccService.SetObjectData(new PlasticOpcClientConfig().Config());
             }
 
-            InitServices();
+            if (await ccService.Connect())
+            {
+
+            }
+
             _splashScreen?.WriteOnTextboxAsync($"Core Configuration ended");
             _splashScreen?.WriteOnTextboxAsync($"Core Started");
         }
@@ -217,6 +234,22 @@ namespace GUI
         private void InitLastParameter()
         {
             //filePathDiagnosticFileTxtbox.Text = Settings.Default.DiagnosticFilePath;
+            dataGridViewM2Points.Rows.Add(4);
+            dataGridViewM2Points.Rows[0].Cells[0].Value = 1;
+            dataGridViewM2Points.Rows[1].Cells[0].Value = 2;
+            dataGridViewM2Points.Rows[2].Cells[0].Value = 3;
+            dataGridViewM2Points.Rows[3].Cells[0].Value = 4;
+
+            dataGridViewM2Points.Rows[0].Cells[1].Value = 100;
+            dataGridViewM2Points.Rows[1].Cells[1].Value = 200;
+            dataGridViewM2Points.Rows[2].Cells[1].Value = 300;
+            dataGridViewM2Points.Rows[3].Cells[1].Value = 400;
+
+            dataGridViewM2Points.Rows[0].Cells[2].Value = 10;
+            dataGridViewM2Points.Rows[1].Cells[2].Value = 20;
+            dataGridViewM2Points.Rows[2].Cells[2].Value = 30;
+            dataGridViewM2Points.Rows[3].Cells[2].Value = 40;
+            dataGridViewM2Points.ClearSelection();
         }
 
         private void InitServices()
@@ -248,38 +281,11 @@ namespace GUI
             InitLastParameter();
         }
 
-        public static void LinkEventManager(IServerShared toLink)
-        {
-            if (toLink is WebApiRSWareSharedClass webApiSharedClass)
-            {
-                webApiSharedClass.OnAckChangeValueEvent += WebApiSharedClass_OnAckChangeValueEvent;
-                webApiSharedClass.OnErrorChangeValueEvent += WebApiSharedClass_OnErrorChangeValueEvent;
-                webApiSharedClass.OnCommandReadEvent += WebApiSharedClass_OnCommandReadEvent;
-            }
-        }
-
-
-        private static void WebApiSharedClass_OnAckChangeValueEvent(object sender, RSACommon.WebApiDefinitions.AckChangeEventArgs e)
-        {
-            myCore.Log?.Info($"{e.User}{e.AckValue}");
-        }
-
-        private static void WebApiSharedClass_OnErrorChangeValueEvent(object sender, RSACommon.WebApiDefinitions.ErrorEventArgs e)
-        {
-            myCore.Log?.Info($"{e.User}{e.EventError}");            
-            //AddMessageToDT(e.User, e.EventError, dataGridViewRSWareUserConsole);
-        }
-
-        private static void WebApiSharedClass_OnCommandReadEvent(object sender, CommandRequestedEventArgs e)
-        {
-            myCore.Log?.Info($"{e.User}{e.Command.CommandString}");            
-        }
-
         #region(* GUI callback *)
 
         private void tabControlMain_SelectedPageChanged(object sender, LidorSystems.IntegralUI.ObjectEventArgs e)
         {
-           
+
             //I will not save the state if is hide
             if (tabControlMain.SelectedPage.Key == "Hide")
             {
@@ -297,12 +303,12 @@ namespace GUI
         private void tabPageHide_Paint(object sender, PaintEventArgs e)
         {
 
-        }     
+        }
         #endregion
 
-       
 
-     
+
+
 
         private void memoryDumpBtn_Click(object sender, EventArgs e)
         {
@@ -370,13 +376,431 @@ namespace GUI
 
             if (_clientForm == null || _clientForm.IsDisposed)
             {
-                OpcClientService clientService = (OpcClientService)myCore.FindPerType(typeof(OpcClientService));
+                OpcClientService clientService = (OpcClientService)myCore.FindPerType(typeof(OpcClientService))[0];
                 _clientForm = new ClientTest(clientService);
             }
 
             _clientForm.Show();
             _clientForm.Activate();
 
+        }
+
+        private async void buttonM2SmallClampOpening_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2SmallClampOpening";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM2SmallClampClosing_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2SmallClampClosing";
+
+            var readResult = await ccService.Send(keyToSend, true);
+
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void lbButtonM2JogUp_Click(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM2JogDown";
+            var readResult1 = await ccService.Send(keyToSend, false);
+            if (readResult1.OpcResult)
+            {
+            }
+
+            keyToSend = "pcM2JogUp";
+            var readResult2 = await ccService.Send(keyToSend, true);
+            if (readResult2.OpcResult)
+            {
+            }
+        }
+
+        private async void lbButtonM2JogDown_Click(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM2JogUp";
+            var readResult1 = await ccService.Send(keyToSend, false);
+            if (readResult1.OpcResult)
+            {
+            }
+
+            keyToSend = "pcM2JogDown";
+            var readResult2 = await ccService.Send(keyToSend, true);
+            if (readResult2.OpcResult)
+            {
+            }
+        }
+
+        private async void numericUpDownM2JogSpeed_ValueChanged(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2JogSpeed";
+
+            var readResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM2JogSpeed.Value.ToString()));
+
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void buttonM2JogReset_Click(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM2JogReset";
+            var readResult = await ccService.Send(keyToSend, true);
+            //todo: chi lo mette a false
+        }
+
+        private async void buttonM2StartQuote_Click(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            //quote 
+            keyToSend = "pcM2ManualQuote";
+            var readResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM2ManualQuote.Value.ToString()));
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+
+            keyToSend = "pcM2ManualSpeed";
+            var readResult1 = await ccService.Send(keyToSend, short.Parse(numericUpDownM2ManualSpeed.Value.ToString()));
+
+            keyToSend = "pcM2QuoteStart";
+            var readResult2 = await ccService.Send(keyToSend, true);
+            //todo: chi lo mette a false
+        }
+
+        private async void checkBoxM2Inclusion_CheckedChanged(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM2Inclusion";
+            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void checkBoxM1Inclusion_CheckedChanged(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM1Inclusion";
+            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void checkBoxM3Inclusion_CheckedChanged(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM3Inclusion";
+            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void checkBoxM4Inclusion_CheckedChanged(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM4Inclusion";
+            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void checkBoxM5Inclusion_CheckedChanged(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM5Inclusion";
+            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void checkBoxM6Inclusion_CheckedChanged(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM6Inclusion";
+            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void numericUpDownM2ManualSpeed_ValueChanged(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2ManualSpeed";
+
+            var readResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM2ManualSpeed.Value.ToString()));
+
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void numericUpDownM2ManualQuote_ValueChanged(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2ManualQuote";
+
+            var readResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM2ManualQuote.Value.ToString()));
+
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void buttonM2ResetServo_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2ResetServoAlarm";
+
+            var readResult = await ccService.Send(keyToSend, true);
+
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void buttonM2Home_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2Homing";
+
+            var readResult = await ccService.Send(keyToSend, true);
+
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void buttonM2ResetHome_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2ResetHoming";
+
+            var readResult = await ccService.Send(keyToSend, true);
+
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private void dataGridViewM2Points_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = 0;
+            short[] quote = new short[5];
+            short[] speed = new short[5];
+            try
+            {
+                //get selected row index
+                int currentRow = int.Parse(e.RowIndex.ToString());
+
+                short idPoint = (short)(currentRow + 1);
+                for (i = 0; i <= dataGridViewM2Points.RowCount - 1; i++)
+                {
+                    quote[i + 1] = short.Parse(dataGridViewM2Points[1, i].Value.ToString());
+                    speed[i + 1] = short.Parse(dataGridViewM2Points[2, i].Value.ToString());
+                }
+
+                if (idPoint < 0 || idPoint > 4)
+                {
+                    //todo message
+                    return;
+                }
+
+                // edit button
+                if ((e.ColumnIndex == 3) & currentRow >= 0)
+                {
+                    OPCUAM1TeachPckSend(idPoint, quote, speed, new bool[] { false, true, false, false, false });
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private async void buttonM2BigClampOpening_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2BigClampOpening";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM2BigGripperClosing_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2BigClampOpening";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM2CenteringClampsOpening_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2CentrClampOpening";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM2CenteringClampsClosing_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2CentrClampClosing";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM2ContrastOpening_Click(object sender, EventArgs e)
+        {            
+            string keyToSend = "pcM2ContrOpening";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM2ContrastClosing_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2ContrClosing";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM2PrintCycle_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2Print";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void lbButtonM2StartStopWorkingBelt_Click(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM2StartStopWorkingBelt";
+            if (lbButtonM2StartStopWorkingBelt.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void lbButtonM2StartStopExitBelt_Click(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM2StartStopExitBelt";
+            if (lbButtonM2StartStopWorkingBelt.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
         }
     }
 }

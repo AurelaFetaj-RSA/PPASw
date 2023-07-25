@@ -62,6 +62,8 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle17 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle18 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle19 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle7 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle20 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle21 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -181,6 +183,7 @@
             this.lbLed1001 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.trueTransparentPanelAuto = new LidorSystems.IntegralUI.Controls.TrueTransparentPanel();
             this.transparentPanelLine = new LidorSystems.IntegralUI.Controls.TransparentPanel();
+            this.clientTestOpc = new System.Windows.Forms.Button();
             this.buttonResetCounter = new System.Windows.Forms.Button();
             this.labelPieceCounter = new LidorSystems.IntegralUI.Controls.Label();
             this.lbLedLineReady = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -256,11 +259,17 @@
             this.tabPageConsole = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlM = new LidorSystems.IntegralUI.Containers.TabControl();
             this.tabPageM2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.labelM2TeachAxisQuoteValue = new System.Windows.Forms.Label();
+            this.labelM2TeachAxisQuoteName = new System.Windows.Forms.Label();
+            this.lbButtonM2StartStopExitBelt = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.lbButtonM2StartStopWorkingBelt = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.buttonM2JogReset = new System.Windows.Forms.Button();
+            this.numericUpDownM2JogSpeed = new System.Windows.Forms.NumericUpDown();
             this.dataGridViewM2Points = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ColumnM2PointID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMeQuote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnM2Speed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnM2Register = new System.Windows.Forms.DataGridViewButtonColumn();
             this.lbLed3 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed1 = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -321,6 +330,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabControlM)).BeginInit();
             this.tabControlM.SuspendLayout();
             this.tabPageM2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2JogSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2Points)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualQuote)).BeginInit();
@@ -1970,6 +1980,7 @@
             // transparentPanelLine.ContentPanel
             // 
             this.transparentPanelLine.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.transparentPanelLine.ContentPanel.Controls.Add(this.clientTestOpc);
             this.transparentPanelLine.ContentPanel.Controls.Add(this.buttonResetCounter);
             this.transparentPanelLine.ContentPanel.Controls.Add(this.labelPieceCounter);
             this.transparentPanelLine.ContentPanel.Controls.Add(this.lbLedLineReady);
@@ -1985,6 +1996,13 @@
             this.transparentPanelLine.FormatStyle = controlFormatStyle1;
             resources.ApplyResources(this.transparentPanelLine, "transparentPanelLine");
             this.transparentPanelLine.Name = "transparentPanelLine";
+            // 
+            // clientTestOpc
+            // 
+            resources.ApplyResources(this.clientTestOpc, "clientTestOpc");
+            this.clientTestOpc.Name = "clientTestOpc";
+            this.clientTestOpc.UseVisualStyleBackColor = true;
+            this.clientTestOpc.Click += new System.EventHandler(this.Client_Click);
             // 
             // buttonResetCounter
             // 
@@ -2197,6 +2215,7 @@
             this.checkBoxM6Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.checkBoxM6Inclusion.Name = "checkBoxM6Inclusion";
             this.checkBoxM6Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM6Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM6Inclusion_CheckedChanged);
             // 
             // comboBoxM6PrgName
             // 
@@ -2299,6 +2318,7 @@
             this.checkBoxM5Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.checkBoxM5Inclusion.Name = "checkBoxM5Inclusion";
             this.checkBoxM5Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM5Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM5Inclusion_CheckedChanged);
             // 
             // comboBoxM5PrgName
             // 
@@ -2401,6 +2421,7 @@
             this.checkBoxM4Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.checkBoxM4Inclusion.Name = "checkBoxM4Inclusion";
             this.checkBoxM4Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM4Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM4Inclusion_CheckedChanged);
             // 
             // comboBoxM4PrgName
             // 
@@ -2503,6 +2524,7 @@
             this.checkBoxM3Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.checkBoxM3Inclusion.Name = "checkBoxM3Inclusion";
             this.checkBoxM3Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM3Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM3Inclusion_CheckedChanged);
             // 
             // comboBoxM3PrgName
             // 
@@ -2605,6 +2627,7 @@
             this.checkBoxM2Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.checkBoxM2Inclusion.Name = "checkBoxM2Inclusion";
             this.checkBoxM2Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM2Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM2Inclusion_CheckedChanged);
             // 
             // comboBoxM2PrgName
             // 
@@ -2707,6 +2730,7 @@
             this.checkBoxM1Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.checkBoxM1Inclusion.Name = "checkBoxM1Inclusion";
             this.checkBoxM1Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM1Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM1Inclusion_CheckedChanged);
             // 
             // comboBoxM1PrgName
             // 
@@ -3003,6 +3027,12 @@
             // 
             // tabPageM2
             // 
+            this.tabPageM2.Controls.Add(this.labelM2TeachAxisQuoteValue);
+            this.tabPageM2.Controls.Add(this.labelM2TeachAxisQuoteName);
+            this.tabPageM2.Controls.Add(this.lbButtonM2StartStopExitBelt);
+            this.tabPageM2.Controls.Add(this.lbButtonM2StartStopWorkingBelt);
+            this.tabPageM2.Controls.Add(this.buttonM2JogReset);
+            this.tabPageM2.Controls.Add(this.numericUpDownM2JogSpeed);
             this.tabPageM2.Controls.Add(this.dataGridViewM2Points);
             this.tabPageM2.Controls.Add(this.lbLed3);
             this.tabPageM2.Controls.Add(this.lbLed2);
@@ -3030,37 +3060,117 @@
             this.tabPageM2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageM2.TextBounds")));
             this.tabPageM2.TextSize = new System.Drawing.SizeF(59.70865F, 13.82519F);
             // 
+            // labelM2TeachAxisQuoteValue
+            // 
+            resources.ApplyResources(this.labelM2TeachAxisQuoteValue, "labelM2TeachAxisQuoteValue");
+            this.labelM2TeachAxisQuoteValue.Name = "labelM2TeachAxisQuoteValue";
+            // 
+            // labelM2TeachAxisQuoteName
+            // 
+            resources.ApplyResources(this.labelM2TeachAxisQuoteName, "labelM2TeachAxisQuoteName");
+            this.labelM2TeachAxisQuoteName.Name = "labelM2TeachAxisQuoteName";
+            // 
+            // lbButtonM2StartStopExitBelt
+            // 
+            this.lbButtonM2StartStopExitBelt.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM2StartStopExitBelt.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM2StartStopExitBelt, "lbButtonM2StartStopExitBelt");
+            this.lbButtonM2StartStopExitBelt.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM2StartStopExitBelt.Label = "start/stop exit belt";
+            this.lbButtonM2StartStopExitBelt.Name = "lbButtonM2StartStopExitBelt";
+            this.lbButtonM2StartStopExitBelt.Renderer = null;
+            this.lbButtonM2StartStopExitBelt.RepeatInterval = 100;
+            this.lbButtonM2StartStopExitBelt.RepeatState = false;
+            this.lbButtonM2StartStopExitBelt.StartRepeatInterval = 500;
+            this.lbButtonM2StartStopExitBelt.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM2StartStopExitBelt.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2StartStopExitBelt.Click += new System.EventHandler(this.lbButtonM2StartStopExitBelt_Click);
+            // 
+            // lbButtonM2StartStopWorkingBelt
+            // 
+            this.lbButtonM2StartStopWorkingBelt.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM2StartStopWorkingBelt.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM2StartStopWorkingBelt, "lbButtonM2StartStopWorkingBelt");
+            this.lbButtonM2StartStopWorkingBelt.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM2StartStopWorkingBelt.Label = "start/stop working belt";
+            this.lbButtonM2StartStopWorkingBelt.Name = "lbButtonM2StartStopWorkingBelt";
+            this.lbButtonM2StartStopWorkingBelt.Renderer = null;
+            this.lbButtonM2StartStopWorkingBelt.RepeatInterval = 100;
+            this.lbButtonM2StartStopWorkingBelt.RepeatState = false;
+            this.lbButtonM2StartStopWorkingBelt.StartRepeatInterval = 500;
+            this.lbButtonM2StartStopWorkingBelt.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM2StartStopWorkingBelt.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2StartStopWorkingBelt.Click += new System.EventHandler(this.lbButtonM2StartStopWorkingBelt_Click);
+            // 
+            // buttonM2JogReset
+            // 
+            resources.ApplyResources(this.buttonM2JogReset, "buttonM2JogReset");
+            this.buttonM2JogReset.Name = "buttonM2JogReset";
+            this.buttonM2JogReset.UseVisualStyleBackColor = true;
+            this.buttonM2JogReset.Click += new System.EventHandler(this.buttonM2JogReset_Click);
+            // 
+            // numericUpDownM2JogSpeed
+            // 
+            resources.ApplyResources(this.numericUpDownM2JogSpeed, "numericUpDownM2JogSpeed");
+            this.numericUpDownM2JogSpeed.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownM2JogSpeed.Name = "numericUpDownM2JogSpeed";
+            this.numericUpDownM2JogSpeed.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownM2JogSpeed.ValueChanged += new System.EventHandler(this.numericUpDownM2JogSpeed_ValueChanged);
+            // 
             // dataGridViewM2Points
             // 
+            this.dataGridViewM2Points.AllowUserToAddRows = false;
             this.dataGridViewM2Points.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewM2Points.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
+            this.ColumnM2PointID,
+            this.ColumnMeQuote,
+            this.ColumnM2Speed,
+            this.ColumnM2Register});
+            this.dataGridViewM2Points.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             resources.ApplyResources(this.dataGridViewM2Points, "dataGridViewM2Points");
             this.dataGridViewM2Points.Name = "dataGridViewM2Points";
             this.dataGridViewM2Points.RowHeadersVisible = false;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewM2Points.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewM2Points.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewM2Points.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM2Points_CellContentClick);
             // 
-            // Column1
+            // ColumnM2PointID
             // 
-            resources.ApplyResources(this.Column1, "Column1");
-            this.Column1.Name = "Column1";
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColumnM2PointID.DefaultCellStyle = dataGridViewCellStyle1;
+            this.ColumnM2PointID.Frozen = true;
+            resources.ApplyResources(this.ColumnM2PointID, "ColumnM2PointID");
+            this.ColumnM2PointID.Name = "ColumnM2PointID";
+            this.ColumnM2PointID.ReadOnly = true;
+            this.ColumnM2PointID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnM2PointID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // Column2
+            // ColumnMeQuote
             // 
-            resources.ApplyResources(this.Column2, "Column2");
-            this.Column2.Name = "Column2";
+            this.ColumnMeQuote.Frozen = true;
+            resources.ApplyResources(this.ColumnMeQuote, "ColumnMeQuote");
+            this.ColumnMeQuote.Name = "ColumnMeQuote";
             // 
-            // Column3
+            // ColumnM2Speed
             // 
-            resources.ApplyResources(this.Column3, "Column3");
-            this.Column3.Name = "Column3";
+            this.ColumnM2Speed.Frozen = true;
+            resources.ApplyResources(this.ColumnM2Speed, "ColumnM2Speed");
+            this.ColumnM2Speed.Name = "ColumnM2Speed";
             // 
-            // Column4
+            // ColumnM2Register
             // 
-            resources.ApplyResources(this.Column4, "Column4");
-            this.Column4.Name = "Column4";
+            resources.ApplyResources(this.ColumnM2Register, "ColumnM2Register");
+            this.ColumnM2Register.Name = "ColumnM2Register";
             // 
             // lbLed3
             // 
@@ -3121,6 +3231,7 @@
             0,
             0,
             0});
+            this.numericUpDownM2ManualSpeed.ValueChanged += new System.EventHandler(this.numericUpDownM2ManualSpeed_ValueChanged);
             // 
             // numericUpDownM2ManualQuote
             // 
@@ -3141,18 +3252,21 @@
             0,
             0,
             0});
+            this.numericUpDownM2ManualQuote.ValueChanged += new System.EventHandler(this.numericUpDownM2ManualQuote_ValueChanged);
             // 
             // buttonM2PrintCycle
             // 
             resources.ApplyResources(this.buttonM2PrintCycle, "buttonM2PrintCycle");
             this.buttonM2PrintCycle.Name = "buttonM2PrintCycle";
             this.buttonM2PrintCycle.UseVisualStyleBackColor = true;
+            this.buttonM2PrintCycle.Click += new System.EventHandler(this.buttonM2PrintCycle_Click);
             // 
             // buttonM2StartQuote
             // 
             resources.ApplyResources(this.buttonM2StartQuote, "buttonM2StartQuote");
             this.buttonM2StartQuote.Name = "buttonM2StartQuote";
             this.buttonM2StartQuote.UseVisualStyleBackColor = true;
+            this.buttonM2StartQuote.Click += new System.EventHandler(this.buttonM2StartQuote_Click);
             // 
             // lbButtonM2JogDown
             // 
@@ -3168,6 +3282,7 @@
             this.lbButtonM2JogDown.StartRepeatInterval = 500;
             this.lbButtonM2JogDown.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
             this.lbButtonM2JogDown.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2JogDown.Click += new System.EventHandler(this.lbButtonM2JogDown_Click);
             // 
             // lbButtonM2JogUp
             // 
@@ -3183,72 +3298,84 @@
             this.lbButtonM2JogUp.StartRepeatInterval = 500;
             this.lbButtonM2JogUp.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
             this.lbButtonM2JogUp.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2JogUp.Click += new System.EventHandler(this.lbButtonM2JogUp_Click);
             // 
             // buttonM2ResetServo
             // 
             resources.ApplyResources(this.buttonM2ResetServo, "buttonM2ResetServo");
             this.buttonM2ResetServo.Name = "buttonM2ResetServo";
             this.buttonM2ResetServo.UseVisualStyleBackColor = true;
+            this.buttonM2ResetServo.Click += new System.EventHandler(this.buttonM2ResetServo_Click);
             // 
             // buttonM2ResetHome
             // 
             resources.ApplyResources(this.buttonM2ResetHome, "buttonM2ResetHome");
             this.buttonM2ResetHome.Name = "buttonM2ResetHome";
             this.buttonM2ResetHome.UseVisualStyleBackColor = true;
+            this.buttonM2ResetHome.Click += new System.EventHandler(this.buttonM2ResetHome_Click);
             // 
             // buttonM2Home
             // 
             resources.ApplyResources(this.buttonM2Home, "buttonM2Home");
             this.buttonM2Home.Name = "buttonM2Home";
             this.buttonM2Home.UseVisualStyleBackColor = true;
+            this.buttonM2Home.Click += new System.EventHandler(this.buttonM2Home_Click);
             // 
             // buttonM2ContrastClosing
             // 
             resources.ApplyResources(this.buttonM2ContrastClosing, "buttonM2ContrastClosing");
             this.buttonM2ContrastClosing.Name = "buttonM2ContrastClosing";
             this.buttonM2ContrastClosing.UseVisualStyleBackColor = true;
+            this.buttonM2ContrastClosing.Click += new System.EventHandler(this.buttonM2ContrastClosing_Click);
             // 
             // buttonM2ContrastOpening
             // 
             resources.ApplyResources(this.buttonM2ContrastOpening, "buttonM2ContrastOpening");
             this.buttonM2ContrastOpening.Name = "buttonM2ContrastOpening";
             this.buttonM2ContrastOpening.UseVisualStyleBackColor = true;
+            this.buttonM2ContrastOpening.Click += new System.EventHandler(this.buttonM2ContrastOpening_Click);
             // 
             // buttonM2CenteringClampsClosing
             // 
             resources.ApplyResources(this.buttonM2CenteringClampsClosing, "buttonM2CenteringClampsClosing");
             this.buttonM2CenteringClampsClosing.Name = "buttonM2CenteringClampsClosing";
             this.buttonM2CenteringClampsClosing.UseVisualStyleBackColor = true;
+            this.buttonM2CenteringClampsClosing.Click += new System.EventHandler(this.buttonM2CenteringClampsClosing_Click);
             // 
             // buttonM2CenteringClampsOpening
             // 
             resources.ApplyResources(this.buttonM2CenteringClampsOpening, "buttonM2CenteringClampsOpening");
             this.buttonM2CenteringClampsOpening.Name = "buttonM2CenteringClampsOpening";
             this.buttonM2CenteringClampsOpening.UseVisualStyleBackColor = true;
+            this.buttonM2CenteringClampsOpening.Click += new System.EventHandler(this.buttonM2CenteringClampsOpening_Click);
             // 
             // buttonM2BigGripperClosing
             // 
             resources.ApplyResources(this.buttonM2BigGripperClosing, "buttonM2BigGripperClosing");
             this.buttonM2BigGripperClosing.Name = "buttonM2BigGripperClosing";
             this.buttonM2BigGripperClosing.UseVisualStyleBackColor = true;
+            this.buttonM2BigGripperClosing.Click += new System.EventHandler(this.buttonM2BigGripperClosing_Click);
             // 
             // buttonM2BigClampOpening
             // 
             resources.ApplyResources(this.buttonM2BigClampOpening, "buttonM2BigClampOpening");
             this.buttonM2BigClampOpening.Name = "buttonM2BigClampOpening";
             this.buttonM2BigClampOpening.UseVisualStyleBackColor = true;
+            this.buttonM2BigClampOpening.Click += new System.EventHandler(this.buttonM2BigClampOpening_Click);
             // 
             // buttonM2SmallClampClosing
             // 
             resources.ApplyResources(this.buttonM2SmallClampClosing, "buttonM2SmallClampClosing");
             this.buttonM2SmallClampClosing.Name = "buttonM2SmallClampClosing";
             this.buttonM2SmallClampClosing.UseVisualStyleBackColor = true;
+            this.buttonM2SmallClampClosing.Click += new System.EventHandler(this.buttonM2SmallClampClosing_Click);
             // 
             // buttonM2SmallClampOpening
             // 
             resources.ApplyResources(this.buttonM2SmallClampOpening, "buttonM2SmallClampOpening");
             this.buttonM2SmallClampOpening.Name = "buttonM2SmallClampOpening";
             this.buttonM2SmallClampOpening.UseVisualStyleBackColor = true;
+            this.buttonM2SmallClampOpening.Click += new System.EventHandler(this.buttonM2SmallClampOpening_Click);
             // 
             // tabPageRecipe
             // 
@@ -3343,13 +3470,13 @@
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
             this.tabControlMain.Controls.Add(this.tabPageConsole);
+            this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Controls.Add(this.tabPageHide);
             this.tabControlMain.Controls.Add(this.tabPageHelp);
             this.tabControlMain.Controls.Add(this.tabPageSettings);
             this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
             this.tabControlMain.Controls.Add(this.tabPage4);
             this.tabControlMain.Controls.Add(this.tabPageRecipe);
-            this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlMain, "tabControlMain");
             controlFormatStyle9.BorderCornerRadius = 5;
@@ -3465,6 +3592,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabControlM)).EndInit();
             this.tabControlM.ResumeLayout(false);
             this.tabPageM2.ResumeLayout(false);
+            this.tabPageM2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2JogSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2Points)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualQuote)).EndInit();
@@ -3679,10 +3808,17 @@
         private System.Windows.Forms.NumericUpDown numericUpDownM2ManualSpeed;
         private System.Windows.Forms.NumericUpDown numericUpDownM2ManualQuote;
         private System.Windows.Forms.DataGridView dataGridViewM2Points;
-        private System.Windows.Forms.DataGridViewImageColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewButtonColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2PointID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMeQuote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2Speed;
+        private System.Windows.Forms.DataGridViewButtonColumn ColumnM2Register;
+        private System.Windows.Forms.NumericUpDown numericUpDownM2JogSpeed;
+        private System.Windows.Forms.Button buttonM2JogReset;
+        private System.Windows.Forms.Button clientTestOpc;
+        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM2StartStopExitBelt;
+        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM2StartStopWorkingBelt;
+        private System.Windows.Forms.Label labelM2TeachAxisQuoteValue;
+        private System.Windows.Forms.Label labelM2TeachAxisQuoteName;
     }
 }
 

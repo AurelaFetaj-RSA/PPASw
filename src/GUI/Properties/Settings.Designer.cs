@@ -58,5 +58,29 @@ namespace GUI.Properties {
                 this["SplashScreenFilepath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("opc.tcp://172.31.20.101:48011")]
+        public string OpcClient_1_URI {
+            get {
+                return ((string)(this["OpcClient_1_URI"]));
+            }
+            set {
+                this["OpcClient_1_URI"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("opc.tcp://localhost:6000")]
+        public string OpcClient_2_URI {
+            get {
+                return ((string)(this["OpcClient_2_URI"]));
+            }
+            set {
+                this["OpcClient_2_URI"] = value;
+            }
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Opc.UaFx;
+using Org.BouncyCastle.Bcpg.OpenPgp;
 using RSACommon;
 using RSACommon.Service;
 using System;
@@ -120,7 +121,7 @@ namespace GUI
 
         private async void Connect()
         {
-            if(_clientUri == null)
+            if (_clientUri == null)
             {
                 try
                 {
@@ -128,7 +129,7 @@ namespace GUI
                     AddressLabel.Text = _clientUri.AbsoluteUri;
                     await Task.Run(() => ThreadSafeWriteMessage($"Automatically generated URI: {_clientUri.AbsoluteUri}"));
                 }
-                catch(System.UriFormatException ex)
+                catch (System.UriFormatException ex)
                 {
                     await Task.Run(() => ThreadSafeWriteMessage($"Error generatig URI H:{hostTxtbox.Text}, S:{schemeTxtbox.Text}, P:{Int32.Parse(portTxtbox.Text)}"));
                     return;
@@ -161,7 +162,7 @@ namespace GUI
 
             List<string> ret = await _client.GetServerFolder();
 
-            foreach(string item in ret)
+            foreach (string item in ret)
             {
                 await Task.Run(() => ThreadSafeWriteMessage(item));
             }
@@ -171,11 +172,11 @@ namespace GUI
 
         private async void jobAltoBtn_Click(object sender, EventArgs e)
         {
-            string keyToSend = "pc_jog_basso";
+            string keyToSend = "pcM2JogDown";
 
             var readResult = await _client.Send(keyToSend, jogAltoCheckbox.Checked);
 
-            if(readResult.OpcResult)
+            if (readResult.OpcResult)
             {
                 await Task.Run(() => ThreadSafeWriteMessage("Value set"));
             }
@@ -187,13 +188,13 @@ namespace GUI
 
         private async void ReadJogAltoBtn_Click(object sender, EventArgs e)
         {
-            string keyToSend = "pc_jog_basso";
+            string keyToSend = "pcM2JogDown";
 
             var readResult = await _client.Read(keyToSend);
 
             if (readResult.OpcResult)
             {
-                await Task.Run(() => ThreadSafeWriteMessage($"{keyToSend}: { readResult.Value}"));
+                await Task.Run(() => ThreadSafeWriteMessage($"{keyToSend}: {readResult.Value}"));
             }
             else
             {
@@ -274,6 +275,104 @@ namespace GUI
             {
                 await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
             }
+        }
+
+        private async void readMultiploBtn_Click(object sender, EventArgs e)
+        {
+
+            List<string> keys = new List<string>()
+            {
+                "pc_percentuale_velocità_in_manuale",
+                "pc_quota_finale_asse_in_manuale",
+                "pcM2Status",
+                "pc_quota_longitudinale"
+            };
+
+            var readResult = await _client.Read(keys);
+
+            foreach (var result in readResult)
+            {
+                if (result.Value.OpcResult)
+                {
+                    Type singleValueType = result.Value.Value.GetType();
+
+                    if (singleValueType.IsArray)
+                    {
+                        short[] arrayShort = (short[])result.Value.Value;
+
+                        foreach (short value in arrayShort)
+                        {
+                            await Task.Run(() => ThreadSafeWriteMessage($"{result.Key}: {value}"));
+                        }
+                    }
+                    else
+                        await Task.Run(() => ThreadSafeWriteMessage($"{result.Key}: {result.Value.Value}"));
+                }
+                else
+                {
+                    await Task.Run(() => ThreadSafeWriteMessage($"{result.Key}: {result.Value.OpcResultDescription}"));
+                }
+            }
+
+        }
+        
+        private List<object> values = new List<object>()
+        {
+            1,
+            2,
+            3,
+            new short[] { 0, 6, 7, 8, 9 }
+        };
+
+
+        private async void writeMultiploBtn_Click(object sender, EventArgs e)
+        {
+            List<string> keys = new List<string>()
+            {
+                "pc_percentuale_velocità_in_manuale",
+                "pc_quota_finale_asse_in_manuale",
+                "pcM2Status",
+                "pc_quota_longitudinale"
+            };
+
+            await _client.Send(keys, values);
+
+            /*
+            foreach (var result in readResult)
+            {
+                if (result.Value.OpcResult)
+                {
+
+                Type singleValueType = result.Value.Value.GetType();
+
+                if (singleValueType.IsArray)
+                {
+                    short[] arrayShort = (short[])result.Value.Value;
+
+                    foreach (short value in arrayShort)
+                    {
+                    await Task.Run(() => ThreadSafeWriteMessage($"{result.Key}: {value}"));
+                    }
+                }
+                else
+                    await Task.Run(() => ThreadSafeWriteMessage($"{result.Key}: {result.Value.Value}"));
+
+                }
+                else
+                {
+                    await Task.Run(() => ThreadSafeWriteMessage($"{result.Key}: {result.Value.OpcResultDescription}"));
+                }
+            }
+            */
+        }
+
+        private async void cleanLogBtn_Click(object sender, EventArgs e)
+        {
+            await Task.Run(() =>
+            {
+                ThreadSafeResetTextbox();
+                LogMemoryString.Clear();
+            });
         }
     }
 }
