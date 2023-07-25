@@ -410,36 +410,12 @@ namespace GUI
 
         private async void lbButtonM2JogUp_Click(object sender, EventArgs e)
         {
-            string keyToSend = null;
 
-            keyToSend = "pcM2JogDown";
-            var readResult1 = await ccService.Send(keyToSend, false);
-            if (readResult1.OpcResult)
-            {
-            }
-
-            keyToSend = "pcM2JogUp";
-            var readResult2 = await ccService.Send(keyToSend, true);
-            if (readResult2.OpcResult)
-            {
-            }
         }
 
         private async void lbButtonM2JogDown_Click(object sender, EventArgs e)
         {
-            string keyToSend = null;
 
-            keyToSend = "pcM2JogUp";
-            var readResult1 = await ccService.Send(keyToSend, false);
-            if (readResult1.OpcResult)
-            {
-            }
-
-            keyToSend = "pcM2JogDown";
-            var readResult2 = await ccService.Send(keyToSend, true);
-            if (readResult2.OpcResult)
-            {
-            }
         }
 
         private async void numericUpDownM2JogSpeed_ValueChanged(object sender, EventArgs e)
@@ -709,7 +685,7 @@ namespace GUI
 
         private async void buttonM2BigGripperClosing_Click(object sender, EventArgs e)
         {
-            string keyToSend = "pcM2BigClampOpening";
+            string keyToSend = "pcM2BigClampClosing";
 
             var readResult = await ccService.Send(keyToSend, true);
             if (readResult.OpcResult)
@@ -800,6 +776,80 @@ namespace GUI
             else
             {
                 var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private void numericUpDownM2JogSpeed_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void lbButtonM2JogUp_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = null;
+
+            if (e.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                keyToSend = "pcM2JogDown";
+                var readResult1 = await ccService.Send(keyToSend, false);
+                if (readResult1.OpcResult)
+                {
+                }
+
+                keyToSend = "pcM2JogUp";
+                var readResult2 = await ccService.Send(keyToSend, true);
+                if (readResult2.OpcResult)
+                {
+                }
+            }
+            else
+            {
+                keyToSend = "pcM2JogDown";
+                var readResult1 = await ccService.Send(keyToSend, false);
+                if (readResult1.OpcResult)
+                {
+                }
+
+                keyToSend = "pcM2JogUp";
+                var readResult2 = await ccService.Send(keyToSend, false);
+                if (readResult2.OpcResult)
+                {
+                }
+            }
+
+        }
+
+        private async void lbButtonM2JogDown_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = null;
+
+            if (e.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                keyToSend = "pcM2JogUp";
+                var readResult1 = await ccService.Send(keyToSend, false);
+                if (readResult1.OpcResult)
+                {
+                }
+
+                keyToSend = "pcM2JogDown";
+                var readResult2 = await ccService.Send(keyToSend, true);
+                if (readResult2.OpcResult)
+                {
+                }
+            }
+            else
+            {
+                keyToSend = "pcM2JogUp";
+                var readResult1 = await ccService.Send(keyToSend, false);
+                if (readResult1.OpcResult)
+                {
+                }
+
+                keyToSend = "pcM2JogDown";
+                var readResult2 = await ccService.Send(keyToSend, false);
+                if (readResult2.OpcResult)
+                {
+                }
             }
         }
     }

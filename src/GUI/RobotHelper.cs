@@ -672,12 +672,16 @@ namespace GUI
             {
                 lbLedM2HomingDone.LedColor = Color.Red;
                 lbLedM2HomingDone.Label = "homing not done";
+                lbLedM2T2HomingDone.LedColor = Color.Red;
+                lbLedM2T2HomingDone.Label = "homing not done";
             }
 
             else
             {
                 lbLedM2HomingDone.LedColor = Color.FromArgb(195, 222, 155);
                 lbLedM2HomingDone.Label = "homing done";
+                lbLedM2T2HomingDone.LedColor = Color.FromArgb(195, 222, 155);
+                lbLedM2T2HomingDone.Label = "homing done";
             }
         }
 

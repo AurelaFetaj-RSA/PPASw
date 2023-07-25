@@ -18,7 +18,7 @@ namespace GUI
             #region(* M2 OPCUA variables *)
             ClientDataConfig.Add(new OpcObjectData("pcM2JogDown", $"ns=2;s=Tags.Pad_print_interna/pc_jog_basso", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2JogUp", $"ns=2;s=Tags.Pad_print_interna/pc_jog_alto", typeof(bool)));
-            ClientDataConfig.Add(new OpcObjectData("pcM2JogSpeed", $"ns=2;s=Tags.Pad_print_interna/pc_velocit__jog", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pcM2JogSpeed", $"ns=2;s=Tags.Pad_print_interna/pc_velocit__a_jog", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM2JogReset", $"ns=2;s=Tags.Pad_print_interna/pc_reset_jog", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2QuoteStart", $"ns=2;s=Tags.Pad_print_interna/pc_start_a_quota", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2ResetServoAlarm", $"ns=2;s=Tags.Pad_print_interna/pc_reset_allarme_servo", typeof(bool)));
@@ -31,6 +31,11 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM2TeachPointReg", $"ns=2;s=Tags.Pad_print_interna/pc_vai_a_punto_in_teaching", typeof(int[])));
             ClientDataConfig.Add(new OpcObjectData("pcM2SmallClampOpening", $"ns=2;s=Tags.Pad_print_interna/pc_apertura_pinza_bordo_stivale", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2SmallClampClosing", $"ns=2;s=Tags.Pad_print_interna/pc_chiusura_pinza_bordo_stivale", typeof(bool)));
+
+            ClientDataConfig.Add(new OpcObjectData("pcM2BigClampOpening", $"ns=2;s=Tags.Pad_print_interna/pc_apertura_pinza_grande", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM2BigClampClosing", $"ns=2;s=Tags.Pad_print_interna/pc_chiusura_pinza_grande", typeof(bool)));
+
+
 
             ClientDataConfig.Add(new OpcObjectData("pcM2CentrClampOpening", $"ns=2;s=Tags.Pad_print_interna/pc_apertura_pinze_centraggio", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2CentrClampClosing", $"ns=2;s=Tags.Pad_print_interna/pc_chiusura_pinze_centraggio", typeof(bool)));
