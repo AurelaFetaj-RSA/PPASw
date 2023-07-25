@@ -469,8 +469,23 @@ namespace GUI
         {            
             string keyToSend = null;
 
+            //quote 
+            keyToSend = "pcM2ManualQuote";
+            var readResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM2ManualQuote.Value.ToString()));
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+
+            keyToSend = "pcM2ManualSpeed";
+            var readResult1 = await ccService.Send(keyToSend, short.Parse(numericUpDownM2ManualSpeed.Value.ToString()));
+
             keyToSend = "pcM2QuoteStart";
-            var readResult = await ccService.Send(keyToSend, true);
+            var readResult2 = await ccService.Send(keyToSend, true);
             //todo: chi lo mette a false
         }
 
@@ -562,6 +577,137 @@ namespace GUI
             {
                 var readResult = await ccService.Send(keyToSend, false);
             }
+        }
+
+        private async void numericUpDownM2ManualSpeed_ValueChanged(object sender, EventArgs e)
+        {            
+            string keyToSend = "pcM2ManualSpeed";
+
+            var readResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM2ManualSpeed.Value.ToString()));
+
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void numericUpDownM2ManualQuote_ValueChanged(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2ManualQuote";
+
+            var readResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM2ManualQuote.Value.ToString()));
+
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void buttonM2ResetServo_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2ResetServoAlarm";
+
+            var readResult = await ccService.Send(keyToSend, true);
+
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void buttonM2Home_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2Homing";
+
+            var readResult = await ccService.Send(keyToSend, true);
+
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void buttonM2ResetHome_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2ResetHoming";
+
+            var readResult = await ccService.Send(keyToSend, true);
+
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private void dataGridViewM2Points_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //get selected row index
+            int currentRow = int.Parse(e.RowIndex.ToString());
+            int idPoint = currentRow;
+            short idQuote = (short)(dataGridViewM2Points[1, currentRow].Value);
+            short idSpeed = (short)(dataGridViewM2Points[2, currentRow].Value);
+
+            if (idPoint < 1 || idPoint > 4)
+            {
+                //todo message
+                return;
+            }
+
+            //try
+            //{
+            //    //get recipe name
+            //    recipeName = dataGridViewDevice1[0, currentRow].Value.ToString();
+            //}
+            //catch (Exception Ex)
+            //{
+            //    Message msg = new Message(Severity.Error, Ex.Message, DateTime.Now);
+            //    AddMessage(msg, glacialListDebugger);
+            //    return;
+            //}
+            //// edit button
+            //if (dataGridViewDevice1.Columns[e.ColumnIndex] == editButtonD1 && currentRow >= 0)
+            //{
+            //    //get recipe param
+            //    string param1 = dataGridViewDevice1[1, currentRow].Value.ToString();
+            //    string param2 = dataGridViewDevice1[2, currentRow].Value.ToString();
+            //    string param3 = dataGridViewDevice1[3, currentRow].Value.ToString();
+            //    string param4 = dataGridViewDevice1[4, currentRow].Value.ToString();
+
+            //    //update db
+            //    try
+            //    {
+            //        myRSA.GetDBL().GetRecipeD1Table().UpdateDeviceByRecipeName(recipeName, param1, param2, param3, param4, myRSA.GetDBL().GetConnection());
+            //    }
+            //    catch (Exception Ex)
+            //    {
+            //        Message msg = new Message(Severity.Error, Ex.Message, DateTime.Now);
+            //        AddMessage(msg, glacialListDebugger);
+            //        return;
+            //    }
+            //    //update datagrid
+            //    string queryString = "SELECT recipe_code, param1, param2, param3, param4 FROM recipe_D1";
+            //    loadDevice1DataGrid(queryString);
+            //}
         }
     }
 }

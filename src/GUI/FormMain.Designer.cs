@@ -3079,6 +3079,7 @@
             this.dataGridViewM2Points.RowHeadersVisible = false;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewM2Points.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridViewM2Points.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM2Points_CellContentClick);
             // 
             // ColumnM2PointID
             // 
@@ -3168,6 +3169,7 @@
             0,
             0,
             0});
+            this.numericUpDownM2ManualSpeed.ValueChanged += new System.EventHandler(this.numericUpDownM2ManualSpeed_ValueChanged);
             // 
             // numericUpDownM2ManualQuote
             // 
@@ -3188,6 +3190,7 @@
             0,
             0,
             0});
+            this.numericUpDownM2ManualQuote.ValueChanged += new System.EventHandler(this.numericUpDownM2ManualQuote_ValueChanged);
             // 
             // buttonM2PrintCycle
             // 
@@ -3239,18 +3242,21 @@
             resources.ApplyResources(this.buttonM2ResetServo, "buttonM2ResetServo");
             this.buttonM2ResetServo.Name = "buttonM2ResetServo";
             this.buttonM2ResetServo.UseVisualStyleBackColor = true;
+            this.buttonM2ResetServo.Click += new System.EventHandler(this.buttonM2ResetServo_Click);
             // 
             // buttonM2ResetHome
             // 
             resources.ApplyResources(this.buttonM2ResetHome, "buttonM2ResetHome");
             this.buttonM2ResetHome.Name = "buttonM2ResetHome";
             this.buttonM2ResetHome.UseVisualStyleBackColor = true;
+            this.buttonM2ResetHome.Click += new System.EventHandler(this.buttonM2ResetHome_Click);
             // 
             // buttonM2Home
             // 
             resources.ApplyResources(this.buttonM2Home, "buttonM2Home");
             this.buttonM2Home.Name = "buttonM2Home";
             this.buttonM2Home.UseVisualStyleBackColor = true;
+            this.buttonM2Home.Click += new System.EventHandler(this.buttonM2Home_Click);
             // 
             // buttonM2ContrastClosing
             // 
@@ -3394,14 +3400,14 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageMain);
+            this.tabControlMain.Controls.Add(this.tabPageConsole);
             this.tabControlMain.Controls.Add(this.tabPageHide);
             this.tabControlMain.Controls.Add(this.tabPageHelp);
             this.tabControlMain.Controls.Add(this.tabPageSettings);
             this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
             this.tabControlMain.Controls.Add(this.tabPage4);
-            this.tabControlMain.Controls.Add(this.tabPageConsole);
             this.tabControlMain.Controls.Add(this.tabPageRecipe);
+            this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlMain, "tabControlMain");
             controlFormatStyle9.BorderCornerRadius = 5;
@@ -3429,7 +3435,7 @@
             this.tabPageHelp,
             this.tabPageHide});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageMain;
+            this.tabControlMain.SelectedPage = this.tabPageConsole;
             tabPageColorStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle27.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle27.TabImage = ((System.Drawing.Image)(resources.GetObject("tabPageColorStyle27.TabImage")));

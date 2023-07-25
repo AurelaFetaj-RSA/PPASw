@@ -20,13 +20,11 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM2JogUp", $"ns=2;s=Tags.Pad_print_interna/pc_jog_alto", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2JogSpeed", $"ns=2;s=Tags.Pad_print_interna/pc_velocità_jog", typeof(short[])));
             ClientDataConfig.Add(new OpcObjectData("pcM2JogReset", $"ns=2;s=Tags.Pad_print_interna/pc_reset_jog", typeof(bool)));
-
             ClientDataConfig.Add(new OpcObjectData("pcM2QuoteStart", $"ns=2;s=Tags.Pad_print_interna/pc_start_a_quota", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM2ResetServoAlarm", $"ns=2;s=Tags.Pad_print_interna/pc_reset_allarme_servo", typeof(bool)));
 
-
-            ClientDataConfig.Add(new OpcObjectData("pc_reset_allarme_servo", $"ns=2;s=Tags.Pad_print_interna/pc_reset_allarme_servo", typeof(bool)));
-            ClientDataConfig.Add(new OpcObjectData("pc_homing", $"ns=2;s=Tags.Pad_print_interna/pc_homing", typeof(bool)));
-            ClientDataConfig.Add(new OpcObjectData("pc_reset_homing", $"ns=2;s=Tags.Pad_print_interna/pc_reset_homing", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM2Homing", $"ns=2;s=Tags.Pad_print_interna/pc_homing", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM2ResetHoming", $"ns=2;s=Tags.Pad_print_interna/pc_reset_homing", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pc_start_programma_in_test", $"ns=2;s=Tags.Pad_print_interna/pc_start_programma_in_test", typeof(bool)));
 
             ClientDataConfig.Add(new OpcObjectData("pc_numero_punto_in_teaching", $"ns=2;s=Tags.Pad_print_interna/pc_numero_punto_in_teaching", typeof(short)));
@@ -42,8 +40,8 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pc_start_stop_nastro_lavoro", $"ns=2;s=Tags.Pad_print_interna/pc_start_stop_nastro_lavoro", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pc_start_stop_nastro_uscita", $"ns=2;s=Tags.Pad_print_interna/pc_start_stop_nastro_uscita", typeof(bool)));
 
-            ClientDataConfig.Add(new OpcObjectData("pc_percentuale_velocità_in_manuale", $"ns=2;s=Tags.Pad_print_interna/pc_percentuale_velocit__in_manuale", typeof(short)));
-            ClientDataConfig.Add(new OpcObjectData("pc_quota_finale_asse_in_manuale", $"ns=2;s=Tags.Pad_print_interna/pc_quota_finale_asse_in_manuale", typeof(short)));
+            ClientDataConfig.Add(new OpcObjectData("pcM2ManualSpeed", $"ns=2;s=Tags.Pad_print_interna/pc_percentuale_velocit__in_manuale", typeof(short)));
+            ClientDataConfig.Add(new OpcObjectData("pcM2ManualQuote", $"ns=2;s=Tags.Pad_print_interna/pc_quota_finale_asse_in_manuale", typeof(short)));
 
             ClientDataConfig.Add(new OpcObjectData("pcM2Inclusion", $"ns=2;s=Tags.Pad_print_interna/pc_percentuale_velocità_in_manuale", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pc_inclusione_esclusione_da_ricetta", $"ns=2;s=Tags.Pad_print_interna/pc_quota_finale_asse_in_manuale", typeof(bool)));
