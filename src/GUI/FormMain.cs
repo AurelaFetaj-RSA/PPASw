@@ -200,12 +200,22 @@ namespace GUI
             //myCore.CreateServiceList(newConfiguration, null);
             var listOfService = myCore.CreateServiceList(myCore.CoreConfigurations, loadedloggerConfigurator);
 
+
+            List<IService> listFound = myCore.FindPerType(typeof(OpcClientService));
+
+            foreach (IService serv in listFound)
+            {                
+                if (serv.ServiceURI == new Uri(Properties.Settings.Default.OpcClient_1_URI) && serv is OpcClientService clientOpcService)
+                {
+                    ccService = clientOpcService;
+                    break;
+                }
+            }
+
             foreach (var service in listOfService)
             {
                 _splashScreen?.WriteOnTextboxAsync($"Service: {service.Name} loaded");
             }
-
-            ccService = (OpcClientService)myCore.FindPerType(typeof(OpcClientService));
 
             if(ccService != null) 
             {
@@ -368,7 +378,7 @@ namespace GUI
 
             if (_clientForm == null || _clientForm.IsDisposed)
             {
-                OpcClientService clientService = (OpcClientService)myCore.FindPerType(typeof(OpcClientService));
+                OpcClientService clientService = (OpcClientService)myCore.FindPerType(typeof(OpcClientService))[0];
                 _clientForm = new ClientTest(clientService);
             }
 
