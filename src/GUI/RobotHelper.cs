@@ -172,185 +172,201 @@ namespace GUI
         #region (* machines status *)
         public async Task UpdateOPCUAStatus()
         {
-            //List<string> keys = new List<string>();
-            //keys.Add("pcM1Status");
-            //keys.Add("pcM2Status");
-            //keys.Add("pcM3Status");
-            //keys.Add("pcM4Status");
-            //keys.Add("pcM5Status");
-            //keys.Add("pcM6Status");
-
-            //var varRresultS = await ccService.Read(keys);
-
-            //opcua M1 status
-            var varResult = await ccService.Read("pcM1Status");
-
-            if (varResult.OpcResult) UpdateOPCUAM1Lamp((short)varResult.Value);
-            else
+            try
             {
-                //todo
+                List<string> keys = new List<string>()
+            {
+                "pcM1Status",
+                "pcM2Status",
+                "pcM3Status",
+                "pcM4Status",
+                "pcM5Status",
+                "pcM6Status"
+            };
+
+                var readResult = await ccService.Read(keys);
+                //UpdateOPCUAMStatus((short)readResult["pcM1Status"]?.Value, lbLedM1Status);
+                UpdateOPCUAMStatus((short)readResult["pcM2Status"]?.Value, lbLedM2Status);
+                //UpdateOPCUAMStatus((short)readResult["pcM3Status"]?.Value, lbLedM3Status);
+                //UpdateOPCUAMStatus((short)readResult["pcM4Status"]?.Value, lbLedM4Status);
+                //UpdateOPCUAMStatus((short)readResult["pcM5Status"]?.Value, lbLedM5Status);
+                //UpdateOPCUAMStatus((short)readResult["pcM6Status"]?.Value, lbLedM6Status);
+
+                //opcua M1 status
+                //var varResult = await ccService.Read("pcM1Status");
+
+                //if (varResult.OpcResult) UpdateOPCUAM1Lamp((short)varResult.Value);
+                //else
+                //{
+                //    //todo
+                //}
+                //UpdateOPCUAMStatus(, lbLedM1Status);
+
+                ////opcua M2 status
+                //varResult = await ccService.Read("pcM2Status");
+
+                //if (varResult.OpcResult) UpdateOPCUAM2Lamp((short)varResult.Value);
+                //else
+                //{
+                //    //todo
+                //}
+
+                ////opcua M3 status
+                //varResult = await ccService.Read("pcM3Status");
+
+                //if (varResult.OpcResult) UpdateOPCUAM3Lamp((short)varResult.Value);
+                //else
+                //{
+                //    //todo
+                //}
+
+                ////opcua M4 status
+                //varResult = await ccService.Read("pcM4Status");
+
+                //if (varResult.OpcResult) UpdateOPCUAM4Lamp((short)varResult.Value);
+                //else
+                //{
+                //    //todo
+                //}
+
+                ////opcua M5 status
+                //varResult = await ccService.Read("pcM5Status");
+
+                //if (varResult.OpcResult) UpdateOPCUAM5Lamp((short)varResult.Value);
+                //else
+                //{
+                //    //todo
+                //}
+
+                ////opcua M6 status
+                //varResult = await ccService.Read("pcM6Status");
+
+                //if (varResult.OpcResult) UpdateOPCUAM6Lamp((short)varResult.Value);
+                //else
+                //{
+                //    //todo
+                //}
+
+                //opcua M1 ready
+                var varResult = await ccService.Read("pcM1Ready");
+
+                if (varResult.OpcResult) UpdateOPCUAM1ReadyLamp((short)varResult.Value);
+                else
+                {
+                    //todo
+                }
+
+                //opcua M2 ready
+                varResult = await ccService.Read("pcM2Ready");
+
+                if (varResult.OpcResult) UpdateOPCUAM2ReadyLamp((bool)varResult.Value);
+                else
+                {
+                    //todo
+                }
+
+                //opcua M3 ready
+                varResult = await ccService.Read("pcM3Ready");
+
+                if (varResult.OpcResult) UpdateOPCUAM3ReadyLamp((bool)varResult.Value);
+                else
+                {
+                    //todo
+                }
+
+                //opcua M4 ready
+                varResult = await ccService.Read("pcM4Ready");
+
+                if (varResult.OpcResult) UpdateOPCUAM4ReadyLamp((bool)varResult.Value);
+                else
+                {
+                    //todo
+                }
+
+                //opcua M5 ready
+                varResult = await ccService.Read("pcM5Ready");
+
+                if (varResult.OpcResult) UpdateOPCUAM5ReadyLamp((bool)varResult.Value);
+                else
+                {
+                    //todo
+                }
+
+                //opcua M6 ready
+                varResult = await ccService.Read("pcM6Ready");
+
+                if (varResult.OpcResult) UpdateOPCUAM6ReadyLamp((bool)varResult.Value);
+                else
+                {
+                    //todo
+                }
+
+                //opcua M1 homing done
+                varResult = await ccService.Read("pcM1HomingDone");
+
+                if (varResult.OpcResult) UpdateOPCUAM1HomingDoneLamp((bool)varResult.Value);
+                else
+                {
+                    //todo
+                }
+
+                //opcua M2 homing done
+                varResult = await ccService.Read("pcM2HomingDone");
+
+                if (varResult.OpcResult) UpdateOPCUAM2HomingDoneLamp((bool)varResult.Value);
+                else
+                {
+                    //todo
+                }
+
+                //opcua M3 homing done
+                varResult = await ccService.Read("pcM3HomingDone");
+
+                if (varResult.OpcResult) UpdateOPCUAM3HomingDoneLamp((bool)varResult.Value);
+                else
+                {
+                    //todo
+                }
+
+                //opcua M4 homing done
+                varResult = await ccService.Read("pcM4HomingDone");
+
+                if (varResult.OpcResult) UpdateOPCUAM4HomingDoneLamp((bool)varResult.Value);
+                else
+                {
+                    //todo
+                }
+
+                //opcua M5 homing done
+                varResult = await ccService.Read("pcM5HomingDone");
+
+                if (varResult.OpcResult) UpdateOPCUAM5HomingDoneLamp((bool)varResult.Value);
+                else
+                {
+                    //todo
+                }
+
+                //opcua M6 homing done
+                varResult = await ccService.Read("pcM6HomingDone");
+
+                if (varResult.OpcResult) UpdateOPCUAM6HomingDoneLamp((bool)varResult.Value);
+                else
+                {
+                    //todo
+                }
+
+                //current axis quote
+                varResult = await ccService.Read("pcM2CurrentAxisQuote");
+                if (varResult.OpcResult) UpdateM2CurrentAxisQuote((short)varResult.Value);
+                else
+                {
+                    //todo
+                }
             }
-
-            //opcua M2 status
-            varResult = await ccService.Read("pcM2Status");
-
-            if (varResult.OpcResult) UpdateOPCUAM2Lamp((short)varResult.Value);
-            else
+            catch(Exception ex)
             {
-                //todo
+
             }
-
-            //opcua M3 status
-            varResult = await ccService.Read("pcM3Status");
-
-            if (varResult.OpcResult) UpdateOPCUAM3Lamp((short)varResult.Value);
-            else
-            {
-                //todo
-            }
-
-            //opcua M4 status
-            varResult = await ccService.Read("pcM4Status");
-
-            if (varResult.OpcResult) UpdateOPCUAM4Lamp((short)varResult.Value);
-            else
-            {
-                //todo
-            }
-
-            //opcua M5 status
-            varResult = await ccService.Read("pcM5Status");
-
-            if (varResult.OpcResult) UpdateOPCUAM5Lamp((short)varResult.Value);
-            else
-            {
-                //todo
-            }
-
-            //opcua M6 status
-            varResult = await ccService.Read("pcM6Status");
-
-            if (varResult.OpcResult) UpdateOPCUAM6Lamp((short)varResult.Value);
-            else
-            {
-                //todo
-            }
-
-            //opcua M1 ready
-            varResult = await ccService.Read("pcM1Ready");
-
-            if (varResult.OpcResult) UpdateOPCUAM1ReadyLamp((short)varResult.Value);
-            else
-            {
-                //todo
-            }
-
-            //opcua M2 ready
-            varResult = await ccService.Read("pcM2Ready");
-
-            if (varResult.OpcResult) UpdateOPCUAM2ReadyLamp((bool)varResult.Value);
-            else
-            {
-                //todo
-            }
-
-            //opcua M3 ready
-            varResult = await ccService.Read("pcM3Ready");
-
-            if (varResult.OpcResult) UpdateOPCUAM3ReadyLamp((bool)varResult.Value);
-            else
-            {
-                //todo
-            }
-
-            //opcua M4 ready
-            varResult = await ccService.Read("pcM4Ready");
-
-            if (varResult.OpcResult) UpdateOPCUAM4ReadyLamp((bool)varResult.Value);
-            else
-            {
-                //todo
-            }
-
-            //opcua M5 ready
-            varResult = await ccService.Read("pcM5Ready");
-
-            if (varResult.OpcResult) UpdateOPCUAM5ReadyLamp((bool)varResult.Value);
-            else
-            {
-                //todo
-            }
-
-            //opcua M6 ready
-            varResult = await ccService.Read("pcM6Ready");
-
-            if (varResult.OpcResult) UpdateOPCUAM6ReadyLamp((bool)varResult.Value);
-            else
-            {
-                //todo
-            }
-
-            //opcua M1 homing done
-            varResult = await ccService.Read("pcM1HomingDone");
-
-            if (varResult.OpcResult) UpdateOPCUAM1HomingDoneLamp((bool)varResult.Value);
-            else
-            {
-                //todo
-            }
-
-            //opcua M2 homing done
-            varResult = await ccService.Read("pcM2HomingDone");
-
-            if (varResult.OpcResult) UpdateOPCUAM2HomingDoneLamp((bool)varResult.Value);
-            else
-            {
-                //todo
-            }
-
-            //opcua M3 homing done
-            varResult = await ccService.Read("pcM3HomingDone");
-
-            if (varResult.OpcResult) UpdateOPCUAM3HomingDoneLamp((bool)varResult.Value);
-            else
-            {
-                //todo
-            }
-
-            //opcua M4 homing done
-            varResult = await ccService.Read("pcM4HomingDone");
-
-            if (varResult.OpcResult) UpdateOPCUAM4HomingDoneLamp((bool)varResult.Value);
-            else
-            {
-                //todo
-            }
-
-            //opcua M5 homing done
-            varResult = await ccService.Read("pcM5HomingDone");
-
-            if (varResult.OpcResult) UpdateOPCUAM5HomingDoneLamp((bool)varResult.Value);
-            else
-            {
-                //todo
-            }
-
-            //opcua M6 homing done
-            varResult = await ccService.Read("pcM6HomingDone");
-
-            if (varResult.OpcResult) UpdateOPCUAM6HomingDoneLamp((bool)varResult.Value);
-            else
-            {
-                //todo
-            }
-
-            //current axis quote
-            varResult = await ccService.Read("pcM2CurrentAxisQuote");
-            if (varResult.OpcResult) UpdateM2CurrentAxisQuote((short)varResult.Value);
-            else
-            {
-                //todo
-            }           
 
         }
 
@@ -363,6 +379,40 @@ namespace GUI
             catch(Exception EX)
             {
 
+            }
+        }
+
+        public void UpdateOPCUAMStatus(short value, LBSoft.IndustrialCtrls.Leds.LBLed lblLed)
+        {
+
+            if (value == 0)
+            {
+                lblLed.LedColor = Color.Red;
+                lblLed.Label = "emergency";
+            }
+
+            if (value == 1)
+            {
+                lblLed.LedColor = Color.FromArgb(195, 222, 155);
+                lblLed.Label = "automatic";
+            }
+
+            if (value == 2)
+            {
+                lblLed.LedColor = Color.Orange;
+                lblLed.Label = "manual";
+            }
+
+            if (value == 3)
+            {
+                lblLed.LedColor = Color.Blue;
+                lblLed.Label = "in cycle";
+            }
+
+            if (value == 4)
+            {
+                lblLed.LedColor = Color.Red;
+                lblLed.Label = "in alarm";
             }
         }
 
@@ -402,7 +452,6 @@ namespace GUI
 
         public void UpdateOPCUAM2Lamp(short value)
         {
-            tabControlT2.Enabled = false;
             if (value == 0)
             {
                 lbLedM2Status.LedColor = Color.Red;
@@ -419,7 +468,6 @@ namespace GUI
             {
                 lbLedM2Status.LedColor = Color.Orange;
                 lbLedM2Status.Label = "manual";
-                tabControlT2.Enabled = true;
             }
 
             if (value == 3)
@@ -676,8 +724,8 @@ namespace GUI
                 lbLedM2HomingDone.Label = "homing not done";
                 lbLedM2T2HomingDone.LedColor = Color.Red;
                 lbLedM2T2HomingDone.Label = "homing not done";
-                labelM2Homing.Text = "homing not done";
-                labelM2Homing.ForeColor = Color.Red;
+                //labelM2Homing.Text = "homing not done";
+                //labelM2Homing.ForeColor = Color.Red;
             }
 
             else
@@ -686,8 +734,8 @@ namespace GUI
                 lbLedM2HomingDone.Label = "homing done";
                 lbLedM2T2HomingDone.LedColor = Color.FromArgb(195, 222, 155);
                 lbLedM2T2HomingDone.Label = "homing done";
-                labelM2Homing.Text = "homing done";
-                labelM2Homing.ForeColor = Color.FromArgb(16,170,108);
+                //labelM2Homing.Text = "homing done";
+                //labelM2Homing.ForeColor = Color.FromArgb(16,170,108);
             }
         }
 
@@ -754,10 +802,10 @@ namespace GUI
         public async void OPCUAM1TeachPckSend(short pointID, short[] pointQuote, short[] pointSpeed, bool[] pointReg)
         {
             List<string> keys = new List<string>();
-            keys.Add("pcM2TeachPointID");
-            keys.Add("pcM2TeachQuote");
-            keys.Add("pcM2TeachSpeed");            
-            keys.Add("pcM2TeachPointReg");
+            keys.Add("pcM1TeachPointID");
+            keys.Add("pcM1TeachQuote");
+            keys.Add("pcM1TeachSpeed");            
+            keys.Add("pcM1TeachPointReg");
             
             List<object> obj = new List<object>()
             {
@@ -777,6 +825,56 @@ namespace GUI
 
             }
         }
+
+        public async void OPCUAM2TeachPckSend(short pointID, short[] pointQuote, short[] pointSpeed, bool[] pointReg)
+        {
+            List<string> keys = new List<string>();
+            keys.Add("pcM2TeachPointID");
+            keys.Add("pcM2TeachSpeed");
+            keys.Add("pcM2TeachQuote");
+            keys.Add("pcM2TeachPointReg");
+
+            List<object> obj = new List<object>()
+            {
+                pointID,
+                pointSpeed,
+                pointQuote,
+                pointReg
+            };
+
+            Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
+            try
+            {
+                sendResult = await ccService.Send(keys, obj);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        public async void OPCUAM2TestPckSend(short[] pointQuote, short[] pointSpeed)
+        {
+            List<string> keys = new List<string>();
+            keys.Add("pcM2TestSpeed");
+            keys.Add("pcM2TestQuote");
+
+            List<object> obj = new List<object>()
+            {
+                pointSpeed,
+                pointQuote
+            };
+
+            Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
+            try
+            {
+                sendResult = await ccService.Send(keys, obj);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }        
         #endregion
 
         #endregion
