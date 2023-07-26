@@ -90,6 +90,7 @@
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.trueTransparentPanelAuto = new LidorSystems.IntegralUI.Controls.TrueTransparentPanel();
             this.transparentPanelLine = new LidorSystems.IntegralUI.Controls.TransparentPanel();
+            this.ServiceConfiBtn = new System.Windows.Forms.Button();
             this.clientTestOpc = new System.Windows.Forms.Button();
             this.buttonResetCounter = new System.Windows.Forms.Button();
             this.labelPieceCounter = new LidorSystems.IntegralUI.Controls.Label();
@@ -312,7 +313,8 @@
             this.labelLoginLevel = new System.Windows.Forms.Label();
             this.labelDateTime = new System.Windows.Forms.Label();
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
-            this.ServiceConfiBtn = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trueTransparentPanelAuto)).BeginInit();
@@ -357,6 +359,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2Points)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualQuote)).BeginInit();
+            this.tabPageRecipe.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).BeginInit();
             this.tabControlMain.SuspendLayout();
@@ -428,6 +431,13 @@
             this.transparentPanelLine.FormatStyle = controlFormatStyle1;
             resources.ApplyResources(this.transparentPanelLine, "transparentPanelLine");
             this.transparentPanelLine.Name = "transparentPanelLine";
+            // 
+            // ServiceConfiBtn
+            // 
+            resources.ApplyResources(this.ServiceConfiBtn, "ServiceConfiBtn");
+            this.ServiceConfiBtn.Name = "ServiceConfiBtn";
+            this.ServiceConfiBtn.UseVisualStyleBackColor = true;
+            this.ServiceConfiBtn.Click += new System.EventHandler(this.openConfigFormTextbox_Click);
             // 
             // clientTestOpc
             // 
@@ -3469,6 +3479,8 @@
             // 
             // tabPageRecipe
             // 
+            this.tabPageRecipe.Controls.Add(this.label3);
+            this.tabPageRecipe.Controls.Add(this.comboBox1);
             tabPageFormatStyle7.BorderCornerRadius = 5;
             tabPageFormatStyle7.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 40);
@@ -3559,14 +3571,14 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Controls.Add(this.tabPageRecipe);
-            this.tabControlMain.Controls.Add(this.tabPage4);
-            this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
             this.tabControlMain.Controls.Add(this.tabPageConsole);
+            this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Controls.Add(this.tabPageHide);
             this.tabControlMain.Controls.Add(this.tabPageHelp);
             this.tabControlMain.Controls.Add(this.tabPageSettings);
+            this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
+            this.tabControlMain.Controls.Add(this.tabPage4);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlMain, "tabControlMain");
             controlFormatStyle9.BorderCornerRadius = 5;
@@ -3594,7 +3606,7 @@
             this.tabPageHelp,
             this.tabPageHide});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageMain;
+            this.tabControlMain.SelectedPage = this.tabPageRecipe;
             tabPageColorStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle27.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle27.TabImage = ((System.Drawing.Image)(resources.GetObject("tabPageColorStyle27.TabImage")));
@@ -3633,12 +3645,16 @@
             this.tabControlMain.SelectedPageChanged += new LidorSystems.IntegralUI.ObjectEventHandler(this.tabControlMain_SelectedPageChanged);
             this.tabControlMain.ToolItemClicked += new LidorSystems.IntegralUI.ObjectClickEventHandler(this.tabControlMain_ToolItemClicked);
             // 
-            // ServiceConfiBtn
+            // comboBox1
             // 
-            resources.ApplyResources(this.ServiceConfiBtn, "ServiceConfiBtn");
-            this.ServiceConfiBtn.Name = "ServiceConfiBtn";
-            this.ServiceConfiBtn.UseVisualStyleBackColor = true;
-            this.ServiceConfiBtn.Click += new System.EventHandler(this.openConfigFormTextbox_Click);
+            resources.ApplyResources(this.comboBox1, "comboBox1");
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Name = "comboBox1";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
             // 
             // FormMain
             // 
@@ -3700,6 +3716,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2Points)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualQuote)).EndInit();
+            this.tabPageRecipe.ResumeLayout(false);
+            this.tabPageRecipe.PerformLayout();
             this.tabPageMain.ResumeLayout(false);
             this.tabPageMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).EndInit();
@@ -3936,6 +3954,8 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button ServiceConfiBtn;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
     }
 }
 

@@ -29,6 +29,7 @@ using Opc.UaFx;
 using OpcCustom;
 using RSACommon.Service;
 using RSACommon.Configuration;
+using RSACommon.ProgramParser;
 
 namespace GUI
 {
@@ -44,6 +45,7 @@ namespace GUI
         private Form _clientForm { get; set; } = null;
 
         CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
+        private ProgramReadService _readProgramService { get; set; } = null;
         public FormMain(SplashScreen splashScreen)
         {
             _splashScreen = splashScreen;
@@ -199,7 +201,6 @@ namespace GUI
             //myCore.CreateServiceList(newConfiguration, null);
             var listOfService = myCore.CreateServiceList(myCore.CoreConfigurations, loadedloggerConfigurator);
 
-
             List<IService> listFound = myCore.FindPerType(typeof(OpcClientService));
 
             foreach (IService serv in listFound)
@@ -209,6 +210,14 @@ namespace GUI
                     ccService = clientOpcService;
                     break;
                 }
+            }
+
+            var dummyS = myCore.FindPerType(typeof(ProgramReadService))[0];
+
+            if(dummyS is ProgramReadService progRS)
+            {
+                //ProgramParser<IObjProgram> standardParser = new StandardProgramParser();
+                //progRS.SetProgramParser(standardParser);
             }
 
             foreach (var service in listOfService)
