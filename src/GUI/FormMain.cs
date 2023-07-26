@@ -773,32 +773,12 @@ namespace GUI
 
         private async void lbButtonM2StartStopWorkingBelt_Click(object sender, EventArgs e)
         {
-            string keyToSend = null;
 
-            keyToSend = "pcM2StartStopWorkingBelt";
-            if (lbButtonM2StartStopWorkingBelt.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
-            {
-                var readResult = await ccService.Send(keyToSend, true);
-            }
-            else
-            {
-                var readResult = await ccService.Send(keyToSend, false);
-            }
         }
 
         private async void lbButtonM2StartStopExitBelt_Click(object sender, EventArgs e)
         {
-            string keyToSend = null;
 
-            keyToSend = "pcM2StartStopExitBelt";
-            if (lbButtonM2StartStopWorkingBelt.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
-            {
-                var readResult = await ccService.Send(keyToSend, true);
-            }
-            else
-            {
-                var readResult = await ccService.Send(keyToSend, false);
-            }
         }
 
         private void numericUpDownM2JogSpeed_Click(object sender, EventArgs e)
@@ -940,6 +920,294 @@ namespace GUI
         {            
             string keyToSend = "pcM2StartTest";
             var readResult = await ccService.Send(keyToSend, true);
+        }
+
+        private async void buttonM5TranslatorFwd_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5TranslatorFwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5TranslatorBwd_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5TranslatorBwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5ClampFwd_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5ClampFwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5ClampBwd_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5ClampBwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5ClampOpening_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5ClampOpening";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5ClampClosing_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5ClampClosing";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5CWRotation_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5CWRotation";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5CCWRotation_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5CCWRotation";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5NoRotation_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5NoRotation";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5V1ExtFwd_Click(object sender, EventArgs e)
+        {            
+            string keyToSend = "pcM5V1ExtFwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5V1ExtBwd_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5V1ExtBwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5V2ExtFwd_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5V2ExtFwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5V2ExtBwd_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5V2ExtBwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void lbButtonM5StartStopTranslBelt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void lbButtonM5StartStopOutBelt1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void lbButtonM5StartStopOutBelt2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void lbButtonM5StartStopOutBelt3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void lbButtonM2StartStopWorkingBelt_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM2StartStopWorkingBelt";
+            if (lbButtonM2StartStopWorkingBelt.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void lbButtonM2StartStopExitBelt_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM2StartStopExitBelt";
+            if (lbButtonM2StartStopWorkingBelt.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void lbButtonM5StartStopTranslBelt_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = "pcM5StartStopTranslBelt";
+
+            if (lbButtonM5StartStopTranslBelt.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void lbButtonM5StartStopOutBelt1_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = "pcM5StartStopOutBelt1";
+
+            if (lbButtonM5StartStopOutBelt1.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var sendResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var sendResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void lbButtonM5StartStopOutBelt3_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = "pcM5StartStopOutBelt3";
+
+            if (lbButtonM5StartStopOutBelt3.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var sendResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var sendResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void lbButtonM5StartStopOutBelt2_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = "pcM5StartStopOutBelt2";
+
+            if (lbButtonM5StartStopOutBelt2.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var sendResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var sendResult = await ccService.Send(keyToSend, false);
+            }
         }
     }
 }

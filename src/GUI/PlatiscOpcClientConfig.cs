@@ -24,27 +24,20 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM2ResetServoAlarm", $"ns=2;s=Tags.Pad_print_interna/pc_reset_allarme_servo", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2Homing", $"ns=2;s=Tags.Pad_print_interna/pc_homing", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2ResetHoming", $"ns=2;s=Tags.Pad_print_interna/pc_reset_homing", typeof(bool)));
-
             ClientDataConfig.Add(new OpcObjectData("pcM2StartTest", $"ns=2;s=Tags.Pad_print_interna/pc_start_programma_in_test", typeof(bool)));
-
             ClientDataConfig.Add(new OpcObjectData("pcM2TeachPointID", $"ns=2;s=Tags.Pad_print_interna/pc_numero_punto_in_teaching", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM2TeachPointReg", $"ns=2;s=Tags.Pad_print_interna/pc_vai_a_punto_in_teaching", typeof(int[])));
             ClientDataConfig.Add(new OpcObjectData("pcM2SmallClampOpening", $"ns=2;s=Tags.Pad_print_interna/pc_apertura_pinza_bordo_stivale", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2SmallClampClosing", $"ns=2;s=Tags.Pad_print_interna/pc_chiusura_pinza_bordo_stivale", typeof(bool)));
-
             ClientDataConfig.Add(new OpcObjectData("pcM2BigClampOpening", $"ns=2;s=Tags.Pad_print_interna/pc_apertura_pinza_grande", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2BigClampClosing", $"ns=2;s=Tags.Pad_print_interna/pc_chiusura_pinza_grande", typeof(bool)));
-
             ClientDataConfig.Add(new OpcObjectData("pcM2CentrClampOpening", $"ns=2;s=Tags.Pad_print_interna/pc_apertura_pinze_centraggio", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2CentrClampClosing", $"ns=2;s=Tags.Pad_print_interna/pc_chiusura_pinze_centraggio", typeof(bool)));
-
             ClientDataConfig.Add(new OpcObjectData("pcM2ContrOpening", $"ns=2;s=Tags.Pad_print_interna/pc_apertura_contrasto", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2ContrClosing", $"ns=2;s=Tags.Pad_print_interna/pc_chiusura_contrasto", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2Print", $"ns=2;s=Tags.Pad_print_interna/pc_stampa", typeof(bool)));
-
             ClientDataConfig.Add(new OpcObjectData("pcM2StartStopWorkingBelt", $"ns=2;s=Tags.Pad_print_interna/pc_start_stop_nastro_lavoro", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2StartStopExitBelt", $"ns=2;s=Tags.Pad_print_interna/pc_start_stop_nastro_uscita", typeof(bool)));
-
             ClientDataConfig.Add(new OpcObjectData("pcM2ManualSpeed", $"ns=2;s=Tags.Pad_print_interna/pc_percentuale_velocita_in_manuale", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM2ManualQuote", $"ns=2;s=Tags.Pad_print_interna/pc_quota_finale_asse_in_manuale", typeof(short)));
 
@@ -60,15 +53,11 @@ namespace GUI
 
             ClientDataConfig.Add(new OpcObjectData("pc_start_stop", $"ns=2;s=Tags.Pad_print_interna/pc_start_stop", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pc_pausa", $"ns=2;s=Tags.Pad_print_interna/pc_pausa", typeof(bool)));
-
-            ClientDataConfig.Add(new OpcObjectData("pcM2P1_punto_1_raggiunto", $"ns=2;s=Tags.Pad_print_interna/pc_punto_1_raggiunto", typeof(bool)));
-            ClientDataConfig.Add(new OpcObjectData("pc_punto_2_raggiunto", $"ns=2;s=Tags.Pad_print_interna/pc_punto_2_raggiunto", typeof(bool)));
-            ClientDataConfig.Add(new OpcObjectData("pc_punto_3_raggiunto", $"ns=2;s=Tags.Pad_print_interna/pc_punto_3_raggiunto", typeof(bool)));
-            ClientDataConfig.Add(new OpcObjectData("pc_punto_4_raggiunto", $"ns=2;s=Tags.Pad_print_interna/pc_punto_4_raggiunto", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM2PointsReached", $"ns=2;s=Tags.Pad_print_interna/pc_punto_1_raggiunto", typeof(bool[])));
             ClientDataConfig.Add(new OpcObjectData("pcM2HomingDone", $"ns=2;s=Tags.Pad_print_interna/pc_homing_done", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2CurrentAxisQuote", $"ns=2;s=Tags.Pad_print_interna/pc_quota_attuale_asse", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pc_numero_cicli", $"ns=2;s=Tags.Pad_print_interna/pc_numero_cicli", typeof(short)));
-            ClientDataConfig.Add(new OpcObjectData("pcM2Ready", $"ns=2;s=Tags.Pad_print_interna/pc_ready", typeof(bool)));
+            
 
             ClientDataConfig.Add(new OpcObjectData("pcM2Status", $"ns=2;s=Tags.Pad_print_interna/pc_stato_macchina", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pc_allarmi_generali ", $"ns=2;s=Tags.Pad_print_interna/pc_allarmi_generali", typeof(short[])));
@@ -81,7 +70,37 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM4Status", $"ns=2;s=Tags.Pad_print_interna/pc_stato_macchina", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM5Status", $"ns=2;s=Tags.Pad_print_interna/pc_stato_macchina", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM6Status", $"ns=2;s=Tags.Pad_print_interna/pc_stato_macchina", typeof(short)));
+
+            ClientDataConfig.Add(new OpcObjectData("pcM3HomingDone", $"ns=2;s=Tags.Pad_print_esterna/pc_homing_done", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1HomingDone", $"ns=2;s=Tags.Pad_print_interna/pc_homing_done", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM4HomingDone", $"ns=2;s=Tags.Pad_print_interna/pc_homing_done", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5HomingDone", $"ns=2;s=Tags.Pad_print_interna/pc_homing_done", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM6HomingDone", $"ns=2;s=Tags.Pad_print_interna/pc_homing_done", typeof(bool)));
+
             ClientDataConfig.Add(new OpcObjectData("pcM2AutoSpeed", $"ns=2;s=Tags.Pad_print_interna/pc_velocita", typeof(short)));
+            //digital input
+            ClientDataConfig.Add(new OpcObjectData("pcM2DI", $"ns=2;s=Tags.Pad_print_interna/pc_input", typeof(bool[])));
+            ClientDataConfig.Add(new OpcObjectData("pcM2DO", $"ns=2;s=Tags.Pad_print_interna/pc_output", typeof(bool[])));
+
+            ClientDataConfig.Add(new OpcObjectData("pcM5TranslatorFwd", $"ns=2;s=Tags.Manipolatore/pc_traslatore_avanti", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5TranslatorBwd", $"ns=2;s=Tags.Manipolatore/pc_traslatore_indietro", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5ClampFwd", $"ns=2;s=Tags.Manipolatore/pc_pinza_avanti", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5ClampBwd", $"ns=2;s=Tags.Manipolatore/pc_pinza_indietro", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5ClampOpening", $"ns=2;s=Tags.Manipolatore/pc_apertura_pinza", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5ClampClosing", $"ns=2;s=Tags.Manipolatore/pc_chiusura_pinza", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5CWRotation", $"ns=2;s=Tags.Manipolatore/pc_rotazione_oraria", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5CCWRotation", $"ns=2;s=Tags.Manipolatore/pc_rotazione_antioraria", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5NoRotation", $"ns=2;s=Tags.Manipolatore/pc_nessuna_rotazione", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5V1ExtFwd", $"ns=2;s=Tags.Manipolatore/pc_estensione_verticale_1_su", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5V1ExtBwd", $"ns=2;s=Tags.Manipolatore/pc_estensione_verticale_1_giu", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5V2ExtFwd", $"ns=2;s=Tags.Manipolatore/pc_estensione_verticale_2_su", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5V2ExtBwd", $"ns=2;s=Tags.Manipolatore/pc_estensione_verticale_2_giu", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5StartStopTranslBelt", $"ns=2;s=Tags.Manipolatore/pc_start_stop_nastro_traslazione", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5StartStopOutBelt1", $"ns=2;s=Tags.Manipolatore/pc_start_stop_nastro_uscita_1", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5StartStopOutBelt2", $"ns=2;s=Tags.Manipolatore/pc_start_stop_nastro_uscita_2", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5StartStopOutBelt3", $"ns=2;s=Tags.Manipolatore/pc_start_stop_nastro_uscita_3", typeof(bool)));
+            
+                
             #endregion
 
             return this;

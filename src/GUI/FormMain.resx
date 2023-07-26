@@ -537,33 +537,6 @@
   <data name="&gt;&gt;lbLedM6HomingDone.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lbLedM6Ready.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLedM6Ready.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLedM6Ready.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 105</value>
-  </data>
-  <data name="lbLedM6Ready.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 20</value>
-  </data>
-  <data name="lbLedM6Ready.TabIndex" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="&gt;&gt;lbLedM6Ready.Name" xml:space="preserve">
-    <value>lbLedM6Ready</value>
-  </data>
-  <data name="&gt;&gt;lbLedM6Ready.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLedM6Ready.Parent" xml:space="preserve">
-    <value>transparentPanelM6.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;lbLedM6Ready.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="labelM6Param1Value.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -595,7 +568,7 @@
     <value>transparentPanelM6.ContentPanel</value>
   </data>
   <data name="&gt;&gt;labelM6Param1Value.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="labelM6Param1Name.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -628,7 +601,7 @@
     <value>transparentPanelM6.ContentPanel</value>
   </data>
   <data name="&gt;&gt;labelM6Param1Name.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="lbLedM6Status.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -655,7 +628,7 @@
     <value>transparentPanelM6.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbLedM6Status.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="checkBoxM6Inclusion.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
     <value>Button</value>
@@ -855,7 +828,7 @@
     <value>transparentPanelM6.ContentPanel</value>
   </data>
   <data name="&gt;&gt;checkBoxM6Inclusion.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="comboBoxM6PrgName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
@@ -882,7 +855,7 @@
     <value>transparentPanelM6.ContentPanel</value>
   </data>
   <data name="&gt;&gt;comboBoxM6PrgName.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="transparentPanelM6.ContentPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 2</value>
@@ -986,33 +959,6 @@
   <data name="&gt;&gt;lbLedM5HomingDone.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lbLedM5Ready.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLedM5Ready.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLedM5Ready.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 105</value>
-  </data>
-  <data name="lbLedM5Ready.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 20</value>
-  </data>
-  <data name="lbLedM5Ready.TabIndex" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5Ready.Name" xml:space="preserve">
-    <value>lbLedM5Ready</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5Ready.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5Ready.Parent" xml:space="preserve">
-    <value>transparentPanelM5.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5Ready.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="labelM5Param1Value.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1044,7 +990,7 @@
     <value>transparentPanelM5.ContentPanel</value>
   </data>
   <data name="&gt;&gt;labelM5Param1Value.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="labelM5Param1Name.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1077,7 +1023,7 @@
     <value>transparentPanelM5.ContentPanel</value>
   </data>
   <data name="&gt;&gt;labelM5Param1Name.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="lbLedM5Status.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1104,7 +1050,7 @@
     <value>transparentPanelM5.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbLedM5Status.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="checkBoxM5Inclusion.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
     <value>Button</value>
@@ -1304,7 +1250,7 @@
     <value>transparentPanelM5.ContentPanel</value>
   </data>
   <data name="&gt;&gt;checkBoxM5Inclusion.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="comboBoxM5PrgName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
@@ -1331,7 +1277,7 @@
     <value>transparentPanelM5.ContentPanel</value>
   </data>
   <data name="&gt;&gt;comboBoxM5PrgName.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="transparentPanelM5.ContentPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 2</value>
@@ -1435,33 +1381,6 @@
   <data name="&gt;&gt;lbLedM4HomingDone.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lbLedM4Ready.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLedM4Ready.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLedM4Ready.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 105</value>
-  </data>
-  <data name="lbLedM4Ready.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 20</value>
-  </data>
-  <data name="lbLedM4Ready.TabIndex" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="&gt;&gt;lbLedM4Ready.Name" xml:space="preserve">
-    <value>lbLedM4Ready</value>
-  </data>
-  <data name="&gt;&gt;lbLedM4Ready.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLedM4Ready.Parent" xml:space="preserve">
-    <value>transparentPanelM4.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;lbLedM4Ready.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="labelM4Param1Value.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1493,7 +1412,7 @@
     <value>transparentPanelM4.ContentPanel</value>
   </data>
   <data name="&gt;&gt;labelM4Param1Value.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="labelM4Param1Name.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1526,7 +1445,7 @@
     <value>transparentPanelM4.ContentPanel</value>
   </data>
   <data name="&gt;&gt;labelM4Param1Name.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="lbLedM4Status.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1553,7 +1472,7 @@
     <value>transparentPanelM4.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbLedM4Status.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="checkBoxM4Inclusion.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
     <value>Button</value>
@@ -1753,7 +1672,7 @@
     <value>transparentPanelM4.ContentPanel</value>
   </data>
   <data name="&gt;&gt;checkBoxM4Inclusion.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="comboBoxM4PrgName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
@@ -1780,7 +1699,7 @@
     <value>transparentPanelM4.ContentPanel</value>
   </data>
   <data name="&gt;&gt;comboBoxM4PrgName.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="transparentPanelM4.ContentPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 2</value>
@@ -1884,33 +1803,6 @@
   <data name="&gt;&gt;lbLedM3HomingDone.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lbLedM3Ready.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLedM3Ready.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLedM3Ready.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 105</value>
-  </data>
-  <data name="lbLedM3Ready.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 20</value>
-  </data>
-  <data name="lbLedM3Ready.TabIndex" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="&gt;&gt;lbLedM3Ready.Name" xml:space="preserve">
-    <value>lbLedM3Ready</value>
-  </data>
-  <data name="&gt;&gt;lbLedM3Ready.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLedM3Ready.Parent" xml:space="preserve">
-    <value>transparentPanelM3.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;lbLedM3Ready.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="labelM3Param1Value.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1942,7 +1834,7 @@
     <value>transparentPanelM3.ContentPanel</value>
   </data>
   <data name="&gt;&gt;labelM3Param1Value.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="labelM3Param1Name.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1975,7 +1867,7 @@
     <value>transparentPanelM3.ContentPanel</value>
   </data>
   <data name="&gt;&gt;labelM3Param1Name.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="lbLedM3Status.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2002,7 +1894,7 @@
     <value>transparentPanelM3.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbLedM3Status.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="checkBoxM3Inclusion.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
     <value>Button</value>
@@ -2202,7 +2094,7 @@
     <value>transparentPanelM3.ContentPanel</value>
   </data>
   <data name="&gt;&gt;checkBoxM3Inclusion.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="comboBoxM3PrgName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
@@ -2229,7 +2121,7 @@
     <value>transparentPanelM3.ContentPanel</value>
   </data>
   <data name="&gt;&gt;comboBoxM3PrgName.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="transparentPanelM3.ContentPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 2</value>
@@ -2333,33 +2225,6 @@
   <data name="&gt;&gt;lbLedM2HomingDone.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lbLedM2Ready.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLedM2Ready.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLedM2Ready.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 105</value>
-  </data>
-  <data name="lbLedM2Ready.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 20</value>
-  </data>
-  <data name="lbLedM2Ready.TabIndex" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="&gt;&gt;lbLedM2Ready.Name" xml:space="preserve">
-    <value>lbLedM2Ready</value>
-  </data>
-  <data name="&gt;&gt;lbLedM2Ready.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLedM2Ready.Parent" xml:space="preserve">
-    <value>transparentPanelM2.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;lbLedM2Ready.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="labelM2Param1Value.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2391,7 +2256,7 @@
     <value>transparentPanelM2.ContentPanel</value>
   </data>
   <data name="&gt;&gt;labelM2Param1Value.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="labelM2Param1Name.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2424,7 +2289,7 @@
     <value>transparentPanelM2.ContentPanel</value>
   </data>
   <data name="&gt;&gt;labelM2Param1Name.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="lbLedM2Status.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2451,7 +2316,7 @@
     <value>transparentPanelM2.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbLedM2Status.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="checkBoxM2Inclusion.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
     <value>Button</value>
@@ -2651,7 +2516,7 @@
     <value>transparentPanelM2.ContentPanel</value>
   </data>
   <data name="&gt;&gt;checkBoxM2Inclusion.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="comboBoxM2PrgName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
@@ -2678,7 +2543,7 @@
     <value>transparentPanelM2.ContentPanel</value>
   </data>
   <data name="&gt;&gt;comboBoxM2PrgName.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="transparentPanelM2.ContentPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 2</value>
@@ -2782,33 +2647,6 @@
   <data name="&gt;&gt;lbLedM1HomingDone.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="lbLedM1Ready.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLedM1Ready.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLedM1Ready.Location" type="System.Drawing.Point, System.Drawing">
-    <value>85, 105</value>
-  </data>
-  <data name="lbLedM1Ready.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 20</value>
-  </data>
-  <data name="lbLedM1Ready.TabIndex" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="&gt;&gt;lbLedM1Ready.Name" xml:space="preserve">
-    <value>lbLedM1Ready</value>
-  </data>
-  <data name="&gt;&gt;lbLedM1Ready.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLedM1Ready.Parent" xml:space="preserve">
-    <value>transparentPanelM1.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;lbLedM1Ready.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="labelM1Param1Value.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -2840,7 +2678,7 @@
     <value>transparentPanelM1.ContentPanel</value>
   </data>
   <data name="&gt;&gt;labelM1Param1Value.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="labelM1Param1Name.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2873,7 +2711,7 @@
     <value>transparentPanelM1.ContentPanel</value>
   </data>
   <data name="&gt;&gt;labelM1Param1Name.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="lbLedM1Status.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -2900,7 +2738,7 @@
     <value>transparentPanelM1.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbLedM1Status.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="checkBoxM1Inclusion.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
     <value>Button</value>
@@ -3100,7 +2938,7 @@
     <value>transparentPanelM1.ContentPanel</value>
   </data>
   <data name="&gt;&gt;checkBoxM1Inclusion.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="comboBoxM1PrgName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
@@ -3127,7 +2965,7 @@
     <value>transparentPanelM1.ContentPanel</value>
   </data>
   <data name="&gt;&gt;comboBoxM1PrgName.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="transparentPanelM1.ContentPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 2</value>
@@ -3333,7 +3171,7 @@
     <value>0</value>
   </data>
   <data name="splitContainerIO.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-434, -12</value>
+    <value>20, 20</value>
   </data>
   <data name="splitContainerIO.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -6000,7 +5838,7 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAGCoRAAAgEAAAAAA
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAOCvRAAAgEAAAAAA
         /qsAQgs=
 </value>
   </data>
@@ -6014,7 +5852,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageHide.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="tabPageHelp.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>
@@ -6035,7 +5873,7 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAICXRAAAgEAAAAAA
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACfRAAAgEAAAAAA
         /qsAQgs=
 </value>
   </data>
@@ -6051,6 +5889,515 @@
   <data name="&gt;&gt;tabPageHelp.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="lbButtonM5StartStopOutBelt3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>620, 225</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 56</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt3.TabIndex" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt3.Name" xml:space="preserve">
+    <value>lbButtonM5StartStopOutBelt3</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt3.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt3.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>619, 159</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 56</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt2.TabIndex" type="System.Int32, mscorlib">
+    <value>139</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt2.Name" xml:space="preserve">
+    <value>lbButtonM5StartStopOutBelt2</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt2.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>619, 92</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 56</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt1.TabIndex" type="System.Int32, mscorlib">
+    <value>138</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt1.Name" xml:space="preserve">
+    <value>lbButtonM5StartStopOutBelt1</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt1.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt1.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbButtonM5StartStopTranslBelt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM5StartStopTranslBelt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>619, 19</value>
+  </data>
+  <data name="lbButtonM5StartStopTranslBelt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 56</value>
+  </data>
+  <data name="lbButtonM5StartStopTranslBelt.TabIndex" type="System.Int32, mscorlib">
+    <value>137</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopTranslBelt.Name" xml:space="preserve">
+    <value>lbButtonM5StartStopTranslBelt</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopTranslBelt.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopTranslBelt.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopTranslBelt.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonM5V2ExtBwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5V2ExtBwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>576, 300</value>
+  </data>
+  <data name="buttonM5V2ExtBwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5V2ExtBwd.TabIndex" type="System.Int32, mscorlib">
+    <value>136</value>
+  </data>
+  <data name="buttonM5V2ExtBwd.Text" xml:space="preserve">
+    <value>ext. 2 vertical down</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V2ExtBwd.Name" xml:space="preserve">
+    <value>buttonM5V2ExtBwd</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V2ExtBwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V2ExtBwd.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V2ExtBwd.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="buttonM5V2ExtFwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5V2ExtFwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>386, 300</value>
+  </data>
+  <data name="buttonM5V2ExtFwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5V2ExtFwd.TabIndex" type="System.Int32, mscorlib">
+    <value>135</value>
+  </data>
+  <data name="buttonM5V2ExtFwd.Text" xml:space="preserve">
+    <value>ext. 2 vertical up</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V2ExtFwd.Name" xml:space="preserve">
+    <value>buttonM5V2ExtFwd</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V2ExtFwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V2ExtFwd.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V2ExtFwd.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="buttonM5V1ExtBwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5V1ExtBwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 300</value>
+  </data>
+  <data name="buttonM5V1ExtBwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5V1ExtBwd.TabIndex" type="System.Int32, mscorlib">
+    <value>134</value>
+  </data>
+  <data name="buttonM5V1ExtBwd.Text" xml:space="preserve">
+    <value>ext. 1 vertical down</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V1ExtBwd.Name" xml:space="preserve">
+    <value>buttonM5V1ExtBwd</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V1ExtBwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V1ExtBwd.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V1ExtBwd.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="buttonM5V1ExtFwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5V1ExtFwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 300</value>
+  </data>
+  <data name="buttonM5V1ExtFwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5V1ExtFwd.TabIndex" type="System.Int32, mscorlib">
+    <value>133</value>
+  </data>
+  <data name="buttonM5V1ExtFwd.Text" xml:space="preserve">
+    <value>ext. 1 vertical up</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V1ExtFwd.Name" xml:space="preserve">
+    <value>buttonM5V1ExtFwd</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V1ExtFwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V1ExtFwd.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V1ExtFwd.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="buttonM5NoRotation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5NoRotation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>386, 234</value>
+  </data>
+  <data name="buttonM5NoRotation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5NoRotation.TabIndex" type="System.Int32, mscorlib">
+    <value>132</value>
+  </data>
+  <data name="buttonM5NoRotation.Text" xml:space="preserve">
+    <value>no rotation</value>
+  </data>
+  <data name="&gt;&gt;buttonM5NoRotation.Name" xml:space="preserve">
+    <value>buttonM5NoRotation</value>
+  </data>
+  <data name="&gt;&gt;buttonM5NoRotation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5NoRotation.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5NoRotation.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="buttonM5CCWRotation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5CCWRotation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 230</value>
+  </data>
+  <data name="buttonM5CCWRotation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5CCWRotation.TabIndex" type="System.Int32, mscorlib">
+    <value>131</value>
+  </data>
+  <data name="buttonM5CCWRotation.Text" xml:space="preserve">
+    <value>CCW rotation</value>
+  </data>
+  <data name="&gt;&gt;buttonM5CCWRotation.Name" xml:space="preserve">
+    <value>buttonM5CCWRotation</value>
+  </data>
+  <data name="&gt;&gt;buttonM5CCWRotation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5CCWRotation.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5CCWRotation.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="buttonM5CWRotation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5CWRotation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 230</value>
+  </data>
+  <data name="buttonM5CWRotation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5CWRotation.TabIndex" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="buttonM5CWRotation.Text" xml:space="preserve">
+    <value>CW rotation</value>
+  </data>
+  <data name="&gt;&gt;buttonM5CWRotation.Name" xml:space="preserve">
+    <value>buttonM5CWRotation</value>
+  </data>
+  <data name="&gt;&gt;buttonM5CWRotation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5CWRotation.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5CWRotation.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="buttonM5ClampClosing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5ClampClosing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 162</value>
+  </data>
+  <data name="buttonM5ClampClosing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5ClampClosing.TabIndex" type="System.Int32, mscorlib">
+    <value>129</value>
+  </data>
+  <data name="buttonM5ClampClosing.Text" xml:space="preserve">
+    <value>clamp closing</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampClosing.Name" xml:space="preserve">
+    <value>buttonM5ClampClosing</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampClosing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampClosing.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampClosing.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="buttonM5ClampOpening.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5ClampOpening.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 162</value>
+  </data>
+  <data name="buttonM5ClampOpening.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5ClampOpening.TabIndex" type="System.Int32, mscorlib">
+    <value>128</value>
+  </data>
+  <data name="buttonM5ClampOpening.Text" xml:space="preserve">
+    <value>clamp opening</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampOpening.Name" xml:space="preserve">
+    <value>buttonM5ClampOpening</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampOpening.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampOpening.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampOpening.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="buttonM5ClampBwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5ClampBwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 89</value>
+  </data>
+  <data name="buttonM5ClampBwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5ClampBwd.TabIndex" type="System.Int32, mscorlib">
+    <value>127</value>
+  </data>
+  <data name="buttonM5ClampBwd.Text" xml:space="preserve">
+    <value>clamp backward</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampBwd.Name" xml:space="preserve">
+    <value>buttonM5ClampBwd</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampBwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampBwd.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampBwd.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="buttonM5ClampFwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5ClampFwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 89</value>
+  </data>
+  <data name="buttonM5ClampFwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5ClampFwd.TabIndex" type="System.Int32, mscorlib">
+    <value>126</value>
+  </data>
+  <data name="buttonM5ClampFwd.Text" xml:space="preserve">
+    <value>clamp forward</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampFwd.Name" xml:space="preserve">
+    <value>buttonM5ClampFwd</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampFwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampFwd.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampFwd.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="buttonM5TranslatorBwd.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM5TranslatorBwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5TranslatorBwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 19</value>
+  </data>
+  <data name="buttonM5TranslatorBwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5TranslatorBwd.TabIndex" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="buttonM5TranslatorBwd.Text" xml:space="preserve">
+    <value>translator backward</value>
+  </data>
+  <data name="&gt;&gt;buttonM5TranslatorBwd.Name" xml:space="preserve">
+    <value>buttonM5TranslatorBwd</value>
+  </data>
+  <data name="&gt;&gt;buttonM5TranslatorBwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5TranslatorBwd.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5TranslatorBwd.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="buttonM5TranslatorFwd.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM5TranslatorFwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5TranslatorFwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 19</value>
+  </data>
+  <data name="buttonM5TranslatorFwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5TranslatorFwd.TabIndex" type="System.Int32, mscorlib">
+    <value>124</value>
+  </data>
+  <data name="buttonM5TranslatorFwd.Text" xml:space="preserve">
+    <value>translator forward</value>
+  </data>
+  <data name="&gt;&gt;buttonM5TranslatorFwd.Name" xml:space="preserve">
+    <value>buttonM5TranslatorFwd</value>
+  </data>
+  <data name="&gt;&gt;buttonM5TranslatorFwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5TranslatorFwd.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5TranslatorFwd.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="tabPageT5M5_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 22</value>
+  </data>
+  <data name="tabPageT5M5_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>871, 374</value>
+  </data>
+  <data name="tabPageT5M5_1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageT5M5_1.Text" xml:space="preserve">
+    <value>Teach</value>
+  </data>
+  <data name="tabPageT5M5_1.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAADAQAAAoEAAAAAA
+        /TNdQQs=
+</value>
+  </data>
+  <data name="&gt;&gt;tabPageT5M5_1.Name" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;tabPageT5M5_1.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabPageT5M5_1.Parent" xml:space="preserve">
+    <value>tabControlT5</value>
+  </data>
+  <data name="&gt;&gt;tabPageT5M5_1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabControlT5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>41, 36</value>
+  </data>
+  <data name="tabControlT5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>877, 400</value>
+  </data>
+  <data name="tabControlT5.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabControlT5.Text" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControlT5.Name" xml:space="preserve">
+    <value>tabControlT5</value>
+  </data>
+  <data name="&gt;&gt;tabControlT5.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabControl, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabControlT5.Parent" xml:space="preserve">
+    <value>tabPageSettings</value>
+  </data>
+  <data name="&gt;&gt;tabControlT5.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="tabPageSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>
   </data>
@@ -6064,7 +6411,7 @@
     <value>1</value>
   </data>
   <data name="tabPageSettings.Text" xml:space="preserve">
-    <value>Alarms</value>
+    <value>Manipulator</value>
   </data>
   <data name="tabPageSettings.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -6084,7 +6431,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageSettings.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>2</value>
   </data>
   <data name="TabPageDiagnostic.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>
@@ -6119,7 +6466,757 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;TabPageDiagnostic.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="button4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>804, 487</value>
+  </data>
+  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="button4.TabIndex" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
+  <data name="button4.Text" xml:space="preserve">
+    <value>todo - nuovo_programma</value>
+  </data>
+  <data name="&gt;&gt;button4.Name" xml:space="preserve">
+    <value>button4</value>
+  </data>
+  <data name="&gt;&gt;button4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="button5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>804, 420</value>
+  </data>
+  <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="button5.TabIndex" type="System.Int32, mscorlib">
+    <value>139</value>
+  </data>
+  <data name="button5.Text" xml:space="preserve">
+    <value>todo - salva_programma</value>
+  </data>
+  <data name="&gt;&gt;button5.Name" xml:space="preserve">
+    <value>button5</value>
+  </data>
+  <data name="&gt;&gt;button5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button5.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="button6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>804, 361</value>
+  </data>
+  <data name="button6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="button6.TabIndex" type="System.Int32, mscorlib">
+    <value>138</value>
+  </data>
+  <data name="button6.Text" xml:space="preserve">
+    <value>todo - carica_programma</value>
+  </data>
+  <data name="&gt;&gt;button6.Name" xml:space="preserve">
+    <value>button6</value>
+  </data>
+  <data name="&gt;&gt;button6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button6.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>724, 471</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 18</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>137</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>9999</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>549, 471</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 18</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>136</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>axis quote (mm)</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lbButton1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>309, 501</value>
+  </data>
+  <data name="lbButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>269, 73</value>
+  </data>
+  <data name="lbButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>135</value>
+  </data>
+  <data name="&gt;&gt;lbButton1.Name" xml:space="preserve">
+    <value>lbButton1</value>
+  </data>
+  <data name="&gt;&gt;lbButton1.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButton1.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;lbButton1.ZOrder" xml:space="preserve">
     <value>5</value>
+  </data>
+  <data name="lbButton2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 501</value>
+  </data>
+  <data name="lbButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 73</value>
+  </data>
+  <data name="lbButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>134</value>
+  </data>
+  <data name="&gt;&gt;lbButton2.Name" xml:space="preserve">
+    <value>lbButton2</value>
+  </data>
+  <data name="&gt;&gt;lbButton2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButton2.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;lbButton2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="button7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="button7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>794, 271</value>
+  </data>
+  <data name="button7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="button7.TabIndex" type="System.Int32, mscorlib">
+    <value>133</value>
+  </data>
+  <data name="button7.Text" xml:space="preserve">
+    <value>jog reset</value>
+  </data>
+  <data name="&gt;&gt;button7.Name" xml:space="preserve">
+    <value>button7</value>
+  </data>
+  <data name="&gt;&gt;button7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button7.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;button7.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
+    <value>point id</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
+    <value>quote (mm)</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
+    <value>speed (%)</value>
+  </data>
+  <metadata name="dataGridViewButtonColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewButtonColumn1.HeaderText" xml:space="preserve">
+    <value>register</value>
+  </data>
+  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>383, 260</value>
+  </data>
+  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>405, 180</value>
+  </data>
+  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
+    <value>132</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
+    <value>dataGridView1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lbLed1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 379</value>
+  </data>
+  <data name="lbLed1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 20</value>
+  </data>
+  <data name="lbLed1.TabIndex" type="System.Int32, mscorlib">
+    <value>131</value>
+  </data>
+  <data name="&gt;&gt;lbLed1.Name" xml:space="preserve">
+    <value>lbLed1</value>
+  </data>
+  <data name="&gt;&gt;lbLed1.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;lbLed1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="numericUpDownM3ManualSpeed.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 21.75pt</value>
+  </data>
+  <data name="numericUpDownM3ManualSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>638, 33</value>
+  </data>
+  <data name="numericUpDownM3ManualSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 43</value>
+  </data>
+  <data name="numericUpDownM3ManualSpeed.TabIndex" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM3ManualSpeed.Name" xml:space="preserve">
+    <value>numericUpDownM3ManualSpeed</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM3ManualSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM3ManualSpeed.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM3ManualSpeed.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="numericUpDownM3ManualQuote.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 21.75pt</value>
+  </data>
+  <data name="numericUpDownM3ManualQuote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>538, 33</value>
+  </data>
+  <data name="numericUpDownM3ManualQuote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 43</value>
+  </data>
+  <data name="numericUpDownM3ManualQuote.TabIndex" type="System.Int32, mscorlib">
+    <value>129</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM3ManualQuote.Name" xml:space="preserve">
+    <value>numericUpDownM3ManualQuote</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM3ManualQuote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM3ManualQuote.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM3ManualQuote.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="button8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>371, 102</value>
+  </data>
+  <data name="button8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="button8.TabIndex" type="System.Int32, mscorlib">
+    <value>128</value>
+  </data>
+  <data name="button8.Text" xml:space="preserve">
+    <value>print cycle</value>
+  </data>
+  <data name="&gt;&gt;button8.Name" xml:space="preserve">
+    <value>button8</value>
+  </data>
+  <data name="&gt;&gt;button8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button8.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;button8.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="buttonM3StartQuote.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM3StartQuote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>368, 32</value>
+  </data>
+  <data name="buttonM3StartQuote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM3StartQuote.TabIndex" type="System.Int32, mscorlib">
+    <value>127</value>
+  </data>
+  <data name="buttonM3StartQuote.Text" xml:space="preserve">
+    <value>start quote</value>
+  </data>
+  <data name="&gt;&gt;buttonM3StartQuote.Name" xml:space="preserve">
+    <value>buttonM3StartQuote</value>
+  </data>
+  <data name="&gt;&gt;buttonM3StartQuote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM3StartQuote.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM3StartQuote.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="lbButtonM3JogDown.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM3JogDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>750, 129</value>
+  </data>
+  <data name="lbButtonM3JogDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 73</value>
+  </data>
+  <data name="lbButtonM3JogDown.TabIndex" type="System.Int32, mscorlib">
+    <value>126</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM3JogDown.Name" xml:space="preserve">
+    <value>lbButtonM3JogDown</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM3JogDown.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM3JogDown.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM3JogDown.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="lbButtonM3JogUp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM3JogUp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>747, 30</value>
+  </data>
+  <data name="lbButtonM3JogUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 73</value>
+  </data>
+  <data name="lbButtonM3JogUp.TabIndex" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM3JogUp.Name" xml:space="preserve">
+    <value>lbButtonM3JogUp</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM3JogUp.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM3JogUp.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM3JogUp.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="button10.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 385</value>
+  </data>
+  <data name="button10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="button10.TabIndex" type="System.Int32, mscorlib">
+    <value>124</value>
+  </data>
+  <data name="button10.Text" xml:space="preserve">
+    <value>reset servo alarm</value>
+  </data>
+  <data name="&gt;&gt;button10.Name" xml:space="preserve">
+    <value>button10</value>
+  </data>
+  <data name="&gt;&gt;button10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button10.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;button10.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="button11.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 314</value>
+  </data>
+  <data name="button11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="button11.TabIndex" type="System.Int32, mscorlib">
+    <value>123</value>
+  </data>
+  <data name="button11.Text" xml:space="preserve">
+    <value>reset home</value>
+  </data>
+  <data name="&gt;&gt;button11.Name" xml:space="preserve">
+    <value>button11</value>
+  </data>
+  <data name="&gt;&gt;button11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button11.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;button11.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="button12.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 314</value>
+  </data>
+  <data name="button12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="button12.TabIndex" type="System.Int32, mscorlib">
+    <value>122</value>
+  </data>
+  <data name="button12.Text" xml:space="preserve">
+    <value>home</value>
+  </data>
+  <data name="&gt;&gt;button12.Name" xml:space="preserve">
+    <value>button12</value>
+  </data>
+  <data name="&gt;&gt;button12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button12.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;button12.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="button13.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 243</value>
+  </data>
+  <data name="button13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="button13.TabIndex" type="System.Int32, mscorlib">
+    <value>121</value>
+  </data>
+  <data name="button13.Text" xml:space="preserve">
+    <value>contrast closing</value>
+  </data>
+  <data name="&gt;&gt;button13.Name" xml:space="preserve">
+    <value>button13</value>
+  </data>
+  <data name="&gt;&gt;button13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button13.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;button13.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="button14.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 243</value>
+  </data>
+  <data name="button14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="button14.TabIndex" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="button14.Text" xml:space="preserve">
+    <value>constrast opening</value>
+  </data>
+  <data name="&gt;&gt;button14.Name" xml:space="preserve">
+    <value>button14</value>
+  </data>
+  <data name="&gt;&gt;button14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button14.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;button14.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="button15.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 175</value>
+  </data>
+  <data name="button15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="button15.TabIndex" type="System.Int32, mscorlib">
+    <value>119</value>
+  </data>
+  <data name="button15.Text" xml:space="preserve">
+    <value>centering clamps closing</value>
+  </data>
+  <data name="&gt;&gt;button15.Name" xml:space="preserve">
+    <value>button15</value>
+  </data>
+  <data name="&gt;&gt;button15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button15.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;button15.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="button16.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 175</value>
+  </data>
+  <data name="button16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="button16.TabIndex" type="System.Int32, mscorlib">
+    <value>118</value>
+  </data>
+  <data name="button16.Text" xml:space="preserve">
+    <value>centering clamps opening</value>
+  </data>
+  <data name="&gt;&gt;button16.Name" xml:space="preserve">
+    <value>button16</value>
+  </data>
+  <data name="&gt;&gt;button16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button16.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;button16.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="button17.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 102</value>
+  </data>
+  <data name="button17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="button17.TabIndex" type="System.Int32, mscorlib">
+    <value>117</value>
+  </data>
+  <data name="button17.Text" xml:space="preserve">
+    <value>big gripper closing</value>
+  </data>
+  <data name="&gt;&gt;button17.Name" xml:space="preserve">
+    <value>button17</value>
+  </data>
+  <data name="&gt;&gt;button17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button17.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;button17.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="button18.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 102</value>
+  </data>
+  <data name="button18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="button18.TabIndex" type="System.Int32, mscorlib">
+    <value>116</value>
+  </data>
+  <data name="button18.Text" xml:space="preserve">
+    <value>big clamp opening</value>
+  </data>
+  <data name="&gt;&gt;button18.Name" xml:space="preserve">
+    <value>button18</value>
+  </data>
+  <data name="&gt;&gt;button18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button18.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;button18.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="buttonM3SmallClampClosing.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM3SmallClampClosing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM3SmallClampClosing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 32</value>
+  </data>
+  <data name="buttonM3SmallClampClosing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM3SmallClampClosing.TabIndex" type="System.Int32, mscorlib">
+    <value>115</value>
+  </data>
+  <data name="buttonM3SmallClampClosing.Text" xml:space="preserve">
+    <value>small clamp closing</value>
+  </data>
+  <data name="&gt;&gt;buttonM3SmallClampClosing.Name" xml:space="preserve">
+    <value>buttonM3SmallClampClosing</value>
+  </data>
+  <data name="&gt;&gt;buttonM3SmallClampClosing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM3SmallClampClosing.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM3SmallClampClosing.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="buttonM3SmallClampOpening.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM3SmallClampOpening.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM3SmallClampOpening.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 32</value>
+  </data>
+  <data name="buttonM3SmallClampOpening.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM3SmallClampOpening.TabIndex" type="System.Int32, mscorlib">
+    <value>114</value>
+  </data>
+  <data name="buttonM3SmallClampOpening.Text" xml:space="preserve">
+    <value>small clamp opening</value>
+  </data>
+  <data name="&gt;&gt;buttonM3SmallClampOpening.Name" xml:space="preserve">
+    <value>buttonM3SmallClampOpening</value>
+  </data>
+  <data name="&gt;&gt;buttonM3SmallClampOpening.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM3SmallClampOpening.Parent" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM3SmallClampOpening.ZOrder" xml:space="preserve">
+    <value>26</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6149,10 +7246,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabPageT3M3_1</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>27</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6182,174 +7279,24 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>tabPage1</value>
+    <value>tabPageT3M3_1</value>
   </data>
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>28</value>
   </data>
-  <data name="lbButton1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 39.75pt, style=Bold</value>
-  </data>
-  <data name="lbButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>707, 35</value>
-  </data>
-  <data name="lbButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 73</value>
-  </data>
-  <data name="lbButton1.TabIndex" type="System.Int32, mscorlib">
-    <value>111</value>
-  </data>
-  <data name="&gt;&gt;lbButton1.Name" xml:space="preserve">
-    <value>lbButton1</value>
-  </data>
-  <data name="&gt;&gt;lbButton1.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbButton1.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lbButton1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn1.HeaderText" xml:space="preserve">
-    <value>point id</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn2.HeaderText" xml:space="preserve">
-    <value>quote (mm)</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn2.Width" type="System.Int32, mscorlib">
-    <value>200</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn3.HeaderText" xml:space="preserve">
-    <value>speed (%)</value>
-  </data>
-  <data name="dataGridViewTextBoxColumn3.Width" type="System.Int32, mscorlib">
-    <value>200</value>
-  </data>
-  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>42, 115</value>
-  </data>
-  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>500, 326</value>
-  </data>
-  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
-    <value>110</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
-    <value>dataGridView1</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="button4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>471, 35</value>
-  </data>
-  <data name="button4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="button4.TabIndex" type="System.Int32, mscorlib">
-    <value>109</value>
-  </data>
-  <data name="button4.Text" xml:space="preserve">
-    <value>todo - nuovo_programma</value>
-  </data>
-  <data name="&gt;&gt;button4.Name" xml:space="preserve">
-    <value>button4</value>
-  </data>
-  <data name="&gt;&gt;button4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button4.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;button4.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="button5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>260, 32</value>
-  </data>
-  <data name="button5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="button5.TabIndex" type="System.Int32, mscorlib">
-    <value>108</value>
-  </data>
-  <data name="button5.Text" xml:space="preserve">
-    <value>todo - salva_programma</value>
-  </data>
-  <data name="&gt;&gt;button5.Name" xml:space="preserve">
-    <value>button5</value>
-  </data>
-  <data name="&gt;&gt;button5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button5.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;button5.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="button6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="button6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 28</value>
-  </data>
-  <data name="button6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="button6.TabIndex" type="System.Int32, mscorlib">
-    <value>107</value>
-  </data>
-  <data name="button6.Text" xml:space="preserve">
-    <value>todo - carica_programma</value>
-  </data>
-  <data name="&gt;&gt;button6.Name" xml:space="preserve">
-    <value>button6</value>
-  </data>
-  <data name="&gt;&gt;button6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button6.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;button6.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="tabPageT3M3_1.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 22</value>
   </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="tabPageT3M3_1.Size" type="System.Drawing.Size, System.Drawing">
     <value>979, 604</value>
   </data>
-  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+  <data name="tabPageT3M3_1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Paprint int</value>
+  <data name="tabPageT3M3_1.Text" xml:space="preserve">
+    <value>Teach</value>
   </data>
-  <data name="tabPage1.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+  <data name="tabPageT3M3_1.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
@@ -6357,17 +7304,49 @@
         /TNdQQs=
 </value>
   </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
+  <data name="&gt;&gt;tabPageT3M3_1.Name" xml:space="preserve">
+    <value>tabPageT3M3_1</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+  <data name="&gt;&gt;tabPageT3M3_1.Type" xml:space="preserve">
     <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
   </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tabPageT3M3_1.Parent" xml:space="preserve">
     <value>tabControlT3</value>
   </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tabPageT3M3_1.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="tabPageT3M3_2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 22</value>
+  </data>
+  <data name="tabPageT3M3_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>979, 604</value>
+  </data>
+  <data name="tabPageT3M3_2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPageT3M3_2.Text" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="tabPageT3M3_2.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAABAQgAAoEAAAAAA
+        /TNdQQs=
+</value>
+  </data>
+  <data name="&gt;&gt;tabPageT3M3_2.Name" xml:space="preserve">
+    <value>tabPageT3M3_2</value>
+  </data>
+  <data name="&gt;&gt;tabPageT3M3_2.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabPageT3M3_2.Parent" xml:space="preserve">
+    <value>tabControlT3</value>
+  </data>
+  <data name="&gt;&gt;tabPageT3M3_2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="tabControlT3.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 10</value>
@@ -6426,7 +7405,71 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
+  </data>
+  <data name="tabPageT2M2_3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 34</value>
+  </data>
+  <data name="tabPageT2M2_3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>979, 592</value>
+  </data>
+  <data name="tabPageT2M2_3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPageT2M2_3.Text" xml:space="preserve">
+    <value>digital input</value>
+  </data>
+  <data name="tabPageT2M2_3.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAAD2QgAAoEAAAAAA
+        /brLQQs=
+</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_3.Name" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_3.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_3.Parent" xml:space="preserve">
+    <value>tabControlT2</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageT2M2_4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 34</value>
+  </data>
+  <data name="tabPageT2M2_4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>979, 592</value>
+  </data>
+  <data name="tabPageT2M2_4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabPageT2M2_4.Text" xml:space="preserve">
+    <value>digital output</value>
+  </data>
+  <data name="tabPageT2M2_4.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAAB9QwAAoEAAAAAA
+        /brLQQs=
+</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_4.Name" xml:space="preserve">
+    <value>tabPageT2M2_4</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_4.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_4.Parent" xml:space="preserve">
+    <value>tabControlT2</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_4.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="buttonM2SaveAsTestProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -6602,7 +7645,7 @@
     <value>tabControlT2</value>
   </data>
   <data name="&gt;&gt;tabPageT2M2_2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -7261,31 +8304,31 @@
   <data name="&gt;&gt;buttonM2CenteringClampsOpening.ZOrder" xml:space="preserve">
     <value>23</value>
   </data>
-  <data name="buttonM2BigGripperClosing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="buttonM2BigClampClosing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="buttonM2BigGripperClosing.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="buttonM2BigClampClosing.Location" type="System.Drawing.Point, System.Drawing">
     <value>211, 101</value>
   </data>
-  <data name="buttonM2BigGripperClosing.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="buttonM2BigClampClosing.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 53</value>
   </data>
-  <data name="buttonM2BigGripperClosing.TabIndex" type="System.Int32, mscorlib">
+  <data name="buttonM2BigClampClosing.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="buttonM2BigGripperClosing.Text" xml:space="preserve">
+  <data name="buttonM2BigClampClosing.Text" xml:space="preserve">
     <value>big gripper closing</value>
   </data>
-  <data name="&gt;&gt;buttonM2BigGripperClosing.Name" xml:space="preserve">
-    <value>buttonM2BigGripperClosing</value>
+  <data name="&gt;&gt;buttonM2BigClampClosing.Name" xml:space="preserve">
+    <value>buttonM2BigClampClosing</value>
   </data>
-  <data name="&gt;&gt;buttonM2BigGripperClosing.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonM2BigClampClosing.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;buttonM2BigGripperClosing.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonM2BigClampClosing.Parent" xml:space="preserve">
     <value>tabPageT2M2_1</value>
   </data>
-  <data name="&gt;&gt;buttonM2BigGripperClosing.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;buttonM2BigClampClosing.ZOrder" xml:space="preserve">
     <value>24</value>
   </data>
   <data name="buttonM2BigClampOpening.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -7402,7 +8445,7 @@
     <value>tabControlT2</value>
   </data>
   <data name="&gt;&gt;tabPageT2M2_1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="tabControlT2.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 10</value>
@@ -7461,7 +8504,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageConsole.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="tabPageRecipe.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>
@@ -7496,7 +8539,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageRecipe.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="labelLoginLevel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7591,7 +8634,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageMain.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="tabControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -7797,24 +8840,6 @@
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn1</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn2</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn3</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;ColumnM2PointID.Name" xml:space="preserve">
     <value>ColumnM2PointID</value>
   </data>
@@ -7856,6 +8881,30 @@
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn6.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn2</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn3</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewButtonColumn1.Name" xml:space="preserve">
+    <value>dataGridViewButtonColumn1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewButtonColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormMain</value>
