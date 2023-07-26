@@ -174,6 +174,33 @@
   <data name="&gt;&gt;splitContainer6.Type" xml:space="preserve">
     <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="ServiceConfiBtn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="ServiceConfiBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>503, 59</value>
+  </data>
+  <data name="ServiceConfiBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 28</value>
+  </data>
+  <data name="ServiceConfiBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>87</value>
+  </data>
+  <data name="ServiceConfiBtn.Text" xml:space="preserve">
+    <value>Config Form</value>
+  </data>
+  <data name="&gt;&gt;ServiceConfiBtn.Name" xml:space="preserve">
+    <value>ServiceConfiBtn</value>
+  </data>
+  <data name="&gt;&gt;ServiceConfiBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ServiceConfiBtn.Parent" xml:space="preserve">
+    <value>transparentPanelLine.ContentPanel</value>
+  </data>
+  <data name="&gt;&gt;ServiceConfiBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="clientTestOpc.Location" type="System.Drawing.Point, System.Drawing">
     <value>503, 24</value>
   </data>
@@ -196,7 +223,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;clientTestOpc.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="buttonResetCounter.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -226,7 +253,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;buttonResetCounter.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="labelPieceCounter.Location" type="System.Drawing.Point, System.Drawing">
     <value>233, 20</value>
@@ -250,7 +277,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;labelPieceCounter.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="lbLedLineReady.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -277,7 +304,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbLedLineReady.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lbButtonStartStop.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 39.75pt, style=Bold</value>
@@ -301,7 +328,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbButtonStartStop.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lbLedLineStatus.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -328,7 +355,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbLedLineStatus.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="lbLedAirPressure.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -355,7 +382,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbLedAirPressure.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="lbLedEmergency.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -382,7 +409,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbLedEmergency.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="lbButtonPause.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 39.75pt, style=Bold</value>
@@ -406,7 +433,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbButtonPause.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="lbLedPLCConnection.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -433,7 +460,7 @@
     <value>transparentPanelLine.ContentPanel</value>
   </data>
   <data name="&gt;&gt;lbLedPLCConnection.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="transparentPanelLine.ContentPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 2</value>
@@ -3332,111 +3359,6 @@
   <data name="&gt;&gt;trueTransparentPanelAuto.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tabPageHide.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 78</value>
-  </data>
-  <data name="tabPageHide.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="tabPageHide.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 716</value>
-  </data>
-  <data name="tabPageHide.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tabPageHide.Text" xml:space="preserve">
-    <value>Hide</value>
-  </data>
-  <data name="tabPageHide.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
-        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAMCKRAAAgEAAAAAA
-        /qsAQgs=
-</value>
-  </data>
-  <data name="&gt;&gt;tabPageHide.Name" xml:space="preserve">
-    <value>tabPageHide</value>
-  </data>
-  <data name="&gt;&gt;tabPageHide.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
-  </data>
-  <data name="&gt;&gt;tabPageHide.Parent" xml:space="preserve">
-    <value>tabControlMain</value>
-  </data>
-  <data name="&gt;&gt;tabPageHide.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="tabPageHelp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 78</value>
-  </data>
-  <data name="tabPageHelp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="tabPageHelp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 716</value>
-  </data>
-  <data name="tabPageHelp.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tabPageHelp.Text" xml:space="preserve">
-    <value>Setup</value>
-  </data>
-  <data name="tabPageHelp.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
-        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAMBzRAAAgEAAAAAA
-        /qsAQgs=
-</value>
-  </data>
-  <data name="&gt;&gt;tabPageHelp.Name" xml:space="preserve">
-    <value>tabPageHelp</value>
-  </data>
-  <data name="&gt;&gt;tabPageHelp.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
-  </data>
-  <data name="&gt;&gt;tabPageHelp.Parent" xml:space="preserve">
-    <value>tabControlMain</value>
-  </data>
-  <data name="&gt;&gt;tabPageHelp.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="tabPageSettings.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 78</value>
-  </data>
-  <data name="tabPageSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 3, 4, 3</value>
-  </data>
-  <data name="tabPageSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 716</value>
-  </data>
-  <data name="tabPageSettings.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tabPageSettings.Text" xml:space="preserve">
-    <value>Alarms</value>
-  </data>
-  <data name="tabPageSettings.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
-        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAIBORAAAgEAAAAAA
-        /qsAQgs=
-</value>
-  </data>
-  <data name="&gt;&gt;tabPageSettings.Name" xml:space="preserve">
-    <value>tabPageSettings</value>
-  </data>
-  <data name="&gt;&gt;tabPageSettings.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
-  </data>
-  <data name="&gt;&gt;tabPageSettings.Parent" xml:space="preserve">
-    <value>tabControlMain</value>
-  </data>
-  <data name="&gt;&gt;tabPageSettings.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="splitContainerIO.Location" type="System.Drawing.Point, System.Drawing">
     <value>-434, -12</value>
   </data>
@@ -6086,6 +6008,111 @@
   <data name="&gt;&gt;splitContainerIO.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="tabPageHide.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 78</value>
+  </data>
+  <data name="tabPageHide.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="tabPageHide.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1010, 716</value>
+  </data>
+  <data name="tabPageHide.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageHide.Text" xml:space="preserve">
+    <value>Hide</value>
+  </data>
+  <data name="tabPageHide.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAMCKRAAAgEAAAAAA
+        /qsAQgs=
+</value>
+  </data>
+  <data name="&gt;&gt;tabPageHide.Name" xml:space="preserve">
+    <value>tabPageHide</value>
+  </data>
+  <data name="&gt;&gt;tabPageHide.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabPageHide.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageHide.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="tabPageHelp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 78</value>
+  </data>
+  <data name="tabPageHelp.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="tabPageHelp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1010, 716</value>
+  </data>
+  <data name="tabPageHelp.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageHelp.Text" xml:space="preserve">
+    <value>Setup</value>
+  </data>
+  <data name="tabPageHelp.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAMBzRAAAgEAAAAAA
+        /qsAQgs=
+</value>
+  </data>
+  <data name="&gt;&gt;tabPageHelp.Name" xml:space="preserve">
+    <value>tabPageHelp</value>
+  </data>
+  <data name="&gt;&gt;tabPageHelp.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabPageHelp.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageHelp.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tabPageSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 78</value>
+  </data>
+  <data name="tabPageSettings.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 3, 4, 3</value>
+  </data>
+  <data name="tabPageSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1010, 716</value>
+  </data>
+  <data name="tabPageSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPageSettings.Text" xml:space="preserve">
+    <value>Alarms</value>
+  </data>
+  <data name="tabPageSettings.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAIBORAAAgEAAAAAA
+        /qsAQgs=
+</value>
+  </data>
+  <data name="&gt;&gt;tabPageSettings.Name" xml:space="preserve">
+    <value>tabPageSettings</value>
+  </data>
+  <data name="&gt;&gt;tabPageSettings.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabPageSettings.Parent" xml:space="preserve">
+    <value>tabControlMain</value>
+  </data>
+  <data name="&gt;&gt;tabPageSettings.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <data name="TabPageDiagnostic.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>
   </data>
@@ -6426,7 +6453,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -7285,7 +7312,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageConsole.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="tabPageRecipe.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>
@@ -7320,7 +7347,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageRecipe.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="labelLoginLevel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7415,7 +7442,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageMain.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>0</value>
   </data>
   <data name="tabControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -7621,6 +7648,24 @@
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn2</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn3</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;ColumnM2PointID.Name" xml:space="preserve">
     <value>ColumnM2PointID</value>
   </data>
@@ -7644,24 +7689,6 @@
   </data>
   <data name="&gt;&gt;ColumnM2Register.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn1</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn2</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn3</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormMain</value>

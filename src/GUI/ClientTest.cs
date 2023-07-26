@@ -1,6 +1,7 @@
 ﻿using Opc.UaFx;
 using Org.BouncyCastle.Bcpg.OpenPgp;
 using RSACommon;
+using RSACommon.Configuration;
 using RSACommon.Service;
 using System;
 using System.Collections.Generic;
@@ -29,9 +30,14 @@ namespace GUI
 
         private void ClientTest_Load(object sender, EventArgs e)
         {
-            hostTxtbox.Text = _client.Configurator.Host;
-            portTxtbox.Text = _client.Configurator.Port.ToString();
-            schemeTxtbox.Text = _client.Configurator.Scheme;
+
+            if (_client.Configuration is OpcClientConfiguration confi)
+            {
+                hostTxtbox.Text = confi.Host;
+                portTxtbox.Text = confi.Port.ToString();
+            }
+
+            schemeTxtbox.Text = _client.Configuration.Scheme;
 
             textBoxLogTxtbox.Multiline = true;
             textBoxLogTxtbox.ReadOnly = true;
@@ -157,7 +163,7 @@ namespace GUI
 
         private async void button2_Click(object sender, EventArgs e)
         {
-            if (!_client.ClientIsactive)
+            if (!_client.ClientIsConnected)
                 Connect();
 
             List<string> ret = await _client.GetServerFolder();

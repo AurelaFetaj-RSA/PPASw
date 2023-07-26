@@ -179,7 +179,6 @@ namespace GUI
             myCore.AddScoped<Diagnostic.Core.Diagnostic>();
             myCore.AddScoped<OpcClientService>();
 
-
             //OpcClientConfiguration Config = new OpcClientConfiguration()
             //{
             //    ServiceName = "OpcClient",
@@ -222,10 +221,7 @@ namespace GUI
                 ccService.SetObjectData(new PlasticOpcClientConfig().Config());
             }
 
-            if (await ccService.Connect())
-            {
-
-            }
+            myCore?.Start();
 
             _splashScreen?.WriteOnTextboxAsync($"Core Configuration ended");
             _splashScreen?.WriteOnTextboxAsync($"Core Started");

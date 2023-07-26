@@ -168,6 +168,17 @@ namespace GUI
                 });
             }
         }
+        #region -----LETTURA PROGRAMMI-----
+
+
+
+
+
+
+
+
+        #endregion
+
 
         #region (* machines status *)
         public async Task UpdateOPCUAStatus()
@@ -181,6 +192,9 @@ namespace GUI
             //keys.Add("pcM6Status");
 
             //var varRresultS = await ccService.Read(keys);
+
+            if (!ccService.IsActive || !ccService.ClientIsConnected)
+                return;
 
             //opcua M1 status
             var varResult = await ccService.Read("pcM1Status");
@@ -676,8 +690,8 @@ namespace GUI
                 lbLedM2HomingDone.Label = "homing not done";
                 lbLedM2T2HomingDone.LedColor = Color.Red;
                 lbLedM2T2HomingDone.Label = "homing not done";
-                labelM2Homing.Text = "homing not done";
-                labelM2Homing.ForeColor = Color.Red;
+                //labelM2Homing.Text = "homing not done";
+                //labelM2Homing.ForeColor = Color.Red;
             }
 
             else
@@ -686,8 +700,8 @@ namespace GUI
                 lbLedM2HomingDone.Label = "homing done";
                 lbLedM2T2HomingDone.LedColor = Color.FromArgb(195, 222, 155);
                 lbLedM2T2HomingDone.Label = "homing done";
-                labelM2Homing.Text = "homing done";
-                labelM2Homing.ForeColor = Color.FromArgb(16,170,108);
+                //labelM2Homing.Text = "homing done";
+                //labelM2Homing.ForeColor = Color.FromArgb(16,170,108);
             }
         }
 
