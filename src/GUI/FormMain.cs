@@ -30,6 +30,7 @@ using OpcCustom;
 using RSACommon.Service;
 using RSACommon.Configuration;
 using RSACommon.ProgramParser;
+using RSACommon.Points;
 
 namespace GUI
 {
@@ -216,8 +217,9 @@ namespace GUI
 
             if(dummyS is ProgramReadService progRS)
             {
-                //ProgramParser<IObjProgram> standardParser = new StandardProgramParser();
-                //progRS.SetProgramParser(standardParser);
+                StandardProgramParser standardParser = new StandardProgramParser();
+                progRS.SetProgramParser(standardParser);
+                await progRS.LoadProgramAsync<PointAxis>();
             }
 
             foreach (var service in listOfService)
@@ -234,6 +236,8 @@ namespace GUI
 
             _splashScreen?.WriteOnTextboxAsync($"Core Configuration ended");
             _splashScreen?.WriteOnTextboxAsync($"Core Started");
+
+
         }
 
         private void InitLastParameter()

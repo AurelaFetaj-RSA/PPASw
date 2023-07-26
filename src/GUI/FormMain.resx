@@ -6041,7 +6041,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageHide.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="tabPageHelp.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>
@@ -6076,7 +6076,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageHelp.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="tabPageSettings.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>
@@ -6111,7 +6111,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageSettings.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="TabPageDiagnostic.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>
@@ -6146,7 +6146,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;TabPageDiagnostic.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -6453,7 +6453,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>5</value>
   </data>
   <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -7312,7 +7312,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageConsole.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>6</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -7493,7 +7493,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageMain.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>7</value>
   </data>
   <data name="tabControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
