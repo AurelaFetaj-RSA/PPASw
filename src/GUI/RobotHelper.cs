@@ -402,6 +402,7 @@ namespace GUI
 
         public void UpdateOPCUAM2Lamp(short value)
         {
+            tabControlT2.Enabled = false;
             if (value == 0)
             {
                 lbLedM2Status.LedColor = Color.Red;
@@ -418,6 +419,7 @@ namespace GUI
             {
                 lbLedM2Status.LedColor = Color.Orange;
                 lbLedM2Status.Label = "manual";
+                tabControlT2.Enabled = true;
             }
 
             if (value == 3)
@@ -674,6 +676,8 @@ namespace GUI
                 lbLedM2HomingDone.Label = "homing not done";
                 lbLedM2T2HomingDone.LedColor = Color.Red;
                 lbLedM2T2HomingDone.Label = "homing not done";
+                labelM2Homing.Text = "homing not done";
+                labelM2Homing.ForeColor = Color.Red;
             }
 
             else
@@ -682,6 +686,8 @@ namespace GUI
                 lbLedM2HomingDone.Label = "homing done";
                 lbLedM2T2HomingDone.LedColor = Color.FromArgb(195, 222, 155);
                 lbLedM2T2HomingDone.Label = "homing done";
+                labelM2Homing.Text = "homing done";
+                labelM2Homing.ForeColor = Color.FromArgb(16,170,108);
             }
         }
 
