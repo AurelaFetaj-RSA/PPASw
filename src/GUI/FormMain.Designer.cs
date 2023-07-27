@@ -58,21 +58,22 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle14 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle15 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle16 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle6 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle7 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle17 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle18 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle19 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle6 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle7 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle8 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle20 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle21 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle22 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle8 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle9 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle23 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle24 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle25 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -80,7 +81,7 @@
             LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle9 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemColorStyle toolItemColorStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolItemColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle9 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle10 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabStripStyle tabStripStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabStripStyle();
             LidorSystems.IntegralUI.Controls.ToolLabel toolLabel1 = new LidorSystems.IntegralUI.Controls.ToolLabel();
@@ -90,7 +91,6 @@
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.trueTransparentPanelAuto = new LidorSystems.IntegralUI.Controls.TrueTransparentPanel();
             this.transparentPanelLine = new LidorSystems.IntegralUI.Controls.TransparentPanel();
-            this.ServiceConfiBtn = new System.Windows.Forms.Button();
             this.clientTestOpc = new System.Windows.Forms.Button();
             this.buttonResetCounter = new System.Windows.Forms.Button();
             this.labelPieceCounter = new LidorSystems.IntegralUI.Controls.Label();
@@ -104,7 +104,6 @@
             this.transparentPanelM6 = new LidorSystems.IntegralUI.Controls.TransparentPanel();
             this.labelM6Name = new System.Windows.Forms.Label();
             this.lbLedM6HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedM6Ready = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.labelM6Param1Value = new System.Windows.Forms.Label();
             this.labelM6Param1Name = new System.Windows.Forms.Label();
             this.lbLedM6Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -113,7 +112,6 @@
             this.transparentPanelM5 = new LidorSystems.IntegralUI.Controls.TransparentPanel();
             this.labelM5Name = new System.Windows.Forms.Label();
             this.lbLedM5HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedM5Ready = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.labelM5Param1Value = new System.Windows.Forms.Label();
             this.labelM5Param1Name = new System.Windows.Forms.Label();
             this.lbLedM5Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -122,7 +120,6 @@
             this.transparentPanelM4 = new LidorSystems.IntegralUI.Controls.TransparentPanel();
             this.labelM4Name = new System.Windows.Forms.Label();
             this.lbLedM4HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedM4Ready = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.labelM4Param1Value = new System.Windows.Forms.Label();
             this.labelM4Param1Name = new System.Windows.Forms.Label();
             this.lbLedM4Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -131,7 +128,6 @@
             this.transparentPanelM3 = new LidorSystems.IntegralUI.Controls.TransparentPanel();
             this.labelM3Name = new System.Windows.Forms.Label();
             this.lbLedM3HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedM3Ready = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.labelM3Param1Value = new System.Windows.Forms.Label();
             this.labelM3Param1Name = new System.Windows.Forms.Label();
             this.lbLedM3Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -140,7 +136,6 @@
             this.transparentPanelM2 = new LidorSystems.IntegralUI.Controls.TransparentPanel();
             this.labelM2Name = new System.Windows.Forms.Label();
             this.lbLedM2HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedM2Ready = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.labelM2Param1Value = new System.Windows.Forms.Label();
             this.labelM2Param1Name = new System.Windows.Forms.Label();
             this.lbLedM2Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -149,7 +144,6 @@
             this.transparentPanelM1 = new LidorSystems.IntegralUI.Controls.TransparentPanel();
             this.labelM1Name = new System.Windows.Forms.Label();
             this.lbLedM1HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedM1Ready = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.labelM1Param1Value = new System.Windows.Forms.Label();
             this.labelM1Param1Name = new System.Windows.Forms.Label();
             this.lbLedM1Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -259,23 +253,77 @@
             this.tabPageHide = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageHelp = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageSettings = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.tabControlT5 = new LidorSystems.IntegralUI.Containers.TabControl();
+            this.tabPageT5M5_1 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.lbButtonM5StartStopOutBelt3 = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.lbButtonM5StartStopOutBelt2 = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.lbButtonM5StartStopOutBelt1 = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.lbButtonM5StartStopTranslBelt = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.buttonM5V2ExtBwd = new System.Windows.Forms.Button();
+            this.buttonM5V2ExtFwd = new System.Windows.Forms.Button();
+            this.buttonM5V1ExtBwd = new System.Windows.Forms.Button();
+            this.buttonM5V1ExtFwd = new System.Windows.Forms.Button();
+            this.buttonM5NoRotation = new System.Windows.Forms.Button();
+            this.buttonM5CCWRotation = new System.Windows.Forms.Button();
+            this.buttonM5CWRotation = new System.Windows.Forms.Button();
+            this.buttonM5ClampClosing = new System.Windows.Forms.Button();
+            this.buttonM5ClampOpening = new System.Windows.Forms.Button();
+            this.buttonM5ClampBwd = new System.Windows.Forms.Button();
+            this.buttonM5ClampFwd = new System.Windows.Forms.Button();
+            this.buttonM5TranslatorBwd = new System.Windows.Forms.Button();
+            this.buttonM5TranslatorFwd = new System.Windows.Forms.Button();
             this.TabPageDiagnostic = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPage4 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlT3 = new LidorSystems.IntegralUI.Containers.TabControl();
-            this.tabPage1 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.tabPageT3M3_1 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.lbButton1 = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.lbButton2 = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.button7 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.lbLed1 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.numericUpDownM3ManualSpeed = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownM3ManualQuote = new System.Windows.Forms.NumericUpDown();
+            this.button8 = new System.Windows.Forms.Button();
+            this.buttonM3StartQuote = new System.Windows.Forms.Button();
+            this.lbButtonM3JogDown = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.lbButtonM3JogUp = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.buttonM3SmallClampClosing = new System.Windows.Forms.Button();
+            this.buttonM3SmallClampOpening = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabPageT3M3_2 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageConsole = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlT2 = new LidorSystems.IntegralUI.Containers.TabControl();
-            this.tabPageM2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.tabPageT2M2_3 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.tabPageT2M2_4 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.tabPageT2M2_2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.buttonM2SaveAsTestProgram = new System.Windows.Forms.Button();
+            this.buttonM2SaveTestProgram = new System.Windows.Forms.Button();
+            this.buttonM2LoadTestProgram = new System.Windows.Forms.Button();
+            this.dataGridViewM2TestPoints = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbButtonM2StartTest = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.tabPageT2M2_1 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -285,7 +333,7 @@
             this.lbButtonM2StartStopWorkingBelt = new LBSoft.IndustrialCtrls.Buttons.LBButton();
             this.buttonM2JogReset = new System.Windows.Forms.Button();
             this.numericUpDownM2JogSpeed = new System.Windows.Forms.NumericUpDown();
-            this.dataGridViewM2Points = new System.Windows.Forms.DataGridView();
+            this.dataGridViewM2TeachPoints = new System.Windows.Forms.DataGridView();
             this.ColumnM2PointID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnMeQuote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnM2Speed = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -304,17 +352,18 @@
             this.buttonM2ContrastOpening = new System.Windows.Forms.Button();
             this.buttonM2CenteringClampsClosing = new System.Windows.Forms.Button();
             this.buttonM2CenteringClampsOpening = new System.Windows.Forms.Button();
-            this.buttonM2BigGripperClosing = new System.Windows.Forms.Button();
+            this.buttonM2BigClampClosing = new System.Windows.Forms.Button();
             this.buttonM2BigClampOpening = new System.Windows.Forms.Button();
             this.buttonM2SmallClampClosing = new System.Windows.Forms.Button();
             this.buttonM2SmallClampOpening = new System.Windows.Forms.Button();
             this.tabPageRecipe = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.modelCombobox = new System.Windows.Forms.ComboBox();
             this.tabPageMain = new LidorSystems.IntegralUI.Containers.TabPage();
             this.labelLoginLevel = new System.Windows.Forms.Label();
             this.labelDateTime = new System.Windows.Forms.Label();
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
+            this.tabPage1 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.tabPage2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.tabPage3 = new LidorSystems.IntegralUI.Containers.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trueTransparentPanelAuto)).BeginInit();
@@ -345,21 +394,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerIO)).BeginInit();
             this.splitContainerIO.Panel2.SuspendLayout();
             this.splitContainerIO.SuspendLayout();
+            this.tabPageSettings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tabControlT5)).BeginInit();
+            this.tabControlT5.SuspendLayout();
+            this.tabPageT5M5_1.SuspendLayout();
             this.TabPageDiagnostic.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT3)).BeginInit();
             this.tabControlT3.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPageT3M3_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3ManualSpeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3ManualQuote)).BeginInit();
             this.tabPageConsole.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT2)).BeginInit();
             this.tabControlT2.SuspendLayout();
-            this.tabPageM2.SuspendLayout();
+            this.tabPageT2M2_2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TestPoints)).BeginInit();
+            this.tabPageT2M2_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2JogSpeed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2Points)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TeachPoints)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualQuote)).BeginInit();
-            this.tabPageRecipe.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).BeginInit();
             this.tabControlMain.SuspendLayout();
@@ -414,7 +470,6 @@
             // transparentPanelLine.ContentPanel
             // 
             this.transparentPanelLine.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.transparentPanelLine.ContentPanel.Controls.Add(this.ServiceConfiBtn);
             this.transparentPanelLine.ContentPanel.Controls.Add(this.clientTestOpc);
             this.transparentPanelLine.ContentPanel.Controls.Add(this.buttonResetCounter);
             this.transparentPanelLine.ContentPanel.Controls.Add(this.labelPieceCounter);
@@ -431,13 +486,6 @@
             this.transparentPanelLine.FormatStyle = controlFormatStyle1;
             resources.ApplyResources(this.transparentPanelLine, "transparentPanelLine");
             this.transparentPanelLine.Name = "transparentPanelLine";
-            // 
-            // ServiceConfiBtn
-            // 
-            resources.ApplyResources(this.ServiceConfiBtn, "ServiceConfiBtn");
-            this.ServiceConfiBtn.Name = "ServiceConfiBtn";
-            this.ServiceConfiBtn.UseVisualStyleBackColor = true;
-            this.ServiceConfiBtn.Click += new System.EventHandler(this.openConfigFormTextbox_Click);
             // 
             // clientTestOpc
             // 
@@ -571,7 +619,6 @@
             this.transparentPanelM6.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.transparentPanelM6.ContentPanel.Controls.Add(this.labelM6Name);
             this.transparentPanelM6.ContentPanel.Controls.Add(this.lbLedM6HomingDone);
-            this.transparentPanelM6.ContentPanel.Controls.Add(this.lbLedM6Ready);
             this.transparentPanelM6.ContentPanel.Controls.Add(this.labelM6Param1Value);
             this.transparentPanelM6.ContentPanel.Controls.Add(this.labelM6Param1Name);
             this.transparentPanelM6.ContentPanel.Controls.Add(this.lbLedM6Status);
@@ -604,21 +651,6 @@
             this.lbLedM6HomingDone.Renderer = null;
             this.lbLedM6HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
             this.lbLedM6HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedM6Ready
-            // 
-            this.lbLedM6Ready.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM6Ready.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM6Ready, "lbLedM6Ready");
-            this.lbLedM6Ready.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM6Ready.Label = "ready";
-            this.lbLedM6Ready.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM6Ready.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            this.lbLedM6Ready.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM6Ready.Name = "lbLedM6Ready";
-            this.lbLedM6Ready.Renderer = null;
-            this.lbLedM6Ready.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM6Ready.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
             // 
             // labelM6Param1Value
             // 
@@ -674,7 +706,6 @@
             this.transparentPanelM5.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.transparentPanelM5.ContentPanel.Controls.Add(this.labelM5Name);
             this.transparentPanelM5.ContentPanel.Controls.Add(this.lbLedM5HomingDone);
-            this.transparentPanelM5.ContentPanel.Controls.Add(this.lbLedM5Ready);
             this.transparentPanelM5.ContentPanel.Controls.Add(this.labelM5Param1Value);
             this.transparentPanelM5.ContentPanel.Controls.Add(this.labelM5Param1Name);
             this.transparentPanelM5.ContentPanel.Controls.Add(this.lbLedM5Status);
@@ -707,21 +738,6 @@
             this.lbLedM5HomingDone.Renderer = null;
             this.lbLedM5HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
             this.lbLedM5HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedM5Ready
-            // 
-            this.lbLedM5Ready.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM5Ready.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM5Ready, "lbLedM5Ready");
-            this.lbLedM5Ready.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM5Ready.Label = "ready";
-            this.lbLedM5Ready.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM5Ready.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            this.lbLedM5Ready.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM5Ready.Name = "lbLedM5Ready";
-            this.lbLedM5Ready.Renderer = null;
-            this.lbLedM5Ready.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM5Ready.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
             // 
             // labelM5Param1Value
             // 
@@ -777,7 +793,6 @@
             this.transparentPanelM4.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.transparentPanelM4.ContentPanel.Controls.Add(this.labelM4Name);
             this.transparentPanelM4.ContentPanel.Controls.Add(this.lbLedM4HomingDone);
-            this.transparentPanelM4.ContentPanel.Controls.Add(this.lbLedM4Ready);
             this.transparentPanelM4.ContentPanel.Controls.Add(this.labelM4Param1Value);
             this.transparentPanelM4.ContentPanel.Controls.Add(this.labelM4Param1Name);
             this.transparentPanelM4.ContentPanel.Controls.Add(this.lbLedM4Status);
@@ -810,21 +825,6 @@
             this.lbLedM4HomingDone.Renderer = null;
             this.lbLedM4HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
             this.lbLedM4HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedM4Ready
-            // 
-            this.lbLedM4Ready.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM4Ready.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM4Ready, "lbLedM4Ready");
-            this.lbLedM4Ready.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM4Ready.Label = "ready";
-            this.lbLedM4Ready.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM4Ready.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            this.lbLedM4Ready.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM4Ready.Name = "lbLedM4Ready";
-            this.lbLedM4Ready.Renderer = null;
-            this.lbLedM4Ready.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM4Ready.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
             // 
             // labelM4Param1Value
             // 
@@ -880,7 +880,6 @@
             this.transparentPanelM3.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.transparentPanelM3.ContentPanel.Controls.Add(this.labelM3Name);
             this.transparentPanelM3.ContentPanel.Controls.Add(this.lbLedM3HomingDone);
-            this.transparentPanelM3.ContentPanel.Controls.Add(this.lbLedM3Ready);
             this.transparentPanelM3.ContentPanel.Controls.Add(this.labelM3Param1Value);
             this.transparentPanelM3.ContentPanel.Controls.Add(this.labelM3Param1Name);
             this.transparentPanelM3.ContentPanel.Controls.Add(this.lbLedM3Status);
@@ -913,21 +912,6 @@
             this.lbLedM3HomingDone.Renderer = null;
             this.lbLedM3HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
             this.lbLedM3HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedM3Ready
-            // 
-            this.lbLedM3Ready.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM3Ready.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM3Ready, "lbLedM3Ready");
-            this.lbLedM3Ready.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM3Ready.Label = "ready";
-            this.lbLedM3Ready.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM3Ready.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            this.lbLedM3Ready.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM3Ready.Name = "lbLedM3Ready";
-            this.lbLedM3Ready.Renderer = null;
-            this.lbLedM3Ready.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM3Ready.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
             // 
             // labelM3Param1Value
             // 
@@ -983,7 +967,6 @@
             this.transparentPanelM2.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.transparentPanelM2.ContentPanel.Controls.Add(this.labelM2Name);
             this.transparentPanelM2.ContentPanel.Controls.Add(this.lbLedM2HomingDone);
-            this.transparentPanelM2.ContentPanel.Controls.Add(this.lbLedM2Ready);
             this.transparentPanelM2.ContentPanel.Controls.Add(this.labelM2Param1Value);
             this.transparentPanelM2.ContentPanel.Controls.Add(this.labelM2Param1Name);
             this.transparentPanelM2.ContentPanel.Controls.Add(this.lbLedM2Status);
@@ -1016,21 +999,6 @@
             this.lbLedM2HomingDone.Renderer = null;
             this.lbLedM2HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
             this.lbLedM2HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedM2Ready
-            // 
-            this.lbLedM2Ready.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM2Ready.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM2Ready, "lbLedM2Ready");
-            this.lbLedM2Ready.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM2Ready.Label = "ready";
-            this.lbLedM2Ready.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM2Ready.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            this.lbLedM2Ready.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM2Ready.Name = "lbLedM2Ready";
-            this.lbLedM2Ready.Renderer = null;
-            this.lbLedM2Ready.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM2Ready.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
             // 
             // labelM2Param1Value
             // 
@@ -1086,7 +1054,6 @@
             this.transparentPanelM1.ContentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.transparentPanelM1.ContentPanel.Controls.Add(this.labelM1Name);
             this.transparentPanelM1.ContentPanel.Controls.Add(this.lbLedM1HomingDone);
-            this.transparentPanelM1.ContentPanel.Controls.Add(this.lbLedM1Ready);
             this.transparentPanelM1.ContentPanel.Controls.Add(this.labelM1Param1Value);
             this.transparentPanelM1.ContentPanel.Controls.Add(this.labelM1Param1Name);
             this.transparentPanelM1.ContentPanel.Controls.Add(this.lbLedM1Status);
@@ -1119,21 +1086,6 @@
             this.lbLedM1HomingDone.Renderer = null;
             this.lbLedM1HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
             this.lbLedM1HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedM1Ready
-            // 
-            this.lbLedM1Ready.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM1Ready.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM1Ready, "lbLedM1Ready");
-            this.lbLedM1Ready.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM1Ready.Label = "ready";
-            this.lbLedM1Ready.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM1Ready.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            this.lbLedM1Ready.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM1Ready.Name = "lbLedM1Ready";
-            this.lbLedM1Ready.Renderer = null;
-            this.lbLedM1Ready.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM1Ready.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
             // 
             // labelM1Param1Value
             // 
@@ -2863,6 +2815,7 @@
             // 
             // tabPageSettings
             // 
+            this.tabPageSettings.Controls.Add(this.tabControlT5);
             tabPageColorStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle7.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle7.BorderColor = System.Drawing.Color.Transparent;
@@ -2902,7 +2855,208 @@
             this.tabPageSettings.SelectedStyle = tabPageColorStyle10;
             this.tabPageSettings.StyleFromParent = false;
             this.tabPageSettings.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageSettings.TextBounds")));
-            this.tabPageSettings.TextSize = new System.Drawing.SizeF(94.00388F, 32.16796F);
+            this.tabPageSettings.TextSize = new System.Drawing.SizeF(154.0742F, 32.16796F);
+            // 
+            // tabControlT5
+            // 
+            this.tabControlT5.Controls.Add(this.tabPage1);
+            this.tabControlT5.Controls.Add(this.tabPage3);
+            this.tabControlT5.Controls.Add(this.tabPageT5M5_1);
+            this.tabControlT5.Controls.Add(this.tabPage2);
+            this.tabControlT5.Cursor = System.Windows.Forms.Cursors.Default;
+            resources.ApplyResources(this.tabControlT5, "tabControlT5");
+            this.tabControlT5.Name = "tabControlT5";
+            this.tabControlT5.Pages.AddRange(new object[] {
+            this.tabPageT5M5_1,
+            this.tabPage1,
+            this.tabPage2,
+            this.tabPage3});
+            this.tabControlT5.ScrollPos = new System.Drawing.Point(0, 0);
+            this.tabControlT5.SelectedPage = this.tabPage1;
+            // 
+            // tabPageT5M5_1
+            // 
+            this.tabPageT5M5_1.Controls.Add(this.lbButtonM5StartStopOutBelt3);
+            this.tabPageT5M5_1.Controls.Add(this.lbButtonM5StartStopOutBelt2);
+            this.tabPageT5M5_1.Controls.Add(this.lbButtonM5StartStopOutBelt1);
+            this.tabPageT5M5_1.Controls.Add(this.lbButtonM5StartStopTranslBelt);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5V2ExtBwd);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5V2ExtFwd);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5V1ExtBwd);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5V1ExtFwd);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5NoRotation);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5CCWRotation);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5CWRotation);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5ClampClosing);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5ClampOpening);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5ClampBwd);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5ClampFwd);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5TranslatorBwd);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5TranslatorFwd);
+            resources.ApplyResources(this.tabPageT5M5_1, "tabPageT5M5_1");
+            this.tabPageT5M5_1.Name = "tabPageT5M5_1";
+            this.tabPageT5M5_1.ParentPage = null;
+            this.tabPageT5M5_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT5M5_1.TextBounds")));
+            this.tabPageT5M5_1.TextSize = new System.Drawing.SizeF(35.15738F, 13.82519F);
+            // 
+            // lbButtonM5StartStopOutBelt3
+            // 
+            this.lbButtonM5StartStopOutBelt3.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM5StartStopOutBelt3.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM5StartStopOutBelt3, "lbButtonM5StartStopOutBelt3");
+            this.lbButtonM5StartStopOutBelt3.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM5StartStopOutBelt3.Label = "start/stop output belt 3";
+            this.lbButtonM5StartStopOutBelt3.Name = "lbButtonM5StartStopOutBelt3";
+            this.lbButtonM5StartStopOutBelt3.Renderer = null;
+            this.lbButtonM5StartStopOutBelt3.RepeatInterval = 100;
+            this.lbButtonM5StartStopOutBelt3.RepeatState = false;
+            this.lbButtonM5StartStopOutBelt3.StartRepeatInterval = 500;
+            this.lbButtonM5StartStopOutBelt3.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM5StartStopOutBelt3.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM5StartStopOutBelt3.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM5StartStopOutBelt3_ButtonChangeState);
+            this.lbButtonM5StartStopOutBelt3.Click += new System.EventHandler(this.lbButtonM5StartStopOutBelt3_Click);
+            // 
+            // lbButtonM5StartStopOutBelt2
+            // 
+            this.lbButtonM5StartStopOutBelt2.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM5StartStopOutBelt2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM5StartStopOutBelt2, "lbButtonM5StartStopOutBelt2");
+            this.lbButtonM5StartStopOutBelt2.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM5StartStopOutBelt2.Label = "start/stop output belt 2";
+            this.lbButtonM5StartStopOutBelt2.Name = "lbButtonM5StartStopOutBelt2";
+            this.lbButtonM5StartStopOutBelt2.Renderer = null;
+            this.lbButtonM5StartStopOutBelt2.RepeatInterval = 100;
+            this.lbButtonM5StartStopOutBelt2.RepeatState = false;
+            this.lbButtonM5StartStopOutBelt2.StartRepeatInterval = 500;
+            this.lbButtonM5StartStopOutBelt2.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM5StartStopOutBelt2.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM5StartStopOutBelt2.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM5StartStopOutBelt2_ButtonChangeState);
+            this.lbButtonM5StartStopOutBelt2.Click += new System.EventHandler(this.lbButtonM5StartStopOutBelt2_Click);
+            // 
+            // lbButtonM5StartStopOutBelt1
+            // 
+            this.lbButtonM5StartStopOutBelt1.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM5StartStopOutBelt1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM5StartStopOutBelt1, "lbButtonM5StartStopOutBelt1");
+            this.lbButtonM5StartStopOutBelt1.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM5StartStopOutBelt1.Label = "start/stop output belt 1";
+            this.lbButtonM5StartStopOutBelt1.Name = "lbButtonM5StartStopOutBelt1";
+            this.lbButtonM5StartStopOutBelt1.Renderer = null;
+            this.lbButtonM5StartStopOutBelt1.RepeatInterval = 100;
+            this.lbButtonM5StartStopOutBelt1.RepeatState = false;
+            this.lbButtonM5StartStopOutBelt1.StartRepeatInterval = 500;
+            this.lbButtonM5StartStopOutBelt1.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM5StartStopOutBelt1.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM5StartStopOutBelt1.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM5StartStopOutBelt1_ButtonChangeState);
+            this.lbButtonM5StartStopOutBelt1.Click += new System.EventHandler(this.lbButtonM5StartStopOutBelt1_Click);
+            // 
+            // lbButtonM5StartStopTranslBelt
+            // 
+            this.lbButtonM5StartStopTranslBelt.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM5StartStopTranslBelt.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM5StartStopTranslBelt, "lbButtonM5StartStopTranslBelt");
+            this.lbButtonM5StartStopTranslBelt.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM5StartStopTranslBelt.Label = "start/stop translation belt";
+            this.lbButtonM5StartStopTranslBelt.Name = "lbButtonM5StartStopTranslBelt";
+            this.lbButtonM5StartStopTranslBelt.Renderer = null;
+            this.lbButtonM5StartStopTranslBelt.RepeatInterval = 100;
+            this.lbButtonM5StartStopTranslBelt.RepeatState = false;
+            this.lbButtonM5StartStopTranslBelt.StartRepeatInterval = 500;
+            this.lbButtonM5StartStopTranslBelt.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM5StartStopTranslBelt.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM5StartStopTranslBelt.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM5StartStopTranslBelt_ButtonChangeState);
+            this.lbButtonM5StartStopTranslBelt.Click += new System.EventHandler(this.lbButtonM5StartStopTranslBelt_Click);
+            // 
+            // buttonM5V2ExtBwd
+            // 
+            resources.ApplyResources(this.buttonM5V2ExtBwd, "buttonM5V2ExtBwd");
+            this.buttonM5V2ExtBwd.Name = "buttonM5V2ExtBwd";
+            this.buttonM5V2ExtBwd.UseVisualStyleBackColor = true;
+            this.buttonM5V2ExtBwd.Click += new System.EventHandler(this.buttonM5V2ExtBwd_Click);
+            // 
+            // buttonM5V2ExtFwd
+            // 
+            resources.ApplyResources(this.buttonM5V2ExtFwd, "buttonM5V2ExtFwd");
+            this.buttonM5V2ExtFwd.Name = "buttonM5V2ExtFwd";
+            this.buttonM5V2ExtFwd.UseVisualStyleBackColor = true;
+            this.buttonM5V2ExtFwd.Click += new System.EventHandler(this.buttonM5V2ExtFwd_Click);
+            // 
+            // buttonM5V1ExtBwd
+            // 
+            resources.ApplyResources(this.buttonM5V1ExtBwd, "buttonM5V1ExtBwd");
+            this.buttonM5V1ExtBwd.Name = "buttonM5V1ExtBwd";
+            this.buttonM5V1ExtBwd.UseVisualStyleBackColor = true;
+            this.buttonM5V1ExtBwd.Click += new System.EventHandler(this.buttonM5V1ExtBwd_Click);
+            // 
+            // buttonM5V1ExtFwd
+            // 
+            resources.ApplyResources(this.buttonM5V1ExtFwd, "buttonM5V1ExtFwd");
+            this.buttonM5V1ExtFwd.Name = "buttonM5V1ExtFwd";
+            this.buttonM5V1ExtFwd.UseVisualStyleBackColor = true;
+            this.buttonM5V1ExtFwd.Click += new System.EventHandler(this.buttonM5V1ExtFwd_Click);
+            // 
+            // buttonM5NoRotation
+            // 
+            resources.ApplyResources(this.buttonM5NoRotation, "buttonM5NoRotation");
+            this.buttonM5NoRotation.Name = "buttonM5NoRotation";
+            this.buttonM5NoRotation.UseVisualStyleBackColor = true;
+            this.buttonM5NoRotation.Click += new System.EventHandler(this.buttonM5NoRotation_Click);
+            // 
+            // buttonM5CCWRotation
+            // 
+            resources.ApplyResources(this.buttonM5CCWRotation, "buttonM5CCWRotation");
+            this.buttonM5CCWRotation.Name = "buttonM5CCWRotation";
+            this.buttonM5CCWRotation.UseVisualStyleBackColor = true;
+            this.buttonM5CCWRotation.Click += new System.EventHandler(this.buttonM5CCWRotation_Click);
+            // 
+            // buttonM5CWRotation
+            // 
+            resources.ApplyResources(this.buttonM5CWRotation, "buttonM5CWRotation");
+            this.buttonM5CWRotation.Name = "buttonM5CWRotation";
+            this.buttonM5CWRotation.UseVisualStyleBackColor = true;
+            this.buttonM5CWRotation.Click += new System.EventHandler(this.buttonM5CWRotation_Click);
+            // 
+            // buttonM5ClampClosing
+            // 
+            resources.ApplyResources(this.buttonM5ClampClosing, "buttonM5ClampClosing");
+            this.buttonM5ClampClosing.Name = "buttonM5ClampClosing";
+            this.buttonM5ClampClosing.UseVisualStyleBackColor = true;
+            this.buttonM5ClampClosing.Click += new System.EventHandler(this.buttonM5ClampClosing_Click);
+            // 
+            // buttonM5ClampOpening
+            // 
+            resources.ApplyResources(this.buttonM5ClampOpening, "buttonM5ClampOpening");
+            this.buttonM5ClampOpening.Name = "buttonM5ClampOpening";
+            this.buttonM5ClampOpening.UseVisualStyleBackColor = true;
+            this.buttonM5ClampOpening.Click += new System.EventHandler(this.buttonM5ClampOpening_Click);
+            // 
+            // buttonM5ClampBwd
+            // 
+            resources.ApplyResources(this.buttonM5ClampBwd, "buttonM5ClampBwd");
+            this.buttonM5ClampBwd.Name = "buttonM5ClampBwd";
+            this.buttonM5ClampBwd.UseVisualStyleBackColor = true;
+            this.buttonM5ClampBwd.Click += new System.EventHandler(this.buttonM5ClampBwd_Click);
+            // 
+            // buttonM5ClampFwd
+            // 
+            resources.ApplyResources(this.buttonM5ClampFwd, "buttonM5ClampFwd");
+            this.buttonM5ClampFwd.Name = "buttonM5ClampFwd";
+            this.buttonM5ClampFwd.UseVisualStyleBackColor = true;
+            this.buttonM5ClampFwd.Click += new System.EventHandler(this.buttonM5ClampFwd_Click);
+            // 
+            // buttonM5TranslatorBwd
+            // 
+            resources.ApplyResources(this.buttonM5TranslatorBwd, "buttonM5TranslatorBwd");
+            this.buttonM5TranslatorBwd.Name = "buttonM5TranslatorBwd";
+            this.buttonM5TranslatorBwd.UseVisualStyleBackColor = true;
+            this.buttonM5TranslatorBwd.Click += new System.EventHandler(this.buttonM5TranslatorBwd_Click);
+            // 
+            // buttonM5TranslatorFwd
+            // 
+            resources.ApplyResources(this.buttonM5TranslatorFwd, "buttonM5TranslatorFwd");
+            this.buttonM5TranslatorFwd.Name = "buttonM5TranslatorFwd";
+            this.buttonM5TranslatorFwd.UseVisualStyleBackColor = true;
+            this.buttonM5TranslatorFwd.Click += new System.EventHandler(this.buttonM5TranslatorFwd_Click);
             // 
             // TabPageDiagnostic
             // 
@@ -2937,7 +3091,7 @@
             this.TabPageDiagnostic.SelectedStyle = tabPageColorStyle13;
             this.TabPageDiagnostic.StyleFromParent = false;
             this.TabPageDiagnostic.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("TabPageDiagnostic.TextBounds")));
-            this.TabPageDiagnostic.TextSize = new System.Drawing.SizeF(49.08593F, 32.16796F);
+            this.TabPageDiagnostic.TextSize = new System.Drawing.SizeF(112.9414F, 32.16796F);
             // 
             // tabPage4
             // 
@@ -2972,102 +3126,57 @@
             this.tabPage4.SelectedStyle = tabPageColorStyle16;
             this.tabPage4.StyleFromParent = false;
             this.tabPage4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage4.TextBounds")));
-            this.tabPage4.TextSize = new System.Drawing.SizeF(60.58202F, 32.16796F);
+            this.tabPage4.TextSize = new System.Drawing.SizeF(159.0546F, 32.16796F);
             // 
             // tabControlT3
             // 
-            this.tabControlT3.Controls.Add(this.tabPage1);
+            this.tabControlT3.Controls.Add(this.tabPageT3M3_1);
+            this.tabControlT3.Controls.Add(this.tabPageT3M3_2);
             this.tabControlT3.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlT3, "tabControlT3");
             this.tabControlT3.Name = "tabControlT3";
             this.tabControlT3.Pages.AddRange(new object[] {
-            this.tabPage1});
+            this.tabPageT3M3_1,
+            this.tabPageT3M3_2});
             this.tabControlT3.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlT3.SelectedPage = this.tabPage1;
+            this.tabControlT3.SelectedPage = this.tabPageT3M3_1;
             // 
-            // tabPage1
+            // tabPageT3M3_1
             // 
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.lbButton1);
-            this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Controls.Add(this.button4);
-            this.tabPage1.Controls.Add(this.button5);
-            this.tabPage1.Controls.Add(this.button6);
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.ParentPage = null;
-            this.tabPage1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage1.TextBounds")));
-            this.tabPage1.TextSize = new System.Drawing.SizeF(54.66519F, 13.82519F);
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // lbButton1
-            // 
-            this.lbButton1.BackColor = System.Drawing.Color.Transparent;
-            this.lbButton1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            resources.ApplyResources(this.lbButton1, "lbButton1");
-            this.lbButton1.ForeColor = System.Drawing.Color.White;
-            this.lbButton1.Label = "JOG UP";
-            this.lbButton1.Name = "lbButton1";
-            this.lbButton1.Renderer = null;
-            this.lbButton1.RepeatInterval = 100;
-            this.lbButton1.RepeatState = false;
-            this.lbButton1.StartRepeatInterval = 500;
-            this.lbButton1.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButton1.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewTextBoxColumn1.Frozen = true;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTextBoxColumn2.Frozen = true;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTextBoxColumn3.Frozen = true;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.tabPageT3M3_1.Controls.Add(this.button4);
+            this.tabPageT3M3_1.Controls.Add(this.button5);
+            this.tabPageT3M3_1.Controls.Add(this.button6);
+            this.tabPageT3M3_1.Controls.Add(this.label3);
+            this.tabPageT3M3_1.Controls.Add(this.label4);
+            this.tabPageT3M3_1.Controls.Add(this.lbButton1);
+            this.tabPageT3M3_1.Controls.Add(this.lbButton2);
+            this.tabPageT3M3_1.Controls.Add(this.button7);
+            this.tabPageT3M3_1.Controls.Add(this.dataGridView1);
+            this.tabPageT3M3_1.Controls.Add(this.lbLed1);
+            this.tabPageT3M3_1.Controls.Add(this.numericUpDownM3ManualSpeed);
+            this.tabPageT3M3_1.Controls.Add(this.numericUpDownM3ManualQuote);
+            this.tabPageT3M3_1.Controls.Add(this.button8);
+            this.tabPageT3M3_1.Controls.Add(this.buttonM3StartQuote);
+            this.tabPageT3M3_1.Controls.Add(this.lbButtonM3JogDown);
+            this.tabPageT3M3_1.Controls.Add(this.lbButtonM3JogUp);
+            this.tabPageT3M3_1.Controls.Add(this.button10);
+            this.tabPageT3M3_1.Controls.Add(this.button11);
+            this.tabPageT3M3_1.Controls.Add(this.button12);
+            this.tabPageT3M3_1.Controls.Add(this.button13);
+            this.tabPageT3M3_1.Controls.Add(this.button14);
+            this.tabPageT3M3_1.Controls.Add(this.button15);
+            this.tabPageT3M3_1.Controls.Add(this.button16);
+            this.tabPageT3M3_1.Controls.Add(this.button17);
+            this.tabPageT3M3_1.Controls.Add(this.button18);
+            this.tabPageT3M3_1.Controls.Add(this.buttonM3SmallClampClosing);
+            this.tabPageT3M3_1.Controls.Add(this.buttonM3SmallClampOpening);
+            this.tabPageT3M3_1.Controls.Add(this.label1);
+            this.tabPageT3M3_1.Controls.Add(this.label2);
+            resources.ApplyResources(this.tabPageT3M3_1, "tabPageT3M3_1");
+            this.tabPageT3M3_1.Name = "tabPageT3M3_1";
+            this.tabPageT3M3_1.ParentPage = null;
+            this.tabPageT3M3_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT3M3_1.TextBounds")));
+            this.tabPageT3M3_1.TextSize = new System.Drawing.SizeF(35.15738F, 13.82519F);
             // 
             // button4
             // 
@@ -3087,13 +3196,281 @@
             this.button6.Name = "button6";
             this.button6.UseVisualStyleBackColor = true;
             // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // lbButton1
+            // 
+            this.lbButton1.BackColor = System.Drawing.Color.Transparent;
+            this.lbButton1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButton1, "lbButton1");
+            this.lbButton1.ForeColor = System.Drawing.Color.White;
+            this.lbButton1.Label = "start/stop exit belt";
+            this.lbButton1.Name = "lbButton1";
+            this.lbButton1.Renderer = null;
+            this.lbButton1.RepeatInterval = 100;
+            this.lbButton1.RepeatState = false;
+            this.lbButton1.StartRepeatInterval = 500;
+            this.lbButton1.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButton1.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            // 
+            // lbButton2
+            // 
+            this.lbButton2.BackColor = System.Drawing.Color.Transparent;
+            this.lbButton2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButton2, "lbButton2");
+            this.lbButton2.ForeColor = System.Drawing.Color.White;
+            this.lbButton2.Label = "start/stop working belt";
+            this.lbButton2.Name = "lbButton2";
+            this.lbButton2.Renderer = null;
+            this.lbButton2.RepeatInterval = 100;
+            this.lbButton2.RepeatState = false;
+            this.lbButton2.StartRepeatInterval = 500;
+            this.lbButton2.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButton2.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            // 
+            // button7
+            // 
+            resources.ApplyResources(this.button7, "button7");
+            this.button7.Name = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewButtonColumn1});
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewTextBoxColumn1.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn1, "dataGridViewTextBoxColumn1");
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn2, "dataGridViewTextBoxColumn2");
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn3, "dataGridViewTextBoxColumn3");
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            resources.ApplyResources(this.dataGridViewButtonColumn1, "dataGridViewButtonColumn1");
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            // 
+            // lbLed1
+            // 
+            this.lbLed1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed1, "lbLed1");
+            this.lbLed1.ForeColor = System.Drawing.Color.Black;
+            this.lbLed1.Label = "homing done";
+            this.lbLed1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbLed1.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLed1.Name = "lbLed1";
+            this.lbLed1.Renderer = null;
+            this.lbLed1.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed1.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // numericUpDownM3ManualSpeed
+            // 
+            resources.ApplyResources(this.numericUpDownM3ManualSpeed, "numericUpDownM3ManualSpeed");
+            this.numericUpDownM3ManualSpeed.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownM3ManualSpeed.Name = "numericUpDownM3ManualSpeed";
+            this.numericUpDownM3ManualSpeed.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // numericUpDownM3ManualQuote
+            // 
+            resources.ApplyResources(this.numericUpDownM3ManualQuote, "numericUpDownM3ManualQuote");
+            this.numericUpDownM3ManualQuote.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownM3ManualQuote.Minimum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownM3ManualQuote.Name = "numericUpDownM3ManualQuote";
+            this.numericUpDownM3ManualQuote.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // button8
+            // 
+            resources.ApplyResources(this.button8, "button8");
+            this.button8.Name = "button8";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // buttonM3StartQuote
+            // 
+            resources.ApplyResources(this.buttonM3StartQuote, "buttonM3StartQuote");
+            this.buttonM3StartQuote.Name = "buttonM3StartQuote";
+            this.buttonM3StartQuote.UseVisualStyleBackColor = true;
+            // 
+            // lbButtonM3JogDown
+            // 
+            this.lbButtonM3JogDown.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM3JogDown.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM3JogDown, "lbButtonM3JogDown");
+            this.lbButtonM3JogDown.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM3JogDown.Label = "JOG DOWN";
+            this.lbButtonM3JogDown.Name = "lbButtonM3JogDown";
+            this.lbButtonM3JogDown.Renderer = null;
+            this.lbButtonM3JogDown.RepeatInterval = 100;
+            this.lbButtonM3JogDown.RepeatState = false;
+            this.lbButtonM3JogDown.StartRepeatInterval = 500;
+            this.lbButtonM3JogDown.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM3JogDown.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            // 
+            // lbButtonM3JogUp
+            // 
+            this.lbButtonM3JogUp.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM3JogUp.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM3JogUp, "lbButtonM3JogUp");
+            this.lbButtonM3JogUp.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM3JogUp.Label = "JOG UP";
+            this.lbButtonM3JogUp.Name = "lbButtonM3JogUp";
+            this.lbButtonM3JogUp.Renderer = null;
+            this.lbButtonM3JogUp.RepeatInterval = 100;
+            this.lbButtonM3JogUp.RepeatState = false;
+            this.lbButtonM3JogUp.StartRepeatInterval = 500;
+            this.lbButtonM3JogUp.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM3JogUp.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            // 
+            // button10
+            // 
+            resources.ApplyResources(this.button10, "button10");
+            this.button10.Name = "button10";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            resources.ApplyResources(this.button11, "button11");
+            this.button11.Name = "button11";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            resources.ApplyResources(this.button12, "button12");
+            this.button12.Name = "button12";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            resources.ApplyResources(this.button13, "button13");
+            this.button13.Name = "button13";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            resources.ApplyResources(this.button14, "button14");
+            this.button14.Name = "button14";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            resources.ApplyResources(this.button15, "button15");
+            this.button15.Name = "button15";
+            this.button15.UseVisualStyleBackColor = true;
+            // 
+            // button16
+            // 
+            resources.ApplyResources(this.button16, "button16");
+            this.button16.Name = "button16";
+            this.button16.UseVisualStyleBackColor = true;
+            // 
+            // button17
+            // 
+            resources.ApplyResources(this.button17, "button17");
+            this.button17.Name = "button17";
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            resources.ApplyResources(this.button18, "button18");
+            this.button18.Name = "button18";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
+            // buttonM3SmallClampClosing
+            // 
+            resources.ApplyResources(this.buttonM3SmallClampClosing, "buttonM3SmallClampClosing");
+            this.buttonM3SmallClampClosing.Name = "buttonM3SmallClampClosing";
+            this.buttonM3SmallClampClosing.UseVisualStyleBackColor = true;
+            // 
+            // buttonM3SmallClampOpening
+            // 
+            resources.ApplyResources(this.buttonM3SmallClampOpening, "buttonM3SmallClampOpening");
+            this.buttonM3SmallClampOpening.Name = "buttonM3SmallClampOpening";
+            this.buttonM3SmallClampOpening.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
+            // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
+            // tabPageT3M3_2
+            // 
+            resources.ApplyResources(this.tabPageT3M3_2, "tabPageT3M3_2");
+            this.tabPageT3M3_2.Name = "tabPageT3M3_2";
+            this.tabPageT3M3_2.ParentPage = null;
+            this.tabPageT3M3_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT3M3_2.TextBounds")));
+            this.tabPageT3M3_2.TextSize = new System.Drawing.SizeF(25.70426F, 13.82519F);
+            // 
             // tabPageConsole
             // 
             this.tabPageConsole.Controls.Add(this.tabControlT2);
-            tabPageFormatStyle6.BorderCornerRadius = 5;
-            tabPageFormatStyle6.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tabPageFormatStyle6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 40);
-            this.tabPageConsole.FormatStyle = tabPageFormatStyle6;
+            tabPageFormatStyle7.BorderCornerRadius = 5;
+            tabPageFormatStyle7.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tabPageFormatStyle7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 40);
+            this.tabPageConsole.FormatStyle = tabPageFormatStyle7;
             tabPageColorStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle17.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle17.BorderColor = System.Drawing.Color.Transparent;
@@ -3120,54 +3497,167 @@
             this.tabPageConsole.SelectedStyle = tabPageColorStyle19;
             this.tabPageConsole.StyleFromParent = false;
             this.tabPageConsole.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageConsole.TextBounds")));
-            this.tabPageConsole.TextSize = new System.Drawing.SizeF(81.33591F, 32.16796F);
+            this.tabPageConsole.TextSize = new System.Drawing.SizeF(152.1289F, 32.16796F);
             // 
             // tabControlT2
             // 
-            this.tabControlT2.Controls.Add(this.tabPageM2);
+            this.tabControlT2.Controls.Add(this.tabPageT2M2_3);
+            this.tabControlT2.Controls.Add(this.tabPageT2M2_4);
+            this.tabControlT2.Controls.Add(this.tabPageT2M2_2);
+            this.tabControlT2.Controls.Add(this.tabPageT2M2_1);
             this.tabControlT2.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlT2, "tabControlT2");
             this.tabControlT2.Name = "tabControlT2";
+            tabPageFormatStyle6.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlT2.PageFormatStyle = tabPageFormatStyle6;
             this.tabControlT2.Pages.AddRange(new object[] {
-            this.tabPageM2});
+            this.tabPageT2M2_1,
+            this.tabPageT2M2_2,
+            this.tabPageT2M2_3,
+            this.tabPageT2M2_4});
             this.tabControlT2.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlT2.SelectedPage = this.tabPageM2;
+            this.tabControlT2.SelectedPage = this.tabPageT2M2_3;
             // 
-            // tabPageM2
+            // tabPageT2M2_3
             // 
-            this.tabPageM2.Controls.Add(this.button3);
-            this.tabPageM2.Controls.Add(this.button2);
-            this.tabPageM2.Controls.Add(this.button1);
-            this.tabPageM2.Controls.Add(this.labelM2TeachAxisQuoteValue);
-            this.tabPageM2.Controls.Add(this.labelM2TeachAxisQuoteName);
-            this.tabPageM2.Controls.Add(this.lbButtonM2StartStopExitBelt);
-            this.tabPageM2.Controls.Add(this.lbButtonM2StartStopWorkingBelt);
-            this.tabPageM2.Controls.Add(this.buttonM2JogReset);
-            this.tabPageM2.Controls.Add(this.numericUpDownM2JogSpeed);
-            this.tabPageM2.Controls.Add(this.dataGridViewM2Points);
-            this.tabPageM2.Controls.Add(this.lbLedM2T2HomingDone);
-            this.tabPageM2.Controls.Add(this.numericUpDownM2ManualSpeed);
-            this.tabPageM2.Controls.Add(this.numericUpDownM2ManualQuote);
-            this.tabPageM2.Controls.Add(this.buttonM2PrintCycle);
-            this.tabPageM2.Controls.Add(this.buttonM2StartQuote);
-            this.tabPageM2.Controls.Add(this.lbButtonM2JogDown);
-            this.tabPageM2.Controls.Add(this.lbButtonM2JogUp);
-            this.tabPageM2.Controls.Add(this.buttonM2ResetServo);
-            this.tabPageM2.Controls.Add(this.buttonM2ResetHome);
-            this.tabPageM2.Controls.Add(this.buttonM2Home);
-            this.tabPageM2.Controls.Add(this.buttonM2ContrastClosing);
-            this.tabPageM2.Controls.Add(this.buttonM2ContrastOpening);
-            this.tabPageM2.Controls.Add(this.buttonM2CenteringClampsClosing);
-            this.tabPageM2.Controls.Add(this.buttonM2CenteringClampsOpening);
-            this.tabPageM2.Controls.Add(this.buttonM2BigGripperClosing);
-            this.tabPageM2.Controls.Add(this.buttonM2BigClampOpening);
-            this.tabPageM2.Controls.Add(this.buttonM2SmallClampClosing);
-            this.tabPageM2.Controls.Add(this.buttonM2SmallClampOpening);
-            resources.ApplyResources(this.tabPageM2, "tabPageM2");
-            this.tabPageM2.Name = "tabPageM2";
-            this.tabPageM2.ParentPage = null;
-            this.tabPageM2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageM2.TextBounds")));
-            this.tabPageM2.TextSize = new System.Drawing.SizeF(59.70865F, 13.82519F);
+            resources.ApplyResources(this.tabPageT2M2_3, "tabPageT2M2_3");
+            this.tabPageT2M2_3.Name = "tabPageT2M2_3";
+            this.tabPageT2M2_3.ParentPage = null;
+            this.tabPageT2M2_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT2M2_3.TextBounds")));
+            this.tabPageT2M2_3.TextSize = new System.Drawing.SizeF(123.2186F, 25.4663F);
+            // 
+            // tabPageT2M2_4
+            // 
+            resources.ApplyResources(this.tabPageT2M2_4, "tabPageT2M2_4");
+            this.tabPageT2M2_4.Name = "tabPageT2M2_4";
+            this.tabPageT2M2_4.ParentPage = null;
+            this.tabPageT2M2_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT2M2_4.TextBounds")));
+            this.tabPageT2M2_4.TextSize = new System.Drawing.SizeF(137.4314F, 25.4663F);
+            // 
+            // tabPageT2M2_2
+            // 
+            this.tabPageT2M2_2.Controls.Add(this.buttonM2SaveAsTestProgram);
+            this.tabPageT2M2_2.Controls.Add(this.buttonM2SaveTestProgram);
+            this.tabPageT2M2_2.Controls.Add(this.buttonM2LoadTestProgram);
+            this.tabPageT2M2_2.Controls.Add(this.dataGridViewM2TestPoints);
+            this.tabPageT2M2_2.Controls.Add(this.lbButtonM2StartTest);
+            resources.ApplyResources(this.tabPageT2M2_2, "tabPageT2M2_2");
+            this.tabPageT2M2_2.Name = "tabPageT2M2_2";
+            this.tabPageT2M2_2.ParentPage = null;
+            this.tabPageT2M2_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT2M2_2.TextBounds")));
+            this.tabPageT2M2_2.TextSize = new System.Drawing.SizeF(43.60969F, 25.4663F);
+            // 
+            // buttonM2SaveAsTestProgram
+            // 
+            resources.ApplyResources(this.buttonM2SaveAsTestProgram, "buttonM2SaveAsTestProgram");
+            this.buttonM2SaveAsTestProgram.Name = "buttonM2SaveAsTestProgram";
+            this.buttonM2SaveAsTestProgram.UseVisualStyleBackColor = true;
+            // 
+            // buttonM2SaveTestProgram
+            // 
+            resources.ApplyResources(this.buttonM2SaveTestProgram, "buttonM2SaveTestProgram");
+            this.buttonM2SaveTestProgram.Name = "buttonM2SaveTestProgram";
+            this.buttonM2SaveTestProgram.UseVisualStyleBackColor = true;
+            // 
+            // buttonM2LoadTestProgram
+            // 
+            resources.ApplyResources(this.buttonM2LoadTestProgram, "buttonM2LoadTestProgram");
+            this.buttonM2LoadTestProgram.Name = "buttonM2LoadTestProgram";
+            this.buttonM2LoadTestProgram.UseVisualStyleBackColor = true;
+            this.buttonM2LoadTestProgram.Click += new System.EventHandler(this.buttonM2LoadTestProgram_Click);
+            // 
+            // dataGridViewM2TestPoints
+            // 
+            this.dataGridViewM2TestPoints.AllowUserToAddRows = false;
+            this.dataGridViewM2TestPoints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewM2TestPoints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dataGridViewM2TestPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            resources.ApplyResources(this.dataGridViewM2TestPoints, "dataGridViewM2TestPoints");
+            this.dataGridViewM2TestPoints.Name = "dataGridViewM2TestPoints";
+            this.dataGridViewM2TestPoints.RowHeadersVisible = false;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewM2TestPoints.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewM2TestPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewM2TestPoints.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM2TestPoints_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTextBoxColumn4.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // lbButtonM2StartTest
+            // 
+            this.lbButtonM2StartTest.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM2StartTest.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM2StartTest, "lbButtonM2StartTest");
+            this.lbButtonM2StartTest.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM2StartTest.Label = "START TEST";
+            this.lbButtonM2StartTest.Name = "lbButtonM2StartTest";
+            this.lbButtonM2StartTest.Renderer = null;
+            this.lbButtonM2StartTest.RepeatInterval = 100;
+            this.lbButtonM2StartTest.RepeatState = false;
+            this.lbButtonM2StartTest.StartRepeatInterval = 500;
+            this.lbButtonM2StartTest.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM2StartTest.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2StartTest.Click += new System.EventHandler(this.lbButtonM2StartTest_Click);
+            // 
+            // tabPageT2M2_1
+            // 
+            this.tabPageT2M2_1.Controls.Add(this.button3);
+            this.tabPageT2M2_1.Controls.Add(this.button2);
+            this.tabPageT2M2_1.Controls.Add(this.button1);
+            this.tabPageT2M2_1.Controls.Add(this.labelM2TeachAxisQuoteValue);
+            this.tabPageT2M2_1.Controls.Add(this.labelM2TeachAxisQuoteName);
+            this.tabPageT2M2_1.Controls.Add(this.lbButtonM2StartStopExitBelt);
+            this.tabPageT2M2_1.Controls.Add(this.lbButtonM2StartStopWorkingBelt);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2JogReset);
+            this.tabPageT2M2_1.Controls.Add(this.numericUpDownM2JogSpeed);
+            this.tabPageT2M2_1.Controls.Add(this.dataGridViewM2TeachPoints);
+            this.tabPageT2M2_1.Controls.Add(this.lbLedM2T2HomingDone);
+            this.tabPageT2M2_1.Controls.Add(this.numericUpDownM2ManualSpeed);
+            this.tabPageT2M2_1.Controls.Add(this.numericUpDownM2ManualQuote);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2PrintCycle);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2StartQuote);
+            this.tabPageT2M2_1.Controls.Add(this.lbButtonM2JogDown);
+            this.tabPageT2M2_1.Controls.Add(this.lbButtonM2JogUp);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2ResetServo);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2ResetHome);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2Home);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2ContrastClosing);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2ContrastOpening);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2CenteringClampsClosing);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2CenteringClampsOpening);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2BigClampClosing);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2BigClampOpening);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2SmallClampClosing);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2SmallClampOpening);
+            resources.ApplyResources(this.tabPageT2M2_1, "tabPageT2M2_1");
+            this.tabPageT2M2_1.Name = "tabPageT2M2_1";
+            this.tabPageT2M2_1.ParentPage = null;
+            this.tabPageT2M2_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT2M2_1.TextBounds")));
+            this.tabPageT2M2_1.TextSize = new System.Drawing.SizeF(60.03986F, 25.4663F);
             // 
             // button3
             // 
@@ -3211,6 +3701,7 @@
             this.lbButtonM2StartStopExitBelt.StartRepeatInterval = 500;
             this.lbButtonM2StartStopExitBelt.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
             this.lbButtonM2StartStopExitBelt.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2StartStopExitBelt.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM2StartStopExitBelt_ButtonChangeState);
             this.lbButtonM2StartStopExitBelt.Click += new System.EventHandler(this.lbButtonM2StartStopExitBelt_Click);
             // 
             // lbButtonM2StartStopWorkingBelt
@@ -3227,6 +3718,7 @@
             this.lbButtonM2StartStopWorkingBelt.StartRepeatInterval = 500;
             this.lbButtonM2StartStopWorkingBelt.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
             this.lbButtonM2StartStopWorkingBelt.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2StartStopWorkingBelt.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM2StartStopWorkingBelt_ButtonChangeState);
             this.lbButtonM2StartStopWorkingBelt.Click += new System.EventHandler(this.lbButtonM2StartStopWorkingBelt_Click);
             // 
             // buttonM2JogReset
@@ -3253,23 +3745,23 @@
             this.numericUpDownM2JogSpeed.ValueChanged += new System.EventHandler(this.numericUpDownM2JogSpeed_ValueChanged);
             this.numericUpDownM2JogSpeed.Click += new System.EventHandler(this.numericUpDownM2JogSpeed_Click);
             // 
-            // dataGridViewM2Points
+            // dataGridViewM2TeachPoints
             // 
-            this.dataGridViewM2Points.AllowUserToAddRows = false;
-            this.dataGridViewM2Points.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewM2Points.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewM2TeachPoints.AllowUserToAddRows = false;
+            this.dataGridViewM2TeachPoints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewM2TeachPoints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnM2PointID,
             this.ColumnMeQuote,
             this.ColumnM2Speed,
             this.ColumnM2Register});
-            this.dataGridViewM2Points.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            resources.ApplyResources(this.dataGridViewM2Points, "dataGridViewM2Points");
-            this.dataGridViewM2Points.Name = "dataGridViewM2Points";
-            this.dataGridViewM2Points.RowHeadersVisible = false;
+            this.dataGridViewM2TeachPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            resources.ApplyResources(this.dataGridViewM2TeachPoints, "dataGridViewM2TeachPoints");
+            this.dataGridViewM2TeachPoints.Name = "dataGridViewM2TeachPoints";
+            this.dataGridViewM2TeachPoints.RowHeadersVisible = false;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewM2Points.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewM2Points.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridViewM2Points.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM2Points_CellContentClick);
+            this.dataGridViewM2TeachPoints.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewM2TeachPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewM2TeachPoints.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM2Points_CellContentClick);
             // 
             // ColumnM2PointID
             // 
@@ -3449,12 +3941,12 @@
             this.buttonM2CenteringClampsOpening.UseVisualStyleBackColor = true;
             this.buttonM2CenteringClampsOpening.Click += new System.EventHandler(this.buttonM2CenteringClampsOpening_Click);
             // 
-            // buttonM2BigGripperClosing
+            // buttonM2BigClampClosing
             // 
-            resources.ApplyResources(this.buttonM2BigGripperClosing, "buttonM2BigGripperClosing");
-            this.buttonM2BigGripperClosing.Name = "buttonM2BigGripperClosing";
-            this.buttonM2BigGripperClosing.UseVisualStyleBackColor = true;
-            this.buttonM2BigGripperClosing.Click += new System.EventHandler(this.buttonM2BigGripperClosing_Click);
+            resources.ApplyResources(this.buttonM2BigClampClosing, "buttonM2BigClampClosing");
+            this.buttonM2BigClampClosing.Name = "buttonM2BigClampClosing";
+            this.buttonM2BigClampClosing.UseVisualStyleBackColor = true;
+            this.buttonM2BigClampClosing.Click += new System.EventHandler(this.buttonM2BigGripperClosing_Click);
             // 
             // buttonM2BigClampOpening
             // 
@@ -3479,12 +3971,10 @@
             // 
             // tabPageRecipe
             // 
-            this.tabPageRecipe.Controls.Add(this.label3);
-            this.tabPageRecipe.Controls.Add(this.modelCombobox);
-            tabPageFormatStyle7.BorderCornerRadius = 5;
-            tabPageFormatStyle7.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tabPageFormatStyle7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 40);
-            this.tabPageRecipe.FormatStyle = tabPageFormatStyle7;
+            tabPageFormatStyle8.BorderCornerRadius = 5;
+            tabPageFormatStyle8.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tabPageFormatStyle8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 40);
+            this.tabPageRecipe.FormatStyle = tabPageFormatStyle8;
             tabPageColorStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle20.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle20.BorderColor = System.Drawing.Color.Transparent;
@@ -3511,29 +4001,18 @@
             this.tabPageRecipe.SelectedStyle = tabPageColorStyle22;
             this.tabPageRecipe.StyleFromParent = false;
             this.tabPageRecipe.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageRecipe.TextBounds")));
-            this.tabPageRecipe.TextSize = new System.Drawing.SizeF(109.3789F, 32.16796F);
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // modelCombobox
-            // 
-            resources.ApplyResources(this.modelCombobox, "modelCombobox");
-            this.modelCombobox.FormattingEnabled = true;
-            this.modelCombobox.Name = "modelCombobox";
+            this.tabPageRecipe.TextSize = new System.Drawing.SizeF(113.9375F, 32.16796F);
             // 
             // tabPageMain
             // 
             this.tabPageMain.Controls.Add(this.trueTransparentPanelAuto);
             this.tabPageMain.Controls.Add(this.labelLoginLevel);
             this.tabPageMain.Controls.Add(this.labelDateTime);
-            tabPageFormatStyle8.BorderCornerRadius = 5;
-            tabPageFormatStyle8.ContentSpacing = 0;
-            tabPageFormatStyle8.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tabPageFormatStyle8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 40);
-            this.tabPageMain.FormatStyle = tabPageFormatStyle8;
+            tabPageFormatStyle9.BorderCornerRadius = 5;
+            tabPageFormatStyle9.ContentSpacing = 0;
+            tabPageFormatStyle9.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tabPageFormatStyle9.Padding = new System.Windows.Forms.Padding(2, 2, 2, 40);
+            this.tabPageMain.FormatStyle = tabPageFormatStyle9;
             tabPageColorStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle23.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle23.BorderColor = System.Drawing.Color.Transparent;
@@ -3582,14 +4061,14 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageRecipe);
-            this.tabControlMain.Controls.Add(this.tabPageHide);
-            this.tabControlMain.Controls.Add(this.tabPageHelp);
+            this.tabControlMain.Controls.Add(this.tabPageConsole);
             this.tabControlMain.Controls.Add(this.tabPageSettings);
             this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
-            this.tabControlMain.Controls.Add(this.tabPage4);
-            this.tabControlMain.Controls.Add(this.tabPageConsole);
             this.tabControlMain.Controls.Add(this.tabPageMain);
+            this.tabControlMain.Controls.Add(this.tabPageHide);
+            this.tabControlMain.Controls.Add(this.tabPageHelp);
+            this.tabControlMain.Controls.Add(this.tabPage4);
+            this.tabControlMain.Controls.Add(this.tabPageRecipe);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlMain, "tabControlMain");
             controlFormatStyle9.BorderCornerRadius = 5;
@@ -3605,8 +4084,8 @@
             toolItemColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             toolItemColorStyle1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.tabControlMain.NormalToolItemStyle = toolItemColorStyle1;
-            tabPageFormatStyle9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlMain.PageFormatStyle = tabPageFormatStyle9;
+            tabPageFormatStyle10.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlMain.PageFormatStyle = tabPageFormatStyle10;
             this.tabControlMain.Pages.AddRange(new object[] {
             this.tabPageMain,
             this.tabPageRecipe,
@@ -3617,7 +4096,7 @@
             this.tabPageHelp,
             this.tabPageHide});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageRecipe;
+            this.tabControlMain.SelectedPage = this.tabPageConsole;
             tabPageColorStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle27.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle27.TabImage = ((System.Drawing.Image)(resources.GetObject("tabPageColorStyle27.TabImage")));
@@ -3655,6 +4134,30 @@
             this.tabControlMain.ToolTipStyle = toolTipStyle1;
             this.tabControlMain.SelectedPageChanged += new LidorSystems.IntegralUI.ObjectEventHandler(this.tabControlMain_SelectedPageChanged);
             this.tabControlMain.ToolItemClicked += new LidorSystems.IntegralUI.ObjectClickEventHandler(this.tabControlMain_ToolItemClicked);
+            // 
+            // tabPage1
+            // 
+            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.ParentPage = null;
+            this.tabPage1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage1.TextBounds")));
+            this.tabPage1.TextSize = new System.Drawing.SizeF(62.98502F, 13.82519F);
+            // 
+            // tabPage2
+            // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.ParentPage = null;
+            this.tabPage2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage2.TextBounds")));
+            this.tabPage2.TextSize = new System.Drawing.SizeF(69.84927F, 13.82519F);
+            // 
+            // tabPage3
+            // 
+            resources.ApplyResources(this.tabPage3, "tabPage3");
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.ParentPage = null;
+            this.tabPage3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage3.TextBounds")));
+            this.tabPage3.TextSize = new System.Drawing.SizeF(56.69547F, 13.82519F);
             // 
             // FormMain
             // 
@@ -3700,24 +4203,30 @@
             this.splitContainerIO.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerIO)).EndInit();
             this.splitContainerIO.ResumeLayout(false);
+            this.tabPageSettings.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tabControlT5)).EndInit();
+            this.tabControlT5.ResumeLayout(false);
+            this.tabPageT5M5_1.ResumeLayout(false);
             this.TabPageDiagnostic.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT3)).EndInit();
             this.tabControlT3.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabPageT3M3_1.ResumeLayout(false);
+            this.tabPageT3M3_1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3ManualSpeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3ManualQuote)).EndInit();
             this.tabPageConsole.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT2)).EndInit();
             this.tabControlT2.ResumeLayout(false);
-            this.tabPageM2.ResumeLayout(false);
-            this.tabPageM2.PerformLayout();
+            this.tabPageT2M2_2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TestPoints)).EndInit();
+            this.tabPageT2M2_1.ResumeLayout(false);
+            this.tabPageT2M2_1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2JogSpeed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2Points)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TeachPoints)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualQuote)).EndInit();
-            this.tabPageRecipe.ResumeLayout(false);
-            this.tabPageRecipe.PerformLayout();
             this.tabPageMain.ResumeLayout(false);
             this.tabPageMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).EndInit();
@@ -3750,13 +4259,11 @@
         private System.Windows.Forms.CheckBox checkBoxM1Inclusion;
         private System.Windows.Forms.ComboBox comboBoxM1PrgName;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM1HomingDone;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM1Ready;
         private System.Windows.Forms.Label labelM1Param1Value;
         private System.Windows.Forms.Label labelM1Param1Name;
         private LidorSystems.IntegralUI.Controls.TransparentPanel transparentPanelM6;
         private System.Windows.Forms.Label labelM6Name;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM6HomingDone;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM6Ready;
         private System.Windows.Forms.Label labelM6Param1Value;
         private System.Windows.Forms.Label labelM6Param1Name;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM6Status;
@@ -3765,7 +4272,6 @@
         private LidorSystems.IntegralUI.Controls.TransparentPanel transparentPanelM5;
         private System.Windows.Forms.Label labelM5Name;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM5HomingDone;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM5Ready;
         private System.Windows.Forms.Label labelM5Param1Value;
         private System.Windows.Forms.Label labelM5Param1Name;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM5Status;
@@ -3774,7 +4280,6 @@
         private LidorSystems.IntegralUI.Controls.TransparentPanel transparentPanelM4;
         private System.Windows.Forms.Label labelM4Name;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM4HomingDone;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM4Ready;
         private System.Windows.Forms.Label labelM4Param1Value;
         private System.Windows.Forms.Label labelM4Param1Name;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM4Status;
@@ -3783,7 +4288,6 @@
         private LidorSystems.IntegralUI.Controls.TransparentPanel transparentPanelM3;
         private System.Windows.Forms.Label labelM3Name;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM3HomingDone;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM3Ready;
         private System.Windows.Forms.Label labelM3Param1Value;
         private System.Windows.Forms.Label labelM3Param1Name;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM3Status;
@@ -3792,7 +4296,6 @@
         private LidorSystems.IntegralUI.Controls.TransparentPanel transparentPanelM2;
         private System.Windows.Forms.Label labelM2Name;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM2HomingDone;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM2Ready;
         private System.Windows.Forms.Label labelM2Param1Value;
         private System.Windows.Forms.Label labelM2Param1Name;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM2Status;
@@ -3810,7 +4313,7 @@
         private System.Windows.Forms.Button buttonResetCounter;
         private LidorSystems.IntegralUI.Controls.Label labelPieceCounter;
         private LidorSystems.IntegralUI.Containers.TabControl tabControlT2;
-        private LidorSystems.IntegralUI.Containers.TabPage tabPageM2;
+        private LidorSystems.IntegralUI.Containers.TabPage tabPageT2M2_1;
         private System.Windows.Forms.Button buttonM2PrintCycle;
         private System.Windows.Forms.Button buttonM2StartQuote;
         private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM2JogDown;
@@ -3822,14 +4325,14 @@
         private System.Windows.Forms.Button buttonM2ContrastOpening;
         private System.Windows.Forms.Button buttonM2CenteringClampsClosing;
         private System.Windows.Forms.Button buttonM2CenteringClampsOpening;
-        private System.Windows.Forms.Button buttonM2BigGripperClosing;
+        private System.Windows.Forms.Button buttonM2BigClampClosing;
         private System.Windows.Forms.Button buttonM2BigClampOpening;
         private System.Windows.Forms.Button buttonM2SmallClampClosing;
         private System.Windows.Forms.Button buttonM2SmallClampOpening;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM2T2HomingDone;
         private System.Windows.Forms.NumericUpDown numericUpDownM2ManualSpeed;
         private System.Windows.Forms.NumericUpDown numericUpDownM2ManualQuote;
-        private System.Windows.Forms.DataGridView dataGridViewM2Points;
+        private System.Windows.Forms.DataGridView dataGridViewM2TeachPoints;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2PointID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMeQuote;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2Speed;
@@ -3941,21 +4444,75 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private LidorSystems.IntegralUI.Containers.TabControl tabControlT3;
-        private LidorSystems.IntegralUI.Containers.TabPage tabPage1;
+        private LidorSystems.IntegralUI.Containers.TabPage tabPageT3M3_1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button3;
+        private LidorSystems.IntegralUI.Containers.TabPage tabPageT2M2_2;
+        private System.Windows.Forms.Button buttonM2SaveAsTestProgram;
+        private System.Windows.Forms.Button buttonM2SaveTestProgram;
+        private System.Windows.Forms.Button buttonM2LoadTestProgram;
+        private System.Windows.Forms.DataGridView dataGridViewM2TestPoints;
+        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM2StartTest;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private LidorSystems.IntegralUI.Containers.TabPage tabPageT3M3_2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
         private LBSoft.IndustrialCtrls.Buttons.LBButton lbButton1;
+        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButton2;
+        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button ServiceConfiBtn;
-        private System.Windows.Forms.ComboBox modelCombobox;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed1;
+        private System.Windows.Forms.NumericUpDown numericUpDownM3ManualSpeed;
+        private System.Windows.Forms.NumericUpDown numericUpDownM3ManualQuote;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button buttonM3StartQuote;
+        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM3JogDown;
+        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM3JogUp;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button buttonM3SmallClampClosing;
+        private System.Windows.Forms.Button buttonM3SmallClampOpening;
+        private LidorSystems.IntegralUI.Containers.TabControl tabControlT5;
+        private LidorSystems.IntegralUI.Containers.TabPage tabPageT5M5_1;
+        private System.Windows.Forms.Button buttonM5V1ExtFwd;
+        private System.Windows.Forms.Button buttonM5NoRotation;
+        private System.Windows.Forms.Button buttonM5CCWRotation;
+        private System.Windows.Forms.Button buttonM5CWRotation;
+        private System.Windows.Forms.Button buttonM5ClampClosing;
+        private System.Windows.Forms.Button buttonM5ClampOpening;
+        private System.Windows.Forms.Button buttonM5ClampBwd;
+        private System.Windows.Forms.Button buttonM5ClampFwd;
+        private System.Windows.Forms.Button buttonM5TranslatorBwd;
+        private System.Windows.Forms.Button buttonM5TranslatorFwd;
+        private System.Windows.Forms.Button buttonM5V2ExtBwd;
+        private System.Windows.Forms.Button buttonM5V2ExtFwd;
+        private System.Windows.Forms.Button buttonM5V1ExtBwd;
+        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM5StartStopOutBelt3;
+        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM5StartStopOutBelt2;
+        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM5StartStopOutBelt1;
+        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM5StartStopTranslBelt;
+        private LidorSystems.IntegralUI.Containers.TabPage tabPageT2M2_4;
+        private LidorSystems.IntegralUI.Containers.TabPage tabPageT2M2_3;
+        private LidorSystems.IntegralUI.Containers.TabPage tabPage1;
+        private LidorSystems.IntegralUI.Containers.TabPage tabPage3;
+        private LidorSystems.IntegralUI.Containers.TabPage tabPage2;
     }
 }
 

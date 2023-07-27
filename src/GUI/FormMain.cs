@@ -256,22 +256,40 @@ namespace GUI
         private void InitLastParameter()
         {
             //filePathDiagnosticFileTxtbox.Text = Settings.Default.DiagnosticFilePath;
-            dataGridViewM2Points.Rows.Add(4);
-            dataGridViewM2Points.Rows[0].Cells[0].Value = 1;
-            dataGridViewM2Points.Rows[1].Cells[0].Value = 2;
-            dataGridViewM2Points.Rows[2].Cells[0].Value = 3;
-            dataGridViewM2Points.Rows[3].Cells[0].Value = 4;
+            dataGridViewM2TeachPoints.Rows.Add(4);
+            dataGridViewM2TeachPoints.Rows[0].Cells[0].Value = 1;
+            dataGridViewM2TeachPoints.Rows[1].Cells[0].Value = 2;
+            dataGridViewM2TeachPoints.Rows[2].Cells[0].Value = 3;
+            dataGridViewM2TeachPoints.Rows[3].Cells[0].Value = 4;
 
-            dataGridViewM2Points.Rows[0].Cells[1].Value = 100;
-            dataGridViewM2Points.Rows[1].Cells[1].Value = 200;
-            dataGridViewM2Points.Rows[2].Cells[1].Value = 300;
-            dataGridViewM2Points.Rows[3].Cells[1].Value = 400;
+            dataGridViewM2TeachPoints.Rows[0].Cells[1].Value = 100;
+            dataGridViewM2TeachPoints.Rows[1].Cells[1].Value = 200;
+            dataGridViewM2TeachPoints.Rows[2].Cells[1].Value = 300;
+            dataGridViewM2TeachPoints.Rows[3].Cells[1].Value = 400;
 
-            dataGridViewM2Points.Rows[0].Cells[2].Value = 10;
-            dataGridViewM2Points.Rows[1].Cells[2].Value = 20;
-            dataGridViewM2Points.Rows[2].Cells[2].Value = 30;
-            dataGridViewM2Points.Rows[3].Cells[2].Value = 40;
-            dataGridViewM2Points.ClearSelection();
+            dataGridViewM2TeachPoints.Rows[0].Cells[2].Value = 10;
+            dataGridViewM2TeachPoints.Rows[1].Cells[2].Value = 20;
+            dataGridViewM2TeachPoints.Rows[2].Cells[2].Value = 30;
+            dataGridViewM2TeachPoints.Rows[3].Cells[2].Value = 40;
+            dataGridViewM2TeachPoints.ClearSelection();
+
+            dataGridViewM2TestPoints.Rows.Add(4);
+            dataGridViewM2TestPoints.Rows[0].Cells[0].Value = 1;
+            dataGridViewM2TestPoints.Rows[1].Cells[0].Value = 2;
+            dataGridViewM2TestPoints.Rows[2].Cells[0].Value = 3;
+            dataGridViewM2TestPoints.Rows[3].Cells[0].Value = 4;
+
+            dataGridViewM2TestPoints.Rows[0].Cells[1].Value = 100;
+            dataGridViewM2TestPoints.Rows[1].Cells[1].Value = 200;
+            dataGridViewM2TestPoints.Rows[2].Cells[1].Value = 300;
+            dataGridViewM2TestPoints.Rows[3].Cells[1].Value = 400;
+
+            dataGridViewM2TestPoints.Rows[0].Cells[2].Value = 10;
+            dataGridViewM2TestPoints.Rows[1].Cells[2].Value = 20;
+            dataGridViewM2TestPoints.Rows[2].Cells[2].Value = 30;
+            dataGridViewM2TestPoints.Rows[3].Cells[2].Value = 40;
+
+            dataGridViewM2TestPoints.ClearSelection();
         }
 
         private void InitServices()
@@ -664,16 +682,19 @@ namespace GUI
             int i = 0;
             short[] quote = new short[5];
             short[] speed = new short[5];
+            bool[] reg = new bool[5] { false, false, false, false, false };
+
+
             try
             {
                 //get selected row index
                 int currentRow = int.Parse(e.RowIndex.ToString());
 
                 short idPoint = (short)(currentRow + 1);
-                for (i = 0; i <= dataGridViewM2Points.RowCount - 1; i++)
+                for (i = 0; i <= dataGridViewM2TeachPoints.RowCount - 1; i++)
                 {
-                    quote[i + 1] = short.Parse(dataGridViewM2Points[1, i].Value.ToString());
-                    speed[i + 1] = short.Parse(dataGridViewM2Points[2, i].Value.ToString());
+                    quote[i + 1] = short.Parse(dataGridViewM2TeachPoints[1, i].Value.ToString());
+                    speed[i + 1] = short.Parse(dataGridViewM2TeachPoints[2, i].Value.ToString());
                 }
 
                 if (idPoint < 0 || idPoint > 4)
@@ -685,7 +706,8 @@ namespace GUI
                 // edit button
                 if ((e.ColumnIndex == 3) & currentRow >= 0)
                 {
-                    OPCUAM1TeachPckSend(idPoint, quote, speed, new bool[] { false, true, false, false, false });
+                    reg[idPoint] = true;
+                    OPCUAM2TeachPckSend(idPoint, quote, speed, reg);
                 }
             }
             catch (Exception ex)
@@ -739,7 +761,7 @@ namespace GUI
         }
 
         private async void buttonM2ContrastOpening_Click(object sender, EventArgs e)
-        {            
+        {
             string keyToSend = "pcM2ContrOpening";
 
             var readResult = await ccService.Send(keyToSend, true);
@@ -773,32 +795,12 @@ namespace GUI
 
         private async void lbButtonM2StartStopWorkingBelt_Click(object sender, EventArgs e)
         {
-            string keyToSend = null;
 
-            keyToSend = "pcM2StartStopWorkingBelt";
-            if (lbButtonM2StartStopWorkingBelt.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
-            {
-                var readResult = await ccService.Send(keyToSend, true);
-            }
-            else
-            {
-                var readResult = await ccService.Send(keyToSend, false);
-            }
         }
 
         private async void lbButtonM2StartStopExitBelt_Click(object sender, EventArgs e)
         {
-            string keyToSend = null;
 
-            keyToSend = "pcM2StartStopExitBelt";
-            if (lbButtonM2StartStopWorkingBelt.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
-            {
-                var readResult = await ccService.Send(keyToSend, true);
-            }
-            else
-            {
-                var readResult = await ccService.Send(keyToSend, false);
-            }
         }
 
         private void numericUpDownM2JogSpeed_Click(object sender, EventArgs e)
@@ -872,6 +874,361 @@ namespace GUI
                 if (readResult2.OpcResult)
                 {
                 }
+            }
+        }
+
+        private void dataGridViewM2TestPoints_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = 0;
+            short[] quote = new short[5];
+            short[] speed = new short[5];
+
+            try
+            {
+                //get selected row index
+                int currentRow = int.Parse(e.RowIndex.ToString());
+
+                short idPoint = (short)(currentRow + 1);
+                for (i = 0; i <= dataGridViewM2TeachPoints.RowCount - 1; i++)
+                {
+                    quote[i + 1] = short.Parse(dataGridViewM2TeachPoints[1, i].Value.ToString());
+                    speed[i + 1] = short.Parse(dataGridViewM2TeachPoints[2, i].Value.ToString());
+                }
+
+                if (idPoint < 0 || idPoint > 4)
+                {
+                    //todo message
+                    return;
+                }
+
+                // edit button
+                if ((e.ColumnIndex == 3) & currentRow >= 0)
+                {
+
+                    //OPCUAM2TeachPckSend(idPoint, quote, speed, reg);
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void buttonM2LoadTestProgram_Click(object sender, EventArgs e)
+        {
+            int i = 0;
+            short[] quote = new short[5];
+            short[] speed = new short[5];
+
+            try
+            {
+
+
+                for (i = 0; i <= dataGridViewM2TestPoints.RowCount - 1; i++)
+                {
+                    quote[i + 1] = short.Parse(dataGridViewM2TestPoints[1, i].Value.ToString());
+                    speed[i + 1] = short.Parse(dataGridViewM2TestPoints[2, i].Value.ToString());
+                }
+
+                OPCUAM2TestPckSend(quote, speed);
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
+
+        private async void lbButtonM2StartTest_Click(object sender, EventArgs e)
+        {            
+            string keyToSend = "pcM2StartTest";
+            var readResult = await ccService.Send(keyToSend, true);
+        }
+
+        private async void buttonM5TranslatorFwd_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5TranslatorFwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5TranslatorBwd_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5TranslatorBwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5ClampFwd_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5ClampFwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5ClampBwd_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5ClampBwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5ClampOpening_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5ClampOpening";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5ClampClosing_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5ClampClosing";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5CWRotation_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5CWRotation";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5CCWRotation_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5CCWRotation";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5NoRotation_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5NoRotation";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5V1ExtFwd_Click(object sender, EventArgs e)
+        {            
+            string keyToSend = "pcM5V1ExtFwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5V1ExtBwd_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5V1ExtBwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5V2ExtFwd_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5V2ExtFwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM5V2ExtBwd_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5V2ExtBwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void lbButtonM5StartStopTranslBelt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void lbButtonM5StartStopOutBelt1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void lbButtonM5StartStopOutBelt2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void lbButtonM5StartStopOutBelt3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void lbButtonM2StartStopWorkingBelt_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM2StartStopWorkingBelt";
+            if (lbButtonM2StartStopWorkingBelt.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void lbButtonM2StartStopExitBelt_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM2StartStopExitBelt";
+            if (lbButtonM2StartStopWorkingBelt.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void lbButtonM5StartStopTranslBelt_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = "pcM5StartStopTranslBelt";
+
+            if (lbButtonM5StartStopTranslBelt.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void lbButtonM5StartStopOutBelt1_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = "pcM5StartStopOutBelt1";
+
+            if (lbButtonM5StartStopOutBelt1.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var sendResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var sendResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void lbButtonM5StartStopOutBelt3_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = "pcM5StartStopOutBelt3";
+
+            if (lbButtonM5StartStopOutBelt3.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var sendResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var sendResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void lbButtonM5StartStopOutBelt2_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = "pcM5StartStopOutBelt2";
+
+            if (lbButtonM5StartStopOutBelt2.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var sendResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var sendResult = await ccService.Send(keyToSend, false);
             }
         }
     }
