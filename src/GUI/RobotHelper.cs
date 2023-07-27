@@ -193,7 +193,7 @@ namespace GUI
 
             //var varRresultS = await ccService.Read(keys);
 
-            if (!ccService.IsActive || !ccService.ClientIsConnected)
+            if(ccService == null || !ccService.IsActive || !ccService.ClientIsConnected)
                 return;
 
             //opcua M1 status

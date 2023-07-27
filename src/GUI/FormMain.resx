@@ -7341,28 +7341,28 @@
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="comboBox1.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="modelCombobox.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 15.75pt, style=Bold</value>
   </data>
-  <data name="comboBox1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="modelCombobox.Location" type="System.Drawing.Point, System.Drawing">
     <value>117, 36</value>
   </data>
-  <data name="comboBox1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="modelCombobox.Size" type="System.Drawing.Size, System.Drawing">
     <value>171, 38</value>
   </data>
-  <data name="comboBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="modelCombobox.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Name" xml:space="preserve">
-    <value>comboBox1</value>
+  <data name="&gt;&gt;modelCombobox.Name" xml:space="preserve">
+    <value>modelCombobox</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Type" xml:space="preserve">
+  <data name="&gt;&gt;modelCombobox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;comboBox1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;modelCombobox.Parent" xml:space="preserve">
     <value>tabPageRecipe</value>
   </data>
-  <data name="&gt;&gt;comboBox1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;modelCombobox.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="tabPageRecipe.Location" type="System.Drawing.Point, System.Drawing">

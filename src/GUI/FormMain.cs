@@ -46,7 +46,7 @@ namespace GUI
         private Form _clientForm { get; set; } = null;
 
         CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
-        private ProgramReadService _readProgramService { get; set; } = null;
+        private ReadProgramsService _readProgramService { get; set; } = null;
         public FormMain(SplashScreen splashScreen)
         {
             _splashScreen = splashScreen;
@@ -181,7 +181,7 @@ namespace GUI
 
             myCore.AddScoped<Diagnostic.Core.Diagnostic>();
             myCore.AddScoped<OpcClientService>();
-
+            myCore.AddScoped<ReadProgramsService>();
             //OpcClientConfiguration Config = new OpcClientConfiguration()
             //{
             //    ServiceName = "OpcClient",
@@ -213,14 +213,16 @@ namespace GUI
                 }
             }
 
-            var dummyS = myCore.FindPerType(typeof(ProgramReadService))[0];
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
-            if(dummyS is ProgramReadService progRS)
+            if(dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
             {
-                StandardProgramParser standardParser = new StandardProgramParser();
-                progRS.SetProgramParser(standardParser);
-                await progRS.LoadProgramAsync<PointAxis>();
+                    StandardProgramParser standardParser = new StandardProgramParser();
+                    progRS.SetProgramParser(standardParser);
+                    await progRS.LoadProgramAsync<PointAxis>();
+                    RSACustomEvents.ServiceHasLoadProgramEvent += RSACustomEvents_ServiceHasLoadProgramEvent;
             }
+
 
             foreach (var service in listOfService)
             {
@@ -238,6 +240,16 @@ namespace GUI
             _splashScreen?.WriteOnTextboxAsync($"Core Started");
 
 
+        }
+
+        private void RSACustomEvents_ServiceHasLoadProgramEvent(object sender, RSACustomEvents.ProgramsReadEndedEventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                modelCombobox.Items.AddRange(progRS.ModelDictionary.Keys.ToArray<string>());
+            }
         }
 
         private void InitLastParameter()

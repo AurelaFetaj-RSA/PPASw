@@ -310,7 +310,7 @@
             this.buttonM2SmallClampOpening = new System.Windows.Forms.Button();
             this.tabPageRecipe = new LidorSystems.IntegralUI.Containers.TabPage();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.modelCombobox = new System.Windows.Forms.ComboBox();
             this.tabPageMain = new LidorSystems.IntegralUI.Containers.TabPage();
             this.labelLoginLevel = new System.Windows.Forms.Label();
             this.labelDateTime = new System.Windows.Forms.Label();
@@ -3480,7 +3480,7 @@
             // tabPageRecipe
             // 
             this.tabPageRecipe.Controls.Add(this.label3);
-            this.tabPageRecipe.Controls.Add(this.comboBox1);
+            this.tabPageRecipe.Controls.Add(this.modelCombobox);
             tabPageFormatStyle7.BorderCornerRadius = 5;
             tabPageFormatStyle7.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 40);
@@ -3518,11 +3518,11 @@
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
-            // comboBox1
+            // modelCombobox
             // 
-            resources.ApplyResources(this.comboBox1, "comboBox1");
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Name = "comboBox1";
+            resources.ApplyResources(this.modelCombobox, "modelCombobox");
+            this.modelCombobox.FormattingEnabled = true;
+            this.modelCombobox.Name = "modelCombobox";
             // 
             // tabPageMain
             // 
@@ -3954,7 +3954,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button ServiceConfiBtn;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox modelCombobox;
         private System.Windows.Forms.Label label3;
     }
 }
