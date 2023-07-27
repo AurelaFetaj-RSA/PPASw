@@ -7527,25 +7527,198 @@
   <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="textBoxM2TeachNewProgram.Location" type="System.Drawing.Point, System.Drawing">
-    <value>574, 216</value>
+  <data name="textBoxM2TestProgramName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>548, 209</value>
   </data>
-  <data name="textBoxM2TeachNewProgram.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="textBoxM2TestProgramName.Size" type="System.Drawing.Size, System.Drawing">
     <value>131, 21</value>
   </data>
-  <data name="textBoxM2TeachNewProgram.TabIndex" type="System.Int32, mscorlib">
-    <value>107</value>
+  <data name="textBoxM2TestProgramName.TabIndex" type="System.Int32, mscorlib">
+    <value>112</value>
   </data>
-  <data name="&gt;&gt;textBoxM2TeachNewProgram.Name" xml:space="preserve">
-    <value>textBoxM2TeachNewProgram</value>
+  <data name="textBoxM2TestProgramName.Text" xml:space="preserve">
+    <value>PRTEST-310-SX00</value>
   </data>
-  <data name="&gt;&gt;textBoxM2TeachNewProgram.Type" xml:space="preserve">
+  <data name="&gt;&gt;textBoxM2TestProgramName.Name" xml:space="preserve">
+    <value>textBoxM2TestProgramName</value>
+  </data>
+  <data name="&gt;&gt;textBoxM2TestProgramName.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBoxM2TeachNewProgram.Parent" xml:space="preserve">
+  <data name="&gt;&gt;textBoxM2TestProgramName.Parent" xml:space="preserve">
+    <value>tabPageT2M2_2</value>
+  </data>
+  <data name="&gt;&gt;textBoxM2TestProgramName.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonM2TestSaveProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2TestSaveProgram.Location" type="System.Drawing.Point, System.Drawing">
+    <value>544, 140</value>
+  </data>
+  <data name="buttonM2TestSaveProgram.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM2TestSaveProgram.TabIndex" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="buttonM2TestSaveProgram.Text" xml:space="preserve">
+    <value>save program</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TestSaveProgram.Name" xml:space="preserve">
+    <value>buttonM2TestSaveProgram</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TestSaveProgram.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TestSaveProgram.Parent" xml:space="preserve">
+    <value>tabPageT2M2_2</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TestSaveProgram.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonM2TestLoadProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2TestLoadProgram.Location" type="System.Drawing.Point, System.Drawing">
+    <value>544, 81</value>
+  </data>
+  <data name="buttonM2TestLoadProgram.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM2TestLoadProgram.TabIndex" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="buttonM2TestLoadProgram.Text" xml:space="preserve">
+    <value>load program</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TestLoadProgram.Name" xml:space="preserve">
+    <value>buttonM2TestLoadProgram</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TestLoadProgram.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TestLoadProgram.Parent" xml:space="preserve">
+    <value>tabPageT2M2_2</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TestLoadProgram.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>point id</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+    <value>quote (mm)</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>speed (%)</value>
+  </data>
+  <data name="dataGridViewM2TestPoints.Location" type="System.Drawing.Point, System.Drawing">
+    <value>29, 80</value>
+  </data>
+  <data name="dataGridViewM2TestPoints.Size" type="System.Drawing.Size, System.Drawing">
+    <value>501, 298</value>
+  </data>
+  <data name="dataGridViewM2TestPoints.TabIndex" type="System.Int32, mscorlib">
+    <value>99</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewM2TestPoints.Name" xml:space="preserve">
+    <value>dataGridViewM2TestPoints</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewM2TestPoints.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewM2TestPoints.Parent" xml:space="preserve">
+    <value>tabPageT2M2_2</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewM2TestPoints.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbButtonM2StartTest.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM2StartTest.Location" type="System.Drawing.Point, System.Drawing">
+    <value>763, 23</value>
+  </data>
+  <data name="lbButtonM2StartTest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 73</value>
+  </data>
+  <data name="lbButtonM2StartTest.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartTest.Name" xml:space="preserve">
+    <value>lbButtonM2StartTest</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartTest.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartTest.Parent" xml:space="preserve">
+    <value>tabPageT2M2_2</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartTest.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tabPageT2M2_2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 34</value>
+  </data>
+  <data name="tabPageT2M2_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>979, 592</value>
+  </data>
+  <data name="tabPageT2M2_2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPageT2M2_2.Text" xml:space="preserve">
+    <value>test</value>
+  </data>
+  <data name="tabPageT2M2_2.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACSQgAAoEAAAAAA
+        /brLQQs=
+</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_2.Name" xml:space="preserve">
+    <value>tabPageT2M2_2</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_2.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_2.Parent" xml:space="preserve">
+    <value>tabControlT2</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBoxM2TeachProgramName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>574, 216</value>
+  </data>
+  <data name="textBoxM2TeachProgramName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 21</value>
+  </data>
+  <data name="textBoxM2TeachProgramName.TabIndex" type="System.Int32, mscorlib">
+    <value>107</value>
+  </data>
+  <data name="&gt;&gt;textBoxM2TeachProgramName.Name" xml:space="preserve">
+    <value>textBoxM2TeachProgramName</value>
+  </data>
+  <data name="&gt;&gt;textBoxM2TeachProgramName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxM2TeachProgramName.Parent" xml:space="preserve">
     <value>tabPageT2M2_1</value>
   </data>
-  <data name="&gt;&gt;textBoxM2TeachNewProgram.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;textBoxM2TeachProgramName.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="buttonM2TeachNewProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -7602,31 +7775,31 @@
   <data name="&gt;&gt;buttonM2TeachSaveProgram.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="button1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="buttonM2TeachLoadProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="buttonM2TeachLoadProgram.Location" type="System.Drawing.Point, System.Drawing">
     <value>817, 360</value>
   </data>
-  <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="buttonM2TeachLoadProgram.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 53</value>
   </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
+  <data name="buttonM2TeachLoadProgram.TabIndex" type="System.Int32, mscorlib">
     <value>104</value>
   </data>
-  <data name="button1.Text" xml:space="preserve">
-    <value>todo - carica_programma</value>
+  <data name="buttonM2TeachLoadProgram.Text" xml:space="preserve">
+    <value>load program</value>
   </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
+  <data name="&gt;&gt;buttonM2TeachLoadProgram.Name" xml:space="preserve">
+    <value>buttonM2TeachLoadProgram</value>
   </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonM2TeachLoadProgram.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonM2TeachLoadProgram.Parent" xml:space="preserve">
     <value>tabPageT2M2_1</value>
   </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;buttonM2TeachLoadProgram.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="labelM2TeachAxisQuoteValue.AutoSize" type="System.Boolean, mscorlib">
@@ -8346,7 +8519,7 @@
     <value>tabControlT2</value>
   </data>
   <data name="&gt;&gt;tabPageT2M2_1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="tabPageT2M2_3.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 34</value>
@@ -8378,7 +8551,7 @@
     <value>tabControlT2</value>
   </data>
   <data name="&gt;&gt;tabPageT2M2_3.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="tabPageT2M2_4.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 34</value>
@@ -8410,182 +8583,6 @@
     <value>tabControlT2</value>
   </data>
   <data name="&gt;&gt;tabPageT2M2_4.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="buttonM2SaveAsTestProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2SaveAsTestProgram.Location" type="System.Drawing.Point, System.Drawing">
-    <value>802, 232</value>
-  </data>
-  <data name="buttonM2SaveAsTestProgram.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="buttonM2SaveAsTestProgram.TabIndex" type="System.Int32, mscorlib">
-    <value>109</value>
-  </data>
-  <data name="buttonM2SaveAsTestProgram.Text" xml:space="preserve">
-    <value>todo - salva_come_programma</value>
-  </data>
-  <data name="&gt;&gt;buttonM2SaveAsTestProgram.Name" xml:space="preserve">
-    <value>buttonM2SaveAsTestProgram</value>
-  </data>
-  <data name="&gt;&gt;buttonM2SaveAsTestProgram.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2SaveAsTestProgram.Parent" xml:space="preserve">
-    <value>tabPageT2M2_2</value>
-  </data>
-  <data name="&gt;&gt;buttonM2SaveAsTestProgram.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="buttonM2SaveTestProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2SaveTestProgram.Location" type="System.Drawing.Point, System.Drawing">
-    <value>802, 165</value>
-  </data>
-  <data name="buttonM2SaveTestProgram.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="buttonM2SaveTestProgram.TabIndex" type="System.Int32, mscorlib">
-    <value>108</value>
-  </data>
-  <data name="buttonM2SaveTestProgram.Text" xml:space="preserve">
-    <value>todo - salva_programma</value>
-  </data>
-  <data name="&gt;&gt;buttonM2SaveTestProgram.Name" xml:space="preserve">
-    <value>buttonM2SaveTestProgram</value>
-  </data>
-  <data name="&gt;&gt;buttonM2SaveTestProgram.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2SaveTestProgram.Parent" xml:space="preserve">
-    <value>tabPageT2M2_2</value>
-  </data>
-  <data name="&gt;&gt;buttonM2SaveTestProgram.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="buttonM2LoadTestProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2LoadTestProgram.Location" type="System.Drawing.Point, System.Drawing">
-    <value>802, 106</value>
-  </data>
-  <data name="buttonM2LoadTestProgram.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="buttonM2LoadTestProgram.TabIndex" type="System.Int32, mscorlib">
-    <value>107</value>
-  </data>
-  <data name="buttonM2LoadTestProgram.Text" xml:space="preserve">
-    <value>todo - carica_programma</value>
-  </data>
-  <data name="&gt;&gt;buttonM2LoadTestProgram.Name" xml:space="preserve">
-    <value>buttonM2LoadTestProgram</value>
-  </data>
-  <data name="&gt;&gt;buttonM2LoadTestProgram.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2LoadTestProgram.Parent" xml:space="preserve">
-    <value>tabPageT2M2_2</value>
-  </data>
-  <data name="&gt;&gt;buttonM2LoadTestProgram.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
-    <value>point id</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
-    <value>quote (mm)</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
-    <value>speed (%)</value>
-  </data>
-  <data name="dataGridViewM2TestPoints.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 80</value>
-  </data>
-  <data name="dataGridViewM2TestPoints.Size" type="System.Drawing.Size, System.Drawing">
-    <value>501, 298</value>
-  </data>
-  <data name="dataGridViewM2TestPoints.TabIndex" type="System.Int32, mscorlib">
-    <value>99</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewM2TestPoints.Name" xml:space="preserve">
-    <value>dataGridViewM2TestPoints</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewM2TestPoints.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewM2TestPoints.Parent" xml:space="preserve">
-    <value>tabPageT2M2_2</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewM2TestPoints.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lbButtonM2StartTest.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 39.75pt, style=Bold</value>
-  </data>
-  <data name="lbButtonM2StartTest.Location" type="System.Drawing.Point, System.Drawing">
-    <value>763, 23</value>
-  </data>
-  <data name="lbButtonM2StartTest.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 73</value>
-  </data>
-  <data name="lbButtonM2StartTest.TabIndex" type="System.Int32, mscorlib">
-    <value>98</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2StartTest.Name" xml:space="preserve">
-    <value>lbButtonM2StartTest</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2StartTest.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2StartTest.Parent" xml:space="preserve">
-    <value>tabPageT2M2_2</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2StartTest.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="tabPageT2M2_2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 34</value>
-  </data>
-  <data name="tabPageT2M2_2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>979, 592</value>
-  </data>
-  <data name="tabPageT2M2_2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tabPageT2M2_2.Text" xml:space="preserve">
-    <value>test</value>
-  </data>
-  <data name="tabPageT2M2_2.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
-        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACSQgAAoEAAAAAA
-        /brLQQs=
-</value>
-  </data>
-  <data name="&gt;&gt;tabPageT2M2_2.Name" xml:space="preserve">
-    <value>tabPageT2M2_2</value>
-  </data>
-  <data name="&gt;&gt;tabPageT2M2_2.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
-  </data>
-  <data name="&gt;&gt;tabPageT2M2_2.Parent" xml:space="preserve">
-    <value>tabControlT2</value>
-  </data>
-  <data name="&gt;&gt;tabPageT2M2_2.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="tabControlT2.Location" type="System.Drawing.Point, System.Drawing">
