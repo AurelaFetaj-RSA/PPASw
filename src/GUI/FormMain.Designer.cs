@@ -254,6 +254,8 @@
             this.tabPageHelp = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageSettings = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlT5 = new LidorSystems.IntegralUI.Containers.TabControl();
+            this.tabPage1 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.tabPage3 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT5M5_1 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.lbButtonM5StartStopOutBelt3 = new LBSoft.IndustrialCtrls.Buttons.LBButton();
             this.lbButtonM5StartStopOutBelt2 = new LBSoft.IndustrialCtrls.Buttons.LBButton();
@@ -272,6 +274,7 @@
             this.buttonM5ClampFwd = new System.Windows.Forms.Button();
             this.buttonM5TranslatorBwd = new System.Windows.Forms.Button();
             this.buttonM5TranslatorFwd = new System.Windows.Forms.Button();
+            this.tabPage2 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.TabPageDiagnostic = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPage4 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlT3 = new LidorSystems.IntegralUI.Containers.TabControl();
@@ -361,9 +364,6 @@
             this.labelLoginLevel = new System.Windows.Forms.Label();
             this.labelDateTime = new System.Windows.Forms.Label();
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
-            this.tabPage1 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.tabPage2 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.tabPage3 = new LidorSystems.IntegralUI.Containers.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trueTransparentPanelAuto)).BeginInit();
@@ -2861,8 +2861,8 @@
             // 
             this.tabControlT5.Controls.Add(this.tabPage1);
             this.tabControlT5.Controls.Add(this.tabPage3);
-            this.tabControlT5.Controls.Add(this.tabPageT5M5_1);
             this.tabControlT5.Controls.Add(this.tabPage2);
+            this.tabControlT5.Controls.Add(this.tabPageT5M5_1);
             this.tabControlT5.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlT5, "tabControlT5");
             this.tabControlT5.Name = "tabControlT5";
@@ -2873,6 +2873,22 @@
             this.tabPage3});
             this.tabControlT5.ScrollPos = new System.Drawing.Point(0, 0);
             this.tabControlT5.SelectedPage = this.tabPage1;
+            // 
+            // tabPage1
+            // 
+            resources.ApplyResources(this.tabPage1, "tabPage1");
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.ParentPage = null;
+            this.tabPage1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage1.TextBounds")));
+            this.tabPage1.TextSize = new System.Drawing.SizeF(62.98502F, 13.82519F);
+            // 
+            // tabPage3
+            // 
+            resources.ApplyResources(this.tabPage3, "tabPage3");
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.ParentPage = null;
+            this.tabPage3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage3.TextBounds")));
+            this.tabPage3.TextSize = new System.Drawing.SizeF(56.69547F, 13.82519F);
             // 
             // tabPageT5M5_1
             // 
@@ -3057,6 +3073,14 @@
             this.buttonM5TranslatorFwd.Name = "buttonM5TranslatorFwd";
             this.buttonM5TranslatorFwd.UseVisualStyleBackColor = true;
             this.buttonM5TranslatorFwd.Click += new System.EventHandler(this.buttonM5TranslatorFwd_Click);
+            // 
+            // tabPage2
+            // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.ParentPage = null;
+            this.tabPage2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage2.TextBounds")));
+            this.tabPage2.TextSize = new System.Drawing.SizeF(69.84927F, 13.82519F);
             // 
             // TabPageDiagnostic
             // 
@@ -4062,13 +4086,13 @@
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
             this.tabControlMain.Controls.Add(this.tabPageConsole);
-            this.tabControlMain.Controls.Add(this.tabPageSettings);
-            this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
-            this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Controls.Add(this.tabPageHide);
             this.tabControlMain.Controls.Add(this.tabPageHelp);
+            this.tabControlMain.Controls.Add(this.tabPageSettings);
+            this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
             this.tabControlMain.Controls.Add(this.tabPage4);
             this.tabControlMain.Controls.Add(this.tabPageRecipe);
+            this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlMain, "tabControlMain");
             controlFormatStyle9.BorderCornerRadius = 5;
@@ -4134,30 +4158,6 @@
             this.tabControlMain.ToolTipStyle = toolTipStyle1;
             this.tabControlMain.SelectedPageChanged += new LidorSystems.IntegralUI.ObjectEventHandler(this.tabControlMain_SelectedPageChanged);
             this.tabControlMain.ToolItemClicked += new LidorSystems.IntegralUI.ObjectClickEventHandler(this.tabControlMain_ToolItemClicked);
-            // 
-            // tabPage1
-            // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.ParentPage = null;
-            this.tabPage1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage1.TextBounds")));
-            this.tabPage1.TextSize = new System.Drawing.SizeF(62.98502F, 13.82519F);
-            // 
-            // tabPage2
-            // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.ParentPage = null;
-            this.tabPage2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage2.TextBounds")));
-            this.tabPage2.TextSize = new System.Drawing.SizeF(69.84927F, 13.82519F);
-            // 
-            // tabPage3
-            // 
-            resources.ApplyResources(this.tabPage3, "tabPage3");
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.ParentPage = null;
-            this.tabPage3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage3.TextBounds")));
-            this.tabPage3.TextSize = new System.Drawing.SizeF(56.69547F, 13.82519F);
             // 
             // FormMain
             // 
