@@ -54,7 +54,10 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pc_start_stop", $"ns=2;s=Tags.Pad_print_interna/pc_start_stop", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pc_pausa", $"ns=2;s=Tags.Pad_print_interna/pc_pausa", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2PointsReached", $"ns=2;s=Tags.Pad_print_interna/pc_punto_1_raggiunto", typeof(bool[])));
+            
             ClientDataConfig.Add(new OpcObjectData("pcM2HomingDone", $"ns=2;s=Tags.Pad_print_interna/pc_homing_done", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM2PointReached", $"ns=2;s=Tags.Pad_print_interna/pc_punto_raggiunto", typeof(bool[])));
+
             ClientDataConfig.Add(new OpcObjectData("pcM2CurrentAxisQuote", $"ns=2;s=Tags.Pad_print_interna/pc_quota_attuale_asse", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pc_numero_cicli", $"ns=2;s=Tags.Pad_print_interna/pc_numero_cicli", typeof(short)));
             
@@ -64,6 +67,13 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pc_allarmi_timeout", $"ns=2;s=Tags.Pad_print_interna/pc_allarmi_timeout", typeof(short[])));
             ClientDataConfig.Add(new OpcObjectData("pc_input", $"ns=2;s=Tags.Pad_print_interna/pc_input", typeof(bool[])));
             ClientDataConfig.Add(new OpcObjectData("pc_output", $"ns=2;s=Tags.Pad_print_interna/pc_output", typeof(bool[])));
+
+
+
+
+
+
+
 
             ClientDataConfig.Add(new OpcObjectData("pcM1Status", $"ns=2;s=Tags.Pad_print_esterna/pc_stato_macchina", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM3Status", $"ns=2;s=Tags.Pad_print_esterna/pc_stato_macchina", typeof(short)));

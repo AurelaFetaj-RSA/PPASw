@@ -935,7 +935,7 @@ namespace GUI
             }
         }
 
-        private void buttonM2LoadTestProgram_Click(object sender, EventArgs e)
+        private void M2TestSendProgram()
         {
             int i = 0;
             short[] quote = new short[5];
@@ -960,7 +960,9 @@ namespace GUI
         }
 
         private async void lbButtonM2StartTest_Click(object sender, EventArgs e)
-        {            
+        {
+            M2TestSendProgram();
+
             string keyToSend = "pcM2StartTest";
             var readResult = await ccService.Send(keyToSend, true);
         }
@@ -1290,19 +1292,19 @@ namespace GUI
             if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                IObjWithPoint<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                objPoints = await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + textBoxM2TeachProgramName.Text + config.Extensions[0]);
+                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                objPoints = (ConcretePointsContainer<PointAxis>) await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + textBoxM2TeachProgramName.Text + config.Extensions[0]);
                 if (objPoints != null)
                 {
 
-                    //dataGridViewM2TestPoints[1, 0].Value = objPoints.Points[0].Q1;
-                    //dataGridViewM2TestPoints[1, 1].Value = objPoints.Points[0].Q2; 
-                    //dataGridViewM2TestPoints[1, 2].Value = objPoints.Points[0].Q3;
-                    //dataGridViewM2TestPoints[1, 3].Value = objPoints.Points[0].Q4;
-                    //dataGridViewM2TestPoints[2, 0].Value = objPoints.Points[0].V1;
-                    //dataGridViewM2TestPoints[2, 1].Value = objPoints.Points[0].V2;
-                    //dataGridViewM2TestPoints[2, 2].Value = objPoints.Points[0].V3;
-                    //dataGridViewM2TestPoints[2, 3].Value = objPoints.Points[0].V4;
+                    dataGridViewM2TeachPoints[1, 0].Value = objPoints.Points[0].Q1;
+                    dataGridViewM2TeachPoints[1, 1].Value = objPoints.Points[0].Q2;
+                    dataGridViewM2TeachPoints[1, 2].Value = objPoints.Points[0].Q3;
+                    dataGridViewM2TeachPoints[1, 3].Value = objPoints.Points[0].Q4;
+                    dataGridViewM2TeachPoints[2, 0].Value = objPoints.Points[0].V1;
+                    dataGridViewM2TeachPoints[2, 1].Value = objPoints.Points[0].V2;
+                    dataGridViewM2TeachPoints[2, 2].Value = objPoints.Points[0].V3;
+                    dataGridViewM2TeachPoints[2, 3].Value = objPoints.Points[0].V4;
 
                 }
             }
@@ -1327,6 +1329,31 @@ namespace GUI
                 ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(textBoxM2TestProgramName.Text);
                 prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
                 prgObj.Save(textBoxM2TestProgramName.Text + config.Extensions[0], config.ProgramsPath[0]);
+            }
+        }
+
+        private async void buttonM2TestLoadProgram_Click(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + textBoxM2TestProgramName.Text + config.Extensions[0]);
+                if (objPoints != null)
+                {
+
+                    dataGridViewM2TestPoints[1, 0].Value = objPoints.Points[0].Q1;
+                    dataGridViewM2TestPoints[1, 1].Value = objPoints.Points[0].Q2;
+                    dataGridViewM2TestPoints[1, 2].Value = objPoints.Points[0].Q3;
+                    dataGridViewM2TestPoints[1, 3].Value = objPoints.Points[0].Q4;
+                    dataGridViewM2TestPoints[2, 0].Value = objPoints.Points[0].V1;
+                    dataGridViewM2TestPoints[2, 1].Value = objPoints.Points[0].V2;
+                    dataGridViewM2TestPoints[2, 2].Value = objPoints.Points[0].V3;
+                    dataGridViewM2TestPoints[2, 3].Value = objPoints.Points[0].V4;
+
+                }
             }
         }
     }

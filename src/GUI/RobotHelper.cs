@@ -233,6 +233,26 @@ namespace GUI
 
             }
 
+            try
+            {
+                List<string> keys = new List<string>()
+                {
+                    "pcM1PointReached",
+                    "pcM2PointReached",
+                    "pcM3PointReached",
+                    "pcM4PointReached",
+                    "pcM5PointReached",
+                    "pcM6PointReached"
+                };
+
+                var readResult = await ccService.Read(keys);
+                UpdateOPCUAM2PointReached(readResult["pcM2PointReached"]);                
+            }
+            catch (Exception Ex)
+            {
+
+            }
+
             try 
             { 
 
@@ -249,7 +269,52 @@ namespace GUI
 
             }
 
+            //manipulator digital input
+            //try
+            //{
+            //    List<string> keys = new List<string>()
+            //    {
+            //        "pcM5DI",
+            //        "pcM5DO"
+            //    };
+
+            //    var readResult = await ccService.Read(keys);
+            //    UpdateOPCUAM5DI(readResult["pcM5DI"]);
+                
+            //}
+            //catch (Exception Ex)
+            //{
+
+            //}
         }
+
+        public void UpdateOPCUAM5DI(ClientResult diREsult)
+        {
+            //int i = 0;
+            
+            //Dictionary<int, LBSoft.IndustrialCtrls.Leds.LBLed> myDict = new Dictionary<int, LBSoft.IndustrialCtrls.Leds.LBLed>();
+            //myDict[0] = lbLedM5DI1;
+
+            //foreach (var result in diREsult.Value)
+            //{
+            //    myDict[result]
+            //}
+        }
+
+        public void UpdateOPCUAM2PointReached(ClientResult diREsult)
+        {
+            //int i = 0;
+
+            //Dictionary<int, LBSoft.IndustrialCtrls.Leds.LBLed> myDict = new Dictionary<int, LBSoft.IndustrialCtrls.Leds.LBLed>();
+            //myDict[0] = lbLedM5DI1;
+
+            //foreach (var result in diREsult.Value)
+            //{
+            //    myDict[result]
+            //}
+        }
+
+
 
         public void UpdateM2CurrentAxisQuote(short value)
         {
