@@ -217,10 +217,12 @@ namespace GUI
 
             if(dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
             {
+                    RSACustomEvents.ServiceHasLoadProgramEvent += RSACustomEvents_ServiceHasLoadProgramEvent;
+
                     StandardProgramParser standardParser = new StandardProgramParser();
                     progRS.SetProgramParser(standardParser);
                     await progRS.LoadProgramAsync<PointAxis>();
-                    RSACustomEvents.ServiceHasLoadProgramEvent += RSACustomEvents_ServiceHasLoadProgramEvent;
+
             }
 
 
@@ -244,10 +246,9 @@ namespace GUI
 
         private void RSACustomEvents_ServiceHasLoadProgramEvent(object sender, RSACustomEvents.ProgramsReadEndedEventArgs e)
         {
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            if(e.Service is ReadProgramsService progRS)
             {
+                modelCombobox.Items.Clear();
                 modelCombobox.Items.AddRange(progRS.ModelDictionary.Keys.ToArray<string>());
             }
         }
