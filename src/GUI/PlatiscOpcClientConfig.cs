@@ -65,7 +65,7 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pc_input", $"ns=2;s=Tags.Pad_print_interna/pc_input", typeof(bool[])));
             ClientDataConfig.Add(new OpcObjectData("pc_output", $"ns=2;s=Tags.Pad_print_interna/pc_output", typeof(bool[])));
 
-            ClientDataConfig.Add(new OpcObjectData("pcM1Status", $"ns=2;s=Tags.Pad_print_esterna/pc_stato_macchina", typeof(short)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1Status", $"ns=2;s=Tags.Pad_print_esternagdf/pc_stato_macchina", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM3Status", $"ns=2;s=Tags.Pad_print_esterna/pc_stato_macchina", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM4Status", $"ns=2;s=Tags.Pad_print_interna/pc_stato_macchina", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM5Status", $"ns=2;s=Tags.Pad_print_interna/pc_stato_macchina", typeof(short)));
@@ -81,7 +81,7 @@ namespace GUI
             //digital input
             ClientDataConfig.Add(new OpcObjectData("pcM2DI", $"ns=2;s=Tags.Pad_print_interna/pc_input", typeof(bool[])));
             ClientDataConfig.Add(new OpcObjectData("pcM2DO", $"ns=2;s=Tags.Pad_print_interna/pc_output", typeof(bool[])));
-
+            #region  (* manipulator *)
             ClientDataConfig.Add(new OpcObjectData("pcM5TranslatorFwd", $"ns=2;s=Tags.Manipolatore/pc_traslatore_avanti", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM5TranslatorBwd", $"ns=2;s=Tags.Manipolatore/pc_traslatore_indietro", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM5ClampFwd", $"ns=2;s=Tags.Manipolatore/pc_pinza_avanti", typeof(bool)));
@@ -99,8 +99,10 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM5StartStopOutBelt1", $"ns=2;s=Tags.Manipolatore/pc_start_stop_nastro_uscita_1", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM5StartStopOutBelt2", $"ns=2;s=Tags.Manipolatore/pc_start_stop_nastro_uscita_2", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM5StartStopOutBelt3", $"ns=2;s=Tags.Manipolatore/pc_start_stop_nastro_uscita_3", typeof(bool)));
-            
-                
+            ClientDataConfig.Add(new OpcObjectData("pcM5DI", $"ns=2;s=Tags.Manipolatore/pc_input", typeof(bool[]))); 
+            ClientDataConfig.Add(new OpcObjectData("pcM5DO", $"ns=2;s=Tags.Manipolatore/pc_output", typeof(bool[])));
+            #endregion
+
             #endregion
 
             return this;
