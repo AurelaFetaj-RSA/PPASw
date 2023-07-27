@@ -221,7 +221,7 @@ namespace GUI
 
                     StandardProgramParser standardParser = new StandardProgramParser();
                     progRS.SetProgramParser(standardParser);
-                    await progRS.LoadProgramAsync<PointAxis>();
+                    //await progRS.LoadProgramAsync<PointAxis>();
 
             }
 
@@ -248,8 +248,8 @@ namespace GUI
         {
             if(e.Service is ReadProgramsService progRS)
             {
-                modelCombobox.Items.Clear();
-                modelCombobox.Items.AddRange(progRS.ModelDictionary.Keys.ToArray<string>());
+                //modelCombobox.Items.Clear();
+                //modelCombobox.Items.AddRange(progRS.ModelDictionary.Keys.ToArray<string>());
             }
         }
 
@@ -290,6 +290,27 @@ namespace GUI
             dataGridViewM2TestPoints.Rows[3].Cells[2].Value = 40;
 
             dataGridViewM2TestPoints.ClearSelection();
+        }
+
+        private void ResetM2Datagrid()
+        {
+            dataGridViewM2TeachPoints.Rows.Clear();
+            dataGridViewM2TeachPoints.Rows.Add(4);
+            dataGridViewM2TeachPoints.Rows[0].Cells[0].Value = 1;
+            dataGridViewM2TeachPoints.Rows[1].Cells[0].Value = 2;
+            dataGridViewM2TeachPoints.Rows[2].Cells[0].Value = 3;
+            dataGridViewM2TeachPoints.Rows[3].Cells[0].Value = 4;
+
+            dataGridViewM2TeachPoints.Rows[0].Cells[1].Value = 100;
+            dataGridViewM2TeachPoints.Rows[1].Cells[1].Value = 200;
+            dataGridViewM2TeachPoints.Rows[2].Cells[1].Value = 300;
+            dataGridViewM2TeachPoints.Rows[3].Cells[1].Value = 400;
+
+            dataGridViewM2TeachPoints.Rows[0].Cells[2].Value = 10;
+            dataGridViewM2TeachPoints.Rows[1].Cells[2].Value = 20;
+            dataGridViewM2TeachPoints.Rows[2].Cells[2].Value = 30;
+            dataGridViewM2TeachPoints.Rows[3].Cells[2].Value = 40;
+            dataGridViewM2TeachPoints.ClearSelection();
         }
 
         private void InitServices()
@@ -1230,6 +1251,36 @@ namespace GUI
             {
                 var sendResult = await ccService.Send(keyToSend, false);
             }
+        }
+
+        private void buttonM2TeachNewProgram_Click(object sender, EventArgs e)
+        {
+            //reset points datagrid value to default
+            ResetM2Datagrid();
+
+        }
+
+        private void buttonM2TeachSaveProgram_Click(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                
+                int p1 = (int)dataGridViewM2TeachPoints[1, 0].Value;
+                int p2 = (int)dataGridViewM2TeachPoints[1, 1].Value;
+                int p3 = (int)dataGridViewM2TeachPoints[1, 2].Value;
+                int p4 = (int)dataGridViewM2TeachPoints[1, 3].Value;
+                int s1 = (int)dataGridViewM2TeachPoints[2, 0].Value;
+                int s2 = (int)dataGridViewM2TeachPoints[2, 1].Value;
+                int s3 = (int)dataGridViewM2TeachPoints[2, 2].Value;
+                int s4 = (int)dataGridViewM2TeachPoints[2, 3].Value;
+                ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(textBoxM2TeachNewProgram.Text);
+                prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
+                prgObj.Save(textBoxM2TeachNewProgram.Text + config.Extensions[0], config.ProgramsPath[0]);
+            }
+
         }
     }
 }
