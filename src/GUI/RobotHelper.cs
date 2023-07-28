@@ -183,6 +183,10 @@ namespace GUI
         #region (* machines status *)
         public async Task UpdateOPCUAStatus()
         {
+
+            if (ccService == null)
+                return;
+
             try
             {
                 List<string> keys = new List<string>()

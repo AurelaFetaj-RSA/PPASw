@@ -177,29 +177,12 @@ namespace GUI
             _splashScreen?.WriteOnTextboxAsync($"Init Core Configuration");
 
             string logName = $"Log\\{DateTime.Now.ToString("dd_MM_yyyy_hh_mm_ss")}.log";
-            LoggerConfigurator loadedloggerConfigurator = new LoggerConfigurator("LoggerConfigurations.json").Load().SetAllLogName(logName).Save();
+            LoggerConfigurator loadedloggerConfigurator = new LoggerConfigurator("LoggerConfigurations.json").Load().SetAllLogFileName(logName).Save();
 
             myCore.AddScoped<Diagnostic.Core.Diagnostic>();
             myCore.AddScoped<OpcClientService>();
             myCore.AddScoped<ReadProgramsService>();
-            //OpcClientConfiguration Config = new OpcClientConfiguration()
-            //{
-            //    ServiceName = "OpcClient",
-            //    Active = true,
-            //    Host = "192.168.0.38",
-            //    Port = 48011,
-            //    DefaultKeepAliveFutureValueExpected = 0,
-            //    DefaultKeepAliveFutureValueToSet = 1,
-            //    Scheme = "opc.tcp",
-            //    TimeoutMilliseconds = 5000,
-            //    DisconnectionTimeoutMilliseconds = 5000
-            //};
 
-            //CoreConfigurations newConfiguration = new CoreConfigurations();
-            //newConfiguration.ServiceConfigurations.Add(Config);
-
-            //myCore.AddScoped<RSACommon.Service.OpcClientService>();
-            //myCore.CreateServiceList(newConfiguration, null);
             var listOfService = myCore.CreateServiceList(myCore.CoreConfigurations, loadedloggerConfigurator);
 
             List<IService> listFound = myCore.FindPerType(typeof(OpcClientService));
@@ -424,7 +407,7 @@ namespace GUI
         private void openConfigFormTextbox_Click(object sender, EventArgs e)
         {
             if (_configForm == null)
-                _configForm = new ServiceSetup();
+                _configForm = new ServiceSetup(myCore);
 
             _configForm.Show();
             _configForm.Activate();
