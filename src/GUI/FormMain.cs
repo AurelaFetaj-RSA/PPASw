@@ -290,6 +290,9 @@ namespace GUI
             dataGridViewM2TestPoints.Rows[3].Cells[2].Value = 40;
 
             dataGridViewM2TestPoints.ClearSelection();
+
+
+
         }
 
         private void ResetM2Datagrid()
@@ -703,7 +706,7 @@ namespace GUI
             int i = 0;
             short[] quote = new short[5];
             short[] speed = new short[5];
-            bool[] reg = new bool[5] { false, false, false, false, false };
+            bool[] start = new bool[5] { false, false, false, false, false };
 
 
             try
@@ -724,11 +727,18 @@ namespace GUI
                     return;
                 }
 
-                // edit button
+                // register button
                 if ((e.ColumnIndex == 3) & currentRow >= 0)
                 {
-                    reg[idPoint] = true;
-                    OPCUAM2TeachPckSend(idPoint, quote, speed, reg);
+                    //register current axis value
+                    dataGridViewM2TeachPoints[1, currentRow].Value = Convert.ToInt32((labelM2TeachAxisQuoteValue.Text));
+                }
+
+                // start quote button
+                if ((e.ColumnIndex == 4) & currentRow >= 0)
+                {
+                    start[idPoint] = true;
+                    OPCUAM2TeachPckSend(idPoint, quote, speed, start);
                 }
             }
             catch (Exception ex)
@@ -835,37 +845,38 @@ namespace GUI
 
             if (e.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
             {
-                keyToSend = "pcM2JogDown";
-                var readResult1 = await ccService.Send(keyToSend, false);
-                if (readResult1.OpcResult)
-                {
-                }
+                //keyToSend = "pcM2JogDown";
+                //var readResult1 = await ccService.Send(keyToSend, false);
+                //if (readResult1.OpcResult)
+                //{
+                //}
 
-                keyToSend = "pcM2JogUp";
-                var readResult2 = await ccService.Send(keyToSend, true);
-                if (readResult2.OpcResult)
-                {
-                }
+                //keyToSend = "pcM2JogUp";
+                //var readResult2 = await ccService.Send(keyToSend, true);
+                //if (readResult2.OpcResult)
+                //{
+                //}
             }
             else
             {
-                keyToSend = "pcM2JogDown";
-                var readResult1 = await ccService.Send(keyToSend, false);
-                if (readResult1.OpcResult)
-                {
-                }
+                //keyToSend = "pcM2JogDown";
+                //var readResult1 = await ccService.Send(keyToSend, false);
+                //if (readResult1.OpcResult)
+                //{
+                //}
 
-                keyToSend = "pcM2JogUp";
-                var readResult2 = await ccService.Send(keyToSend, false);
-                if (readResult2.OpcResult)
-                {
-                }
+                //keyToSend = "pcM2JogUp";
+                //var readResult2 = await ccService.Send(keyToSend, false);
+                //if (readResult2.OpcResult)
+                //{
+                //}
             }
 
         }
 
         private async void lbButtonM2JogDown_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
         {
+            return;
             string keyToSend = null;
 
             if (e.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
@@ -1278,9 +1289,9 @@ namespace GUI
                 int s2 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 1].Value);
                 int s3 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 2].Value);
                 int s4 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 3].Value);
-                ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(textBoxM2TeachProgramName.Text);
+                ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM2TeachProgramList.Text);
                 prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
-                prgObj.Save(textBoxM2TeachProgramName.Text + config.Extensions[0], config.ProgramsPath[0]);
+                prgObj.Save(comboBoxM2TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[0]);
             }
 
         }
@@ -1293,7 +1304,7 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                objPoints = (ConcretePointsContainer<PointAxis>) await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + textBoxM2TeachProgramName.Text + config.Extensions[0]);
+                objPoints = (ConcretePointsContainer<PointAxis>) await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM2TeachProgramList.Text + config.Extensions[0]);
                 if (objPoints != null)
                 {
 

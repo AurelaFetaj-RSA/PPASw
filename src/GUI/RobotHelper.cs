@@ -21,7 +21,7 @@ using Diagnostic;
 using Diagnostic.State;
 using OpcCustom;
 using RSACommon.Service;
-
+using System.IO;
 namespace GUI
 {
     public partial class FormMain : Form
@@ -253,6 +253,7 @@ namespace GUI
 
             }
 
+
             try 
             { 
 
@@ -301,8 +302,71 @@ namespace GUI
             //}
         }
 
-        public void UpdateOPCUAM2PointReached(ClientResult diREsult)
+        public void UpdateOPCUAM2PointReached(ClientResult readResult)
         {
+
+            string fileNameReached = "";
+            string fileNameNotReached = "";
+            string fileNameNull = "";
+            byte[] binaryDataReached = null;
+            byte[] binaryDataNotReached = null;
+            byte[] binaryDataNull = null;
+            FileInfo fileInfoReached = null;
+            FileInfo fileInfoNotReached = null;
+            FileInfo fileInfoNull = null;
+            MemoryStream msReached = null;
+            MemoryStream msNotReached = null;
+            MemoryStream msNull = null;
+            Image returnImageReached = null;
+            Image returnImageNotReached = null;
+            Image returnImageNull = null;
+            fileNameReached = "C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\preached.png";
+            fileInfoReached = new FileInfo(fileNameReached);
+
+            binaryDataReached = File.ReadAllBytes(fileNameReached);
+            msReached = new MemoryStream(binaryDataReached);
+            returnImageReached = Image.FromStream(msReached, false, true);
+
+            fileNameNotReached = "C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\pnotreached.png";
+            fileInfoNotReached = new FileInfo(fileNameNotReached);
+
+            binaryDataNotReached = File.ReadAllBytes(fileNameNotReached);
+            msNotReached = new MemoryStream(binaryDataNotReached);
+            returnImageNotReached = Image.FromStream(msNotReached, false, true);
+
+            fileNameNull = "C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\null.png";
+            fileInfoNull = new FileInfo(fileNameNull);
+
+            binaryDataNull = File.ReadAllBytes(fileNameNull);
+            msNull = new MemoryStream(binaryDataNull);
+            returnImageNull = Image.FromStream(msNull, false, true);
+
+            if (readResult.OpcResult)
+            {
+                bool[] arrayBool = (bool[])readResult.Value;
+                int i = 0;
+                for(i = 1; i<arrayBool.Count();i++)
+                {
+                    if (arrayBool[i])
+                    {
+                        dataGridViewM2TeachPoints.Rows[i - 1].Cells[5].Value = returnImageNull;
+                        dataGridViewM2TeachPoints.Refresh();
+                        dataGridViewM2TeachPoints.Rows[i - 1].Cells[5].Value = returnImageReached;
+                        dataGridViewM2TeachPoints.Refresh();
+                        dataGridViewM2TeachPoints.Rows[1 - 1].Cells[5].ToolTipText = fileInfoReached.ToString();
+                    }
+                    else
+                    {
+                        dataGridViewM2TeachPoints.Rows[i - 1].Cells[5].Value = returnImageNull;
+                        dataGridViewM2TeachPoints.Refresh();
+                        dataGridViewM2TeachPoints.Rows[i - 1].Cells[5].Value = returnImageNotReached;
+                        dataGridViewM2TeachPoints.Refresh();
+                        dataGridViewM2TeachPoints.Rows[i - 1].Cells[5].ToolTipText = fileInfoNotReached.ToString();
+                    }
+                }
+                
+            } 
+                
             //int i = 0;
 
             //Dictionary<int, LBSoft.IndustrialCtrls.Leds.LBLed> myDict = new Dictionary<int, LBSoft.IndustrialCtrls.Leds.LBLed>();
@@ -312,6 +376,10 @@ namespace GUI
             //{
             //    myDict[result]
             //}
+
+
+
+
         }
 
 
@@ -320,7 +388,7 @@ namespace GUI
         {
             try
             {
-                WriteOnLabelAsync(value.ToString() + " " + "(mm)", labelM2TeachAxisQuoteValue);
+                WriteOnLabelAsync(value.ToString(), labelM2TeachAxisQuoteValue);
             }
             catch(Exception EX)
             {
