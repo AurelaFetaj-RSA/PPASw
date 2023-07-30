@@ -1337,9 +1337,9 @@ namespace GUI
                 int s2 = Convert.ToInt32(dataGridViewM2TestPoints[2, 1].Value);
                 int s3 = Convert.ToInt32(dataGridViewM2TestPoints[2, 2].Value);
                 int s4 = Convert.ToInt32(dataGridViewM2TestPoints[2, 3].Value);
-                ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(textBoxM2TestProgramName.Text);
+                ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM2TestProgramList.Text);
                 prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
-                prgObj.Save(textBoxM2TestProgramName.Text + config.Extensions[0], config.ProgramsPath[0]);
+                prgObj.Save(comboBoxM2TestProgramList.Text + config.Extensions[0], config.ProgramsPath[0]);
             }
         }
 
@@ -1351,7 +1351,7 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + textBoxM2TestProgramName.Text + config.Extensions[0]);
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM2TestProgramList.Text + config.Extensions[0]);
                 if (objPoints != null)
                 {
 
