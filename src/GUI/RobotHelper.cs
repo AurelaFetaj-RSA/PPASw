@@ -187,21 +187,21 @@ namespace GUI
             {
                 List<string> keys = new List<string>()
                 {
-                    "pcM1Status",
+                    //"pcM1Status",
                     "pcM2Status",
-                    "pcM3Status",
-                    "pcM4Status",
-                    "pcM5Status",
-                    "pcM6Status"
+                    "pcM3Status"
+                    //"pcM4Status",
+                    //"pcM5Status",
+                    //"pcM6Status"
                 };
 
                 var readResult = await ccService.Read(keys);
-                UpdateOPCUAMStatus((short)readResult["pcM1Status"]?.Value, lbLedM1Status);
+                //UpdateOPCUAMStatus((short)readResult["pcM1Status"]?.Value, lbLedM1Status);
                 UpdateOPCUAMStatus((short)readResult["pcM2Status"]?.Value, lbLedM2Status);
                 UpdateOPCUAMStatus((short)readResult["pcM3Status"]?.Value, lbLedM3Status);
-                UpdateOPCUAMStatus((short)readResult["pcM4Status"]?.Value, lbLedM4Status);
-                UpdateOPCUAMStatus((short)readResult["pcM5Status"]?.Value, lbLedM5Status);
-                UpdateOPCUAMStatus((short)readResult["pcM6Status"]?.Value, lbLedM6Status);
+                //UpdateOPCUAMStatus((short)readResult["pcM4Status"]?.Value, lbLedM4Status);
+                //UpdateOPCUAMStatus((short)readResult["pcM5Status"]?.Value, lbLedM5Status);
+                //UpdateOPCUAMStatus((short)readResult["pcM6Status"]?.Value, lbLedM6Status);
             }
             catch(Exception Ex)
             {
@@ -212,21 +212,21 @@ namespace GUI
             {
                 List<string> keys = new List<string>()
                 {
-                    "pcM1HomingDone",
+                    //"pcM1HomingDone",
                     "pcM2HomingDone",
-                    "pcM3HomingDone",
-                    "pcM4HomingDone",
-                    "pcM5HomingDone",
-                    "pcM6HomingDone"
+                    "pcM3HomingDone"
+                    //"pcM4HomingDone",
+                    //"pcM5HomingDone",
+                    //"pcM6HomingDone"
                 };
 
                 var readResult = await ccService.Read(keys);
-                UpdateOPCUAMHomingDone((bool)readResult["pcM1HomingDone"]?.Value, lbLedM1HomingDone);
+                //UpdateOPCUAMHomingDone((bool)readResult["pcM1HomingDone"]?.Value, lbLedM1HomingDone);
                 UpdateOPCUAMHomingDone((bool)readResult["pcM2HomingDone"]?.Value, lbLedM2HomingDone);
                 UpdateOPCUAMHomingDone((bool)readResult["pcM3HomingDone"]?.Value, lbLedM3HomingDone);
-                UpdateOPCUAMHomingDone((bool)readResult["pcM4HomingDone"]?.Value, lbLedM4HomingDone);
-                UpdateOPCUAMHomingDone((bool)readResult["pcM5HomingDone"]?.Value, lbLedM5HomingDone);
-                UpdateOPCUAMHomingDone((bool)readResult["pcM6HomingDone"]?.Value, lbLedM6HomingDone);
+                //UpdateOPCUAMHomingDone((bool)readResult["pcM4HomingDone"]?.Value, lbLedM4HomingDone);
+                //UpdateOPCUAMHomingDone((bool)readResult["pcM5HomingDone"]?.Value, lbLedM5HomingDone);
+                //UpdateOPCUAMHomingDone((bool)readResult["pcM6HomingDone"]?.Value, lbLedM6HomingDone);
             }
             catch (Exception Ex)
             {
@@ -237,12 +237,12 @@ namespace GUI
             {
                 List<string> keys = new List<string>()
                 {
-                    "pcM1PointReached",
+                    //"pcM1PointReached",
                     "pcM2PointReached",
-                    "pcM3PointReached",
-                    "pcM4PointReached",
-                    "pcM5PointReached",
-                    "pcM6PointReached"
+                    "pcM3PointReached"
+                    //"pcM4PointReached",
+                    //"pcM5PointReached",
+                    //"pcM6PointReached"
                 };
 
                 var readResult = await ccService.Read(keys);
@@ -253,8 +253,26 @@ namespace GUI
 
             }
 
+            //manipulator digital input
+            try
+            {
+                List<string> keys = new List<string>()
+                {
+                    "pcM2DI",
+                    "pcM2DO"
+                };
 
-            try 
+                var readResult = await ccService.Read(keys);
+                UpdateOPCUAM2DI(readResult["pcM2DI"]);
+
+            }
+            catch (Exception Ex)
+            {
+
+            }
+
+
+            try
             { 
 
                 //current axis quote
@@ -270,6 +288,23 @@ namespace GUI
 
             }
 
+
+            try
+            {
+
+                //current axis quote
+                var varResult = await ccService.Read("pcM3CurrentAxisQuote");
+                if (varResult.OpcResult) UpdateM3CurrentAxisQuote((short)varResult.Value);
+                else
+                {
+                    //todo
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+
             //manipulator digital input
             //try
             //{
@@ -281,7 +316,7 @@ namespace GUI
 
             //    var readResult = await ccService.Read(keys);
             //    UpdateOPCUAM5DI(readResult["pcM5DI"]);
-                
+
             //}
             //catch (Exception Ex)
             //{
@@ -294,6 +329,21 @@ namespace GUI
             //int i = 0;
             
             //Dictionary<int, LBSoft.IndustrialCtrls.Leds.LBLed> myDict = new Dictionary<int, LBSoft.IndustrialCtrls.Leds.LBLed>();
+            //myDict[0] = lbLedM5DI1;
+
+            //foreach (var result in diREsult.Value)
+            //{
+            //    myDict[result]
+            //}
+        }
+
+        public void UpdateOPCUAM2DI(ClientResult diREsult)
+        {
+            //int i = 0;
+
+            //Dictionary<int, LBSoft.IndustrialCtrls.Leds.LBLed> myDict = new Dictionary<int, LBSoft.IndustrialCtrls.Leds.LBLed>();
+            //lbLedM2DI1
+
             //myDict[0] = lbLedM5DI1;
 
             //foreach (var result in diREsult.Value)
@@ -391,6 +441,18 @@ namespace GUI
                 WriteOnLabelAsync(value.ToString(), labelM2TeachAxisQuoteValue);
             }
             catch(Exception EX)
+            {
+
+            }
+        }
+
+        public void UpdateM3CurrentAxisQuote(short value)
+        {
+            try
+            {
+                WriteOnLabelAsync(value.ToString(), labelM3TeachAxisQuoteValue);
+            }
+            catch (Exception EX)
             {
 
             }
@@ -503,6 +565,33 @@ namespace GUI
             }
         }
 
+        public async void OPCUAM3TeachPckSend(short pointID, short[] pointQuote, short[] pointSpeed, bool[] pointReg)
+        {
+            List<string> keys = new List<string>();
+            keys.Add("pcM3TeachPointID");
+            keys.Add("pcM3TeachSpeed");
+            keys.Add("pcM3TeachQuote");
+            keys.Add("pcM3TeachPointReg");
+
+            List<object> obj = new List<object>()
+            {
+                pointID,
+                pointSpeed,
+                pointQuote,
+                pointReg
+            };
+
+            Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
+            try
+            {
+                sendResult = await ccService.Send(keys, obj);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
         public async void OPCUAM2TestPckSend(short[] pointQuote, short[] pointSpeed)
         {
             List<string> keys = new List<string>();
@@ -524,7 +613,30 @@ namespace GUI
             {
 
             }
-        }        
+        }
+
+        public async void OPCUAM3TestPckSend(short[] pointQuote, short[] pointSpeed)
+        {
+            List<string> keys = new List<string>();
+            keys.Add("pcM3TestSpeed");
+            keys.Add("pcM3TestQuote");
+
+            List<object> obj = new List<object>()
+            {
+                pointSpeed,
+                pointQuote
+            };
+
+            Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
+            try
+            {
+                sendResult = await ccService.Send(keys, obj);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
         #endregion
 
         #endregion

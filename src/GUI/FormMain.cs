@@ -177,7 +177,7 @@ namespace GUI
             _splashScreen?.WriteOnTextboxAsync($"Init Core Configuration");
 
             string logName = $"Log\\{DateTime.Now.ToString("dd_MM_yyyy_hh_mm_ss")}.log";
-            LoggerConfigurator loadedloggerConfigurator = new LoggerConfigurator("LoggerConfigurations.json").Load().SetAllLogName(logName).Save();
+            LoggerConfigurator loadedloggerConfigurator = new LoggerConfigurator("LoggerConfigurations.json").Load().SetAllLogFileName(logName).Save();
 
             myCore.AddScoped<Diagnostic.Core.Diagnostic>();
             myCore.AddScoped<OpcClientService>();
@@ -291,7 +291,58 @@ namespace GUI
 
             dataGridViewM2TestPoints.ClearSelection();
 
+            ///////////////////////////////////////////////
+            ///
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("XXXX");
+                List<string> mList = progRS.GetModel(config.ProgramsPath[1], config.Extensions);
+
+                foreach( string modelName in mList)
+                {
+                    comboBoxM3TeachModelName.Items.Add(modelName);
+                }
+
+
+            }
+            /////////////////////////////////////////////////////
+            dataGridViewM3TeachPoints.Rows.Add(4);
+            dataGridViewM3TeachPoints.Rows[0].Cells[0].Value = 1;
+            dataGridViewM3TeachPoints.Rows[1].Cells[0].Value = 2;
+            dataGridViewM3TeachPoints.Rows[2].Cells[0].Value = 3;
+            dataGridViewM3TeachPoints.Rows[3].Cells[0].Value = 4;
+
+            dataGridViewM3TeachPoints.Rows[0].Cells[1].Value = 100;
+            dataGridViewM3TeachPoints.Rows[1].Cells[1].Value = 200;
+            dataGridViewM3TeachPoints.Rows[2].Cells[1].Value = 300;
+            dataGridViewM3TeachPoints.Rows[3].Cells[1].Value = 400;
+
+            dataGridViewM3TeachPoints.Rows[0].Cells[2].Value = 10;
+            dataGridViewM3TeachPoints.Rows[1].Cells[2].Value = 20;
+            dataGridViewM3TeachPoints.Rows[2].Cells[2].Value = 30;
+            dataGridViewM3TeachPoints.Rows[3].Cells[2].Value = 40;
+            dataGridViewM3TeachPoints.ClearSelection();
+
+            dataGridViewM3TestPoints.Rows.Add(4);
+            dataGridViewM3TestPoints.Rows[0].Cells[0].Value = 1;
+            dataGridViewM3TestPoints.Rows[1].Cells[0].Value = 2;
+            dataGridViewM3TestPoints.Rows[2].Cells[0].Value = 3;
+            dataGridViewM3TestPoints.Rows[3].Cells[0].Value = 4;
+
+            dataGridViewM3TestPoints.Rows[0].Cells[1].Value = 100;
+            dataGridViewM3TestPoints.Rows[1].Cells[1].Value = 200;
+            dataGridViewM3TestPoints.Rows[2].Cells[1].Value = 300;
+            dataGridViewM3TestPoints.Rows[3].Cells[1].Value = 400;
+
+            dataGridViewM3TestPoints.Rows[0].Cells[2].Value = 10;
+            dataGridViewM3TestPoints.Rows[1].Cells[2].Value = 20;
+            dataGridViewM3TestPoints.Rows[2].Cells[2].Value = 30;
+            dataGridViewM3TestPoints.Rows[3].Cells[2].Value = 40;
+
+            dataGridViewM3TestPoints.ClearSelection();
 
         }
 
@@ -314,6 +365,27 @@ namespace GUI
             dataGridViewM2TeachPoints.Rows[2].Cells[2].Value = 30;
             dataGridViewM2TeachPoints.Rows[3].Cells[2].Value = 40;
             dataGridViewM2TeachPoints.ClearSelection();
+        }
+
+        private void ResetM3Datagrid()
+        {
+            dataGridViewM3TeachPoints.Rows.Clear();
+            dataGridViewM3TeachPoints.Rows.Add(4);
+            dataGridViewM3TeachPoints.Rows[0].Cells[0].Value = 1;
+            dataGridViewM3TeachPoints.Rows[1].Cells[0].Value = 2;
+            dataGridViewM3TeachPoints.Rows[2].Cells[0].Value = 3;
+            dataGridViewM3TeachPoints.Rows[3].Cells[0].Value = 4;
+
+            dataGridViewM3TeachPoints.Rows[0].Cells[1].Value = 100;
+            dataGridViewM3TeachPoints.Rows[1].Cells[1].Value = 200;
+            dataGridViewM3TeachPoints.Rows[2].Cells[1].Value = 300;
+            dataGridViewM3TeachPoints.Rows[3].Cells[1].Value = 400;
+
+            dataGridViewM3TeachPoints.Rows[0].Cells[2].Value = 10;
+            dataGridViewM3TeachPoints.Rows[1].Cells[2].Value = 20;
+            dataGridViewM3TeachPoints.Rows[2].Cells[2].Value = 30;
+            dataGridViewM3TeachPoints.Rows[3].Cells[2].Value = 40;
+            dataGridViewM3TeachPoints.ClearSelection();
         }
 
         private void InitServices()
@@ -490,11 +562,11 @@ namespace GUI
 
             if (readResult.OpcResult)
             {
-                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+
             }
             else
             {
-                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+
             }
         }
 
@@ -732,6 +804,8 @@ namespace GUI
                 {
                     //register current axis value
                     dataGridViewM2TeachPoints[1, currentRow].Value = Convert.ToInt32((labelM2TeachAxisQuoteValue.Text));
+                    //register current speed value
+                    dataGridViewM2TeachPoints[2, currentRow].Value = Convert.ToInt32((numericUpDownM2JogSpeed.Value));
                 }
 
                 // start quote button
@@ -845,38 +919,38 @@ namespace GUI
 
             if (e.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
             {
-                //keyToSend = "pcM2JogDown";
-                //var readResult1 = await ccService.Send(keyToSend, false);
-                //if (readResult1.OpcResult)
-                //{
-                //}
+                //send quote
+                keyToSend = "pcM2JogDown";
+                var readResult1 = await ccService.Send(keyToSend, false);
+                if (readResult1.OpcResult)
+                {
+                }
 
-                //keyToSend = "pcM2JogUp";
-                //var readResult2 = await ccService.Send(keyToSend, true);
-                //if (readResult2.OpcResult)
-                //{
-                //}
+                keyToSend = "pcM2JogUp";
+                var readResult2 = await ccService.Send(keyToSend, true);
+                if (readResult2.OpcResult)
+                {
+                }
             }
             else
             {
-                //keyToSend = "pcM2JogDown";
-                //var readResult1 = await ccService.Send(keyToSend, false);
-                //if (readResult1.OpcResult)
-                //{
-                //}
+                keyToSend = "pcM2JogDown";
+                var readResult1 = await ccService.Send(keyToSend, false);
+                if (readResult1.OpcResult)
+                {
+                }
 
-                //keyToSend = "pcM2JogUp";
-                //var readResult2 = await ccService.Send(keyToSend, false);
-                //if (readResult2.OpcResult)
-                //{
-                //}
+                keyToSend = "pcM2JogUp";
+                var readResult2 = await ccService.Send(keyToSend, false);
+                if (readResult2.OpcResult)
+                {
+                }
             }
 
         }
 
         private async void lbButtonM2JogDown_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
         {
-            return;
             string keyToSend = null;
 
             if (e.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
@@ -965,6 +1039,30 @@ namespace GUI
                 OPCUAM2TestPckSend(quote, speed);
             }
             catch(Exception ex)
+            {
+
+            }
+        }
+
+        private void M3TestSendProgram()
+        {
+            int i = 0;
+            short[] quote = new short[5];
+            short[] speed = new short[5];
+
+            try
+            {
+
+
+                for (i = 0; i <= dataGridViewM3TestPoints.RowCount - 1; i++)
+                {
+                    quote[i + 1] = short.Parse(dataGridViewM3TestPoints[1, i].Value.ToString());
+                    speed[i + 1] = short.Parse(dataGridViewM3TestPoints[2, i].Value.ToString());
+                }
+
+                OPCUAM3TestPckSend(quote, speed);
+            }
+            catch (Exception ex)
             {
 
             }
@@ -1365,6 +1463,531 @@ namespace GUI
                     dataGridViewM2TestPoints[2, 3].Value = objPoints.Points[0].V4;
 
                 }
+            }
+        }
+
+        private async void buttonM3TeachLoadProgram_Click(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + comboBoxM3TeachProgramList.Text + config.Extensions[0]);
+                if (objPoints != null)
+                {
+
+                    dataGridViewM3TeachPoints[1, 0].Value = objPoints.Points[0].Q1;
+                    dataGridViewM3TeachPoints[1, 1].Value = objPoints.Points[0].Q2;
+                    dataGridViewM3TeachPoints[1, 2].Value = objPoints.Points[0].Q3;
+                    dataGridViewM3TeachPoints[1, 3].Value = objPoints.Points[0].Q4;
+                    dataGridViewM3TeachPoints[2, 0].Value = objPoints.Points[0].V1;
+                    dataGridViewM3TeachPoints[2, 1].Value = objPoints.Points[0].V2;
+                    dataGridViewM3TeachPoints[2, 2].Value = objPoints.Points[0].V3;
+                    dataGridViewM3TeachPoints[2, 3].Value = objPoints.Points[0].V4;
+
+                }
+            }
+        }
+
+        private void buttonM3TeachSaveProgram_Click(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+
+                int p1 = Convert.ToInt32(dataGridViewM3TeachPoints[1, 0].Value);
+                int p2 = Convert.ToInt32(dataGridViewM3TeachPoints[1, 1].Value);
+                int p3 = Convert.ToInt32(dataGridViewM3TeachPoints[1, 2].Value);
+                int p4 = Convert.ToInt32(dataGridViewM3TeachPoints[1, 3].Value);
+                int s1 = Convert.ToInt32(dataGridViewM3TeachPoints[2, 0].Value);
+                int s2 = Convert.ToInt32(dataGridViewM3TeachPoints[2, 1].Value);
+                int s3 = Convert.ToInt32(dataGridViewM3TeachPoints[2, 2].Value);
+                int s4 = Convert.ToInt32(dataGridViewM3TeachPoints[2, 3].Value);
+                ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM3TeachProgramList.Text);
+                prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
+                prgObj.Save(comboBoxM3TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[1]);
+            }
+        }
+
+        private void buttonM3TeachNewProgram_Click(object sender, EventArgs e)
+        {
+            //reset points datagrid value to default
+            ResetM3Datagrid();
+        }
+
+        private void dataGridViewM3TeachPoints_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = 0;
+            short[] quote = new short[5];
+            short[] speed = new short[5];
+            bool[] start = new bool[5] { false, false, false, false, false };
+
+
+            try
+            {
+                //get selected row index
+                int currentRow = int.Parse(e.RowIndex.ToString());
+
+                short idPoint = (short)(currentRow + 1);
+                for (i = 0; i <= dataGridViewM3TeachPoints.RowCount - 1; i++)
+                {
+                    quote[i + 1] = short.Parse(dataGridViewM3TeachPoints[1, i].Value.ToString());
+                    speed[i + 1] = short.Parse(dataGridViewM3TeachPoints[2, i].Value.ToString());
+                }
+
+                if (idPoint < 0 || idPoint > 4)
+                {
+                    //todo message
+                    return;
+                }
+
+                // register button
+                if ((e.ColumnIndex == 3) & currentRow >= 0)
+                {
+                    //register current axis value
+                    dataGridViewM3TeachPoints[1, currentRow].Value = Convert.ToInt32((labelM3TeachAxisQuoteValue.Text));
+                    //register current speed value
+                    dataGridViewM3TeachPoints[2, currentRow].Value = Convert.ToInt32((numericUpDownM3JogSpeed.Value));
+                }
+
+                // start quote button
+                if ((e.ColumnIndex == 4) & currentRow >= 0)
+                {
+                    start[idPoint] = true;
+                    OPCUAM3TeachPckSend(idPoint, quote, speed, start);
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private async void lbButtonM3JogUp_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = null;
+
+            if (e.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                //send quote
+                keyToSend = "pcM3JogDown";
+                var readResult1 = await ccService.Send(keyToSend, false);
+                if (readResult1.OpcResult)
+                {
+                }
+
+                keyToSend = "pcM3JogUp";
+                var readResult2 = await ccService.Send(keyToSend, true);
+                if (readResult2.OpcResult)
+                {
+                }
+            }
+            else
+            {
+                keyToSend = "pcM3JogDown";
+                var readResult1 = await ccService.Send(keyToSend, false);
+                if (readResult1.OpcResult)
+                {
+                }
+
+                keyToSend = "pcM3JogUp";
+                var readResult2 = await ccService.Send(keyToSend, false);
+                if (readResult2.OpcResult)
+                {
+                }
+            }
+        }
+
+        private async void lbButtonM3JogDown_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = null;
+
+            if (e.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                keyToSend = "pcM3JogUp";
+                var readResult1 = await ccService.Send(keyToSend, false);
+                if (readResult1.OpcResult)
+                {
+                }
+
+                keyToSend = "pcM3JogDown";
+                var readResult2 = await ccService.Send(keyToSend, true);
+                if (readResult2.OpcResult)
+                {
+                }
+            }
+            else
+            {
+                keyToSend = "pcM3JogUp";
+                var readResult1 = await ccService.Send(keyToSend, false);
+                if (readResult1.OpcResult)
+                {
+                }
+
+                keyToSend = "pcM3JogDown";
+                var readResult2 = await ccService.Send(keyToSend, false);
+                if (readResult2.OpcResult)
+                {
+                }
+            }
+        }
+
+        private async void numericUpDownM3JogSpeed_ValueChanged(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM3JogSpeed";
+
+            var readResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM2JogSpeed.Value.ToString()));
+
+            if (readResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM3SmallClampOpening_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM3SmallClampOpening";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM3SmallClampClosing_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM3SmallClampClosing";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM3BigClampOpening_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM3BigClampOpening";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM3BigClampClosing_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM3BigClampClosing";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM3CenteringClampOpening_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM3CentrClampOpening";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM3CenteringClampClosing_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM3CentrClampClosing";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM3ContrastOpening_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM3ContrOpening";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM3ContrastClosing_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM3ContrClosing";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private async void buttonM3ResetServo_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM3ResetServoAlarm";
+
+            var readResult = await ccService.Send(keyToSend, true);
+
+            if (readResult.OpcResult)
+            {
+                
+            }
+            else
+            {
+                
+            }
+        }
+
+        private async void buttonM3PrintCycle_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM3Print";
+
+            var readResult = await ccService.Send(keyToSend, true);
+            if (readResult.OpcResult)
+            {
+
+            }
+        }
+
+        private void lbM3StartStopExitBelt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbM3StartStopWorkingBelt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void lbM3StartStopWorkingBelt_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM3StartStopWorkingBelt";
+            if (lbM3StartStopWorkingBelt.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void lbM3StartStopExitBelt_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM3StartStopExitBelt";
+            if (lbM3StartStopExitBelt.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var readResult = await ccService.Send(keyToSend, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyToSend, false);
+            }
+        }
+
+        private async void buttonM3Home_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM3Homing";
+
+            var readResult = await ccService.Send(keyToSend, true);
+
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void buttonM3ResetHome_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM3ResetHoming";
+
+            var readResult = await ccService.Send(keyToSend, true);
+
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void buttonM3StartQuote_Click(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            //quote 
+            keyToSend = "pcM3ManualQuote";
+            var readResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM3ManualQuote.Value.ToString()));
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+
+            keyToSend = "pcM3ManualSpeed";
+            var readResult1 = await ccService.Send(keyToSend, short.Parse(numericUpDownM3ManualSpeed.Value.ToString()));
+
+            keyToSend = "pcM3QuoteStart";
+            var readResult2 = await ccService.Send(keyToSend, true);
+            //todo: chi lo mette a false
+        }
+
+        private async void numericUpDownM3ManualQuote_ValueChanged(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM3ManualQuote";
+
+            var readResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM3ManualQuote.Value.ToString()));
+
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void numericUpDownM3ManualSpeed_ValueChanged(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM3ManualSpeed";
+
+            var readResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM3ManualSpeed.Value.ToString()));
+
+            if (readResult.OpcResult)
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage("Value set"));
+            }
+            else
+            {
+                //await Task.Run(() => ThreadSafeWriteMessage($"Problem with set data {keyToSend}"));
+            }
+        }
+
+        private async void buttonM3TestLoadProgram_Click(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + comboBoxM3TestProgramList.Text + config.Extensions[0]);
+                if (objPoints != null)
+                {
+
+                    dataGridViewM3TestPoints[1, 0].Value = objPoints.Points[0].Q1;
+                    dataGridViewM3TestPoints[1, 1].Value = objPoints.Points[0].Q2;
+                    dataGridViewM3TestPoints[1, 2].Value = objPoints.Points[0].Q3;
+                    dataGridViewM3TestPoints[1, 3].Value = objPoints.Points[0].Q4;
+                    dataGridViewM3TestPoints[2, 0].Value = objPoints.Points[0].V1;
+                    dataGridViewM3TestPoints[2, 1].Value = objPoints.Points[0].V2;
+                    dataGridViewM3TestPoints[2, 2].Value = objPoints.Points[0].V3;
+                    dataGridViewM3TestPoints[2, 3].Value = objPoints.Points[0].V4;
+
+                }
+            }
+        }
+
+        private async void buttonM3TestSaveProgram_Click(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+
+                int p1 = Convert.ToInt32(dataGridViewM3TestPoints[1, 0].Value);
+                int p2 = Convert.ToInt32(dataGridViewM3TestPoints[1, 1].Value);
+                int p3 = Convert.ToInt32(dataGridViewM3TestPoints[1, 2].Value);
+                int p4 = Convert.ToInt32(dataGridViewM3TestPoints[1, 3].Value);
+                int s1 = Convert.ToInt32(dataGridViewM3TestPoints[2, 0].Value);
+                int s2 = Convert.ToInt32(dataGridViewM3TestPoints[2, 1].Value);
+                int s3 = Convert.ToInt32(dataGridViewM3TestPoints[2, 2].Value);
+                int s4 = Convert.ToInt32(dataGridViewM3TestPoints[2, 3].Value);
+                ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM3TestProgramList.Text);
+                prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
+                prgObj.Save(comboBoxM3TestProgramList.Text + config.Extensions[0], config.ProgramsPath[1]);
+            }
+        }
+
+        private async void lbButtonM3StartTest_Click(object sender, EventArgs e)
+        {
+            string[] parsed = null;
+            int type = -1;
+            parsed = comboBoxM3TestProgramList.Text.ToString().Split('-');
+            string keyToSend = "pcM3TestType";
+            if (parsed[2] == "DX")
+            {
+                type = 1;
+                
+            }
+            else
+            {
+                type = 2;
+
+            }
+
+            var readResult = await ccService.Send(keyToSend, type);
+
+            M3TestSendProgram();
+
+            keyToSend = "pcM3StartTest";
+            readResult = await ccService.Send(keyToSend, true);
+        }
+
+        private void comboBoxM3TeachProgramList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void comboBoxM3TeachModelName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                List<IObjProgram> pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxM3TeachModelName.Text);
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM3TeachProgramList.Items.Add(prgName.ProgramName);
+                }
+
+
             }
         }
     }
