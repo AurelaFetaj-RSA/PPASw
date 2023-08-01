@@ -98,8 +98,8 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM3StartStopExitBelt", $"ns=2;s=Tags.Pad_print_esterna/pc_start_stop_nastro_uscita", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM3ManualSpeed", $"ns=2;s=Tags.Pad_print_esterna/pc_percentuale_velocita_in_manuale", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM3ManualQuote", $"ns=2;s=Tags.Pad_print_esterna/pc_quota_finale_asse_in_manuale", typeof(short)));
-
             ClientDataConfig.Add(new OpcObjectData("pcM3Inclusion", $"ns=2;s=Tags.Pad_print_esterna/pc_percentuale_velocita_in_manuale", typeof(bool)));
+
             ClientDataConfig.Add(new OpcObjectData("pc_inclusione_esclusione_da_ricetta", $"ns=2;s=Tags.Pad_print_esterna/pc_quota_finale_asse_in_manuale", typeof(bool)));
 
             ClientDataConfig.Add(new OpcObjectData("pcM3Quote", $"ns=2;s=Tags.Pad_print_esterna/pc_quota_longitudinale", typeof(short[])));
@@ -122,8 +122,6 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM3Status", $"ns=2;s=Tags.Pad_print_esterna/pc_stato_macchina", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pc_allarmi_generali ", $"ns=2;s=Tags.Pad_print_esterna/pc_allarmi_generali", typeof(short[])));
             ClientDataConfig.Add(new OpcObjectData("pc_allarmi_timeout", $"ns=2;s=Tags.Pad_print_esterna/pc_allarmi_timeout", typeof(short[])));
-            ClientDataConfig.Add(new OpcObjectData("pc_input", $"ns=2;s=Tags.Pad_print_esterna/pc_input", typeof(bool[])));
-            ClientDataConfig.Add(new OpcObjectData("pc_output", $"ns=2;s=Tags.Pad_print_esterna/pc_output", typeof(bool[])));
             ClientDataConfig.Add(new OpcObjectData("pcM3AutoSpeed", $"ns=2;s=Tags.Pad_print_esterna/pc_velocita", typeof(short)));
             //digital input
             ClientDataConfig.Add(new OpcObjectData("pcM3DI", $"ns=2;s=Tags.Pad_print_esterna/pc_input", typeof(bool[])));
@@ -133,7 +131,11 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM3TestType", $"ns=2;s=Tags.Pad_print_esterna/pc_piede_test", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM3TeachCWRotation", $"ns=2;s=Tags.Pad_print_esterna/pc_rotazione_avanti", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM3TeachCCWRotation", $"ns=2;s=Tags.Pad_print_esterna/pc_rotazione_indietro", typeof(short)));
-            
+
+            #endregion
+
+            #region(* padlaser *)
+            ClientDataConfig.Add(new OpcObjectData("pcM4ProgramName", $"ns=2;s=Tags.Rifilatrice/pc_pad_laser_programma_in_automatico", typeof(string)));
             #endregion
             #region  (* M5 *)
             ClientDataConfig.Add(new OpcObjectData("pcM5TranslatorFwd", $"ns=2;s=Tags.Manipolatore/pc_traslatore_avanti", typeof(bool)));

@@ -650,6 +650,10 @@ namespace GUI
 
         private async void checkBoxM4Inclusion_CheckedChanged(object sender, EventArgs e)
         {
+            string keyToSend1 = null;
+            keyToSend1 = "pcM4ProgramName";
+            var readResult1 = await ccService.Send(keyToSend1, "PRYYYY-RRR-XX99");
+
             string keyToSend = null;
 
             keyToSend = "pcM4Inclusion";
@@ -1987,6 +1991,22 @@ namespace GUI
                     comboBoxM3TeachProgramList.Items.Add(prgName.ProgramName);
                 }
 
+
+            }
+        }
+
+        private async void comboBoxM4PrgName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM4ProgramName";
+
+            var readResult = await ccService.Send(keyToSend, comboBoxM4PrgName.Text);
+            //var readResult = await ccService.Send(keyToSend, "PRYYYY-EEE-XX00");
+            if (readResult.OpcResult)
+            {
+
+            }
+            else
+            {
 
             }
         }
