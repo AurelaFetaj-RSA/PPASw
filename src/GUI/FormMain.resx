@@ -181,7 +181,7 @@
     <value>Verdana, 9.75pt</value>
   </data>
   <data name="buttonResetCounter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>321, 24</value>
+    <value>375, 20</value>
   </data>
   <data name="buttonResetCounter.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 29</value>
@@ -199,13 +199,13 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;buttonResetCounter.Parent" xml:space="preserve">
-    <value>transparentPanelLine.ContentPanel</value>
+    <value>groupBoxLine</value>
   </data>
   <data name="&gt;&gt;buttonResetCounter.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>6</value>
   </data>
   <data name="labelPieceCounter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>233, 20</value>
+    <value>375, 64</value>
   </data>
   <data name="labelPieceCounter.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 32</value>
@@ -223,10 +223,10 @@
     <value>LidorSystems.IntegralUI.Controls.Label, LidorSystems.IntegralUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=520f5185833939dc</value>
   </data>
   <data name="&gt;&gt;labelPieceCounter.Parent" xml:space="preserve">
-    <value>transparentPanelLine.ContentPanel</value>
+    <value>groupBoxLine</value>
   </data>
   <data name="&gt;&gt;labelPieceCounter.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>7</value>
   </data>
   <data name="lbLedLineReady.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -235,7 +235,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedLineReady.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 126</value>
+    <value>183, 58</value>
   </data>
   <data name="lbLedLineReady.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 20</value>
@@ -250,16 +250,16 @@
     <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbLedLineReady.Parent" xml:space="preserve">
-    <value>transparentPanelLine.ContentPanel</value>
+    <value>groupBoxLine</value>
   </data>
   <data name="&gt;&gt;lbLedLineReady.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>8</value>
   </data>
   <data name="lbButtonStartStop.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 39.75pt, style=Bold</value>
   </data>
   <data name="lbButtonStartStop.Location" type="System.Drawing.Point, System.Drawing">
-    <value>679, 13</value>
+    <value>583, 26</value>
   </data>
   <data name="lbButtonStartStop.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 73</value>
@@ -274,7 +274,7 @@
     <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbButtonStartStop.Parent" xml:space="preserve">
-    <value>transparentPanelLine.ContentPanel</value>
+    <value>groupBoxLine</value>
   </data>
   <data name="&gt;&gt;lbButtonStartStop.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -286,7 +286,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedLineStatus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 92</value>
+    <value>183, 25</value>
   </data>
   <data name="lbLedLineStatus.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 20</value>
@@ -301,10 +301,10 @@
     <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbLedLineStatus.Parent" xml:space="preserve">
-    <value>transparentPanelLine.ContentPanel</value>
+    <value>groupBoxLine</value>
   </data>
   <data name="&gt;&gt;lbLedLineStatus.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lbLedAirPressure.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -313,7 +313,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedAirPressure.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 58</value>
+    <value>20, 58</value>
   </data>
   <data name="lbLedAirPressure.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 20</value>
@@ -328,10 +328,10 @@
     <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbLedAirPressure.Parent" xml:space="preserve">
-    <value>transparentPanelLine.ContentPanel</value>
+    <value>groupBoxLine</value>
   </data>
   <data name="&gt;&gt;lbLedAirPressure.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="lbLedEmergency.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -340,7 +340,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedEmergency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 20</value>
+    <value>20, 25</value>
   </data>
   <data name="lbLedEmergency.Size" type="System.Drawing.Size, System.Drawing">
     <value>115, 20</value>
@@ -355,16 +355,16 @@
     <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbLedEmergency.Parent" xml:space="preserve">
-    <value>transparentPanelLine.ContentPanel</value>
+    <value>groupBoxLine</value>
   </data>
   <data name="&gt;&gt;lbLedEmergency.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>1</value>
   </data>
   <data name="lbButtonPause.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 39.75pt, style=Bold</value>
   </data>
   <data name="lbButtonPause.Location" type="System.Drawing.Point, System.Drawing">
-    <value>679, 97</value>
+    <value>576, 120</value>
   </data>
   <data name="lbButtonPause.Size" type="System.Drawing.Size, System.Drawing">
     <value>200, 73</value>
@@ -379,10 +379,10 @@
     <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbButtonPause.Parent" xml:space="preserve">
-    <value>transparentPanelLine.ContentPanel</value>
+    <value>groupBoxLine</value>
   </data>
   <data name="&gt;&gt;lbButtonPause.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>2</value>
   </data>
   <data name="lbLedPLCConnection.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -391,7 +391,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedPLCConnection.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 160</value>
+    <value>183, 89</value>
   </data>
   <data name="lbLedPLCConnection.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 20</value>
@@ -406,85 +406,10 @@
     <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbLedPLCConnection.Parent" xml:space="preserve">
-    <value>transparentPanelLine.ContentPanel</value>
+    <value>groupBoxLine</value>
   </data>
   <data name="&gt;&gt;lbLedPLCConnection.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="transparentPanelLine.ContentPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
-  </data>
-  <data name="transparentPanelLine.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>906, 191</value>
-  </data>
-  <data name="transparentPanelLine.ContentPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelLine.ContentPanel.Name" xml:space="preserve">
-    <value>transparentPanelLine.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelLine.ContentPanel.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.TransparentContentPanel, LidorSystems.IntegralUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=520f5185833939dc</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelLine.ContentPanel.Parent" xml:space="preserve">
-    <value>transparentPanelLine</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelLine.ContentPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="transparentPanelLine.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 344</value>
-  </data>
-  <data name="transparentPanelLine.Size" type="System.Drawing.Size, System.Drawing">
-    <value>910, 195</value>
-  </data>
-  <data name="transparentPanelLine.TabIndex" type="System.Int32, mscorlib">
-    <value>83</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelLine.Name" xml:space="preserve">
-    <value>transparentPanelLine</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelLine.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Controls.TransparentPanel, LidorSystems.IntegralUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=520f5185833939dc</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelLine.Parent" xml:space="preserve">
-    <value>trueTransparentPanelAuto.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelLine.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="labelM6Name.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelM6Name.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="labelM6Name.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelM6Name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 10</value>
-  </data>
-  <data name="labelM6Name.Size" type="System.Drawing.Size, System.Drawing">
-    <value>39, 16</value>
-  </data>
-  <data name="labelM6Name.TabIndex" type="System.Int32, mscorlib">
-    <value>127</value>
-  </data>
-  <data name="labelM6Name.Text" xml:space="preserve">
-    <value>oven</value>
-  </data>
-  <data name="&gt;&gt;labelM6Name.Name" xml:space="preserve">
-    <value>labelM6Name</value>
-  </data>
-  <data name="&gt;&gt;labelM6Name.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelM6Name.Parent" xml:space="preserve">
-    <value>transparentPanelM6.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;labelM6Name.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>9</value>
   </data>
   <data name="lbLedM6HomingDone.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -493,7 +418,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedM6HomingDone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 105</value>
+    <value>169, 95</value>
   </data>
   <data name="lbLedM6HomingDone.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 20</value>
@@ -508,10 +433,10 @@
     <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbLedM6HomingDone.Parent" xml:space="preserve">
-    <value>transparentPanelM6.ContentPanel</value>
+    <value>groupBoxM6</value>
   </data>
   <data name="&gt;&gt;lbLedM6HomingDone.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="labelM6Param1Value.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -523,7 +448,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelM6Param1Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>181, 71</value>
+    <value>180, 60</value>
   </data>
   <data name="labelM6Param1Value.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 16</value>
@@ -541,7 +466,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelM6Param1Value.Parent" xml:space="preserve">
-    <value>transparentPanelM6.ContentPanel</value>
+    <value>groupBoxM6</value>
   </data>
   <data name="&gt;&gt;labelM6Param1Value.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -556,7 +481,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelM6Param1Name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 71</value>
+    <value>10, 60</value>
   </data>
   <data name="labelM6Param1Name.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 16</value>
@@ -574,10 +499,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelM6Param1Name.Parent" xml:space="preserve">
-    <value>transparentPanelM6.ContentPanel</value>
+    <value>groupBoxM6</value>
   </data>
   <data name="&gt;&gt;labelM6Param1Name.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lbLedM6Status.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -586,7 +511,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedM6Status.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 105</value>
+    <value>10, 100</value>
   </data>
   <data name="lbLedM6Status.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 20</value>
@@ -601,10 +526,10 @@
     <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbLedM6Status.Parent" xml:space="preserve">
-    <value>transparentPanelM6.ContentPanel</value>
+    <value>groupBoxM6</value>
   </data>
   <data name="&gt;&gt;lbLedM6Status.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="checkBoxM6Inclusion.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
     <value>Button</value>
@@ -780,7 +705,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxM6Inclusion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 19</value>
+    <value>220, 20</value>
   </data>
   <data name="checkBoxM6Inclusion.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 48</value>
@@ -801,16 +726,16 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;checkBoxM6Inclusion.Parent" xml:space="preserve">
-    <value>transparentPanelM6.ContentPanel</value>
+    <value>groupBoxM6</value>
   </data>
   <data name="&gt;&gt;checkBoxM6Inclusion.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>1</value>
   </data>
   <data name="comboBoxM6PrgName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
   </data>
   <data name="comboBoxM6PrgName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 30</value>
+    <value>10, 20</value>
   </data>
   <data name="comboBoxM6PrgName.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
@@ -828,85 +753,10 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;comboBoxM6PrgName.Parent" xml:space="preserve">
-    <value>transparentPanelM6.ContentPanel</value>
+    <value>groupBoxM6</value>
   </data>
   <data name="&gt;&gt;comboBoxM6PrgName.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="transparentPanelM6.ContentPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
-  </data>
-  <data name="transparentPanelM6.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 136</value>
-  </data>
-  <data name="transparentPanelM6.ContentPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelM6.ContentPanel.Name" xml:space="preserve">
-    <value>transparentPanelM6.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelM6.ContentPanel.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.TransparentContentPanel, LidorSystems.IntegralUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=520f5185833939dc</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelM6.ContentPanel.Parent" xml:space="preserve">
-    <value>transparentPanelM6</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelM6.ContentPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="transparentPanelM6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>660, 180</value>
-  </data>
-  <data name="transparentPanelM6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 140</value>
-  </data>
-  <data name="transparentPanelM6.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelM6.Name" xml:space="preserve">
-    <value>transparentPanelM6</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelM6.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Controls.TransparentPanel, LidorSystems.IntegralUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=520f5185833939dc</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelM6.Parent" xml:space="preserve">
-    <value>trueTransparentPanelAuto.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelM6.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="labelM3Name.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelM3Name.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="labelM3Name.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelM3Name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 10</value>
-  </data>
-  <data name="labelM3Name.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 16</value>
-  </data>
-  <data name="labelM3Name.TabIndex" type="System.Int32, mscorlib">
-    <value>127</value>
-  </data>
-  <data name="labelM3Name.Text" xml:space="preserve">
-    <value>padprint ext</value>
-  </data>
-  <data name="&gt;&gt;labelM3Name.Name" xml:space="preserve">
-    <value>labelM3Name</value>
-  </data>
-  <data name="&gt;&gt;labelM3Name.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelM3Name.Parent" xml:space="preserve">
-    <value>transparentPanelM3.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;labelM3Name.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>3</value>
   </data>
   <data name="lbLedM3HomingDone.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -915,7 +765,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedM3HomingDone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>150, 105</value>
+    <value>169, 95</value>
   </data>
   <data name="lbLedM3HomingDone.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 20</value>
@@ -930,7 +780,7 @@
     <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbLedM3HomingDone.Parent" xml:space="preserve">
-    <value>transparentPanelM3.ContentPanel</value>
+    <value>groupBoxM3</value>
   </data>
   <data name="&gt;&gt;lbLedM3HomingDone.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -945,7 +795,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelM3Param1Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>181, 71</value>
+    <value>180, 60</value>
   </data>
   <data name="labelM3Param1Value.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 16</value>
@@ -963,10 +813,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelM3Param1Value.Parent" xml:space="preserve">
-    <value>transparentPanelM3.ContentPanel</value>
+    <value>groupBoxM3</value>
   </data>
   <data name="&gt;&gt;labelM3Param1Value.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="labelM3Param1Name.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -978,7 +828,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelM3Param1Name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 71</value>
+    <value>10, 60</value>
   </data>
   <data name="labelM3Param1Name.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 16</value>
@@ -996,10 +846,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelM3Param1Name.Parent" xml:space="preserve">
-    <value>transparentPanelM3.ContentPanel</value>
+    <value>groupBoxM3</value>
   </data>
   <data name="&gt;&gt;labelM3Param1Name.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="lbLedM3Status.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1008,7 +858,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedM3Status.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 105</value>
+    <value>10, 100</value>
   </data>
   <data name="lbLedM3Status.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 20</value>
@@ -1023,10 +873,10 @@
     <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbLedM3Status.Parent" xml:space="preserve">
-    <value>transparentPanelM3.ContentPanel</value>
+    <value>groupBoxM3</value>
   </data>
   <data name="&gt;&gt;lbLedM3Status.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="checkBoxM3Inclusion.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
     <value>Button</value>
@@ -1202,7 +1052,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxM3Inclusion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>210, 19</value>
+    <value>220, 20</value>
   </data>
   <data name="checkBoxM3Inclusion.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 48</value>
@@ -1223,16 +1073,16 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;checkBoxM3Inclusion.Parent" xml:space="preserve">
-    <value>transparentPanelM3.ContentPanel</value>
+    <value>groupBoxM3</value>
   </data>
   <data name="&gt;&gt;checkBoxM3Inclusion.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="comboBoxM3PrgName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
   </data>
   <data name="comboBoxM3PrgName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 30</value>
+    <value>10, 20</value>
   </data>
   <data name="comboBoxM3PrgName.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
@@ -1250,216 +1100,10 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;comboBoxM3PrgName.Parent" xml:space="preserve">
-    <value>transparentPanelM3.ContentPanel</value>
+    <value>groupBoxM3</value>
   </data>
   <data name="&gt;&gt;comboBoxM3PrgName.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="transparentPanelM3.ContentPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 2</value>
-  </data>
-  <data name="transparentPanelM3.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 136</value>
-  </data>
-  <data name="transparentPanelM3.ContentPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelM3.ContentPanel.Name" xml:space="preserve">
-    <value>transparentPanelM3.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelM3.ContentPanel.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.TransparentContentPanel, LidorSystems.IntegralUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=520f5185833939dc</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelM3.ContentPanel.Parent" xml:space="preserve">
-    <value>transparentPanelM3</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelM3.ContentPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="transparentPanelM3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>660, 30</value>
-  </data>
-  <data name="transparentPanelM3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 140</value>
-  </data>
-  <data name="transparentPanelM3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelM3.Name" xml:space="preserve">
-    <value>transparentPanelM3</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelM3.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Controls.TransparentPanel, LidorSystems.IntegralUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=520f5185833939dc</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelM3.Parent" xml:space="preserve">
-    <value>trueTransparentPanelAuto.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;transparentPanelM3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="trueTransparentPanelAuto.ContentPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
-  </data>
-  <data name="trueTransparentPanelAuto.ContentPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>965, 580</value>
-  </data>
-  <data name="trueTransparentPanelAuto.ContentPanel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="trueTransparentPanelAuto.ContentPanel.Text" xml:space="preserve">
-    <value>my</value>
-  </data>
-  <data name="trueTransparentPanelAuto.ContentPanel.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
-        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAAAAAAAAAAAAAAAA
-        AAAAAAs=
-</value>
-  </data>
-  <data name="&gt;&gt;trueTransparentPanelAuto.ContentPanel.Name" xml:space="preserve">
-    <value>trueTransparentPanelAuto.ContentPanel</value>
-  </data>
-  <data name="&gt;&gt;trueTransparentPanelAuto.ContentPanel.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.ContentPanel, LidorSystems.IntegralUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=520f5185833939dc</value>
-  </data>
-  <data name="&gt;&gt;trueTransparentPanelAuto.ContentPanel.Parent" xml:space="preserve">
-    <value>trueTransparentPanelAuto</value>
-  </data>
-  <data name="&gt;&gt;trueTransparentPanelAuto.ContentPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="handshakeMESLed.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="handshakeMESLed.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="handshakeMESLed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>328, 323</value>
-  </data>
-  <data name="handshakeMESLed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="handshakeMESLed.TabIndex" type="System.Int32, mscorlib">
-    <value>159</value>
-  </data>
-  <data name="&gt;&gt;handshakeMESLed.Name" xml:space="preserve">
-    <value>handshakeMESLed</value>
-  </data>
-  <data name="&gt;&gt;handshakeMESLed.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;handshakeMESLed.Parent" xml:space="preserve">
-    <value>trueTransparentPanelAuto</value>
-  </data>
-  <data name="&gt;&gt;handshakeMESLed.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lbLedRobotConnection.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLedRobotConnection.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLedRobotConnection.Location" type="System.Drawing.Point, System.Drawing">
-    <value>328, 262</value>
-  </data>
-  <data name="lbLedRobotConnection.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLedRobotConnection.TabIndex" type="System.Int32, mscorlib">
-    <value>158</value>
-  </data>
-  <data name="&gt;&gt;lbLedRobotConnection.Name" xml:space="preserve">
-    <value>lbLedRobotConnection</value>
-  </data>
-  <data name="&gt;&gt;lbLedRobotConnection.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLedRobotConnection.Parent" xml:space="preserve">
-    <value>trueTransparentPanelAuto</value>
-  </data>
-  <data name="&gt;&gt;lbLedRobotConnection.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbLedUserConnection.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLedUserConnection.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLedUserConnection.Location" type="System.Drawing.Point, System.Drawing">
-    <value>328, 292</value>
-  </data>
-  <data name="lbLedUserConnection.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLedUserConnection.TabIndex" type="System.Int32, mscorlib">
-    <value>157</value>
-  </data>
-  <data name="&gt;&gt;lbLedUserConnection.Name" xml:space="preserve">
-    <value>lbLedUserConnection</value>
-  </data>
-  <data name="&gt;&gt;lbLedUserConnection.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLedUserConnection.Parent" xml:space="preserve">
-    <value>trueTransparentPanelAuto</value>
-  </data>
-  <data name="&gt;&gt;lbLedUserConnection.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lbLedMESConnection.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLedMESConnection.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLedMESConnection.Location" type="System.Drawing.Point, System.Drawing">
-    <value>328, 234</value>
-  </data>
-  <data name="lbLedMESConnection.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLedMESConnection.TabIndex" type="System.Int32, mscorlib">
-    <value>155</value>
-  </data>
-  <data name="&gt;&gt;lbLedMESConnection.Name" xml:space="preserve">
-    <value>lbLedMESConnection</value>
-  </data>
-  <data name="&gt;&gt;lbLedMESConnection.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLedMESConnection.Parent" xml:space="preserve">
-    <value>trueTransparentPanelAuto</value>
-  </data>
-  <data name="&gt;&gt;lbLedMESConnection.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="trueTransparentPanelAuto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>588, 41</value>
-  </data>
-  <data name="trueTransparentPanelAuto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>975, 590</value>
-  </data>
-  <data name="trueTransparentPanelAuto.TabIndex" type="System.Int32, mscorlib">
-    <value>161</value>
-  </data>
-  <data name="trueTransparentPanelAuto.Text" xml:space="preserve">
-    <value>trueTransparentPanelAuto</value>
-  </data>
-  <data name="&gt;&gt;trueTransparentPanelAuto.Name" xml:space="preserve">
-    <value>trueTransparentPanelAuto</value>
-  </data>
-  <data name="&gt;&gt;trueTransparentPanelAuto.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Controls.TrueTransparentPanel, LidorSystems.IntegralUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=520f5185833939dc</value>
-  </data>
-  <data name="&gt;&gt;trueTransparentPanelAuto.Parent" xml:space="preserve">
-    <value>tabPageMain</value>
-  </data>
-  <data name="&gt;&gt;trueTransparentPanelAuto.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="lbLedM5HomingDone.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1468,7 +1112,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedM5HomingDone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 104</value>
+    <value>169, 104</value>
   </data>
   <data name="lbLedM5HomingDone.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 20</value>
@@ -1483,7 +1127,7 @@
     <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbLedM5HomingDone.Parent" xml:space="preserve">
-    <value>groupBox5</value>
+    <value>groupBoxM5</value>
   </data>
   <data name="&gt;&gt;lbLedM5HomingDone.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -1498,7 +1142,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelM5Param1Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>167, 70</value>
+    <value>180, 60</value>
   </data>
   <data name="labelM5Param1Value.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 16</value>
@@ -1509,6 +1153,9 @@
   <data name="labelM5Param1Value.Text" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="labelM5Param1Value.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;labelM5Param1Value.Name" xml:space="preserve">
     <value>labelM5Param1Value</value>
   </data>
@@ -1516,7 +1163,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelM5Param1Value.Parent" xml:space="preserve">
-    <value>groupBox5</value>
+    <value>groupBoxM5</value>
   </data>
   <data name="&gt;&gt;labelM5Param1Value.ZOrder" xml:space="preserve">
     <value>2</value>
@@ -1531,7 +1178,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelM5Param1Name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 70</value>
+    <value>10, 60</value>
   </data>
   <data name="labelM5Param1Name.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 16</value>
@@ -1542,6 +1189,9 @@
   <data name="labelM5Param1Name.Text" xml:space="preserve">
     <value>param 1 name</value>
   </data>
+  <data name="labelM5Param1Name.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;labelM5Param1Name.Name" xml:space="preserve">
     <value>labelM5Param1Name</value>
   </data>
@@ -1549,7 +1199,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;labelM5Param1Name.Parent" xml:space="preserve">
-    <value>groupBox5</value>
+    <value>groupBoxM5</value>
   </data>
   <data name="&gt;&gt;labelM5Param1Name.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -1561,7 +1211,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedM5Status.Location" type="System.Drawing.Point, System.Drawing">
-    <value>-3, 104</value>
+    <value>10, 100</value>
   </data>
   <data name="lbLedM5Status.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 20</value>
@@ -1576,7 +1226,7 @@
     <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lbLedM5Status.Parent" xml:space="preserve">
-    <value>groupBox5</value>
+    <value>groupBoxM5</value>
   </data>
   <data name="&gt;&gt;lbLedM5Status.ZOrder" xml:space="preserve">
     <value>5</value>
@@ -1755,7 +1405,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxM5Inclusion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>196, 18</value>
+    <value>220, 20</value>
   </data>
   <data name="checkBoxM5Inclusion.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 48</value>
@@ -1776,7 +1426,7 @@
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;checkBoxM5Inclusion.Parent" xml:space="preserve">
-    <value>groupBox5</value>
+    <value>groupBoxM5</value>
   </data>
   <data name="&gt;&gt;checkBoxM5Inclusion.ZOrder" xml:space="preserve">
     <value>3</value>
@@ -1796,6 +1446,9 @@
   <data name="comboBoxM5PrgName.Text" xml:space="preserve">
     <value>PRYYYY-YYY-XX00</value>
   </data>
+  <data name="comboBoxM5PrgName.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;comboBoxM5PrgName.Name" xml:space="preserve">
     <value>comboBoxM5PrgName</value>
   </data>
@@ -1803,7 +1456,7 @@
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;comboBoxM5PrgName.Parent" xml:space="preserve">
-    <value>groupBox5</value>
+    <value>groupBoxM5</value>
   </data>
   <data name="&gt;&gt;comboBoxM5PrgName.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -1815,7 +1468,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedM4HomingDone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 98</value>
+    <value>169, 98</value>
   </data>
   <data name="lbLedM4HomingDone.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 20</value>
@@ -1845,7 +1498,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelM4Param1Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 64</value>
+    <value>180, 64</value>
   </data>
   <data name="labelM4Param1Value.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 16</value>
@@ -1878,7 +1531,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelM4Param1Name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 64</value>
+    <value>10, 60</value>
   </data>
   <data name="labelM4Param1Name.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 16</value>
@@ -1908,7 +1561,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedM4Status.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 98</value>
+    <value>10, 100</value>
   </data>
   <data name="lbLedM4Status.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 20</value>
@@ -2102,7 +1755,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxM4Inclusion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 12</value>
+    <value>220, 20</value>
   </data>
   <data name="checkBoxM4Inclusion.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 48</value>
@@ -2132,7 +1785,7 @@
     <value>Verdana, 12pt</value>
   </data>
   <data name="comboBoxM4PrgName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 23</value>
+    <value>10, 20</value>
   </data>
   <data name="comboBoxM4PrgName.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
@@ -2162,7 +1815,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedM2HomingDone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>153, 93</value>
+    <value>169, 93</value>
   </data>
   <data name="lbLedM2HomingDone.Size" type="System.Drawing.Size, System.Drawing">
     <value>99, 20</value>
@@ -2192,7 +1845,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelM2Param1Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>184, 59</value>
+    <value>180, 60</value>
   </data>
   <data name="labelM2Param1Value.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 16</value>
@@ -2225,7 +1878,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelM2Param1Name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 59</value>
+    <value>10, 60</value>
   </data>
   <data name="labelM2Param1Name.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 16</value>
@@ -2255,7 +1908,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedM2Status.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 93</value>
+    <value>10, 100</value>
   </data>
   <data name="lbLedM2Status.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 20</value>
@@ -2449,7 +2102,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxM2Inclusion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 7</value>
+    <value>220, 20</value>
   </data>
   <data name="checkBoxM2Inclusion.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 48</value>
@@ -2479,7 +2132,7 @@
     <value>Verdana, 12pt</value>
   </data>
   <data name="comboBoxM2PrgName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>23, 18</value>
+    <value>10, 20</value>
   </data>
   <data name="comboBoxM2PrgName.Size" type="System.Drawing.Size, System.Drawing">
     <value>184, 26</value>
@@ -2539,7 +2192,7 @@
     <value>NoControl</value>
   </data>
   <data name="labelM1Param1Value.Location" type="System.Drawing.Point, System.Drawing">
-    <value>179, 60</value>
+    <value>180, 60</value>
   </data>
   <data name="labelM1Param1Value.Size" type="System.Drawing.Size, System.Drawing">
     <value>15, 16</value>
@@ -2882,7 +2535,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageHide.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>6</value>
   </data>
   <data name="buttonConfigParser.Location" type="System.Drawing.Point, System.Drawing">
     <value>86, 49</value>
@@ -2942,210 +2595,6 @@
   </data>
   <data name="&gt;&gt;tabPageHelp.ZOrder" xml:space="preserve">
     <value>7</value>
-  </data>
-  <data name="lbLedM5DI2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLedM5DI2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLedM5DI2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 81</value>
-  </data>
-  <data name="lbLedM5DI2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLedM5DI2.TabIndex" type="System.Int32, mscorlib">
-    <value>166</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5DI2.Name" xml:space="preserve">
-    <value>lbLedM5DI2</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5DI2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5DI2.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5DI2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lbLedM5DI3.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLedM5DI3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLedM5DI3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 115</value>
-  </data>
-  <data name="lbLedM5DI3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLedM5DI3.TabIndex" type="System.Int32, mscorlib">
-    <value>165</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5DI3.Name" xml:space="preserve">
-    <value>lbLedM5DI3</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5DI3.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5DI3.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5DI3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lbLedM5DI4.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLedM5DI4.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLedM5DI4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 149</value>
-  </data>
-  <data name="lbLedM5DI4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLedM5DI4.TabIndex" type="System.Int32, mscorlib">
-    <value>164</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5DI4.Name" xml:space="preserve">
-    <value>lbLedM5DI4</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5DI4.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5DI4.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5DI4.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbLedM5DI1.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLedM5DI1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLedM5DI1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>55, 48</value>
-  </data>
-  <data name="lbLedM5DI1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLedM5DI1.TabIndex" type="System.Int32, mscorlib">
-    <value>163</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5DI1.Name" xml:space="preserve">
-    <value>lbLedM5DI1</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5DI1.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5DI1.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;lbLedM5DI1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 79</value>
-  </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>894, 552</value>
-  </data>
-  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>Digital input</value>
-  </data>
-  <data name="tabPage1.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
-        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAzMc2QgAAwED9M11B
-        AAAAAAs=
-</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
-    <value>tabControlT5</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 79</value>
-  </data>
-  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>894, 552</value>
-  </data>
-  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="tabPage3.Text" xml:space="preserve">
-    <value>Diagnostic</value>
-  </data>
-  <data name="tabPage3.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
-        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAA5mPTQgAAwED9M11B
-        AAAAAAs=
-</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
-    <value>tabPage3</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
-    <value>tabControlT5</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 79</value>
-  </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>894, 552</value>
-  </data>
-  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Digital output</value>
-  </data>
-  <data name="tabPage2.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
-        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAA5mOXQgAAwED9M11B
-        AAAAAAs=
-</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
-    <value>tabControlT5</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="lbButtonM5StartStopOutBelt3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 39.75pt, style=Bold</value>
@@ -3601,10 +3050,10 @@
     <value>16</value>
   </data>
   <data name="tabPageT5M5_1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 79</value>
+    <value>85, 3</value>
   </data>
   <data name="tabPageT5M5_1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>894, 552</value>
+    <value>811, 634</value>
   </data>
   <data name="tabPageT5M5_1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3616,8 +3065,8 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAMR97QQAAwED9M11B
-        AAAAAAs=
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQDJwtUEAAAAA
+        /brLQQs=
 </value>
   </data>
   <data name="&gt;&gt;tabPageT5M5_1.Name" xml:space="preserve">
@@ -3630,13 +3079,217 @@
     <value>tabControlT5</value>
   </data>
   <data name="&gt;&gt;tabPageT5M5_1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 3</value>
+  </data>
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>811, 634</value>
+  </data>
+  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Alarms</value>
+  </data>
+  <data name="tabPage3.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQAauLEMAAAAA
+        /brLQQs=
+</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
+    <value>tabControlT5</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbLedM5DI2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLedM5DI2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLedM5DI2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 81</value>
+  </data>
+  <data name="lbLedM5DI2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLedM5DI2.TabIndex" type="System.Int32, mscorlib">
+    <value>166</value>
+  </data>
+  <data name="&gt;&gt;lbLedM5DI2.Name" xml:space="preserve">
+    <value>lbLedM5DI2</value>
+  </data>
+  <data name="&gt;&gt;lbLedM5DI2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLedM5DI2.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;lbLedM5DI2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbLedM5DI3.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLedM5DI3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLedM5DI3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 115</value>
+  </data>
+  <data name="lbLedM5DI3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLedM5DI3.TabIndex" type="System.Int32, mscorlib">
+    <value>165</value>
+  </data>
+  <data name="&gt;&gt;lbLedM5DI3.Name" xml:space="preserve">
+    <value>lbLedM5DI3</value>
+  </data>
+  <data name="&gt;&gt;lbLedM5DI3.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLedM5DI3.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;lbLedM5DI3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbLedM5DI4.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLedM5DI4.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLedM5DI4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 149</value>
+  </data>
+  <data name="lbLedM5DI4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLedM5DI4.TabIndex" type="System.Int32, mscorlib">
+    <value>164</value>
+  </data>
+  <data name="&gt;&gt;lbLedM5DI4.Name" xml:space="preserve">
+    <value>lbLedM5DI4</value>
+  </data>
+  <data name="&gt;&gt;lbLedM5DI4.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLedM5DI4.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;lbLedM5DI4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbLedM5DI1.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLedM5DI1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLedM5DI1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>55, 48</value>
+  </data>
+  <data name="lbLedM5DI1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLedM5DI1.TabIndex" type="System.Int32, mscorlib">
+    <value>163</value>
+  </data>
+  <data name="&gt;&gt;lbLedM5DI1.Name" xml:space="preserve">
+    <value>lbLedM5DI1</value>
+  </data>
+  <data name="&gt;&gt;lbLedM5DI1.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLedM5DI1.Parent" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;lbLedM5DI1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 3</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>811, 634</value>
+  </data>
+  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>input</value>
+  </data>
+  <data name="tabPage1.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQAxckUIAAAAA
+        /brLQQs=
+</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>tabControlT5</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>85, 3</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>811, 634</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>output</value>
+  </data>
+  <data name="tabPage2.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQAxc9UIAAAAA
+        /brLQQs=
+</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tabControlT5</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="tabControlT5.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 10</value>
   </data>
   <data name="tabControlT5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>900, 635</value>
+    <value>900, 640</value>
   </data>
   <data name="tabControlT5.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -3689,7 +3342,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageSettings.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>1</value>
   </data>
   <data name="TabPageDiagnostic.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>
@@ -3724,7 +3377,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;TabPageDiagnostic.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="button2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 9.75pt</value>
@@ -4973,10 +4626,10 @@
     <value>23</value>
   </data>
   <data name="tabPageT3M3_1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 22</value>
+    <value>81, 3</value>
   </data>
   <data name="tabPageT3M3_1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>969, 604</value>
+    <value>890, 624</value>
   </data>
   <data name="tabPageT3M3_1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -4988,8 +4641,8 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAADAQAAAoEAAAAAA
-        /TNdQQs=
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQDJwtUEAAAAA
+        /brLQQs=
 </value>
   </data>
   <data name="&gt;&gt;tabPageT3M3_1.Name" xml:space="preserve">
@@ -5005,10 +4658,10 @@
     <value>0</value>
   </data>
   <data name="tabPageT3M3_4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 22</value>
+    <value>81, 3</value>
   </data>
   <data name="tabPageT3M3_4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>969, 604</value>
+    <value>890, 624</value>
   </data>
   <data name="tabPageT3M3_4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -5020,8 +4673,8 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAADWQgAAoEAAAAAA
-        /TNdQQs=
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQAauLEMAAAAA
+        /brLQQs=
 </value>
   </data>
   <data name="&gt;&gt;tabPageT3M3_4.Name" xml:space="preserve">
@@ -5037,10 +4690,10 @@
     <value>1</value>
   </data>
   <data name="tabPageT3M3_3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 22</value>
+    <value>81, 3</value>
   </data>
   <data name="tabPageT3M3_3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>969, 604</value>
+    <value>890, 624</value>
   </data>
   <data name="tabPageT3M3_3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -5052,8 +4705,8 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACQQgAAoEAAAAAA
-        /TNdQQs=
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQAxc9UIAAAAA
+        /brLQQs=
 </value>
   </data>
   <data name="&gt;&gt;tabPageT3M3_3.Name" xml:space="preserve">
@@ -5251,10 +4904,10 @@
     <value>4</value>
   </data>
   <data name="tabPageT3M3_2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 22</value>
+    <value>81, 3</value>
   </data>
   <data name="tabPageT3M3_2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>969, 604</value>
+    <value>890, 624</value>
   </data>
   <data name="tabPageT3M3_2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -5266,8 +4919,8 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAAAwQgAAoEAAAAAA
-        /TNdQQs=
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQAxckUIAAAAA
+        /brLQQs=
 </value>
   </data>
   <data name="&gt;&gt;tabPageT3M3_2.Name" xml:space="preserve">
@@ -5283,7 +4936,7 @@
     <value>3</value>
   </data>
   <data name="tabControlT3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 20</value>
+    <value>10, 10</value>
   </data>
   <data name="tabControlT3.Size" type="System.Drawing.Size, System.Drawing">
     <value>975, 630</value>
@@ -5339,7 +4992,31 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
+  </data>
+  <data name="comboBoxM2TeachModelName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt</value>
+  </data>
+  <data name="comboBoxM2TeachModelName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 63</value>
+  </data>
+  <data name="comboBoxM2TeachModelName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 26</value>
+  </data>
+  <data name="comboBoxM2TeachModelName.TabIndex" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="&gt;&gt;comboBoxM2TeachModelName.Name" xml:space="preserve">
+    <value>comboBoxM2TeachModelName</value>
+  </data>
+  <data name="&gt;&gt;comboBoxM2TeachModelName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxM2TeachModelName.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;comboBoxM2TeachModelName.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="buttonM2Home.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 9.75pt</value>
@@ -5453,7 +5130,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5624,7 +5301,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="labelM2JogSpeed.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -5859,7 +5536,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;groupBoxM2Jog.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="buttonM2TeachDeleteProgram.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
@@ -5909,7 +5586,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;buttonM2TeachDeleteProgram.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="comboBoxM2TeachProgramList.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
@@ -5933,7 +5610,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;comboBoxM2TeachProgramList.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="buttonM2TeachNewProgram.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
@@ -5983,7 +5660,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;buttonM2TeachNewProgram.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="buttonM2TeachSaveProgram.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
@@ -6030,7 +5707,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;buttonM2TeachSaveProgram.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="buttonM2TeachLoadProgram.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
@@ -6078,7 +5755,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;buttonM2TeachLoadProgram.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="lbButtonM2StartStopExitBelt.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 39.75pt, style=Bold</value>
@@ -6102,7 +5779,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;lbButtonM2StartStopExitBelt.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="lbButtonM2StartStopWorkingBelt.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 39.75pt, style=Bold</value>
@@ -6126,7 +5803,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;lbButtonM2StartStopWorkingBelt.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <metadata name="ColumnM2PointID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -6198,7 +5875,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;dataGridViewM2TeachPoints.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="buttonM2PrintCycle.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 9.75pt</value>
@@ -6228,7 +5905,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;buttonM2PrintCycle.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="buttonM2ResetServo.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 9.75pt</value>
@@ -6258,7 +5935,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;buttonM2ResetServo.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="buttonM2ContrastClosing.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 9.75pt</value>
@@ -6288,7 +5965,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;buttonM2ContrastClosing.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="buttonM2ContrastOpening.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 9.75pt</value>
@@ -6318,7 +5995,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;buttonM2ContrastOpening.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="buttonM2CenteringClampsClosing.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 9.75pt</value>
@@ -6348,7 +6025,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;buttonM2CenteringClampsClosing.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="buttonM2CenteringClampsOpening.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 9.75pt</value>
@@ -6378,7 +6055,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;buttonM2CenteringClampsOpening.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="buttonM2BigClampClosing.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 9.75pt</value>
@@ -6408,7 +6085,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;buttonM2BigClampClosing.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="buttonM2BigClampOpening.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 9.75pt</value>
@@ -6438,7 +6115,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;buttonM2BigClampOpening.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="buttonM2SmallClampClosing.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 9.75pt</value>
@@ -6468,7 +6145,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;buttonM2SmallClampClosing.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="buttonM2SmallClampOpening.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 9.75pt</value>
@@ -6495,7 +6172,7 @@
     <value>tabPageT2M2_1</value>
   </data>
   <data name="&gt;&gt;buttonM2SmallClampOpening.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="tabPageT2M2_1.Location" type="System.Drawing.Point, System.Drawing">
     <value>81, 3</value>
@@ -9456,7 +9133,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageConsole.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="tabPageRecipe.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>
@@ -9491,37 +9168,130 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageRecipe.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
-  <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 153</value>
+  <data name="comboBoxAutoModelNameLst.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt</value>
   </data>
-  <data name="groupBox5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>231, 170</value>
+  <data name="comboBoxAutoModelNameLst.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 124</value>
   </data>
-  <data name="groupBox5.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="comboBoxAutoModelNameLst.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 26</value>
   </data>
-  <data name="groupBox5.Text" xml:space="preserve">
-    <value>groupBox5</value>
+  <data name="comboBoxAutoModelNameLst.TabIndex" type="System.Int32, mscorlib">
+    <value>131</value>
   </data>
-  <data name="&gt;&gt;groupBox5.Name" xml:space="preserve">
-    <value>groupBox5</value>
+  <data name="&gt;&gt;comboBoxAutoModelNameLst.Name" xml:space="preserve">
+    <value>comboBoxAutoModelNameLst</value>
   </data>
-  <data name="&gt;&gt;groupBox5.Type" xml:space="preserve">
+  <data name="&gt;&gt;comboBoxAutoModelNameLst.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAutoModelNameLst.Parent" xml:space="preserve">
+    <value>groupBoxLine</value>
+  </data>
+  <data name="&gt;&gt;comboBoxAutoModelNameLst.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBoxLine.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 270</value>
+  </data>
+  <data name="groupBoxLine.Size" type="System.Drawing.Size, System.Drawing">
+    <value>850, 220</value>
+  </data>
+  <data name="groupBoxLine.TabIndex" type="System.Int32, mscorlib">
+    <value>86</value>
+  </data>
+  <data name="&gt;&gt;groupBoxLine.Name" xml:space="preserve">
+    <value>groupBoxLine</value>
+  </data>
+  <data name="&gt;&gt;groupBoxLine.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;groupBox5.Parent" xml:space="preserve">
+  <data name="&gt;&gt;groupBoxLine.Parent" xml:space="preserve">
     <value>tabPage5</value>
   </data>
-  <data name="&gt;&gt;groupBox5.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;groupBoxLine.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="groupBoxM6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>580, 140</value>
+  </data>
+  <data name="groupBoxM6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 120</value>
+  </data>
+  <data name="groupBoxM6.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="groupBoxM6.Text" xml:space="preserve">
+    <value>oven</value>
+  </data>
+  <data name="&gt;&gt;groupBoxM6.Name" xml:space="preserve">
+    <value>groupBoxM6</value>
+  </data>
+  <data name="&gt;&gt;groupBoxM6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxM6.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;groupBoxM6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="groupBoxM3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>580, 10</value>
+  </data>
+  <data name="groupBoxM3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 120</value>
+  </data>
+  <data name="groupBoxM3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="groupBoxM3.Text" xml:space="preserve">
+    <value>padprint ext</value>
+  </data>
+  <data name="&gt;&gt;groupBoxM3.Name" xml:space="preserve">
+    <value>groupBoxM3</value>
+  </data>
+  <data name="&gt;&gt;groupBoxM3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxM3.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;groupBoxM3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBoxM5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>295, 140</value>
+  </data>
+  <data name="groupBoxM5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 120</value>
+  </data>
+  <data name="groupBoxM5.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="groupBoxM5.Text" xml:space="preserve">
+    <value>manipulator</value>
+  </data>
+  <data name="&gt;&gt;groupBoxM5.Name" xml:space="preserve">
+    <value>groupBoxM5</value>
+  </data>
+  <data name="&gt;&gt;groupBoxM5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxM5.Parent" xml:space="preserve">
+    <value>tabPage5</value>
+  </data>
+  <data name="&gt;&gt;groupBoxM5.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="groupBoxM4.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 140</value>
   </data>
   <data name="groupBoxM4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>272, 149</value>
+    <value>280, 120</value>
   </data>
   <data name="groupBoxM4.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -9539,10 +9309,10 @@
     <value>tabPage5</value>
   </data>
   <data name="&gt;&gt;groupBoxM4.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="groupBoxM2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>296, 13</value>
+    <value>295, 10</value>
   </data>
   <data name="groupBoxM2.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 120</value>
@@ -9563,7 +9333,7 @@
     <value>tabPage5</value>
   </data>
   <data name="&gt;&gt;groupBoxM2.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="groupBoxM1.Location" type="System.Drawing.Point, System.Drawing">
     <value>10, 10</value>
@@ -9587,13 +9357,13 @@
     <value>tabPage5</value>
   </data>
   <data name="&gt;&gt;groupBoxM1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>6</value>
   </data>
   <data name="tabPage5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 22</value>
+    <value>116, 3</value>
   </data>
   <data name="tabPage5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>530, 385</value>
+    <value>870, 634</value>
   </data>
   <data name="tabPage5.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -9605,8 +9375,8 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAADAQAAAoEAAAAAA
-        /TNdQQs=
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQDJwtUEAAAAA
+        /brLQQs=
 </value>
   </data>
   <data name="&gt;&gt;tabPage5.Name" xml:space="preserve">
@@ -9616,16 +9386,142 @@
     <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
   </data>
   <data name="&gt;&gt;tabPage5.Parent" xml:space="preserve">
-    <value>tabControl1</value>
+    <value>tabControlT0</value>
   </data>
   <data name="&gt;&gt;tabPage5.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="textBoxM6Test.Location" type="System.Drawing.Point, System.Drawing">
+    <value>538, 122</value>
+  </data>
+  <data name="textBoxM6Test.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 21</value>
+  </data>
+  <data name="textBoxM6Test.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;textBoxM6Test.Name" xml:space="preserve">
+    <value>textBoxM6Test</value>
+  </data>
+  <data name="&gt;&gt;textBoxM6Test.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxM6Test.Parent" xml:space="preserve">
+    <value>tabPage6</value>
+  </data>
+  <data name="&gt;&gt;textBoxM6Test.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBoxM5Test.Location" type="System.Drawing.Point, System.Drawing">
+    <value>449, 123</value>
+  </data>
+  <data name="textBoxM5Test.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 21</value>
+  </data>
+  <data name="textBoxM5Test.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;textBoxM5Test.Name" xml:space="preserve">
+    <value>textBoxM5Test</value>
+  </data>
+  <data name="&gt;&gt;textBoxM5Test.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxM5Test.Parent" xml:space="preserve">
+    <value>tabPage6</value>
+  </data>
+  <data name="&gt;&gt;textBoxM5Test.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="textBoxM4Test.Location" type="System.Drawing.Point, System.Drawing">
+    <value>348, 125</value>
+  </data>
+  <data name="textBoxM4Test.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 21</value>
+  </data>
+  <data name="textBoxM4Test.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;textBoxM4Test.Name" xml:space="preserve">
+    <value>textBoxM4Test</value>
+  </data>
+  <data name="&gt;&gt;textBoxM4Test.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxM4Test.Parent" xml:space="preserve">
+    <value>tabPage6</value>
+  </data>
+  <data name="&gt;&gt;textBoxM4Test.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="textBoxM3Test.Location" type="System.Drawing.Point, System.Drawing">
+    <value>533, 72</value>
+  </data>
+  <data name="textBoxM3Test.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 21</value>
+  </data>
+  <data name="textBoxM3Test.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;textBoxM3Test.Name" xml:space="preserve">
+    <value>textBoxM3Test</value>
+  </data>
+  <data name="&gt;&gt;textBoxM3Test.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxM3Test.Parent" xml:space="preserve">
+    <value>tabPage6</value>
+  </data>
+  <data name="&gt;&gt;textBoxM3Test.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="textBoxM2Test.Location" type="System.Drawing.Point, System.Drawing">
+    <value>448, 69</value>
+  </data>
+  <data name="textBoxM2Test.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 21</value>
+  </data>
+  <data name="textBoxM2Test.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textBoxM2Test.Name" xml:space="preserve">
+    <value>textBoxM2Test</value>
+  </data>
+  <data name="&gt;&gt;textBoxM2Test.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxM2Test.Parent" xml:space="preserve">
+    <value>tabPage6</value>
+  </data>
+  <data name="&gt;&gt;textBoxM2Test.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="textBoxM1Test.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 67</value>
+  </data>
+  <data name="textBoxM1Test.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 21</value>
+  </data>
+  <data name="textBoxM1Test.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;textBoxM1Test.Name" xml:space="preserve">
+    <value>textBoxM1Test</value>
+  </data>
+  <data name="&gt;&gt;textBoxM1Test.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxM1Test.Parent" xml:space="preserve">
+    <value>tabPage6</value>
+  </data>
+  <data name="&gt;&gt;textBoxM1Test.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
   <data name="tabPage6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 22</value>
+    <value>116, 3</value>
   </data>
   <data name="tabPage6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>530, 385</value>
+    <value>870, 634</value>
   </data>
   <data name="tabPage6.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -9637,8 +9533,8 @@
     <value>
         AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
         dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACGQgAAoEAAAAAA
-        /TNdQQs=
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQAxckUIAAAAA
+        /brLQQs=
 </value>
   </data>
   <data name="&gt;&gt;tabPage6.Name" xml:space="preserve">
@@ -9648,33 +9544,33 @@
     <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
   </data>
   <data name="&gt;&gt;tabPage6.Parent" xml:space="preserve">
-    <value>tabControl1</value>
+    <value>tabControlT0</value>
   </data>
   <data name="&gt;&gt;tabPage6.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>31, 65</value>
+  <data name="tabControlT0.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 60</value>
   </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>536, 411</value>
+  <data name="tabControlT0.Size" type="System.Drawing.Size, System.Drawing">
+    <value>990, 640</value>
   </data>
-  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+  <data name="tabControlT0.TabIndex" type="System.Int32, mscorlib">
     <value>162</value>
   </data>
-  <data name="tabControl1.Text" xml:space="preserve">
+  <data name="tabControlT0.Text" xml:space="preserve">
     <value>tabControl1</value>
   </data>
-  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
-    <value>tabControl1</value>
+  <data name="&gt;&gt;tabControlT0.Name" xml:space="preserve">
+    <value>tabControlT0</value>
   </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+  <data name="&gt;&gt;tabControlT0.Type" xml:space="preserve">
     <value>LidorSystems.IntegralUI.Containers.TabControl, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
   </data>
-  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;tabControlT0.Parent" xml:space="preserve">
     <value>tabPageMain</value>
   </data>
-  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;tabControlT0.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="labelLoginLevel.AutoSize" type="System.Boolean, mscorlib">
@@ -9705,7 +9601,7 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;labelLoginLevel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="labelDateTime.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -9735,7 +9631,7 @@
     <value>tabPageMain</value>
   </data>
   <data name="&gt;&gt;labelDateTime.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="tabPageMain.Location" type="System.Drawing.Point, System.Drawing">
     <value>2, 78</value>

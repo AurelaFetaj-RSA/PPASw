@@ -92,11 +92,11 @@ namespace GUI
         {
             if (e.Service is IRobot<KawasakiMemoryVariable>)
             {
-                lbLedRobotConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+
             }
             else if (e.Service is OpcServerService opcService) //In questo caso no nfaccio niente perchè non ho modo, solo Subscription ( per ora )
             {
-                lbLedRobotConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+
             }
             else if (e.Service is WebApiCore api)
             {
@@ -110,7 +110,7 @@ namespace GUI
 
             if (e.Service is IRobot<KawasakiMemoryVariable>)
             {
-                lbLedRobotConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+
             }
             else if (e.Service is OpcServerService opcService) //In questo caso no nfaccio niente perchè non ho modo, solo Subscription ( per ora )
             {
@@ -128,7 +128,7 @@ namespace GUI
 
             if (e.Service is OpcServerService opcService)
             {
-                lbLedMESConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+
             }
 
         }
@@ -138,7 +138,7 @@ namespace GUI
 
             if (e.Service is OpcServerService opcService)
             {
-                lbLedMESConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+
             }
 
         }
@@ -147,7 +147,7 @@ namespace GUI
         {
             if (e.Service is OpcServerService opcService)
             {
-                lbLedMESConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+
             }
 
         }
@@ -159,11 +159,11 @@ namespace GUI
             {
                 if (e.Result == MessageResponse.Success)
                 {
-                    handshakeMESLed.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Blink;
+
                 }
                 else
                 {
-                    handshakeMESLed.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+
                 }
             }
 
@@ -215,13 +215,13 @@ namespace GUI
 
             var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
-            if(dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
             {
-                    RSACustomEvents.ServiceHasLoadProgramEvent += RSACustomEvents_ServiceHasLoadProgramEvent;
+                RSACustomEvents.ServiceHasLoadProgramEvent += RSACustomEvents_ServiceHasLoadProgramEvent;
 
-                    StandardProgramParser standardParser = new StandardProgramParser();
-                    progRS.SetProgramParser(standardParser);
-                    //await progRS.LoadProgramAsync<PointAxis>();
+                StandardProgramParser standardParser = new StandardProgramParser();
+                progRS.SetProgramParser(standardParser);
+                //await progRS.LoadProgramAsync<PointAxis>();
 
             }
 
@@ -246,7 +246,7 @@ namespace GUI
 
         private void RSACustomEvents_ServiceHasLoadProgramEvent(object sender, RSACustomEvents.ProgramsReadEndedEventArgs e)
         {
-            if(e.Service is ReadProgramsService progRS)
+            if (e.Service is ReadProgramsService progRS)
             {
                 //modelCombobox.Items.Clear();
                 //modelCombobox.Items.AddRange(progRS.ModelDictionary.Keys.ToArray<string>());
@@ -255,7 +255,7 @@ namespace GUI
 
         private void InitLastParameter()
         {
-            //filePathDiagnosticFileTxtbox.Text = Settings.Default.DiagnosticFilePath;
+            #region (* init datagridviewM2 *)
             dataGridViewM2TeachPoints.Rows.Add(4);
             dataGridViewM2TeachPoints.Rows[0].Cells[0].Value = 1;
             dataGridViewM2TeachPoints.Rows[1].Cells[0].Value = 2;
@@ -290,25 +290,9 @@ namespace GUI
             dataGridViewM2TestPoints.Rows[3].Cells[2].Value = 40;
 
             dataGridViewM2TestPoints.ClearSelection();
+            #endregion
 
-            ///////////////////////////////////////////////
-            ///
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-            {
-                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("XXXX");
-                List<string> mList = progRS.GetModel(config.ProgramsPath[1], config.Extensions);
-
-                foreach( string modelName in mList)
-                {
-                    comboBoxM3TeachModelName.Items.Add(modelName);
-                }
-
-
-            }
-            /////////////////////////////////////////////////////
+            #region(* init datagridviewM3 *)
             dataGridViewM3TeachPoints.Rows.Add(4);
             dataGridViewM3TeachPoints.Rows[0].Cells[0].Value = 1;
             dataGridViewM3TeachPoints.Rows[1].Cells[0].Value = 2;
@@ -343,7 +327,45 @@ namespace GUI
             dataGridViewM3TestPoints.Rows[3].Cells[2].Value = 40;
 
             dataGridViewM3TestPoints.ClearSelection();
+            #endregion
 
+            #region (* init AUTO combobox model name list *)
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            ReadProgramsConfiguration config = null;
+            List<string> mList = new List<string>();
+            ReadProgramsService progRS = (ReadProgramsService)dummyS[0];
+
+            if (dummyS != null && dummyS.Count > 0)
+            {
+                config = progRS.Configuration as ReadProgramsConfiguration;
+                mList = progRS.GetModel(config.ProgramsPath, config.Extensions);
+
+                foreach (string modelName in mList)
+                {
+                    comboBoxAutoModelNameLst.Items.Add(modelName);
+                }
+            }
+            #endregion
+
+            #region (* init M2 combobox model name list *)
+            mList = progRS.GetModel(config.ProgramsPath[1], config.Extensions);
+
+            foreach (string modelName in mList)
+            {
+                comboBoxM2TeachModelName.Items.Add(modelName);
+            }
+
+            #endregion
+
+            #region (* init M3 combobox model name list *)
+            mList = progRS.GetModel(config.ProgramsPath[2], config.Extensions);
+
+            foreach (string modelName in mList)
+            {
+                comboBoxM3TeachModelName.Items.Add(modelName);
+            }
+
+            #endregion
         }
 
         private void ResetM2Datagrid()
@@ -652,7 +674,7 @@ namespace GUI
         {
             string keyToSend1 = null;
             keyToSend1 = "pcM4ProgramName";
-            var readResult1 = await ccService.Send(keyToSend1, "PRYYYY-RRR-XX99");
+            var readResult1 = await ccService.Send(keyToSend1, "PRXXXX-YYY-XX00");
 
             string keyToSend = null;
 
@@ -1042,7 +1064,7 @@ namespace GUI
 
                 OPCUAM2TestPckSend(quote, speed);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
@@ -1207,7 +1229,7 @@ namespace GUI
         }
 
         private async void buttonM5V1ExtFwd_Click(object sender, EventArgs e)
-        {            
+        {
             string keyToSend = "pcM5V1ExtFwd";
             var sendResult = await ccService.Send(keyToSend, true);
             if (sendResult.OpcResult)
@@ -1382,7 +1404,7 @@ namespace GUI
             if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                
+
                 int p1 = Convert.ToInt32(dataGridViewM2TeachPoints[1, 0].Value);
                 int p2 = Convert.ToInt32(dataGridViewM2TeachPoints[1, 1].Value);
                 int p3 = Convert.ToInt32(dataGridViewM2TeachPoints[1, 2].Value);
@@ -1406,7 +1428,7 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                objPoints = (ConcretePointsContainer<PointAxis>) await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM2TeachProgramList.Text + config.Extensions[0]);
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM2TeachProgramList.Text + config.Extensions[0]);
                 if (objPoints != null)
                 {
 
@@ -1752,11 +1774,11 @@ namespace GUI
 
             if (readResult.OpcResult)
             {
-                
+
             }
             else
             {
-                
+
             }
         }
 
@@ -1955,7 +1977,7 @@ namespace GUI
             if (parsed[2] == "DX")
             {
                 type = 1;
-                
+
             }
             else
             {
@@ -1984,23 +2006,30 @@ namespace GUI
             if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                List<IObjProgram> pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxM3TeachModelName.Text);
+                List<IObjProgram> pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxM3TeachModelName.Text);
+
+                comboBoxM3TeachProgramList.Items.Clear();
+
+                comboBoxM3TestProgramList.Items.Clear();
 
                 foreach (IObjProgram prgName in pList)
                 {
                     comboBoxM3TeachProgramList.Items.Add(prgName.ProgramName);
+                    comboBoxM3TestProgramList.Items.Add(prgName.ProgramName);
                 }
-
-
             }
         }
 
         private async void comboBoxM4PrgName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //send recipe (todo: waiting mysql)
+            string keyValue = "pcM4Param1";
+            var sendResult = await ccService.Send(keyValue, short.Parse(textBoxM4Test.Text));
+            labelM1Param1Value.Text = textBoxM4Test.Text;
+
             string keyToSend = "pcM4ProgramName";
 
             var readResult = await ccService.Send(keyToSend, comboBoxM4PrgName.Text);
-            //var readResult = await ccService.Send(keyToSend, "PRYYYY-EEE-XX00");
             if (readResult.OpcResult)
             {
 
@@ -2008,6 +2037,162 @@ namespace GUI
             else
             {
 
+            }
+        }
+
+        private void comboBoxM2TeachModelName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                List<IObjProgram> pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxM2TeachModelName.Text);
+
+                comboBoxM2TeachProgramList.Items.Clear();
+                comboBoxM2TestProgramList.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM2TeachProgramList.Items.Add(prgName.ProgramName);
+                    comboBoxM2TestProgramList.Items.Add(prgName.ProgramName);
+                }
+            }
+        }
+
+        private void comboBoxAutoModelNameLst_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            List<IObjProgram> pList = new List<IObjProgram>();
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, comboBoxAutoModelNameLst.Text);
+                comboBoxM1PrgName.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM1PrgName.Items.Add(prgName.ProgramName);
+                }
+
+                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxAutoModelNameLst.Text);
+                comboBoxM2PrgName.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM2PrgName.Items.Add(prgName.ProgramName);
+                }
+
+                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxAutoModelNameLst.Text);
+                comboBoxM3PrgName.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM3PrgName.Items.Add(prgName.ProgramName);
+                }
+            }
+        }
+
+        private async void comboBoxM1PrgName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //send recipe (todo: waiting mysql)
+            string keyValue = "pcM1Param1";
+            var sendResult = await ccService.Send(keyValue, short.Parse(textBoxM1Test.Text));
+            labelM1Param1Value.Text = textBoxM1Test.Text;
+
+            //send quote, speed
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM1PrgName.Text + config.Extensions[0]);
+                if (objPoints != null)
+                {
+                    List<string> keys = new List<string>()
+                    {
+                        "pcM1AutoQuote",
+                        "pcM1AutoSpeed"
+                    };
+
+                    List<object> values = new List<object>()
+                    {
+                        new short[] { (short)objPoints.Points[0].Q1, (short)objPoints.Points[0].Q2, (short)objPoints.Points[0].Q3, (short)objPoints.Points[0].Q4},
+                        new short[] { (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                    };
+
+                    var mSendResult = await ccService.Send(keys, values);
+                }
+            }
+        }
+
+        private async void comboBoxM2PrgName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //send recipe (todo: waiting mysql)
+            string keyValue = "pcM2Param1";
+            var sendResult = await ccService.Send(keyValue, short.Parse(textBoxM2Test.Text));
+            labelM2Param1Value.Text = textBoxM2Test.Text;
+
+            //send quote, speed
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + comboBoxM2PrgName.Text + config.Extensions[0]);
+                if (objPoints != null)
+                {
+                    List<string> keys = new List<string>()
+                    {
+                        "pcM2AutoQuote",
+                        "pcM2AutoSpeed"
+                    };
+
+                    List<object> values = new List<object>()
+                    {
+                        new short[] { (short)objPoints.Points[0].Q1, (short)objPoints.Points[0].Q2, (short)objPoints.Points[0].Q3, (short)objPoints.Points[0].Q4},
+                        new short[] { (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                    };
+
+
+                    var readResult = await ccService.Send(keys, values);
+                }
+            }
+        }
+
+        private async void comboBoxM3PrgName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //send recipe
+            string keyValue = "pcM3Param1";
+            var sendResult = await ccService.Send(keyValue, short.Parse(textBoxM3Test.Text));
+
+            //send quote, speed
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + comboBoxM2PrgName.Text + config.Extensions[0]);
+                if (objPoints != null)
+                {
+                    List<string> keys = new List<string>()
+                    {
+                        "pcM3AutoQuote",
+                        "pcM3AutoSpeed"
+                    };
+
+                    List<object> values = new List<object>()
+                    {
+                        new short[] { (short)objPoints.Points[0].Q1, (short)objPoints.Points[0].Q2, (short)objPoints.Points[0].Q3, (short)objPoints.Points[0].Q4},
+                        new short[] { (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                    };
+
+                    var readResult = await ccService.Send(keys, values);
+                }
             }
         }
     }
