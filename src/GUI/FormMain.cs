@@ -633,10 +633,12 @@ namespace GUI
             if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
             {
                 var readResult = await ccService.Send(keyToSend, true);
+                checkBoxM2Inclusion.Text = "inclusa";
             }
             else
             {
                 var readResult = await ccService.Send(keyToSend, false);
+                checkBoxM2Inclusion.Text = "esclusa";
             }
         }
 
@@ -660,32 +662,32 @@ namespace GUI
             string keyToSend = null;
 
             keyToSend = "pcM3Inclusion";
-            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
+            if (checkBoxM3Inclusion.CheckState == CheckState.Checked)
             {
                 var readResult = await ccService.Send(keyToSend, true);
+                checkBoxM3Inclusion.Text = "inclusa";
             }
             else
             {
                 var readResult = await ccService.Send(keyToSend, false);
+                checkBoxM3Inclusion.Text = "esclusa";
             }
         }
 
         private async void checkBoxM4Inclusion_CheckedChanged(object sender, EventArgs e)
         {
-            string keyToSend1 = null;
-            keyToSend1 = "pcM4ProgramName";
-            var readResult1 = await ccService.Send(keyToSend1, "PRXXXX-YYY-XX00");
-
             string keyToSend = null;
 
             keyToSend = "pcM4Inclusion";
-            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
+            if (checkBoxM4Inclusion.CheckState == CheckState.Checked)
             {
                 var readResult = await ccService.Send(keyToSend, true);
+                checkBoxM4Inclusion.Text = "inclusa";
             }
             else
             {
                 var readResult = await ccService.Send(keyToSend, false);
+                checkBoxM4Inclusion.Text = "esclusa";
             }
         }
 
@@ -694,13 +696,15 @@ namespace GUI
             string keyToSend = null;
 
             keyToSend = "pcM5Inclusion";
-            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
+            if (checkBoxM5Inclusion.CheckState == CheckState.Checked)
             {
                 var readResult = await ccService.Send(keyToSend, true);
+                checkBoxM5Inclusion.Text = "inclusa";
             }
             else
             {
                 var readResult = await ccService.Send(keyToSend, false);
+                checkBoxM5Inclusion.Text = "esclusa";
             }
         }
 
@@ -1415,7 +1419,7 @@ namespace GUI
                 int s4 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 3].Value);
                 ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM2TeachProgramList.Text);
                 prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
-                prgObj.Save(comboBoxM2TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[0]);
+                prgObj.Save(comboBoxM2TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[1], true);
             }
 
         }
@@ -1428,7 +1432,7 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM2TeachProgramList.Text + config.Extensions[0]);
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + comboBoxM2TeachProgramList.Text + config.Extensions[0]);
                 if (objPoints != null)
                 {
 
@@ -1463,7 +1467,7 @@ namespace GUI
                 int s4 = Convert.ToInt32(dataGridViewM2TestPoints[2, 3].Value);
                 ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM2TestProgramList.Text);
                 prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
-                prgObj.Save(comboBoxM2TestProgramList.Text + config.Extensions[0], config.ProgramsPath[0]);
+                prgObj.Save(comboBoxM2TestProgramList.Text + config.Extensions[0], config.ProgramsPath[1], true);
             }
         }
 
@@ -1475,7 +1479,7 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM2TestProgramList.Text + config.Extensions[0]);
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + comboBoxM2TestProgramList.Text + config.Extensions[0]);
                 if (objPoints != null)
                 {
 
@@ -1500,7 +1504,7 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + comboBoxM3TeachProgramList.Text + config.Extensions[0]);
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + comboBoxM3TeachProgramList.Text + config.Extensions[0]);
                 if (objPoints != null)
                 {
 
@@ -1535,7 +1539,7 @@ namespace GUI
                 int s4 = Convert.ToInt32(dataGridViewM3TeachPoints[2, 3].Value);
                 ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM3TeachProgramList.Text);
                 prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
-                prgObj.Save(comboBoxM3TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[1]);
+                prgObj.Save(comboBoxM3TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[2], true);
             }
         }
 
@@ -1929,7 +1933,7 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + comboBoxM3TestProgramList.Text + config.Extensions[0]);
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + comboBoxM3TestProgramList.Text + config.Extensions[0]);
                 if (objPoints != null)
                 {
 
@@ -1964,7 +1968,7 @@ namespace GUI
                 int s4 = Convert.ToInt32(dataGridViewM3TestPoints[2, 3].Value);
                 ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM3TestProgramList.Text);
                 prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
-                prgObj.Save(comboBoxM3TestProgramList.Text + config.Extensions[0], config.ProgramsPath[1]);
+                prgObj.Save(comboBoxM3TestProgramList.Text + config.Extensions[0], config.ProgramsPath[2], true);
             }
         }
 
@@ -2025,7 +2029,7 @@ namespace GUI
             //send recipe (todo: waiting mysql)
             string keyValue = "pcM4Param1";
             var sendResult = await ccService.Send(keyValue, short.Parse(textBoxM4Test.Text));
-            labelM1Param1Value.Text = textBoxM4Test.Text;
+            labelM4Param1Value.Text = textBoxM4Test.Text;
 
             string keyToSend = "pcM4ProgramName";
 
@@ -2085,11 +2089,28 @@ namespace GUI
                 }
 
                 pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxAutoModelNameLst.Text);
-                comboBoxM3PrgName.Items.Clear();
+                comboBoxM3PrgName_st1.Items.Clear();
 
                 foreach (IObjProgram prgName in pList)
                 {
-                    comboBoxM3PrgName.Items.Add(prgName.ProgramName);
+                    comboBoxM3PrgName_st1.Items.Add(prgName.ProgramName);
+                }
+
+                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxAutoModelNameLst.Text);
+                comboBoxM3PrgName_st2.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM3PrgName_st2.Items.Add(prgName.ProgramName);
+                }
+
+                //da rimuovere
+                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxAutoModelNameLst.Text);
+                comboBoxM4PrgName.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM4PrgName.Items.Add(prgName.ProgramName);
                 }
             }
         }
@@ -2153,8 +2174,8 @@ namespace GUI
 
                     List<object> values = new List<object>()
                     {
-                        new short[] { (short)objPoints.Points[0].Q1, (short)objPoints.Points[0].Q2, (short)objPoints.Points[0].Q3, (short)objPoints.Points[0].Q4},
-                        new short[] { (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                        new short[] {0, (short)objPoints.Points[0].Q1, (short)objPoints.Points[0].Q2, (short)objPoints.Points[0].Q3, (short)objPoints.Points[0].Q4},
+                        new short[] {0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
                     };
 
 
@@ -2169,6 +2190,12 @@ namespace GUI
             string keyValue = "pcM3Param1";
             var sendResult = await ccService.Send(keyValue, short.Parse(textBoxM3Test.Text));
 
+            //send type order: RG, LF
+            //type order 2: LF, RG
+            keyValue = "pcM3TypeOrder";
+            sendResult = await ccService.Send(keyValue, short.Parse(textBoxTypeOrder.Text));
+
+
             //send quote, speed
             var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
@@ -2176,24 +2203,166 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + comboBoxM2PrgName.Text + config.Extensions[0]);
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + comboBoxM3PrgName_st1.Text + config.Extensions[0]);
                 if (objPoints != null)
                 {
                     List<string> keys = new List<string>()
                     {
-                        "pcM3AutoQuote",
-                        "pcM3AutoSpeed"
+                        "pcM3AutoQuoteSt1",
+                        "pcM3AutoSpeedSt1"
                     };
 
                     List<object> values = new List<object>()
                     {
-                        new short[] { (short)objPoints.Points[0].Q1, (short)objPoints.Points[0].Q2, (short)objPoints.Points[0].Q3, (short)objPoints.Points[0].Q4},
-                        new short[] { (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                        new short[] {0, (short)objPoints.Points[0].Q1, (short)objPoints.Points[0].Q2, (short)objPoints.Points[0].Q3, (short)objPoints.Points[0].Q4},
+                        new short[] {0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
                     };
 
                     var readResult = await ccService.Send(keys, values);
                 }
             }
+        }
+
+        private async void lbButtonStartStop_Click(object sender, EventArgs e)
+        {
+            //M2StartAuto();
+            //M3StartAuto();
+            //M4StartAuto();
+            //M5StartAuto();
+            if (lbButtonStartStop.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal)
+            {
+                string keyValue = "pcM2StartStop";
+                var readResult = await ccService.Send(keyValue, true);
+                keyValue = "pcM3StartStop";
+                readResult = await ccService.Send(keyValue, true);
+                keyValue = "pcM4StartStop";
+                readResult = await ccService.Send(keyValue, true);
+                keyValue = "pcM5StartStop";
+                readResult = await ccService.Send(keyValue, true);
+            }
+            else
+            {
+                string keyValue = "pcM2StartStop";
+                var readResult = await ccService.Send(keyValue, false);
+                keyValue = "pcM3StartStop";
+                readResult = await ccService.Send(keyValue, false);
+                keyValue = "pcM4StartStop";
+                readResult = await ccService.Send(keyValue, false);
+                keyValue = "pcM5StartStop";
+                readResult = await ccService.Send(keyValue, false);
+            }
+        }
+
+        private async void M2StartAuto()
+        {
+            string keyValue = "pcM2StartStop";
+
+            if (lbButtonTestM2Start.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var readResult = await ccService.Send(keyValue, false);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyValue, true);
+            }
+        }
+
+        private async void M3StartAuto()
+        {
+            string keyValue = "pcM3StartStop";
+
+            if (lbButtonTestM3Start.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var readResult = await ccService.Send(keyValue, false);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyValue, true);
+            }
+        }
+
+        private async void M4StartAuto()
+        {
+            string keyValue = "pcM4StartStop";
+
+            if (lbButtonTestM4Start.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var readResult = await ccService.Send(keyValue, false);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyValue, true);
+            }
+        }
+
+        private async void M5StartAuto()
+        {
+            string keyValue = "pcM5StartStop";
+
+            if (lbButtonTestM5Start.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                var readResult = await ccService.Send(keyValue, true);
+            }
+            else
+            {
+                var readResult = await ccService.Send(keyValue, false);
+            }
+        }
+
+        private async void lbButtonTestM2Start_Click(object sender, EventArgs e)
+        {
+            M2StartAuto();
+        }
+
+        private async void comboBoxM3PrgName_st2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //send recipe
+            string keyValue = "pcM3Param1";
+            var sendResult = await ccService.Send(keyValue, short.Parse(textBoxM3Test.Text));
+
+            keyValue = "pcM3TypeOrder";
+            sendResult = await ccService.Send(keyValue, short.Parse(textBoxTypeOrder.Text));
+
+            //send quote, speed
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + comboBoxM3PrgName_st2.Text + config.Extensions[0]);
+                if (objPoints != null)
+                {
+                    List<string> keys = new List<string>()
+                    {
+                        "pcM3AutoQuoteSt2",
+                        "pcM3AutoSpeedSt2"
+                    };
+
+                    List<object> values = new List<object>()
+                    {
+                        new short[] {0, (short)objPoints.Points[0].Q1, (short)objPoints.Points[0].Q2, (short)objPoints.Points[0].Q3, (short)objPoints.Points[0].Q4},
+                        new short[] {0,  (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                    };
+
+                    var readResult = await ccService.Send(keys, values);
+                }
+            }
+        }
+
+        private async void lbButtonTestM3Start_Click(object sender, EventArgs e)
+        {
+            M3StartAuto();
+        }
+
+        private void lbButtonTestM4Start_Click(object sender, EventArgs e)
+        {
+            M4StartAuto();
+        }
+
+        private void lbButtonTestM5Start_Click(object sender, EventArgs e)
+        {
+            M5StartAuto();
         }
     }
 }

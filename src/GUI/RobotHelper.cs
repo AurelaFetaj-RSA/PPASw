@@ -189,19 +189,27 @@ namespace GUI
                 {
                     //"pcM1Status",
                     "pcM2Status",
-                    "pcM3Status"
-                    //"pcM4Status",
-                    //"pcM5Status",
+                    "pcM3Status",
+                    "pcM4Status",
+                    "pcM5Status"
                     //"pcM6Status"
                 };
 
                 var readResult = await ccService.Read(keys);
                 //UpdateOPCUAMStatus((short)readResult["pcM1Status"]?.Value, lbLedM1Status);
                 UpdateOPCUAMStatus((short)readResult["pcM2Status"]?.Value, lbLedM2Status);
+                ManageOPCUAMBtnStatus((short)readResult["pcM2Status"]?.Value, lbButtonTestM2Start);
                 UpdateOPCUAMStatus((short)readResult["pcM3Status"]?.Value, lbLedM3Status);
-                //UpdateOPCUAMStatus((short)readResult["pcM4Status"]?.Value, lbLedM4Status);
-                //UpdateOPCUAMStatus((short)readResult["pcM5Status"]?.Value, lbLedM5Status);
+                ManageOPCUAMBtnStatus((short)readResult["pcM3Status"]?.Value, lbButtonTestM3Start);
+                UpdateOPCUAMStatus((short)readResult["pcM4Status"]?.Value, lbLedM4Status);
+                ManageOPCUAMBtnStatus((short)readResult["pcM4Status"]?.Value, lbButtonTestM4Start);
+                UpdateOPCUAMStatus((short)readResult["pcM5Status"]?.Value, lbLedM5Status);
+                ManageOPCUAMBtnStatus((short)readResult["pcM5Status"]?.Value, lbButtonTestM5Start);
                 //UpdateOPCUAMStatus((short)readResult["pcM6Status"]?.Value, lbLedM6Status);
+                short statusOven = 3;
+                short statusTrimmer = 3;
+                ManageLineStatus(statusTrimmer, (short)readResult["pcM2Status"]?.Value, (short)readResult["pcM3Status"]?.Value,
+                    (short)readResult["pcM4Status"]?.Value, (short)readResult["pcM5Status"]?.Value, statusOven);
             }
             catch(Exception Ex)
             {
@@ -214,8 +222,8 @@ namespace GUI
                 {
                     //"pcM1HomingDone",
                     "pcM2HomingDone",
-                    "pcM3HomingDone"
-                    //"pcM4HomingDone",
+                    "pcM3HomingDone",
+                    "pcM4HomingDone"
                     //"pcM5HomingDone",
                     //"pcM6HomingDone"
                 };
@@ -224,7 +232,7 @@ namespace GUI
                 //UpdateOPCUAMHomingDone((bool)readResult["pcM1HomingDone"]?.Value, lbLedM1HomingDone);
                 UpdateOPCUAMHomingDone((bool)readResult["pcM2HomingDone"]?.Value, lbLedM2HomingDone);
                 UpdateOPCUAMHomingDone((bool)readResult["pcM3HomingDone"]?.Value, lbLedM3HomingDone);
-                //UpdateOPCUAMHomingDone((bool)readResult["pcM4HomingDone"]?.Value, lbLedM4HomingDone);
+                UpdateOPCUAMHomingDone((bool)readResult["pcM4HomingDone"]?.Value, lbLedM4HomingDone);
                 //UpdateOPCUAMHomingDone((bool)readResult["pcM5HomingDone"]?.Value, lbLedM5HomingDone);
                 //UpdateOPCUAMHomingDone((bool)readResult["pcM6HomingDone"]?.Value, lbLedM6HomingDone);
             }
@@ -253,6 +261,30 @@ namespace GUI
 
             }
 
+            try
+            {
+                List<string> keys = new List<string>()
+                {
+                    //"pcM1CurrentAxisQuote",
+                    "pcM2CurrentAxisQuote",
+                    "pcM3CurrentAxisQuote",
+                    "pcM4CurrentAxisQuote"
+                    //"pcM5CurrentAxisQuote",
+                    //"pcM6CurrentAxisQuote"
+                };
+
+                var readResult = await ccService.Read(keys);
+                //UpdateOPCUAM1CAQ((short)readResult["pcM1CurrentAxisQuote"]?.Value);
+                UpdateOPCUAM2CAQ((short)readResult["pcM2CurrentAxisQuote"]?.Value);
+                UpdateOPCUAM3CAQ((short)readResult["pcM3CurrentAxisQuote"]?.Value);
+                UpdateOPCUAM4CAQ((short)readResult["pcM4CurrentAxisQuote"]?.Value);
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+
             //manipulator digital input
             try
             {
@@ -271,39 +303,7 @@ namespace GUI
 
             }
 
-
-            try
-            { 
-
-                //current axis quote
-                var varResult = await ccService.Read("pcM2CurrentAxisQuote");
-                if (varResult.OpcResult) UpdateM2CurrentAxisQuote((short)varResult.Value);
-                else
-                {
-                    //todo
-                }
-            }
-            catch(Exception ex)
-            {
-
-            }
-
-
-            try
-            {
-
-                //current axis quote
-                var varResult = await ccService.Read("pcM3CurrentAxisQuote");
-                if (varResult.OpcResult) UpdateM3CurrentAxisQuote((short)varResult.Value);
-                else
-                {
-                    //todo
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
+                 
 
             //manipulator digital input
             //try
@@ -471,7 +471,7 @@ namespace GUI
 
 
 
-        public void UpdateM2CurrentAxisQuote(short value)
+        public void UpdateOPCUAM2CAQ(short value)
         {
             try
             {
@@ -483,11 +483,23 @@ namespace GUI
             }
         }
 
-        public void UpdateM3CurrentAxisQuote(short value)
+        public void UpdateOPCUAM3CAQ(short value)
         {
             try
             {
                 WriteOnLabelAsync(value.ToString(), labelM3TeachAxisQuoteValue);
+            }
+            catch (Exception EX)
+            {
+
+            }
+        }
+
+        public void UpdateOPCUAM4CAQ(short value)
+        {
+            try
+            {
+                WriteOnLabelAsync(value.ToString(), labelM4TeachAxisQuoteValue);
             }
             catch (Exception EX)
             {
@@ -506,7 +518,7 @@ namespace GUI
 
             if (value == 1)
             {
-                lblLed.LedColor = Color.FromArgb(195, 222, 155);
+                lblLed.LedColor = Color.Blue;
                 lblLed.Label = "automatic";
             }
 
@@ -518,7 +530,7 @@ namespace GUI
 
             if (value == 3)
             {
-                lblLed.LedColor = Color.Blue;
+                lblLed.LedColor = Color.FromArgb(107, 227, 162);
                 lblLed.Label = "in cycle";
             }
 
@@ -527,6 +539,54 @@ namespace GUI
                 lblLed.LedColor = Color.Red;
                 lblLed.Label = "in alarm";
             }
+        }
+
+        public void ManageOPCUAMBtnStatus(short value, LBSoft.IndustrialCtrls.Buttons.LBButton btn)
+        {
+            if (value == 0)
+            {
+                btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+                btn.Label = "START";
+            }
+
+            if (value == 1)
+            {
+                btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+                btn.Label = "START";
+            }
+
+            if (value == 2)
+            {
+                btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+                btn.Label = "START";
+            }
+
+            if (value == 3)
+            {
+                btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed;
+                btn.Label = "STOP";
+            }
+
+            if (value == 4)
+            {
+                lbButtonTestM2Start.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+                lbButtonTestM2Start.Label = "START";
+            }
+        }
+
+        public void ManageLineStatus(short valueM1, short valueM2, short valueM3, short valueM4, short valueM5, short valueM6)
+        {
+            if (valueM1 == 3 & valueM2 == 3 & valueM3 == 3 & valueM4 == 3 & valueM5 == 3 & valueM6 == 3)
+            {
+                lbButtonStartStop.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed;
+                lbButtonStartStop.Label = "STOP";
+            }
+            else
+            {
+                lbButtonStartStop.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+                lbButtonStartStop.Label = "START";
+            }
+
         }
 
         public void UpdateOPCUAMHomingDone(bool value, LBSoft.IndustrialCtrls.Leds.LBLed lblLed)
