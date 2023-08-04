@@ -31,6 +31,7 @@ using RSACommon.Service;
 using RSACommon.Configuration;
 using RSACommon.ProgramParser;
 using RSACommon.Points;
+using PlasticauchoUtils;
 
 namespace GUI
 {
@@ -1323,7 +1324,9 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + textBoxM2TestProgramName.Text + config.Extensions[0]);
+
+                string path = Path.Combine(config.ProgramsPath[0], textBoxM2TestProgramName.Text + config.Extensions[0]);
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(path);
                 if (objPoints != null)
                 {
 
