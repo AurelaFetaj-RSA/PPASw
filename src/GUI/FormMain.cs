@@ -40,7 +40,8 @@ namespace GUI
         public static Core myCore;
         OpcClientService ccService = null;
 
-        private LidorSystems.IntegralUI.Containers.TabPage lastPage { get; set; } = null;
+        private LidorSystems.IntegralUI.Containers.TabPage lastPage { get; set; } = null;      
+
         private readonly SplashScreen _splashScreen = null;
         private Form _configForm { get; set; } = null;
         private Form _clientForm { get; set; } = null;
@@ -2301,11 +2302,11 @@ namespace GUI
 
             if (lbButtonTestM5Start.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
             {
-                var readResult = await ccService.Send(keyValue, true);
+                var readResult = await ccService.Send(keyValue, false);
             }
             else
             {
-                var readResult = await ccService.Send(keyValue, false);
+                var readResult = await ccService.Send(keyValue, true);
             }
         }
 
@@ -2363,6 +2364,39 @@ namespace GUI
         private void lbButtonTestM5Start_Click(object sender, EventArgs e)
         {
             M5StartAuto();
+        }
+
+        private async void timerOPCUAKeepAlive_Tick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private async void buttonM2Reset_Click(object sender, EventArgs e)
+        {
+            string keyValue = "pcM2Reset";
+            var sendResult = await ccService.Send(keyValue, true);
+
+            if ((sendResult == null) || (sendResult.OpcResult == false))
+            {
+                //todo manage error
+
+            }            
+        }
+
+        private void tabPageT0_3_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g;
+
+            g = e.Graphics;
+
+            Pen myPen = new Pen(Color.FromArgb(107, 227, 162));
+            myPen.Width = 10;
+
+            g.DrawLine(myPen, 20, 200, 680, 200);
+
+            g.DrawLine(myPen, 60, 200, 60, 260);
+
+            //g.DrawLine(myPen, 1, 1, 45, 65);
         }
     }
 }

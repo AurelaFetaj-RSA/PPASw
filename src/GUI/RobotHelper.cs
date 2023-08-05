@@ -27,6 +27,9 @@ namespace GUI
     public partial class FormMain : Form
     {
         Dictionary<string, DiagnosticWindowsControl> DiagnosticVariableGroupbox = new Dictionary<string, DiagnosticWindowsControl>();
+        private bool[] lastLifeBit { get; set; } = { false, false, false, false, false, false };
+        private int[] LifeBitCounter { get; set; } = { 0, 0, 0, 0, 0, 0};
+        private bool[] LifeBitTimeout { get; set; } = { false, false, false, false, false, false };
         public async Task UpdateGraphicsGUI(TimeSpan interval, CancellationTokenSource cancellationToken)
         {
 
@@ -158,8 +161,18 @@ namespace GUI
             //}
         }
         
-        public void WriteOnLabelAsync(string textToAppend, Label lbl)
+        public void WriteOnLabelAsync(ClientResult cr, Label lbl)
         {
+            string textToAppend = "";
+
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                textToAppend = "offline";
+            }
+            else
+            {
+                textToAppend = cr.Value.ToString();
+            }
             if (lbl.InvokeRequired)
             {
                 lbl.Invoke((MethodInvoker)delegate
@@ -185,143 +198,295 @@ namespace GUI
         {
             try
             {
-                List<string> keys = new List<string>()
+                if (ccService.ClientIsConnected)
                 {
-                    //"pcM1Status",
-                    "pcM2Status",
-                    "pcM3Status",
-                    "pcM4Status",
-                    "pcM5Status"
-                    //"pcM6Status"
-                };
+                    #region (* machine/line status *)
+                    /*machine status
+                     * = 0 -> emergency
+                     * = 1 -> manual 
+                     * = 2 -> automatic(with errors)
+                     * = 3 -> in cycle (no errors)
+                     * = 4 -> alarms
+                     */
+                    List<string> keys = new List<string>()
+                    {
+                        "pcM1Status",
+                        "pcM2Status",
+                        "pcM3Status",
+                        "pcM4Status",
+                        "pcM5Status",
+                        "pcM6Status"
+                    };
 
-                var readResult = await ccService.Read(keys);
-                //UpdateOPCUAMStatus((short)readResult["pcM1Status"]?.Value, lbLedM1Status);
-                UpdateOPCUAMStatus((short)readResult["pcM2Status"]?.Value, lbLedM2Status);
-                ManageOPCUAMBtnStatus((short)readResult["pcM2Status"]?.Value, lbButtonTestM2Start);
-                UpdateOPCUAMStatus((short)readResult["pcM3Status"]?.Value, lbLedM3Status);
-                ManageOPCUAMBtnStatus((short)readResult["pcM3Status"]?.Value, lbButtonTestM3Start);
-                UpdateOPCUAMStatus((short)readResult["pcM4Status"]?.Value, lbLedM4Status);
-                ManageOPCUAMBtnStatus((short)readResult["pcM4Status"]?.Value, lbButtonTestM4Start);
-                UpdateOPCUAMStatus((short)readResult["pcM5Status"]?.Value, lbLedM5Status);
-                ManageOPCUAMBtnStatus((short)readResult["pcM5Status"]?.Value, lbButtonTestM5Start);
-                //UpdateOPCUAMStatus((short)readResult["pcM6Status"]?.Value, lbLedM6Status);
-                short statusOven = 3;
-                short statusTrimmer = 3;
-                ManageLineStatus(statusTrimmer, (short)readResult["pcM2Status"]?.Value, (short)readResult["pcM3Status"]?.Value,
-                    (short)readResult["pcM4Status"]?.Value, (short)readResult["pcM5Status"]?.Value, statusOven);
-            }
-            catch(Exception Ex)
-            {
+                    var readResult = await ccService.Read(keys);
 
-            }
+                    UpdateOPCUAMStatus(readResult["pcM1Status"], lbLedM1Status);
+                    ManageOPCUAMBtnStatus(readResult["pcM1Status"], lbButtonTestM1Start);
 
-            try
-            {
-                List<string> keys = new List<string>()
+                    UpdateOPCUAMStatus(readResult["pcM2Status"], lbLedM2Status);
+                    ManageOPCUAMBtnStatus(readResult["pcM2Status"], lbButtonTestM2Start);
+
+                    UpdateOPCUAMStatus(readResult["pcM3Status"], lbLedM3Status);
+                    ManageOPCUAMBtnStatus(readResult["pcM3Status"], lbButtonTestM3Start);
+
+                    UpdateOPCUAMStatus(readResult["pcM4Status"], lbLedM4Status);
+                    ManageOPCUAMBtnStatus(readResult["pcM4Status"], lbButtonTestM4Start);
+
+                    UpdateOPCUAMStatus(readResult["pcM5Status"], lbLedM5Status);
+                    ManageOPCUAMBtnStatus(readResult["pcM5Status"], lbButtonTestM5Start);
+
+                    UpdateOPCUAMStatus(readResult["pcM6Status"], lbLedM6Status);
+                    ManageOPCUAMBtnStatus(readResult["pcM6Status"], lbButtonTestM6Start);
+
+                    ManageLineStatus(readResult["pcM1Status"], readResult["pcM2Status"], readResult["pcM3Status"],
+                    readResult["pcM4Status"], readResult["pcM5Status"], readResult["pcM6Status"]);
+
+                    #endregion
+
+                    #region (* machine homing done *)
+                    keys = new List<string>()
+                    {
+                        "pcM1HomingDone",
+                        "pcM2HomingDone",
+                        "pcM3HomingDone",
+                        "pcM4HomingDone",
+                        //"pcM5HomingDone",
+                        "pcM6HomingDone"
+                    };
+
+                    readResult = await ccService.Read(keys);
+                    UpdateOPCUAMHomingDone(readResult["pcM1HomingDone"], lbLedM1HomingDone);
+                    UpdateOPCUAMHomingDone(readResult["pcM2HomingDone"], lbLedM2HomingDone);
+                    UpdateOPCUAMHomingDone(readResult["pcM3HomingDone"], lbLedM3HomingDone);
+                    UpdateOPCUAMHomingDone(readResult["pcM4HomingDone"], lbLedM4HomingDone);
+                    //UpdateOPCUAMHomingDone(readResult["pcM5HomingDone"], lbLedM5HomingDone);
+                    UpdateOPCUAMHomingDone(readResult["pcM6HomingDone"], lbLedM6HomingDone);
+                    #endregion
+
+                    #region(* machine current vertical axis quote *9
+                    keys = new List<string>()
+                    {
+                        "pcM1CurrentAxisQuote",
+                        "pcM2CurrentAxisQuote",
+                        "pcM3CurrentAxisQuote",
+                        "pcM4CurrentAxisQuote"
+                        //"pcM5CurrentAxisQuote",
+                        //"pcM6CurrentAxisQuote"
+                    };
+
+                    readResult = await ccService.Read(keys);
+                    UpdateOPCUAM1CAQ(readResult["pcM1CurrentAxisQuote"]);
+                    UpdateOPCUAM2CAQ(readResult["pcM2CurrentAxisQuote"]);
+                    UpdateOPCUAM3CAQ(readResult["pcM3CurrentAxisQuote"]);
+                    UpdateOPCUAM4CAQ(readResult["pcM4CurrentAxisQuote"]);
+                    #endregion
+
+                    #region(* machine point reached - teach*)
+                    keys = new List<string>()
+                    {
+                        //"pcM1PointReached",
+                        "pcM2PointReached",
+                        "pcM3PointReached"
+                        //"pcM4PointReached",
+                        //"pcM5PointReached",
+                        //"pcM6PointReached"
+                    };
+
+                    readResult = await ccService.Read(keys);
+                    UpdateOPCUAM2PointReached(readResult["pcM2PointReached"]);
+                    #endregion
+
+                    #region(* node keep alive/connection *)
+                    //keep alive to plc
+                    keys = new List<string>()
+                    {
+                        "pcN1KeepAliveW",
+                        "pcN2KeepAliveW",
+                        "pcM3KeepAliveW",
+                        "pcM4KeepAliveW",
+                        "pcM5KeepAliveW"
+                    };
+
+                    readResult = await ccService.Read(keys);
+                    UpdateOPCUAMKeepAlive(readResult["pcN1KeepAliveW"], lbLedM1PCKeepAlive);
+                    UpdateOPCUAMKeepAlive(readResult["pcN2KeepAliveW"], lbLedM2PCKeepAlive);
+                    UpdateOPCUAMKeepAlive(readResult["pcN3KeepAliveW"], lbLedM3PCKeepAlive);
+                    UpdateOPCUAMKeepAlive(readResult["pcN4KeepAliveW"], lbLedM4PCKeepAlive);
+                    UpdateOPCUAMKeepAlive(readResult["pcN5KeepAliveW"], lbLedM5PCKeepAlive);
+
+                    //keep alive from plc
+                    keys = new List<string>()
+                    {
+                        "pcM1KeepAliveR",
+                        "pcM2KeepAliveR",
+                        "pcM3KeepAliveR",
+                        "pcM4KeepAliveR",
+                        "pcM5KeepAliveR"
+                        //"pcM6KeepAliveR"
+                    };
+
+                    var readResultPLC = await ccService.Read(keys);
+                    UpdateOPCUAMNodeConnection(readResultPLC["pcM1KeepAliveR"], lastLifeBit[0], ref LifeBitTimeout[0], ref LifeBitCounter[0], lbLedM1Connection);
+                    UpdateOPCUAMNodeConnection(readResultPLC["pcM2KeepAliveR"], lastLifeBit[1], ref LifeBitTimeout[1], ref LifeBitCounter[1], lbLedM2Connection);
+                    UpdateOPCUAMNodeConnection(readResultPLC["pcM3KeepAliveR"], lastLifeBit[2], ref LifeBitTimeout[2], ref LifeBitCounter[2], lbLedM3Connection);
+                    UpdateOPCUAMNodeConnection(readResultPLC["pcM4KeepAliveR"], lastLifeBit[3], ref LifeBitTimeout[3], ref LifeBitCounter[3], lbLedM4Connection);
+                    UpdateOPCUAMNodeConnection(readResultPLC["pcM5KeepAliveR"], lastLifeBit[4], ref LifeBitTimeout[4], ref LifeBitCounter[4], lbLedM5Connection);
+                    ManageLastLifeBit(readResultPLC["pcM1KeepAliveR"], ref lastLifeBit[0]);
+                    ManageLastLifeBit(readResultPLC["pcM2KeepAliveR"], ref lastLifeBit[1]);
+                    ManageLastLifeBit(readResultPLC["pcM3KeepAliveR"], ref lastLifeBit[2]);
+                    ManageLastLifeBit(readResultPLC["pcM4KeepAliveR"], ref lastLifeBit[3]);
+                    ManageLastLifeBit(readResultPLC["pcM5KeepAliveR"], ref lastLifeBit[4]);
+                    #endregion
+
+                    #region(* line connection ready *)
+                    //if all nodes are connected -> not in timeout
+                    lbLedConnection.State = (LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                    lbLedConnection.Label = (LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]) ? "online": "offline";
+                    #endregion
+
+                    #region(* *)
+
+                    #endregion
+                    //manipulator digital input
+                    //try
+                    //{
+                    //    List<string> keys = new List<string>()
+                    //    {
+                    //        "pcM5DI",
+                    //        "pcM5DO"
+                    //    };
+
+                    //    var readResult = await ccService.Read(keys);
+                    //    UpdateOPCUAM5DI(readResult["pcM5DI"]);
+
+                    //}
+                    //catch (Exception Ex)
+                    //{
+
+                    //}
+
+                    //manipulator digital input
+
+                    //keys = new List<string>()
+                    //{
+                    //    "pcM2DI",
+                    //    "pcM2DO"
+                    //};
+
+                    //readResult = await ccService.Read(keys);
+                    //UpdateOPCUAM2DI(readResult["pcM2DI"]);
+                }
+                else
                 {
-                    //"pcM1HomingDone",
-                    "pcM2HomingDone",
-                    "pcM3HomingDone",
-                    "pcM4HomingDone"
-                    //"pcM5HomingDone",
-                    //"pcM6HomingDone"
-                };
-
-                var readResult = await ccService.Read(keys);
-                //UpdateOPCUAMHomingDone((bool)readResult["pcM1HomingDone"]?.Value, lbLedM1HomingDone);
-                UpdateOPCUAMHomingDone((bool)readResult["pcM2HomingDone"]?.Value, lbLedM2HomingDone);
-                UpdateOPCUAMHomingDone((bool)readResult["pcM3HomingDone"]?.Value, lbLedM3HomingDone);
-                UpdateOPCUAMHomingDone((bool)readResult["pcM4HomingDone"]?.Value, lbLedM4HomingDone);
-                //UpdateOPCUAMHomingDone((bool)readResult["pcM5HomingDone"]?.Value, lbLedM5HomingDone);
-                //UpdateOPCUAMHomingDone((bool)readResult["pcM6HomingDone"]?.Value, lbLedM6HomingDone);
+                    GUIWithClientDisconnected();
+                }
             }
             catch (Exception Ex)
             {
 
-            }
 
-            try
+            }
+        }
+
+        private void GUIWithClientDisconnected()
+        {
+            ManageOPCUAMBtnStatus(null, lbButtonTestM1Start);
+
+            UpdateOPCUAMStatus(null, lbLedM2Status);
+            ManageOPCUAMBtnStatus(null, lbButtonTestM2Start);
+
+            UpdateOPCUAMStatus(null, lbLedM3Status);
+            ManageOPCUAMBtnStatus(null, lbButtonTestM3Start);
+
+            UpdateOPCUAMStatus(null, lbLedM4Status);
+            ManageOPCUAMBtnStatus(null, lbButtonTestM4Start);
+
+            UpdateOPCUAMStatus(null, lbLedM5Status);
+            ManageOPCUAMBtnStatus(null, lbButtonTestM5Start);
+
+            UpdateOPCUAMStatus(null, lbLedM6Status);
+            ManageOPCUAMBtnStatus(null, lbButtonTestM6Start);
+
+            UpdateOPCUAMHomingDone(null, lbLedM1HomingDone);
+            UpdateOPCUAMHomingDone(null, lbLedM2HomingDone);
+            UpdateOPCUAMHomingDone(null, lbLedM3HomingDone);
+            UpdateOPCUAMHomingDone(null, lbLedM4HomingDone);
+            //UpdateOPCUAMHomingDone(null, lbLedM5HomingDone);
+            UpdateOPCUAMHomingDone(null, lbLedM6HomingDone);
+
+            UpdateOPCUAMHomingDone(null, lbLedM1HomingDone);
+            UpdateOPCUAMHomingDone(null, lbLedM2HomingDone);
+            UpdateOPCUAMHomingDone(null, lbLedM3HomingDone);
+            UpdateOPCUAMHomingDone(null, lbLedM4HomingDone);
+            //UpdateOPCUAMHomingDone(null, lbLedM5HomingDone);
+            UpdateOPCUAMHomingDone(null, lbLedM6HomingDone);
+            UpdateOPCUAM1CAQ(null);
+            UpdateOPCUAM2CAQ(null);
+            UpdateOPCUAM3CAQ(null);
+            UpdateOPCUAM4CAQ(null);
+            lbLedConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+            lbLedConnection.Label = "offline";
+            pictureBoxM1PLCNode.Image = imageList1.Images[1];
+            pictureBoxM2PLCNode.Image = imageList1.Images[1];
+            pictureBoxM3PLCNode.Image = imageList1.Images[1];
+            pictureBoxM4PLCNode.Image = imageList1.Images[1];
+            pictureBoxM5PLCNode.Image = imageList1.Images[1];
+
+            pictureBoxIOTNode.Image = imageList1.Images[3];
+        }
+
+        private void UpdateOPCUAMNodeConnection(ClientResult cr, bool oldValue, ref bool lBitTimeout, ref int lBitCounter, LBSoft.IndustrialCtrls.Leds.LBLed lblLed)
+        {
+            if ((cr == null) || (cr.OpcResult == false))
             {
-                List<string> keys = new List<string>()
+                lblLed.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lBitTimeout = true;
+            }
+            else
+            { 
+                if (!lBitTimeout)
                 {
-                    //"pcM1PointReached",
-                    "pcM2PointReached",
-                    "pcM3PointReached"
-                    //"pcM4PointReached",
-                    //"pcM5PointReached",
-                    //"pcM6PointReached"
-                };
-
-                var readResult = await ccService.Read(keys);
-                UpdateOPCUAM2PointReached(readResult["pcM2PointReached"]);                
-            }
-            catch (Exception Ex)
-            {
-
-            }
-
-            try
-            {
-                List<string> keys = new List<string>()
+                    if ((bool)cr.Value == oldValue)
+                    {
+                        lBitCounter = lBitCounter + 1;
+                        if (lBitCounter > 100)
+                        {
+                            lBitTimeout = true;
+                        }
+                    }
+                    else
+                    {
+                        lBitCounter = 0;
+                        lBitTimeout = false;
+                        lblLed.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+                    }
+                }
+                else
                 {
-                    //"pcM1CurrentAxisQuote",
-                    "pcM2CurrentAxisQuote",
-                    "pcM3CurrentAxisQuote",
-                    "pcM4CurrentAxisQuote"
-                    //"pcM5CurrentAxisQuote",
-                    //"pcM6CurrentAxisQuote"
-                };
-
-                var readResult = await ccService.Read(keys);
-                //UpdateOPCUAM1CAQ((short)readResult["pcM1CurrentAxisQuote"]?.Value);
-                UpdateOPCUAM2CAQ((short)readResult["pcM2CurrentAxisQuote"]?.Value);
-                UpdateOPCUAM3CAQ((short)readResult["pcM3CurrentAxisQuote"]?.Value);
-                UpdateOPCUAM4CAQ((short)readResult["pcM4CurrentAxisQuote"]?.Value);
+                    if ((bool)cr.Value != oldValue)
+                    {
+                        lBitCounter = 0;
+                        lBitTimeout = false;
+                        lblLed.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+                    }
+                    else
+                    {
+                        lblLed.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                    }
+                }
             }
-            catch (Exception ex)
+        }
+
+        public void ManageLastLifeBit(ClientResult cr, ref bool lastLifeBit)
+        {
+            if ((cr.OpcResult == false) || (cr == null))
             {
-
+                //todo manage error
             }
-
-
-            //manipulator digital input
-            try
+            else
             {
-                List<string> keys = new List<string>()
-                {
-                    "pcM2DI",
-                    "pcM2DO"
-                };
-
-                var readResult = await ccService.Read(keys);
-                UpdateOPCUAM2DI(readResult["pcM2DI"]);
-
+                lastLifeBit = (bool)cr.Value;
             }
-            catch (Exception Ex)
-            {
-
-            }
-
-                 
-
-            //manipulator digital input
-            //try
-            //{
-            //    List<string> keys = new List<string>()
-            //    {
-            //        "pcM5DI",
-            //        "pcM5DO"
-            //    };
-
-            //    var readResult = await ccService.Read(keys);
-            //    UpdateOPCUAM5DI(readResult["pcM5DI"]);
-
-            //}
-            //catch (Exception Ex)
-            //{
-
-            //}
         }
 
         public void UpdateOPCUAM5DI(ClientResult diREsult)
@@ -389,50 +554,53 @@ namespace GUI
 
         }
 
-        public void UpdateOPCUAM2PointReached(ClientResult readResult)
+        public void UpdateOPCUAM2PointReached(ClientResult cr)
         {
-
-            string fileNameReached = "";
-            string fileNameNotReached = "";
-            string fileNameNull = "";
-            byte[] binaryDataReached = null;
-            byte[] binaryDataNotReached = null;
-            byte[] binaryDataNull = null;
-            FileInfo fileInfoReached = null;
-            FileInfo fileInfoNotReached = null;
-            FileInfo fileInfoNull = null;
-            MemoryStream msReached = null;
-            MemoryStream msNotReached = null;
-            MemoryStream msNull = null;
-            Image returnImageReached = null;
-            Image returnImageNotReached = null;
-            Image returnImageNull = null;
-            fileNameReached = "C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\preached.png";
-            fileInfoReached = new FileInfo(fileNameReached);
-
-            binaryDataReached = File.ReadAllBytes(fileNameReached);
-            msReached = new MemoryStream(binaryDataReached);
-            returnImageReached = Image.FromStream(msReached, false, true);
-
-            fileNameNotReached = "C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\pnotreached.png";
-            fileInfoNotReached = new FileInfo(fileNameNotReached);
-
-            binaryDataNotReached = File.ReadAllBytes(fileNameNotReached);
-            msNotReached = new MemoryStream(binaryDataNotReached);
-            returnImageNotReached = Image.FromStream(msNotReached, false, true);
-
-            fileNameNull = "C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\null.png";
-            fileInfoNull = new FileInfo(fileNameNull);
-
-            binaryDataNull = File.ReadAllBytes(fileNameNull);
-            msNull = new MemoryStream(binaryDataNull);
-            returnImageNull = Image.FromStream(msNull, false, true);
-
-            if (readResult.OpcResult)
+            if ((cr == null) || (cr.OpcResult == false))
             {
-                bool[] arrayBool = (bool[])readResult.Value;
+                //todo offline message
+            }
+            else 
+            {
+                string fileNameReached = "";
+                string fileNameNotReached = "";
+                string fileNameNull = "";
+                byte[] binaryDataReached = null;
+                byte[] binaryDataNotReached = null;
+                byte[] binaryDataNull = null;
+                FileInfo fileInfoReached = null;
+                FileInfo fileInfoNotReached = null;
+                FileInfo fileInfoNull = null;
+                MemoryStream msReached = null;
+                MemoryStream msNotReached = null;
+                MemoryStream msNull = null;
+                Image returnImageReached = null;
+                Image returnImageNotReached = null;
+                Image returnImageNull = null;
+                fileNameReached = "C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\preached.png";
+                fileInfoReached = new FileInfo(fileNameReached);
+
+                binaryDataReached = File.ReadAllBytes(fileNameReached);
+                msReached = new MemoryStream(binaryDataReached);
+                returnImageReached = Image.FromStream(msReached, false, true);
+
+                fileNameNotReached = "C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\pnotreached.png";
+                fileInfoNotReached = new FileInfo(fileNameNotReached);
+
+                binaryDataNotReached = File.ReadAllBytes(fileNameNotReached);
+                msNotReached = new MemoryStream(binaryDataNotReached);
+                returnImageNotReached = Image.FromStream(msNotReached, false, true);
+
+                fileNameNull = "C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\null.png";
+                fileInfoNull = new FileInfo(fileNameNull);
+
+                binaryDataNull = File.ReadAllBytes(fileNameNull);
+                msNull = new MemoryStream(binaryDataNull);
+                returnImageNull = Image.FromStream(msNull, false, true);
+
+                bool[] arrayBool = (bool[])cr.Value;
                 int i = 0;
-                for(i = 1; i<arrayBool.Count();i++)
+                for (i = 1; i < arrayBool.Count(); i++)
                 {
                     if (arrayBool[i])
                     {
@@ -451,156 +619,181 @@ namespace GUI
                         dataGridViewM2TeachPoints.Rows[i - 1].Cells[5].ToolTipText = fileInfoNotReached.ToString();
                     }
                 }
-                
-            } 
-                
-            //int i = 0;
-
-            //Dictionary<int, LBSoft.IndustrialCtrls.Leds.LBLed> myDict = new Dictionary<int, LBSoft.IndustrialCtrls.Leds.LBLed>();
-            //myDict[0] = lbLedM5DI1;
-
-            //foreach (var result in diREsult.Value)
-            //{
-            //    myDict[result]
-            //}
-
-
-
-
-        }
-
-
-
-        public void UpdateOPCUAM2CAQ(short value)
-        {
-            try
-            {
-                WriteOnLabelAsync(value.ToString(), labelM2TeachAxisQuoteValue);
-            }
-            catch(Exception EX)
-            {
-
             }
         }
 
-        public void UpdateOPCUAM3CAQ(short value)
+        public void UpdateOPCUAM1CAQ(ClientResult cr)
         {
-            try
-            {
-                WriteOnLabelAsync(value.ToString(), labelM3TeachAxisQuoteValue);
-            }
-            catch (Exception EX)
-            {
+           // WriteOnLabelAsync(cr, labelM1TeachAxisQuoteValue);
+        }
 
+        public void UpdateOPCUAM2CAQ(ClientResult cr)
+        {
+            WriteOnLabelAsync(cr, labelM2TeachAxisQuoteValue);
+        }
+
+        public void UpdateOPCUAM3CAQ(ClientResult cr)
+        {
+            WriteOnLabelAsync(cr, labelM3TeachAxisQuoteValue);
+        }
+
+        public void UpdateOPCUAM4CAQ(ClientResult cr)
+        {
+            WriteOnLabelAsync(cr, labelM4TeachAxisQuoteValue);
+        }
+
+        public async void UpdateOPCUAMKeepAlive(ClientResult cr, LBSoft.IndustrialCtrls.Leds.LBLed lblLed)
+        {
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                //todo manage error
+            }
+            else
+            { 
+                if ((bool)cr.Value)
+                {
+                    var sendResult = await ccService.Send(cr.Key, false);
+                    lblLed.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                }
+                else
+                {
+                    var sendResult = await ccService.Send(cr.Key, true);
+                    lblLed.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+                }
             }
         }
 
-        public void UpdateOPCUAM4CAQ(short value)
+
+        public void UpdateOPCUAMStatus(ClientResult cr, LBSoft.IndustrialCtrls.Leds.LBLed lblLed)
         {
-            try
+            if ((cr == null) || (cr.OpcResult == false))
             {
-                WriteOnLabelAsync(value.ToString(), labelM4TeachAxisQuoteValue);
-            }
-            catch (Exception EX)
-            {
-
-            }
-        }
-
-        public void UpdateOPCUAMStatus(short value, LBSoft.IndustrialCtrls.Leds.LBLed lblLed)
-        {
-
-            if (value == 0)
-            {
-                lblLed.LedColor = Color.Red;
-                lblLed.Label = "emergency";
-            }
-
-            if (value == 1)
-            {
-                lblLed.LedColor = Color.Blue;
-                lblLed.Label = "automatic";
-            }
-
-            if (value == 2)
-            {
-                lblLed.LedColor = Color.Orange;
-                lblLed.Label = "manual";
-            }
-
-            if (value == 3)
-            {
-                lblLed.LedColor = Color.FromArgb(107, 227, 162);
-                lblLed.Label = "in cycle";
-            }
-
-            if (value == 4)
-            {
-                lblLed.LedColor = Color.Red;
-                lblLed.Label = "in alarm";
-            }
-        }
-
-        public void ManageOPCUAMBtnStatus(short value, LBSoft.IndustrialCtrls.Buttons.LBButton btn)
-        {
-            if (value == 0)
-            {
-                btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-                btn.Label = "START";
-            }
-
-            if (value == 1)
-            {
-                btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-                btn.Label = "START";
-            }
-
-            if (value == 2)
-            {
-                btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-                btn.Label = "START";
-            }
-
-            if (value == 3)
-            {
-                btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed;
-                btn.Label = "STOP";
-            }
-
-            if (value == 4)
-            {
-                lbButtonTestM2Start.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-                lbButtonTestM2Start.Label = "START";
-            }
-        }
-
-        public void ManageLineStatus(short valueM1, short valueM2, short valueM3, short valueM4, short valueM5, short valueM6)
-        {
-            if (valueM1 == 3 & valueM2 == 3 & valueM3 == 3 & valueM4 == 3 & valueM5 == 3 & valueM6 == 3)
-            {
-                lbButtonStartStop.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed;
-                lbButtonStartStop.Label = "STOP";
+                lblLed.LedColor = Color.Black;
+                lblLed.Label = "offline";
             }
             else
             {
-                lbButtonStartStop.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-                lbButtonStartStop.Label = "START";
+                short value = (short)cr.Value;
+
+                if (value == 0)
+                {
+                    lblLed.LedColor = Color.Red;
+                    lblLed.Label = "emergency";
+                }
+
+                if (value == 1)
+                {
+                    lblLed.LedColor = Color.Blue;
+                    lblLed.Label = "automatic";
+                }
+
+                if (value == 2)
+                {
+                    lblLed.LedColor = Color.Orange;
+                    lblLed.Label = "manual";
+                }
+
+                if (value == 3)
+                {
+                    lblLed.LedColor = Color.FromArgb(107, 227, 162);
+                    lblLed.Label = "in cycle";
+                }
+
+                if (value == 4)
+                {
+                    lblLed.LedColor = Color.Red;
+                    lblLed.Label = "in alarm";
+                }
+            }
+        }
+
+        public void ManageOPCUAMBtnStatus(ClientResult cr, LBSoft.IndustrialCtrls.Buttons.LBButton btn)
+        {
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+                btn.Label = "NOT AVAILABLE";
+            }
+            else
+            {
+                short value = (short)cr.Value;
+
+                if (value == 0)
+                {
+                    btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+                    btn.Label = "START";
+                }
+
+                if (value == 1)
+                {
+                    btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+                    btn.Label = "START";
+                }
+
+                if (value == 2)
+                {
+                    btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+                    btn.Label = "START";
+                }
+
+                if (value == 3)
+                {
+                    btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed;
+                    btn.Label = "STOP";
+                }
+
+                if (value == 4)
+                {
+                    lbButtonTestM2Start.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+                    lbButtonTestM2Start.Label = "START";
+                }
+            }
+        }
+
+        public void ManageLineStatus(ClientResult crM1, ClientResult crM2, ClientResult crM3, ClientResult crM4, ClientResult crM5, ClientResult crM6)
+        {
+            if ((crM1 == null) || (crM2 == null) || (crM3 == null) || (crM4 == null) || (crM5 == null) || (crM6 == null) ||
+                    (crM1.OpcResult == false) || (crM2.OpcResult == false) || (crM3.OpcResult == false) || (crM4.OpcResult == false) || (crM5.OpcResult == false) || (crM6.OpcResult == false))
+            {
+                //todo: manage error
+            }
+            else
+            {
+
+                if ((short)crM1.Value == 3 & (short)crM2.Value == 3 & (short)crM3.Value == 3 & (short)crM4.Value == 3 & (short)crM5.Value == 3 & (short)crM6.Value == 3)
+                {
+                    lbButtonStartStop.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed;
+                    lbButtonStartStop.Label = "STOP";
+                }
+                else
+                {
+                    lbButtonStartStop.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+                    lbButtonStartStop.Label = "START";
+                }
             }
 
         }
 
-        public void UpdateOPCUAMHomingDone(bool value, LBSoft.IndustrialCtrls.Leds.LBLed lblLed)
+        public void UpdateOPCUAMHomingDone(ClientResult cr, LBSoft.IndustrialCtrls.Leds.LBLed lblLed)
         {
-            if (!value)
+            if ((cr == null) || (cr.OpcResult == false))
             {
-                lblLed.LedColor = Color.Red;
-                lblLed.Label = "homing not done";
+                lblLed.LedColor = Color.Black;
+                lblLed.Label = "offline";
             }
-
             else
             {
-                lblLed.LedColor = Color.FromArgb(195, 222, 155);
-                lblLed.Label = "homing done";
+                if (!(bool)cr.Value)
+                {
+                    lblLed.LedColor = Color.Red;
+                    lblLed.Label = "homing not done";
+                }
+
+                else
+                {
+                    lblLed.LedColor = Color.FromArgb(195, 222, 155);
+                    lblLed.Label = "homing done";
+                }
             }
         }
 
