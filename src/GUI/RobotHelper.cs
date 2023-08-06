@@ -200,6 +200,7 @@ namespace GUI
             {
                 if (ccService.ClientIsConnected)
                 {
+
                     #region (* machine/line status *)
                     /*machine status
                      * = 0 -> emergency
@@ -326,11 +327,11 @@ namespace GUI
                     };
 
                     var readResultPLC = await ccService.Read(keys);
-                    UpdateOPCUAMNodeConnection(readResultPLC["pcM1KeepAliveR"], lastLifeBit[0], ref LifeBitTimeout[0], ref LifeBitCounter[0], lbLedM1Connection);
-                    UpdateOPCUAMNodeConnection(readResultPLC["pcM2KeepAliveR"], lastLifeBit[1], ref LifeBitTimeout[1], ref LifeBitCounter[1], lbLedM2Connection);
-                    UpdateOPCUAMNodeConnection(readResultPLC["pcM3KeepAliveR"], lastLifeBit[2], ref LifeBitTimeout[2], ref LifeBitCounter[2], lbLedM3Connection);
-                    UpdateOPCUAMNodeConnection(readResultPLC["pcM4KeepAliveR"], lastLifeBit[3], ref LifeBitTimeout[3], ref LifeBitCounter[3], lbLedM4Connection);
-                    UpdateOPCUAMNodeConnection(readResultPLC["pcM5KeepAliveR"], lastLifeBit[4], ref LifeBitTimeout[4], ref LifeBitCounter[4], lbLedM5Connection);
+                    UpdateOPCUAMNodeConnection(readResultPLC["pcM1KeepAliveR"], lastLifeBit[0], ref LifeBitTimeout[0], ref LifeBitCounter[0], pictureBoxM1PLCNode);
+                    UpdateOPCUAMNodeConnection(readResultPLC["pcM2KeepAliveR"], lastLifeBit[1], ref LifeBitTimeout[1], ref LifeBitCounter[1], pictureBoxM2PLCNode);
+                    UpdateOPCUAMNodeConnection(readResultPLC["pcM3KeepAliveR"], lastLifeBit[2], ref LifeBitTimeout[2], ref LifeBitCounter[2], pictureBoxM3PLCNode);
+                    UpdateOPCUAMNodeConnection(readResultPLC["pcM4KeepAliveR"], lastLifeBit[3], ref LifeBitTimeout[3], ref LifeBitCounter[3], pictureBoxM4PLCNode);
+                    UpdateOPCUAMNodeConnection(readResultPLC["pcM5KeepAliveR"], lastLifeBit[4], ref LifeBitTimeout[4], ref LifeBitCounter[4], pictureBoxM5PLCNode);
                     ManageLastLifeBit(readResultPLC["pcM1KeepAliveR"], ref lastLifeBit[0]);
                     ManageLastLifeBit(readResultPLC["pcM2KeepAliveR"], ref lastLifeBit[1]);
                     ManageLastLifeBit(readResultPLC["pcM3KeepAliveR"], ref lastLifeBit[2]);
@@ -375,10 +376,14 @@ namespace GUI
 
                     //readResult = await ccService.Read(keys);
                     //UpdateOPCUAM2DI(readResult["pcM2DI"]);
+
+                    #region (* GUI *)
+                    GUIWithOPCUAClientConnected();
+                    #endregion
                 }
                 else
                 {
-                    GUIWithClientDisconnected();
+                    GUIWithOPCUAClientDisconnected();
                 }
             }
             catch (Exception Ex)
@@ -388,7 +393,12 @@ namespace GUI
             }
         }
 
-        private void GUIWithClientDisconnected()
+        private void GUIWithOPCUAClientConnected()
+        {
+            pictureBoxIOTNode.Image = imageListNodes.Images[2];
+        }
+
+        private void GUIWithOPCUAClientDisconnected()
         {
             ManageOPCUAMBtnStatus(null, lbButtonTestM1Start);
 
@@ -425,21 +435,29 @@ namespace GUI
             UpdateOPCUAM3CAQ(null);
             UpdateOPCUAM4CAQ(null);
             lbLedConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLedConnection.Label = "offline";
-            pictureBoxM1PLCNode.Image = imageList1.Images[1];
-            pictureBoxM2PLCNode.Image = imageList1.Images[1];
-            pictureBoxM3PLCNode.Image = imageList1.Images[1];
-            pictureBoxM4PLCNode.Image = imageList1.Images[1];
-            pictureBoxM5PLCNode.Image = imageList1.Images[1];
+            lbLedConnection.Label = "system offline";
+            
+            pictureBoxM1PLCNode.Image = imageListNodes.Images[1];
+            //labelM2Node.Text = "padprint int node offline";
+            pictureBoxM2PLCNode.Image = imageListNodes.Images[1];
+            pictureBoxM3PLCNode.Image = imageListNodes.Images[1];
+            pictureBoxM4PLCNode.Image = imageListNodes.Images[1];
+            pictureBoxM5PLCNode.Image = imageListNodes.Images[1];
 
-            pictureBoxIOTNode.Image = imageList1.Images[3];
+            pictureBoxIOTNode.Image = imageListNodes.Images[3];
+
+            lbLedM1PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+            lbLedM2PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+            lbLedM3PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+            lbLedM4PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+            lbLedM5PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
         }
 
-        private void UpdateOPCUAMNodeConnection(ClientResult cr, bool oldValue, ref bool lBitTimeout, ref int lBitCounter, LBSoft.IndustrialCtrls.Leds.LBLed lblLed)
+        private void UpdateOPCUAMNodeConnection(ClientResult cr, bool oldValue, ref bool lBitTimeout, ref int lBitCounter,PictureBox pict)
         {
             if ((cr == null) || (cr.OpcResult == false))
             {
-                lblLed.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                pict.Image = imageListNodes.Images[1];
                 lBitTimeout = true;
             }
             else
@@ -458,7 +476,7 @@ namespace GUI
                     {
                         lBitCounter = 0;
                         lBitTimeout = false;
-                        lblLed.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+                        pict.Image = imageListNodes.Images[0];
                     }
                 }
                 else
@@ -466,12 +484,12 @@ namespace GUI
                     if ((bool)cr.Value != oldValue)
                     {
                         lBitCounter = 0;
-                        lBitTimeout = false;
-                        lblLed.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+                        lBitTimeout = false;                     
+                        pict.Image = imageListNodes.Images[0];
                     }
                     else
-                    {
-                        lblLed.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                    {                       
+                        pict.Image = imageListNodes.Images[1];
                     }
                 }
             }
