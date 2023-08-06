@@ -488,6 +488,11 @@
             this.labelDateTime = new System.Windows.Forms.Label();
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
             this.imageListNodes = new System.Windows.Forms.ImageList(this.components);
+            this.labelM1Node = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.labelPieceCounter)).BeginInit();
@@ -4871,6 +4876,11 @@
             // 
             // groupBoxKeepAliveFromPlc
             // 
+            this.groupBoxKeepAliveFromPlc.Controls.Add(this.label9);
+            this.groupBoxKeepAliveFromPlc.Controls.Add(this.label8);
+            this.groupBoxKeepAliveFromPlc.Controls.Add(this.label5);
+            this.groupBoxKeepAliveFromPlc.Controls.Add(this.label4);
+            this.groupBoxKeepAliveFromPlc.Controls.Add(this.labelM1Node);
             this.groupBoxKeepAliveFromPlc.Controls.Add(this.pictureBoxIOTNode);
             this.groupBoxKeepAliveFromPlc.Controls.Add(this.pictureBoxM5PLCNode);
             this.groupBoxKeepAliveFromPlc.Controls.Add(this.pictureBoxM1PLCNode);
@@ -5385,6 +5395,31 @@
             this.imageListNodes.Images.SetKeyName(2, "iot_on.png");
             this.imageListNodes.Images.SetKeyName(3, "iot_off.png");
             // 
+            // labelM1Node
+            // 
+            resources.ApplyResources(this.labelM1Node, "labelM1Node");
+            this.labelM1Node.Name = "labelM1Node";
+            // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
+            // label5
+            // 
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.Name = "label5";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
+            // 
+            // label9
+            // 
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.Name = "label9";
+            // 
             // FormMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -5445,6 +5480,7 @@
             this.tabControlT0.ResumeLayout(false);
             this.tabPageT0_3.ResumeLayout(false);
             this.groupBoxKeepAliveFromPlc.ResumeLayout(false);
+            this.groupBoxKeepAliveFromPlc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIOTNode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM5PLCNode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM1PLCNode)).EndInit();
@@ -5841,6 +5877,11 @@
         private System.Windows.Forms.PictureBox pictureBoxM2PLCNode;
         private System.Windows.Forms.GroupBox groupBoxKeepAliveToPlc;
         private System.Windows.Forms.GroupBox groupBoxKeepAliveFromPlc;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelM1Node;
     }
 }
 
