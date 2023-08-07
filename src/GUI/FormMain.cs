@@ -2392,18 +2392,17 @@ namespace GUI
             Pen myPen = new Pen(Color.FromArgb(107, 227, 162));
             myPen.Width = 10;
 
+            
+
 
             int lineHeight = 80;
-            int groupboxXShift = groupBoxKeepAliveFromPlc.Location.X;
-            int groupboxYShift = groupBoxKeepAliveFromPlc.Location.Y;
-            g.DrawLine(myPen, pictureBoxM1PLCNode.Location.X + pictureBoxM1PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM1PLCNode.Location.Y - pictureBoxM1PLCNode.Height + groupboxYShift, pictureBoxM1PLCNode.Location.X + pictureBoxM1PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM1PLCNode.Location.Y - pictureBoxM1PLCNode.Height + lineHeight + groupboxYShift);
-            g.DrawLine(myPen, pictureBoxM2PLCNode.Location.X + pictureBoxM2PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM2PLCNode.Location.Y - pictureBoxM2PLCNode.Height + groupboxYShift, pictureBoxM2PLCNode.Location.X + pictureBoxM2PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM2PLCNode.Location.Y - pictureBoxM2PLCNode.Height + lineHeight + groupboxYShift);
-            g.DrawLine(myPen, pictureBoxM3PLCNode.Location.X + pictureBoxM3PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM3PLCNode.Location.Y - pictureBoxM3PLCNode.Height + groupboxYShift, pictureBoxM3PLCNode.Location.X + pictureBoxM3PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM3PLCNode.Location.Y - pictureBoxM3PLCNode.Height + lineHeight + groupboxYShift);
-            g.DrawLine(myPen, pictureBoxM4PLCNode.Location.X + pictureBoxM4PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM4PLCNode.Location.Y - pictureBoxM4PLCNode.Height + groupboxYShift, pictureBoxM4PLCNode.Location.X + pictureBoxM4PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM4PLCNode.Location.Y - pictureBoxM4PLCNode.Height + lineHeight + groupboxYShift);
-            g.DrawLine(myPen, pictureBoxM5PLCNode.Location.X + pictureBoxM5PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM5PLCNode.Location.Y - pictureBoxM5PLCNode.Height + groupboxYShift, pictureBoxM5PLCNode.Location.X + pictureBoxM5PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM5PLCNode.Location.Y - pictureBoxM5PLCNode.Height + lineHeight + groupboxYShift);
+            g.DrawLine(myPen, pictureBoxM1PLCNode.Location.X + pictureBoxM1PLCNode.Size.Width / 2, pictureBoxM1PLCNode.Location.Y - pictureBoxM1PLCNode.Height, pictureBoxM1PLCNode.Location.X + pictureBoxM1PLCNode.Size.Width / 2, pictureBoxM1PLCNode.Location.Y - pictureBoxM1PLCNode.Height + lineHeight);
+            g.DrawLine(myPen, pictureBoxM2PLCNode.Location.X + pictureBoxM2PLCNode.Size.Width/2, pictureBoxM2PLCNode.Location.Y - pictureBoxM2PLCNode.Height, pictureBoxM2PLCNode.Location.X + pictureBoxM2PLCNode.Size.Width / 2, pictureBoxM2PLCNode.Location.Y - pictureBoxM2PLCNode.Height  + lineHeight);
+            g.DrawLine(myPen, pictureBoxM3PLCNode.Location.X + pictureBoxM3PLCNode.Size.Width / 2, pictureBoxM3PLCNode.Location.Y - pictureBoxM3PLCNode.Height, pictureBoxM3PLCNode.Location.X + pictureBoxM3PLCNode.Size.Width / 2, pictureBoxM3PLCNode.Location.Y - pictureBoxM3PLCNode.Height + lineHeight);
+            g.DrawLine(myPen, pictureBoxM4PLCNode.Location.X + pictureBoxM4PLCNode.Size.Width / 2, pictureBoxM4PLCNode.Location.Y - pictureBoxM4PLCNode.Height, pictureBoxM4PLCNode.Location.X + pictureBoxM4PLCNode.Size.Width / 2, pictureBoxM4PLCNode.Location.Y - pictureBoxM4PLCNode.Height + lineHeight);
+            g.DrawLine(myPen, pictureBoxM5PLCNode.Location.X + pictureBoxM5PLCNode.Size.Width / 2, pictureBoxM5PLCNode.Location.Y - pictureBoxM5PLCNode.Height, pictureBoxM5PLCNode.Location.X + pictureBoxM5PLCNode.Size.Width / 2, pictureBoxM5PLCNode.Location.Y - pictureBoxM5PLCNode.Height + lineHeight);
 
-            g.DrawLine(myPen, pictureBoxM1PLCNode.Location.X + groupboxXShift, pictureBoxM1PLCNode.Location.Y - lineHeight + groupboxYShift, pictureBoxM5PLCNode.Location.X + pictureBoxM1PLCNode.Width + groupboxXShift, pictureBoxM1PLCNode.Location.Y - lineHeight + groupboxYShift);
-            g.DrawLine(myPen, pictureBoxIOTNode.Location.X + pictureBoxIOTNode.Width / 2 + groupboxXShift, pictureBoxIOTNode.Location.Y + pictureBoxIOTNode.Height + groupboxYShift, pictureBoxIOTNode.Location.X + pictureBoxIOTNode.Width / 2 + groupboxXShift, pictureBoxIOTNode.Location.Y + pictureBoxIOTNode.Height + lineHeight - 10 + groupboxYShift);
+            g.DrawLine(myPen, pictureBoxM1PLCNode.Location.X, pictureBoxM1PLCNode.Location.Y - lineHeight, pictureBoxM5PLCNode.Location.X + +pictureBoxM1PLCNode.Width, pictureBoxM1PLCNode.Location.Y - lineHeight );
         }
     }
 }
