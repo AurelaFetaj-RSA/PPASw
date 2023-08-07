@@ -168,8 +168,8 @@ namespace PlasticauchoUtils
             }
 
             string query = $"SELECT * FROM {tableForData.Name} WHERE {tableForData.PrimaryKey} = '{key}'";
-
-            return tableForData.ExecuteQuery(query);
+            return new MySqlResult();
+            //return tableForData.ExecuteQuery(query);
         }
     }
 }
