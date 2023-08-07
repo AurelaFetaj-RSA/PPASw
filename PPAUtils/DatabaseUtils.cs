@@ -133,8 +133,6 @@ namespace PlasticauchoUtils
 
         public MySqlResult DeleteRowPrimaryKey(string key)
         {
-            //string sql = $"SELECT * FROM {tableForData.Name} WHERE model_name = '{key}'";
-
             if (tableForData.PrimaryKey == string.Empty)
             {
                 return new MySqlResult()
@@ -150,5 +148,28 @@ namespace PlasticauchoUtils
             return tableForData.ExecuteNotQuery(query, new MySqlParameter[] { });
         }
 
+        /// <summary>
+        /// Get data from primary key filter
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        public MySqlResult SelectByPrimaryKey(string key)
+        {
+            //string sql = $"SELECT * FROM {tableForData.Name} WHERE model_name = '{key}'";
+
+            if (tableForData.PrimaryKey == string.Empty)
+            {
+                return new MySqlResult()
+                {
+                    Error = RSACommon.Error.MYSQL_PRIMARY_KEY_MISSING,
+                    Message = "Primary key is missing",
+                    Executed = ""
+                };
+            }
+
+            string query = $"SELECT * FROM {tableForData.Name} WHERE {tableForData.PrimaryKey} = '{key}'";
+
+            return tableForData.ExecuteQuery(query);
+        }
     }
 }
