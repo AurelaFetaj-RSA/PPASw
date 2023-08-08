@@ -2499,5 +2499,72 @@ namespace GUI
                 else checkBoxM6Start.Image = imageListStart.Images[0];
             }
         }
+
+        private async void checkBoxM2Pause_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool state = false;
+            //send start/stop 
+            state = (checkBoxM2Pause.CheckState == CheckState.Checked) ? true : false;
+            string keyValue = "pcM2Pause";
+            var sendResult = await ccService.Send(keyValue, state);
+            if (sendResult.OpcResult)
+            {
+                //update gui
+
+                checkBoxM2Pause.Text = "";
+                if (state) checkBoxM2Pause.Image = imageListStart.Images[4];
+                else checkBoxM2Pause.Image = imageListStart.Images[3];
+            }
+        }
+
+        private async void checkBoxStartStop_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool state = false;
+            //send start/stop 
+            state = (checkBoxStartStop.CheckState == CheckState.Checked) ? true : false;
+            string keyValue = "pcM2Pause";
+            var sendResult = await ccService.Send(keyValue, state);
+            if (sendResult.OpcResult)
+            {
+                //update gui
+
+                //checkBoxStartStop.Text = "";
+                if (state)
+                {
+                    checkBoxStartStop.Image = imageListStartStop.Images[1];
+                    checkBoxStartStop.Text = "STOP";
+                }
+                else
+                {
+                    checkBoxStartStop.Image = imageListStartStop.Images[0];
+                    checkBoxStartStop.Text = "START";
+                }
+            }
+        }
+
+        private async void checkBoxPause_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool state = false;
+            //send start/stop 
+            state = (checkBoxPause.CheckState == CheckState.Checked) ? true : false;
+            string keyValue = "pcM2Pause";
+            var sendResult = await ccService.Send(keyValue, state);
+            if (sendResult.OpcResult)
+            {
+                //update gui
+
+                //checkBoxPause.Text = "";
+                if (state)
+                {
+                    checkBoxPause.Image = imageListStartStop.Images[3];
+                    checkBoxPause.Text = "IN PAUSE";
+                }
+                else
+                {
+                    checkBoxPause.Image = imageListStartStop.Images[4];
+                    checkBoxPause.Text = "PAUSE";
+                }
+            }
+        }
     }
 }

@@ -182,7 +182,7 @@ namespace GUI
             }
         }
 
-        public void WriteOnCheckBoxAsync(ClientResult cr, CheckBox chk)
+        public void WriteOnCheckBoxStartAsync(ClientResult cr, CheckBox chk)
         {
             short value = -1;
 
@@ -239,9 +239,51 @@ namespace GUI
             }
         }
 
-     
+        public void WriteOnCheckBoxPauseAsync(ClientResult cr, CheckBox chk)
+        {
+            bool value = false;
+            bool founded = false;
 
-#region -----LETTURA PROGRAMMI-----
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                
+            }
+            else
+            {
+                value = (bool)cr.Value;
+                founded = true;
+            }
+
+            if (chk.InvokeRequired)
+            {
+                chk.Invoke((MethodInvoker)delegate
+                {
+                    chk.Text = "";
+                    if (!founded)
+                    {
+                        chk.CheckState = CheckState.Indeterminate;
+                        chk.Image = imageListStart.Images[2];
+                    }
+                    else
+                    {
+                        if (value == true)
+                        {
+                            chk.CheckState = CheckState.Checked;
+                            chk.Image = imageListStart.Images[4];
+                        }
+
+                        if (value == false)
+                        {
+                            chk.CheckState = CheckState.Unchecked;
+                            chk.Image = imageListStart.Images[3];
+                        }
+                    }
+                });
+            }
+        }
+
+
+        #region -----LETTURA PROGRAMMI-----
 
 
 
@@ -250,11 +292,11 @@ namespace GUI
 
 
 
-#endregion
+        #endregion
 
 
-#region (* machines status *)
-public async Task UpdateOPCUAStatus()
+        #region (* machines status *)
+        public async Task UpdateOPCUAStatus()
         {
             try
             {
@@ -315,6 +357,14 @@ public async Task UpdateOPCUAStatus()
                     };
 
                     readResult = await ccService.Read(keys);
+
+                    ManageOPCUAMBtnPause(readResult["pcM1Pause"], checkBoxM1Pause);
+                    ManageOPCUAMBtnPause(readResult["pcM2Pause"], checkBoxM2Pause);
+                    ManageOPCUAMBtnPause(readResult["pcM3Pause"], checkBoxM3Pause);
+                    ManageOPCUAMBtnPause(readResult["pcM4Pause"], checkBoxM4Pause);
+                    ManageOPCUAMBtnPause(readResult["pcM5Pause"], checkBoxM5Pause);
+                    ManageOPCUAMBtnPause(readResult["pcM6Pause"], checkBoxM6Pause);
+
                     ManagePauseStatus(readResult["pcM1Pause"], readResult["pcM2Pause"], readResult["pcM3Pause"], readResult["pcM4Pause"],
                         readResult["pcM5Pause"], readResult["pcM6Pause"]);
 
@@ -816,7 +866,12 @@ public async Task UpdateOPCUAStatus()
 
         public void ManageOPCUAMBtnStatus(ClientResult cr, CheckBox btn)
         {
-            WriteOnCheckBoxAsync(cr, btn);
+            WriteOnCheckBoxStartAsync(cr, btn);
+        }
+
+        public void ManageOPCUAMBtnPause(ClientResult cr, CheckBox btn)
+        {
+            WriteOnCheckBoxPauseAsync(cr, btn);
         }
 
         public void ManageLineStatus(ClientResult crM1, ClientResult crM2, ClientResult crM3, ClientResult crM4, ClientResult crM5, ClientResult crM6)
