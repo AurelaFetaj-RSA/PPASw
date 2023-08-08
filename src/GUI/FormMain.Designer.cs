@@ -440,22 +440,30 @@
             this.tabPageMain = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlT0 = new LidorSystems.IntegralUI.Containers.TabControl();
             this.tabPageT0_1 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.buttonM2Reset = new System.Windows.Forms.Button();
             this.groupBoxLine = new System.Windows.Forms.GroupBox();
+            this.checkBoxPause = new System.Windows.Forms.CheckBox();
+            this.checkBoxStartStop = new System.Windows.Forms.CheckBox();
+            this.buttonM2Reset = new System.Windows.Forms.Button();
             this.comboBoxAutoModelNameLst = new System.Windows.Forms.ComboBox();
             this.groupBoxM6 = new System.Windows.Forms.GroupBox();
+            this.checkBoxM6Pause = new System.Windows.Forms.CheckBox();
             this.checkBoxM6Start = new System.Windows.Forms.CheckBox();
             this.groupBoxM3 = new System.Windows.Forms.GroupBox();
+            this.checkBoxM3Pause = new System.Windows.Forms.CheckBox();
             this.textBoxTypeOrder = new System.Windows.Forms.TextBox();
             this.comboBoxM3PrgName_st2 = new System.Windows.Forms.ComboBox();
             this.checkBoxM3Start = new System.Windows.Forms.CheckBox();
             this.groupBoxM5 = new System.Windows.Forms.GroupBox();
+            this.checkBoxM5Pause = new System.Windows.Forms.CheckBox();
             this.checkBoxM5Start = new System.Windows.Forms.CheckBox();
             this.groupBoxM4 = new System.Windows.Forms.GroupBox();
+            this.checkBoxM4Pause = new System.Windows.Forms.CheckBox();
             this.checkBoxM4Start = new System.Windows.Forms.CheckBox();
             this.groupBoxM2 = new System.Windows.Forms.GroupBox();
+            this.checkBoxM2Pause = new System.Windows.Forms.CheckBox();
             this.checkBoxM2Start = new System.Windows.Forms.CheckBox();
             this.groupBoxM1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxM1Pause = new System.Windows.Forms.CheckBox();
             this.checkBoxM1Start = new System.Windows.Forms.CheckBox();
             this.tabPageT0_3 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.groupBoxKeepAliveFromPlc = new System.Windows.Forms.GroupBox();
@@ -483,14 +491,6 @@
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
             this.imageListNodes = new System.Windows.Forms.ImageList(this.components);
             this.imageListStart = new System.Windows.Forms.ImageList(this.components);
-            this.checkBoxM2Pause = new System.Windows.Forms.CheckBox();
-            this.checkBoxM1Pause = new System.Windows.Forms.CheckBox();
-            this.checkBoxM3Pause = new System.Windows.Forms.CheckBox();
-            this.checkBoxM4Pause = new System.Windows.Forms.CheckBox();
-            this.checkBoxM5Pause = new System.Windows.Forms.CheckBox();
-            this.checkBoxM6Pause = new System.Windows.Forms.CheckBox();
-            this.checkBoxStartStop = new System.Windows.Forms.CheckBox();
-            this.checkBoxPause = new System.Windows.Forms.CheckBox();
             this.imageListStartStop = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.SuspendLayout();
@@ -4787,13 +4787,6 @@
             this.tabPageT0_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_1.TextBounds")));
             this.tabPageT0_1.TextSize = new System.Drawing.SizeF(105.7493F, 25.4663F);
             // 
-            // buttonM2Reset
-            // 
-            resources.ApplyResources(this.buttonM2Reset, "buttonM2Reset");
-            this.buttonM2Reset.Name = "buttonM2Reset";
-            this.buttonM2Reset.UseVisualStyleBackColor = true;
-            this.buttonM2Reset.Click += new System.EventHandler(this.buttonM2Reset_Click);
-            // 
             // groupBoxLine
             // 
             this.groupBoxLine.Controls.Add(this.checkBoxPause);
@@ -4812,6 +4805,27 @@
             resources.ApplyResources(this.groupBoxLine, "groupBoxLine");
             this.groupBoxLine.Name = "groupBoxLine";
             this.groupBoxLine.TabStop = false;
+            // 
+            // checkBoxPause
+            // 
+            resources.ApplyResources(this.checkBoxPause, "checkBoxPause");
+            this.checkBoxPause.Name = "checkBoxPause";
+            this.checkBoxPause.UseVisualStyleBackColor = true;
+            this.checkBoxPause.CheckStateChanged += new System.EventHandler(this.checkBoxPause_CheckStateChanged);
+            // 
+            // checkBoxStartStop
+            // 
+            resources.ApplyResources(this.checkBoxStartStop, "checkBoxStartStop");
+            this.checkBoxStartStop.Name = "checkBoxStartStop";
+            this.checkBoxStartStop.UseVisualStyleBackColor = true;
+            this.checkBoxStartStop.CheckStateChanged += new System.EventHandler(this.checkBoxStartStop_CheckStateChanged);
+            // 
+            // buttonM2Reset
+            // 
+            resources.ApplyResources(this.buttonM2Reset, "buttonM2Reset");
+            this.buttonM2Reset.Name = "buttonM2Reset";
+            this.buttonM2Reset.UseVisualStyleBackColor = true;
+            this.buttonM2Reset.Click += new System.EventHandler(this.buttonM2Reset_Click);
             // 
             // comboBoxAutoModelNameLst
             // 
@@ -4832,6 +4846,13 @@
             resources.ApplyResources(this.groupBoxM6, "groupBoxM6");
             this.groupBoxM6.Name = "groupBoxM6";
             this.groupBoxM6.TabStop = false;
+            // 
+            // checkBoxM6Pause
+            // 
+            resources.ApplyResources(this.checkBoxM6Pause, "checkBoxM6Pause");
+            this.checkBoxM6Pause.Name = "checkBoxM6Pause";
+            this.checkBoxM6Pause.ThreeState = true;
+            this.checkBoxM6Pause.UseVisualStyleBackColor = true;
             // 
             // checkBoxM6Start
             // 
@@ -4855,6 +4876,13 @@
             resources.ApplyResources(this.groupBoxM3, "groupBoxM3");
             this.groupBoxM3.Name = "groupBoxM3";
             this.groupBoxM3.TabStop = false;
+            // 
+            // checkBoxM3Pause
+            // 
+            resources.ApplyResources(this.checkBoxM3Pause, "checkBoxM3Pause");
+            this.checkBoxM3Pause.Name = "checkBoxM3Pause";
+            this.checkBoxM3Pause.ThreeState = true;
+            this.checkBoxM3Pause.UseVisualStyleBackColor = true;
             // 
             // textBoxTypeOrder
             // 
@@ -4890,6 +4918,13 @@
             this.groupBoxM5.Name = "groupBoxM5";
             this.groupBoxM5.TabStop = false;
             // 
+            // checkBoxM5Pause
+            // 
+            resources.ApplyResources(this.checkBoxM5Pause, "checkBoxM5Pause");
+            this.checkBoxM5Pause.Name = "checkBoxM5Pause";
+            this.checkBoxM5Pause.ThreeState = true;
+            this.checkBoxM5Pause.UseVisualStyleBackColor = true;
+            // 
             // checkBoxM5Start
             // 
             resources.ApplyResources(this.checkBoxM5Start, "checkBoxM5Start");
@@ -4910,6 +4945,13 @@
             resources.ApplyResources(this.groupBoxM4, "groupBoxM4");
             this.groupBoxM4.Name = "groupBoxM4";
             this.groupBoxM4.TabStop = false;
+            // 
+            // checkBoxM4Pause
+            // 
+            resources.ApplyResources(this.checkBoxM4Pause, "checkBoxM4Pause");
+            this.checkBoxM4Pause.Name = "checkBoxM4Pause";
+            this.checkBoxM4Pause.ThreeState = true;
+            this.checkBoxM4Pause.UseVisualStyleBackColor = true;
             // 
             // checkBoxM4Start
             // 
@@ -4932,13 +4974,20 @@
             this.groupBoxM2.Name = "groupBoxM2";
             this.groupBoxM2.TabStop = false;
             // 
+            // checkBoxM2Pause
+            // 
+            resources.ApplyResources(this.checkBoxM2Pause, "checkBoxM2Pause");
+            this.checkBoxM2Pause.Name = "checkBoxM2Pause";
+            this.checkBoxM2Pause.ThreeState = true;
+            this.checkBoxM2Pause.UseVisualStyleBackColor = true;
+            this.checkBoxM2Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM2Pause_CheckStateChanged);
+            // 
             // checkBoxM2Start
             // 
             resources.ApplyResources(this.checkBoxM2Start, "checkBoxM2Start");
             this.checkBoxM2Start.Name = "checkBoxM2Start";
             this.checkBoxM2Start.ThreeState = true;
             this.checkBoxM2Start.UseVisualStyleBackColor = true;
-            this.checkBoxM2Start.CheckedChanged += new System.EventHandler(this.checkBoxM2Start_CheckedChanged);
             this.checkBoxM2Start.CheckStateChanged += new System.EventHandler(this.checkBoxM2Start_CheckStateChanged);
             // 
             // groupBoxM1
@@ -4953,6 +5002,13 @@
             resources.ApplyResources(this.groupBoxM1, "groupBoxM1");
             this.groupBoxM1.Name = "groupBoxM1";
             this.groupBoxM1.TabStop = false;
+            // 
+            // checkBoxM1Pause
+            // 
+            resources.ApplyResources(this.checkBoxM1Pause, "checkBoxM1Pause");
+            this.checkBoxM1Pause.Name = "checkBoxM1Pause";
+            this.checkBoxM1Pause.ThreeState = true;
+            this.checkBoxM1Pause.UseVisualStyleBackColor = true;
             // 
             // checkBoxM1Start
             // 
@@ -5266,65 +5322,6 @@
             this.imageListStart.Images.SetKeyName(2, "indeterminate.png");
             this.imageListStart.Images.SetKeyName(3, "pause_on.png");
             this.imageListStart.Images.SetKeyName(4, "pause_off.png");
-            // 
-            // checkBoxM2Pause
-            // 
-            resources.ApplyResources(this.checkBoxM2Pause, "checkBoxM2Pause");
-            this.checkBoxM2Pause.Name = "checkBoxM2Pause";
-            this.checkBoxM2Pause.ThreeState = true;
-            this.checkBoxM2Pause.UseVisualStyleBackColor = true;
-            this.checkBoxM2Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM2Pause_CheckStateChanged);
-            // 
-            // checkBoxM1Pause
-            // 
-            resources.ApplyResources(this.checkBoxM1Pause, "checkBoxM1Pause");
-            this.checkBoxM1Pause.Name = "checkBoxM1Pause";
-            this.checkBoxM1Pause.ThreeState = true;
-            this.checkBoxM1Pause.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxM3Pause
-            // 
-            resources.ApplyResources(this.checkBoxM3Pause, "checkBoxM3Pause");
-            this.checkBoxM3Pause.Name = "checkBoxM3Pause";
-            this.checkBoxM3Pause.ThreeState = true;
-            this.checkBoxM3Pause.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxM4Pause
-            // 
-            resources.ApplyResources(this.checkBoxM4Pause, "checkBoxM4Pause");
-            this.checkBoxM4Pause.Name = "checkBoxM4Pause";
-            this.checkBoxM4Pause.ThreeState = true;
-            this.checkBoxM4Pause.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxM5Pause
-            // 
-            resources.ApplyResources(this.checkBoxM5Pause, "checkBoxM5Pause");
-            this.checkBoxM5Pause.Name = "checkBoxM5Pause";
-            this.checkBoxM5Pause.ThreeState = true;
-            this.checkBoxM5Pause.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxM6Pause
-            // 
-            resources.ApplyResources(this.checkBoxM6Pause, "checkBoxM6Pause");
-            this.checkBoxM6Pause.Name = "checkBoxM6Pause";
-            this.checkBoxM6Pause.ThreeState = true;
-            this.checkBoxM6Pause.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxStartStop
-            // 
-            resources.ApplyResources(this.checkBoxStartStop, "checkBoxStartStop");
-            this.checkBoxStartStop.ImageList = this.imageListStartStop;
-            this.checkBoxStartStop.Name = "checkBoxStartStop";
-            this.checkBoxStartStop.UseVisualStyleBackColor = true;
-            this.checkBoxStartStop.CheckStateChanged += new System.EventHandler(this.checkBoxStartStop_CheckStateChanged);
-            // 
-            // checkBoxPause
-            // 
-            resources.ApplyResources(this.checkBoxPause, "checkBoxPause");
-            this.checkBoxPause.ImageList = this.imageListStartStop;
-            this.checkBoxPause.Name = "checkBoxPause";
-            this.checkBoxPause.UseVisualStyleBackColor = true;
-            this.checkBoxPause.CheckStateChanged += new System.EventHandler(this.checkBoxPause_CheckStateChanged);
             // 
             // imageListStartStop
             // 

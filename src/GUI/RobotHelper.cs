@@ -239,6 +239,8 @@ namespace GUI
             }
         }
 
+  
+
         public void WriteOnCheckBoxPauseAsync(ClientResult cr, CheckBox chk)
         {
             bool value = false;
@@ -341,7 +343,7 @@ namespace GUI
                     UpdateOPCUAMStatus(readResult["pcM6Status"], lbLedM6Status);
                     ManageOPCUAMBtnStatus(readResult["pcM6Status"], checkBoxM6Start);
 
-                    ManageLineStatus(readResult["pcM1Status"], readResult["pcM2Status"], readResult["pcM3Status"],
+                    ManageStartStatus(readResult["pcM1Status"], readResult["pcM2Status"], readResult["pcM3Status"],
                     readResult["pcM4Status"], readResult["pcM5Status"], readResult["pcM6Status"]);
                     #endregion
 
@@ -874,7 +876,7 @@ namespace GUI
             WriteOnCheckBoxPauseAsync(cr, btn);
         }
 
-        public void ManageLineStatus(ClientResult crM1, ClientResult crM2, ClientResult crM3, ClientResult crM4, ClientResult crM5, ClientResult crM6)
+        public void ManageStartStatus(ClientResult crM1, ClientResult crM2, ClientResult crM3, ClientResult crM4, ClientResult crM5, ClientResult crM6)
         {
             if ((crM1 == null) || (crM2 == null) || (crM3 == null) || (crM4 == null) || (crM5 == null) || (crM6 == null) ||
                     (crM1.OpcResult == false) || (crM2.OpcResult == false) || (crM3.OpcResult == false) || (crM4.OpcResult == false) || (crM5.OpcResult == false) || (crM6.OpcResult == false))
@@ -883,20 +885,18 @@ namespace GUI
             }
             else
             {
-
                 if ((short)crM1.Value == 3 & (short)crM2.Value == 3 & (short)crM3.Value == 3 & (short)crM4.Value == 3 & (short)crM5.Value == 3 & (short)crM6.Value == 3)
-                {
-                    lbButtonStartStop.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed;
-                    lbButtonStartStop.Label = "STOP";
+                {                    
+                    WriteAsyncMStartStopCheckBox(true, checkBoxStartStop);
                 }
                 else
                 {
-                    lbButtonStartStop.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-                    lbButtonStartStop.Label = "START";
+                    //WriteAsyncMStartStopCheckBox(false, checkBoxStartStop);
                 }
             }
-
         }
+
+      
 
         public void ManagePauseStatus(ClientResult crM1, ClientResult crM2, ClientResult crM3, ClientResult crM4, ClientResult crM5, ClientResult crM6)
         {
@@ -910,16 +910,69 @@ namespace GUI
 
                 if ((bool)crM1.Value == true & (bool)crM2.Value == true & (bool)crM3.Value == true & (bool)crM4.Value == true & (bool)crM5.Value == true & (bool)crM6.Value == true)
                 {
-                    lbButtonPause.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed;
-                    lbButtonPause.Label = "IN PAUSE";
+                    WriteAsyncMPauseCheckBox(true, checkBoxPause);
+
+                    //lbButtonPause.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed;
+                    //lbButtonPause.Label = "IN PAUSE";
                 }
                 else
                 {
-                    lbButtonPause.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-                    lbButtonPause.Label = "NOT IN PAUSE";
+                    //lbButtonPause.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+                    //lbButtonPause.Label = "NOT IN PAUSE";
+                    WriteAsyncMPauseCheckBox(false, checkBoxPause);
                 }
             }
 
+        }
+
+        public void WriteAsyncMStartStopCheckBox(bool value, CheckBox chk)
+        {
+            if (chk.InvokeRequired)
+            {
+                chk.Invoke((MethodInvoker)delegate
+                {
+                    if (value == true)
+                    {
+                        chk.CheckState = CheckState.Checked;
+                        chk.Image = imageListStartStop.Images[1];
+                        chk.Text = "STOP";
+                        chk.CheckState = CheckState.Checked;
+                    }
+
+                    if (value == false)
+                    {
+                        chk.CheckState = CheckState.Unchecked;
+                        chk.Image = imageListStartStop.Images[0];
+                        chk.Text = "START";
+                        chk.CheckState = CheckState.Unchecked;
+                    }
+                });
+            }
+        }
+
+        public void WriteAsyncMPauseCheckBox(bool value, CheckBox chk)
+        {
+            if (chk.InvokeRequired)
+            {
+                chk.Invoke((MethodInvoker)delegate
+                {
+                    if (value == true)
+                    {
+                        chk.CheckState = CheckState.Checked;
+                        chk.Image = imageListStartStop.Images[3];
+                        chk.Text = "IN PAUSE";
+                        chk.CheckState = CheckState.Checked;
+                    }
+
+                    if (value == false)
+                    {
+                        chk.CheckState = CheckState.Unchecked;
+                        chk.Image = imageListStartStop.Images[2];
+                        chk.Text = "PAUSE";
+                        chk.CheckState = CheckState.Unchecked;
+                    }
+                });
+            }
         }
 
         public void UpdateOPCUAMHomingDone(ClientResult cr, LBSoft.IndustrialCtrls.Leds.LBLed lblLed)

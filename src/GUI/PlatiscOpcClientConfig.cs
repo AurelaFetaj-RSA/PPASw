@@ -26,6 +26,8 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM1Reset", $"ns=2;s=Tags.Rifilatrice/pc_reset_generale", typeof(bool)));
             //pause
             ClientDataConfig.Add(new OpcObjectData("pcM1Pause", $"ns=2;s=Tags.Rifilatrice/pc_pausa", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1StartStop", $"ns=2;s=Tags.Rifilatrice/pc_start_stop", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1Status", $"ns=2;s=Tags.Rifilatrice/pc_stato_macchina", typeof(short)));
             #endregion
 
             #region(* M2 OPCUA variables *)
@@ -210,6 +212,8 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM6HomingDone", $"ns=2;s=Tags.Rifilatrice/pc_homing_done", typeof(bool)));
             //pause
             ClientDataConfig.Add(new OpcObjectData("pcM6Pause", $"ns=2;s=Tags.Rifilatrice/pc_pausa", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM6StartStop", $"ns=2;s=Tags.Rifilatrice/pc_start_stop", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM6Status", $"ns=2;s=Tags.Rifilatrice/pc_stato_macchina", typeof(bool)));
             #endregion
             return this;
         }
