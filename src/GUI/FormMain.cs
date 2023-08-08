@@ -2034,7 +2034,19 @@ namespace GUI
 
             string keyToSend = "pcM4ProgramName";
 
-            var readResult = await ccService.Send(keyToSend, comboBoxM4PrgName.Text);
+            var readResult = await ccService.Send(keyToSend, "");
+            if (readResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+
+            keyToSend = "pcM4ProgramName";
+
+            readResult = await ccService.Send(keyToSend, comboBoxM4PrgName.Text);
             if (readResult.OpcResult)
             {
 
@@ -2226,10 +2238,6 @@ namespace GUI
 
         private async void lbButtonStartStop_Click(object sender, EventArgs e)
         {
-            //M2StartAuto();
-            //M3StartAuto();
-            //M4StartAuto();
-            //M5StartAuto();
             if (lbButtonStartStop.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal)
             {
                 string keyValue = "pcM2StartStop";
@@ -2254,76 +2262,15 @@ namespace GUI
             }
         }
 
-        private async void M2StartAuto()
-        {
-            string keyValue = "pcM2StartStop";
-
-            if (lbButtonTestM2Start.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
-            {
-                var readResult = await ccService.Send(keyValue, false);
-            }
-            else
-            {
-                var readResult = await ccService.Send(keyValue, true);
-            }
-        }
-
-        private async void M3StartAuto()
-        {
-            string keyValue = "pcM3StartStop";
-
-            if (lbButtonTestM3Start.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
-            {
-                var readResult = await ccService.Send(keyValue, false);
-            }
-            else
-            {
-                var readResult = await ccService.Send(keyValue, true);
-            }
-        }
-
-        private async void M4StartAuto()
-        {
-            string keyValue = "pcM4StartStop";
-
-            if (lbButtonTestM4Start.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
-            {
-                var readResult = await ccService.Send(keyValue, false);
-            }
-            else
-            {
-                var readResult = await ccService.Send(keyValue, true);
-            }
-        }
-
-        private async void M5StartAuto()
-        {
-            string keyValue = "pcM5StartStop";
-
-            if (lbButtonTestM5Start.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
-            {
-                var readResult = await ccService.Send(keyValue, false);
-            }
-            else
-            {
-                var readResult = await ccService.Send(keyValue, true);
-            }
-        }
-
-        private async void lbButtonTestM2Start_Click(object sender, EventArgs e)
-        {
-            M2StartAuto();
-        }
-
         private async void comboBoxM3PrgName_st2_SelectedIndexChanged(object sender, EventArgs e)
         {
             //send recipe
             string keyValue = "pcM3Param1";
             var sendResult = await ccService.Send(keyValue, short.Parse(textBoxM3Test.Text));
-
+            labelM3Param1Value.Text = textBoxM3Test.Text;
             keyValue = "pcM3TypeOrder";
             sendResult = await ccService.Send(keyValue, short.Parse(textBoxTypeOrder.Text));
-
+            labelM3Param1Value.Text = textBoxM3Test.Text;
             //send quote, speed
             var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
@@ -2349,27 +2296,7 @@ namespace GUI
                     var readResult = await ccService.Send(keys, values);
                 }
             }
-        }
-
-        private async void lbButtonTestM3Start_Click(object sender, EventArgs e)
-        {
-            M3StartAuto();
-        }
-
-        private void lbButtonTestM4Start_Click(object sender, EventArgs e)
-        {
-            M4StartAuto();
-        }
-
-        private void lbButtonTestM5Start_Click(object sender, EventArgs e)
-        {
-            M5StartAuto();
-        }
-
-        private async void timerOPCUAKeepAlive_Tick(object sender, EventArgs e)
-        {
-            
-        }
+        }      
 
         private async void buttonM2Reset_Click(object sender, EventArgs e)
         {
@@ -2392,17 +2319,185 @@ namespace GUI
             Pen myPen = new Pen(Color.FromArgb(107, 227, 162));
             myPen.Width = 10;
 
-            
-
 
             int lineHeight = 80;
-            g.DrawLine(myPen, pictureBoxM1PLCNode.Location.X + pictureBoxM1PLCNode.Size.Width / 2, pictureBoxM1PLCNode.Location.Y - pictureBoxM1PLCNode.Height, pictureBoxM1PLCNode.Location.X + pictureBoxM1PLCNode.Size.Width / 2, pictureBoxM1PLCNode.Location.Y - pictureBoxM1PLCNode.Height + lineHeight);
-            g.DrawLine(myPen, pictureBoxM2PLCNode.Location.X + pictureBoxM2PLCNode.Size.Width/2, pictureBoxM2PLCNode.Location.Y - pictureBoxM2PLCNode.Height, pictureBoxM2PLCNode.Location.X + pictureBoxM2PLCNode.Size.Width / 2, pictureBoxM2PLCNode.Location.Y - pictureBoxM2PLCNode.Height  + lineHeight);
-            g.DrawLine(myPen, pictureBoxM3PLCNode.Location.X + pictureBoxM3PLCNode.Size.Width / 2, pictureBoxM3PLCNode.Location.Y - pictureBoxM3PLCNode.Height, pictureBoxM3PLCNode.Location.X + pictureBoxM3PLCNode.Size.Width / 2, pictureBoxM3PLCNode.Location.Y - pictureBoxM3PLCNode.Height + lineHeight);
-            g.DrawLine(myPen, pictureBoxM4PLCNode.Location.X + pictureBoxM4PLCNode.Size.Width / 2, pictureBoxM4PLCNode.Location.Y - pictureBoxM4PLCNode.Height, pictureBoxM4PLCNode.Location.X + pictureBoxM4PLCNode.Size.Width / 2, pictureBoxM4PLCNode.Location.Y - pictureBoxM4PLCNode.Height + lineHeight);
-            g.DrawLine(myPen, pictureBoxM5PLCNode.Location.X + pictureBoxM5PLCNode.Size.Width / 2, pictureBoxM5PLCNode.Location.Y - pictureBoxM5PLCNode.Height, pictureBoxM5PLCNode.Location.X + pictureBoxM5PLCNode.Size.Width / 2, pictureBoxM5PLCNode.Location.Y - pictureBoxM5PLCNode.Height + lineHeight);
+            int groupboxXShift = groupBoxKeepAliveFromPlc.Location.X;
+            int groupboxYShift = groupBoxKeepAliveFromPlc.Location.Y;
+            g.DrawLine(myPen, pictureBoxM1PLCNode.Location.X + pictureBoxM1PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM1PLCNode.Location.Y - pictureBoxM1PLCNode.Height + groupboxYShift, pictureBoxM1PLCNode.Location.X + pictureBoxM1PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM1PLCNode.Location.Y - pictureBoxM1PLCNode.Height + lineHeight + groupboxYShift);
+            g.DrawLine(myPen, pictureBoxM2PLCNode.Location.X + pictureBoxM2PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM2PLCNode.Location.Y - pictureBoxM2PLCNode.Height + groupboxYShift, pictureBoxM2PLCNode.Location.X + pictureBoxM2PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM2PLCNode.Location.Y - pictureBoxM2PLCNode.Height + lineHeight + groupboxYShift);
+            g.DrawLine(myPen, pictureBoxM3PLCNode.Location.X + pictureBoxM3PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM3PLCNode.Location.Y - pictureBoxM3PLCNode.Height + groupboxYShift, pictureBoxM3PLCNode.Location.X + pictureBoxM3PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM3PLCNode.Location.Y - pictureBoxM3PLCNode.Height + lineHeight + groupboxYShift);
+            g.DrawLine(myPen, pictureBoxM4PLCNode.Location.X + pictureBoxM4PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM4PLCNode.Location.Y - pictureBoxM4PLCNode.Height + groupboxYShift, pictureBoxM4PLCNode.Location.X + pictureBoxM4PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM4PLCNode.Location.Y - pictureBoxM4PLCNode.Height + lineHeight + groupboxYShift);
+            g.DrawLine(myPen, pictureBoxM5PLCNode.Location.X + pictureBoxM5PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM5PLCNode.Location.Y - pictureBoxM5PLCNode.Height + groupboxYShift, pictureBoxM5PLCNode.Location.X + pictureBoxM5PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM5PLCNode.Location.Y - pictureBoxM5PLCNode.Height + lineHeight + groupboxYShift);
 
-            g.DrawLine(myPen, pictureBoxM1PLCNode.Location.X, pictureBoxM1PLCNode.Location.Y - lineHeight, pictureBoxM5PLCNode.Location.X + +pictureBoxM1PLCNode.Width, pictureBoxM1PLCNode.Location.Y - lineHeight );
+            g.DrawLine(myPen, pictureBoxM1PLCNode.Location.X + groupboxXShift, pictureBoxM1PLCNode.Location.Y - lineHeight + groupboxYShift, pictureBoxM5PLCNode.Location.X + pictureBoxM1PLCNode.Width + groupboxXShift, pictureBoxM1PLCNode.Location.Y - lineHeight + groupboxYShift);
+            g.DrawLine(myPen, pictureBoxIOTNode.Location.X + pictureBoxIOTNode.Width / 2 + groupboxXShift, pictureBoxIOTNode.Location.Y + pictureBoxIOTNode.Height + groupboxYShift, pictureBoxIOTNode.Location.X + pictureBoxIOTNode.Width / 2 + groupboxXShift, pictureBoxIOTNode.Location.Y + pictureBoxIOTNode.Height + lineHeight - 10 + groupboxYShift);
+        }
+
+        private async void buttonMReset_Click(object sender, EventArgs e)
+        {
+            //reset only if line is in stop or pause
+            if (lbButtonStartStop.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal || lbButtonPause.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            {
+                string keyValue = "pcM1Reset";
+                var sendResult = await ccService.Send(keyValue, true);
+
+                keyValue = "pcM2Reset";
+                sendResult = await ccService.Send(keyValue, true);
+
+                keyValue = "pcM3Reset";
+                sendResult = await ccService.Send(keyValue, true);
+
+                keyValue = "pcM4Reset";
+                sendResult = await ccService.Send(keyValue, true);
+
+                keyValue = "pcM5Reset";
+                sendResult = await ccService.Send(keyValue, true);
+
+                keyValue = "pcM6Reset";
+                sendResult = await ccService.Send(keyValue, true);
+            }
+            else
+            {
+                //manage error message
+            }
+        }
+
+        private async void lbButtonPause_Click(object sender, EventArgs e)
+        {
+            if (lbButtonPause.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal)
+            {
+                string keyValue = "pcM1Pause";
+                var readResult = await ccService.Send(keyValue, true);
+                keyValue = "pcM2Pause";
+                readResult = await ccService.Send(keyValue, true);
+                keyValue = "pcM3Pause";
+                readResult = await ccService.Send(keyValue, true);
+                keyValue = "pcM4Pause";
+                readResult = await ccService.Send(keyValue, true);
+                keyValue = "pcM5Pause";
+                readResult = await ccService.Send(keyValue, true);
+            }
+            else
+            {
+                string keyValue = "pcM1Pause";
+                var readResult = await ccService.Send(keyValue, false);
+                keyValue = "pcM2Pause";
+                readResult = await ccService.Send(keyValue, false);
+                keyValue = "pcM3Pause";
+                readResult = await ccService.Send(keyValue, false);
+                keyValue = "pcM4Pause";
+                readResult = await ccService.Send(keyValue, false);
+                keyValue = "pcM5Pause";
+                readResult = await ccService.Send(keyValue, false);
+            }
+        }
+
+        private async void checkBoxM2Start_CheckedChanged(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private async void checkBoxM2Start_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool state = false;
+            //send start/stop 
+            state = (checkBoxM2Start.CheckState == CheckState.Checked) ? true : false;
+            string keyValue = "pcM2StartStop";
+            var sendResult = await ccService.Send(keyValue, state);
+            if (sendResult.OpcResult)
+            {
+                //update gui
+
+                checkBoxM2Start.Text = "";
+                if (state) checkBoxM2Start.Image = imageListStart.Images[1];
+                else checkBoxM2Start.Image = imageListStart.Images[0];
+            }
+        }
+
+        private async void checkBoxM1Start_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool state = false;
+            //send start/stop 
+            state = (checkBoxM1Start.CheckState == CheckState.Checked) ? true : false;
+            string keyValue = "pcM1StartStop";
+            var sendResult = await ccService.Send(keyValue, state);
+            if (sendResult.OpcResult)
+            {
+                //update gui
+
+                checkBoxM1Start.Text = "";
+                if (state) checkBoxM1Start.Image = imageListStart.Images[1];
+                else checkBoxM1Start.Image = imageListStart.Images[0];
+            }
+        }
+
+        private async void checkBoxM3Start_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool state = false;
+            //send start/stop 
+            state = (checkBoxM3Start.CheckState == CheckState.Checked) ? true : false;
+            string keyValue = "pcM2StartStop";
+            var sendResult = await ccService.Send(keyValue, state);
+            if (sendResult.OpcResult)
+            {
+                //update gui
+
+                checkBoxM3Start.Text = "";
+                if (state) checkBoxM3Start.Image = imageListStart.Images[1];
+                else checkBoxM3Start.Image = imageListStart.Images[0];
+            }
+        }
+
+        private async void checkBoxM4Start_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool state = false;
+            //send start/stop 
+            state = (checkBoxM4Start.CheckState == CheckState.Checked) ? true : false;
+            string keyValue = "pcM2StartStop";
+            var sendResult = await ccService.Send(keyValue, state);
+            if (sendResult.OpcResult)
+            {
+                //update gui
+
+                checkBoxM4Start.Text = "";
+                if (state) checkBoxM4Start.Image = imageListStart.Images[1];
+                else checkBoxM4Start.Image = imageListStart.Images[0];
+            }
+        }
+
+        private async void checkBoxM5Start_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool state = false;
+            //send start/stop 
+            state = (checkBoxM5Start.CheckState == CheckState.Checked) ? true : false;
+            string keyValue = "pcM5StartStop";
+            var sendResult = await ccService.Send(keyValue, state);
+            if (sendResult.OpcResult)
+            {
+                //update gui
+
+                checkBoxM5Start.Text = "";
+                if (state) checkBoxM5Start.Image = imageListStart.Images[1];
+                else checkBoxM5Start.Image = imageListStart.Images[0];
+            }
+        }
+
+        private async void checkBoxM6Start_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool state = false;
+            //send start/stop 
+            state = (checkBoxM6Start.CheckState == CheckState.Checked) ? true : false;
+            string keyValue = "pcM6StartStop";
+            var sendResult = await ccService.Send(keyValue, state);
+            if (sendResult.OpcResult)
+            {
+                //update gui
+
+                checkBoxM6Start.Text = "";
+                if (state) checkBoxM6Start.Image = imageListStart.Images[1];
+                else checkBoxM6Start.Image = imageListStart.Images[0];
+            }
         }
     }
 }

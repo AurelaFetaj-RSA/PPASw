@@ -181,7 +181,67 @@ namespace GUI
                 });
             }
         }
-        #region -----LETTURA PROGRAMMI-----
+
+        public void WriteOnCheckBoxAsync(ClientResult cr, CheckBox chk)
+        {
+            short value = -1;
+
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+
+            }
+            else
+            {
+                value = (short)cr.Value;
+            }
+
+            if (chk.InvokeRequired)
+            {
+                chk.Invoke((MethodInvoker)delegate
+                {
+                    chk.Text = "";
+                    if (value == -1)
+                    {
+                        chk.CheckState = CheckState.Indeterminate;
+                        chk.Image = imageListStart.Images[2];
+                    }
+
+                    if (value == 0)
+                    {
+                        chk.CheckState = CheckState.Unchecked;
+                        chk.Image = imageListStart.Images[0];
+                    }
+
+                    if (value == 1)
+                    {
+                        chk.CheckState = CheckState.Unchecked;
+                        chk.Image = imageListStart.Images[0];
+                    }
+
+                    if (value == 2)
+                    {
+                        chk.CheckState = CheckState.Unchecked;
+                        chk.Image = imageListStart.Images[0];
+                    }
+
+                    if (value == 3)
+                    {
+                        chk.CheckState = CheckState.Checked;
+                        chk.Image = imageListStart.Images[1];
+                    }
+
+                    if (value == 4)
+                    {
+                        chk.CheckState = CheckState.Unchecked;
+                        chk.Image = imageListStart.Images[0];
+                    }
+                });
+            }
+        }
+
+     
+
+#region -----LETTURA PROGRAMMI-----
 
 
 
@@ -190,11 +250,11 @@ namespace GUI
 
 
 
-        #endregion
+#endregion
 
 
-        #region (* machines status *)
-        public async Task UpdateOPCUAStatus()
+#region (* machines status *)
+public async Task UpdateOPCUAStatus()
         {
             try
             {
@@ -222,25 +282,41 @@ namespace GUI
                     var readResult = await ccService.Read(keys);
 
                     UpdateOPCUAMStatus(readResult["pcM1Status"], lbLedM1Status);
-                    ManageOPCUAMBtnStatus(readResult["pcM1Status"], lbButtonTestM1Start);
+                    ManageOPCUAMBtnStatus(readResult["pcM1Status"], checkBoxM1Start);
 
                     UpdateOPCUAMStatus(readResult["pcM2Status"], lbLedM2Status);
-                    ManageOPCUAMBtnStatus(readResult["pcM2Status"], lbButtonTestM2Start);
+                    ManageOPCUAMBtnStatus(readResult["pcM2Status"], checkBoxM2Start);
 
                     UpdateOPCUAMStatus(readResult["pcM3Status"], lbLedM3Status);
-                    ManageOPCUAMBtnStatus(readResult["pcM3Status"], lbButtonTestM3Start);
+                    ManageOPCUAMBtnStatus(readResult["pcM3Status"], checkBoxM3Start);
 
                     UpdateOPCUAMStatus(readResult["pcM4Status"], lbLedM4Status);
-                    ManageOPCUAMBtnStatus(readResult["pcM4Status"], lbButtonTestM4Start);
+                    ManageOPCUAMBtnStatus(readResult["pcM4Status"], checkBoxM4Start);
 
                     UpdateOPCUAMStatus(readResult["pcM5Status"], lbLedM5Status);
-                    ManageOPCUAMBtnStatus(readResult["pcM5Status"], lbButtonTestM5Start);
+                    ManageOPCUAMBtnStatus(readResult["pcM5Status"], checkBoxM5Start);
 
                     UpdateOPCUAMStatus(readResult["pcM6Status"], lbLedM6Status);
-                    ManageOPCUAMBtnStatus(readResult["pcM6Status"], lbButtonTestM6Start);
+                    ManageOPCUAMBtnStatus(readResult["pcM6Status"], checkBoxM6Start);
 
                     ManageLineStatus(readResult["pcM1Status"], readResult["pcM2Status"], readResult["pcM3Status"],
                     readResult["pcM4Status"], readResult["pcM5Status"], readResult["pcM6Status"]);
+                    #endregion
+
+                    #region(* system in pause *)
+                    keys = new List<string>()
+                    {
+                        "pcM1Pause",
+                        "pcM2Pause",
+                        "pcM3Pause",
+                        "pcM4Pause",
+                        "pcM5Pause",
+                        "pcM6Pause"
+                    };
+
+                    readResult = await ccService.Read(keys);
+                    ManagePauseStatus(readResult["pcM1Pause"], readResult["pcM2Pause"], readResult["pcM3Pause"], readResult["pcM4Pause"],
+                        readResult["pcM5Pause"], readResult["pcM6Pause"]);
 
                     #endregion
 
@@ -256,12 +332,12 @@ namespace GUI
                     };
 
                     readResult = await ccService.Read(keys);
-                    UpdateOPCUAMHomingDone(readResult["pcM1HomingDone"], lbLedM1HomingDone);
-                    UpdateOPCUAMHomingDone(readResult["pcM2HomingDone"], lbLedM2HomingDone);
-                    UpdateOPCUAMHomingDone(readResult["pcM3HomingDone"], lbLedM3HomingDone);
-                    UpdateOPCUAMHomingDone(readResult["pcM4HomingDone"], lbLedM4HomingDone);
+                    //UpdateOPCUAMHomingDone(readResult["pcM1HomingDone"], lbLedM1HomingDone);
+                    //UpdateOPCUAMHomingDone(readResult["pcM2HomingDone"], lbLedM2HomingDone);
+                    //UpdateOPCUAMHomingDone(readResult["pcM3HomingDone"], lbLedM3HomingDone);
+                    //UpdateOPCUAMHomingDone(readResult["pcM4HomingDone"], lbLedM4HomingDone);
                     //UpdateOPCUAMHomingDone(readResult["pcM5HomingDone"], lbLedM5HomingDone);
-                    UpdateOPCUAMHomingDone(readResult["pcM6HomingDone"], lbLedM6HomingDone);
+                    //UpdateOPCUAMHomingDone(readResult["pcM6HomingDone"], lbLedM6HomingDone);
                     #endregion
 
                     #region(* machine current vertical axis quote *9
@@ -301,19 +377,19 @@ namespace GUI
                     //keep alive to plc
                     keys = new List<string>()
                     {
-                        "pcN1KeepAliveW",
-                        "pcN2KeepAliveW",
+                        "pcM1KeepAliveW",
+                        "pcM2KeepAliveW",
                         "pcM3KeepAliveW",
                         "pcM4KeepAliveW",
                         "pcM5KeepAliveW"
                     };
 
                     readResult = await ccService.Read(keys);
-                    UpdateOPCUAMKeepAlive(readResult["pcN1KeepAliveW"], lbLedM1PCKeepAlive);
-                    UpdateOPCUAMKeepAlive(readResult["pcN2KeepAliveW"], lbLedM2PCKeepAlive);
-                    UpdateOPCUAMKeepAlive(readResult["pcN3KeepAliveW"], lbLedM3PCKeepAlive);
-                    UpdateOPCUAMKeepAlive(readResult["pcN4KeepAliveW"], lbLedM4PCKeepAlive);
-                    UpdateOPCUAMKeepAlive(readResult["pcN5KeepAliveW"], lbLedM5PCKeepAlive);
+                    UpdateOPCUAMKeepAlive(readResult["pcM1KeepAliveW"], lbLedM1PCKeepAlive);
+                    UpdateOPCUAMKeepAlive(readResult["pcM2KeepAliveW"], lbLedM2PCKeepAlive);
+                    UpdateOPCUAMKeepAlive(readResult["pcM3KeepAliveW"], lbLedM3PCKeepAlive);
+                    UpdateOPCUAMKeepAlive(readResult["pcM4KeepAliveW"], lbLedM4PCKeepAlive);
+                    UpdateOPCUAMKeepAlive(readResult["pcM5KeepAliveW"], lbLedM5PCKeepAlive);
 
                     //keep alive from plc
                     keys = new List<string>()
@@ -339,10 +415,13 @@ namespace GUI
                     ManageLastLifeBit(readResultPLC["pcM5KeepAliveR"], ref lastLifeBit[4]);
                     #endregion
 
-                    #region(* line connection ready *)
+                    #region(* system status *)
                     //if all nodes are connected -> not in timeout
-                    lbLedConnection.State = (LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                    lbLedConnection.Label = (LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]) ? "online": "offline";
+                    lbLedSystemConnection.State = (LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                    lbLedSystemConnection.Label = (LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]) ? "online": "offline";
+
+                    //emergenza, air pressure, 
+
                     #endregion
 
                     #region(* *)
@@ -368,14 +447,14 @@ namespace GUI
 
                     //manipulator digital input
 
-                    //keys = new List<string>()
-                    //{
-                    //    "pcM2DI",
-                    //    "pcM2DO"
-                    //};
+                    keys = new List<string>()
+                    {
+                        "pcM2DI",
+                        "pcM2DO"
+                    };
 
-                    //readResult = await ccService.Read(keys);
-                    //UpdateOPCUAM2DI(readResult["pcM2DI"]);
+                    readResult = await ccService.Read(keys);
+                    UpdateOPCUAM2DI(readResult["pcM2DI"]);
 
                     #region (* GUI *)
                     GUIWithOPCUAClientConnected();
@@ -384,6 +463,7 @@ namespace GUI
                 else
                 {
                     GUIWithOPCUAClientDisconnected();
+                    ccService.Connect();
                 }
             }
             catch (Exception Ex)
@@ -400,42 +480,42 @@ namespace GUI
 
         private void GUIWithOPCUAClientDisconnected()
         {
-            ManageOPCUAMBtnStatus(null, lbButtonTestM1Start);
+            ManageOPCUAMBtnStatus(null, checkBoxM1Start);
 
             UpdateOPCUAMStatus(null, lbLedM2Status);
-            ManageOPCUAMBtnStatus(null, lbButtonTestM2Start);
+            ManageOPCUAMBtnStatus(null, checkBoxM2Start);
 
             UpdateOPCUAMStatus(null, lbLedM3Status);
-            ManageOPCUAMBtnStatus(null, lbButtonTestM3Start);
+            ManageOPCUAMBtnStatus(null, checkBoxM3Start);
 
             UpdateOPCUAMStatus(null, lbLedM4Status);
-            ManageOPCUAMBtnStatus(null, lbButtonTestM4Start);
+            ManageOPCUAMBtnStatus(null, checkBoxM4Start);
 
             UpdateOPCUAMStatus(null, lbLedM5Status);
-            ManageOPCUAMBtnStatus(null, lbButtonTestM5Start);
+            ManageOPCUAMBtnStatus(null, checkBoxM5Start);
 
             UpdateOPCUAMStatus(null, lbLedM6Status);
-            ManageOPCUAMBtnStatus(null, lbButtonTestM6Start);
+            ManageOPCUAMBtnStatus(null, checkBoxM6Start);
 
-            UpdateOPCUAMHomingDone(null, lbLedM1HomingDone);
-            UpdateOPCUAMHomingDone(null, lbLedM2HomingDone);
-            UpdateOPCUAMHomingDone(null, lbLedM3HomingDone);
-            UpdateOPCUAMHomingDone(null, lbLedM4HomingDone);
+            //UpdateOPCUAMHomingDone(null, lbLedM1HomingDone);
+            //UpdateOPCUAMHomingDone(null, lbLedM2HomingDone);
+            //UpdateOPCUAMHomingDone(null, lbLedM3HomingDone);
+            //UpdateOPCUAMHomingDone(null, lbLedM4HomingDone);
             //UpdateOPCUAMHomingDone(null, lbLedM5HomingDone);
-            UpdateOPCUAMHomingDone(null, lbLedM6HomingDone);
+            //UpdateOPCUAMHomingDone(null, lbLedM6HomingDone);
 
-            UpdateOPCUAMHomingDone(null, lbLedM1HomingDone);
-            UpdateOPCUAMHomingDone(null, lbLedM2HomingDone);
-            UpdateOPCUAMHomingDone(null, lbLedM3HomingDone);
-            UpdateOPCUAMHomingDone(null, lbLedM4HomingDone);
+            //UpdateOPCUAMHomingDone(null, lbLedM1HomingDone);
+            //UpdateOPCUAMHomingDone(null, lbLedM2HomingDone);
+            //UpdateOPCUAMHomingDone(null, lbLedM3HomingDone);
+            //UpdateOPCUAMHomingDone(null, lbLedM4HomingDone);
             //UpdateOPCUAMHomingDone(null, lbLedM5HomingDone);
-            UpdateOPCUAMHomingDone(null, lbLedM6HomingDone);
+            //UpdateOPCUAMHomingDone(null, lbLedM6HomingDone);
             UpdateOPCUAM1CAQ(null);
             UpdateOPCUAM2CAQ(null);
             UpdateOPCUAM3CAQ(null);
             UpdateOPCUAM4CAQ(null);
-            lbLedConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLedConnection.Label = "system offline";
+            lbLedSystemConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+            lbLedSystemConnection.Label = "system offline";
             
             pictureBoxM1PLCNode.Image = imageListNodes.Images[1];
             //labelM2Node.Text = "padprint int node offline";
@@ -520,56 +600,62 @@ namespace GUI
             //}
         }
 
-        public void UpdateOPCUAM2DI(ClientResult diREsult)
+        public void UpdateOPCUAM2DI(ClientResult cr)
         {
-            int i = 0;
-            bool[] arrayBool = (bool[])diREsult.Value;
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                //todo da gestire
+            }
+            else
+            {
+                int i = 0;
+                bool[] arrayBool = (bool[])cr.Value;
 
-            lbLed1001M2.State = (arrayBool[1] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1002M2.State = (arrayBool[2] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1003M2.State = (arrayBool[3] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1004M2.State = (arrayBool[4] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1005M2.State = (arrayBool[5] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1006M2.State = (arrayBool[6] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1007M2.State = (arrayBool[7] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1008M2.State = (arrayBool[8] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1008M2.Label = (arrayBool[8] == true) ? "selector in AUTO" : "selector in MANUAL";
-            lbLed1009M2.State = (arrayBool[9] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1010M2.State = (arrayBool[10] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1011M2.State = (arrayBool[11] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1012M2.State = (arrayBool[12] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1013M2.State = (arrayBool[13] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1014M2.State = (arrayBool[14] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1015M2.State = (arrayBool[15] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1016M2.State = (arrayBool[16] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1001M2.State = (arrayBool[1] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1002M2.State = (arrayBool[2] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1003M2.State = (arrayBool[3] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1004M2.State = (arrayBool[4] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1005M2.State = (arrayBool[5] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1006M2.State = (arrayBool[6] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1007M2.State = (arrayBool[7] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1008M2.State = (arrayBool[8] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1008M2.Label = (arrayBool[8] == true) ? "selector in AUTO" : "selector in MANUAL";
+                lbLed1009M2.State = (arrayBool[9] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1010M2.State = (arrayBool[10] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1011M2.State = (arrayBool[11] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1012M2.State = (arrayBool[12] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1013M2.State = (arrayBool[13] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1014M2.State = (arrayBool[14] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1015M2.State = (arrayBool[15] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1016M2.State = (arrayBool[16] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
 
-            lbLed1017M2.State = (arrayBool[17] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1018M2.State = (arrayBool[18] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1019M2.State = (arrayBool[19] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1020M2.State = (arrayBool[20] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1021M2.State = (arrayBool[21] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1022M2.State = (arrayBool[22] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1023M2.State = (arrayBool[23] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1024M2.State = (arrayBool[24] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1017M2.State = (arrayBool[17] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1018M2.State = (arrayBool[18] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1019M2.State = (arrayBool[19] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1020M2.State = (arrayBool[20] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1021M2.State = (arrayBool[21] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1022M2.State = (arrayBool[22] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1023M2.State = (arrayBool[23] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1024M2.State = (arrayBool[24] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
 
-            lbLed1025M2.State = (arrayBool[25] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1026M2.State = (arrayBool[26] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1027M2.State = (arrayBool[27] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1028M2.State = (arrayBool[28] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1029M2.State = (arrayBool[29] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1030M2.State = (arrayBool[30] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1031M2.State = (arrayBool[31] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1032M2.State = (arrayBool[32] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1025M2.State = (arrayBool[25] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1026M2.State = (arrayBool[26] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1027M2.State = (arrayBool[27] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1028M2.State = (arrayBool[28] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1029M2.State = (arrayBool[29] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1030M2.State = (arrayBool[30] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1031M2.State = (arrayBool[31] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1032M2.State = (arrayBool[32] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
 
-            lbLed1033M2.State = (arrayBool[33] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1034M2.State = (arrayBool[34] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1035M2.State = (arrayBool[35] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1036M2.State = (arrayBool[36] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1037M2.State = (arrayBool[37] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1038M2.State = (arrayBool[38] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1039M2.State = (arrayBool[39] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLed1040M2.State = (arrayBool[40] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
+                lbLed1033M2.State = (arrayBool[33] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1034M2.State = (arrayBool[34] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1035M2.State = (arrayBool[35] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1036M2.State = (arrayBool[36] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1037M2.State = (arrayBool[37] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1038M2.State = (arrayBool[38] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1039M2.State = (arrayBool[39] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1040M2.State = (arrayBool[40] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+            }
         }
 
         public void UpdateOPCUAM2PointReached(ClientResult cr)
@@ -580,6 +666,9 @@ namespace GUI
             }
             else 
             {
+                //todo ,amage error
+                return;
+
                 string fileNameReached = "";
                 string fileNameNotReached = "";
                 string fileNameNull = "";
@@ -723,49 +812,11 @@ namespace GUI
                     lblLed.Label = "in alarm";
                 }
             }
-        }
+        }       
 
-        public void ManageOPCUAMBtnStatus(ClientResult cr, LBSoft.IndustrialCtrls.Buttons.LBButton btn)
+        public void ManageOPCUAMBtnStatus(ClientResult cr, CheckBox btn)
         {
-            if ((cr == null) || (cr.OpcResult == false))
-            {
-                btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-                btn.Label = "NOT AVAILABLE";
-            }
-            else
-            {
-                short value = (short)cr.Value;
-
-                if (value == 0)
-                {
-                    btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-                    btn.Label = "START";
-                }
-
-                if (value == 1)
-                {
-                    btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-                    btn.Label = "START";
-                }
-
-                if (value == 2)
-                {
-                    btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-                    btn.Label = "START";
-                }
-
-                if (value == 3)
-                {
-                    btn.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed;
-                    btn.Label = "STOP";
-                }
-
-                if (value == 4)
-                {
-                    lbButtonTestM2Start.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-                    lbButtonTestM2Start.Label = "START";
-                }
-            }
+            WriteOnCheckBoxAsync(cr, btn);
         }
 
         public void ManageLineStatus(ClientResult crM1, ClientResult crM2, ClientResult crM3, ClientResult crM4, ClientResult crM5, ClientResult crM6)
@@ -787,6 +838,30 @@ namespace GUI
                 {
                     lbButtonStartStop.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
                     lbButtonStartStop.Label = "START";
+                }
+            }
+
+        }
+
+        public void ManagePauseStatus(ClientResult crM1, ClientResult crM2, ClientResult crM3, ClientResult crM4, ClientResult crM5, ClientResult crM6)
+        {
+            if ((crM1 == null) || (crM2 == null) || (crM3 == null) || (crM4 == null) || (crM5 == null) || (crM6 == null) ||
+                    (crM1.OpcResult == false) || (crM2.OpcResult == false) || (crM3.OpcResult == false) || (crM4.OpcResult == false) || (crM5.OpcResult == false) || (crM6.OpcResult == false))
+            {
+                //todo: manage error
+            }
+            else
+            {
+
+                if ((bool)crM1.Value == true & (bool)crM2.Value == true & (bool)crM3.Value == true & (bool)crM4.Value == true & (bool)crM5.Value == true & (bool)crM6.Value == true)
+                {
+                    lbButtonPause.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed;
+                    lbButtonPause.Label = "IN PAUSE";
+                }
+                else
+                {
+                    lbButtonPause.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+                    lbButtonPause.Label = "NOT IN PAUSE";
                 }
             }
 

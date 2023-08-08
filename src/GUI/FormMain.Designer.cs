@@ -110,8 +110,8 @@
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle5 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolTipStyle toolTipStyle5 = new LidorSystems.IntegralUI.Controls.Style.ToolTipStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle25 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Style.ControlColorStyle controlColorStyle1 = new LidorSystems.IntegralUI.Style.ControlColorStyle();
             LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle7 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -132,38 +132,32 @@
             this.lbLedAirPressure = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLedEmergency = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbButtonPause = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.lbLedConnection = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedM6HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedSystemConnection = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.labelM6Param1Value = new System.Windows.Forms.Label();
             this.labelM6Param1Name = new System.Windows.Forms.Label();
             this.lbLedM6Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.checkBoxM6Inclusion = new System.Windows.Forms.CheckBox();
             this.comboBoxM6PrgName = new System.Windows.Forms.ComboBox();
-            this.lbLedM3HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.labelM3Param1Value = new System.Windows.Forms.Label();
             this.labelM3Param1Name = new System.Windows.Forms.Label();
             this.lbLedM3Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.checkBoxM3Inclusion = new System.Windows.Forms.CheckBox();
             this.comboBoxM3PrgName_st1 = new System.Windows.Forms.ComboBox();
-            this.lbLedM5HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.labelM5Param1Value = new System.Windows.Forms.Label();
             this.labelM5Param1Name = new System.Windows.Forms.Label();
             this.lbLedM5Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.checkBoxM5Inclusion = new System.Windows.Forms.CheckBox();
             this.comboBoxM5PrgName = new System.Windows.Forms.ComboBox();
-            this.lbLedM4HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.labelM4Param1Value = new System.Windows.Forms.Label();
             this.labelM4Param1Name = new System.Windows.Forms.Label();
             this.lbLedM4Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.checkBoxM4Inclusion = new System.Windows.Forms.CheckBox();
             this.comboBoxM4PrgName = new System.Windows.Forms.ComboBox();
-            this.lbLedM2HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.labelM2Param1Value = new System.Windows.Forms.Label();
             this.labelM2Param1Name = new System.Windows.Forms.Label();
             this.lbLedM2Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.checkBoxM2Inclusion = new System.Windows.Forms.CheckBox();
             this.comboBoxM2PrgName = new System.Windows.Forms.ComboBox();
-            this.lbLedM1HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.labelM1Param1Value = new System.Windows.Forms.Label();
             this.labelM1Param1Name = new System.Windows.Forms.Label();
             this.lbLedM1Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -445,6 +439,24 @@
             this.tabPageRecipe = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageMain = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlT0 = new LidorSystems.IntegralUI.Containers.TabControl();
+            this.tabPageT0_1 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.buttonM2Reset = new System.Windows.Forms.Button();
+            this.groupBoxLine = new System.Windows.Forms.GroupBox();
+            this.comboBoxAutoModelNameLst = new System.Windows.Forms.ComboBox();
+            this.groupBoxM6 = new System.Windows.Forms.GroupBox();
+            this.checkBoxM6Start = new System.Windows.Forms.CheckBox();
+            this.groupBoxM3 = new System.Windows.Forms.GroupBox();
+            this.textBoxTypeOrder = new System.Windows.Forms.TextBox();
+            this.comboBoxM3PrgName_st2 = new System.Windows.Forms.ComboBox();
+            this.checkBoxM3Start = new System.Windows.Forms.CheckBox();
+            this.groupBoxM5 = new System.Windows.Forms.GroupBox();
+            this.checkBoxM5Start = new System.Windows.Forms.CheckBox();
+            this.groupBoxM4 = new System.Windows.Forms.GroupBox();
+            this.checkBoxM4Start = new System.Windows.Forms.CheckBox();
+            this.groupBoxM2 = new System.Windows.Forms.GroupBox();
+            this.checkBoxM2Start = new System.Windows.Forms.CheckBox();
+            this.groupBoxM1 = new System.Windows.Forms.GroupBox();
+            this.checkBoxM1Start = new System.Windows.Forms.CheckBox();
             this.tabPageT0_3 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.groupBoxKeepAliveFromPlc = new System.Windows.Forms.GroupBox();
             this.pictureBoxIOTNode = new System.Windows.Forms.PictureBox();
@@ -459,24 +471,6 @@
             this.lbLedM3PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLedM1PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLedM4PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.tabPageT0_1 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.buttonM2Reset = new System.Windows.Forms.Button();
-            this.groupBoxLine = new System.Windows.Forms.GroupBox();
-            this.lbButtonTestM1Start = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.lbButtonTestM6Start = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.lbButtonTestM5Start = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.lbButtonTestM4Start = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.lbButtonTestM3Start = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.lbButtonTestM2Start = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.comboBoxAutoModelNameLst = new System.Windows.Forms.ComboBox();
-            this.groupBoxM6 = new System.Windows.Forms.GroupBox();
-            this.groupBoxM3 = new System.Windows.Forms.GroupBox();
-            this.textBoxTypeOrder = new System.Windows.Forms.TextBox();
-            this.comboBoxM3PrgName_st2 = new System.Windows.Forms.ComboBox();
-            this.groupBoxM5 = new System.Windows.Forms.GroupBox();
-            this.groupBoxM4 = new System.Windows.Forms.GroupBox();
-            this.groupBoxM2 = new System.Windows.Forms.GroupBox();
-            this.groupBoxM1 = new System.Windows.Forms.GroupBox();
             this.tabPageT0_2 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.textBoxM6Test = new System.Windows.Forms.TextBox();
             this.textBoxM5Test = new System.Windows.Forms.TextBox();
@@ -488,6 +482,7 @@
             this.labelDateTime = new System.Windows.Forms.Label();
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
             this.imageListNodes = new System.Windows.Forms.ImageList(this.components);
+            this.imageListStart = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.labelPieceCounter)).BeginInit();
@@ -532,6 +527,14 @@
             this.tabPageMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT0)).BeginInit();
             this.tabControlT0.SuspendLayout();
+            this.tabPageT0_1.SuspendLayout();
+            this.groupBoxLine.SuspendLayout();
+            this.groupBoxM6.SuspendLayout();
+            this.groupBoxM3.SuspendLayout();
+            this.groupBoxM5.SuspendLayout();
+            this.groupBoxM4.SuspendLayout();
+            this.groupBoxM2.SuspendLayout();
+            this.groupBoxM1.SuspendLayout();
             this.tabPageT0_3.SuspendLayout();
             this.groupBoxKeepAliveFromPlc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIOTNode)).BeginInit();
@@ -541,14 +544,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM2PLCNode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3PLCNode)).BeginInit();
             this.groupBoxKeepAliveToPlc.SuspendLayout();
-            this.tabPageT0_1.SuspendLayout();
-            this.groupBoxLine.SuspendLayout();
-            this.groupBoxM6.SuspendLayout();
-            this.groupBoxM3.SuspendLayout();
-            this.groupBoxM5.SuspendLayout();
-            this.groupBoxM4.SuspendLayout();
-            this.groupBoxM2.SuspendLayout();
-            this.groupBoxM1.SuspendLayout();
             this.tabPageT0_2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).BeginInit();
             this.tabControlMain.SuspendLayout();
@@ -675,35 +670,20 @@
             this.lbButtonPause.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
             this.lbButtonPause.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
             // 
-            // lbLedConnection
+            // lbLedSystemConnection
             // 
-            this.lbLedConnection.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedConnection.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedConnection, "lbLedConnection");
-            this.lbLedConnection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLedConnection.Label = "system online";
-            this.lbLedConnection.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedConnection.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedConnection.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedConnection.Name = "lbLedConnection";
-            this.lbLedConnection.Renderer = null;
-            this.lbLedConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedConnection.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedM6HomingDone
-            // 
-            this.lbLedM6HomingDone.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM6HomingDone.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM6HomingDone, "lbLedM6HomingDone");
-            this.lbLedM6HomingDone.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM6HomingDone.Label = "tofo";
-            this.lbLedM6HomingDone.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM6HomingDone.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM6HomingDone.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM6HomingDone.Name = "lbLedM6HomingDone";
-            this.lbLedM6HomingDone.Renderer = null;
-            this.lbLedM6HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM6HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            this.lbLedSystemConnection.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedSystemConnection.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedSystemConnection, "lbLedSystemConnection");
+            this.lbLedSystemConnection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLedSystemConnection.Label = "system online";
+            this.lbLedSystemConnection.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedSystemConnection.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLedSystemConnection.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedSystemConnection.Name = "lbLedSystemConnection";
+            this.lbLedSystemConnection.Renderer = null;
+            this.lbLedSystemConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedSystemConnection.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
             // 
             // labelM6Param1Value
             // 
@@ -750,21 +730,6 @@
             this.comboBoxM6PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.comboBoxM6PrgName.FormattingEnabled = true;
             this.comboBoxM6PrgName.Name = "comboBoxM6PrgName";
-            // 
-            // lbLedM3HomingDone
-            // 
-            this.lbLedM3HomingDone.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM3HomingDone.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM3HomingDone, "lbLedM3HomingDone");
-            this.lbLedM3HomingDone.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM3HomingDone.Label = "homing done";
-            this.lbLedM3HomingDone.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM3HomingDone.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM3HomingDone.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM3HomingDone.Name = "lbLedM3HomingDone";
-            this.lbLedM3HomingDone.Renderer = null;
-            this.lbLedM3HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM3HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
             // 
             // labelM3Param1Value
             // 
@@ -813,21 +778,6 @@
             this.comboBoxM3PrgName_st1.Name = "comboBoxM3PrgName_st1";
             this.comboBoxM3PrgName_st1.SelectedIndexChanged += new System.EventHandler(this.comboBoxM3PrgName_SelectedIndexChanged);
             // 
-            // lbLedM5HomingDone
-            // 
-            this.lbLedM5HomingDone.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM5HomingDone.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM5HomingDone, "lbLedM5HomingDone");
-            this.lbLedM5HomingDone.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM5HomingDone.Label = "homing done";
-            this.lbLedM5HomingDone.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM5HomingDone.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM5HomingDone.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM5HomingDone.Name = "lbLedM5HomingDone";
-            this.lbLedM5HomingDone.Renderer = null;
-            this.lbLedM5HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM5HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
             // labelM5Param1Value
             // 
             resources.ApplyResources(this.labelM5Param1Value, "labelM5Param1Value");
@@ -873,21 +823,6 @@
             this.comboBoxM5PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.comboBoxM5PrgName.FormattingEnabled = true;
             this.comboBoxM5PrgName.Name = "comboBoxM5PrgName";
-            // 
-            // lbLedM4HomingDone
-            // 
-            this.lbLedM4HomingDone.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM4HomingDone.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM4HomingDone, "lbLedM4HomingDone");
-            this.lbLedM4HomingDone.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM4HomingDone.Label = "homing done";
-            this.lbLedM4HomingDone.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM4HomingDone.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM4HomingDone.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM4HomingDone.Name = "lbLedM4HomingDone";
-            this.lbLedM4HomingDone.Renderer = null;
-            this.lbLedM4HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM4HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
             // 
             // labelM4Param1Value
             // 
@@ -936,21 +871,6 @@
             this.comboBoxM4PrgName.Name = "comboBoxM4PrgName";
             this.comboBoxM4PrgName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM4PrgName_SelectedIndexChanged);
             // 
-            // lbLedM2HomingDone
-            // 
-            this.lbLedM2HomingDone.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM2HomingDone.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM2HomingDone, "lbLedM2HomingDone");
-            this.lbLedM2HomingDone.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM2HomingDone.Label = "homing done";
-            this.lbLedM2HomingDone.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM2HomingDone.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM2HomingDone.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM2HomingDone.Name = "lbLedM2HomingDone";
-            this.lbLedM2HomingDone.Renderer = null;
-            this.lbLedM2HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM2HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
             // labelM2Param1Value
             // 
             resources.ApplyResources(this.labelM2Param1Value, "labelM2Param1Value");
@@ -997,21 +917,6 @@
             this.comboBoxM2PrgName.FormattingEnabled = true;
             this.comboBoxM2PrgName.Name = "comboBoxM2PrgName";
             this.comboBoxM2PrgName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM2PrgName_SelectedIndexChanged);
-            // 
-            // lbLedM1HomingDone
-            // 
-            this.lbLedM1HomingDone.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM1HomingDone.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM1HomingDone, "lbLedM1HomingDone");
-            this.lbLedM1HomingDone.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM1HomingDone.Label = "homing done";
-            this.lbLedM1HomingDone.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM1HomingDone.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM1HomingDone.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM1HomingDone.Name = "lbLedM1HomingDone";
-            this.lbLedM1HomingDone.Renderer = null;
-            this.lbLedM1HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM1HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
             // 
             // labelM1Param1Value
             // 
@@ -4830,9 +4735,9 @@
             // 
             // tabControlT0
             // 
+            this.tabControlT0.Controls.Add(this.tabPageT0_1);
             this.tabControlT0.Controls.Add(this.tabPageT0_3);
             this.tabControlT0.Controls.Add(this.tabPageT0_2);
-            this.tabControlT0.Controls.Add(this.tabPageT0_1);
             this.tabControlT0.Cursor = System.Windows.Forms.Cursors.Default;
             controlFormatStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlT0.FormatStyle = controlFormatStyle6;
@@ -4845,7 +4750,7 @@
             this.tabPageT0_2,
             this.tabPageT0_3});
             this.tabControlT0.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlT0.SelectedPage = this.tabPageT0_3;
+            this.tabControlT0.SelectedPage = this.tabPageT0_1;
             this.tabControlT0.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabControlT0.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Left;
             tabStripStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
@@ -4856,12 +4761,197 @@
             toolTipStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlT0.ToolTipStyle = toolTipStyle5;
             // 
+            // tabPageT0_1
+            // 
+            this.tabPageT0_1.Controls.Add(this.buttonM2Reset);
+            this.tabPageT0_1.Controls.Add(this.groupBoxLine);
+            this.tabPageT0_1.Controls.Add(this.groupBoxM6);
+            this.tabPageT0_1.Controls.Add(this.groupBoxM3);
+            this.tabPageT0_1.Controls.Add(this.groupBoxM5);
+            this.tabPageT0_1.Controls.Add(this.groupBoxM4);
+            this.tabPageT0_1.Controls.Add(this.groupBoxM2);
+            this.tabPageT0_1.Controls.Add(this.groupBoxM1);
+            tabPageFormatStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT0_1.FormatStyle = tabPageFormatStyle25;
+            resources.ApplyResources(this.tabPageT0_1, "tabPageT0_1");
+            this.tabPageT0_1.Name = "tabPageT0_1";
+            this.tabPageT0_1.ParentPage = null;
+            this.tabPageT0_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_1.TextBounds")));
+            this.tabPageT0_1.TextSize = new System.Drawing.SizeF(105.7493F, 25.4663F);
+            // 
+            // buttonM2Reset
+            // 
+            resources.ApplyResources(this.buttonM2Reset, "buttonM2Reset");
+            this.buttonM2Reset.Name = "buttonM2Reset";
+            this.buttonM2Reset.UseVisualStyleBackColor = true;
+            this.buttonM2Reset.Click += new System.EventHandler(this.buttonM2Reset_Click);
+            // 
+            // groupBoxLine
+            // 
+            this.groupBoxLine.Controls.Add(this.comboBoxAutoModelNameLst);
+            this.groupBoxLine.Controls.Add(this.lbLedEmergency);
+            this.groupBoxLine.Controls.Add(this.lbButtonPause);
+            this.groupBoxLine.Controls.Add(this.lbButtonStartStop);
+            this.groupBoxLine.Controls.Add(this.lbLedAirPressure);
+            this.groupBoxLine.Controls.Add(this.lbLedLineStatus);
+            this.groupBoxLine.Controls.Add(this.buttonResetCounter);
+            this.groupBoxLine.Controls.Add(this.labelPieceCounter);
+            this.groupBoxLine.Controls.Add(this.lbLedLineReady);
+            this.groupBoxLine.Controls.Add(this.lbLedSystemConnection);
+            resources.ApplyResources(this.groupBoxLine, "groupBoxLine");
+            this.groupBoxLine.Name = "groupBoxLine";
+            this.groupBoxLine.TabStop = false;
+            // 
+            // comboBoxAutoModelNameLst
+            // 
+            resources.ApplyResources(this.comboBoxAutoModelNameLst, "comboBoxAutoModelNameLst");
+            this.comboBoxAutoModelNameLst.FormattingEnabled = true;
+            this.comboBoxAutoModelNameLst.Name = "comboBoxAutoModelNameLst";
+            this.comboBoxAutoModelNameLst.SelectedIndexChanged += new System.EventHandler(this.comboBoxAutoModelNameLst_SelectedIndexChanged);
+            // 
+            // groupBoxM6
+            // 
+            this.groupBoxM6.Controls.Add(this.checkBoxM6Start);
+            this.groupBoxM6.Controls.Add(this.checkBoxM6Inclusion);
+            this.groupBoxM6.Controls.Add(this.labelM6Param1Value);
+            this.groupBoxM6.Controls.Add(this.comboBoxM6PrgName);
+            this.groupBoxM6.Controls.Add(this.labelM6Param1Name);
+            this.groupBoxM6.Controls.Add(this.lbLedM6Status);
+            resources.ApplyResources(this.groupBoxM6, "groupBoxM6");
+            this.groupBoxM6.Name = "groupBoxM6";
+            this.groupBoxM6.TabStop = false;
+            // 
+            // checkBoxM6Start
+            // 
+            resources.ApplyResources(this.checkBoxM6Start, "checkBoxM6Start");
+            this.checkBoxM6Start.Name = "checkBoxM6Start";
+            this.checkBoxM6Start.ThreeState = true;
+            this.checkBoxM6Start.UseVisualStyleBackColor = true;
+            this.checkBoxM6Start.CheckStateChanged += new System.EventHandler(this.checkBoxM6Start_CheckStateChanged);
+            // 
+            // groupBoxM3
+            // 
+            this.groupBoxM3.Controls.Add(this.textBoxTypeOrder);
+            this.groupBoxM3.Controls.Add(this.comboBoxM3PrgName_st2);
+            this.groupBoxM3.Controls.Add(this.labelM3Param1Value);
+            this.groupBoxM3.Controls.Add(this.checkBoxM3Start);
+            this.groupBoxM3.Controls.Add(this.comboBoxM3PrgName_st1);
+            this.groupBoxM3.Controls.Add(this.checkBoxM3Inclusion);
+            this.groupBoxM3.Controls.Add(this.labelM3Param1Name);
+            this.groupBoxM3.Controls.Add(this.lbLedM3Status);
+            resources.ApplyResources(this.groupBoxM3, "groupBoxM3");
+            this.groupBoxM3.Name = "groupBoxM3";
+            this.groupBoxM3.TabStop = false;
+            // 
+            // textBoxTypeOrder
+            // 
+            resources.ApplyResources(this.textBoxTypeOrder, "textBoxTypeOrder");
+            this.textBoxTypeOrder.Name = "textBoxTypeOrder";
+            // 
+            // comboBoxM3PrgName_st2
+            // 
+            resources.ApplyResources(this.comboBoxM3PrgName_st2, "comboBoxM3PrgName_st2");
+            this.comboBoxM3PrgName_st2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.comboBoxM3PrgName_st2.FormattingEnabled = true;
+            this.comboBoxM3PrgName_st2.Name = "comboBoxM3PrgName_st2";
+            this.comboBoxM3PrgName_st2.SelectedIndexChanged += new System.EventHandler(this.comboBoxM3PrgName_st2_SelectedIndexChanged);
+            // 
+            // checkBoxM3Start
+            // 
+            resources.ApplyResources(this.checkBoxM3Start, "checkBoxM3Start");
+            this.checkBoxM3Start.Name = "checkBoxM3Start";
+            this.checkBoxM3Start.ThreeState = true;
+            this.checkBoxM3Start.UseVisualStyleBackColor = true;
+            this.checkBoxM3Start.CheckStateChanged += new System.EventHandler(this.checkBoxM3Start_CheckStateChanged);
+            // 
+            // groupBoxM5
+            // 
+            this.groupBoxM5.Controls.Add(this.comboBoxM5PrgName);
+            this.groupBoxM5.Controls.Add(this.checkBoxM5Start);
+            this.groupBoxM5.Controls.Add(this.labelM5Param1Value);
+            this.groupBoxM5.Controls.Add(this.checkBoxM5Inclusion);
+            this.groupBoxM5.Controls.Add(this.labelM5Param1Name);
+            this.groupBoxM5.Controls.Add(this.lbLedM5Status);
+            resources.ApplyResources(this.groupBoxM5, "groupBoxM5");
+            this.groupBoxM5.Name = "groupBoxM5";
+            this.groupBoxM5.TabStop = false;
+            // 
+            // checkBoxM5Start
+            // 
+            resources.ApplyResources(this.checkBoxM5Start, "checkBoxM5Start");
+            this.checkBoxM5Start.Name = "checkBoxM5Start";
+            this.checkBoxM5Start.ThreeState = true;
+            this.checkBoxM5Start.UseVisualStyleBackColor = true;
+            this.checkBoxM5Start.CheckStateChanged += new System.EventHandler(this.checkBoxM5Start_CheckStateChanged);
+            // 
+            // groupBoxM4
+            // 
+            this.groupBoxM4.Controls.Add(this.checkBoxM4Inclusion);
+            this.groupBoxM4.Controls.Add(this.labelM4Param1Value);
+            this.groupBoxM4.Controls.Add(this.checkBoxM4Start);
+            this.groupBoxM4.Controls.Add(this.comboBoxM4PrgName);
+            this.groupBoxM4.Controls.Add(this.labelM4Param1Name);
+            this.groupBoxM4.Controls.Add(this.lbLedM4Status);
+            resources.ApplyResources(this.groupBoxM4, "groupBoxM4");
+            this.groupBoxM4.Name = "groupBoxM4";
+            this.groupBoxM4.TabStop = false;
+            // 
+            // checkBoxM4Start
+            // 
+            resources.ApplyResources(this.checkBoxM4Start, "checkBoxM4Start");
+            this.checkBoxM4Start.Name = "checkBoxM4Start";
+            this.checkBoxM4Start.ThreeState = true;
+            this.checkBoxM4Start.UseVisualStyleBackColor = true;
+            this.checkBoxM4Start.CheckStateChanged += new System.EventHandler(this.checkBoxM4Start_CheckStateChanged);
+            // 
+            // groupBoxM2
+            // 
+            this.groupBoxM2.Controls.Add(this.comboBoxM2PrgName);
+            this.groupBoxM2.Controls.Add(this.labelM2Param1Value);
+            this.groupBoxM2.Controls.Add(this.checkBoxM2Inclusion);
+            this.groupBoxM2.Controls.Add(this.labelM2Param1Name);
+            this.groupBoxM2.Controls.Add(this.checkBoxM2Start);
+            this.groupBoxM2.Controls.Add(this.lbLedM2Status);
+            resources.ApplyResources(this.groupBoxM2, "groupBoxM2");
+            this.groupBoxM2.Name = "groupBoxM2";
+            this.groupBoxM2.TabStop = false;
+            // 
+            // checkBoxM2Start
+            // 
+            resources.ApplyResources(this.checkBoxM2Start, "checkBoxM2Start");
+            this.checkBoxM2Start.Name = "checkBoxM2Start";
+            this.checkBoxM2Start.ThreeState = true;
+            this.checkBoxM2Start.UseVisualStyleBackColor = true;
+            this.checkBoxM2Start.CheckedChanged += new System.EventHandler(this.checkBoxM2Start_CheckedChanged);
+            this.checkBoxM2Start.CheckStateChanged += new System.EventHandler(this.checkBoxM2Start_CheckStateChanged);
+            // 
+            // groupBoxM1
+            // 
+            this.groupBoxM1.Controls.Add(this.comboBoxM1PrgName);
+            this.groupBoxM1.Controls.Add(this.checkBoxM1Inclusion);
+            this.groupBoxM1.Controls.Add(this.labelM1Param1Value);
+            this.groupBoxM1.Controls.Add(this.lbLedM1Status);
+            this.groupBoxM1.Controls.Add(this.labelM1Param1Name);
+            this.groupBoxM1.Controls.Add(this.checkBoxM1Start);
+            resources.ApplyResources(this.groupBoxM1, "groupBoxM1");
+            this.groupBoxM1.Name = "groupBoxM1";
+            this.groupBoxM1.TabStop = false;
+            // 
+            // checkBoxM1Start
+            // 
+            resources.ApplyResources(this.checkBoxM1Start, "checkBoxM1Start");
+            this.checkBoxM1Start.FlatAppearance.BorderSize = 5;
+            this.checkBoxM1Start.Name = "checkBoxM1Start";
+            this.checkBoxM1Start.ThreeState = true;
+            this.checkBoxM1Start.UseVisualStyleBackColor = true;
+            this.checkBoxM1Start.CheckStateChanged += new System.EventHandler(this.checkBoxM1Start_CheckStateChanged);
+            // 
             // tabPageT0_3
             // 
             this.tabPageT0_3.Controls.Add(this.groupBoxKeepAliveFromPlc);
             this.tabPageT0_3.Controls.Add(this.groupBoxKeepAliveToPlc);
-            tabPageFormatStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT0_3.FormatStyle = tabPageFormatStyle25;
+            tabPageFormatStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT0_3.FormatStyle = tabPageFormatStyle26;
             resources.ApplyResources(this.tabPageT0_3, "tabPageT0_3");
             this.tabPageT0_3.Name = "tabPageT0_3";
             this.tabPageT0_3.ParentPage = null;
@@ -5003,241 +5093,6 @@
             this.lbLedM4PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
             this.lbLedM4PCKeepAlive.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
             // 
-            // tabPageT0_1
-            // 
-            this.tabPageT0_1.Controls.Add(this.buttonM2Reset);
-            this.tabPageT0_1.Controls.Add(this.groupBoxLine);
-            this.tabPageT0_1.Controls.Add(this.groupBoxM6);
-            this.tabPageT0_1.Controls.Add(this.groupBoxM3);
-            this.tabPageT0_1.Controls.Add(this.groupBoxM5);
-            this.tabPageT0_1.Controls.Add(this.groupBoxM4);
-            this.tabPageT0_1.Controls.Add(this.groupBoxM2);
-            this.tabPageT0_1.Controls.Add(this.groupBoxM1);
-            tabPageFormatStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT0_1.FormatStyle = tabPageFormatStyle27;
-            resources.ApplyResources(this.tabPageT0_1, "tabPageT0_1");
-            this.tabPageT0_1.Name = "tabPageT0_1";
-            this.tabPageT0_1.ParentPage = null;
-            this.tabPageT0_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_1.TextBounds")));
-            this.tabPageT0_1.TextSize = new System.Drawing.SizeF(105.7493F, 25.4663F);
-            // 
-            // buttonM2Reset
-            // 
-            resources.ApplyResources(this.buttonM2Reset, "buttonM2Reset");
-            this.buttonM2Reset.Name = "buttonM2Reset";
-            this.buttonM2Reset.UseVisualStyleBackColor = true;
-            this.buttonM2Reset.Click += new System.EventHandler(this.buttonM2Reset_Click);
-            // 
-            // groupBoxLine
-            // 
-            this.groupBoxLine.Controls.Add(this.lbButtonTestM1Start);
-            this.groupBoxLine.Controls.Add(this.lbButtonTestM6Start);
-            this.groupBoxLine.Controls.Add(this.lbButtonTestM5Start);
-            this.groupBoxLine.Controls.Add(this.lbButtonTestM4Start);
-            this.groupBoxLine.Controls.Add(this.lbButtonTestM3Start);
-            this.groupBoxLine.Controls.Add(this.lbButtonTestM2Start);
-            this.groupBoxLine.Controls.Add(this.comboBoxAutoModelNameLst);
-            this.groupBoxLine.Controls.Add(this.lbLedEmergency);
-            this.groupBoxLine.Controls.Add(this.lbButtonPause);
-            this.groupBoxLine.Controls.Add(this.lbButtonStartStop);
-            this.groupBoxLine.Controls.Add(this.lbLedAirPressure);
-            this.groupBoxLine.Controls.Add(this.lbLedLineStatus);
-            this.groupBoxLine.Controls.Add(this.buttonResetCounter);
-            this.groupBoxLine.Controls.Add(this.labelPieceCounter);
-            this.groupBoxLine.Controls.Add(this.lbLedLineReady);
-            this.groupBoxLine.Controls.Add(this.lbLedConnection);
-            resources.ApplyResources(this.groupBoxLine, "groupBoxLine");
-            this.groupBoxLine.Name = "groupBoxLine";
-            this.groupBoxLine.TabStop = false;
-            // 
-            // lbButtonTestM1Start
-            // 
-            this.lbButtonTestM1Start.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonTestM1Start.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.lbButtonTestM1Start, "lbButtonTestM1Start");
-            this.lbButtonTestM1Start.ForeColor = System.Drawing.Color.White;
-            this.lbButtonTestM1Start.Label = "START M2";
-            this.lbButtonTestM1Start.Name = "lbButtonTestM1Start";
-            this.lbButtonTestM1Start.Renderer = null;
-            this.lbButtonTestM1Start.RepeatInterval = 100;
-            this.lbButtonTestM1Start.RepeatState = false;
-            this.lbButtonTestM1Start.StartRepeatInterval = 500;
-            this.lbButtonTestM1Start.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonTestM1Start.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            // 
-            // lbButtonTestM6Start
-            // 
-            this.lbButtonTestM6Start.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonTestM6Start.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.lbButtonTestM6Start, "lbButtonTestM6Start");
-            this.lbButtonTestM6Start.ForeColor = System.Drawing.Color.White;
-            this.lbButtonTestM6Start.Label = "START M4";
-            this.lbButtonTestM6Start.Name = "lbButtonTestM6Start";
-            this.lbButtonTestM6Start.Renderer = null;
-            this.lbButtonTestM6Start.RepeatInterval = 100;
-            this.lbButtonTestM6Start.RepeatState = false;
-            this.lbButtonTestM6Start.StartRepeatInterval = 500;
-            this.lbButtonTestM6Start.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonTestM6Start.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            // 
-            // lbButtonTestM5Start
-            // 
-            this.lbButtonTestM5Start.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonTestM5Start.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.lbButtonTestM5Start, "lbButtonTestM5Start");
-            this.lbButtonTestM5Start.ForeColor = System.Drawing.Color.White;
-            this.lbButtonTestM5Start.Label = "START M4";
-            this.lbButtonTestM5Start.Name = "lbButtonTestM5Start";
-            this.lbButtonTestM5Start.Renderer = null;
-            this.lbButtonTestM5Start.RepeatInterval = 100;
-            this.lbButtonTestM5Start.RepeatState = false;
-            this.lbButtonTestM5Start.StartRepeatInterval = 500;
-            this.lbButtonTestM5Start.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonTestM5Start.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            this.lbButtonTestM5Start.Click += new System.EventHandler(this.lbButtonTestM5Start_Click);
-            // 
-            // lbButtonTestM4Start
-            // 
-            this.lbButtonTestM4Start.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonTestM4Start.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.lbButtonTestM4Start, "lbButtonTestM4Start");
-            this.lbButtonTestM4Start.ForeColor = System.Drawing.Color.White;
-            this.lbButtonTestM4Start.Label = "START M4";
-            this.lbButtonTestM4Start.Name = "lbButtonTestM4Start";
-            this.lbButtonTestM4Start.Renderer = null;
-            this.lbButtonTestM4Start.RepeatInterval = 100;
-            this.lbButtonTestM4Start.RepeatState = false;
-            this.lbButtonTestM4Start.StartRepeatInterval = 500;
-            this.lbButtonTestM4Start.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonTestM4Start.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            this.lbButtonTestM4Start.Click += new System.EventHandler(this.lbButtonTestM4Start_Click);
-            // 
-            // lbButtonTestM3Start
-            // 
-            this.lbButtonTestM3Start.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonTestM3Start.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.lbButtonTestM3Start, "lbButtonTestM3Start");
-            this.lbButtonTestM3Start.ForeColor = System.Drawing.Color.White;
-            this.lbButtonTestM3Start.Label = "START M3";
-            this.lbButtonTestM3Start.Name = "lbButtonTestM3Start";
-            this.lbButtonTestM3Start.Renderer = null;
-            this.lbButtonTestM3Start.RepeatInterval = 100;
-            this.lbButtonTestM3Start.RepeatState = false;
-            this.lbButtonTestM3Start.StartRepeatInterval = 500;
-            this.lbButtonTestM3Start.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonTestM3Start.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            this.lbButtonTestM3Start.Click += new System.EventHandler(this.lbButtonTestM3Start_Click);
-            // 
-            // lbButtonTestM2Start
-            // 
-            this.lbButtonTestM2Start.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonTestM2Start.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.lbButtonTestM2Start, "lbButtonTestM2Start");
-            this.lbButtonTestM2Start.ForeColor = System.Drawing.Color.White;
-            this.lbButtonTestM2Start.Label = "START M2";
-            this.lbButtonTestM2Start.Name = "lbButtonTestM2Start";
-            this.lbButtonTestM2Start.Renderer = null;
-            this.lbButtonTestM2Start.RepeatInterval = 100;
-            this.lbButtonTestM2Start.RepeatState = false;
-            this.lbButtonTestM2Start.StartRepeatInterval = 500;
-            this.lbButtonTestM2Start.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonTestM2Start.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            this.lbButtonTestM2Start.Click += new System.EventHandler(this.lbButtonTestM2Start_Click);
-            // 
-            // comboBoxAutoModelNameLst
-            // 
-            resources.ApplyResources(this.comboBoxAutoModelNameLst, "comboBoxAutoModelNameLst");
-            this.comboBoxAutoModelNameLst.FormattingEnabled = true;
-            this.comboBoxAutoModelNameLst.Name = "comboBoxAutoModelNameLst";
-            this.comboBoxAutoModelNameLst.SelectedIndexChanged += new System.EventHandler(this.comboBoxAutoModelNameLst_SelectedIndexChanged);
-            // 
-            // groupBoxM6
-            // 
-            this.groupBoxM6.Controls.Add(this.lbLedM6HomingDone);
-            this.groupBoxM6.Controls.Add(this.checkBoxM6Inclusion);
-            this.groupBoxM6.Controls.Add(this.labelM6Param1Value);
-            this.groupBoxM6.Controls.Add(this.comboBoxM6PrgName);
-            this.groupBoxM6.Controls.Add(this.labelM6Param1Name);
-            this.groupBoxM6.Controls.Add(this.lbLedM6Status);
-            resources.ApplyResources(this.groupBoxM6, "groupBoxM6");
-            this.groupBoxM6.Name = "groupBoxM6";
-            this.groupBoxM6.TabStop = false;
-            // 
-            // groupBoxM3
-            // 
-            this.groupBoxM3.Controls.Add(this.textBoxTypeOrder);
-            this.groupBoxM3.Controls.Add(this.comboBoxM3PrgName_st2);
-            this.groupBoxM3.Controls.Add(this.labelM3Param1Value);
-            this.groupBoxM3.Controls.Add(this.lbLedM3HomingDone);
-            this.groupBoxM3.Controls.Add(this.comboBoxM3PrgName_st1);
-            this.groupBoxM3.Controls.Add(this.checkBoxM3Inclusion);
-            this.groupBoxM3.Controls.Add(this.labelM3Param1Name);
-            this.groupBoxM3.Controls.Add(this.lbLedM3Status);
-            resources.ApplyResources(this.groupBoxM3, "groupBoxM3");
-            this.groupBoxM3.Name = "groupBoxM3";
-            this.groupBoxM3.TabStop = false;
-            // 
-            // textBoxTypeOrder
-            // 
-            resources.ApplyResources(this.textBoxTypeOrder, "textBoxTypeOrder");
-            this.textBoxTypeOrder.Name = "textBoxTypeOrder";
-            // 
-            // comboBoxM3PrgName_st2
-            // 
-            resources.ApplyResources(this.comboBoxM3PrgName_st2, "comboBoxM3PrgName_st2");
-            this.comboBoxM3PrgName_st2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.comboBoxM3PrgName_st2.FormattingEnabled = true;
-            this.comboBoxM3PrgName_st2.Name = "comboBoxM3PrgName_st2";
-            this.comboBoxM3PrgName_st2.SelectedIndexChanged += new System.EventHandler(this.comboBoxM3PrgName_st2_SelectedIndexChanged);
-            // 
-            // groupBoxM5
-            // 
-            this.groupBoxM5.Controls.Add(this.lbLedM5HomingDone);
-            this.groupBoxM5.Controls.Add(this.comboBoxM5PrgName);
-            this.groupBoxM5.Controls.Add(this.labelM5Param1Value);
-            this.groupBoxM5.Controls.Add(this.checkBoxM5Inclusion);
-            this.groupBoxM5.Controls.Add(this.labelM5Param1Name);
-            this.groupBoxM5.Controls.Add(this.lbLedM5Status);
-            resources.ApplyResources(this.groupBoxM5, "groupBoxM5");
-            this.groupBoxM5.Name = "groupBoxM5";
-            this.groupBoxM5.TabStop = false;
-            // 
-            // groupBoxM4
-            // 
-            this.groupBoxM4.Controls.Add(this.lbLedM4HomingDone);
-            this.groupBoxM4.Controls.Add(this.checkBoxM4Inclusion);
-            this.groupBoxM4.Controls.Add(this.labelM4Param1Value);
-            this.groupBoxM4.Controls.Add(this.comboBoxM4PrgName);
-            this.groupBoxM4.Controls.Add(this.labelM4Param1Name);
-            this.groupBoxM4.Controls.Add(this.lbLedM4Status);
-            resources.ApplyResources(this.groupBoxM4, "groupBoxM4");
-            this.groupBoxM4.Name = "groupBoxM4";
-            this.groupBoxM4.TabStop = false;
-            // 
-            // groupBoxM2
-            // 
-            this.groupBoxM2.Controls.Add(this.lbLedM2HomingDone);
-            this.groupBoxM2.Controls.Add(this.comboBoxM2PrgName);
-            this.groupBoxM2.Controls.Add(this.labelM2Param1Value);
-            this.groupBoxM2.Controls.Add(this.checkBoxM2Inclusion);
-            this.groupBoxM2.Controls.Add(this.labelM2Param1Name);
-            this.groupBoxM2.Controls.Add(this.lbLedM2Status);
-            resources.ApplyResources(this.groupBoxM2, "groupBoxM2");
-            this.groupBoxM2.Name = "groupBoxM2";
-            this.groupBoxM2.TabStop = false;
-            // 
-            // groupBoxM1
-            // 
-            this.groupBoxM1.Controls.Add(this.comboBoxM1PrgName);
-            this.groupBoxM1.Controls.Add(this.lbLedM1HomingDone);
-            this.groupBoxM1.Controls.Add(this.checkBoxM1Inclusion);
-            this.groupBoxM1.Controls.Add(this.labelM1Param1Value);
-            this.groupBoxM1.Controls.Add(this.lbLedM1Status);
-            this.groupBoxM1.Controls.Add(this.labelM1Param1Name);
-            resources.ApplyResources(this.groupBoxM1, "groupBoxM1");
-            this.groupBoxM1.Name = "groupBoxM1";
-            this.groupBoxM1.TabStop = false;
-            // 
             // tabPageT0_2
             // 
             this.tabPageT0_2.Controls.Add(this.textBoxM6Test);
@@ -5246,8 +5101,8 @@
             this.tabPageT0_2.Controls.Add(this.textBoxM3Test);
             this.tabPageT0_2.Controls.Add(this.textBoxM2Test);
             this.tabPageT0_2.Controls.Add(this.textBoxM1Test);
-            tabPageFormatStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT0_2.FormatStyle = tabPageFormatStyle26;
+            tabPageFormatStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT0_2.FormatStyle = tabPageFormatStyle27;
             resources.ApplyResources(this.tabPageT0_2, "tabPageT0_2");
             this.tabPageT0_2.Name = "tabPageT0_2";
             this.tabPageT0_2.ParentPage = null;
@@ -5385,6 +5240,14 @@
             this.imageListNodes.Images.SetKeyName(2, "iot_on.png");
             this.imageListNodes.Images.SetKeyName(3, "iot_off.png");
             // 
+            // imageListStart
+            // 
+            this.imageListStart.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListStart.ImageStream")));
+            this.imageListStart.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListStart.Images.SetKeyName(0, "play (3).png");
+            this.imageListStart.Images.SetKeyName(1, "stop.png");
+            this.imageListStart.Images.SetKeyName(2, "indeterminate.png");
+            // 
             // FormMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -5443,15 +5306,6 @@
             this.tabPageMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT0)).EndInit();
             this.tabControlT0.ResumeLayout(false);
-            this.tabPageT0_3.ResumeLayout(false);
-            this.groupBoxKeepAliveFromPlc.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIOTNode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM5PLCNode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM1PLCNode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM4PLCNode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM2PLCNode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3PLCNode)).EndInit();
-            this.groupBoxKeepAliveToPlc.ResumeLayout(false);
             this.tabPageT0_1.ResumeLayout(false);
             this.groupBoxLine.ResumeLayout(false);
             this.groupBoxM6.ResumeLayout(false);
@@ -5466,6 +5320,15 @@
             this.groupBoxM2.PerformLayout();
             this.groupBoxM1.ResumeLayout(false);
             this.groupBoxM1.PerformLayout();
+            this.tabPageT0_3.ResumeLayout(false);
+            this.groupBoxKeepAliveFromPlc.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIOTNode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM5PLCNode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM1PLCNode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM4PLCNode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM2PLCNode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3PLCNode)).EndInit();
+            this.groupBoxKeepAliveToPlc.ResumeLayout(false);
             this.tabPageT0_2.ResumeLayout(false);
             this.tabPageT0_2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).EndInit();
@@ -5491,34 +5354,28 @@
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM1Status;
         private System.Windows.Forms.CheckBox checkBoxM1Inclusion;
         private System.Windows.Forms.ComboBox comboBoxM1PrgName;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM1HomingDone;
         private System.Windows.Forms.Label labelM1Param1Value;
         private System.Windows.Forms.Label labelM1Param1Name;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM6HomingDone;
         private System.Windows.Forms.Label labelM6Param1Value;
         private System.Windows.Forms.Label labelM6Param1Name;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM6Status;
         private System.Windows.Forms.CheckBox checkBoxM6Inclusion;
         private System.Windows.Forms.ComboBox comboBoxM6PrgName;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM5HomingDone;
         private System.Windows.Forms.Label labelM5Param1Value;
         private System.Windows.Forms.Label labelM5Param1Name;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM5Status;
         private System.Windows.Forms.CheckBox checkBoxM5Inclusion;
         private System.Windows.Forms.ComboBox comboBoxM5PrgName;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM4HomingDone;
         private System.Windows.Forms.Label labelM4Param1Value;
         private System.Windows.Forms.Label labelM4Param1Name;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM4Status;
         private System.Windows.Forms.CheckBox checkBoxM4Inclusion;
         private System.Windows.Forms.ComboBox comboBoxM4PrgName;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM3HomingDone;
         private System.Windows.Forms.Label labelM3Param1Value;
         private System.Windows.Forms.Label labelM3Param1Name;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM3Status;
         private System.Windows.Forms.CheckBox checkBoxM3Inclusion;
         private System.Windows.Forms.ComboBox comboBoxM3PrgName_st1;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM2HomingDone;
         private System.Windows.Forms.Label labelM2Param1Value;
         private System.Windows.Forms.Label labelM2Param1Name;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM2Status;
@@ -5530,7 +5387,7 @@
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedAirPressure;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedEmergency;
         private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonPause;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedConnection;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedSystemConnection;
         private System.Windows.Forms.Button buttonResetCounter;
         private LidorSystems.IntegralUI.Controls.Label labelPieceCounter;
         private LidorSystems.IntegralUI.Containers.TabControl tabControlT2;
@@ -5813,21 +5670,15 @@
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed1003M5;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed1004M5;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed1001M5;
-        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonTestM2Start;
         private System.Windows.Forms.ComboBox comboBoxM3PrgName_st2;
         private System.Windows.Forms.TextBox textBoxTypeOrder;
-        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonTestM4Start;
-        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonTestM3Start;
         private LidorSystems.IntegralUI.Containers.TabControl tabControl1;
         private LidorSystems.IntegralUI.Containers.TabPage tabPage7;
         private System.Windows.Forms.Label labelM4TeachAxisQuoteName;
         private System.Windows.Forms.Label labelM4TeachAxisQuoteValue;
-        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonTestM5Start;
         private LidorSystems.IntegralUI.Containers.TabPage tabPageT0_3;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM2PCKeepAlive;
         private System.Windows.Forms.Button buttonM2Reset;
-        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonTestM6Start;
-        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonTestM1Start;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM4PCKeepAlive;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM1PCKeepAlive;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM3PCKeepAlive;
@@ -5841,6 +5692,13 @@
         private System.Windows.Forms.PictureBox pictureBoxM2PLCNode;
         private System.Windows.Forms.GroupBox groupBoxKeepAliveToPlc;
         private System.Windows.Forms.GroupBox groupBoxKeepAliveFromPlc;
+        private System.Windows.Forms.ImageList imageListStart;
+        private System.Windows.Forms.CheckBox checkBoxM6Start;
+        private System.Windows.Forms.CheckBox checkBoxM5Start;
+        private System.Windows.Forms.CheckBox checkBoxM4Start;
+        private System.Windows.Forms.CheckBox checkBoxM3Start;
+        private System.Windows.Forms.CheckBox checkBoxM2Start;
+        private System.Windows.Forms.CheckBox checkBoxM1Start;
     }
 }
 

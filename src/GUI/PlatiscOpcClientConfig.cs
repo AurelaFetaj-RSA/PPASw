@@ -24,7 +24,8 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM1KeepAliveW", $"ns=2;s=Tags.Rifilatrice/pc_comunicazione_da_opc_a_plc", typeof(bool)));
             //reset
             ClientDataConfig.Add(new OpcObjectData("pcM1Reset", $"ns=2;s=Tags.Rifilatrice/pc_reset_generale", typeof(bool)));
-
+            //pause
+            ClientDataConfig.Add(new OpcObjectData("pcM1Pause", $"ns=2;s=Tags.Rifilatrice/pc_pausa", typeof(bool)));
             #endregion
 
             #region(* M2 OPCUA variables *)
@@ -169,8 +170,7 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM4KeepAliveW", $"ns=2;s=Tags.Rifilatrice/pc_pad_laser_comunicazione_da_opc_a_plc", typeof(bool)));
             //reset
             ClientDataConfig.Add(new OpcObjectData("pcM4Reset", $"ns=2;s=Tags.Rifilatrice/pc_pad_laser_reset_generale", typeof(bool)));
-
-
+            
             #endregion
 
             #region  (* M5 OPCUA variables *)
@@ -201,13 +201,15 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM5KeepAliveW", $"ns=2;s=Tags.Manipolatore/pc_comunicazione_da_opc_a_plc", typeof(bool)));
             //reset
             ClientDataConfig.Add(new OpcObjectData("pcM5Reset", $"ns=2;s=Tags.Manipolatore/pc_reset_generale", typeof(bool)));
-
+            
             #endregion
 
-            #region(* M6 OPCUA variables *)
+            #region(* M6 OPCUA variables invalid*)
             ClientDataConfig.Add(new OpcObjectData("pcM6Status", $"ns=2;s=Tags.Rifilatrice/pc_stato_macchina", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM6CurrentAxisQuote", $"ns=2;s=Tags.Rifilatrice/pc_quota_attuale_asse", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM6HomingDone", $"ns=2;s=Tags.Rifilatrice/pc_homing_done", typeof(bool)));
+            //pause
+            ClientDataConfig.Add(new OpcObjectData("pcM6Pause", $"ns=2;s=Tags.Rifilatrice/pc_pausa", typeof(bool)));
             #endregion
             return this;
         }
