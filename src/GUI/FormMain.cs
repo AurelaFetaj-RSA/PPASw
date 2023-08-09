@@ -2236,32 +2236,6 @@ namespace GUI
             }
         }
 
-        private async void lbButtonStartStop_Click(object sender, EventArgs e)
-        {
-            if (lbButtonStartStop.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal)
-            {
-                string keyValue = "pcM2StartStop";
-                var readResult = await ccService.Send(keyValue, true);
-                keyValue = "pcM3StartStop";
-                readResult = await ccService.Send(keyValue, true);
-                keyValue = "pcM4StartStop";
-                readResult = await ccService.Send(keyValue, true);
-                keyValue = "pcM5StartStop";
-                readResult = await ccService.Send(keyValue, true);
-            }
-            else
-            {
-                string keyValue = "pcM2StartStop";
-                var readResult = await ccService.Send(keyValue, false);
-                keyValue = "pcM3StartStop";
-                readResult = await ccService.Send(keyValue, false);
-                keyValue = "pcM4StartStop";
-                readResult = await ccService.Send(keyValue, false);
-                keyValue = "pcM5StartStop";
-                readResult = await ccService.Send(keyValue, false);
-            }
-        }
-
         private async void comboBoxM3PrgName_st2_SelectedIndexChanged(object sender, EventArgs e)
         {
             //send recipe
@@ -2336,7 +2310,7 @@ namespace GUI
         private async void buttonMReset_Click(object sender, EventArgs e)
         {
             //reset only if line is in stop or pause
-            if (lbButtonStartStop.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal || lbButtonPause.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+            if (checkBoxStartStop.CheckState == CheckState.Unchecked || checkBoxPause.CheckState == CheckState.Checked)
             {
                 string keyValue = "pcM1Reset";
                 var sendResult = await ccService.Send(keyValue, true);
@@ -2362,36 +2336,7 @@ namespace GUI
             }
         }
 
-        private async void lbButtonPause_Click(object sender, EventArgs e)
-        {
-            if (lbButtonPause.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal)
-            {
-                string keyValue = "pcM1Pause";
-                var readResult = await ccService.Send(keyValue, true);
-                keyValue = "pcM2Pause";
-                readResult = await ccService.Send(keyValue, true);
-                keyValue = "pcM3Pause";
-                readResult = await ccService.Send(keyValue, true);
-                keyValue = "pcM4Pause";
-                readResult = await ccService.Send(keyValue, true);
-                keyValue = "pcM5Pause";
-                readResult = await ccService.Send(keyValue, true);
-            }
-            else
-            {
-                string keyValue = "pcM1Pause";
-                var readResult = await ccService.Send(keyValue, false);
-                keyValue = "pcM2Pause";
-                readResult = await ccService.Send(keyValue, false);
-                keyValue = "pcM3Pause";
-                readResult = await ccService.Send(keyValue, false);
-                keyValue = "pcM4Pause";
-                readResult = await ccService.Send(keyValue, false);
-                keyValue = "pcM5Pause";
-                readResult = await ccService.Send(keyValue, false);
-            }
-        }
-
+   
         private async void checkBoxM2Start_CheckStateChanged(object sender, EventArgs e)
         {
             bool state = false;
@@ -2506,8 +2451,8 @@ namespace GUI
                 //update gui
 
                 checkBoxM2Pause.Text = "";
-                if (state) checkBoxM2Pause.Image = imageListStart.Images[4];
-                else checkBoxM2Pause.Image = imageListStart.Images[3];
+                if (state) checkBoxM2Pause.Image = imageListStart.Images[3];
+                else checkBoxM2Pause.Image = imageListStart.Images[2];
             }
         }
 
@@ -2549,9 +2494,6 @@ namespace GUI
                 readResult = await ccService.Send(keyValue, false);
             }
 
-            //update gui
-
-            //checkBoxStartStop.Text = "";
             if (state)
             {                
                 checkBoxStartStop.Image = imageListStartStop.Images[1];
@@ -2562,7 +2504,6 @@ namespace GUI
                 checkBoxStartStop.Image = imageListStartStop.Images[0];
                 checkBoxStartStop.Text = "START";
             }
-
         }
 
         private async void checkBoxPause_CheckStateChanged(object sender, EventArgs e)
@@ -2572,18 +2513,19 @@ namespace GUI
             //send start/stop 
             state = (checkBoxPause.CheckState == CheckState.Checked) ? true : false;
 
-            //update gui
-
-            //checkBoxPause.Text = "";
             if (state)
             {
-                keyValue = "pcM2Pause";
+                keyValue = "pcM1Pause";
                 var readResult = await ccService.Send(keyValue, true);
+                keyValue = "pcM2Pause";
+                readResult = await ccService.Send(keyValue, true);
                 keyValue = "pcM3Pause";
                 readResult = await ccService.Send(keyValue, true);
                 keyValue = "pcM4Pause";
                 readResult = await ccService.Send(keyValue, true);
                 keyValue = "pcM5Pause";
+                readResult = await ccService.Send(keyValue, true);
+                keyValue = "pcM6Pause";
                 readResult = await ccService.Send(keyValue, true);
 
                 checkBoxPause.Image = imageListStartStop.Images[3];
@@ -2591,16 +2533,105 @@ namespace GUI
             }
             else
             {
-                keyValue = "pcM2Pause";
+                keyValue = "pcM1Pause";
                 var readResult = await ccService.Send(keyValue, false);
+                keyValue = "pcM2Pause";
+                readResult = await ccService.Send(keyValue, false);
                 keyValue = "pcM3Pause";
                 readResult = await ccService.Send(keyValue, false);
                 keyValue = "pcM4Pause";
                 readResult = await ccService.Send(keyValue, false);
                 keyValue = "pcM5Pause";
                 readResult = await ccService.Send(keyValue, false);
-                checkBoxPause.Image = imageListStartStop.Images[4];
+                keyValue = "pcM6Pause";
+                readResult = await ccService.Send(keyValue, false);
+                checkBoxPause.Image = imageListStartStop.Images[2];
                 checkBoxPause.Text = "PAUSE";
+            }
+        }
+
+        private async void checkBoxM3Pause_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool state = false;
+            //send start/stop 
+            state = (checkBoxM3Pause.CheckState == CheckState.Checked) ? true : false;
+            string keyValue = "pcM3Pause";
+            var sendResult = await ccService.Send(keyValue, state);
+            if (sendResult.OpcResult)
+            {
+                //update gui
+
+                checkBoxM3Pause.Text = "";
+                if (state) checkBoxM3Pause.Image = imageListStart.Images[4];
+                else checkBoxM3Pause.Image = imageListStart.Images[3];
+            }
+        }
+
+        private async void checkBoxM6Pause_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool state = false;
+            //send start/stop 
+            state = (checkBoxM6Pause.CheckState == CheckState.Checked) ? true : false;
+            string keyValue = "pcM6Pause";
+            var sendResult = await ccService.Send(keyValue, state);
+            if (sendResult.OpcResult)
+            {
+                //update gui
+
+                checkBoxM6Pause.Text = "";
+                if (state) checkBoxM6Pause.Image = imageListStart.Images[4];
+                else checkBoxM6Pause.Image = imageListStart.Images[3];
+            }
+        }
+
+        private async void checkBoxM5Pause_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool state = false;
+            //send start/stop 
+            state = (checkBoxM5Pause.CheckState == CheckState.Checked) ? true : false;
+            string keyValue = "pcM5Pause";
+            var sendResult = await ccService.Send(keyValue, state);
+            if (sendResult.OpcResult)
+            {
+                //update gui
+
+                checkBoxM5Pause.Text = "";
+                if (state) checkBoxM5Pause.Image = imageListStart.Images[4];
+                else checkBoxM5Pause.Image = imageListStart.Images[3];
+            }
+        }
+
+        private async void checkBoxM4Pause_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool state = false;
+            //send start/stop 
+            state = (checkBoxM4Pause.CheckState == CheckState.Checked) ? true : false;
+            string keyValue = "pcM4Pause";
+            var sendResult = await ccService.Send(keyValue, state);
+            if (sendResult.OpcResult)
+            {
+                //update gui
+
+                checkBoxM4Pause.Text = "";
+                if (state) checkBoxM4Pause.Image = imageListStart.Images[4];
+                else checkBoxM4Pause.Image = imageListStart.Images[3];
+            }
+        }
+
+        private async void checkBoxM1Pause_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool state = false;
+            //send start/stop 
+            state = (checkBoxM1Pause.CheckState == CheckState.Checked) ? true : false;
+            string keyValue = "pcM1Pause";
+            var sendResult = await ccService.Send(keyValue, state);
+            if (sendResult.OpcResult)
+            {
+                //update gui
+
+                checkBoxM1Pause.Text = "";
+                if (state) checkBoxM1Pause.Image = imageListStart.Images[4];
+                else checkBoxM1Pause.Image = imageListStart.Images[3];
             }
         }
     }

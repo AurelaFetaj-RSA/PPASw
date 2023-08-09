@@ -891,7 +891,7 @@ namespace GUI
                 }
                 else
                 {
-                    //WriteAsyncMStartStopCheckBox(false, checkBoxStartStop);
+                    
                 }
             }
         }
@@ -911,15 +911,10 @@ namespace GUI
                 if ((bool)crM1.Value == true & (bool)crM2.Value == true & (bool)crM3.Value == true & (bool)crM4.Value == true & (bool)crM5.Value == true & (bool)crM6.Value == true)
                 {
                     WriteAsyncMPauseCheckBox(true, checkBoxPause);
-
-                    //lbButtonPause.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed;
-                    //lbButtonPause.Label = "IN PAUSE";
                 }
                 else
                 {
-                    //lbButtonPause.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-                    //lbButtonPause.Label = "NOT IN PAUSE";
-                    WriteAsyncMPauseCheckBox(false, checkBoxPause);
+                    //WriteAsyncMPauseCheckBox(false, checkBoxPause);
                 }
             }
 

@@ -127,11 +127,9 @@
             this.buttonResetCounter = new System.Windows.Forms.Button();
             this.labelPieceCounter = new LidorSystems.IntegralUI.Controls.Label();
             this.lbLedLineReady = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbButtonStartStop = new LBSoft.IndustrialCtrls.Buttons.LBButton();
             this.lbLedLineStatus = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLedAirPressure = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLedEmergency = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbButtonPause = new LBSoft.IndustrialCtrls.Buttons.LBButton();
             this.lbLedSystemConnection = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.labelM6Param1Value = new System.Windows.Forms.Label();
             this.labelM6Param1Name = new System.Windows.Forms.Label();
@@ -604,22 +602,6 @@
             this.lbLedLineReady.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
             this.lbLedLineReady.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
             // 
-            // lbButtonStartStop
-            // 
-            this.lbButtonStartStop.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonStartStop.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            resources.ApplyResources(this.lbButtonStartStop, "lbButtonStartStop");
-            this.lbButtonStartStop.ForeColor = System.Drawing.Color.White;
-            this.lbButtonStartStop.Label = "START";
-            this.lbButtonStartStop.Name = "lbButtonStartStop";
-            this.lbButtonStartStop.Renderer = null;
-            this.lbButtonStartStop.RepeatInterval = 100;
-            this.lbButtonStartStop.RepeatState = false;
-            this.lbButtonStartStop.StartRepeatInterval = 500;
-            this.lbButtonStartStop.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonStartStop.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            this.lbButtonStartStop.Click += new System.EventHandler(this.lbButtonStartStop_Click);
-            // 
             // lbLedLineStatus
             // 
             this.lbLedLineStatus.BackColor = System.Drawing.Color.Transparent;
@@ -664,20 +646,6 @@
             this.lbLedEmergency.Renderer = null;
             this.lbLedEmergency.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
             this.lbLedEmergency.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbButtonPause
-            // 
-            this.lbButtonPause.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonPause.ButtonColor = System.Drawing.Color.LightSkyBlue;
-            resources.ApplyResources(this.lbButtonPause, "lbButtonPause");
-            this.lbButtonPause.Label = "PAUSE";
-            this.lbButtonPause.Name = "lbButtonPause";
-            this.lbButtonPause.Renderer = null;
-            this.lbButtonPause.RepeatInterval = 100;
-            this.lbButtonPause.RepeatState = false;
-            this.lbButtonPause.StartRepeatInterval = 500;
-            this.lbButtonPause.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonPause.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
             // 
             // lbLedSystemConnection
             // 
@@ -4794,8 +4762,6 @@
             this.groupBoxLine.Controls.Add(this.buttonM2Reset);
             this.groupBoxLine.Controls.Add(this.comboBoxAutoModelNameLst);
             this.groupBoxLine.Controls.Add(this.lbLedEmergency);
-            this.groupBoxLine.Controls.Add(this.lbButtonPause);
-            this.groupBoxLine.Controls.Add(this.lbButtonStartStop);
             this.groupBoxLine.Controls.Add(this.lbLedAirPressure);
             this.groupBoxLine.Controls.Add(this.lbLedLineStatus);
             this.groupBoxLine.Controls.Add(this.buttonResetCounter);
@@ -4853,6 +4819,7 @@
             this.checkBoxM6Pause.Name = "checkBoxM6Pause";
             this.checkBoxM6Pause.ThreeState = true;
             this.checkBoxM6Pause.UseVisualStyleBackColor = true;
+            this.checkBoxM6Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM6Pause_CheckStateChanged);
             // 
             // checkBoxM6Start
             // 
@@ -4883,6 +4850,7 @@
             this.checkBoxM3Pause.Name = "checkBoxM3Pause";
             this.checkBoxM3Pause.ThreeState = true;
             this.checkBoxM3Pause.UseVisualStyleBackColor = true;
+            this.checkBoxM3Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM3Pause_CheckStateChanged);
             // 
             // textBoxTypeOrder
             // 
@@ -4924,6 +4892,7 @@
             this.checkBoxM5Pause.Name = "checkBoxM5Pause";
             this.checkBoxM5Pause.ThreeState = true;
             this.checkBoxM5Pause.UseVisualStyleBackColor = true;
+            this.checkBoxM5Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM5Pause_CheckStateChanged);
             // 
             // checkBoxM5Start
             // 
@@ -4952,6 +4921,7 @@
             this.checkBoxM4Pause.Name = "checkBoxM4Pause";
             this.checkBoxM4Pause.ThreeState = true;
             this.checkBoxM4Pause.UseVisualStyleBackColor = true;
+            this.checkBoxM4Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM4Pause_CheckStateChanged);
             // 
             // checkBoxM4Start
             // 
@@ -5009,6 +4979,7 @@
             this.checkBoxM1Pause.Name = "checkBoxM1Pause";
             this.checkBoxM1Pause.ThreeState = true;
             this.checkBoxM1Pause.UseVisualStyleBackColor = true;
+            this.checkBoxM1Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM1Pause_CheckStateChanged);
             // 
             // checkBoxM1Start
             // 
@@ -5230,12 +5201,12 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
+            this.tabControlMain.Controls.Add(this.tabPage4);
+            this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
             this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Controls.Add(this.tabPageHide);
             this.tabControlMain.Controls.Add(this.tabPageHelp);
             this.tabControlMain.Controls.Add(this.tabPageSettings);
-            this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
-            this.tabControlMain.Controls.Add(this.tabPage4);
             this.tabControlMain.Controls.Add(this.tabPageConsole);
             this.tabControlMain.Controls.Add(this.tabPageRecipe);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
@@ -5265,7 +5236,7 @@
             this.tabPageHelp,
             this.tabPageHide});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageMain;
+            this.tabControlMain.SelectedPage = this.tabPage4;
             tabPageColorStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle27.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle27.TabImage = ((System.Drawing.Image)(resources.GetObject("tabPageColorStyle27.TabImage")));
@@ -5467,11 +5438,9 @@
         private System.Windows.Forms.CheckBox checkBoxM2Inclusion;
         private System.Windows.Forms.ComboBox comboBoxM2PrgName;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedLineReady;
-        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonStartStop;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedLineStatus;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedAirPressure;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedEmergency;
-        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonPause;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedSystemConnection;
         private System.Windows.Forms.Button buttonResetCounter;
         private LidorSystems.IntegralUI.Controls.Label labelPieceCounter;
