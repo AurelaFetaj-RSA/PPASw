@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle1 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle2 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -44,7 +43,7 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle8 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle9 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle10 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle2 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
+            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle1 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle7 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabStripStyle tabStripStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabStripStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
@@ -57,7 +56,7 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle11 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle12 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle13 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle3 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
+            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle2 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle10 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle2 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolTipStyle toolTipStyle2 = new LidorSystems.IntegralUI.Controls.Style.ToolTipStyle();
@@ -66,7 +65,7 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle14 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle15 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle16 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle4 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
+            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle3 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle16 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabStripStyle tabStripStyle2 = new LidorSystems.IntegralUI.Containers.Style.TabStripStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle3 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
@@ -83,7 +82,7 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle17 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle18 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle19 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle5 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
+            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle4 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle22 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabStripStyle tabStripStyle3 = new LidorSystems.IntegralUI.Containers.Style.TabStripStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle4 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
@@ -104,7 +103,7 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle23 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle24 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle25 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle6 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
+            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle5 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle28 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabStripStyle tabStripStyle4 = new LidorSystems.IntegralUI.Containers.Style.TabStripStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle5 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
@@ -113,7 +112,7 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Style.ControlColorStyle controlColorStyle1 = new LidorSystems.IntegralUI.Style.ControlColorStyle();
-            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle7 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
+            LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle6 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemColorStyle toolItemColorStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolItemColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle30 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
@@ -125,7 +124,6 @@
             LidorSystems.IntegralUI.Controls.Style.ToolTipStyle toolTipStyle6 = new LidorSystems.IntegralUI.Controls.Style.ToolTipStyle();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.buttonResetCounter = new System.Windows.Forms.Button();
-            this.labelPieceCounter = new LidorSystems.IntegralUI.Controls.Label();
             this.lbLedLineReady = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLedLineStatus = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLedAirPressure = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -155,6 +153,7 @@
             this.labelM2Param1Name = new System.Windows.Forms.Label();
             this.lbLedM2Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.checkBoxM2Inclusion = new System.Windows.Forms.CheckBox();
+            this.imageListMIncEsc = new System.Windows.Forms.ImageList(this.components);
             this.comboBoxM2PrgName = new System.Windows.Forms.ComboBox();
             this.labelM1Param1Value = new System.Windows.Forms.Label();
             this.labelM1Param1Name = new System.Windows.Forms.Label();
@@ -441,7 +440,7 @@
             this.groupBoxLine = new System.Windows.Forms.GroupBox();
             this.checkBoxPause = new System.Windows.Forms.CheckBox();
             this.checkBoxStartStop = new System.Windows.Forms.CheckBox();
-            this.buttonM2Reset = new System.Windows.Forms.Button();
+            this.buttonMReset = new System.Windows.Forms.Button();
             this.comboBoxAutoModelNameLst = new System.Windows.Forms.ComboBox();
             this.groupBoxM6 = new System.Windows.Forms.GroupBox();
             this.checkBoxM6Pause = new System.Windows.Forms.CheckBox();
@@ -458,6 +457,7 @@
             this.checkBoxM4Pause = new System.Windows.Forms.CheckBox();
             this.checkBoxM4Start = new System.Windows.Forms.CheckBox();
             this.groupBoxM2 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.checkBoxM2Pause = new System.Windows.Forms.CheckBox();
             this.checkBoxM2Start = new System.Windows.Forms.CheckBox();
             this.groupBoxM1 = new System.Windows.Forms.GroupBox();
@@ -492,7 +492,6 @@
             this.imageListStartStop = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.labelPieceCounter)).BeginInit();
             this.tabPageHelp.SuspendLayout();
             this.tabPageSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT5)).BeginInit();
@@ -578,14 +577,6 @@
             resources.ApplyResources(this.buttonResetCounter, "buttonResetCounter");
             this.buttonResetCounter.Name = "buttonResetCounter";
             this.buttonResetCounter.UseVisualStyleBackColor = true;
-            // 
-            // labelPieceCounter
-            // 
-            this.labelPieceCounter.BackColor = System.Drawing.Color.Transparent;
-            controlFormatStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPieceCounter.FormatStyle = controlFormatStyle1;
-            resources.ApplyResources(this.labelPieceCounter, "labelPieceCounter");
-            this.labelPieceCounter.Name = "labelPieceCounter";
             // 
             // lbLedLineReady
             // 
@@ -883,9 +874,19 @@
             this.checkBoxM2Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.checkBoxM2Inclusion.FlatAppearance.BorderSize = 0;
             this.checkBoxM2Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM2Inclusion.ImageList = this.imageListMIncEsc;
             this.checkBoxM2Inclusion.Name = "checkBoxM2Inclusion";
+            this.checkBoxM2Inclusion.ThreeState = true;
             this.checkBoxM2Inclusion.UseVisualStyleBackColor = true;
-            this.checkBoxM2Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM2Inclusion_CheckedChanged);
+            this.checkBoxM2Inclusion.CheckStateChanged += new System.EventHandler(this.checkBoxM2Inclusion_CheckStateChanged);
+            // 
+            // imageListMIncEsc
+            // 
+            this.imageListMIncEsc.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMIncEsc.ImageStream")));
+            this.imageListMIncEsc.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListMIncEsc.Images.SetKeyName(0, "preached.png");
+            this.imageListMIncEsc.Images.SetKeyName(1, "pnotreached.png");
+            this.imageListMIncEsc.Images.SetKeyName(2, "indeterminate.png");
             // 
             // comboBoxM2PrgName
             // 
@@ -1069,8 +1070,8 @@
             this.tabControlT5.Controls.Add(this.tabPage2);
             this.tabControlT5.Controls.Add(this.tabPageT5M5_1);
             this.tabControlT5.Cursor = System.Windows.Forms.Cursors.Default;
-            controlFormatStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlT5.FormatStyle = controlFormatStyle2;
+            controlFormatStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlT5.FormatStyle = controlFormatStyle1;
             resources.ApplyResources(this.tabControlT5, "tabControlT5");
             this.tabControlT5.Name = "tabControlT5";
             tabPageFormatStyle7.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1858,8 +1859,8 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage7);
-            controlFormatStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.FormatStyle = controlFormatStyle3;
+            controlFormatStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl1.FormatStyle = controlFormatStyle2;
             resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             tabPageFormatStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1937,8 +1938,8 @@
             this.tabControlT3.Controls.Add(this.tabPageT3M3_3);
             this.tabControlT3.Controls.Add(this.tabPageT3M3_2);
             this.tabControlT3.Cursor = System.Windows.Forms.Cursors.Default;
-            controlFormatStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlT3.FormatStyle = controlFormatStyle4;
+            controlFormatStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlT3.FormatStyle = controlFormatStyle3;
             resources.ApplyResources(this.tabControlT3, "tabControlT3");
             this.tabControlT3.Name = "tabControlT3";
             tabPageFormatStyle16.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2544,8 +2545,8 @@
             this.tabControlT2.Controls.Add(this.tabPageT2M2_3);
             this.tabControlT2.Controls.Add(this.tabPageT2M2_2);
             this.tabControlT2.Cursor = System.Windows.Forms.Cursors.Default;
-            controlFormatStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlT2.FormatStyle = controlFormatStyle5;
+            controlFormatStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlT2.FormatStyle = controlFormatStyle4;
             resources.ApplyResources(this.tabControlT2, "tabControlT2");
             this.tabControlT2.Name = "tabControlT2";
             tabPageFormatStyle22.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4716,8 +4717,8 @@
             this.tabControlT0.Controls.Add(this.tabPageT0_3);
             this.tabControlT0.Controls.Add(this.tabPageT0_2);
             this.tabControlT0.Cursor = System.Windows.Forms.Cursors.Default;
-            controlFormatStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlT0.FormatStyle = controlFormatStyle6;
+            controlFormatStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlT0.FormatStyle = controlFormatStyle5;
             resources.ApplyResources(this.tabControlT0, "tabControlT0");
             this.tabControlT0.Name = "tabControlT0";
             tabPageFormatStyle28.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4759,13 +4760,12 @@
             // 
             this.groupBoxLine.Controls.Add(this.checkBoxPause);
             this.groupBoxLine.Controls.Add(this.checkBoxStartStop);
-            this.groupBoxLine.Controls.Add(this.buttonM2Reset);
+            this.groupBoxLine.Controls.Add(this.buttonMReset);
             this.groupBoxLine.Controls.Add(this.comboBoxAutoModelNameLst);
             this.groupBoxLine.Controls.Add(this.lbLedEmergency);
             this.groupBoxLine.Controls.Add(this.lbLedAirPressure);
             this.groupBoxLine.Controls.Add(this.lbLedLineStatus);
             this.groupBoxLine.Controls.Add(this.buttonResetCounter);
-            this.groupBoxLine.Controls.Add(this.labelPieceCounter);
             this.groupBoxLine.Controls.Add(this.lbLedLineReady);
             this.groupBoxLine.Controls.Add(this.lbLedSystemConnection);
             resources.ApplyResources(this.groupBoxLine, "groupBoxLine");
@@ -4786,12 +4786,12 @@
             this.checkBoxStartStop.UseVisualStyleBackColor = true;
             this.checkBoxStartStop.CheckStateChanged += new System.EventHandler(this.checkBoxStartStop_CheckStateChanged);
             // 
-            // buttonM2Reset
+            // buttonMReset
             // 
-            resources.ApplyResources(this.buttonM2Reset, "buttonM2Reset");
-            this.buttonM2Reset.Name = "buttonM2Reset";
-            this.buttonM2Reset.UseVisualStyleBackColor = true;
-            this.buttonM2Reset.Click += new System.EventHandler(this.buttonM2Reset_Click);
+            resources.ApplyResources(this.buttonMReset, "buttonMReset");
+            this.buttonMReset.Name = "buttonMReset";
+            this.buttonMReset.UseVisualStyleBackColor = true;
+            this.buttonMReset.Click += new System.EventHandler(this.buttonM2Reset_Click);
             // 
             // comboBoxAutoModelNameLst
             // 
@@ -4933,6 +4933,7 @@
             // 
             // groupBoxM2
             // 
+            this.groupBoxM2.Controls.Add(this.button3);
             this.groupBoxM2.Controls.Add(this.checkBoxM2Pause);
             this.groupBoxM2.Controls.Add(this.comboBoxM2PrgName);
             this.groupBoxM2.Controls.Add(this.labelM2Param1Value);
@@ -4943,6 +4944,12 @@
             resources.ApplyResources(this.groupBoxM2, "groupBoxM2");
             this.groupBoxM2.Name = "groupBoxM2";
             this.groupBoxM2.TabStop = false;
+            // 
+            // button3
+            // 
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.Name = "button3";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // checkBoxM2Pause
             // 
@@ -5201,20 +5208,20 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPage4);
-            this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
             this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Controls.Add(this.tabPageHide);
             this.tabControlMain.Controls.Add(this.tabPageHelp);
             this.tabControlMain.Controls.Add(this.tabPageSettings);
+            this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
+            this.tabControlMain.Controls.Add(this.tabPage4);
             this.tabControlMain.Controls.Add(this.tabPageConsole);
             this.tabControlMain.Controls.Add(this.tabPageRecipe);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlMain, "tabControlMain");
-            controlFormatStyle7.BorderCornerRadius = 5;
-            controlFormatStyle7.BorderLineStyle = LidorSystems.IntegralUI.Style.LineStyle.None;
-            controlFormatStyle7.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlMain.FormatStyle = controlFormatStyle7;
+            controlFormatStyle6.BorderCornerRadius = 5;
+            controlFormatStyle6.BorderLineStyle = LidorSystems.IntegralUI.Style.LineStyle.None;
+            controlFormatStyle6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlMain.FormatStyle = controlFormatStyle6;
             this.tabControlMain.Name = "tabControlMain";
             tabPageColorStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle26.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
@@ -5236,7 +5243,7 @@
             this.tabPageHelp,
             this.tabPageHide});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPage4;
+            this.tabControlMain.SelectedPage = this.tabPageMain;
             tabPageColorStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle27.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle27.TabImage = ((System.Drawing.Image)(resources.GetObject("tabPageColorStyle27.TabImage")));
@@ -5313,7 +5320,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
             this.splitContainer6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.labelPieceCounter)).EndInit();
             this.tabPageHelp.ResumeLayout(false);
             this.tabPageSettings.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT5)).EndInit();
@@ -5443,7 +5449,6 @@
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedEmergency;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedSystemConnection;
         private System.Windows.Forms.Button buttonResetCounter;
-        private LidorSystems.IntegralUI.Controls.Label labelPieceCounter;
         private LidorSystems.IntegralUI.Containers.TabControl tabControlT2;
         private LidorSystems.IntegralUI.Containers.TabPage tabPageT2M2_1;
         private System.Windows.Forms.Button buttonM2PrintCycle;
@@ -5732,7 +5737,7 @@
         private System.Windows.Forms.Label labelM4TeachAxisQuoteValue;
         private LidorSystems.IntegralUI.Containers.TabPage tabPageT0_3;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM2PCKeepAlive;
-        private System.Windows.Forms.Button buttonM2Reset;
+        private System.Windows.Forms.Button buttonMReset;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM4PCKeepAlive;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM1PCKeepAlive;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM3PCKeepAlive;
@@ -5762,6 +5767,8 @@
         private System.Windows.Forms.CheckBox checkBoxPause;
         private System.Windows.Forms.CheckBox checkBoxStartStop;
         private System.Windows.Forms.ImageList imageListStartStop;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ImageList imageListMIncEsc;
     }
 }
 

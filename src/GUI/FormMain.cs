@@ -626,23 +626,6 @@ namespace GUI
             //todo: chi lo mette a false
         }
 
-        private async void checkBoxM2Inclusion_CheckedChanged(object sender, EventArgs e)
-        {
-            string keyToSend = null;
-
-            keyToSend = "pcM2Inclusion";
-            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
-            {
-                var readResult = await ccService.Send(keyToSend, true);
-                checkBoxM2Inclusion.Text = "inclusa";
-            }
-            else
-            {
-                var readResult = await ccService.Send(keyToSend, false);
-                checkBoxM2Inclusion.Text = "esclusa";
-            }
-        }
-
         private async void checkBoxM1Inclusion_CheckedChanged(object sender, EventArgs e)
         {
             string keyToSend = null;
@@ -2633,6 +2616,23 @@ namespace GUI
                 if (state) checkBoxM1Pause.Image = imageListStart.Images[4];
                 else checkBoxM1Pause.Image = imageListStart.Images[3];
             }
+        }
+
+        private async void checkBoxM2Inclusion_CheckStateChanged(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+            bool chkValue = false;
+
+            checkBoxM2Inclusion.Text = ""; //todo: to remove once initialized
+            keyToSend = "pcM2Inclusion";
+            chkValue = (checkBoxM2Inclusion.CheckState == CheckState.Checked) ? true : false;
+
+            var sendResult = await ccService.Send(keyToSend, chkValue);
+            if (sendResult.OpcResult)
+            {
+                checkBoxM2Inclusion.BackgroundImage = (chkValue) ? imageListMIncEsc.Images[0] : imageListMIncEsc.Images[1];
+            }
+            else checkBoxM2Inclusion.BackgroundImage = imageListMIncEsc.Images[2];
         }
     }
 }

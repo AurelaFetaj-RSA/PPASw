@@ -181,7 +181,7 @@
     <value>Verdana, 9.75pt</value>
   </data>
   <data name="buttonResetCounter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 226</value>
+    <value>376, 148</value>
   </data>
   <data name="buttonResetCounter.Size" type="System.Drawing.Size, System.Drawing">
     <value>142, 29</value>
@@ -204,30 +204,6 @@
   <data name="&gt;&gt;buttonResetCounter.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="labelPieceCounter.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 270</value>
-  </data>
-  <data name="labelPieceCounter.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 32</value>
-  </data>
-  <data name="labelPieceCounter.TabIndex" type="System.Int32, mscorlib">
-    <value>84</value>
-  </data>
-  <data name="labelPieceCounter.Text" xml:space="preserve">
-    <value>counter</value>
-  </data>
-  <data name="&gt;&gt;labelPieceCounter.Name" xml:space="preserve">
-    <value>labelPieceCounter</value>
-  </data>
-  <data name="&gt;&gt;labelPieceCounter.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Controls.Label, LidorSystems.IntegralUI, Version=4.0.0.0, Culture=neutral, PublicKeyToken=520f5185833939dc</value>
-  </data>
-  <data name="&gt;&gt;labelPieceCounter.Parent" xml:space="preserve">
-    <value>groupBoxLine</value>
-  </data>
-  <data name="&gt;&gt;labelPieceCounter.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
   <data name="lbLedLineReady.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -235,7 +211,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedLineReady.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 245</value>
+    <value>199, 167</value>
   </data>
   <data name="lbLedLineReady.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 20</value>
@@ -253,7 +229,7 @@
     <value>groupBoxLine</value>
   </data>
   <data name="&gt;&gt;lbLedLineReady.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="lbLedLineStatus.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -262,7 +238,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedLineStatus.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 212</value>
+    <value>199, 134</value>
   </data>
   <data name="lbLedLineStatus.Size" type="System.Drawing.Size, System.Drawing">
     <value>136, 20</value>
@@ -289,7 +265,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedAirPressure.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 245</value>
+    <value>36, 167</value>
   </data>
   <data name="lbLedAirPressure.Size" type="System.Drawing.Size, System.Drawing">
     <value>108, 20</value>
@@ -316,7 +292,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedEmergency.Location" type="System.Drawing.Point, System.Drawing">
-    <value>45, 212</value>
+    <value>36, 134</value>
   </data>
   <data name="lbLedEmergency.Size" type="System.Drawing.Size, System.Drawing">
     <value>115, 20</value>
@@ -343,7 +319,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedSystemConnection.Location" type="System.Drawing.Point, System.Drawing">
-    <value>208, 276</value>
+    <value>199, 198</value>
   </data>
   <data name="lbLedSystemConnection.Size" type="System.Drawing.Size, System.Drawing">
     <value>120, 20</value>
@@ -361,7 +337,7 @@
     <value>groupBoxLine</value>
   </data>
   <data name="&gt;&gt;lbLedSystemConnection.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="labelM6Param1Value.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1108,7 +1084,7 @@
   <data name="checkBoxM5Inclusion.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAzJJREFUaEPtWUFrE0EYjX9D/Q+SNEIuFW2TrLQNTQtCwBKzSRuSUkPqRXtoq6YK
+        EAAACxABrSO9dQAAAzJJREFUaEPtWUFrE0EYjX9D/Q+SNEIuFW2TrLQNTQtCwBKzSRuSUkPqRXtoq6YK
         bSoYKzVmE6kXKdSD4EnUixZPUhBvHvXgqYIGBJvC+M12JozJpjOzu8kG2QfvNPO9773Z2d1k1uPChYv/
         HKhSOX2oaUuH1epOo1otNWq1IBmyHQ1NC+EeuBf0XERbW6fIkDkcVCqDIPgDBBFLaFRECJ0g0ywDa0Gf
         9bY+0Bt7INPkQMzXW0Up8UrZEYKYx6veqU9dOgTeNji9kSBLqyF45ilhzr7UdsL7z0jIiGZDiJqnhLkr
@@ -1545,7 +1521,7 @@
     <value>groupBoxM2</value>
   </data>
   <data name="&gt;&gt;labelM2Param1Value.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="labelM2Param1Name.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1560,13 +1536,13 @@
     <value>10, 60</value>
   </data>
   <data name="labelM2Param1Name.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 16</value>
+    <value>47, 16</value>
   </data>
   <data name="labelM2Param1Name.TabIndex" type="System.Int32, mscorlib">
     <value>123</value>
   </data>
   <data name="labelM2Param1Name.Text" xml:space="preserve">
-    <value>param 1 name</value>
+    <value>on/off</value>
   </data>
   <data name="&gt;&gt;labelM2Param1Name.Name" xml:space="preserve">
     <value>labelM2Param1Name</value>
@@ -1578,7 +1554,7 @@
     <value>groupBoxM2</value>
   </data>
   <data name="&gt;&gt;labelM2Param1Name.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lbLedM2Status.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1587,7 +1563,7 @@
     <value>Verdana, 8.25pt</value>
   </data>
   <data name="lbLedM2Status.Location" type="System.Drawing.Point, System.Drawing">
-    <value>194, 94</value>
+    <value>200, 110</value>
   </data>
   <data name="lbLedM2Status.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 20</value>
@@ -1605,26 +1581,10 @@
     <value>groupBoxM2</value>
   </data>
   <data name="&gt;&gt;lbLedM2Status.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="checkBoxM2Inclusion.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
     <value>Button</value>
-  </data>
-  <data name="checkBoxM2Inclusion.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAj1JREFUaEPtlr9P20AUxzNWov07ygBDQkEZuoCaBEEFCyQDQ3AGVOyAgjK1Q9WC
-        mKpu/FiQwjmZKvEPwEDVUFXdWDq3PYOq0rkC0VBzZ96TIDmIfcHxDfeRvtPdvXze2dZLTKPRaDQaFcl/
-        rzywHLJiUnJoUvuEZc90yBgsq03hz9YjJvvJcmz3Rij5z5oqwTY18eSpfdAifz2ULMB2tfAlz0NJwzqu
-        JuCYGnB5Jldvkb0963A0eoLIG1833aHJOff5+9ff4Hi0BL35zJuXbiJluMOl8kcoER1B5SfWlj35gVHj
-        vD9TeAxlokFWnqUxkJqdhjLRUP5l97ABtS8SFQXl4ynjIpEuzEAZMfNOddybet70I4eswDKfirDcMbI3
-        70ueT7mraXezCJ+K/IdhmzShypuOvSgqguEDppMmQpWfp9VBJnghKtSUukwTocpz2CvyTlRIGEo+B2ki
-        1A8Wsai9Iyp2R3w9idBvHmG3uioq2CZ3NmH+/vCQ72k6c2uk5TnF40ovK3LaXNRHhE10VR4xj6pZ9q7+
-        E/1Am9S5MJSJRh4xne0pqSbgw+7KB9uO4k+Sk30SENFaS0KRR6SfhM+EKo+E1URX5JH7bqKr8sh9NRGJ
-        PNJpE5HKI7JNKCGPBG1CKXnEbxNKyiPtmlBaHmme2OYP4hpfNtzRt688eZZGPD2bg+1q4v0BdOwz3sDT
-        fBHF3XjaOE88M7KwTW0sWuu3HFIbWSr/TU7PnSVzL3afpAp9sKzRaDQalYnFLgFKerLMqpegKgAAAABJ
-        RU5ErkJggg==
-</value>
   </data>
   <data name="checkBoxM2Inclusion.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -1635,17 +1595,91 @@
   <data name="checkBoxM2Inclusion.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 8.25pt</value>
   </data>
+  <metadata name="imageListMIncEsc.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>439, 17</value>
+  </metadata>
+  <data name="imageListMIncEsc.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAs
+        DgAAAk1TRnQBSQFMAgEBAwEAARABAAEQAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABgAMAASADAAEBAQABCAYAARAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD//8ApwAB/wEbAfcB8w4A
+        Af8BBwGSAf9QAAH0AbwB8AH/FQAB/wG9AZQB6wFmAQcB/wsAAfQBlAGTAW0BZgHxTgAB8wGdAWwCZgH0
+        EwAB/wSUAZMBZgHvAf8JAAH0BJQB6wFmAf8IAAL/AQAD/wH0A/8BAAP/AfQD/wEAAfQD/y0AAfIEnQFs
+        AewB9BIAAfQFlAGNAWYBBwH/BwAB9AaUAW0B7wgAAQcBFQH/AeoB7QHzAUMB8gH3ARMB/wEUAe8B8AFD
+        AfQB7AHrAfQBFQG8Af8BEQL/KgAB8wadAWwBZgH0EQAB9AaUAZMBZgHvAf8FAAH0B5QBbQHvHwAB9AFD
+        Af8oAAHyCJ0BbAHsAfQQAAH/Ab0GlAGNAWYB7wH/AwAB9AeUAesBbQH0BwABkgHvFwAB8QH/JwAB8wqd
+        AWwBZgH0EAAB/wG9BpQBkwFmAfcB/wEAAfQHlAHrAWYB8gcAAfIBFQERAfMWAAHyAfEmAAHyDJ0BbAHs
+        AfQQAAH/Ab0GlAGNAWYB7wH0B5QB6wFtAfIHAAH/ARUB8gHxARMB/xUAAe8BvCUAAfMOnQFsAWYB9BAA
+        Af8BvQaUAZMBZgGNBpQB6wFmAfIIAAEHAewCAAFtAQcUAAHyAf8lAAHyCJ0BuwedAWwB7AH0EAAB/wG9
+        BpQCkwWUAesBbQHyCAAB/wEQAfQCAAHzAUMB/wMAAf8B8wHyARQB8wGSAW0B/wETAQcB8AEUAfQC7AHz
+        ARIB9CQAAfMInQG7Af8B8wedAWwBZgH0EAAB/wG9C5QB6wFmAfIJAAHwAewB/wKSAf8BbQHxAwAB7QGS
+        Af8B9AL/AfQBAAH0Av8B9AP/JgAB8widAbsB9AEAAf8B8wedAWwB7AH0EAAB/wG9CZQB6wFtAfIKAAHv
+        AgcB7AHrAbwB7wEHAgAD/zMAAbsHnQG7Af8EAAHzB50BbAFmAfQQAAH/Ab0HlAHsAWYB8wsAAfAB6wHy
+        AhEB8gFtAfECAAEHAe80AAG7Bp0BuwH0BQAB/wHzB50BbAHsAfQPAAH0CJQBjgFmAQcB/woAAf8BEwHv
+        AvIB9wESAf8CAALzNAABCAWdAbsB/wgAAfMHnQFsAWYB9A0AAfQKlAGTAWYB7wH/CgAB/wHsAhAB7QH/
+        BAAB7wH0MwAB/wEIA50BuwH0CQAB/wHzB50BbAHsAfQLAAH0DJQBjQFmAQcB/xMAAfEB7wHyAe0B/wLv
+        MAAB8QGdAQgB/wwAAfMHnQFsAWYB9AkAAfQOlAGTAWYB7wH/FAAB9AHwAf8C8kAAAf8B8wedAWwB7AH0
+        BwAB9AmUAb0GlAGNAWYBBwH/FgAB9AHsAf9BAAHzB50BbAFmAf8FAAH0CZQB9AH/Ab0GlAGTAWYB7wH/
+        FQABbQERAQdBAAH/AfMHnQFmAfEEAAH0CZQB9AIAAf8BvQaUAY0BZgEHFAAB8gETAfQBEAH/QgAB8wed
+        AfQDAAH/CZQB9AQAAf8BvQaUAZMBZgHzEwAB7AHwAfEB7QEHQgAB/wHyBZ0BCAH/AwAB9AiUAfQGAAH/
+        Ab0GlAHrAZITAAHsAQcBvAHsAQdEAAHzA50BCAUAAfQHlAH0CAAB/wG9BpQBGxMAAfQBQwEQAW0B/0QA
+        Af8B9AHyAfMB/wUAAf8BGgWUAfQKAAH/Ab0ElAG9Af8UAAL/UgABGgOUAfQMAAH/Ab0DlAH/aQAB/wL0
+        Af8OAAH/AvQB//8AxgABQgFNAT4HAAE+AwABKAMAAYADAAEgAwABAQEAAQEGAAECFgAD/wEADP8EAAz/
+        BAAM/wQABP8B+AF/Af4BHwT/BAAB/wHhAv8B8AEfAfwBDwT/BAAB/wHAAv8B4AEPAfgBBwH5AgEBDwQA
+        Af8BgAF/Af8B4AEHAfABBwH4AgABAwQAAf8BAAE/Af8B4AEDAeABBwP/AfEEAAH+AQABHwH/AeABAQHA
+        AQcB8wL/AfkEAAH8AQABDwH/AfABAAGAAQ8B4QL/AfkEAAH4AQABBwH/AfgCAAEfAcAC/wH5BAAB8AEA
+        AQMB/wH8AgABPwHMAv8B8wQAAeABAAEBAf8B/gIAAX8BjAFwAQABAwQAAcACAAL/AgAB/wGAAXABEAEf
+        BAABgAEIAQABfwH/AYABAQH/AYABYwL/BAABgAEeAQABPwH/AcABAwH/AYABZwL/BAABgAE+AQABHwH/
+        AcABAQH/AYABZwL/BAABgAF/AYABDwH/AYABAAH/AcAB8wL/BAABgAH/AYABBwH/AgABfwH/AfABHwH/
+        BAAB4QH/AeABAwH+AgABPwH/AfwBHwH/BAAC/wHgAQEB/AIAAR8C/wGPAf8EAAL/AfgBAAH4AgABDwL/
+        AY8B/wQAAv8B+AEAAfABAQGAAQ8C/wEHAf8EAAL/Af4BAAHgAQMBwAEHAv8BBwH/BAAC/wH+AQAB4AEH
+        AeABBwL/AQcB/wQAA/8BgwHgAQ8B8AEHAv8BBwH/BAAD/wGDAeABHwH4AQcC/wGfAf8EAAT/AfgBPwH8
+        AQ8E/wQABP8B+AF/Af4BHwT/BAAM/wQADP8EAAz/BAAL
+</value>
+  </data>
   <data name="checkBoxM2Inclusion.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="checkBoxM2Inclusion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>236, 20</value>
+    <value>220, 20</value>
   </data>
   <data name="checkBoxM2Inclusion.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 32</value>
   </data>
   <data name="checkBoxM2Inclusion.TabIndex" type="System.Int32, mscorlib">
     <value>32</value>
+  </data>
+  <data name="checkBoxM2Inclusion.Text" xml:space="preserve">
+    <value>inc/esc</value>
   </data>
   <data name="checkBoxM2Inclusion.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1663,7 +1697,7 @@
     <value>groupBoxM2</value>
   </data>
   <data name="&gt;&gt;checkBoxM2Inclusion.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="comboBoxM2PrgName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
@@ -1690,7 +1724,7 @@
     <value>groupBoxM2</value>
   </data>
   <data name="&gt;&gt;comboBoxM2PrgName.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="labelM1Param1Value.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1959,7 +1993,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxM1Inclusion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>126, 37</value>
+    <value>220, 20</value>
   </data>
   <data name="checkBoxM1Inclusion.Size" type="System.Drawing.Size, System.Drawing">
     <value>48, 48</value>
@@ -2045,7 +2079,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageHide.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="buttonConfigParser.Location" type="System.Drawing.Point, System.Drawing">
     <value>86, 49</value>
@@ -2104,7 +2138,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageHelp.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="lbLed1020M5.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -3608,7 +3642,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageSettings.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="labelM4TeachAxisQuoteName.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -3765,7 +3799,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;TabPageDiagnostic.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>4</value>
   </data>
   <data name="button2.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 9.75pt</value>
@@ -5380,7 +5414,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>5</value>
   </data>
   <data name="comboBoxM2TeachModelName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
@@ -9636,41 +9670,41 @@
   <data name="&gt;&gt;checkBoxStartStop.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="buttonM2Reset.Font" type="System.Drawing.Font, System.Drawing">
+  <data name="buttonMReset.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 9.75pt</value>
   </data>
-  <data name="buttonM2Reset.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="buttonMReset.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="buttonM2Reset.Location" type="System.Drawing.Point, System.Drawing">
-    <value>682, 243</value>
+  <data name="buttonMReset.Location" type="System.Drawing.Point, System.Drawing">
+    <value>673, 165</value>
   </data>
-  <data name="buttonM2Reset.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="buttonMReset.Size" type="System.Drawing.Size, System.Drawing">
     <value>160, 53</value>
   </data>
-  <data name="buttonM2Reset.TabIndex" type="System.Int32, mscorlib">
+  <data name="buttonMReset.TabIndex" type="System.Int32, mscorlib">
     <value>87</value>
   </data>
-  <data name="buttonM2Reset.Text" xml:space="preserve">
+  <data name="buttonMReset.Text" xml:space="preserve">
     <value>M2 reset</value>
   </data>
-  <data name="&gt;&gt;buttonM2Reset.Name" xml:space="preserve">
-    <value>buttonM2Reset</value>
+  <data name="&gt;&gt;buttonMReset.Name" xml:space="preserve">
+    <value>buttonMReset</value>
   </data>
-  <data name="&gt;&gt;buttonM2Reset.Type" xml:space="preserve">
+  <data name="&gt;&gt;buttonMReset.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;buttonM2Reset.Parent" xml:space="preserve">
+  <data name="&gt;&gt;buttonMReset.Parent" xml:space="preserve">
     <value>groupBoxLine</value>
   </data>
-  <data name="&gt;&gt;buttonM2Reset.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;buttonMReset.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <data name="comboBoxAutoModelNameLst.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
   </data>
   <data name="comboBoxAutoModelNameLst.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 173</value>
+    <value>231, 95</value>
   </data>
   <data name="comboBoxAutoModelNameLst.Size" type="System.Drawing.Size, System.Drawing">
     <value>164, 26</value>
@@ -9691,10 +9725,10 @@
     <value>3</value>
   </data>
   <data name="groupBoxLine.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 270</value>
+    <value>10, 360</value>
   </data>
   <data name="groupBoxLine.Size" type="System.Drawing.Size, System.Drawing">
-    <value>850, 320</value>
+    <value>850, 240</value>
   </data>
   <data name="groupBoxLine.TabIndex" type="System.Int32, mscorlib">
     <value>86</value>
@@ -9721,7 +9755,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxM6Pause.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 80</value>
+    <value>64, 110</value>
   </data>
   <data name="checkBoxM6Pause.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 23</value>
@@ -9757,7 +9791,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxM6Start.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 20</value>
+    <value>10, 110</value>
   </data>
   <data name="checkBoxM6Start.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 23</value>
@@ -9784,10 +9818,10 @@
     <value>1</value>
   </data>
   <data name="groupBoxM6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>580, 140</value>
+    <value>580, 180</value>
   </data>
   <data name="groupBoxM6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 120</value>
+    <value>280, 160</value>
   </data>
   <data name="groupBoxM6.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -9817,7 +9851,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxM3Pause.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 80</value>
+    <value>64, 110</value>
   </data>
   <data name="checkBoxM3Pause.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 23</value>
@@ -9904,7 +9938,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxM3Start.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 20</value>
+    <value>10, 110</value>
   </data>
   <data name="checkBoxM3Start.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 23</value>
@@ -9934,7 +9968,7 @@
     <value>580, 10</value>
   </data>
   <data name="groupBoxM3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 120</value>
+    <value>280, 160</value>
   </data>
   <data name="groupBoxM3.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -9964,7 +9998,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxM5Pause.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 87</value>
+    <value>64, 110</value>
   </data>
   <data name="checkBoxM5Pause.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 23</value>
@@ -10000,7 +10034,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxM5Start.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 91</value>
+    <value>10, 110</value>
   </data>
   <data name="checkBoxM5Start.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 23</value>
@@ -10027,10 +10061,10 @@
     <value>2</value>
   </data>
   <data name="groupBoxM5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 140</value>
+    <value>295, 180</value>
   </data>
   <data name="groupBoxM5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 120</value>
+    <value>280, 160</value>
   </data>
   <data name="groupBoxM5.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -10060,7 +10094,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxM4Pause.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 80</value>
+    <value>64, 110</value>
   </data>
   <data name="checkBoxM4Pause.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 23</value>
@@ -10096,7 +10130,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxM4Start.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 20</value>
+    <value>10, 110</value>
   </data>
   <data name="checkBoxM4Start.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 23</value>
@@ -10123,10 +10157,10 @@
     <value>3</value>
   </data>
   <data name="groupBoxM4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 140</value>
+    <value>10, 180</value>
   </data>
   <data name="groupBoxM4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 120</value>
+    <value>280, 160</value>
   </data>
   <data name="groupBoxM4.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -10146,6 +10180,36 @@
   <data name="&gt;&gt;groupBoxM4.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="button3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="button3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="button3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 110</value>
+  </data>
+  <data name="button3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 24</value>
+  </data>
+  <data name="button3.TabIndex" type="System.Int32, mscorlib">
+    <value>88</value>
+  </data>
+  <data name="button3.Text" xml:space="preserve">
+    <value>RESET</value>
+  </data>
+  <data name="&gt;&gt;button3.Name" xml:space="preserve">
+    <value>button3</value>
+  </data>
+  <data name="&gt;&gt;button3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;button3.Parent" xml:space="preserve">
+    <value>groupBoxM2</value>
+  </data>
+  <data name="&gt;&gt;button3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="checkBoxM2Pause.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
     <value>Button</value>
   </data>
@@ -10156,7 +10220,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxM2Pause.Location" type="System.Drawing.Point, System.Drawing">
-    <value>93, 94</value>
+    <value>64, 110</value>
   </data>
   <data name="checkBoxM2Pause.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 23</value>
@@ -10180,7 +10244,7 @@
     <value>groupBoxM2</value>
   </data>
   <data name="&gt;&gt;checkBoxM2Pause.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="checkBoxM2Start.Appearance" type="System.Windows.Forms.Appearance, System.Windows.Forms">
     <value>Button</value>
@@ -10192,7 +10256,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxM2Start.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 90</value>
+    <value>10, 110</value>
   </data>
   <data name="checkBoxM2Start.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 23</value>
@@ -10216,13 +10280,13 @@
     <value>groupBoxM2</value>
   </data>
   <data name="&gt;&gt;checkBoxM2Start.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="groupBoxM2.Location" type="System.Drawing.Point, System.Drawing">
     <value>295, 10</value>
   </data>
   <data name="groupBoxM2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 120</value>
+    <value>280, 160</value>
   </data>
   <data name="groupBoxM2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -10252,7 +10316,7 @@
     <value>NoControl</value>
   </data>
   <data name="checkBoxM1Pause.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 80</value>
+    <value>64, 110</value>
   </data>
   <data name="checkBoxM1Pause.Size" type="System.Drawing.Size, System.Drawing">
     <value>55, 23</value>
@@ -10285,7 +10349,7 @@
     <value>True</value>
   </data>
   <data name="checkBoxM1Start.Location" type="System.Drawing.Point, System.Drawing">
-    <value>215, 20</value>
+    <value>10, 110</value>
   </data>
   <data name="checkBoxM1Start.Size" type="System.Drawing.Size, System.Drawing">
     <value>54, 23</value>
@@ -10315,7 +10379,7 @@
     <value>10, 10</value>
   </data>
   <data name="groupBoxM1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 120</value>
+    <value>280, 160</value>
   </data>
   <data name="groupBoxM1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -14160,7 +14224,7 @@
     <value>tabControlMain</value>
   </data>
   <data name="&gt;&gt;tabPageMain.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="tabControlMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -14356,7 +14420,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAs
-        YwAAAk1TRnQBSQFMAgEBBAEAATgBAAE4AQABUAEAAVABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        YwAAAk1TRnQBSQFMAgEBBAEAAUABAAFAAQABUAEAAVABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAEBAgABoAMAAQEBAAEIBgAByBgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
         AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
         AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
@@ -14790,7 +14854,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        EQAAAk1TRnQBSQFMAgEBBQEAARgBAAEYAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        EQAAAk1TRnQBSQFMAgEBBQEAASABAAEgAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAMAAUADAAEBAQABCAYAASAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -14873,7 +14937,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACW
-        JQAAAk1TRnQBSQFMAgEBBAEAARgBAAEYAQABYAEAAWABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        JQAAAk1TRnQBSQFMAgEBBAEAASABAAEgAQABYAEAAWABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAEBAgABwAMAAQEBAAEIBgABIAEBFwABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHA
         AdwBwAEAAfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANC
         AQADOQEAAYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/
@@ -15053,6 +15117,12 @@
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;imageListMIncEsc.Name" xml:space="preserve">
+    <value>imageListMIncEsc</value>
+  </data>
+  <data name="&gt;&gt;imageListMIncEsc.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dataGridViewTextBoxColumn1.Name" xml:space="preserve">
     <value>dataGridViewTextBoxColumn1</value>
