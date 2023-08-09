@@ -239,7 +239,57 @@ namespace GUI
             }
         }
 
-  
+        public void WriteOnLabelStatusAsync(ClientResult cr, Label lbl)
+        {
+            short value = -1;
+
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+
+            }
+            else
+            {
+                value = (short)cr.Value;
+            }
+
+            if (lbl.InvokeRequired)
+            {
+                lbl.Invoke((MethodInvoker)delegate
+                {
+                    lbl.Text = "";
+                    if (value == -1)
+                    {
+                        lbl.Text = "offline";
+                    }
+
+                    if (value == 0)
+                    {
+                        lbl.Text = "emegency";
+                    }
+
+                    if (value == 1)
+                    {
+                        lbl.Text = "automatic";
+                    }
+
+                    if (value == 2)
+                    {
+                        lbl.Text = "manual";
+                    }
+
+                    if (value == 3)
+                    {
+                        lbl.Text = "in cycle";
+                    }
+
+                    if (value == 4)
+                    {
+                        lbl.Text = "in alarm";
+                    }
+                });
+            }
+        }
+
 
         public void WriteOnCheckBoxPauseAsync(ClientResult cr, CheckBox chk)
         {
@@ -325,22 +375,22 @@ namespace GUI
 
                     var readResult = await ccService.Read(keys);
 
-                    UpdateOPCUAMStatus(readResult["pcM1Status"], lbLedM1Status);
+                    UpdateOPCUAMStatus(readResult["pcM1Status"], buttonM1Status, labelM1Status);
                     ManageOPCUAMBtnStatus(readResult["pcM1Status"], checkBoxM1Start);
 
-                    UpdateOPCUAMStatus(readResult["pcM2Status"], lbLedM2Status);
+                    UpdateOPCUAMStatus(readResult["pcM2Status"], buttonM2Status, labelM2Status);
                     ManageOPCUAMBtnStatus(readResult["pcM2Status"], checkBoxM2Start);
 
-                    UpdateOPCUAMStatus(readResult["pcM3Status"], lbLedM3Status);
+                    UpdateOPCUAMStatus(readResult["pcM3Status"], buttonM3Status, labelM3Status);
                     ManageOPCUAMBtnStatus(readResult["pcM3Status"], checkBoxM3Start);
 
-                    UpdateOPCUAMStatus(readResult["pcM4Status"], lbLedM4Status);
+                    UpdateOPCUAMStatus(readResult["pcM4Status"], buttonM4Status, labelM4Status);
                     ManageOPCUAMBtnStatus(readResult["pcM4Status"], checkBoxM4Start);
 
-                    UpdateOPCUAMStatus(readResult["pcM5Status"], lbLedM5Status);
+                    UpdateOPCUAMStatus(readResult["pcM5Status"], buttonM5Status, labelM5Status);
                     ManageOPCUAMBtnStatus(readResult["pcM5Status"], checkBoxM5Start);
 
-                    UpdateOPCUAMStatus(readResult["pcM6Status"], lbLedM6Status);
+                    UpdateOPCUAMStatus(readResult["pcM6Status"], buttonM6Status, labelM6Status);
                     ManageOPCUAMBtnStatus(readResult["pcM6Status"], checkBoxM6Start);
 
                     ManageStartStatus(readResult["pcM1Status"], readResult["pcM2Status"], readResult["pcM3Status"],
@@ -534,19 +584,22 @@ namespace GUI
         {
             ManageOPCUAMBtnStatus(null, checkBoxM1Start);
 
-            UpdateOPCUAMStatus(null, lbLedM2Status);
+            UpdateOPCUAMStatus(null, buttonM1Status, labelM1Status);
+            ManageOPCUAMBtnStatus(null, checkBoxM1Start);
+
+            UpdateOPCUAMStatus(null, buttonM2Status, labelM2Status);
             ManageOPCUAMBtnStatus(null, checkBoxM2Start);
 
-            UpdateOPCUAMStatus(null, lbLedM3Status);
+            UpdateOPCUAMStatus(null, buttonM3Status, labelM3Status);
             ManageOPCUAMBtnStatus(null, checkBoxM3Start);
 
-            UpdateOPCUAMStatus(null, lbLedM4Status);
+            UpdateOPCUAMStatus(null, buttonM4Status, labelM4Status);
             ManageOPCUAMBtnStatus(null, checkBoxM4Start);
 
-            UpdateOPCUAMStatus(null, lbLedM5Status);
+            UpdateOPCUAMStatus(null, buttonM5Status, labelM5Status);
             ManageOPCUAMBtnStatus(null, checkBoxM5Start);
 
-            UpdateOPCUAMStatus(null, lbLedM6Status);
+            UpdateOPCUAMStatus(null, buttonM6Status, labelM6Status);
             ManageOPCUAMBtnStatus(null, checkBoxM6Start);
 
             //UpdateOPCUAMHomingDone(null, lbLedM1HomingDone);
@@ -823,47 +876,44 @@ namespace GUI
         }
 
 
-        public void UpdateOPCUAMStatus(ClientResult cr, LBSoft.IndustrialCtrls.Leds.LBLed lblLed)
+        public void UpdateOPCUAMStatus(ClientResult cr, Button btn, Label lbl)
         {
+            short value = -1;
+
             if ((cr == null) || (cr.OpcResult == false))
             {
-                lblLed.LedColor = Color.Black;
-                lblLed.Label = "offline";
+                btn.BackColor = Color.Black;               
             }
             else
             {
-                short value = (short)cr.Value;
+                value = (short)cr.Value;
 
                 if (value == 0)
                 {
-                    lblLed.LedColor = Color.Red;
-                    lblLed.Label = "emergency";
+                    btn.BackColor = Color.Red;
                 }
 
                 if (value == 1)
                 {
-                    lblLed.LedColor = Color.Blue;
-                    lblLed.Label = "automatic";
+                    btn.BackColor = Color.Blue;
                 }
 
                 if (value == 2)
                 {
-                    lblLed.LedColor = Color.Orange;
-                    lblLed.Label = "manual";
+                    btn.BackColor = Color.Orange;
                 }
 
                 if (value == 3)
                 {
-                    lblLed.LedColor = Color.FromArgb(107, 227, 162);
-                    lblLed.Label = "in cycle";
+                    btn.BackColor = Color.FromArgb(107, 227, 162);
                 }
 
                 if (value == 4)
                 {
-                    lblLed.LedColor = Color.Red;
-                    lblLed.Label = "in alarm";
+                    btn.BackColor = Color.DarkOrange;
                 }
             }
+            WriteOnLabelStatusAsync(cr, lbl);
         }       
 
         public void ManageOPCUAMBtnStatus(ClientResult cr, CheckBox btn)
@@ -931,7 +981,6 @@ namespace GUI
                         chk.CheckState = CheckState.Checked;
                         chk.Image = imageListStartStop.Images[1];
                         chk.Text = "STOP";
-                        chk.CheckState = CheckState.Checked;
                     }
 
                     if (value == false)
@@ -939,11 +988,35 @@ namespace GUI
                         chk.CheckState = CheckState.Unchecked;
                         chk.Image = imageListStartStop.Images[0];
                         chk.Text = "START";
-                        chk.CheckState = CheckState.Unchecked;
                     }
                 });
             }
         }
+
+        //public void WriteAsyncMStartStopNotInCycle(bool value, CheckBox chk)
+        //{
+        //    if (chk.InvokeRequired)
+        //    {
+        //        chk.Invoke((MethodInvoker)delegate
+        //        {
+        //            if (value == true)
+        //            {
+        //                chk.CheckState = CheckState.Checked;
+        //                chk.Image = imageListStartStop.Images[1];
+        //                chk.Text = "STOP";
+        //                chk.CheckState = CheckState.Checked;
+        //            }
+
+        //            if (value == false)
+        //            {
+        //                chk.CheckState = CheckState.Unchecked;
+        //                chk.Image = imageListStartStop.Images[0];
+        //                chk.Text = "START";
+        //                chk.CheckState = CheckState.Unchecked;
+        //            }
+        //        });
+        //    }
+        //}
 
         public void WriteAsyncMPauseCheckBox(bool value, CheckBox chk)
         {

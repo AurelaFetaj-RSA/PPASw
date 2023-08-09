@@ -109,8 +109,8 @@
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle5 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolTipStyle toolTipStyle5 = new LidorSystems.IntegralUI.Controls.Style.ToolTipStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle25 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Style.ControlColorStyle controlColorStyle1 = new LidorSystems.IntegralUI.Style.ControlColorStyle();
             LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle6 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -131,33 +131,27 @@
             this.lbLedSystemConnection = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.labelM6Param1Value = new System.Windows.Forms.Label();
             this.labelM6Param1Name = new System.Windows.Forms.Label();
-            this.lbLedM6Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.checkBoxM6Inclusion = new System.Windows.Forms.CheckBox();
             this.comboBoxM6PrgName = new System.Windows.Forms.ComboBox();
             this.labelM3Param1Value = new System.Windows.Forms.Label();
             this.labelM3Param1Name = new System.Windows.Forms.Label();
-            this.lbLedM3Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.checkBoxM3Inclusion = new System.Windows.Forms.CheckBox();
             this.comboBoxM3PrgName_st1 = new System.Windows.Forms.ComboBox();
             this.labelM5Param1Value = new System.Windows.Forms.Label();
             this.labelM5Param1Name = new System.Windows.Forms.Label();
-            this.lbLedM5Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.checkBoxM5Inclusion = new System.Windows.Forms.CheckBox();
             this.comboBoxM5PrgName = new System.Windows.Forms.ComboBox();
             this.labelM4Param1Value = new System.Windows.Forms.Label();
             this.labelM4Param1Name = new System.Windows.Forms.Label();
-            this.lbLedM4Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.checkBoxM4Inclusion = new System.Windows.Forms.CheckBox();
             this.comboBoxM4PrgName = new System.Windows.Forms.ComboBox();
             this.labelM2Param1Value = new System.Windows.Forms.Label();
             this.labelM2Param1Name = new System.Windows.Forms.Label();
-            this.lbLedM2Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.checkBoxM2Inclusion = new System.Windows.Forms.CheckBox();
             this.imageListMIncEsc = new System.Windows.Forms.ImageList(this.components);
             this.comboBoxM2PrgName = new System.Windows.Forms.ComboBox();
             this.labelM1Param1Value = new System.Windows.Forms.Label();
             this.labelM1Param1Name = new System.Windows.Forms.Label();
-            this.lbLedM1Status = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.checkBoxM1Inclusion = new System.Windows.Forms.CheckBox();
             this.comboBoxM1PrgName = new System.Windows.Forms.ComboBox();
             this.tabPageHide = new LidorSystems.IntegralUI.Containers.TabPage();
@@ -457,7 +451,7 @@
             this.checkBoxM4Pause = new System.Windows.Forms.CheckBox();
             this.checkBoxM4Start = new System.Windows.Forms.CheckBox();
             this.groupBoxM2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonM2Reset = new System.Windows.Forms.Button();
             this.checkBoxM2Pause = new System.Windows.Forms.CheckBox();
             this.checkBoxM2Start = new System.Windows.Forms.CheckBox();
             this.groupBoxM1 = new System.Windows.Forms.GroupBox();
@@ -490,6 +484,27 @@
             this.imageListNodes = new System.Windows.Forms.ImageList(this.components);
             this.imageListStart = new System.Windows.Forms.ImageList(this.components);
             this.imageListStartStop = new System.Windows.Forms.ImageList(this.components);
+            this.buttonM3Reset = new System.Windows.Forms.Button();
+            this.buttonM1Reset = new System.Windows.Forms.Button();
+            this.buttonM4Reset = new System.Windows.Forms.Button();
+            this.buttonM5Reset = new System.Windows.Forms.Button();
+            this.buttonM6Reset = new System.Windows.Forms.Button();
+            this.buttonM2Status = new System.Windows.Forms.Button();
+            this.buttonM1Status = new System.Windows.Forms.Button();
+            this.buttonM3Status = new System.Windows.Forms.Button();
+            this.buttonM6Status = new System.Windows.Forms.Button();
+            this.buttonM5Status = new System.Windows.Forms.Button();
+            this.buttonM4Status = new System.Windows.Forms.Button();
+            this.labelM2Status = new System.Windows.Forms.Label();
+            this.labelM3Status = new System.Windows.Forms.Label();
+            this.labelM6Status = new System.Windows.Forms.Label();
+            this.labelM5Status = new System.Windows.Forms.Label();
+            this.labelM4Status = new System.Windows.Forms.Label();
+            this.labelM1Status = new System.Windows.Forms.Label();
+            this.textBoxLaserLine1 = new System.Windows.Forms.TextBox();
+            this.textBoxLaserLine2 = new System.Windows.Forms.TextBox();
+            this.buttonSendLaser = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.SuspendLayout();
             this.tabPageHelp.SuspendLayout();
@@ -665,21 +680,6 @@
             this.labelM6Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM6Param1Name.Name = "labelM6Param1Name";
             // 
-            // lbLedM6Status
-            // 
-            this.lbLedM6Status.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM6Status.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM6Status, "lbLedM6Status");
-            this.lbLedM6Status.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM6Status.Label = "todo";
-            this.lbLedM6Status.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM6Status.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM6Status.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM6Status.Name = "lbLedM6Status";
-            this.lbLedM6Status.Renderer = null;
-            this.lbLedM6Status.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM6Status.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
             // checkBoxM6Inclusion
             // 
             resources.ApplyResources(this.checkBoxM6Inclusion, "checkBoxM6Inclusion");
@@ -688,6 +688,7 @@
             this.checkBoxM6Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.checkBoxM6Inclusion.FlatAppearance.BorderSize = 0;
             this.checkBoxM6Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM6Inclusion.ImageList = this.imageListMIncEsc;
             this.checkBoxM6Inclusion.Name = "checkBoxM6Inclusion";
             this.checkBoxM6Inclusion.UseVisualStyleBackColor = true;
             this.checkBoxM6Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM6Inclusion_CheckedChanged);
@@ -711,21 +712,6 @@
             this.labelM3Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM3Param1Name.Name = "labelM3Param1Name";
             // 
-            // lbLedM3Status
-            // 
-            this.lbLedM3Status.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM3Status.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM3Status, "lbLedM3Status");
-            this.lbLedM3Status.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM3Status.Label = "status";
-            this.lbLedM3Status.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM3Status.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM3Status.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM3Status.Name = "lbLedM3Status";
-            this.lbLedM3Status.Renderer = null;
-            this.lbLedM3Status.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM3Status.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
             // checkBoxM3Inclusion
             // 
             resources.ApplyResources(this.checkBoxM3Inclusion, "checkBoxM3Inclusion");
@@ -734,6 +720,7 @@
             this.checkBoxM3Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.checkBoxM3Inclusion.FlatAppearance.BorderSize = 0;
             this.checkBoxM3Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM3Inclusion.ImageList = this.imageListMIncEsc;
             this.checkBoxM3Inclusion.Name = "checkBoxM3Inclusion";
             this.checkBoxM3Inclusion.UseVisualStyleBackColor = true;
             this.checkBoxM3Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM3Inclusion_CheckedChanged);
@@ -758,21 +745,6 @@
             this.labelM5Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM5Param1Name.Name = "labelM5Param1Name";
             // 
-            // lbLedM5Status
-            // 
-            this.lbLedM5Status.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM5Status.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM5Status, "lbLedM5Status");
-            this.lbLedM5Status.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM5Status.Label = "status";
-            this.lbLedM5Status.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM5Status.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM5Status.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM5Status.Name = "lbLedM5Status";
-            this.lbLedM5Status.Renderer = null;
-            this.lbLedM5Status.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM5Status.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
             // checkBoxM5Inclusion
             // 
             resources.ApplyResources(this.checkBoxM5Inclusion, "checkBoxM5Inclusion");
@@ -781,6 +753,7 @@
             this.checkBoxM5Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.checkBoxM5Inclusion.FlatAppearance.BorderSize = 0;
             this.checkBoxM5Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM5Inclusion.ImageList = this.imageListMIncEsc;
             this.checkBoxM5Inclusion.Name = "checkBoxM5Inclusion";
             this.checkBoxM5Inclusion.UseVisualStyleBackColor = true;
             this.checkBoxM5Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM5Inclusion_CheckedChanged);
@@ -804,21 +777,6 @@
             this.labelM4Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM4Param1Name.Name = "labelM4Param1Name";
             // 
-            // lbLedM4Status
-            // 
-            this.lbLedM4Status.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM4Status.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM4Status, "lbLedM4Status");
-            this.lbLedM4Status.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM4Status.Label = "status";
-            this.lbLedM4Status.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM4Status.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM4Status.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM4Status.Name = "lbLedM4Status";
-            this.lbLedM4Status.Renderer = null;
-            this.lbLedM4Status.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM4Status.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
             // checkBoxM4Inclusion
             // 
             resources.ApplyResources(this.checkBoxM4Inclusion, "checkBoxM4Inclusion");
@@ -827,6 +785,7 @@
             this.checkBoxM4Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.checkBoxM4Inclusion.FlatAppearance.BorderSize = 0;
             this.checkBoxM4Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM4Inclusion.ImageList = this.imageListMIncEsc;
             this.checkBoxM4Inclusion.Name = "checkBoxM4Inclusion";
             this.checkBoxM4Inclusion.UseVisualStyleBackColor = true;
             this.checkBoxM4Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM4Inclusion_CheckedChanged);
@@ -850,21 +809,6 @@
             resources.ApplyResources(this.labelM2Param1Name, "labelM2Param1Name");
             this.labelM2Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM2Param1Name.Name = "labelM2Param1Name";
-            // 
-            // lbLedM2Status
-            // 
-            this.lbLedM2Status.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM2Status.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM2Status, "lbLedM2Status");
-            this.lbLedM2Status.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM2Status.Label = "status";
-            this.lbLedM2Status.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM2Status.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM2Status.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM2Status.Name = "lbLedM2Status";
-            this.lbLedM2Status.Renderer = null;
-            this.lbLedM2Status.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM2Status.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
             // 
             // checkBoxM2Inclusion
             // 
@@ -908,21 +852,6 @@
             this.labelM1Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM1Param1Name.Name = "labelM1Param1Name";
             // 
-            // lbLedM1Status
-            // 
-            this.lbLedM1Status.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM1Status.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM1Status, "lbLedM1Status");
-            this.lbLedM1Status.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM1Status.Label = "status";
-            this.lbLedM1Status.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM1Status.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM1Status.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM1Status.Name = "lbLedM1Status";
-            this.lbLedM1Status.Renderer = null;
-            this.lbLedM1Status.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM1Status.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
             // checkBoxM1Inclusion
             // 
             resources.ApplyResources(this.checkBoxM1Inclusion, "checkBoxM1Inclusion");
@@ -931,6 +860,7 @@
             this.checkBoxM1Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
             this.checkBoxM1Inclusion.FlatAppearance.BorderSize = 0;
             this.checkBoxM1Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM1Inclusion.ImageList = this.imageListMIncEsc;
             this.checkBoxM1Inclusion.Name = "checkBoxM1Inclusion";
             this.checkBoxM1Inclusion.UseVisualStyleBackColor = true;
             this.checkBoxM1Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM1Inclusion_CheckedChanged);
@@ -4714,8 +4644,8 @@
             // tabControlT0
             // 
             this.tabControlT0.Controls.Add(this.tabPageT0_1);
-            this.tabControlT0.Controls.Add(this.tabPageT0_3);
             this.tabControlT0.Controls.Add(this.tabPageT0_2);
+            this.tabControlT0.Controls.Add(this.tabPageT0_3);
             this.tabControlT0.Cursor = System.Windows.Forms.Cursors.Default;
             controlFormatStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlT0.FormatStyle = controlFormatStyle5;
@@ -4758,6 +4688,7 @@
             // 
             // groupBoxLine
             // 
+            this.groupBoxLine.Controls.Add(this.button3);
             this.groupBoxLine.Controls.Add(this.checkBoxPause);
             this.groupBoxLine.Controls.Add(this.checkBoxStartStop);
             this.groupBoxLine.Controls.Add(this.buttonMReset);
@@ -4775,6 +4706,7 @@
             // checkBoxPause
             // 
             resources.ApplyResources(this.checkBoxPause, "checkBoxPause");
+            this.checkBoxPause.ImageList = this.imageListStartStop;
             this.checkBoxPause.Name = "checkBoxPause";
             this.checkBoxPause.UseVisualStyleBackColor = true;
             this.checkBoxPause.CheckStateChanged += new System.EventHandler(this.checkBoxPause_CheckStateChanged);
@@ -4782,6 +4714,7 @@
             // checkBoxStartStop
             // 
             resources.ApplyResources(this.checkBoxStartStop, "checkBoxStartStop");
+            this.checkBoxStartStop.ImageList = this.imageListStartStop;
             this.checkBoxStartStop.Name = "checkBoxStartStop";
             this.checkBoxStartStop.UseVisualStyleBackColor = true;
             this.checkBoxStartStop.CheckStateChanged += new System.EventHandler(this.checkBoxStartStop_CheckStateChanged);
@@ -4802,13 +4735,15 @@
             // 
             // groupBoxM6
             // 
+            this.groupBoxM6.Controls.Add(this.labelM6Status);
+            this.groupBoxM6.Controls.Add(this.buttonM6Status);
+            this.groupBoxM6.Controls.Add(this.buttonM6Reset);
             this.groupBoxM6.Controls.Add(this.checkBoxM6Pause);
             this.groupBoxM6.Controls.Add(this.checkBoxM6Start);
             this.groupBoxM6.Controls.Add(this.checkBoxM6Inclusion);
             this.groupBoxM6.Controls.Add(this.labelM6Param1Value);
             this.groupBoxM6.Controls.Add(this.comboBoxM6PrgName);
             this.groupBoxM6.Controls.Add(this.labelM6Param1Name);
-            this.groupBoxM6.Controls.Add(this.lbLedM6Status);
             resources.ApplyResources(this.groupBoxM6, "groupBoxM6");
             this.groupBoxM6.Name = "groupBoxM6";
             this.groupBoxM6.TabStop = false;
@@ -4831,6 +4766,9 @@
             // 
             // groupBoxM3
             // 
+            this.groupBoxM3.Controls.Add(this.labelM3Status);
+            this.groupBoxM3.Controls.Add(this.buttonM3Status);
+            this.groupBoxM3.Controls.Add(this.buttonM3Reset);
             this.groupBoxM3.Controls.Add(this.checkBoxM3Pause);
             this.groupBoxM3.Controls.Add(this.textBoxTypeOrder);
             this.groupBoxM3.Controls.Add(this.comboBoxM3PrgName_st2);
@@ -4839,7 +4777,6 @@
             this.groupBoxM3.Controls.Add(this.comboBoxM3PrgName_st1);
             this.groupBoxM3.Controls.Add(this.checkBoxM3Inclusion);
             this.groupBoxM3.Controls.Add(this.labelM3Param1Name);
-            this.groupBoxM3.Controls.Add(this.lbLedM3Status);
             resources.ApplyResources(this.groupBoxM3, "groupBoxM3");
             this.groupBoxM3.Name = "groupBoxM3";
             this.groupBoxM3.TabStop = false;
@@ -4875,13 +4812,15 @@
             // 
             // groupBoxM5
             // 
+            this.groupBoxM5.Controls.Add(this.labelM5Status);
+            this.groupBoxM5.Controls.Add(this.buttonM5Status);
+            this.groupBoxM5.Controls.Add(this.buttonM5Reset);
             this.groupBoxM5.Controls.Add(this.checkBoxM5Pause);
             this.groupBoxM5.Controls.Add(this.comboBoxM5PrgName);
             this.groupBoxM5.Controls.Add(this.checkBoxM5Start);
             this.groupBoxM5.Controls.Add(this.labelM5Param1Value);
             this.groupBoxM5.Controls.Add(this.checkBoxM5Inclusion);
             this.groupBoxM5.Controls.Add(this.labelM5Param1Name);
-            this.groupBoxM5.Controls.Add(this.lbLedM5Status);
             resources.ApplyResources(this.groupBoxM5, "groupBoxM5");
             this.groupBoxM5.Name = "groupBoxM5";
             this.groupBoxM5.TabStop = false;
@@ -4904,13 +4843,15 @@
             // 
             // groupBoxM4
             // 
+            this.groupBoxM4.Controls.Add(this.labelM4Status);
+            this.groupBoxM4.Controls.Add(this.buttonM4Status);
+            this.groupBoxM4.Controls.Add(this.buttonM4Reset);
             this.groupBoxM4.Controls.Add(this.checkBoxM4Pause);
             this.groupBoxM4.Controls.Add(this.checkBoxM4Inclusion);
             this.groupBoxM4.Controls.Add(this.labelM4Param1Value);
             this.groupBoxM4.Controls.Add(this.checkBoxM4Start);
             this.groupBoxM4.Controls.Add(this.comboBoxM4PrgName);
             this.groupBoxM4.Controls.Add(this.labelM4Param1Name);
-            this.groupBoxM4.Controls.Add(this.lbLedM4Status);
             resources.ApplyResources(this.groupBoxM4, "groupBoxM4");
             this.groupBoxM4.Name = "groupBoxM4";
             this.groupBoxM4.TabStop = false;
@@ -4933,23 +4874,24 @@
             // 
             // groupBoxM2
             // 
-            this.groupBoxM2.Controls.Add(this.button3);
+            this.groupBoxM2.Controls.Add(this.labelM2Status);
+            this.groupBoxM2.Controls.Add(this.buttonM2Status);
+            this.groupBoxM2.Controls.Add(this.buttonM2Reset);
             this.groupBoxM2.Controls.Add(this.checkBoxM2Pause);
             this.groupBoxM2.Controls.Add(this.comboBoxM2PrgName);
             this.groupBoxM2.Controls.Add(this.labelM2Param1Value);
             this.groupBoxM2.Controls.Add(this.checkBoxM2Inclusion);
             this.groupBoxM2.Controls.Add(this.labelM2Param1Name);
             this.groupBoxM2.Controls.Add(this.checkBoxM2Start);
-            this.groupBoxM2.Controls.Add(this.lbLedM2Status);
             resources.ApplyResources(this.groupBoxM2, "groupBoxM2");
             this.groupBoxM2.Name = "groupBoxM2";
             this.groupBoxM2.TabStop = false;
             // 
-            // button3
+            // buttonM2Reset
             // 
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.buttonM2Reset, "buttonM2Reset");
+            this.buttonM2Reset.Name = "buttonM2Reset";
+            this.buttonM2Reset.UseVisualStyleBackColor = true;
             // 
             // checkBoxM2Pause
             // 
@@ -4969,11 +4911,13 @@
             // 
             // groupBoxM1
             // 
+            this.groupBoxM1.Controls.Add(this.labelM1Status);
+            this.groupBoxM1.Controls.Add(this.buttonM1Status);
+            this.groupBoxM1.Controls.Add(this.buttonM1Reset);
             this.groupBoxM1.Controls.Add(this.checkBoxM1Pause);
             this.groupBoxM1.Controls.Add(this.comboBoxM1PrgName);
             this.groupBoxM1.Controls.Add(this.checkBoxM1Inclusion);
             this.groupBoxM1.Controls.Add(this.labelM1Param1Value);
-            this.groupBoxM1.Controls.Add(this.lbLedM1Status);
             this.groupBoxM1.Controls.Add(this.labelM1Param1Name);
             this.groupBoxM1.Controls.Add(this.checkBoxM1Start);
             resources.ApplyResources(this.groupBoxM1, "groupBoxM1");
@@ -5001,8 +4945,8 @@
             // 
             this.tabPageT0_3.Controls.Add(this.groupBoxKeepAliveFromPlc);
             this.tabPageT0_3.Controls.Add(this.groupBoxKeepAliveToPlc);
-            tabPageFormatStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT0_3.FormatStyle = tabPageFormatStyle26;
+            tabPageFormatStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT0_3.FormatStyle = tabPageFormatStyle27;
             resources.ApplyResources(this.tabPageT0_3, "tabPageT0_3");
             this.tabPageT0_3.Name = "tabPageT0_3";
             this.tabPageT0_3.ParentPage = null;
@@ -5146,14 +5090,17 @@
             // 
             // tabPageT0_2
             // 
+            this.tabPageT0_2.Controls.Add(this.buttonSendLaser);
+            this.tabPageT0_2.Controls.Add(this.textBoxLaserLine2);
+            this.tabPageT0_2.Controls.Add(this.textBoxLaserLine1);
             this.tabPageT0_2.Controls.Add(this.textBoxM6Test);
             this.tabPageT0_2.Controls.Add(this.textBoxM5Test);
             this.tabPageT0_2.Controls.Add(this.textBoxM4Test);
             this.tabPageT0_2.Controls.Add(this.textBoxM3Test);
             this.tabPageT0_2.Controls.Add(this.textBoxM2Test);
             this.tabPageT0_2.Controls.Add(this.textBoxM1Test);
-            tabPageFormatStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT0_2.FormatStyle = tabPageFormatStyle27;
+            tabPageFormatStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT0_2.FormatStyle = tabPageFormatStyle26;
             resources.ApplyResources(this.tabPageT0_2, "tabPageT0_2");
             this.tabPageT0_2.Name = "tabPageT0_2";
             this.tabPageT0_2.ParentPage = null;
@@ -5310,6 +5257,137 @@
             this.imageListStartStop.Images.SetKeyName(2, "pause_on.png");
             this.imageListStartStop.Images.SetKeyName(3, "pause_off.png");
             // 
+            // buttonM3Reset
+            // 
+            resources.ApplyResources(this.buttonM3Reset, "buttonM3Reset");
+            this.buttonM3Reset.Name = "buttonM3Reset";
+            this.buttonM3Reset.UseVisualStyleBackColor = true;
+            // 
+            // buttonM1Reset
+            // 
+            resources.ApplyResources(this.buttonM1Reset, "buttonM1Reset");
+            this.buttonM1Reset.Name = "buttonM1Reset";
+            this.buttonM1Reset.UseVisualStyleBackColor = true;
+            // 
+            // buttonM4Reset
+            // 
+            resources.ApplyResources(this.buttonM4Reset, "buttonM4Reset");
+            this.buttonM4Reset.Name = "buttonM4Reset";
+            this.buttonM4Reset.UseVisualStyleBackColor = true;
+            // 
+            // buttonM5Reset
+            // 
+            resources.ApplyResources(this.buttonM5Reset, "buttonM5Reset");
+            this.buttonM5Reset.Name = "buttonM5Reset";
+            this.buttonM5Reset.UseVisualStyleBackColor = true;
+            // 
+            // buttonM6Reset
+            // 
+            resources.ApplyResources(this.buttonM6Reset, "buttonM6Reset");
+            this.buttonM6Reset.Name = "buttonM6Reset";
+            this.buttonM6Reset.UseVisualStyleBackColor = true;
+            // 
+            // buttonM2Status
+            // 
+            resources.ApplyResources(this.buttonM2Status, "buttonM2Status");
+            this.buttonM2Status.FlatAppearance.BorderSize = 10;
+            this.buttonM2Status.Name = "buttonM2Status";
+            this.buttonM2Status.UseVisualStyleBackColor = true;
+            // 
+            // buttonM1Status
+            // 
+            this.buttonM1Status.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.buttonM1Status, "buttonM1Status");
+            this.buttonM1Status.Name = "buttonM1Status";
+            this.buttonM1Status.UseVisualStyleBackColor = true;
+            // 
+            // buttonM3Status
+            // 
+            this.buttonM3Status.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.buttonM3Status, "buttonM3Status");
+            this.buttonM3Status.Name = "buttonM3Status";
+            this.buttonM3Status.UseVisualStyleBackColor = true;
+            // 
+            // buttonM6Status
+            // 
+            this.buttonM6Status.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.buttonM6Status, "buttonM6Status");
+            this.buttonM6Status.Name = "buttonM6Status";
+            this.buttonM6Status.UseVisualStyleBackColor = true;
+            // 
+            // buttonM5Status
+            // 
+            this.buttonM5Status.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.buttonM5Status, "buttonM5Status");
+            this.buttonM5Status.Name = "buttonM5Status";
+            this.buttonM5Status.UseVisualStyleBackColor = true;
+            // 
+            // buttonM4Status
+            // 
+            this.buttonM4Status.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.buttonM4Status, "buttonM4Status");
+            this.buttonM4Status.Name = "buttonM4Status";
+            this.buttonM4Status.UseVisualStyleBackColor = true;
+            // 
+            // labelM2Status
+            // 
+            resources.ApplyResources(this.labelM2Status, "labelM2Status");
+            this.labelM2Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM2Status.Name = "labelM2Status";
+            // 
+            // labelM3Status
+            // 
+            resources.ApplyResources(this.labelM3Status, "labelM3Status");
+            this.labelM3Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM3Status.Name = "labelM3Status";
+            // 
+            // labelM6Status
+            // 
+            resources.ApplyResources(this.labelM6Status, "labelM6Status");
+            this.labelM6Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM6Status.Name = "labelM6Status";
+            // 
+            // labelM5Status
+            // 
+            resources.ApplyResources(this.labelM5Status, "labelM5Status");
+            this.labelM5Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM5Status.Name = "labelM5Status";
+            // 
+            // labelM4Status
+            // 
+            resources.ApplyResources(this.labelM4Status, "labelM4Status");
+            this.labelM4Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM4Status.Name = "labelM4Status";
+            // 
+            // labelM1Status
+            // 
+            resources.ApplyResources(this.labelM1Status, "labelM1Status");
+            this.labelM1Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM1Status.Name = "labelM1Status";
+            // 
+            // textBoxLaserLine1
+            // 
+            resources.ApplyResources(this.textBoxLaserLine1, "textBoxLaserLine1");
+            this.textBoxLaserLine1.Name = "textBoxLaserLine1";
+            // 
+            // textBoxLaserLine2
+            // 
+            resources.ApplyResources(this.textBoxLaserLine2, "textBoxLaserLine2");
+            this.textBoxLaserLine2.Name = "textBoxLaserLine2";
+            // 
+            // buttonSendLaser
+            // 
+            resources.ApplyResources(this.buttonSendLaser, "buttonSendLaser");
+            this.buttonSendLaser.Name = "buttonSendLaser";
+            this.buttonSendLaser.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.Name = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // FormMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -5413,34 +5491,28 @@
         private System.Windows.Forms.Label labelDateTime;
         private System.Windows.Forms.Label labelLoginLevel;
         private System.Windows.Forms.SplitContainer splitContainer6;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM1Status;
         private System.Windows.Forms.CheckBox checkBoxM1Inclusion;
         private System.Windows.Forms.ComboBox comboBoxM1PrgName;
         private System.Windows.Forms.Label labelM1Param1Value;
         private System.Windows.Forms.Label labelM1Param1Name;
         private System.Windows.Forms.Label labelM6Param1Value;
         private System.Windows.Forms.Label labelM6Param1Name;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM6Status;
         private System.Windows.Forms.CheckBox checkBoxM6Inclusion;
         private System.Windows.Forms.ComboBox comboBoxM6PrgName;
         private System.Windows.Forms.Label labelM5Param1Value;
         private System.Windows.Forms.Label labelM5Param1Name;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM5Status;
         private System.Windows.Forms.CheckBox checkBoxM5Inclusion;
         private System.Windows.Forms.ComboBox comboBoxM5PrgName;
         private System.Windows.Forms.Label labelM4Param1Value;
         private System.Windows.Forms.Label labelM4Param1Name;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM4Status;
         private System.Windows.Forms.CheckBox checkBoxM4Inclusion;
         private System.Windows.Forms.ComboBox comboBoxM4PrgName;
         private System.Windows.Forms.Label labelM3Param1Value;
         private System.Windows.Forms.Label labelM3Param1Name;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM3Status;
         private System.Windows.Forms.CheckBox checkBoxM3Inclusion;
         private System.Windows.Forms.ComboBox comboBoxM3PrgName_st1;
         private System.Windows.Forms.Label labelM2Param1Value;
         private System.Windows.Forms.Label labelM2Param1Name;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLedM2Status;
         private System.Windows.Forms.CheckBox checkBoxM2Inclusion;
         private System.Windows.Forms.ComboBox comboBoxM2PrgName;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLedLineReady;
@@ -5767,8 +5839,29 @@
         private System.Windows.Forms.CheckBox checkBoxPause;
         private System.Windows.Forms.CheckBox checkBoxStartStop;
         private System.Windows.Forms.ImageList imageListStartStop;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonM2Reset;
         private System.Windows.Forms.ImageList imageListMIncEsc;
+        private System.Windows.Forms.Button buttonM6Reset;
+        private System.Windows.Forms.Button buttonM3Reset;
+        private System.Windows.Forms.Button buttonM5Reset;
+        private System.Windows.Forms.Button buttonM4Reset;
+        private System.Windows.Forms.Button buttonM1Reset;
+        private System.Windows.Forms.Button buttonM2Status;
+        private System.Windows.Forms.Button buttonM6Status;
+        private System.Windows.Forms.Button buttonM3Status;
+        private System.Windows.Forms.Button buttonM5Status;
+        private System.Windows.Forms.Button buttonM4Status;
+        private System.Windows.Forms.Button buttonM1Status;
+        private System.Windows.Forms.Label labelM3Status;
+        private System.Windows.Forms.Label labelM2Status;
+        private System.Windows.Forms.Label labelM6Status;
+        private System.Windows.Forms.Label labelM5Status;
+        private System.Windows.Forms.Label labelM4Status;
+        private System.Windows.Forms.Label labelM1Status;
+        private System.Windows.Forms.Button buttonSendLaser;
+        private System.Windows.Forms.TextBox textBoxLaserLine2;
+        private System.Windows.Forms.TextBox textBoxLaserLine1;
+        private System.Windows.Forms.Button button3;
     }
 }
 
