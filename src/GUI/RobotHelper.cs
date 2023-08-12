@@ -28,7 +28,7 @@ namespace GUI
     {
         Dictionary<string, DiagnosticWindowsControl> DiagnosticVariableGroupbox = new Dictionary<string, DiagnosticWindowsControl>();
         private bool[] lastLifeBit { get; set; } = { false, false, false, false, false, false };
-        private int[] LifeBitCounter { get; set; } = { 0, 0, 0, 0, 0, 0};
+        private int[] LifeBitCounter { get; set; } = { 0, 0, 0, 0, 0, 0 };
         private bool[] LifeBitTimeout { get; set; } = { false, false, false, false, false, false };
         public async Task UpdateGraphicsGUI(TimeSpan interval, CancellationTokenSource cancellationToken)
         {
@@ -160,7 +160,7 @@ namespace GUI
             //    myRobot.SetVariable("job_result",0);
             //}
         }
-        
+
         public void WriteOnLabelAsync(ClientResult cr, Label lbl)
         {
             string textToAppend = "";
@@ -298,7 +298,7 @@ namespace GUI
 
             if ((cr == null) || (cr.OpcResult == false))
             {
-                
+
             }
             else
             {
@@ -519,8 +519,7 @@ namespace GUI
 
                     #region(* system status *)
                     //if all nodes are connected -> not in timeout
-                    lbLedSystemConnection.State = (LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                    lbLedSystemConnection.Label = (LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]) ? "online": "offline";
+                    //UpdateOPCUASystemConnection((LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]), buttonSystemConnection, labelSystemConnection);
 
                     //emergenza, air pressure, 
 
@@ -621,7 +620,7 @@ namespace GUI
             UpdateOPCUAM4CAQ(null);
             lbLedSystemConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
             lbLedSystemConnection.Label = "system offline";
-            
+
             pictureBoxM1PLCNode.Image = imageListNodes.Images[1];
             //labelM2Node.Text = "padprint int node offline";
             pictureBoxM2PLCNode.Image = imageListNodes.Images[1];
@@ -638,7 +637,7 @@ namespace GUI
             lbLedM5PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
         }
 
-        private void UpdateOPCUAMNodeConnection(ClientResult cr, bool oldValue, ref bool lBitTimeout, ref int lBitCounter,PictureBox pict)
+        private void UpdateOPCUAMNodeConnection(ClientResult cr, bool oldValue, ref bool lBitTimeout, ref int lBitCounter, PictureBox pict)
         {
             if ((cr == null) || (cr.OpcResult == false))
             {
@@ -646,7 +645,7 @@ namespace GUI
                 lBitTimeout = true;
             }
             else
-            { 
+            {
                 if (!lBitTimeout)
                 {
                     if ((bool)cr.Value == oldValue)
@@ -669,11 +668,11 @@ namespace GUI
                     if ((bool)cr.Value != oldValue)
                     {
                         lBitCounter = 0;
-                        lBitTimeout = false;                     
+                        lBitTimeout = false;
                         pict.Image = imageListNodes.Images[0];
                     }
                     else
-                    {                       
+                    {
                         pict.Image = imageListNodes.Images[1];
                     }
                 }
@@ -695,7 +694,7 @@ namespace GUI
         public void UpdateOPCUAM5DI(ClientResult diREsult)
         {
             //int i = 0;
-            
+
             //Dictionary<int, LBSoft.IndustrialCtrls.Leds.LBLed> myDict = new Dictionary<int, LBSoft.IndustrialCtrls.Leds.LBLed>();
             //myDict[0] = lbLedM5DI1;
 
@@ -769,7 +768,7 @@ namespace GUI
             {
                 //todo offline message
             }
-            else 
+            else
             {
                 //todo ,amage error
                 return;
@@ -836,7 +835,7 @@ namespace GUI
 
         public void UpdateOPCUAM1CAQ(ClientResult cr)
         {
-           // WriteOnLabelAsync(cr, labelM1TeachAxisQuoteValue);
+            // WriteOnLabelAsync(cr, labelM1TeachAxisQuoteValue);
         }
 
         public void UpdateOPCUAM2CAQ(ClientResult cr)
@@ -861,7 +860,7 @@ namespace GUI
                 //todo manage error
             }
             else
-            { 
+            {
                 if ((bool)cr.Value)
                 {
                     var sendResult = await ccService.Send(cr.Key, false);
@@ -875,6 +874,32 @@ namespace GUI
             }
         }
 
+                
+        public void UpdateOPCUASystemConnection(bool value, Button btn, Label lbl)
+        {
+            WriteOnButtonSystemConnection(value, btn, lbl);
+        }
+
+        public void WriteOnButtonSystemConnection(bool value, Button btn, Label lbl)
+        {
+            if (btn.InvokeRequired)
+            {
+                btn.Invoke((MethodInvoker)delegate
+                {
+                    if (value == true)
+                    {
+                        btn.BackColor = Color.FromArgb(107, 227, 162);
+                        lbl.Text = "system online";
+                    }
+
+                    if (value == false)
+                    {
+                        btn.BackColor = Color.Black;
+                        lbl.Text = "system offline";
+                    }
+                });
+            }
+        }
 
         public void UpdateOPCUAMStatus(ClientResult cr, Button btn, Label lbl)
         {

@@ -56,7 +56,11 @@ namespace GUI
             SetEvent();
 
             InitCore();
+
+
             InitializeComponent();
+
+
             InitGUI();
 
             _splashScreen?.WriteOnTextboxAsync($"Set the GUI");
@@ -66,7 +70,7 @@ namespace GUI
             //Splash Screen filler
             _splashScreen?.WriteOnTextboxAsync($"Update GUI syncrozionation Thread Started");
 
-            tabControlMain.SelectedPage = tabPageMain;
+            //tabControlMain.SelectedPage = tabPageMenu1;
         }
 
         public void Start()

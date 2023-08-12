@@ -1,4 +1,6 @@
-﻿namespace GUI
+﻿using System.Threading.Tasks;
+
+namespace GUI
 {
     partial class FormMain
     {
@@ -109,8 +111,8 @@
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle5 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolTipStyle toolTipStyle5 = new LidorSystems.IntegralUI.Controls.Style.ToolTipStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle25 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Style.ControlColorStyle controlColorStyle1 = new LidorSystems.IntegralUI.Style.ControlColorStyle();
             LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle6 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -132,6 +134,7 @@
             this.labelM6Param1Value = new System.Windows.Forms.Label();
             this.labelM6Param1Name = new System.Windows.Forms.Label();
             this.checkBoxM6Inclusion = new System.Windows.Forms.CheckBox();
+            this.imageListMIncEsc = new System.Windows.Forms.ImageList(this.components);
             this.comboBoxM6PrgName = new System.Windows.Forms.ComboBox();
             this.labelM3Param1Value = new System.Windows.Forms.Label();
             this.labelM3Param1Name = new System.Windows.Forms.Label();
@@ -148,7 +151,6 @@
             this.labelM2Param1Value = new System.Windows.Forms.Label();
             this.labelM2Param1Name = new System.Windows.Forms.Label();
             this.checkBoxM2Inclusion = new System.Windows.Forms.CheckBox();
-            this.imageListMIncEsc = new System.Windows.Forms.ImageList(this.components);
             this.comboBoxM2PrgName = new System.Windows.Forms.ComboBox();
             this.labelM1Param1Value = new System.Windows.Forms.Label();
             this.labelM1Param1Name = new System.Windows.Forms.Label();
@@ -432,29 +434,48 @@
             this.tabControlT0 = new LidorSystems.IntegralUI.Containers.TabControl();
             this.tabPageT0_1 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.groupBoxLine = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.checkBoxPause = new System.Windows.Forms.CheckBox();
+            this.imageListStartStop = new System.Windows.Forms.ImageList(this.components);
             this.checkBoxStartStop = new System.Windows.Forms.CheckBox();
             this.buttonMReset = new System.Windows.Forms.Button();
             this.comboBoxAutoModelNameLst = new System.Windows.Forms.ComboBox();
             this.groupBoxM6 = new System.Windows.Forms.GroupBox();
+            this.labelM6Status = new System.Windows.Forms.Label();
+            this.buttonM6Status = new System.Windows.Forms.Button();
+            this.buttonM6Reset = new System.Windows.Forms.Button();
             this.checkBoxM6Pause = new System.Windows.Forms.CheckBox();
             this.checkBoxM6Start = new System.Windows.Forms.CheckBox();
             this.groupBoxM3 = new System.Windows.Forms.GroupBox();
+            this.labelM3Status = new System.Windows.Forms.Label();
+            this.buttonM3Status = new System.Windows.Forms.Button();
+            this.buttonM3Reset = new System.Windows.Forms.Button();
             this.checkBoxM3Pause = new System.Windows.Forms.CheckBox();
             this.textBoxTypeOrder = new System.Windows.Forms.TextBox();
             this.comboBoxM3PrgName_st2 = new System.Windows.Forms.ComboBox();
             this.checkBoxM3Start = new System.Windows.Forms.CheckBox();
             this.groupBoxM5 = new System.Windows.Forms.GroupBox();
+            this.labelM5Status = new System.Windows.Forms.Label();
+            this.buttonM5Status = new System.Windows.Forms.Button();
+            this.buttonM5Reset = new System.Windows.Forms.Button();
             this.checkBoxM5Pause = new System.Windows.Forms.CheckBox();
             this.checkBoxM5Start = new System.Windows.Forms.CheckBox();
             this.groupBoxM4 = new System.Windows.Forms.GroupBox();
+            this.labelM4Status = new System.Windows.Forms.Label();
+            this.buttonM4Status = new System.Windows.Forms.Button();
+            this.buttonM4Reset = new System.Windows.Forms.Button();
             this.checkBoxM4Pause = new System.Windows.Forms.CheckBox();
             this.checkBoxM4Start = new System.Windows.Forms.CheckBox();
             this.groupBoxM2 = new System.Windows.Forms.GroupBox();
+            this.labelM2Status = new System.Windows.Forms.Label();
+            this.buttonM2Status = new System.Windows.Forms.Button();
             this.buttonM2Reset = new System.Windows.Forms.Button();
             this.checkBoxM2Pause = new System.Windows.Forms.CheckBox();
             this.checkBoxM2Start = new System.Windows.Forms.CheckBox();
             this.groupBoxM1 = new System.Windows.Forms.GroupBox();
+            this.labelM1Status = new System.Windows.Forms.Label();
+            this.buttonM1Status = new System.Windows.Forms.Button();
+            this.buttonM1Reset = new System.Windows.Forms.Button();
             this.checkBoxM1Pause = new System.Windows.Forms.CheckBox();
             this.checkBoxM1Start = new System.Windows.Forms.CheckBox();
             this.tabPageT0_3 = new LidorSystems.IntegralUI.Containers.TabPage();
@@ -472,6 +493,9 @@
             this.lbLedM1PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLedM4PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.tabPageT0_2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.buttonSendLaser = new System.Windows.Forms.Button();
+            this.textBoxLaserLine2 = new System.Windows.Forms.TextBox();
+            this.textBoxLaserLine1 = new System.Windows.Forms.TextBox();
             this.textBoxM6Test = new System.Windows.Forms.TextBox();
             this.textBoxM5Test = new System.Windows.Forms.TextBox();
             this.textBoxM4Test = new System.Windows.Forms.TextBox();
@@ -483,28 +507,6 @@
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
             this.imageListNodes = new System.Windows.Forms.ImageList(this.components);
             this.imageListStart = new System.Windows.Forms.ImageList(this.components);
-            this.imageListStartStop = new System.Windows.Forms.ImageList(this.components);
-            this.buttonM3Reset = new System.Windows.Forms.Button();
-            this.buttonM1Reset = new System.Windows.Forms.Button();
-            this.buttonM4Reset = new System.Windows.Forms.Button();
-            this.buttonM5Reset = new System.Windows.Forms.Button();
-            this.buttonM6Reset = new System.Windows.Forms.Button();
-            this.buttonM2Status = new System.Windows.Forms.Button();
-            this.buttonM1Status = new System.Windows.Forms.Button();
-            this.buttonM3Status = new System.Windows.Forms.Button();
-            this.buttonM6Status = new System.Windows.Forms.Button();
-            this.buttonM5Status = new System.Windows.Forms.Button();
-            this.buttonM4Status = new System.Windows.Forms.Button();
-            this.labelM2Status = new System.Windows.Forms.Label();
-            this.labelM3Status = new System.Windows.Forms.Label();
-            this.labelM6Status = new System.Windows.Forms.Label();
-            this.labelM5Status = new System.Windows.Forms.Label();
-            this.labelM4Status = new System.Windows.Forms.Label();
-            this.labelM1Status = new System.Windows.Forms.Label();
-            this.textBoxLaserLine1 = new System.Windows.Forms.TextBox();
-            this.textBoxLaserLine2 = new System.Windows.Forms.TextBox();
-            this.buttonSendLaser = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.SuspendLayout();
             this.tabPageHelp.SuspendLayout();
@@ -693,6 +695,14 @@
             this.checkBoxM6Inclusion.UseVisualStyleBackColor = true;
             this.checkBoxM6Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM6Inclusion_CheckedChanged);
             // 
+            // imageListMIncEsc
+            // 
+            this.imageListMIncEsc.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMIncEsc.ImageStream")));
+            this.imageListMIncEsc.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListMIncEsc.Images.SetKeyName(0, "preached.png");
+            this.imageListMIncEsc.Images.SetKeyName(1, "pnotreached.png");
+            this.imageListMIncEsc.Images.SetKeyName(2, "indeterminate.png");
+            // 
             // comboBoxM6PrgName
             // 
             resources.ApplyResources(this.comboBoxM6PrgName, "comboBoxM6PrgName");
@@ -823,14 +833,6 @@
             this.checkBoxM2Inclusion.ThreeState = true;
             this.checkBoxM2Inclusion.UseVisualStyleBackColor = true;
             this.checkBoxM2Inclusion.CheckStateChanged += new System.EventHandler(this.checkBoxM2Inclusion_CheckStateChanged);
-            // 
-            // imageListMIncEsc
-            // 
-            this.imageListMIncEsc.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMIncEsc.ImageStream")));
-            this.imageListMIncEsc.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListMIncEsc.Images.SetKeyName(0, "preached.png");
-            this.imageListMIncEsc.Images.SetKeyName(1, "pnotreached.png");
-            this.imageListMIncEsc.Images.SetKeyName(2, "indeterminate.png");
             // 
             // comboBoxM2PrgName
             // 
@@ -4644,8 +4646,8 @@
             // tabControlT0
             // 
             this.tabControlT0.Controls.Add(this.tabPageT0_1);
-            this.tabControlT0.Controls.Add(this.tabPageT0_2);
             this.tabControlT0.Controls.Add(this.tabPageT0_3);
+            this.tabControlT0.Controls.Add(this.tabPageT0_2);
             this.tabControlT0.Cursor = System.Windows.Forms.Cursors.Default;
             controlFormatStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlT0.FormatStyle = controlFormatStyle5;
@@ -4703,6 +4705,13 @@
             this.groupBoxLine.Name = "groupBoxLine";
             this.groupBoxLine.TabStop = false;
             // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.Name = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // checkBoxPause
             // 
             resources.ApplyResources(this.checkBoxPause, "checkBoxPause");
@@ -4710,6 +4719,15 @@
             this.checkBoxPause.Name = "checkBoxPause";
             this.checkBoxPause.UseVisualStyleBackColor = true;
             this.checkBoxPause.CheckStateChanged += new System.EventHandler(this.checkBoxPause_CheckStateChanged);
+            // 
+            // imageListStartStop
+            // 
+            this.imageListStartStop.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListStartStop.ImageStream")));
+            this.imageListStartStop.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListStartStop.Images.SetKeyName(0, "play (3).png");
+            this.imageListStartStop.Images.SetKeyName(1, "stop.png");
+            this.imageListStartStop.Images.SetKeyName(2, "pause_on.png");
+            this.imageListStartStop.Images.SetKeyName(3, "pause_off.png");
             // 
             // checkBoxStartStop
             // 
@@ -4748,6 +4766,25 @@
             this.groupBoxM6.Name = "groupBoxM6";
             this.groupBoxM6.TabStop = false;
             // 
+            // labelM6Status
+            // 
+            resources.ApplyResources(this.labelM6Status, "labelM6Status");
+            this.labelM6Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM6Status.Name = "labelM6Status";
+            // 
+            // buttonM6Status
+            // 
+            this.buttonM6Status.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.buttonM6Status, "buttonM6Status");
+            this.buttonM6Status.Name = "buttonM6Status";
+            this.buttonM6Status.UseVisualStyleBackColor = true;
+            // 
+            // buttonM6Reset
+            // 
+            resources.ApplyResources(this.buttonM6Reset, "buttonM6Reset");
+            this.buttonM6Reset.Name = "buttonM6Reset";
+            this.buttonM6Reset.UseVisualStyleBackColor = true;
+            // 
             // checkBoxM6Pause
             // 
             resources.ApplyResources(this.checkBoxM6Pause, "checkBoxM6Pause");
@@ -4780,6 +4817,25 @@
             resources.ApplyResources(this.groupBoxM3, "groupBoxM3");
             this.groupBoxM3.Name = "groupBoxM3";
             this.groupBoxM3.TabStop = false;
+            // 
+            // labelM3Status
+            // 
+            resources.ApplyResources(this.labelM3Status, "labelM3Status");
+            this.labelM3Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM3Status.Name = "labelM3Status";
+            // 
+            // buttonM3Status
+            // 
+            this.buttonM3Status.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.buttonM3Status, "buttonM3Status");
+            this.buttonM3Status.Name = "buttonM3Status";
+            this.buttonM3Status.UseVisualStyleBackColor = true;
+            // 
+            // buttonM3Reset
+            // 
+            resources.ApplyResources(this.buttonM3Reset, "buttonM3Reset");
+            this.buttonM3Reset.Name = "buttonM3Reset";
+            this.buttonM3Reset.UseVisualStyleBackColor = true;
             // 
             // checkBoxM3Pause
             // 
@@ -4825,6 +4881,25 @@
             this.groupBoxM5.Name = "groupBoxM5";
             this.groupBoxM5.TabStop = false;
             // 
+            // labelM5Status
+            // 
+            resources.ApplyResources(this.labelM5Status, "labelM5Status");
+            this.labelM5Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM5Status.Name = "labelM5Status";
+            // 
+            // buttonM5Status
+            // 
+            this.buttonM5Status.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.buttonM5Status, "buttonM5Status");
+            this.buttonM5Status.Name = "buttonM5Status";
+            this.buttonM5Status.UseVisualStyleBackColor = true;
+            // 
+            // buttonM5Reset
+            // 
+            resources.ApplyResources(this.buttonM5Reset, "buttonM5Reset");
+            this.buttonM5Reset.Name = "buttonM5Reset";
+            this.buttonM5Reset.UseVisualStyleBackColor = true;
+            // 
             // checkBoxM5Pause
             // 
             resources.ApplyResources(this.checkBoxM5Pause, "checkBoxM5Pause");
@@ -4856,6 +4931,25 @@
             this.groupBoxM4.Name = "groupBoxM4";
             this.groupBoxM4.TabStop = false;
             // 
+            // labelM4Status
+            // 
+            resources.ApplyResources(this.labelM4Status, "labelM4Status");
+            this.labelM4Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM4Status.Name = "labelM4Status";
+            // 
+            // buttonM4Status
+            // 
+            this.buttonM4Status.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.buttonM4Status, "buttonM4Status");
+            this.buttonM4Status.Name = "buttonM4Status";
+            this.buttonM4Status.UseVisualStyleBackColor = true;
+            // 
+            // buttonM4Reset
+            // 
+            resources.ApplyResources(this.buttonM4Reset, "buttonM4Reset");
+            this.buttonM4Reset.Name = "buttonM4Reset";
+            this.buttonM4Reset.UseVisualStyleBackColor = true;
+            // 
             // checkBoxM4Pause
             // 
             resources.ApplyResources(this.checkBoxM4Pause, "checkBoxM4Pause");
@@ -4886,6 +4980,19 @@
             resources.ApplyResources(this.groupBoxM2, "groupBoxM2");
             this.groupBoxM2.Name = "groupBoxM2";
             this.groupBoxM2.TabStop = false;
+            // 
+            // labelM2Status
+            // 
+            resources.ApplyResources(this.labelM2Status, "labelM2Status");
+            this.labelM2Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM2Status.Name = "labelM2Status";
+            // 
+            // buttonM2Status
+            // 
+            resources.ApplyResources(this.buttonM2Status, "buttonM2Status");
+            this.buttonM2Status.FlatAppearance.BorderSize = 10;
+            this.buttonM2Status.Name = "buttonM2Status";
+            this.buttonM2Status.UseVisualStyleBackColor = true;
             // 
             // buttonM2Reset
             // 
@@ -4924,6 +5031,25 @@
             this.groupBoxM1.Name = "groupBoxM1";
             this.groupBoxM1.TabStop = false;
             // 
+            // labelM1Status
+            // 
+            resources.ApplyResources(this.labelM1Status, "labelM1Status");
+            this.labelM1Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM1Status.Name = "labelM1Status";
+            // 
+            // buttonM1Status
+            // 
+            this.buttonM1Status.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.buttonM1Status, "buttonM1Status");
+            this.buttonM1Status.Name = "buttonM1Status";
+            this.buttonM1Status.UseVisualStyleBackColor = true;
+            // 
+            // buttonM1Reset
+            // 
+            resources.ApplyResources(this.buttonM1Reset, "buttonM1Reset");
+            this.buttonM1Reset.Name = "buttonM1Reset";
+            this.buttonM1Reset.UseVisualStyleBackColor = true;
+            // 
             // checkBoxM1Pause
             // 
             resources.ApplyResources(this.checkBoxM1Pause, "checkBoxM1Pause");
@@ -4945,8 +5071,8 @@
             // 
             this.tabPageT0_3.Controls.Add(this.groupBoxKeepAliveFromPlc);
             this.tabPageT0_3.Controls.Add(this.groupBoxKeepAliveToPlc);
-            tabPageFormatStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT0_3.FormatStyle = tabPageFormatStyle27;
+            tabPageFormatStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT0_3.FormatStyle = tabPageFormatStyle26;
             resources.ApplyResources(this.tabPageT0_3, "tabPageT0_3");
             this.tabPageT0_3.Name = "tabPageT0_3";
             this.tabPageT0_3.ParentPage = null;
@@ -5099,13 +5225,29 @@
             this.tabPageT0_2.Controls.Add(this.textBoxM3Test);
             this.tabPageT0_2.Controls.Add(this.textBoxM2Test);
             this.tabPageT0_2.Controls.Add(this.textBoxM1Test);
-            tabPageFormatStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT0_2.FormatStyle = tabPageFormatStyle26;
+            tabPageFormatStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT0_2.FormatStyle = tabPageFormatStyle27;
             resources.ApplyResources(this.tabPageT0_2, "tabPageT0_2");
             this.tabPageT0_2.Name = "tabPageT0_2";
             this.tabPageT0_2.ParentPage = null;
             this.tabPageT0_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2.TextBounds")));
             this.tabPageT0_2.TextSize = new System.Drawing.SizeF(86.59161F, 25.4663F);
+            // 
+            // buttonSendLaser
+            // 
+            resources.ApplyResources(this.buttonSendLaser, "buttonSendLaser");
+            this.buttonSendLaser.Name = "buttonSendLaser";
+            this.buttonSendLaser.UseVisualStyleBackColor = true;
+            // 
+            // textBoxLaserLine2
+            // 
+            resources.ApplyResources(this.textBoxLaserLine2, "textBoxLaserLine2");
+            this.textBoxLaserLine2.Name = "textBoxLaserLine2";
+            // 
+            // textBoxLaserLine1
+            // 
+            resources.ApplyResources(this.textBoxLaserLine1, "textBoxLaserLine1");
+            this.textBoxLaserLine1.Name = "textBoxLaserLine1";
             // 
             // textBoxM6Test
             // 
@@ -5157,12 +5299,12 @@
             this.tabControlMain.ColorStyle = controlColorStyle1;
             this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Controls.Add(this.tabPageHide);
-            this.tabControlMain.Controls.Add(this.tabPageHelp);
-            this.tabControlMain.Controls.Add(this.tabPageSettings);
-            this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
-            this.tabControlMain.Controls.Add(this.tabPage4);
-            this.tabControlMain.Controls.Add(this.tabPageConsole);
             this.tabControlMain.Controls.Add(this.tabPageRecipe);
+            this.tabControlMain.Controls.Add(this.tabPageConsole);
+            this.tabControlMain.Controls.Add(this.tabPage4);
+            this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
+            this.tabControlMain.Controls.Add(this.tabPageSettings);
+            this.tabControlMain.Controls.Add(this.tabPageHelp);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlMain, "tabControlMain");
             controlFormatStyle6.BorderCornerRadius = 5;
@@ -5247,146 +5389,6 @@
             this.imageListStart.Images.SetKeyName(2, "indeterminate.png");
             this.imageListStart.Images.SetKeyName(3, "pause_on.png");
             this.imageListStart.Images.SetKeyName(4, "pause_off.png");
-            // 
-            // imageListStartStop
-            // 
-            this.imageListStartStop.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListStartStop.ImageStream")));
-            this.imageListStartStop.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListStartStop.Images.SetKeyName(0, "play (3).png");
-            this.imageListStartStop.Images.SetKeyName(1, "stop.png");
-            this.imageListStartStop.Images.SetKeyName(2, "pause_on.png");
-            this.imageListStartStop.Images.SetKeyName(3, "pause_off.png");
-            // 
-            // buttonM3Reset
-            // 
-            resources.ApplyResources(this.buttonM3Reset, "buttonM3Reset");
-            this.buttonM3Reset.Name = "buttonM3Reset";
-            this.buttonM3Reset.UseVisualStyleBackColor = true;
-            // 
-            // buttonM1Reset
-            // 
-            resources.ApplyResources(this.buttonM1Reset, "buttonM1Reset");
-            this.buttonM1Reset.Name = "buttonM1Reset";
-            this.buttonM1Reset.UseVisualStyleBackColor = true;
-            // 
-            // buttonM4Reset
-            // 
-            resources.ApplyResources(this.buttonM4Reset, "buttonM4Reset");
-            this.buttonM4Reset.Name = "buttonM4Reset";
-            this.buttonM4Reset.UseVisualStyleBackColor = true;
-            // 
-            // buttonM5Reset
-            // 
-            resources.ApplyResources(this.buttonM5Reset, "buttonM5Reset");
-            this.buttonM5Reset.Name = "buttonM5Reset";
-            this.buttonM5Reset.UseVisualStyleBackColor = true;
-            // 
-            // buttonM6Reset
-            // 
-            resources.ApplyResources(this.buttonM6Reset, "buttonM6Reset");
-            this.buttonM6Reset.Name = "buttonM6Reset";
-            this.buttonM6Reset.UseVisualStyleBackColor = true;
-            // 
-            // buttonM2Status
-            // 
-            resources.ApplyResources(this.buttonM2Status, "buttonM2Status");
-            this.buttonM2Status.FlatAppearance.BorderSize = 10;
-            this.buttonM2Status.Name = "buttonM2Status";
-            this.buttonM2Status.UseVisualStyleBackColor = true;
-            // 
-            // buttonM1Status
-            // 
-            this.buttonM1Status.FlatAppearance.BorderSize = 10;
-            resources.ApplyResources(this.buttonM1Status, "buttonM1Status");
-            this.buttonM1Status.Name = "buttonM1Status";
-            this.buttonM1Status.UseVisualStyleBackColor = true;
-            // 
-            // buttonM3Status
-            // 
-            this.buttonM3Status.FlatAppearance.BorderSize = 10;
-            resources.ApplyResources(this.buttonM3Status, "buttonM3Status");
-            this.buttonM3Status.Name = "buttonM3Status";
-            this.buttonM3Status.UseVisualStyleBackColor = true;
-            // 
-            // buttonM6Status
-            // 
-            this.buttonM6Status.FlatAppearance.BorderSize = 10;
-            resources.ApplyResources(this.buttonM6Status, "buttonM6Status");
-            this.buttonM6Status.Name = "buttonM6Status";
-            this.buttonM6Status.UseVisualStyleBackColor = true;
-            // 
-            // buttonM5Status
-            // 
-            this.buttonM5Status.FlatAppearance.BorderSize = 10;
-            resources.ApplyResources(this.buttonM5Status, "buttonM5Status");
-            this.buttonM5Status.Name = "buttonM5Status";
-            this.buttonM5Status.UseVisualStyleBackColor = true;
-            // 
-            // buttonM4Status
-            // 
-            this.buttonM4Status.FlatAppearance.BorderSize = 10;
-            resources.ApplyResources(this.buttonM4Status, "buttonM4Status");
-            this.buttonM4Status.Name = "buttonM4Status";
-            this.buttonM4Status.UseVisualStyleBackColor = true;
-            // 
-            // labelM2Status
-            // 
-            resources.ApplyResources(this.labelM2Status, "labelM2Status");
-            this.labelM2Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM2Status.Name = "labelM2Status";
-            // 
-            // labelM3Status
-            // 
-            resources.ApplyResources(this.labelM3Status, "labelM3Status");
-            this.labelM3Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM3Status.Name = "labelM3Status";
-            // 
-            // labelM6Status
-            // 
-            resources.ApplyResources(this.labelM6Status, "labelM6Status");
-            this.labelM6Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM6Status.Name = "labelM6Status";
-            // 
-            // labelM5Status
-            // 
-            resources.ApplyResources(this.labelM5Status, "labelM5Status");
-            this.labelM5Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM5Status.Name = "labelM5Status";
-            // 
-            // labelM4Status
-            // 
-            resources.ApplyResources(this.labelM4Status, "labelM4Status");
-            this.labelM4Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM4Status.Name = "labelM4Status";
-            // 
-            // labelM1Status
-            // 
-            resources.ApplyResources(this.labelM1Status, "labelM1Status");
-            this.labelM1Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM1Status.Name = "labelM1Status";
-            // 
-            // textBoxLaserLine1
-            // 
-            resources.ApplyResources(this.textBoxLaserLine1, "textBoxLaserLine1");
-            this.textBoxLaserLine1.Name = "textBoxLaserLine1";
-            // 
-            // textBoxLaserLine2
-            // 
-            resources.ApplyResources(this.textBoxLaserLine2, "textBoxLaserLine2");
-            this.textBoxLaserLine2.Name = "textBoxLaserLine2";
-            // 
-            // buttonSendLaser
-            // 
-            resources.ApplyResources(this.buttonSendLaser, "buttonSendLaser");
-            this.buttonSendLaser.Name = "buttonSendLaser";
-            this.buttonSendLaser.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 10;
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
