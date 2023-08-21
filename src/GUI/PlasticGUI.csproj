@@ -294,6 +294,14 @@
       <Project>{aa7764f7-d3a9-42fd-9eef-0ab1424b14e8}</Project>
       <Name>RSACommon</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\ConfigurationTool\RSAFile\RSAFile\RSAFile.csproj">
+      <Project>{1bb88a69-db2f-4798-8719-ce5f2b8f8bba}</Project>
+      <Name>RSAFile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ConfigurationTool\RSAPoints\RSAPoints\RSAPoints.csproj">
+      <Project>{ba650f53-8dc8-43af-be28-1068f12bf005}</Project>
+      <Name>RSAPoints</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\PPAUtils\PPAUtils.csproj">
       <Project>{679c6923-e8b9-4cff-869e-fff1c6022ccb}</Project>
       <Name>PPAUtils</Name>

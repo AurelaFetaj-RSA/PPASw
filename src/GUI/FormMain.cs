@@ -30,8 +30,8 @@ using OpcCustom;
 using RSACommon.Service;
 using RSACommon.Configuration;
 using RSACommon.ProgramParser;
+using RSAPoints.Points;
 using RSACommon.Points;
-
 
 namespace GUI
 {
