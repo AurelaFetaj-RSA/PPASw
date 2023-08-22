@@ -27,7 +27,7 @@ namespace GUI
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            SplashScreen = new SplashScreen(Settings.Default.SplashScreenFilepath, 600, 300);
+            SplashScreen = new SplashScreen(Settings.Default.SplashScreenFilepath, 500, 232);
             var splashThread = new Thread(new ThreadStart(
                 () => Application.Run(SplashScreen)));
             splashThread.SetApartmentState(ApartmentState.STA);

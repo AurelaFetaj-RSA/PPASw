@@ -98,8 +98,8 @@ namespace GUI
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle18 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle19 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle20 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle19 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle21 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -119,11 +119,11 @@ namespace GUI
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle5 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolTipStyle toolTipStyle5 = new LidorSystems.IntegralUI.Controls.Style.ToolTipStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle25 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Recipies");
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("RSA");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("RSA");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Automatic");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Recipies");
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Automatic");
             LidorSystems.IntegralUI.Style.ControlColorStyle controlColorStyle1 = new LidorSystems.IntegralUI.Style.ControlColorStyle();
             LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle6 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -411,16 +411,6 @@ namespace GUI
             this.tabPageRecipe = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageMain = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlT0 = new LidorSystems.IntegralUI.Containers.TabControl();
-            this.tabPageT0_2 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.buttonSendLaser = new System.Windows.Forms.Button();
-            this.textBoxLaserLine2 = new System.Windows.Forms.TextBox();
-            this.textBoxLaserLine1 = new System.Windows.Forms.TextBox();
-            this.textBoxM6Test = new System.Windows.Forms.TextBox();
-            this.textBoxM5Test = new System.Windows.Forms.TextBox();
-            this.textBoxM4Test = new System.Windows.Forms.TextBox();
-            this.textBoxM3Test = new System.Windows.Forms.TextBox();
-            this.textBoxM2Test = new System.Windows.Forms.TextBox();
-            this.textBoxM1Test = new System.Windows.Forms.TextBox();
             this.tabPageT0_3 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.groupBoxKeepAliveFromPlc = new System.Windows.Forms.GroupBox();
             this.pictureBoxIOTNode = new System.Windows.Forms.PictureBox();
@@ -435,6 +425,16 @@ namespace GUI
             this.lbLedM3PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLedM1PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLedM4PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.tabPageT0_2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.buttonSendLaser = new System.Windows.Forms.Button();
+            this.textBoxLaserLine2 = new System.Windows.Forms.TextBox();
+            this.textBoxLaserLine1 = new System.Windows.Forms.TextBox();
+            this.textBoxM6Test = new System.Windows.Forms.TextBox();
+            this.textBoxM5Test = new System.Windows.Forms.TextBox();
+            this.textBoxM4Test = new System.Windows.Forms.TextBox();
+            this.textBoxM3Test = new System.Windows.Forms.TextBox();
+            this.textBoxM2Test = new System.Windows.Forms.TextBox();
+            this.textBoxM1Test = new System.Windows.Forms.TextBox();
             this.tabPageT0_1 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.groupBoxLine = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -559,7 +559,6 @@ namespace GUI
             this.tabPageMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT0)).BeginInit();
             this.tabControlT0.SuspendLayout();
-            this.tabPageT0_2.SuspendLayout();
             this.tabPageT0_3.SuspendLayout();
             this.groupBoxKeepAliveFromPlc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIOTNode)).BeginInit();
@@ -569,6 +568,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM2PLCNode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3PLCNode)).BeginInit();
             this.groupBoxKeepAliveToPlc.SuspendLayout();
+            this.tabPageT0_2.SuspendLayout();
             this.tabPageT0_1.SuspendLayout();
             this.groupBoxLine.SuspendLayout();
             this.groupBoxM6.SuspendLayout();
@@ -2206,8 +2206,8 @@ namespace GUI
             // tabControlT2
             // 
             this.tabControlT2.Controls.Add(this.tabPageT2M2_1);
-            this.tabControlT2.Controls.Add(this.tabPageT2M2_4);
             this.tabControlT2.Controls.Add(this.tabPageT2M2_3);
+            this.tabControlT2.Controls.Add(this.tabPageT2M2_4);
             this.tabControlT2.Controls.Add(this.tabPageT2M2_2);
             this.tabControlT2.Cursor = System.Windows.Forms.Cursors.Default;
             controlFormatStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2704,8 +2704,8 @@ namespace GUI
             this.tabPageT2M2_4.Controls.Add(this.lbLed2003M2);
             this.tabPageT2M2_4.Controls.Add(this.lbLed2004M2);
             this.tabPageT2M2_4.Controls.Add(this.lbLed2001M2);
-            tabPageFormatStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT2M2_4.FormatStyle = tabPageFormatStyle19;
+            tabPageFormatStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT2M2_4.FormatStyle = tabPageFormatStyle20;
             resources.ApplyResources(this.tabPageT2M2_4, "tabPageT2M2_4");
             this.tabPageT2M2_4.Name = "tabPageT2M2_4";
             this.tabPageT2M2_4.ParentPage = null;
@@ -3482,8 +3482,8 @@ namespace GUI
             this.tabPageT2M2_3.Controls.Add(this.lbLed1003M2);
             this.tabPageT2M2_3.Controls.Add(this.lbLed1004M2);
             this.tabPageT2M2_3.Controls.Add(this.lbLed1001M2);
-            tabPageFormatStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT2M2_3.FormatStyle = tabPageFormatStyle20;
+            tabPageFormatStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT2M2_3.FormatStyle = tabPageFormatStyle19;
             resources.ApplyResources(this.tabPageT2M2_3, "tabPageT2M2_3");
             this.tabPageT2M2_3.Name = "tabPageT2M2_3";
             this.tabPageT2M2_3.ParentPage = null;
@@ -4386,9 +4386,9 @@ namespace GUI
             // 
             // tabControlT0
             // 
-            this.tabControlT0.Controls.Add(this.tabPageT0_2);
             this.tabControlT0.Controls.Add(this.tabPageT0_3);
             this.tabControlT0.Controls.Add(this.tabPageT0_1);
+            this.tabControlT0.Controls.Add(this.tabPageT0_2);
             this.tabControlT0.Cursor = System.Windows.Forms.Cursors.Default;
             controlFormatStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlT0.FormatStyle = controlFormatStyle5;
@@ -4401,7 +4401,7 @@ namespace GUI
             this.tabPageT0_2,
             this.tabPageT0_3});
             this.tabControlT0.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlT0.SelectedPage = this.tabPageT0_2;
+            this.tabControlT0.SelectedPage = this.tabPageT0_3;
             this.tabControlT0.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabControlT0.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Left;
             tabStripStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
@@ -4412,88 +4412,19 @@ namespace GUI
             toolTipStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlT0.ToolTipStyle = toolTipStyle5;
             // 
-            // tabPageT0_2
-            // 
-            this.tabPageT0_2.Controls.Add(this.buttonSendLaser);
-            this.tabPageT0_2.Controls.Add(this.textBoxLaserLine2);
-            this.tabPageT0_2.Controls.Add(this.textBoxLaserLine1);
-            this.tabPageT0_2.Controls.Add(this.textBoxM6Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM5Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM4Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM3Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM2Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM1Test);
-            tabPageFormatStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT0_2.FormatStyle = tabPageFormatStyle25;
-            resources.ApplyResources(this.tabPageT0_2, "tabPageT0_2");
-            this.tabPageT0_2.Name = "tabPageT0_2";
-            this.tabPageT0_2.ParentPage = null;
-            treeNode8.Name = "";
-            treeNode8.Tag = this.tabPageT0_2;
-            resources.ApplyResources(treeNode8, "treeNode8");
-            this.tabPageT0_2.Tag = treeNode8;
-            this.tabPageT0_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2.TextBounds")));
-            this.tabPageT0_2.TextSize = new System.Drawing.SizeF(86.59161F, 25.4663F);
-            // 
-            // buttonSendLaser
-            // 
-            resources.ApplyResources(this.buttonSendLaser, "buttonSendLaser");
-            this.buttonSendLaser.Name = "buttonSendLaser";
-            this.buttonSendLaser.UseVisualStyleBackColor = true;
-            // 
-            // textBoxLaserLine2
-            // 
-            resources.ApplyResources(this.textBoxLaserLine2, "textBoxLaserLine2");
-            this.textBoxLaserLine2.Name = "textBoxLaserLine2";
-            // 
-            // textBoxLaserLine1
-            // 
-            resources.ApplyResources(this.textBoxLaserLine1, "textBoxLaserLine1");
-            this.textBoxLaserLine1.Name = "textBoxLaserLine1";
-            // 
-            // textBoxM6Test
-            // 
-            resources.ApplyResources(this.textBoxM6Test, "textBoxM6Test");
-            this.textBoxM6Test.Name = "textBoxM6Test";
-            // 
-            // textBoxM5Test
-            // 
-            resources.ApplyResources(this.textBoxM5Test, "textBoxM5Test");
-            this.textBoxM5Test.Name = "textBoxM5Test";
-            // 
-            // textBoxM4Test
-            // 
-            resources.ApplyResources(this.textBoxM4Test, "textBoxM4Test");
-            this.textBoxM4Test.Name = "textBoxM4Test";
-            // 
-            // textBoxM3Test
-            // 
-            resources.ApplyResources(this.textBoxM3Test, "textBoxM3Test");
-            this.textBoxM3Test.Name = "textBoxM3Test";
-            // 
-            // textBoxM2Test
-            // 
-            resources.ApplyResources(this.textBoxM2Test, "textBoxM2Test");
-            this.textBoxM2Test.Name = "textBoxM2Test";
-            // 
-            // textBoxM1Test
-            // 
-            resources.ApplyResources(this.textBoxM1Test, "textBoxM1Test");
-            this.textBoxM1Test.Name = "textBoxM1Test";
-            // 
             // tabPageT0_3
             // 
             this.tabPageT0_3.Controls.Add(this.groupBoxKeepAliveFromPlc);
             this.tabPageT0_3.Controls.Add(this.groupBoxKeepAliveToPlc);
-            tabPageFormatStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT0_3.FormatStyle = tabPageFormatStyle26;
+            tabPageFormatStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT0_3.FormatStyle = tabPageFormatStyle25;
             resources.ApplyResources(this.tabPageT0_3, "tabPageT0_3");
             this.tabPageT0_3.Name = "tabPageT0_3";
             this.tabPageT0_3.ParentPage = null;
-            treeNode9.Name = "";
-            treeNode9.Tag = this.tabPageT0_3;
-            resources.ApplyResources(treeNode9, "treeNode9");
-            this.tabPageT0_3.Tag = treeNode9;
+            treeNode8.Name = "";
+            treeNode8.Tag = this.tabPageT0_3;
+            resources.ApplyResources(treeNode8, "treeNode8");
+            this.tabPageT0_3.Tag = treeNode8;
             this.tabPageT0_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_3.TextBounds")));
             this.tabPageT0_3.TextSize = new System.Drawing.SizeF(46.69904F, 25.4663F);
             this.tabPageT0_3.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageT0_3_Paint);
@@ -4632,6 +4563,75 @@ namespace GUI
             this.lbLedM4PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
             this.lbLedM4PCKeepAlive.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
             // 
+            // tabPageT0_2
+            // 
+            this.tabPageT0_2.Controls.Add(this.buttonSendLaser);
+            this.tabPageT0_2.Controls.Add(this.textBoxLaserLine2);
+            this.tabPageT0_2.Controls.Add(this.textBoxLaserLine1);
+            this.tabPageT0_2.Controls.Add(this.textBoxM6Test);
+            this.tabPageT0_2.Controls.Add(this.textBoxM5Test);
+            this.tabPageT0_2.Controls.Add(this.textBoxM4Test);
+            this.tabPageT0_2.Controls.Add(this.textBoxM3Test);
+            this.tabPageT0_2.Controls.Add(this.textBoxM2Test);
+            this.tabPageT0_2.Controls.Add(this.textBoxM1Test);
+            tabPageFormatStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT0_2.FormatStyle = tabPageFormatStyle27;
+            resources.ApplyResources(this.tabPageT0_2, "tabPageT0_2");
+            this.tabPageT0_2.Name = "tabPageT0_2";
+            this.tabPageT0_2.ParentPage = null;
+            treeNode10.Name = "";
+            treeNode10.Tag = this.tabPageT0_2;
+            resources.ApplyResources(treeNode10, "treeNode10");
+            this.tabPageT0_2.Tag = treeNode10;
+            this.tabPageT0_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2.TextBounds")));
+            this.tabPageT0_2.TextSize = new System.Drawing.SizeF(86.59161F, 25.4663F);
+            // 
+            // buttonSendLaser
+            // 
+            resources.ApplyResources(this.buttonSendLaser, "buttonSendLaser");
+            this.buttonSendLaser.Name = "buttonSendLaser";
+            this.buttonSendLaser.UseVisualStyleBackColor = true;
+            // 
+            // textBoxLaserLine2
+            // 
+            resources.ApplyResources(this.textBoxLaserLine2, "textBoxLaserLine2");
+            this.textBoxLaserLine2.Name = "textBoxLaserLine2";
+            // 
+            // textBoxLaserLine1
+            // 
+            resources.ApplyResources(this.textBoxLaserLine1, "textBoxLaserLine1");
+            this.textBoxLaserLine1.Name = "textBoxLaserLine1";
+            // 
+            // textBoxM6Test
+            // 
+            resources.ApplyResources(this.textBoxM6Test, "textBoxM6Test");
+            this.textBoxM6Test.Name = "textBoxM6Test";
+            // 
+            // textBoxM5Test
+            // 
+            resources.ApplyResources(this.textBoxM5Test, "textBoxM5Test");
+            this.textBoxM5Test.Name = "textBoxM5Test";
+            // 
+            // textBoxM4Test
+            // 
+            resources.ApplyResources(this.textBoxM4Test, "textBoxM4Test");
+            this.textBoxM4Test.Name = "textBoxM4Test";
+            // 
+            // textBoxM3Test
+            // 
+            resources.ApplyResources(this.textBoxM3Test, "textBoxM3Test");
+            this.textBoxM3Test.Name = "textBoxM3Test";
+            // 
+            // textBoxM2Test
+            // 
+            resources.ApplyResources(this.textBoxM2Test, "textBoxM2Test");
+            this.textBoxM2Test.Name = "textBoxM2Test";
+            // 
+            // textBoxM1Test
+            // 
+            resources.ApplyResources(this.textBoxM1Test, "textBoxM1Test");
+            this.textBoxM1Test.Name = "textBoxM1Test";
+            // 
             // tabPageT0_1
             // 
             this.tabPageT0_1.Controls.Add(this.groupBoxLine);
@@ -4641,15 +4641,15 @@ namespace GUI
             this.tabPageT0_1.Controls.Add(this.groupBoxM4);
             this.tabPageT0_1.Controls.Add(this.groupBoxM2);
             this.tabPageT0_1.Controls.Add(this.groupBoxM1);
-            tabPageFormatStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT0_1.FormatStyle = tabPageFormatStyle27;
+            tabPageFormatStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT0_1.FormatStyle = tabPageFormatStyle26;
             resources.ApplyResources(this.tabPageT0_1, "tabPageT0_1");
             this.tabPageT0_1.Name = "tabPageT0_1";
             this.tabPageT0_1.ParentPage = null;
-            treeNode10.Name = "";
-            treeNode10.Tag = this.tabPageT0_1;
-            resources.ApplyResources(treeNode10, "treeNode10");
-            this.tabPageT0_1.Tag = treeNode10;
+            treeNode9.Name = "";
+            treeNode9.Tag = this.tabPageT0_1;
+            resources.ApplyResources(treeNode9, "treeNode9");
+            this.tabPageT0_1.Tag = treeNode9;
             this.tabPageT0_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_1.TextBounds")));
             this.tabPageT0_1.TextSize = new System.Drawing.SizeF(105.7493F, 25.4663F);
             // 
@@ -5353,13 +5353,13 @@ namespace GUI
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
             this.tabControlMain.Controls.Add(this.tabPageMain);
-            this.tabControlMain.Controls.Add(this.tabPageHide);
-            this.tabControlMain.Controls.Add(this.tabPageHelp);
-            this.tabControlMain.Controls.Add(this.tabPageSettings);
             this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
             this.tabControlMain.Controls.Add(this.tabPage4);
             this.tabControlMain.Controls.Add(this.tabPageConsole);
             this.tabControlMain.Controls.Add(this.tabPageRecipe);
+            this.tabControlMain.Controls.Add(this.tabPageHide);
+            this.tabControlMain.Controls.Add(this.tabPageHelp);
+            this.tabControlMain.Controls.Add(this.tabPageSettings);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlMain, "tabControlMain");
             controlFormatStyle6.BorderCornerRadius = 5;
@@ -5499,8 +5499,6 @@ namespace GUI
             this.tabPageMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT0)).EndInit();
             this.tabControlT0.ResumeLayout(false);
-            this.tabPageT0_2.ResumeLayout(false);
-            this.tabPageT0_2.PerformLayout();
             this.tabPageT0_3.ResumeLayout(false);
             this.groupBoxKeepAliveFromPlc.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIOTNode)).EndInit();
@@ -5510,6 +5508,8 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM2PLCNode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3PLCNode)).EndInit();
             this.groupBoxKeepAliveToPlc.ResumeLayout(false);
+            this.tabPageT0_2.ResumeLayout(false);
+            this.tabPageT0_2.PerformLayout();
             this.tabPageT0_1.ResumeLayout(false);
             this.groupBoxLine.ResumeLayout(false);
             this.groupBoxLine.PerformLayout();

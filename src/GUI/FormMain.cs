@@ -64,13 +64,11 @@ namespace GUI
             InitGUI();
 
             _splashScreen?.WriteOnTextboxAsync($"Set the GUI");
-            StartDiagnosticGUI();
+            //StartDiagnosticGUI();
             _splashScreen?.WriteOnTextboxAsync($"Loaded Diagnostic File");
 
             //Splash Screen filler
             _splashScreen?.WriteOnTextboxAsync($"Update GUI syncrozionation Thread Started");
-
-            //tabControlMain.SelectedPage = tabPageMenu1;
         }
 
         public void Start()
@@ -83,14 +81,14 @@ namespace GUI
 
         }
 
-        public void StartUpdateTask()
-        {
+        //public void StartUpdateTask()
+        //{
 
-            //.Run(async () => await UpdateGraphicsGUI(TimeSpan.FromMilliseconds(Settings.Default.UpdateGUILed), _cancellationTokenSource));
-            //Task.Run(async () => await UpdateDiagnosticGUI(TimeSpan.FromMilliseconds(myCore.DiagnosticConfigurator.Configuration.DiagnosticPolling), _cancellationTokenSource));
-            Task.Run(async () => await UpdateOPCUAStatus(TimeSpan.FromMilliseconds(1000), _cancellationTokenSource));
+        //    //.Run(async () => await UpdateGraphicsGUI(TimeSpan.FromMilliseconds(Settings.Default.UpdateGUILed), _cancellationTokenSource));
+        //    //Task.Run(async () => await UpdateDiagnosticGUI(TimeSpan.FromMilliseconds(myCore.DiagnosticConfigurator.Configuration.DiagnosticPolling), _cancellationTokenSource));
+        //    Task.Run(async () => await UpdateOPCUAStatus(TimeSpan.FromMilliseconds(1000), _cancellationTokenSource));
 
-        }
+        //}
 
 
         private void RSACustomEvents_ServiceDisconnectionEvent(object sender, RSACustomEvents.ServiceConnectionEventArgs e)
@@ -173,7 +171,7 @@ namespace GUI
             }
 
         }
-
+        
         private async void InitCore()
         {
             myCore = new Core("PlasticCore");
@@ -830,7 +828,7 @@ namespace GUI
                 if ((e.ColumnIndex == 4) & currentRow >= 0)
                 {
                     start[idPoint] = true;
-                    OPCUAM2TeachPckSend(idPoint, quote, speed, start);
+                    //OPCUAM2TeachPckSend(idPoint, quote, speed, start);
                 }
             }
             catch (Exception ex)
@@ -1054,7 +1052,7 @@ namespace GUI
                     speed[i + 1] = short.Parse(dataGridViewM2TestPoints[2, i].Value.ToString());
                 }
 
-                OPCUAM2TestPckSend(quote, speed);
+                //OPCUAM2TestPckSend(quote, speed);
             }
             catch (Exception ex)
             {
@@ -1078,7 +1076,7 @@ namespace GUI
                     speed[i + 1] = short.Parse(dataGridViewM3TestPoints[2, i].Value.ToString());
                 }
 
-                OPCUAM3TestPckSend(quote, speed);
+                //OPCUAM3TestPckSend(quote, speed);
             }
             catch (Exception ex)
             {
@@ -1576,7 +1574,7 @@ namespace GUI
                 if ((e.ColumnIndex == 4) & currentRow >= 0)
                 {
                     start[idPoint] = true;
-                    OPCUAM3TeachPckSend(idPoint, quote, speed, start);
+                    //OPCUAM3TeachPckSend(idPoint, quote, speed, start);
                 }
             }
             catch (Exception ex)
@@ -2643,5 +2641,6 @@ namespace GUI
         {
 
         }
+    
     }
 }

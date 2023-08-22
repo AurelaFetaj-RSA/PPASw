@@ -129,18 +129,18 @@
     <Compile Include="FormApp.Designer.cs">
       <DependentUpon>FormApp.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlatiscOpcClientConfig.cs" />
     <Compile Include="RobotHelper.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RobotHelper.Designer.cs">
       <DependentUpon>RobotHelper.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="IO_callback\IODiagnostics.cs">
       <SubType>Form</SubType>

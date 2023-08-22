@@ -49,7 +49,7 @@ namespace GUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Work\\Github\\PPASw\\src\\GUI\\bin\\Debug\\splash.jpg")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\splash_screen.png")]
         public string SplashScreenFilepath {
             get {
                 return ((string)(this["SplashScreenFilepath"]));

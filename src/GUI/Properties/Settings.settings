@@ -9,7 +9,7 @@
       <Value Profile="(Default)">C:\PRODUCTION\Programs\R2</Value>
     </Setting>
     <Setting Name="SplashScreenFilepath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\Work\Github\PPASw\src\GUI\bin\Debug\splash.jpg</Value>
+      <Value Profile="(Default)">C:\RSA\github_repositories\PPASw\src\GUI\images\splash_screen.png</Value>
     </Setting>
     <Setting Name="OpcClient_1_URI" Type="System.String" Scope="User">
       <Value Profile="(Default)">opc.tcp://172.31.20.101:48011</Value>

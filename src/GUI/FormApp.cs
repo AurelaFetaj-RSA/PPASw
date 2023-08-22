@@ -58,17 +58,15 @@ namespace GUI
             InitCore();
 
             InitializeComponent();
-            //tabPageT0_1.UseParentTabStripPlacement = false;
-            //tabPageT0_1.TabShape = TabShape.Trapezoidal;
-            //tabPageT0_1.TabStripPlacement = TabStripPlacement.Bottom;
+
             //InitGUI();
 
             _splashScreen?.WriteOnTextboxAsync($"Set the GUI");
             //StartDiagnosticGUI();
             _splashScreen?.WriteOnTextboxAsync($"Loaded Diagnostic File");
 
-            ////Splash Screen filler
-            //_splashScreen?.WriteOnTextboxAsync($"Update GUI syncrozionation Thread Started");
+            //Splash Screen filler
+            _splashScreen?.WriteOnTextboxAsync($"Update GUI syncrozionation Thread Started");
         }
 
         private async void InitCore()
@@ -84,24 +82,7 @@ namespace GUI
             myCore.AddScoped<Diagnostic.Core.Diagnostic>();
             myCore.AddScoped<OpcClientService>();
             myCore.AddScoped<ReadProgramsService>();
-            //OpcClientConfiguration Config = new OpcClientConfiguration()
-            //{
-            //    ServiceName = "OpcClient",
-            //    Active = true,
-            //    Host = "192.168.0.38",
-            //    Port = 48011,
-            //    DefaultKeepAliveFutureValueExpected = 0,
-            //    DefaultKeepAliveFutureValueToSet = 1,
-            //    Scheme = "opc.tcp",
-            //    TimeoutMilliseconds = 5000,
-            //    DisconnectionTimeoutMilliseconds = 5000
-            //};
 
-            //CoreConfigurations newConfiguration = new CoreConfigurations();
-            //newConfiguration.ServiceConfigurations.Add(Config);
-
-            //myCore.AddScoped<RSACommon.Service.OpcClientService>();
-            //myCore.CreateServiceList(newConfiguration, null);
             var listOfService = myCore.CreateServiceList(myCore.CoreConfigurations, loadedloggerConfigurator);
 
             List<IService> listFound = myCore.FindPerType(typeof(OpcClientService));
@@ -155,7 +136,7 @@ namespace GUI
 
         public void StartUpdateTask()
         {
-            //Task.Run(async () => await UpdateOPCUAStatus(TimeSpan.FromMilliseconds(1000), _cancellationTokenSource));
+            Task.Run(async () => await UpdateOPCUAStatus(TimeSpan.FromMilliseconds(1000), _cancellationTokenSource));
         }
 
         private void RSACustomEvents_ServiceHasLoadProgramEvent(object sender, RSACustomEvents.ProgramsReadEndedEventArgs e)
@@ -167,12 +148,6 @@ namespace GUI
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-
-        }
-
         private void tabControlMain_SelectedPageChanged(object sender, LidorSystems.IntegralUI.ObjectEventArgs e)
         {
             if (this.tabControlMain.SelectedPage != null)
@@ -181,6 +156,7 @@ namespace GUI
                 this.tabControlMain.SelectedPage.TabShape = TabShape.Rectangular;
                 this.tabControlMain.SelectedPage.TabStripPlacement = TabStripPlacement.Left;
                 LidorSystems.IntegralUI.Containers.TabPage parentPage = this.tabControlMain.SelectedPage;
+
                 if (parentPage.Pages.Count != 0) nextPage = parentPage.Pages[0];
                 if (nextPage != null) this.tabControlMain.SelectedPage = nextPage;
             }
@@ -189,5 +165,7 @@ namespace GUI
 
             }
         }
+
+
     }
 }

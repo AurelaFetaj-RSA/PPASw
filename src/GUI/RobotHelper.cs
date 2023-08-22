@@ -24,7 +24,7 @@ using RSACommon.Service;
 using System.IO;
 namespace GUI
 {
-    public partial class FormMain : Form
+    public partial class FormApp : Form
     {
         Dictionary<string, DiagnosticWindowsControl> DiagnosticVariableGroupbox = new Dictionary<string, DiagnosticWindowsControl>();
         private bool[] lastLifeBit { get; set; } = { false, false, false, false, false, false };
@@ -76,7 +76,6 @@ namespace GUI
 
         public async Task UpdateOPCUAStatus(TimeSpan interval, CancellationTokenSource cancellationToken)
         {
-
             while (true)
             {
                 await UpdateOPCUAStatus();
@@ -105,7 +104,7 @@ namespace GUI
             //}
         }
 
-        public int counter = 0;
+        //public int counter = 0;
         private Dictionary<string, int> _lastState = new Dictionary<string, int>();
 
         public async Task CheckDiagnostic()
@@ -161,193 +160,6 @@ namespace GUI
             //}
         }
 
-        public void WriteOnLabelAsync(ClientResult cr, Label lbl)
-        {
-            string textToAppend = "";
-
-            if ((cr == null) || (cr.OpcResult == false))
-            {
-                textToAppend = "offline";
-            }
-            else
-            {
-                textToAppend = cr.Value.ToString();
-            }
-            if (lbl.InvokeRequired)
-            {
-                lbl.Invoke((MethodInvoker)delegate
-                {
-                    lbl.Text = textToAppend;
-                });
-            }
-        }
-
-        public void WriteOnCheckBoxStartAsync(ClientResult cr, CheckBox chk)
-        {
-            short value = -1;
-
-            if ((cr == null) || (cr.OpcResult == false))
-            {
-
-            }
-            else
-            {
-                value = (short)cr.Value;
-            }
-
-            if (chk.InvokeRequired)
-            {
-                chk.Invoke((MethodInvoker)delegate
-                {
-                    chk.Text = "";
-                    if (value == -1)
-                    {
-                        chk.CheckState = CheckState.Indeterminate;
-                        chk.Image = imageListStart.Images[2];
-                    }
-
-                    if (value == 0)
-                    {
-                        chk.CheckState = CheckState.Unchecked;
-                        chk.Image = imageListStart.Images[0];
-                    }
-
-                    if (value == 1)
-                    {
-                        chk.CheckState = CheckState.Unchecked;
-                        chk.Image = imageListStart.Images[0];
-                    }
-
-                    if (value == 2)
-                    {
-                        chk.CheckState = CheckState.Unchecked;
-                        chk.Image = imageListStart.Images[0];
-                    }
-
-                    if (value == 3)
-                    {
-                        chk.CheckState = CheckState.Checked;
-                        chk.Image = imageListStart.Images[1];
-                    }
-
-                    if (value == 4)
-                    {
-                        chk.CheckState = CheckState.Unchecked;
-                        chk.Image = imageListStart.Images[0];
-                    }
-                });
-            }
-        }
-
-        public void WriteOnLabelStatusAsync(ClientResult cr, Label lbl)
-        {
-            short value = -1;
-
-            if ((cr == null) || (cr.OpcResult == false))
-            {
-
-            }
-            else
-            {
-                value = (short)cr.Value;
-            }
-
-            if (lbl.InvokeRequired)
-            {
-                lbl.Invoke((MethodInvoker)delegate
-                {
-                    lbl.Text = "";
-                    if (value == -1)
-                    {
-                        lbl.Text = "offline";
-                    }
-
-                    if (value == 0)
-                    {
-                        lbl.Text = "emegency";
-                    }
-
-                    if (value == 1)
-                    {
-                        lbl.Text = "automatic";
-                    }
-
-                    if (value == 2)
-                    {
-                        lbl.Text = "manual";
-                    }
-
-                    if (value == 3)
-                    {
-                        lbl.Text = "in cycle";
-                    }
-
-                    if (value == 4)
-                    {
-                        lbl.Text = "in alarm";
-                    }
-                });
-            }
-        }
-
-
-        public void WriteOnCheckBoxPauseAsync(ClientResult cr, CheckBox chk)
-        {
-            bool value = false;
-            bool founded = false;
-
-            if ((cr == null) || (cr.OpcResult == false))
-            {
-
-            }
-            else
-            {
-                value = (bool)cr.Value;
-                founded = true;
-            }
-
-            if (chk.InvokeRequired)
-            {
-                chk.Invoke((MethodInvoker)delegate
-                {
-                    chk.Text = "";
-                    if (!founded)
-                    {
-                        chk.CheckState = CheckState.Indeterminate;
-                        chk.Image = imageListStart.Images[2];
-                    }
-                    else
-                    {
-                        if (value == true)
-                        {
-                            chk.CheckState = CheckState.Checked;
-                            chk.Image = imageListStart.Images[4];
-                        }
-
-                        if (value == false)
-                        {
-                            chk.CheckState = CheckState.Unchecked;
-                            chk.Image = imageListStart.Images[3];
-                        }
-                    }
-                });
-            }
-        }
-
-
-        #region -----LETTURA PROGRAMMI-----
-
-
-
-
-
-
-
-
-        #endregion
-
-
-        #region (* machines status *)
         public async Task UpdateOPCUAStatus()
         {
             try
@@ -564,7 +376,7 @@ namespace GUI
                 else
                 {
                     GUIWithOPCUAClientDisconnected();
-                    ccService.Connect();
+                    await ccService.Connect();
                 }
             }
             catch (Exception Ex)
@@ -573,6 +385,181 @@ namespace GUI
 
             }
         }
+        public void WriteOnLabelAsync(ClientResult cr, Label lbl)
+        {
+            string textToAppend = "";
+
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                textToAppend = "offline";
+            }
+            else
+            {
+                textToAppend = cr.Value.ToString();
+            }
+            if (lbl.InvokeRequired)
+            {
+                lbl.Invoke((MethodInvoker)delegate
+                {
+                    lbl.Text = textToAppend;
+                });
+            }
+        }
+        public void WriteOnCheckBoxStartAsync(ClientResult cr, CheckBox chk)
+        {
+            short value = -1;
+
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+
+            }
+            else
+            {
+                value = (short)cr.Value;
+            }
+
+            if (chk.InvokeRequired)
+            {
+                chk.Invoke((MethodInvoker)delegate
+                {
+                    chk.Text = "";
+                    if (value == -1)
+                    {
+                        chk.CheckState = CheckState.Indeterminate;
+                        chk.Image = imageListStart.Images[2];
+                    }
+
+                    if (value == 0)
+                    {
+                        chk.CheckState = CheckState.Unchecked;
+                        chk.Image = imageListStart.Images[0];
+                    }
+
+                    if (value == 1)
+                    {
+                        chk.CheckState = CheckState.Unchecked;
+                        chk.Image = imageListStart.Images[0];
+                    }
+
+                    if (value == 2)
+                    {
+                        chk.CheckState = CheckState.Unchecked;
+                        chk.Image = imageListStart.Images[0];
+                    }
+
+                    if (value == 3)
+                    {
+                        chk.CheckState = CheckState.Checked;
+                        chk.Image = imageListStart.Images[1];
+                    }
+
+                    if (value == 4)
+                    {
+                        chk.CheckState = CheckState.Unchecked;
+                        chk.Image = imageListStart.Images[0];
+                    }
+                });
+            }
+        }
+        public void WriteOnCheckBoxPauseAsync(ClientResult cr, CheckBox chk)
+        {
+            bool value = false;
+            bool founded = false;
+
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+
+            }
+            else
+            {
+                value = (bool)cr.Value;
+                founded = true;
+            }
+
+            if (chk.InvokeRequired)
+            {
+                chk.Invoke((MethodInvoker)delegate
+                {
+                    chk.Text = "";
+                    if (!founded)
+                    {
+                        chk.CheckState = CheckState.Indeterminate;
+                        chk.Image = imageListStart.Images[2];
+                    }
+                    else
+                    {
+                        if (value == true)
+                        {
+                            chk.CheckState = CheckState.Checked;
+                            chk.Image = imageListStart.Images[4];
+                        }
+
+                        if (value == false)
+                        {
+                            chk.CheckState = CheckState.Unchecked;
+                            chk.Image = imageListStart.Images[3];
+                        }
+                    }
+                });
+            }
+        }
+        public void WriteOnLabelStatusAsync(ClientResult cr, Label lbl)
+        {
+            short value = -1;
+
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+
+            }
+            else
+            {
+                value = (short)cr.Value;
+            }
+
+            if (lbl.InvokeRequired)
+            {
+                lbl.Invoke((MethodInvoker)delegate
+                {
+                    lbl.Text = "";
+                    if (value == -1)
+                    {
+                        lbl.Text = "offline";
+                    }
+
+                    if (value == 0)
+                    {
+                        lbl.Text = "emegency";
+                    }
+
+                    if (value == 1)
+                    {
+                        lbl.Text = "automatic";
+                    }
+
+                    if (value == 2)
+                    {
+                        lbl.Text = "manual";
+                    }
+
+                    if (value == 3)
+                    {
+                        lbl.Text = "in cycle";
+                    }
+
+                    if (value == 4)
+                    {
+                        lbl.Text = "in alarm";
+                    }
+                });
+            }
+        }
+
+
+      
+
+
+        #region (* machines status *)
+      
 
         private void GUIWithOPCUAClientConnected()
         {
@@ -580,26 +567,30 @@ namespace GUI
         }
 
         private void GUIWithOPCUAClientDisconnected()
-        {
-            ManageOPCUAMBtnStatus(null, checkBoxM1Start);
-
+        {            
             UpdateOPCUAMStatus(null, buttonM1Status, labelM1Status);
-            ManageOPCUAMBtnStatus(null, checkBoxM1Start);
+            WriteOnCheckBoxStartAsync(null, checkBoxM1Start);
+            WriteOnCheckBoxPauseAsync(null, checkBoxM1Pause);
 
             UpdateOPCUAMStatus(null, buttonM2Status, labelM2Status);
-            ManageOPCUAMBtnStatus(null, checkBoxM2Start);
+            WriteOnCheckBoxStartAsync(null, checkBoxM2Start);
+            WriteOnCheckBoxPauseAsync(null, checkBoxM2Pause);
 
             UpdateOPCUAMStatus(null, buttonM3Status, labelM3Status);
-            ManageOPCUAMBtnStatus(null, checkBoxM3Start);
+            WriteOnCheckBoxStartAsync(null, checkBoxM3Start);
+            WriteOnCheckBoxPauseAsync(null, checkBoxM3Pause);
 
             UpdateOPCUAMStatus(null, buttonM4Status, labelM4Status);
-            ManageOPCUAMBtnStatus(null, checkBoxM4Start);
+            WriteOnCheckBoxStartAsync(null, checkBoxM4Start);
+            WriteOnCheckBoxPauseAsync(null, checkBoxM4Pause);
 
             UpdateOPCUAMStatus(null, buttonM5Status, labelM5Status);
-            ManageOPCUAMBtnStatus(null, checkBoxM5Start);
+            WriteOnCheckBoxStartAsync(null, checkBoxM5Start);
+            WriteOnCheckBoxPauseAsync(null, checkBoxM5Pause);
 
             UpdateOPCUAMStatus(null, buttonM6Status, labelM6Status);
-            ManageOPCUAMBtnStatus(null, checkBoxM6Start);
+            WriteOnCheckBoxStartAsync(null, checkBoxM6Start);
+            WriteOnCheckBoxPauseAsync(null, checkBoxM6Pause);
 
             //UpdateOPCUAMHomingDone(null, lbLedM1HomingDone);
             //UpdateOPCUAMHomingDone(null, lbLedM2HomingDone);
@@ -622,14 +613,18 @@ namespace GUI
             lbLedSystemConnection.Label = "system offline";
 
             pictureBoxM1PLCNode.Image = imageListNodes.Images[1];
-            //labelM2Node.Text = "padprint int node offline";
+            labelM1Node.Text = "node offline";
             pictureBoxM2PLCNode.Image = imageListNodes.Images[1];
+            labelM2Node.Text = "node offline";
             pictureBoxM3PLCNode.Image = imageListNodes.Images[1];
+            labelM3Node.Text = "node offline";
             pictureBoxM4PLCNode.Image = imageListNodes.Images[1];
+            labelM4Node.Text = "node offline";
             pictureBoxM5PLCNode.Image = imageListNodes.Images[1];
+            labelM5Node.Text = "node offline";
 
             pictureBoxIOTNode.Image = imageListNodes.Images[3];
-
+            
             lbLedM1PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
             lbLedM2PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
             lbLedM3PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
@@ -943,7 +938,7 @@ namespace GUI
 
         public void ManageOPCUAMBtnStatus(ClientResult cr, CheckBox btn)
         {
-            WriteOnCheckBoxStartAsync(cr, btn);
+            
         }
 
         public void ManageOPCUAMBtnPause(ClientResult cr, CheckBox btn)
