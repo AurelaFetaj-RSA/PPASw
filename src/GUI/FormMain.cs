@@ -2638,5 +2638,10 @@ namespace GUI
             }
             else checkBoxM2Inclusion.BackgroundImage = imageListMIncEsc.Images[2];
         }
+
+        private void tabPageConsole_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

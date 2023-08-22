@@ -14,7 +14,7 @@ namespace GUI
     internal static class Program
     {
         static SplashScreen SplashScreen;
-        static FormMain MainForm;
+        static FormApp MainForm;
 
         /// <summary>
         /// Punto di ingresso principale dell'applicazione.
@@ -34,11 +34,10 @@ namespace GUI
             splashThread.Start();
 
             //Create and Show Main Form
-            MainForm = new FormMain(SplashScreen);
+            MainForm = new FormApp(SplashScreen);
             MainForm.Load += MainForm_LoadCompleted;
             Application.Run(MainForm);
         }
-
 
         private static void MainForm_LoadCompleted(object sender, EventArgs e)
         {

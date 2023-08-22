@@ -31,20 +31,23 @@ namespace GUI
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle2 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle3 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Hide");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle2 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle4 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle5 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle6 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Setup");
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle7 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle8 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle8 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle9 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle10 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Manipulator");
             LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle1 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle7 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabStripStyle tabStripStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabStripStyle();
@@ -58,6 +61,7 @@ namespace GUI
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle11 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle12 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle13 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Pad laser");
             LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle2 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle10 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle2 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
@@ -67,6 +71,7 @@ namespace GUI
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle14 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle15 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle16 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Pad ext");
             LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle3 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle16 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabStripStyle tabStripStyle2 = new LidorSystems.IntegralUI.Containers.Style.TabStripStyle();
@@ -84,6 +89,7 @@ namespace GUI
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle17 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle18 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle19 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Pad int");
             LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle4 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle22 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabStripStyle tabStripStyle3 = new LidorSystems.IntegralUI.Containers.Style.TabStripStyle();
@@ -101,18 +107,23 @@ namespace GUI
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle20 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle21 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle22 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Trimmer");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle29 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle23 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle24 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle25 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Main");
             LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle5 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle28 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabStripStyle tabStripStyle4 = new LidorSystems.IntegralUI.Containers.Style.TabStripStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle5 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolTipStyle toolTipStyle5 = new LidorSystems.IntegralUI.Controls.Style.ToolTipStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle25 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Recipies");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("RSA");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Automatic");
             LidorSystems.IntegralUI.Style.ControlColorStyle controlColorStyle1 = new LidorSystems.IntegralUI.Style.ControlColorStyle();
             LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle6 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -124,38 +135,6 @@ namespace GUI
             LidorSystems.IntegralUI.Controls.ToolButton toolButton1 = new LidorSystems.IntegralUI.Controls.ToolButton();
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle6 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolTipStyle toolTipStyle6 = new LidorSystems.IntegralUI.Controls.Style.ToolTipStyle();
-            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.buttonResetCounter = new System.Windows.Forms.Button();
-            this.lbLedLineReady = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedLineStatus = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedAirPressure = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedEmergency = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedSystemConnection = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.labelM6Param1Value = new System.Windows.Forms.Label();
-            this.labelM6Param1Name = new System.Windows.Forms.Label();
-            this.checkBoxM6Inclusion = new System.Windows.Forms.CheckBox();
-            this.imageListMIncEsc = new System.Windows.Forms.ImageList(this.components);
-            this.comboBoxM6PrgName = new System.Windows.Forms.ComboBox();
-            this.labelM3Param1Value = new System.Windows.Forms.Label();
-            this.labelM3Param1Name = new System.Windows.Forms.Label();
-            this.checkBoxM3Inclusion = new System.Windows.Forms.CheckBox();
-            this.comboBoxM3PrgName_st1 = new System.Windows.Forms.ComboBox();
-            this.labelM5Param1Value = new System.Windows.Forms.Label();
-            this.labelM5Param1Name = new System.Windows.Forms.Label();
-            this.checkBoxM5Inclusion = new System.Windows.Forms.CheckBox();
-            this.comboBoxM5PrgName = new System.Windows.Forms.ComboBox();
-            this.labelM4Param1Value = new System.Windows.Forms.Label();
-            this.labelM4Param1Name = new System.Windows.Forms.Label();
-            this.checkBoxM4Inclusion = new System.Windows.Forms.CheckBox();
-            this.comboBoxM4PrgName = new System.Windows.Forms.ComboBox();
-            this.labelM2Param1Value = new System.Windows.Forms.Label();
-            this.labelM2Param1Name = new System.Windows.Forms.Label();
-            this.checkBoxM2Inclusion = new System.Windows.Forms.CheckBox();
-            this.comboBoxM2PrgName = new System.Windows.Forms.ComboBox();
-            this.labelM1Param1Value = new System.Windows.Forms.Label();
-            this.labelM1Param1Name = new System.Windows.Forms.Label();
-            this.checkBoxM1Inclusion = new System.Windows.Forms.CheckBox();
-            this.comboBoxM1PrgName = new System.Windows.Forms.ComboBox();
             this.tabPageHide = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageHelp = new LidorSystems.IntegralUI.Containers.TabPage();
             this.buttonConfigParser = new System.Windows.Forms.Button();
@@ -432,52 +411,16 @@ namespace GUI
             this.tabPageRecipe = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageMain = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlT0 = new LidorSystems.IntegralUI.Containers.TabControl();
-            this.tabPageT0_1 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.groupBoxLine = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.checkBoxPause = new System.Windows.Forms.CheckBox();
-            this.imageListStartStop = new System.Windows.Forms.ImageList(this.components);
-            this.checkBoxStartStop = new System.Windows.Forms.CheckBox();
-            this.buttonMReset = new System.Windows.Forms.Button();
-            this.comboBoxAutoModelNameLst = new System.Windows.Forms.ComboBox();
-            this.groupBoxM6 = new System.Windows.Forms.GroupBox();
-            this.labelM6Status = new System.Windows.Forms.Label();
-            this.buttonM6Status = new System.Windows.Forms.Button();
-            this.buttonM6Reset = new System.Windows.Forms.Button();
-            this.checkBoxM6Pause = new System.Windows.Forms.CheckBox();
-            this.checkBoxM6Start = new System.Windows.Forms.CheckBox();
-            this.groupBoxM3 = new System.Windows.Forms.GroupBox();
-            this.labelM3Status = new System.Windows.Forms.Label();
-            this.buttonM3Status = new System.Windows.Forms.Button();
-            this.buttonM3Reset = new System.Windows.Forms.Button();
-            this.checkBoxM3Pause = new System.Windows.Forms.CheckBox();
-            this.textBoxTypeOrder = new System.Windows.Forms.TextBox();
-            this.comboBoxM3PrgName_st2 = new System.Windows.Forms.ComboBox();
-            this.checkBoxM3Start = new System.Windows.Forms.CheckBox();
-            this.groupBoxM5 = new System.Windows.Forms.GroupBox();
-            this.labelM5Status = new System.Windows.Forms.Label();
-            this.buttonM5Status = new System.Windows.Forms.Button();
-            this.buttonM5Reset = new System.Windows.Forms.Button();
-            this.checkBoxM5Pause = new System.Windows.Forms.CheckBox();
-            this.checkBoxM5Start = new System.Windows.Forms.CheckBox();
-            this.groupBoxM4 = new System.Windows.Forms.GroupBox();
-            this.labelM4Status = new System.Windows.Forms.Label();
-            this.buttonM4Status = new System.Windows.Forms.Button();
-            this.buttonM4Reset = new System.Windows.Forms.Button();
-            this.checkBoxM4Pause = new System.Windows.Forms.CheckBox();
-            this.checkBoxM4Start = new System.Windows.Forms.CheckBox();
-            this.groupBoxM2 = new System.Windows.Forms.GroupBox();
-            this.labelM2Status = new System.Windows.Forms.Label();
-            this.buttonM2Status = new System.Windows.Forms.Button();
-            this.buttonM2Reset = new System.Windows.Forms.Button();
-            this.checkBoxM2Pause = new System.Windows.Forms.CheckBox();
-            this.checkBoxM2Start = new System.Windows.Forms.CheckBox();
-            this.groupBoxM1 = new System.Windows.Forms.GroupBox();
-            this.labelM1Status = new System.Windows.Forms.Label();
-            this.buttonM1Status = new System.Windows.Forms.Button();
-            this.buttonM1Reset = new System.Windows.Forms.Button();
-            this.checkBoxM1Pause = new System.Windows.Forms.CheckBox();
-            this.checkBoxM1Start = new System.Windows.Forms.CheckBox();
+            this.tabPageT0_2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.buttonSendLaser = new System.Windows.Forms.Button();
+            this.textBoxLaserLine2 = new System.Windows.Forms.TextBox();
+            this.textBoxLaserLine1 = new System.Windows.Forms.TextBox();
+            this.textBoxM6Test = new System.Windows.Forms.TextBox();
+            this.textBoxM5Test = new System.Windows.Forms.TextBox();
+            this.textBoxM4Test = new System.Windows.Forms.TextBox();
+            this.textBoxM3Test = new System.Windows.Forms.TextBox();
+            this.textBoxM2Test = new System.Windows.Forms.TextBox();
+            this.textBoxM1Test = new System.Windows.Forms.TextBox();
             this.tabPageT0_3 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.groupBoxKeepAliveFromPlc = new System.Windows.Forms.GroupBox();
             this.pictureBoxIOTNode = new System.Windows.Forms.PictureBox();
@@ -492,23 +435,89 @@ namespace GUI
             this.lbLedM3PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLedM1PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLedM4PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.tabPageT0_2 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.buttonSendLaser = new System.Windows.Forms.Button();
-            this.textBoxLaserLine2 = new System.Windows.Forms.TextBox();
-            this.textBoxLaserLine1 = new System.Windows.Forms.TextBox();
-            this.textBoxM6Test = new System.Windows.Forms.TextBox();
-            this.textBoxM5Test = new System.Windows.Forms.TextBox();
-            this.textBoxM4Test = new System.Windows.Forms.TextBox();
-            this.textBoxM3Test = new System.Windows.Forms.TextBox();
-            this.textBoxM2Test = new System.Windows.Forms.TextBox();
-            this.textBoxM1Test = new System.Windows.Forms.TextBox();
+            this.tabPageT0_1 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.groupBoxLine = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.checkBoxPause = new System.Windows.Forms.CheckBox();
+            this.imageListStartStop = new System.Windows.Forms.ImageList(this.components);
+            this.checkBoxStartStop = new System.Windows.Forms.CheckBox();
+            this.buttonMReset = new System.Windows.Forms.Button();
+            this.comboBoxAutoModelNameLst = new System.Windows.Forms.ComboBox();
+            this.lbLedEmergency = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedAirPressure = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedLineStatus = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.buttonResetCounter = new System.Windows.Forms.Button();
+            this.lbLedLineReady = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedSystemConnection = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.groupBoxM6 = new System.Windows.Forms.GroupBox();
+            this.labelM6Status = new System.Windows.Forms.Label();
+            this.buttonM6Status = new System.Windows.Forms.Button();
+            this.buttonM6Reset = new System.Windows.Forms.Button();
+            this.checkBoxM6Pause = new System.Windows.Forms.CheckBox();
+            this.checkBoxM6Start = new System.Windows.Forms.CheckBox();
+            this.checkBoxM6Inclusion = new System.Windows.Forms.CheckBox();
+            this.imageListMIncEsc = new System.Windows.Forms.ImageList(this.components);
+            this.labelM6Param1Value = new System.Windows.Forms.Label();
+            this.comboBoxM6PrgName = new System.Windows.Forms.ComboBox();
+            this.labelM6Param1Name = new System.Windows.Forms.Label();
+            this.groupBoxM3 = new System.Windows.Forms.GroupBox();
+            this.labelM3Status = new System.Windows.Forms.Label();
+            this.buttonM3Status = new System.Windows.Forms.Button();
+            this.buttonM3Reset = new System.Windows.Forms.Button();
+            this.checkBoxM3Pause = new System.Windows.Forms.CheckBox();
+            this.textBoxTypeOrder = new System.Windows.Forms.TextBox();
+            this.comboBoxM3PrgName_st2 = new System.Windows.Forms.ComboBox();
+            this.labelM3Param1Value = new System.Windows.Forms.Label();
+            this.checkBoxM3Start = new System.Windows.Forms.CheckBox();
+            this.comboBoxM3PrgName_st1 = new System.Windows.Forms.ComboBox();
+            this.checkBoxM3Inclusion = new System.Windows.Forms.CheckBox();
+            this.labelM3Param1Name = new System.Windows.Forms.Label();
+            this.groupBoxM5 = new System.Windows.Forms.GroupBox();
+            this.labelM5Status = new System.Windows.Forms.Label();
+            this.buttonM5Status = new System.Windows.Forms.Button();
+            this.buttonM5Reset = new System.Windows.Forms.Button();
+            this.checkBoxM5Pause = new System.Windows.Forms.CheckBox();
+            this.comboBoxM5PrgName = new System.Windows.Forms.ComboBox();
+            this.checkBoxM5Start = new System.Windows.Forms.CheckBox();
+            this.labelM5Param1Value = new System.Windows.Forms.Label();
+            this.checkBoxM5Inclusion = new System.Windows.Forms.CheckBox();
+            this.labelM5Param1Name = new System.Windows.Forms.Label();
+            this.groupBoxM4 = new System.Windows.Forms.GroupBox();
+            this.labelM4Status = new System.Windows.Forms.Label();
+            this.buttonM4Status = new System.Windows.Forms.Button();
+            this.buttonM4Reset = new System.Windows.Forms.Button();
+            this.checkBoxM4Pause = new System.Windows.Forms.CheckBox();
+            this.checkBoxM4Inclusion = new System.Windows.Forms.CheckBox();
+            this.labelM4Param1Value = new System.Windows.Forms.Label();
+            this.checkBoxM4Start = new System.Windows.Forms.CheckBox();
+            this.comboBoxM4PrgName = new System.Windows.Forms.ComboBox();
+            this.labelM4Param1Name = new System.Windows.Forms.Label();
+            this.groupBoxM2 = new System.Windows.Forms.GroupBox();
+            this.labelM2Status = new System.Windows.Forms.Label();
+            this.buttonM2Status = new System.Windows.Forms.Button();
+            this.buttonM2Reset = new System.Windows.Forms.Button();
+            this.checkBoxM2Pause = new System.Windows.Forms.CheckBox();
+            this.comboBoxM2PrgName = new System.Windows.Forms.ComboBox();
+            this.labelM2Param1Value = new System.Windows.Forms.Label();
+            this.checkBoxM2Inclusion = new System.Windows.Forms.CheckBox();
+            this.labelM2Param1Name = new System.Windows.Forms.Label();
+            this.checkBoxM2Start = new System.Windows.Forms.CheckBox();
+            this.groupBoxM1 = new System.Windows.Forms.GroupBox();
+            this.labelM1Status = new System.Windows.Forms.Label();
+            this.buttonM1Status = new System.Windows.Forms.Button();
+            this.buttonM1Reset = new System.Windows.Forms.Button();
+            this.checkBoxM1Pause = new System.Windows.Forms.CheckBox();
+            this.comboBoxM1PrgName = new System.Windows.Forms.ComboBox();
+            this.checkBoxM1Inclusion = new System.Windows.Forms.CheckBox();
+            this.labelM1Param1Value = new System.Windows.Forms.Label();
+            this.labelM1Param1Name = new System.Windows.Forms.Label();
+            this.checkBoxM1Start = new System.Windows.Forms.CheckBox();
             this.labelLoginLevel = new System.Windows.Forms.Label();
             this.labelDateTime = new System.Windows.Forms.Label();
+            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
             this.imageListNodes = new System.Windows.Forms.ImageList(this.components);
             this.imageListStart = new System.Windows.Forms.ImageList(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
-            this.splitContainer6.SuspendLayout();
             this.tabPageHelp.SuspendLayout();
             this.tabPageSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT5)).BeginInit();
@@ -550,14 +559,7 @@ namespace GUI
             this.tabPageMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT0)).BeginInit();
             this.tabControlT0.SuspendLayout();
-            this.tabPageT0_1.SuspendLayout();
-            this.groupBoxLine.SuspendLayout();
-            this.groupBoxM6.SuspendLayout();
-            this.groupBoxM3.SuspendLayout();
-            this.groupBoxM5.SuspendLayout();
-            this.groupBoxM4.SuspendLayout();
-            this.groupBoxM2.SuspendLayout();
-            this.groupBoxM1.SuspendLayout();
+            this.tabPageT0_2.SuspendLayout();
             this.tabPageT0_3.SuspendLayout();
             this.groupBoxKeepAliveFromPlc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIOTNode)).BeginInit();
@@ -567,313 +569,19 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM2PLCNode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3PLCNode)).BeginInit();
             this.groupBoxKeepAliveToPlc.SuspendLayout();
-            this.tabPageT0_2.SuspendLayout();
+            this.tabPageT0_1.SuspendLayout();
+            this.groupBoxLine.SuspendLayout();
+            this.groupBoxM6.SuspendLayout();
+            this.groupBoxM3.SuspendLayout();
+            this.groupBoxM5.SuspendLayout();
+            this.groupBoxM4.SuspendLayout();
+            this.groupBoxM2.SuspendLayout();
+            this.groupBoxM1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
+            this.splitContainer6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).BeginInit();
             this.tabControlMain.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // splitContainer6
-            // 
-            this.splitContainer6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.splitContainer6, "splitContainer6");
-            this.splitContainer6.Name = "splitContainer6";
-            // 
-            // splitContainer6.Panel1
-            // 
-            this.splitContainer6.Panel1.BackColor = System.Drawing.Color.DarkRed;
-            resources.ApplyResources(this.splitContainer6.Panel1, "splitContainer6.Panel1");
-            this.splitContainer6.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
-            // 
-            // splitContainer6.Panel2
-            // 
-            this.splitContainer6.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            // 
-            // buttonResetCounter
-            // 
-            this.buttonResetCounter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
-            resources.ApplyResources(this.buttonResetCounter, "buttonResetCounter");
-            this.buttonResetCounter.Name = "buttonResetCounter";
-            this.buttonResetCounter.UseVisualStyleBackColor = true;
-            // 
-            // lbLedLineReady
-            // 
-            this.lbLedLineReady.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedLineReady.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedLineReady, "lbLedLineReady");
-            this.lbLedLineReady.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLedLineReady.Label = "ready";
-            this.lbLedLineReady.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedLineReady.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedLineReady.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedLineReady.Name = "lbLedLineReady";
-            this.lbLedLineReady.Renderer = null;
-            this.lbLedLineReady.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedLineReady.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedLineStatus
-            // 
-            this.lbLedLineStatus.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedLineStatus.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedLineStatus, "lbLedLineStatus");
-            this.lbLedLineStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLedLineStatus.Label = "line status";
-            this.lbLedLineStatus.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedLineStatus.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedLineStatus.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedLineStatus.Name = "lbLedLineStatus";
-            this.lbLedLineStatus.Renderer = null;
-            this.lbLedLineStatus.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedLineStatus.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedAirPressure
-            // 
-            this.lbLedAirPressure.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedAirPressure.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedAirPressure, "lbLedAirPressure");
-            this.lbLedAirPressure.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLedAirPressure.Label = "air pressure";
-            this.lbLedAirPressure.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedAirPressure.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedAirPressure.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedAirPressure.Name = "lbLedAirPressure";
-            this.lbLedAirPressure.Renderer = null;
-            this.lbLedAirPressure.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedAirPressure.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedEmergency
-            // 
-            this.lbLedEmergency.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedEmergency.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedEmergency, "lbLedEmergency");
-            this.lbLedEmergency.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLedEmergency.Label = "emergency";
-            this.lbLedEmergency.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedEmergency.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedEmergency.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedEmergency.Name = "lbLedEmergency";
-            this.lbLedEmergency.Renderer = null;
-            this.lbLedEmergency.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedEmergency.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedSystemConnection
-            // 
-            this.lbLedSystemConnection.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedSystemConnection.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedSystemConnection, "lbLedSystemConnection");
-            this.lbLedSystemConnection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLedSystemConnection.Label = "system online";
-            this.lbLedSystemConnection.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedSystemConnection.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedSystemConnection.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedSystemConnection.Name = "lbLedSystemConnection";
-            this.lbLedSystemConnection.Renderer = null;
-            this.lbLedSystemConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedSystemConnection.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // labelM6Param1Value
-            // 
-            resources.ApplyResources(this.labelM6Param1Value, "labelM6Param1Value");
-            this.labelM6Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM6Param1Value.Name = "labelM6Param1Value";
-            // 
-            // labelM6Param1Name
-            // 
-            resources.ApplyResources(this.labelM6Param1Name, "labelM6Param1Name");
-            this.labelM6Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM6Param1Name.Name = "labelM6Param1Name";
-            // 
-            // checkBoxM6Inclusion
-            // 
-            resources.ApplyResources(this.checkBoxM6Inclusion, "checkBoxM6Inclusion");
-            this.checkBoxM6Inclusion.Checked = true;
-            this.checkBoxM6Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxM6Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.checkBoxM6Inclusion.FlatAppearance.BorderSize = 0;
-            this.checkBoxM6Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.checkBoxM6Inclusion.ImageList = this.imageListMIncEsc;
-            this.checkBoxM6Inclusion.Name = "checkBoxM6Inclusion";
-            this.checkBoxM6Inclusion.UseVisualStyleBackColor = true;
-            this.checkBoxM6Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM6Inclusion_CheckedChanged);
-            // 
-            // imageListMIncEsc
-            // 
-            this.imageListMIncEsc.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMIncEsc.ImageStream")));
-            this.imageListMIncEsc.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListMIncEsc.Images.SetKeyName(0, "preached.png");
-            this.imageListMIncEsc.Images.SetKeyName(1, "pnotreached.png");
-            this.imageListMIncEsc.Images.SetKeyName(2, "indeterminate.png");
-            // 
-            // comboBoxM6PrgName
-            // 
-            resources.ApplyResources(this.comboBoxM6PrgName, "comboBoxM6PrgName");
-            this.comboBoxM6PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.comboBoxM6PrgName.FormattingEnabled = true;
-            this.comboBoxM6PrgName.Name = "comboBoxM6PrgName";
-            // 
-            // labelM3Param1Value
-            // 
-            resources.ApplyResources(this.labelM3Param1Value, "labelM3Param1Value");
-            this.labelM3Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM3Param1Value.Name = "labelM3Param1Value";
-            // 
-            // labelM3Param1Name
-            // 
-            resources.ApplyResources(this.labelM3Param1Name, "labelM3Param1Name");
-            this.labelM3Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM3Param1Name.Name = "labelM3Param1Name";
-            // 
-            // checkBoxM3Inclusion
-            // 
-            resources.ApplyResources(this.checkBoxM3Inclusion, "checkBoxM3Inclusion");
-            this.checkBoxM3Inclusion.Checked = true;
-            this.checkBoxM3Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxM3Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.checkBoxM3Inclusion.FlatAppearance.BorderSize = 0;
-            this.checkBoxM3Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.checkBoxM3Inclusion.ImageList = this.imageListMIncEsc;
-            this.checkBoxM3Inclusion.Name = "checkBoxM3Inclusion";
-            this.checkBoxM3Inclusion.UseVisualStyleBackColor = true;
-            this.checkBoxM3Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM3Inclusion_CheckedChanged);
-            // 
-            // comboBoxM3PrgName_st1
-            // 
-            resources.ApplyResources(this.comboBoxM3PrgName_st1, "comboBoxM3PrgName_st1");
-            this.comboBoxM3PrgName_st1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.comboBoxM3PrgName_st1.FormattingEnabled = true;
-            this.comboBoxM3PrgName_st1.Name = "comboBoxM3PrgName_st1";
-            this.comboBoxM3PrgName_st1.SelectedIndexChanged += new System.EventHandler(this.comboBoxM3PrgName_SelectedIndexChanged);
-            // 
-            // labelM5Param1Value
-            // 
-            resources.ApplyResources(this.labelM5Param1Value, "labelM5Param1Value");
-            this.labelM5Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM5Param1Value.Name = "labelM5Param1Value";
-            // 
-            // labelM5Param1Name
-            // 
-            resources.ApplyResources(this.labelM5Param1Name, "labelM5Param1Name");
-            this.labelM5Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM5Param1Name.Name = "labelM5Param1Name";
-            // 
-            // checkBoxM5Inclusion
-            // 
-            resources.ApplyResources(this.checkBoxM5Inclusion, "checkBoxM5Inclusion");
-            this.checkBoxM5Inclusion.Checked = true;
-            this.checkBoxM5Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxM5Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.checkBoxM5Inclusion.FlatAppearance.BorderSize = 0;
-            this.checkBoxM5Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.checkBoxM5Inclusion.ImageList = this.imageListMIncEsc;
-            this.checkBoxM5Inclusion.Name = "checkBoxM5Inclusion";
-            this.checkBoxM5Inclusion.UseVisualStyleBackColor = true;
-            this.checkBoxM5Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM5Inclusion_CheckedChanged);
-            // 
-            // comboBoxM5PrgName
-            // 
-            resources.ApplyResources(this.comboBoxM5PrgName, "comboBoxM5PrgName");
-            this.comboBoxM5PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.comboBoxM5PrgName.FormattingEnabled = true;
-            this.comboBoxM5PrgName.Name = "comboBoxM5PrgName";
-            // 
-            // labelM4Param1Value
-            // 
-            resources.ApplyResources(this.labelM4Param1Value, "labelM4Param1Value");
-            this.labelM4Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM4Param1Value.Name = "labelM4Param1Value";
-            // 
-            // labelM4Param1Name
-            // 
-            resources.ApplyResources(this.labelM4Param1Name, "labelM4Param1Name");
-            this.labelM4Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM4Param1Name.Name = "labelM4Param1Name";
-            // 
-            // checkBoxM4Inclusion
-            // 
-            resources.ApplyResources(this.checkBoxM4Inclusion, "checkBoxM4Inclusion");
-            this.checkBoxM4Inclusion.Checked = true;
-            this.checkBoxM4Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxM4Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.checkBoxM4Inclusion.FlatAppearance.BorderSize = 0;
-            this.checkBoxM4Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.checkBoxM4Inclusion.ImageList = this.imageListMIncEsc;
-            this.checkBoxM4Inclusion.Name = "checkBoxM4Inclusion";
-            this.checkBoxM4Inclusion.UseVisualStyleBackColor = true;
-            this.checkBoxM4Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM4Inclusion_CheckedChanged);
-            // 
-            // comboBoxM4PrgName
-            // 
-            resources.ApplyResources(this.comboBoxM4PrgName, "comboBoxM4PrgName");
-            this.comboBoxM4PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.comboBoxM4PrgName.FormattingEnabled = true;
-            this.comboBoxM4PrgName.Name = "comboBoxM4PrgName";
-            this.comboBoxM4PrgName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM4PrgName_SelectedIndexChanged);
-            // 
-            // labelM2Param1Value
-            // 
-            resources.ApplyResources(this.labelM2Param1Value, "labelM2Param1Value");
-            this.labelM2Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM2Param1Value.Name = "labelM2Param1Value";
-            // 
-            // labelM2Param1Name
-            // 
-            resources.ApplyResources(this.labelM2Param1Name, "labelM2Param1Name");
-            this.labelM2Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM2Param1Name.Name = "labelM2Param1Name";
-            // 
-            // checkBoxM2Inclusion
-            // 
-            resources.ApplyResources(this.checkBoxM2Inclusion, "checkBoxM2Inclusion");
-            this.checkBoxM2Inclusion.Checked = true;
-            this.checkBoxM2Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxM2Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.checkBoxM2Inclusion.FlatAppearance.BorderSize = 0;
-            this.checkBoxM2Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.checkBoxM2Inclusion.ImageList = this.imageListMIncEsc;
-            this.checkBoxM2Inclusion.Name = "checkBoxM2Inclusion";
-            this.checkBoxM2Inclusion.ThreeState = true;
-            this.checkBoxM2Inclusion.UseVisualStyleBackColor = true;
-            this.checkBoxM2Inclusion.CheckStateChanged += new System.EventHandler(this.checkBoxM2Inclusion_CheckStateChanged);
-            // 
-            // comboBoxM2PrgName
-            // 
-            resources.ApplyResources(this.comboBoxM2PrgName, "comboBoxM2PrgName");
-            this.comboBoxM2PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.comboBoxM2PrgName.FormattingEnabled = true;
-            this.comboBoxM2PrgName.Name = "comboBoxM2PrgName";
-            this.comboBoxM2PrgName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM2PrgName_SelectedIndexChanged);
-            // 
-            // labelM1Param1Value
-            // 
-            resources.ApplyResources(this.labelM1Param1Value, "labelM1Param1Value");
-            this.labelM1Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM1Param1Value.Name = "labelM1Param1Value";
-            // 
-            // labelM1Param1Name
-            // 
-            resources.ApplyResources(this.labelM1Param1Name, "labelM1Param1Name");
-            this.labelM1Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM1Param1Name.Name = "labelM1Param1Name";
-            // 
-            // checkBoxM1Inclusion
-            // 
-            resources.ApplyResources(this.checkBoxM1Inclusion, "checkBoxM1Inclusion");
-            this.checkBoxM1Inclusion.Checked = true;
-            this.checkBoxM1Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxM1Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
-            this.checkBoxM1Inclusion.FlatAppearance.BorderSize = 0;
-            this.checkBoxM1Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
-            this.checkBoxM1Inclusion.ImageList = this.imageListMIncEsc;
-            this.checkBoxM1Inclusion.Name = "checkBoxM1Inclusion";
-            this.checkBoxM1Inclusion.UseVisualStyleBackColor = true;
-            this.checkBoxM1Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM1Inclusion_CheckedChanged);
-            // 
-            // comboBoxM1PrgName
-            // 
-            resources.ApplyResources(this.comboBoxM1PrgName, "comboBoxM1PrgName");
-            this.comboBoxM1PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.comboBoxM1PrgName.FormattingEnabled = true;
-            this.comboBoxM1PrgName.Name = "comboBoxM1PrgName";
-            this.comboBoxM1PrgName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM1PrgName_SelectedIndexChanged);
             // 
             // tabPageHide
             // 
@@ -905,6 +613,10 @@ namespace GUI
             tabPageColorStyle3.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageHide.SelectedStyle = tabPageColorStyle3;
             this.tabPageHide.StyleFromParent = false;
+            treeNode1.Name = "";
+            treeNode1.Tag = this.tabPageHide;
+            resources.ApplyResources(treeNode1, "treeNode1");
+            this.tabPageHide.Tag = treeNode1;
             this.tabPageHide.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageHide.TextBounds")));
             this.tabPageHide.TextSize = new System.Drawing.SizeF(63.48827F, 32.16796F);
             this.tabPageHide.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageHide_Paint);
@@ -936,11 +648,15 @@ namespace GUI
             tabPageColorStyle6.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle6.BorderColor = System.Drawing.Color.Transparent;
             tabPageColorStyle6.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle6.TabImage = global::GUI.Properties.Resources.line;
+            tabPageColorStyle6.TabImage = ((System.Drawing.Image)(resources.GetObject("tabPageColorStyle6.TabImage")));
             tabPageColorStyle6.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle6.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageHelp.SelectedStyle = tabPageColorStyle6;
             this.tabPageHelp.StyleFromParent = false;
+            treeNode2.Name = "";
+            treeNode2.Tag = this.tabPageHelp;
+            resources.ApplyResources(treeNode2, "treeNode2");
+            this.tabPageHelp.Tag = treeNode2;
             this.tabPageHelp.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageHelp.TextBounds")));
             this.tabPageHelp.TextSize = new System.Drawing.SizeF(80.41013F, 32.16796F);
             // 
@@ -987,11 +703,15 @@ namespace GUI
             tabPageColorStyle10.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle10.BorderColor = System.Drawing.Color.Transparent;
             tabPageColorStyle10.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle10.TabImage = global::GUI.Properties.Resources.line;
+            tabPageColorStyle10.TabImage = ((System.Drawing.Image)(resources.GetObject("tabPageColorStyle10.TabImage")));
             tabPageColorStyle10.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle10.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageSettings.SelectedStyle = tabPageColorStyle10;
             this.tabPageSettings.StyleFromParent = false;
+            treeNode3.Name = "";
+            treeNode3.Tag = this.tabPageSettings;
+            resources.ApplyResources(treeNode3, "treeNode3");
+            this.tabPageSettings.Tag = treeNode3;
             this.tabPageSettings.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageSettings.TextBounds")));
             this.tabPageSettings.TextSize = new System.Drawing.SizeF(154.0742F, 32.16796F);
             // 
@@ -1780,11 +1500,15 @@ namespace GUI
             tabPageColorStyle13.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle13.BorderColor = System.Drawing.Color.Transparent;
             tabPageColorStyle13.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle13.TabImage = global::GUI.Properties.Resources.line;
+            tabPageColorStyle13.TabImage = ((System.Drawing.Image)(resources.GetObject("tabPageColorStyle13.TabImage")));
             tabPageColorStyle13.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle13.TextShadowColor = System.Drawing.Color.Transparent;
             this.TabPageDiagnostic.SelectedStyle = tabPageColorStyle13;
             this.TabPageDiagnostic.StyleFromParent = false;
+            treeNode4.Name = "";
+            treeNode4.Tag = this.TabPageDiagnostic;
+            resources.ApplyResources(treeNode4, "treeNode4");
+            this.TabPageDiagnostic.Tag = treeNode4;
             this.TabPageDiagnostic.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("TabPageDiagnostic.TextBounds")));
             this.TabPageDiagnostic.TextSize = new System.Drawing.SizeF(121.6367F, 32.16796F);
             // 
@@ -1855,11 +1579,15 @@ namespace GUI
             tabPageColorStyle16.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle16.BorderColor = System.Drawing.Color.Transparent;
             tabPageColorStyle16.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle16.TabImage = global::GUI.Properties.Resources.line;
+            tabPageColorStyle16.TabImage = ((System.Drawing.Image)(resources.GetObject("tabPageColorStyle16.TabImage")));
             tabPageColorStyle16.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle16.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPage4.SelectedStyle = tabPageColorStyle16;
             this.tabPage4.StyleFromParent = false;
+            treeNode5.Name = "";
+            treeNode5.Tag = this.tabPage4;
+            resources.ApplyResources(treeNode5, "treeNode5");
+            this.tabPage4.Tag = treeNode5;
             this.tabPage4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage4.TextBounds")));
             this.tabPage4.TextSize = new System.Drawing.SizeF(100.9414F, 32.16796F);
             // 
@@ -2462,13 +2190,18 @@ namespace GUI
             tabPageColorStyle19.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle19.BorderColor = System.Drawing.Color.Transparent;
             tabPageColorStyle19.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle19.TabImage = global::GUI.Properties.Resources.line;
+            tabPageColorStyle19.TabImage = ((System.Drawing.Image)(resources.GetObject("tabPageColorStyle19.TabImage")));
             tabPageColorStyle19.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle19.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageConsole.SelectedStyle = tabPageColorStyle19;
             this.tabPageConsole.StyleFromParent = false;
+            treeNode6.Name = "";
+            treeNode6.Tag = this.tabPageConsole;
+            resources.ApplyResources(treeNode6, "treeNode6");
+            this.tabPageConsole.Tag = treeNode6;
             this.tabPageConsole.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageConsole.TextBounds")));
             this.tabPageConsole.TextSize = new System.Drawing.SizeF(94.0156F, 32.16796F);
+            this.tabPageConsole.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageConsole_Paint);
             // 
             // tabControlT2
             // 
@@ -4595,11 +4328,15 @@ namespace GUI
             tabPageColorStyle22.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle22.BorderColor = System.Drawing.Color.Transparent;
             tabPageColorStyle22.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle22.TabImage = global::GUI.Properties.Resources.line;
+            tabPageColorStyle22.TabImage = ((System.Drawing.Image)(resources.GetObject("tabPageColorStyle22.TabImage")));
             tabPageColorStyle22.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle22.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageRecipe.SelectedStyle = tabPageColorStyle22;
             this.tabPageRecipe.StyleFromParent = false;
+            treeNode7.Name = "";
+            treeNode7.Tag = this.tabPageRecipe;
+            resources.ApplyResources(treeNode7, "treeNode7");
+            this.tabPageRecipe.Tag = treeNode7;
             this.tabPageRecipe.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageRecipe.TextBounds")));
             this.tabPageRecipe.TextSize = new System.Drawing.SizeF(113.9375F, 32.16796F);
             // 
@@ -4634,20 +4371,24 @@ namespace GUI
             tabPageColorStyle25.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle25.BorderColor = System.Drawing.Color.Transparent;
             tabPageColorStyle25.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle25.TabImage = global::GUI.Properties.Resources.line;
+            tabPageColorStyle25.TabImage = ((System.Drawing.Image)(resources.GetObject("tabPageColorStyle25.TabImage")));
             tabPageColorStyle25.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle25.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageMain.SelectedStyle = tabPageColorStyle25;
             this.tabPageMain.StyleFromParent = false;
+            treeNode11.Name = "";
+            treeNode11.Tag = this.tabPageMain;
+            resources.ApplyResources(treeNode11, "treeNode11");
+            this.tabPageMain.Tag = treeNode11;
             this.tabPageMain.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageMain.TextBounds")));
             this.tabPageMain.TextSize = new System.Drawing.SizeF(66.11327F, 32.16796F);
             this.tabPageMain.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageMain_Paint);
             // 
             // tabControlT0
             // 
-            this.tabControlT0.Controls.Add(this.tabPageT0_1);
-            this.tabControlT0.Controls.Add(this.tabPageT0_3);
             this.tabControlT0.Controls.Add(this.tabPageT0_2);
+            this.tabControlT0.Controls.Add(this.tabPageT0_3);
+            this.tabControlT0.Controls.Add(this.tabPageT0_1);
             this.tabControlT0.Cursor = System.Windows.Forms.Cursors.Default;
             controlFormatStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlT0.FormatStyle = controlFormatStyle5;
@@ -4660,7 +4401,7 @@ namespace GUI
             this.tabPageT0_2,
             this.tabPageT0_3});
             this.tabControlT0.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlT0.SelectedPage = this.tabPageT0_1;
+            this.tabControlT0.SelectedPage = this.tabPageT0_2;
             this.tabControlT0.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabControlT0.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Left;
             tabStripStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
@@ -4671,401 +4412,74 @@ namespace GUI
             toolTipStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlT0.ToolTipStyle = toolTipStyle5;
             // 
-            // tabPageT0_1
+            // tabPageT0_2
             // 
-            this.tabPageT0_1.Controls.Add(this.groupBoxLine);
-            this.tabPageT0_1.Controls.Add(this.groupBoxM6);
-            this.tabPageT0_1.Controls.Add(this.groupBoxM3);
-            this.tabPageT0_1.Controls.Add(this.groupBoxM5);
-            this.tabPageT0_1.Controls.Add(this.groupBoxM4);
-            this.tabPageT0_1.Controls.Add(this.groupBoxM2);
-            this.tabPageT0_1.Controls.Add(this.groupBoxM1);
+            this.tabPageT0_2.Controls.Add(this.buttonSendLaser);
+            this.tabPageT0_2.Controls.Add(this.textBoxLaserLine2);
+            this.tabPageT0_2.Controls.Add(this.textBoxLaserLine1);
+            this.tabPageT0_2.Controls.Add(this.textBoxM6Test);
+            this.tabPageT0_2.Controls.Add(this.textBoxM5Test);
+            this.tabPageT0_2.Controls.Add(this.textBoxM4Test);
+            this.tabPageT0_2.Controls.Add(this.textBoxM3Test);
+            this.tabPageT0_2.Controls.Add(this.textBoxM2Test);
+            this.tabPageT0_2.Controls.Add(this.textBoxM1Test);
             tabPageFormatStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT0_1.FormatStyle = tabPageFormatStyle25;
-            resources.ApplyResources(this.tabPageT0_1, "tabPageT0_1");
-            this.tabPageT0_1.Name = "tabPageT0_1";
-            this.tabPageT0_1.ParentPage = null;
-            this.tabPageT0_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_1.TextBounds")));
-            this.tabPageT0_1.TextSize = new System.Drawing.SizeF(105.7493F, 25.4663F);
-            // 
-            // groupBoxLine
-            // 
-            this.groupBoxLine.Controls.Add(this.button3);
-            this.groupBoxLine.Controls.Add(this.checkBoxPause);
-            this.groupBoxLine.Controls.Add(this.checkBoxStartStop);
-            this.groupBoxLine.Controls.Add(this.buttonMReset);
-            this.groupBoxLine.Controls.Add(this.comboBoxAutoModelNameLst);
-            this.groupBoxLine.Controls.Add(this.lbLedEmergency);
-            this.groupBoxLine.Controls.Add(this.lbLedAirPressure);
-            this.groupBoxLine.Controls.Add(this.lbLedLineStatus);
-            this.groupBoxLine.Controls.Add(this.buttonResetCounter);
-            this.groupBoxLine.Controls.Add(this.lbLedLineReady);
-            this.groupBoxLine.Controls.Add(this.lbLedSystemConnection);
-            resources.ApplyResources(this.groupBoxLine, "groupBoxLine");
-            this.groupBoxLine.Name = "groupBoxLine";
-            this.groupBoxLine.TabStop = false;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 10;
-            resources.ApplyResources(this.button3, "button3");
-            this.button3.Name = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxPause
-            // 
-            resources.ApplyResources(this.checkBoxPause, "checkBoxPause");
-            this.checkBoxPause.ImageList = this.imageListStartStop;
-            this.checkBoxPause.Name = "checkBoxPause";
-            this.checkBoxPause.UseVisualStyleBackColor = true;
-            this.checkBoxPause.CheckStateChanged += new System.EventHandler(this.checkBoxPause_CheckStateChanged);
-            // 
-            // imageListStartStop
-            // 
-            this.imageListStartStop.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListStartStop.ImageStream")));
-            this.imageListStartStop.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListStartStop.Images.SetKeyName(0, "play (3).png");
-            this.imageListStartStop.Images.SetKeyName(1, "stop.png");
-            this.imageListStartStop.Images.SetKeyName(2, "pause_on.png");
-            this.imageListStartStop.Images.SetKeyName(3, "pause_off.png");
-            // 
-            // checkBoxStartStop
-            // 
-            resources.ApplyResources(this.checkBoxStartStop, "checkBoxStartStop");
-            this.checkBoxStartStop.ImageList = this.imageListStartStop;
-            this.checkBoxStartStop.Name = "checkBoxStartStop";
-            this.checkBoxStartStop.UseVisualStyleBackColor = true;
-            this.checkBoxStartStop.CheckStateChanged += new System.EventHandler(this.checkBoxStartStop_CheckStateChanged);
-            // 
-            // buttonMReset
-            // 
-            resources.ApplyResources(this.buttonMReset, "buttonMReset");
-            this.buttonMReset.Name = "buttonMReset";
-            this.buttonMReset.UseVisualStyleBackColor = true;
-            this.buttonMReset.Click += new System.EventHandler(this.buttonM2Reset_Click);
-            // 
-            // comboBoxAutoModelNameLst
-            // 
-            resources.ApplyResources(this.comboBoxAutoModelNameLst, "comboBoxAutoModelNameLst");
-            this.comboBoxAutoModelNameLst.FormattingEnabled = true;
-            this.comboBoxAutoModelNameLst.Name = "comboBoxAutoModelNameLst";
-            this.comboBoxAutoModelNameLst.SelectedIndexChanged += new System.EventHandler(this.comboBoxAutoModelNameLst_SelectedIndexChanged);
-            // 
-            // groupBoxM6
-            // 
-            this.groupBoxM6.Controls.Add(this.labelM6Status);
-            this.groupBoxM6.Controls.Add(this.buttonM6Status);
-            this.groupBoxM6.Controls.Add(this.buttonM6Reset);
-            this.groupBoxM6.Controls.Add(this.checkBoxM6Pause);
-            this.groupBoxM6.Controls.Add(this.checkBoxM6Start);
-            this.groupBoxM6.Controls.Add(this.checkBoxM6Inclusion);
-            this.groupBoxM6.Controls.Add(this.labelM6Param1Value);
-            this.groupBoxM6.Controls.Add(this.comboBoxM6PrgName);
-            this.groupBoxM6.Controls.Add(this.labelM6Param1Name);
-            resources.ApplyResources(this.groupBoxM6, "groupBoxM6");
-            this.groupBoxM6.Name = "groupBoxM6";
-            this.groupBoxM6.TabStop = false;
-            // 
-            // labelM6Status
-            // 
-            resources.ApplyResources(this.labelM6Status, "labelM6Status");
-            this.labelM6Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM6Status.Name = "labelM6Status";
-            // 
-            // buttonM6Status
-            // 
-            this.buttonM6Status.FlatAppearance.BorderSize = 10;
-            resources.ApplyResources(this.buttonM6Status, "buttonM6Status");
-            this.buttonM6Status.Name = "buttonM6Status";
-            this.buttonM6Status.UseVisualStyleBackColor = true;
-            // 
-            // buttonM6Reset
-            // 
-            resources.ApplyResources(this.buttonM6Reset, "buttonM6Reset");
-            this.buttonM6Reset.Name = "buttonM6Reset";
-            this.buttonM6Reset.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxM6Pause
-            // 
-            resources.ApplyResources(this.checkBoxM6Pause, "checkBoxM6Pause");
-            this.checkBoxM6Pause.Name = "checkBoxM6Pause";
-            this.checkBoxM6Pause.ThreeState = true;
-            this.checkBoxM6Pause.UseVisualStyleBackColor = true;
-            this.checkBoxM6Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM6Pause_CheckStateChanged);
-            // 
-            // checkBoxM6Start
-            // 
-            resources.ApplyResources(this.checkBoxM6Start, "checkBoxM6Start");
-            this.checkBoxM6Start.Name = "checkBoxM6Start";
-            this.checkBoxM6Start.ThreeState = true;
-            this.checkBoxM6Start.UseVisualStyleBackColor = true;
-            this.checkBoxM6Start.CheckStateChanged += new System.EventHandler(this.checkBoxM6Start_CheckStateChanged);
-            // 
-            // groupBoxM3
-            // 
-            this.groupBoxM3.Controls.Add(this.labelM3Status);
-            this.groupBoxM3.Controls.Add(this.buttonM3Status);
-            this.groupBoxM3.Controls.Add(this.buttonM3Reset);
-            this.groupBoxM3.Controls.Add(this.checkBoxM3Pause);
-            this.groupBoxM3.Controls.Add(this.textBoxTypeOrder);
-            this.groupBoxM3.Controls.Add(this.comboBoxM3PrgName_st2);
-            this.groupBoxM3.Controls.Add(this.labelM3Param1Value);
-            this.groupBoxM3.Controls.Add(this.checkBoxM3Start);
-            this.groupBoxM3.Controls.Add(this.comboBoxM3PrgName_st1);
-            this.groupBoxM3.Controls.Add(this.checkBoxM3Inclusion);
-            this.groupBoxM3.Controls.Add(this.labelM3Param1Name);
-            resources.ApplyResources(this.groupBoxM3, "groupBoxM3");
-            this.groupBoxM3.Name = "groupBoxM3";
-            this.groupBoxM3.TabStop = false;
-            // 
-            // labelM3Status
-            // 
-            resources.ApplyResources(this.labelM3Status, "labelM3Status");
-            this.labelM3Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM3Status.Name = "labelM3Status";
-            // 
-            // buttonM3Status
-            // 
-            this.buttonM3Status.FlatAppearance.BorderSize = 10;
-            resources.ApplyResources(this.buttonM3Status, "buttonM3Status");
-            this.buttonM3Status.Name = "buttonM3Status";
-            this.buttonM3Status.UseVisualStyleBackColor = true;
-            // 
-            // buttonM3Reset
-            // 
-            resources.ApplyResources(this.buttonM3Reset, "buttonM3Reset");
-            this.buttonM3Reset.Name = "buttonM3Reset";
-            this.buttonM3Reset.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxM3Pause
-            // 
-            resources.ApplyResources(this.checkBoxM3Pause, "checkBoxM3Pause");
-            this.checkBoxM3Pause.Name = "checkBoxM3Pause";
-            this.checkBoxM3Pause.ThreeState = true;
-            this.checkBoxM3Pause.UseVisualStyleBackColor = true;
-            this.checkBoxM3Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM3Pause_CheckStateChanged);
-            // 
-            // textBoxTypeOrder
-            // 
-            resources.ApplyResources(this.textBoxTypeOrder, "textBoxTypeOrder");
-            this.textBoxTypeOrder.Name = "textBoxTypeOrder";
-            // 
-            // comboBoxM3PrgName_st2
-            // 
-            resources.ApplyResources(this.comboBoxM3PrgName_st2, "comboBoxM3PrgName_st2");
-            this.comboBoxM3PrgName_st2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.comboBoxM3PrgName_st2.FormattingEnabled = true;
-            this.comboBoxM3PrgName_st2.Name = "comboBoxM3PrgName_st2";
-            this.comboBoxM3PrgName_st2.SelectedIndexChanged += new System.EventHandler(this.comboBoxM3PrgName_st2_SelectedIndexChanged);
-            // 
-            // checkBoxM3Start
-            // 
-            resources.ApplyResources(this.checkBoxM3Start, "checkBoxM3Start");
-            this.checkBoxM3Start.Name = "checkBoxM3Start";
-            this.checkBoxM3Start.ThreeState = true;
-            this.checkBoxM3Start.UseVisualStyleBackColor = true;
-            this.checkBoxM3Start.CheckStateChanged += new System.EventHandler(this.checkBoxM3Start_CheckStateChanged);
-            // 
-            // groupBoxM5
-            // 
-            this.groupBoxM5.Controls.Add(this.labelM5Status);
-            this.groupBoxM5.Controls.Add(this.buttonM5Status);
-            this.groupBoxM5.Controls.Add(this.buttonM5Reset);
-            this.groupBoxM5.Controls.Add(this.checkBoxM5Pause);
-            this.groupBoxM5.Controls.Add(this.comboBoxM5PrgName);
-            this.groupBoxM5.Controls.Add(this.checkBoxM5Start);
-            this.groupBoxM5.Controls.Add(this.labelM5Param1Value);
-            this.groupBoxM5.Controls.Add(this.checkBoxM5Inclusion);
-            this.groupBoxM5.Controls.Add(this.labelM5Param1Name);
-            resources.ApplyResources(this.groupBoxM5, "groupBoxM5");
-            this.groupBoxM5.Name = "groupBoxM5";
-            this.groupBoxM5.TabStop = false;
-            // 
-            // labelM5Status
-            // 
-            resources.ApplyResources(this.labelM5Status, "labelM5Status");
-            this.labelM5Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM5Status.Name = "labelM5Status";
-            // 
-            // buttonM5Status
-            // 
-            this.buttonM5Status.FlatAppearance.BorderSize = 10;
-            resources.ApplyResources(this.buttonM5Status, "buttonM5Status");
-            this.buttonM5Status.Name = "buttonM5Status";
-            this.buttonM5Status.UseVisualStyleBackColor = true;
-            // 
-            // buttonM5Reset
-            // 
-            resources.ApplyResources(this.buttonM5Reset, "buttonM5Reset");
-            this.buttonM5Reset.Name = "buttonM5Reset";
-            this.buttonM5Reset.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxM5Pause
-            // 
-            resources.ApplyResources(this.checkBoxM5Pause, "checkBoxM5Pause");
-            this.checkBoxM5Pause.Name = "checkBoxM5Pause";
-            this.checkBoxM5Pause.ThreeState = true;
-            this.checkBoxM5Pause.UseVisualStyleBackColor = true;
-            this.checkBoxM5Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM5Pause_CheckStateChanged);
-            // 
-            // checkBoxM5Start
-            // 
-            resources.ApplyResources(this.checkBoxM5Start, "checkBoxM5Start");
-            this.checkBoxM5Start.Name = "checkBoxM5Start";
-            this.checkBoxM5Start.ThreeState = true;
-            this.checkBoxM5Start.UseVisualStyleBackColor = true;
-            this.checkBoxM5Start.CheckStateChanged += new System.EventHandler(this.checkBoxM5Start_CheckStateChanged);
-            // 
-            // groupBoxM4
-            // 
-            this.groupBoxM4.Controls.Add(this.labelM4Status);
-            this.groupBoxM4.Controls.Add(this.buttonM4Status);
-            this.groupBoxM4.Controls.Add(this.buttonM4Reset);
-            this.groupBoxM4.Controls.Add(this.checkBoxM4Pause);
-            this.groupBoxM4.Controls.Add(this.checkBoxM4Inclusion);
-            this.groupBoxM4.Controls.Add(this.labelM4Param1Value);
-            this.groupBoxM4.Controls.Add(this.checkBoxM4Start);
-            this.groupBoxM4.Controls.Add(this.comboBoxM4PrgName);
-            this.groupBoxM4.Controls.Add(this.labelM4Param1Name);
-            resources.ApplyResources(this.groupBoxM4, "groupBoxM4");
-            this.groupBoxM4.Name = "groupBoxM4";
-            this.groupBoxM4.TabStop = false;
-            // 
-            // labelM4Status
-            // 
-            resources.ApplyResources(this.labelM4Status, "labelM4Status");
-            this.labelM4Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM4Status.Name = "labelM4Status";
-            // 
-            // buttonM4Status
-            // 
-            this.buttonM4Status.FlatAppearance.BorderSize = 10;
-            resources.ApplyResources(this.buttonM4Status, "buttonM4Status");
-            this.buttonM4Status.Name = "buttonM4Status";
-            this.buttonM4Status.UseVisualStyleBackColor = true;
-            // 
-            // buttonM4Reset
-            // 
-            resources.ApplyResources(this.buttonM4Reset, "buttonM4Reset");
-            this.buttonM4Reset.Name = "buttonM4Reset";
-            this.buttonM4Reset.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxM4Pause
-            // 
-            resources.ApplyResources(this.checkBoxM4Pause, "checkBoxM4Pause");
-            this.checkBoxM4Pause.Name = "checkBoxM4Pause";
-            this.checkBoxM4Pause.ThreeState = true;
-            this.checkBoxM4Pause.UseVisualStyleBackColor = true;
-            this.checkBoxM4Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM4Pause_CheckStateChanged);
-            // 
-            // checkBoxM4Start
-            // 
-            resources.ApplyResources(this.checkBoxM4Start, "checkBoxM4Start");
-            this.checkBoxM4Start.Name = "checkBoxM4Start";
-            this.checkBoxM4Start.ThreeState = true;
-            this.checkBoxM4Start.UseVisualStyleBackColor = true;
-            this.checkBoxM4Start.CheckStateChanged += new System.EventHandler(this.checkBoxM4Start_CheckStateChanged);
-            // 
-            // groupBoxM2
-            // 
-            this.groupBoxM2.Controls.Add(this.labelM2Status);
-            this.groupBoxM2.Controls.Add(this.buttonM2Status);
-            this.groupBoxM2.Controls.Add(this.buttonM2Reset);
-            this.groupBoxM2.Controls.Add(this.checkBoxM2Pause);
-            this.groupBoxM2.Controls.Add(this.comboBoxM2PrgName);
-            this.groupBoxM2.Controls.Add(this.labelM2Param1Value);
-            this.groupBoxM2.Controls.Add(this.checkBoxM2Inclusion);
-            this.groupBoxM2.Controls.Add(this.labelM2Param1Name);
-            this.groupBoxM2.Controls.Add(this.checkBoxM2Start);
-            resources.ApplyResources(this.groupBoxM2, "groupBoxM2");
-            this.groupBoxM2.Name = "groupBoxM2";
-            this.groupBoxM2.TabStop = false;
-            // 
-            // labelM2Status
-            // 
-            resources.ApplyResources(this.labelM2Status, "labelM2Status");
-            this.labelM2Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM2Status.Name = "labelM2Status";
-            // 
-            // buttonM2Status
-            // 
-            resources.ApplyResources(this.buttonM2Status, "buttonM2Status");
-            this.buttonM2Status.FlatAppearance.BorderSize = 10;
-            this.buttonM2Status.Name = "buttonM2Status";
-            this.buttonM2Status.UseVisualStyleBackColor = true;
-            // 
-            // buttonM2Reset
-            // 
-            resources.ApplyResources(this.buttonM2Reset, "buttonM2Reset");
-            this.buttonM2Reset.Name = "buttonM2Reset";
-            this.buttonM2Reset.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxM2Pause
-            // 
-            resources.ApplyResources(this.checkBoxM2Pause, "checkBoxM2Pause");
-            this.checkBoxM2Pause.Name = "checkBoxM2Pause";
-            this.checkBoxM2Pause.ThreeState = true;
-            this.checkBoxM2Pause.UseVisualStyleBackColor = true;
-            this.checkBoxM2Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM2Pause_CheckStateChanged);
-            // 
-            // checkBoxM2Start
-            // 
-            resources.ApplyResources(this.checkBoxM2Start, "checkBoxM2Start");
-            this.checkBoxM2Start.Name = "checkBoxM2Start";
-            this.checkBoxM2Start.ThreeState = true;
-            this.checkBoxM2Start.UseVisualStyleBackColor = true;
-            this.checkBoxM2Start.CheckStateChanged += new System.EventHandler(this.checkBoxM2Start_CheckStateChanged);
-            // 
-            // groupBoxM1
-            // 
-            this.groupBoxM1.Controls.Add(this.labelM1Status);
-            this.groupBoxM1.Controls.Add(this.buttonM1Status);
-            this.groupBoxM1.Controls.Add(this.buttonM1Reset);
-            this.groupBoxM1.Controls.Add(this.checkBoxM1Pause);
-            this.groupBoxM1.Controls.Add(this.comboBoxM1PrgName);
-            this.groupBoxM1.Controls.Add(this.checkBoxM1Inclusion);
-            this.groupBoxM1.Controls.Add(this.labelM1Param1Value);
-            this.groupBoxM1.Controls.Add(this.labelM1Param1Name);
-            this.groupBoxM1.Controls.Add(this.checkBoxM1Start);
-            resources.ApplyResources(this.groupBoxM1, "groupBoxM1");
-            this.groupBoxM1.Name = "groupBoxM1";
-            this.groupBoxM1.TabStop = false;
-            // 
-            // labelM1Status
-            // 
-            resources.ApplyResources(this.labelM1Status, "labelM1Status");
-            this.labelM1Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM1Status.Name = "labelM1Status";
-            // 
-            // buttonM1Status
-            // 
-            this.buttonM1Status.FlatAppearance.BorderSize = 10;
-            resources.ApplyResources(this.buttonM1Status, "buttonM1Status");
-            this.buttonM1Status.Name = "buttonM1Status";
-            this.buttonM1Status.UseVisualStyleBackColor = true;
-            // 
-            // buttonM1Reset
-            // 
-            resources.ApplyResources(this.buttonM1Reset, "buttonM1Reset");
-            this.buttonM1Reset.Name = "buttonM1Reset";
-            this.buttonM1Reset.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxM1Pause
-            // 
-            resources.ApplyResources(this.checkBoxM1Pause, "checkBoxM1Pause");
-            this.checkBoxM1Pause.Name = "checkBoxM1Pause";
-            this.checkBoxM1Pause.ThreeState = true;
-            this.checkBoxM1Pause.UseVisualStyleBackColor = true;
-            this.checkBoxM1Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM1Pause_CheckStateChanged);
-            // 
-            // checkBoxM1Start
-            // 
-            resources.ApplyResources(this.checkBoxM1Start, "checkBoxM1Start");
-            this.checkBoxM1Start.FlatAppearance.BorderSize = 5;
-            this.checkBoxM1Start.Name = "checkBoxM1Start";
-            this.checkBoxM1Start.ThreeState = true;
-            this.checkBoxM1Start.UseVisualStyleBackColor = true;
-            this.checkBoxM1Start.CheckStateChanged += new System.EventHandler(this.checkBoxM1Start_CheckStateChanged);
+            this.tabPageT0_2.FormatStyle = tabPageFormatStyle25;
+            resources.ApplyResources(this.tabPageT0_2, "tabPageT0_2");
+            this.tabPageT0_2.Name = "tabPageT0_2";
+            this.tabPageT0_2.ParentPage = null;
+            treeNode8.Name = "";
+            treeNode8.Tag = this.tabPageT0_2;
+            resources.ApplyResources(treeNode8, "treeNode8");
+            this.tabPageT0_2.Tag = treeNode8;
+            this.tabPageT0_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2.TextBounds")));
+            this.tabPageT0_2.TextSize = new System.Drawing.SizeF(86.59161F, 25.4663F);
+            // 
+            // buttonSendLaser
+            // 
+            resources.ApplyResources(this.buttonSendLaser, "buttonSendLaser");
+            this.buttonSendLaser.Name = "buttonSendLaser";
+            this.buttonSendLaser.UseVisualStyleBackColor = true;
+            // 
+            // textBoxLaserLine2
+            // 
+            resources.ApplyResources(this.textBoxLaserLine2, "textBoxLaserLine2");
+            this.textBoxLaserLine2.Name = "textBoxLaserLine2";
+            // 
+            // textBoxLaserLine1
+            // 
+            resources.ApplyResources(this.textBoxLaserLine1, "textBoxLaserLine1");
+            this.textBoxLaserLine1.Name = "textBoxLaserLine1";
+            // 
+            // textBoxM6Test
+            // 
+            resources.ApplyResources(this.textBoxM6Test, "textBoxM6Test");
+            this.textBoxM6Test.Name = "textBoxM6Test";
+            // 
+            // textBoxM5Test
+            // 
+            resources.ApplyResources(this.textBoxM5Test, "textBoxM5Test");
+            this.textBoxM5Test.Name = "textBoxM5Test";
+            // 
+            // textBoxM4Test
+            // 
+            resources.ApplyResources(this.textBoxM4Test, "textBoxM4Test");
+            this.textBoxM4Test.Name = "textBoxM4Test";
+            // 
+            // textBoxM3Test
+            // 
+            resources.ApplyResources(this.textBoxM3Test, "textBoxM3Test");
+            this.textBoxM3Test.Name = "textBoxM3Test";
+            // 
+            // textBoxM2Test
+            // 
+            resources.ApplyResources(this.textBoxM2Test, "textBoxM2Test");
+            this.textBoxM2Test.Name = "textBoxM2Test";
+            // 
+            // textBoxM1Test
+            // 
+            resources.ApplyResources(this.textBoxM1Test, "textBoxM1Test");
+            this.textBoxM1Test.Name = "textBoxM1Test";
             // 
             // tabPageT0_3
             // 
@@ -5076,6 +4490,10 @@ namespace GUI
             resources.ApplyResources(this.tabPageT0_3, "tabPageT0_3");
             this.tabPageT0_3.Name = "tabPageT0_3";
             this.tabPageT0_3.ParentPage = null;
+            treeNode9.Name = "";
+            treeNode9.Tag = this.tabPageT0_3;
+            resources.ApplyResources(treeNode9, "treeNode9");
+            this.tabPageT0_3.Tag = treeNode9;
             this.tabPageT0_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_3.TextBounds")));
             this.tabPageT0_3.TextSize = new System.Drawing.SizeF(46.69904F, 25.4663F);
             this.tabPageT0_3.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageT0_3_Paint);
@@ -5214,70 +4632,692 @@ namespace GUI
             this.lbLedM4PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
             this.lbLedM4PCKeepAlive.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
             // 
-            // tabPageT0_2
+            // tabPageT0_1
             // 
-            this.tabPageT0_2.Controls.Add(this.buttonSendLaser);
-            this.tabPageT0_2.Controls.Add(this.textBoxLaserLine2);
-            this.tabPageT0_2.Controls.Add(this.textBoxLaserLine1);
-            this.tabPageT0_2.Controls.Add(this.textBoxM6Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM5Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM4Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM3Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM2Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM1Test);
+            this.tabPageT0_1.Controls.Add(this.groupBoxLine);
+            this.tabPageT0_1.Controls.Add(this.groupBoxM6);
+            this.tabPageT0_1.Controls.Add(this.groupBoxM3);
+            this.tabPageT0_1.Controls.Add(this.groupBoxM5);
+            this.tabPageT0_1.Controls.Add(this.groupBoxM4);
+            this.tabPageT0_1.Controls.Add(this.groupBoxM2);
+            this.tabPageT0_1.Controls.Add(this.groupBoxM1);
             tabPageFormatStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT0_2.FormatStyle = tabPageFormatStyle27;
-            resources.ApplyResources(this.tabPageT0_2, "tabPageT0_2");
-            this.tabPageT0_2.Name = "tabPageT0_2";
-            this.tabPageT0_2.ParentPage = null;
-            this.tabPageT0_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2.TextBounds")));
-            this.tabPageT0_2.TextSize = new System.Drawing.SizeF(86.59161F, 25.4663F);
+            this.tabPageT0_1.FormatStyle = tabPageFormatStyle27;
+            resources.ApplyResources(this.tabPageT0_1, "tabPageT0_1");
+            this.tabPageT0_1.Name = "tabPageT0_1";
+            this.tabPageT0_1.ParentPage = null;
+            treeNode10.Name = "";
+            treeNode10.Tag = this.tabPageT0_1;
+            resources.ApplyResources(treeNode10, "treeNode10");
+            this.tabPageT0_1.Tag = treeNode10;
+            this.tabPageT0_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_1.TextBounds")));
+            this.tabPageT0_1.TextSize = new System.Drawing.SizeF(105.7493F, 25.4663F);
             // 
-            // buttonSendLaser
+            // groupBoxLine
             // 
-            resources.ApplyResources(this.buttonSendLaser, "buttonSendLaser");
-            this.buttonSendLaser.Name = "buttonSendLaser";
-            this.buttonSendLaser.UseVisualStyleBackColor = true;
+            this.groupBoxLine.Controls.Add(this.button3);
+            this.groupBoxLine.Controls.Add(this.checkBoxPause);
+            this.groupBoxLine.Controls.Add(this.checkBoxStartStop);
+            this.groupBoxLine.Controls.Add(this.buttonMReset);
+            this.groupBoxLine.Controls.Add(this.comboBoxAutoModelNameLst);
+            this.groupBoxLine.Controls.Add(this.lbLedEmergency);
+            this.groupBoxLine.Controls.Add(this.lbLedAirPressure);
+            this.groupBoxLine.Controls.Add(this.lbLedLineStatus);
+            this.groupBoxLine.Controls.Add(this.buttonResetCounter);
+            this.groupBoxLine.Controls.Add(this.lbLedLineReady);
+            this.groupBoxLine.Controls.Add(this.lbLedSystemConnection);
+            resources.ApplyResources(this.groupBoxLine, "groupBoxLine");
+            this.groupBoxLine.Name = "groupBoxLine";
+            this.groupBoxLine.TabStop = false;
             // 
-            // textBoxLaserLine2
+            // button3
             // 
-            resources.ApplyResources(this.textBoxLaserLine2, "textBoxLaserLine2");
-            this.textBoxLaserLine2.Name = "textBoxLaserLine2";
+            this.button3.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.button3, "button3");
+            this.button3.Name = "button3";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // textBoxLaserLine1
+            // checkBoxPause
             // 
-            resources.ApplyResources(this.textBoxLaserLine1, "textBoxLaserLine1");
-            this.textBoxLaserLine1.Name = "textBoxLaserLine1";
+            resources.ApplyResources(this.checkBoxPause, "checkBoxPause");
+            this.checkBoxPause.ImageList = this.imageListStartStop;
+            this.checkBoxPause.Name = "checkBoxPause";
+            this.checkBoxPause.UseVisualStyleBackColor = true;
+            this.checkBoxPause.CheckStateChanged += new System.EventHandler(this.checkBoxPause_CheckStateChanged);
             // 
-            // textBoxM6Test
+            // imageListStartStop
             // 
-            resources.ApplyResources(this.textBoxM6Test, "textBoxM6Test");
-            this.textBoxM6Test.Name = "textBoxM6Test";
+            this.imageListStartStop.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListStartStop.ImageStream")));
+            this.imageListStartStop.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListStartStop.Images.SetKeyName(0, "play (3).png");
+            this.imageListStartStop.Images.SetKeyName(1, "stop.png");
+            this.imageListStartStop.Images.SetKeyName(2, "pause_on.png");
+            this.imageListStartStop.Images.SetKeyName(3, "pause_off.png");
             // 
-            // textBoxM5Test
+            // checkBoxStartStop
             // 
-            resources.ApplyResources(this.textBoxM5Test, "textBoxM5Test");
-            this.textBoxM5Test.Name = "textBoxM5Test";
+            resources.ApplyResources(this.checkBoxStartStop, "checkBoxStartStop");
+            this.checkBoxStartStop.ImageList = this.imageListStartStop;
+            this.checkBoxStartStop.Name = "checkBoxStartStop";
+            this.checkBoxStartStop.UseVisualStyleBackColor = true;
+            this.checkBoxStartStop.CheckStateChanged += new System.EventHandler(this.checkBoxStartStop_CheckStateChanged);
             // 
-            // textBoxM4Test
+            // buttonMReset
             // 
-            resources.ApplyResources(this.textBoxM4Test, "textBoxM4Test");
-            this.textBoxM4Test.Name = "textBoxM4Test";
+            resources.ApplyResources(this.buttonMReset, "buttonMReset");
+            this.buttonMReset.Name = "buttonMReset";
+            this.buttonMReset.UseVisualStyleBackColor = true;
+            this.buttonMReset.Click += new System.EventHandler(this.buttonM2Reset_Click);
             // 
-            // textBoxM3Test
+            // comboBoxAutoModelNameLst
             // 
-            resources.ApplyResources(this.textBoxM3Test, "textBoxM3Test");
-            this.textBoxM3Test.Name = "textBoxM3Test";
+            resources.ApplyResources(this.comboBoxAutoModelNameLst, "comboBoxAutoModelNameLst");
+            this.comboBoxAutoModelNameLst.FormattingEnabled = true;
+            this.comboBoxAutoModelNameLst.Name = "comboBoxAutoModelNameLst";
+            this.comboBoxAutoModelNameLst.SelectedIndexChanged += new System.EventHandler(this.comboBoxAutoModelNameLst_SelectedIndexChanged);
             // 
-            // textBoxM2Test
+            // lbLedEmergency
             // 
-            resources.ApplyResources(this.textBoxM2Test, "textBoxM2Test");
-            this.textBoxM2Test.Name = "textBoxM2Test";
+            this.lbLedEmergency.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedEmergency.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedEmergency, "lbLedEmergency");
+            this.lbLedEmergency.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLedEmergency.Label = "emergency";
+            this.lbLedEmergency.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedEmergency.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLedEmergency.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedEmergency.Name = "lbLedEmergency";
+            this.lbLedEmergency.Renderer = null;
+            this.lbLedEmergency.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedEmergency.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
             // 
-            // textBoxM1Test
+            // lbLedAirPressure
             // 
-            resources.ApplyResources(this.textBoxM1Test, "textBoxM1Test");
-            this.textBoxM1Test.Name = "textBoxM1Test";
+            this.lbLedAirPressure.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedAirPressure.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedAirPressure, "lbLedAirPressure");
+            this.lbLedAirPressure.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLedAirPressure.Label = "air pressure";
+            this.lbLedAirPressure.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedAirPressure.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLedAirPressure.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedAirPressure.Name = "lbLedAirPressure";
+            this.lbLedAirPressure.Renderer = null;
+            this.lbLedAirPressure.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedAirPressure.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedLineStatus
+            // 
+            this.lbLedLineStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedLineStatus.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedLineStatus, "lbLedLineStatus");
+            this.lbLedLineStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLedLineStatus.Label = "line status";
+            this.lbLedLineStatus.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedLineStatus.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLedLineStatus.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedLineStatus.Name = "lbLedLineStatus";
+            this.lbLedLineStatus.Renderer = null;
+            this.lbLedLineStatus.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedLineStatus.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // buttonResetCounter
+            // 
+            this.buttonResetCounter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(41)))), ((int)(((byte)(41)))));
+            resources.ApplyResources(this.buttonResetCounter, "buttonResetCounter");
+            this.buttonResetCounter.Name = "buttonResetCounter";
+            this.buttonResetCounter.UseVisualStyleBackColor = true;
+            // 
+            // lbLedLineReady
+            // 
+            this.lbLedLineReady.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedLineReady.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedLineReady, "lbLedLineReady");
+            this.lbLedLineReady.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLedLineReady.Label = "ready";
+            this.lbLedLineReady.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedLineReady.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLedLineReady.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedLineReady.Name = "lbLedLineReady";
+            this.lbLedLineReady.Renderer = null;
+            this.lbLedLineReady.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedLineReady.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedSystemConnection
+            // 
+            this.lbLedSystemConnection.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedSystemConnection.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedSystemConnection, "lbLedSystemConnection");
+            this.lbLedSystemConnection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLedSystemConnection.Label = "system online";
+            this.lbLedSystemConnection.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedSystemConnection.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLedSystemConnection.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedSystemConnection.Name = "lbLedSystemConnection";
+            this.lbLedSystemConnection.Renderer = null;
+            this.lbLedSystemConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedSystemConnection.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // groupBoxM6
+            // 
+            this.groupBoxM6.Controls.Add(this.labelM6Status);
+            this.groupBoxM6.Controls.Add(this.buttonM6Status);
+            this.groupBoxM6.Controls.Add(this.buttonM6Reset);
+            this.groupBoxM6.Controls.Add(this.checkBoxM6Pause);
+            this.groupBoxM6.Controls.Add(this.checkBoxM6Start);
+            this.groupBoxM6.Controls.Add(this.checkBoxM6Inclusion);
+            this.groupBoxM6.Controls.Add(this.labelM6Param1Value);
+            this.groupBoxM6.Controls.Add(this.comboBoxM6PrgName);
+            this.groupBoxM6.Controls.Add(this.labelM6Param1Name);
+            resources.ApplyResources(this.groupBoxM6, "groupBoxM6");
+            this.groupBoxM6.Name = "groupBoxM6";
+            this.groupBoxM6.TabStop = false;
+            // 
+            // labelM6Status
+            // 
+            resources.ApplyResources(this.labelM6Status, "labelM6Status");
+            this.labelM6Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM6Status.Name = "labelM6Status";
+            // 
+            // buttonM6Status
+            // 
+            this.buttonM6Status.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.buttonM6Status, "buttonM6Status");
+            this.buttonM6Status.Name = "buttonM6Status";
+            this.buttonM6Status.UseVisualStyleBackColor = true;
+            // 
+            // buttonM6Reset
+            // 
+            resources.ApplyResources(this.buttonM6Reset, "buttonM6Reset");
+            this.buttonM6Reset.Name = "buttonM6Reset";
+            this.buttonM6Reset.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxM6Pause
+            // 
+            resources.ApplyResources(this.checkBoxM6Pause, "checkBoxM6Pause");
+            this.checkBoxM6Pause.Name = "checkBoxM6Pause";
+            this.checkBoxM6Pause.ThreeState = true;
+            this.checkBoxM6Pause.UseVisualStyleBackColor = true;
+            this.checkBoxM6Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM6Pause_CheckStateChanged);
+            // 
+            // checkBoxM6Start
+            // 
+            resources.ApplyResources(this.checkBoxM6Start, "checkBoxM6Start");
+            this.checkBoxM6Start.Name = "checkBoxM6Start";
+            this.checkBoxM6Start.ThreeState = true;
+            this.checkBoxM6Start.UseVisualStyleBackColor = true;
+            this.checkBoxM6Start.CheckStateChanged += new System.EventHandler(this.checkBoxM6Start_CheckStateChanged);
+            // 
+            // checkBoxM6Inclusion
+            // 
+            resources.ApplyResources(this.checkBoxM6Inclusion, "checkBoxM6Inclusion");
+            this.checkBoxM6Inclusion.Checked = true;
+            this.checkBoxM6Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxM6Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.checkBoxM6Inclusion.FlatAppearance.BorderSize = 0;
+            this.checkBoxM6Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM6Inclusion.ImageList = this.imageListMIncEsc;
+            this.checkBoxM6Inclusion.Name = "checkBoxM6Inclusion";
+            this.checkBoxM6Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM6Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM6Inclusion_CheckedChanged);
+            // 
+            // imageListMIncEsc
+            // 
+            this.imageListMIncEsc.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListMIncEsc.ImageStream")));
+            this.imageListMIncEsc.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListMIncEsc.Images.SetKeyName(0, "preached.png");
+            this.imageListMIncEsc.Images.SetKeyName(1, "pnotreached.png");
+            this.imageListMIncEsc.Images.SetKeyName(2, "indeterminate.png");
+            // 
+            // labelM6Param1Value
+            // 
+            resources.ApplyResources(this.labelM6Param1Value, "labelM6Param1Value");
+            this.labelM6Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM6Param1Value.Name = "labelM6Param1Value";
+            // 
+            // comboBoxM6PrgName
+            // 
+            resources.ApplyResources(this.comboBoxM6PrgName, "comboBoxM6PrgName");
+            this.comboBoxM6PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.comboBoxM6PrgName.FormattingEnabled = true;
+            this.comboBoxM6PrgName.Name = "comboBoxM6PrgName";
+            // 
+            // labelM6Param1Name
+            // 
+            resources.ApplyResources(this.labelM6Param1Name, "labelM6Param1Name");
+            this.labelM6Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM6Param1Name.Name = "labelM6Param1Name";
+            // 
+            // groupBoxM3
+            // 
+            this.groupBoxM3.Controls.Add(this.labelM3Status);
+            this.groupBoxM3.Controls.Add(this.buttonM3Status);
+            this.groupBoxM3.Controls.Add(this.buttonM3Reset);
+            this.groupBoxM3.Controls.Add(this.checkBoxM3Pause);
+            this.groupBoxM3.Controls.Add(this.textBoxTypeOrder);
+            this.groupBoxM3.Controls.Add(this.comboBoxM3PrgName_st2);
+            this.groupBoxM3.Controls.Add(this.labelM3Param1Value);
+            this.groupBoxM3.Controls.Add(this.checkBoxM3Start);
+            this.groupBoxM3.Controls.Add(this.comboBoxM3PrgName_st1);
+            this.groupBoxM3.Controls.Add(this.checkBoxM3Inclusion);
+            this.groupBoxM3.Controls.Add(this.labelM3Param1Name);
+            resources.ApplyResources(this.groupBoxM3, "groupBoxM3");
+            this.groupBoxM3.Name = "groupBoxM3";
+            this.groupBoxM3.TabStop = false;
+            // 
+            // labelM3Status
+            // 
+            resources.ApplyResources(this.labelM3Status, "labelM3Status");
+            this.labelM3Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM3Status.Name = "labelM3Status";
+            // 
+            // buttonM3Status
+            // 
+            this.buttonM3Status.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.buttonM3Status, "buttonM3Status");
+            this.buttonM3Status.Name = "buttonM3Status";
+            this.buttonM3Status.UseVisualStyleBackColor = true;
+            // 
+            // buttonM3Reset
+            // 
+            resources.ApplyResources(this.buttonM3Reset, "buttonM3Reset");
+            this.buttonM3Reset.Name = "buttonM3Reset";
+            this.buttonM3Reset.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxM3Pause
+            // 
+            resources.ApplyResources(this.checkBoxM3Pause, "checkBoxM3Pause");
+            this.checkBoxM3Pause.Name = "checkBoxM3Pause";
+            this.checkBoxM3Pause.ThreeState = true;
+            this.checkBoxM3Pause.UseVisualStyleBackColor = true;
+            this.checkBoxM3Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM3Pause_CheckStateChanged);
+            // 
+            // textBoxTypeOrder
+            // 
+            resources.ApplyResources(this.textBoxTypeOrder, "textBoxTypeOrder");
+            this.textBoxTypeOrder.Name = "textBoxTypeOrder";
+            // 
+            // comboBoxM3PrgName_st2
+            // 
+            resources.ApplyResources(this.comboBoxM3PrgName_st2, "comboBoxM3PrgName_st2");
+            this.comboBoxM3PrgName_st2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.comboBoxM3PrgName_st2.FormattingEnabled = true;
+            this.comboBoxM3PrgName_st2.Name = "comboBoxM3PrgName_st2";
+            this.comboBoxM3PrgName_st2.SelectedIndexChanged += new System.EventHandler(this.comboBoxM3PrgName_st2_SelectedIndexChanged);
+            // 
+            // labelM3Param1Value
+            // 
+            resources.ApplyResources(this.labelM3Param1Value, "labelM3Param1Value");
+            this.labelM3Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM3Param1Value.Name = "labelM3Param1Value";
+            // 
+            // checkBoxM3Start
+            // 
+            resources.ApplyResources(this.checkBoxM3Start, "checkBoxM3Start");
+            this.checkBoxM3Start.Name = "checkBoxM3Start";
+            this.checkBoxM3Start.ThreeState = true;
+            this.checkBoxM3Start.UseVisualStyleBackColor = true;
+            this.checkBoxM3Start.CheckStateChanged += new System.EventHandler(this.checkBoxM3Start_CheckStateChanged);
+            // 
+            // comboBoxM3PrgName_st1
+            // 
+            resources.ApplyResources(this.comboBoxM3PrgName_st1, "comboBoxM3PrgName_st1");
+            this.comboBoxM3PrgName_st1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.comboBoxM3PrgName_st1.FormattingEnabled = true;
+            this.comboBoxM3PrgName_st1.Name = "comboBoxM3PrgName_st1";
+            this.comboBoxM3PrgName_st1.SelectedIndexChanged += new System.EventHandler(this.comboBoxM3PrgName_SelectedIndexChanged);
+            // 
+            // checkBoxM3Inclusion
+            // 
+            resources.ApplyResources(this.checkBoxM3Inclusion, "checkBoxM3Inclusion");
+            this.checkBoxM3Inclusion.Checked = true;
+            this.checkBoxM3Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxM3Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.checkBoxM3Inclusion.FlatAppearance.BorderSize = 0;
+            this.checkBoxM3Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM3Inclusion.ImageList = this.imageListMIncEsc;
+            this.checkBoxM3Inclusion.Name = "checkBoxM3Inclusion";
+            this.checkBoxM3Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM3Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM3Inclusion_CheckedChanged);
+            // 
+            // labelM3Param1Name
+            // 
+            resources.ApplyResources(this.labelM3Param1Name, "labelM3Param1Name");
+            this.labelM3Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM3Param1Name.Name = "labelM3Param1Name";
+            // 
+            // groupBoxM5
+            // 
+            this.groupBoxM5.Controls.Add(this.labelM5Status);
+            this.groupBoxM5.Controls.Add(this.buttonM5Status);
+            this.groupBoxM5.Controls.Add(this.buttonM5Reset);
+            this.groupBoxM5.Controls.Add(this.checkBoxM5Pause);
+            this.groupBoxM5.Controls.Add(this.comboBoxM5PrgName);
+            this.groupBoxM5.Controls.Add(this.checkBoxM5Start);
+            this.groupBoxM5.Controls.Add(this.labelM5Param1Value);
+            this.groupBoxM5.Controls.Add(this.checkBoxM5Inclusion);
+            this.groupBoxM5.Controls.Add(this.labelM5Param1Name);
+            resources.ApplyResources(this.groupBoxM5, "groupBoxM5");
+            this.groupBoxM5.Name = "groupBoxM5";
+            this.groupBoxM5.TabStop = false;
+            // 
+            // labelM5Status
+            // 
+            resources.ApplyResources(this.labelM5Status, "labelM5Status");
+            this.labelM5Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM5Status.Name = "labelM5Status";
+            // 
+            // buttonM5Status
+            // 
+            this.buttonM5Status.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.buttonM5Status, "buttonM5Status");
+            this.buttonM5Status.Name = "buttonM5Status";
+            this.buttonM5Status.UseVisualStyleBackColor = true;
+            // 
+            // buttonM5Reset
+            // 
+            resources.ApplyResources(this.buttonM5Reset, "buttonM5Reset");
+            this.buttonM5Reset.Name = "buttonM5Reset";
+            this.buttonM5Reset.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxM5Pause
+            // 
+            resources.ApplyResources(this.checkBoxM5Pause, "checkBoxM5Pause");
+            this.checkBoxM5Pause.Name = "checkBoxM5Pause";
+            this.checkBoxM5Pause.ThreeState = true;
+            this.checkBoxM5Pause.UseVisualStyleBackColor = true;
+            this.checkBoxM5Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM5Pause_CheckStateChanged);
+            // 
+            // comboBoxM5PrgName
+            // 
+            resources.ApplyResources(this.comboBoxM5PrgName, "comboBoxM5PrgName");
+            this.comboBoxM5PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.comboBoxM5PrgName.FormattingEnabled = true;
+            this.comboBoxM5PrgName.Name = "comboBoxM5PrgName";
+            // 
+            // checkBoxM5Start
+            // 
+            resources.ApplyResources(this.checkBoxM5Start, "checkBoxM5Start");
+            this.checkBoxM5Start.Name = "checkBoxM5Start";
+            this.checkBoxM5Start.ThreeState = true;
+            this.checkBoxM5Start.UseVisualStyleBackColor = true;
+            this.checkBoxM5Start.CheckStateChanged += new System.EventHandler(this.checkBoxM5Start_CheckStateChanged);
+            // 
+            // labelM5Param1Value
+            // 
+            resources.ApplyResources(this.labelM5Param1Value, "labelM5Param1Value");
+            this.labelM5Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM5Param1Value.Name = "labelM5Param1Value";
+            // 
+            // checkBoxM5Inclusion
+            // 
+            resources.ApplyResources(this.checkBoxM5Inclusion, "checkBoxM5Inclusion");
+            this.checkBoxM5Inclusion.Checked = true;
+            this.checkBoxM5Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxM5Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.checkBoxM5Inclusion.FlatAppearance.BorderSize = 0;
+            this.checkBoxM5Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM5Inclusion.ImageList = this.imageListMIncEsc;
+            this.checkBoxM5Inclusion.Name = "checkBoxM5Inclusion";
+            this.checkBoxM5Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM5Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM5Inclusion_CheckedChanged);
+            // 
+            // labelM5Param1Name
+            // 
+            resources.ApplyResources(this.labelM5Param1Name, "labelM5Param1Name");
+            this.labelM5Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM5Param1Name.Name = "labelM5Param1Name";
+            // 
+            // groupBoxM4
+            // 
+            this.groupBoxM4.Controls.Add(this.labelM4Status);
+            this.groupBoxM4.Controls.Add(this.buttonM4Status);
+            this.groupBoxM4.Controls.Add(this.buttonM4Reset);
+            this.groupBoxM4.Controls.Add(this.checkBoxM4Pause);
+            this.groupBoxM4.Controls.Add(this.checkBoxM4Inclusion);
+            this.groupBoxM4.Controls.Add(this.labelM4Param1Value);
+            this.groupBoxM4.Controls.Add(this.checkBoxM4Start);
+            this.groupBoxM4.Controls.Add(this.comboBoxM4PrgName);
+            this.groupBoxM4.Controls.Add(this.labelM4Param1Name);
+            resources.ApplyResources(this.groupBoxM4, "groupBoxM4");
+            this.groupBoxM4.Name = "groupBoxM4";
+            this.groupBoxM4.TabStop = false;
+            // 
+            // labelM4Status
+            // 
+            resources.ApplyResources(this.labelM4Status, "labelM4Status");
+            this.labelM4Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM4Status.Name = "labelM4Status";
+            // 
+            // buttonM4Status
+            // 
+            this.buttonM4Status.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.buttonM4Status, "buttonM4Status");
+            this.buttonM4Status.Name = "buttonM4Status";
+            this.buttonM4Status.UseVisualStyleBackColor = true;
+            // 
+            // buttonM4Reset
+            // 
+            resources.ApplyResources(this.buttonM4Reset, "buttonM4Reset");
+            this.buttonM4Reset.Name = "buttonM4Reset";
+            this.buttonM4Reset.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxM4Pause
+            // 
+            resources.ApplyResources(this.checkBoxM4Pause, "checkBoxM4Pause");
+            this.checkBoxM4Pause.Name = "checkBoxM4Pause";
+            this.checkBoxM4Pause.ThreeState = true;
+            this.checkBoxM4Pause.UseVisualStyleBackColor = true;
+            this.checkBoxM4Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM4Pause_CheckStateChanged);
+            // 
+            // checkBoxM4Inclusion
+            // 
+            resources.ApplyResources(this.checkBoxM4Inclusion, "checkBoxM4Inclusion");
+            this.checkBoxM4Inclusion.Checked = true;
+            this.checkBoxM4Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxM4Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.checkBoxM4Inclusion.FlatAppearance.BorderSize = 0;
+            this.checkBoxM4Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM4Inclusion.ImageList = this.imageListMIncEsc;
+            this.checkBoxM4Inclusion.Name = "checkBoxM4Inclusion";
+            this.checkBoxM4Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM4Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM4Inclusion_CheckedChanged);
+            // 
+            // labelM4Param1Value
+            // 
+            resources.ApplyResources(this.labelM4Param1Value, "labelM4Param1Value");
+            this.labelM4Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM4Param1Value.Name = "labelM4Param1Value";
+            // 
+            // checkBoxM4Start
+            // 
+            resources.ApplyResources(this.checkBoxM4Start, "checkBoxM4Start");
+            this.checkBoxM4Start.Name = "checkBoxM4Start";
+            this.checkBoxM4Start.ThreeState = true;
+            this.checkBoxM4Start.UseVisualStyleBackColor = true;
+            this.checkBoxM4Start.CheckStateChanged += new System.EventHandler(this.checkBoxM4Start_CheckStateChanged);
+            // 
+            // comboBoxM4PrgName
+            // 
+            resources.ApplyResources(this.comboBoxM4PrgName, "comboBoxM4PrgName");
+            this.comboBoxM4PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.comboBoxM4PrgName.FormattingEnabled = true;
+            this.comboBoxM4PrgName.Name = "comboBoxM4PrgName";
+            this.comboBoxM4PrgName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM4PrgName_SelectedIndexChanged);
+            // 
+            // labelM4Param1Name
+            // 
+            resources.ApplyResources(this.labelM4Param1Name, "labelM4Param1Name");
+            this.labelM4Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM4Param1Name.Name = "labelM4Param1Name";
+            // 
+            // groupBoxM2
+            // 
+            this.groupBoxM2.Controls.Add(this.labelM2Status);
+            this.groupBoxM2.Controls.Add(this.buttonM2Status);
+            this.groupBoxM2.Controls.Add(this.buttonM2Reset);
+            this.groupBoxM2.Controls.Add(this.checkBoxM2Pause);
+            this.groupBoxM2.Controls.Add(this.comboBoxM2PrgName);
+            this.groupBoxM2.Controls.Add(this.labelM2Param1Value);
+            this.groupBoxM2.Controls.Add(this.checkBoxM2Inclusion);
+            this.groupBoxM2.Controls.Add(this.labelM2Param1Name);
+            this.groupBoxM2.Controls.Add(this.checkBoxM2Start);
+            resources.ApplyResources(this.groupBoxM2, "groupBoxM2");
+            this.groupBoxM2.Name = "groupBoxM2";
+            this.groupBoxM2.TabStop = false;
+            // 
+            // labelM2Status
+            // 
+            resources.ApplyResources(this.labelM2Status, "labelM2Status");
+            this.labelM2Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM2Status.Name = "labelM2Status";
+            // 
+            // buttonM2Status
+            // 
+            resources.ApplyResources(this.buttonM2Status, "buttonM2Status");
+            this.buttonM2Status.FlatAppearance.BorderSize = 10;
+            this.buttonM2Status.Name = "buttonM2Status";
+            this.buttonM2Status.UseVisualStyleBackColor = true;
+            // 
+            // buttonM2Reset
+            // 
+            resources.ApplyResources(this.buttonM2Reset, "buttonM2Reset");
+            this.buttonM2Reset.Name = "buttonM2Reset";
+            this.buttonM2Reset.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxM2Pause
+            // 
+            resources.ApplyResources(this.checkBoxM2Pause, "checkBoxM2Pause");
+            this.checkBoxM2Pause.Name = "checkBoxM2Pause";
+            this.checkBoxM2Pause.ThreeState = true;
+            this.checkBoxM2Pause.UseVisualStyleBackColor = true;
+            this.checkBoxM2Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM2Pause_CheckStateChanged);
+            // 
+            // comboBoxM2PrgName
+            // 
+            resources.ApplyResources(this.comboBoxM2PrgName, "comboBoxM2PrgName");
+            this.comboBoxM2PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.comboBoxM2PrgName.FormattingEnabled = true;
+            this.comboBoxM2PrgName.Name = "comboBoxM2PrgName";
+            this.comboBoxM2PrgName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM2PrgName_SelectedIndexChanged);
+            // 
+            // labelM2Param1Value
+            // 
+            resources.ApplyResources(this.labelM2Param1Value, "labelM2Param1Value");
+            this.labelM2Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM2Param1Value.Name = "labelM2Param1Value";
+            // 
+            // checkBoxM2Inclusion
+            // 
+            resources.ApplyResources(this.checkBoxM2Inclusion, "checkBoxM2Inclusion");
+            this.checkBoxM2Inclusion.Checked = true;
+            this.checkBoxM2Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxM2Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.checkBoxM2Inclusion.FlatAppearance.BorderSize = 0;
+            this.checkBoxM2Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM2Inclusion.ImageList = this.imageListMIncEsc;
+            this.checkBoxM2Inclusion.Name = "checkBoxM2Inclusion";
+            this.checkBoxM2Inclusion.ThreeState = true;
+            this.checkBoxM2Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM2Inclusion.CheckStateChanged += new System.EventHandler(this.checkBoxM2Inclusion_CheckStateChanged);
+            // 
+            // labelM2Param1Name
+            // 
+            resources.ApplyResources(this.labelM2Param1Name, "labelM2Param1Name");
+            this.labelM2Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM2Param1Name.Name = "labelM2Param1Name";
+            // 
+            // checkBoxM2Start
+            // 
+            resources.ApplyResources(this.checkBoxM2Start, "checkBoxM2Start");
+            this.checkBoxM2Start.Name = "checkBoxM2Start";
+            this.checkBoxM2Start.ThreeState = true;
+            this.checkBoxM2Start.UseVisualStyleBackColor = true;
+            this.checkBoxM2Start.CheckStateChanged += new System.EventHandler(this.checkBoxM2Start_CheckStateChanged);
+            // 
+            // groupBoxM1
+            // 
+            this.groupBoxM1.Controls.Add(this.labelM1Status);
+            this.groupBoxM1.Controls.Add(this.buttonM1Status);
+            this.groupBoxM1.Controls.Add(this.buttonM1Reset);
+            this.groupBoxM1.Controls.Add(this.checkBoxM1Pause);
+            this.groupBoxM1.Controls.Add(this.comboBoxM1PrgName);
+            this.groupBoxM1.Controls.Add(this.checkBoxM1Inclusion);
+            this.groupBoxM1.Controls.Add(this.labelM1Param1Value);
+            this.groupBoxM1.Controls.Add(this.labelM1Param1Name);
+            this.groupBoxM1.Controls.Add(this.checkBoxM1Start);
+            resources.ApplyResources(this.groupBoxM1, "groupBoxM1");
+            this.groupBoxM1.Name = "groupBoxM1";
+            this.groupBoxM1.TabStop = false;
+            // 
+            // labelM1Status
+            // 
+            resources.ApplyResources(this.labelM1Status, "labelM1Status");
+            this.labelM1Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM1Status.Name = "labelM1Status";
+            // 
+            // buttonM1Status
+            // 
+            this.buttonM1Status.FlatAppearance.BorderSize = 10;
+            resources.ApplyResources(this.buttonM1Status, "buttonM1Status");
+            this.buttonM1Status.Name = "buttonM1Status";
+            this.buttonM1Status.UseVisualStyleBackColor = true;
+            // 
+            // buttonM1Reset
+            // 
+            resources.ApplyResources(this.buttonM1Reset, "buttonM1Reset");
+            this.buttonM1Reset.Name = "buttonM1Reset";
+            this.buttonM1Reset.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxM1Pause
+            // 
+            resources.ApplyResources(this.checkBoxM1Pause, "checkBoxM1Pause");
+            this.checkBoxM1Pause.Name = "checkBoxM1Pause";
+            this.checkBoxM1Pause.ThreeState = true;
+            this.checkBoxM1Pause.UseVisualStyleBackColor = true;
+            this.checkBoxM1Pause.CheckStateChanged += new System.EventHandler(this.checkBoxM1Pause_CheckStateChanged);
+            // 
+            // comboBoxM1PrgName
+            // 
+            resources.ApplyResources(this.comboBoxM1PrgName, "comboBoxM1PrgName");
+            this.comboBoxM1PrgName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.comboBoxM1PrgName.FormattingEnabled = true;
+            this.comboBoxM1PrgName.Name = "comboBoxM1PrgName";
+            this.comboBoxM1PrgName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM1PrgName_SelectedIndexChanged);
+            // 
+            // checkBoxM1Inclusion
+            // 
+            resources.ApplyResources(this.checkBoxM1Inclusion, "checkBoxM1Inclusion");
+            this.checkBoxM1Inclusion.Checked = true;
+            this.checkBoxM1Inclusion.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxM1Inclusion.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.checkBoxM1Inclusion.FlatAppearance.BorderSize = 0;
+            this.checkBoxM1Inclusion.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM1Inclusion.ImageList = this.imageListMIncEsc;
+            this.checkBoxM1Inclusion.Name = "checkBoxM1Inclusion";
+            this.checkBoxM1Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM1Inclusion.CheckedChanged += new System.EventHandler(this.checkBoxM1Inclusion_CheckedChanged);
+            // 
+            // labelM1Param1Value
+            // 
+            resources.ApplyResources(this.labelM1Param1Value, "labelM1Param1Value");
+            this.labelM1Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM1Param1Value.Name = "labelM1Param1Value";
+            // 
+            // labelM1Param1Name
+            // 
+            resources.ApplyResources(this.labelM1Param1Name, "labelM1Param1Name");
+            this.labelM1Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM1Param1Name.Name = "labelM1Param1Name";
+            // 
+            // checkBoxM1Start
+            // 
+            resources.ApplyResources(this.checkBoxM1Start, "checkBoxM1Start");
+            this.checkBoxM1Start.FlatAppearance.BorderSize = 5;
+            this.checkBoxM1Start.Name = "checkBoxM1Start";
+            this.checkBoxM1Start.ThreeState = true;
+            this.checkBoxM1Start.UseVisualStyleBackColor = true;
+            this.checkBoxM1Start.CheckStateChanged += new System.EventHandler(this.checkBoxM1Start_CheckStateChanged);
             // 
             // labelLoginLevel
             // 
@@ -5291,6 +5331,21 @@ namespace GUI
             this.labelDateTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.labelDateTime.Name = "labelDateTime";
             // 
+            // splitContainer6
+            // 
+            this.splitContainer6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.splitContainer6, "splitContainer6");
+            this.splitContainer6.Name = "splitContainer6";
+            // 
+            // splitContainer6.Panel1
+            // 
+            this.splitContainer6.Panel1.BackColor = System.Drawing.Color.DarkRed;
+            this.splitContainer6.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
+            // 
+            // splitContainer6.Panel2
+            // 
+            this.splitContainer6.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            // 
             // tabControlMain
             // 
             controlColorStyle1.BackColor = System.Drawing.Color.White;
@@ -5299,12 +5354,12 @@ namespace GUI
             this.tabControlMain.ColorStyle = controlColorStyle1;
             this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Controls.Add(this.tabPageHide);
-            this.tabControlMain.Controls.Add(this.tabPageRecipe);
-            this.tabControlMain.Controls.Add(this.tabPageConsole);
-            this.tabControlMain.Controls.Add(this.tabPage4);
-            this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
-            this.tabControlMain.Controls.Add(this.tabPageSettings);
             this.tabControlMain.Controls.Add(this.tabPageHelp);
+            this.tabControlMain.Controls.Add(this.tabPageSettings);
+            this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
+            this.tabControlMain.Controls.Add(this.tabPage4);
+            this.tabControlMain.Controls.Add(this.tabPageConsole);
+            this.tabControlMain.Controls.Add(this.tabPageRecipe);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlMain, "tabControlMain");
             controlFormatStyle6.BorderCornerRadius = 5;
@@ -5335,7 +5390,6 @@ namespace GUI
             this.tabControlMain.SelectedPage = this.tabPageMain;
             tabPageColorStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle27.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle27.TabImage = ((System.Drawing.Image)(resources.GetObject("tabPageColorStyle27.TabImage")));
             tabPageColorStyle27.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.tabControlMain.SelectedPageStyle = tabPageColorStyle27;
             this.tabControlMain.TabCornerShape = LidorSystems.IntegralUI.Containers.TabCornerShape.Squared;
@@ -5398,8 +5452,6 @@ namespace GUI
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
-            this.splitContainer6.ResumeLayout(false);
             this.tabPageHelp.ResumeLayout(false);
             this.tabPageSettings.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT5)).EndInit();
@@ -5447,6 +5499,17 @@ namespace GUI
             this.tabPageMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT0)).EndInit();
             this.tabControlT0.ResumeLayout(false);
+            this.tabPageT0_2.ResumeLayout(false);
+            this.tabPageT0_2.PerformLayout();
+            this.tabPageT0_3.ResumeLayout(false);
+            this.groupBoxKeepAliveFromPlc.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIOTNode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM5PLCNode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM1PLCNode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM4PLCNode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM2PLCNode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3PLCNode)).EndInit();
+            this.groupBoxKeepAliveToPlc.ResumeLayout(false);
             this.tabPageT0_1.ResumeLayout(false);
             this.groupBoxLine.ResumeLayout(false);
             this.groupBoxLine.PerformLayout();
@@ -5462,17 +5525,8 @@ namespace GUI
             this.groupBoxM2.PerformLayout();
             this.groupBoxM1.ResumeLayout(false);
             this.groupBoxM1.PerformLayout();
-            this.tabPageT0_3.ResumeLayout(false);
-            this.groupBoxKeepAliveFromPlc.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIOTNode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM5PLCNode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM1PLCNode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM4PLCNode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM2PLCNode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3PLCNode)).EndInit();
-            this.groupBoxKeepAliveToPlc.ResumeLayout(false);
-            this.tabPageT0_2.ResumeLayout(false);
-            this.tabPageT0_2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
+            this.splitContainer6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).EndInit();
             this.tabControlMain.ResumeLayout(false);
             this.ResumeLayout(false);
