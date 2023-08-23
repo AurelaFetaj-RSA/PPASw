@@ -503,7 +503,7 @@ namespace GUI
                 });
             }
         }
-        public void WriteOnLabelStatusAsync(ClientResult cr, Label lbl)
+        public void WriteOnLabelMStatusAsync(ClientResult cr, Label lbl)
         {
             short value = -1;
 
@@ -528,7 +528,7 @@ namespace GUI
 
                     if (value == 0)
                     {
-                        lbl.Text = "emegency";
+                        lbl.Text = "emergency";
                     }
 
                     if (value == 1)
@@ -567,7 +567,8 @@ namespace GUI
         }
 
         private void GUIWithOPCUAClientDisconnected()
-        {            
+        {
+            //machines status
             UpdateOPCUAMStatus(null, buttonM1Status, labelM1Status);
             WriteOnCheckBoxStartAsync(null, checkBoxM1Start);
             WriteOnCheckBoxPauseAsync(null, checkBoxM1Pause);
@@ -592,6 +593,13 @@ namespace GUI
             WriteOnCheckBoxStartAsync(null, checkBoxM6Start);
             WriteOnCheckBoxPauseAsync(null, checkBoxM6Pause);
 
+            //line status
+            buttonSystemStatus.BackColor = Color.Black;
+            WriteOnLabelAsync(null, labelSystemStatus);
+
+            WriteAsyncSystemStartStopCheckBox(0, checkBoxStartStop);
+            WriteAsyncSystemPauseCheckBox(0, checkBoxPause);
+
             //UpdateOPCUAMHomingDone(null, lbLedM1HomingDone);
             //UpdateOPCUAMHomingDone(null, lbLedM2HomingDone);
             //UpdateOPCUAMHomingDone(null, lbLedM3HomingDone);
@@ -609,8 +617,6 @@ namespace GUI
             UpdateOPCUAM2CAQ(null);
             UpdateOPCUAM3CAQ(null);
             UpdateOPCUAM4CAQ(null);
-            lbLedSystemConnection.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            lbLedSystemConnection.Label = "system offline";
 
             pictureBoxM1PLCNode.Image = imageListNodes.Images[1];
             labelM1Node.Text = "node offline";
@@ -933,7 +939,7 @@ namespace GUI
                     btn.BackColor = Color.DarkOrange;
                 }
             }
-            WriteOnLabelStatusAsync(cr, lbl);
+            WriteOnLabelAsync(cr, lbl);
         }       
 
         public void ManageOPCUAMBtnStatus(ClientResult cr, CheckBox btn)
@@ -957,7 +963,7 @@ namespace GUI
             {
                 if ((short)crM1.Value == 3 & (short)crM2.Value == 3 & (short)crM3.Value == 3 & (short)crM4.Value == 3 & (short)crM5.Value == 3 & (short)crM6.Value == 3)
                 {                    
-                    WriteAsyncMStartStopCheckBox(true, checkBoxStartStop);
+                    WriteAsyncSystemStartStopCheckBox(1, checkBoxStartStop);
                 }
                 else
                 {
@@ -980,7 +986,7 @@ namespace GUI
 
                 if ((bool)crM1.Value == true & (bool)crM2.Value == true & (bool)crM3.Value == true & (bool)crM4.Value == true & (bool)crM5.Value == true & (bool)crM6.Value == true)
                 {
-                    WriteAsyncMPauseCheckBox(true, checkBoxPause);
+                    WriteAsyncSystemPauseCheckBox(1, checkBoxPause);
                 }
                 else
                 {
@@ -990,24 +996,61 @@ namespace GUI
 
         }
 
-        public void WriteAsyncMStartStopCheckBox(bool value, CheckBox chk)
+        public void WriteAsyncSystemStartStopCheckBox(int value, CheckBox chk)
         {
             if (chk.InvokeRequired)
             {
                 chk.Invoke((MethodInvoker)delegate
                 {
-                    if (value == true)
+                    if (value == 0)
+                    {
+                        chk.CheckState = CheckState.Indeterminate;
+                        chk.Image = imageListStartStop.Images[4];
+                        chk.Text = "OFFLINE";
+                    }
+
+                    if (value == 1)
                     {
                         chk.CheckState = CheckState.Checked;
                         chk.Image = imageListStartStop.Images[1];
                         chk.Text = "STOP";
                     }
 
-                    if (value == false)
+                    if (value == 2)
                     {
                         chk.CheckState = CheckState.Unchecked;
                         chk.Image = imageListStartStop.Images[0];
                         chk.Text = "START";
+                    }
+                });
+            }
+        }
+
+        public void WriteAsyncSystemPauseCheckBox(int value, CheckBox chk)
+        {
+            if (chk.InvokeRequired)
+            {
+                chk.Invoke((MethodInvoker)delegate
+                {
+                    if (value == 0)
+                    {
+                        chk.CheckState = CheckState.Indeterminate;
+                        chk.Image = imageListStartStop.Images[4];
+                        chk.Text = "OFFLINE";
+                    }
+
+                    if (value == 1)
+                    {
+                        chk.CheckState = CheckState.Checked;
+                        chk.Image = imageListStartStop.Images[3];
+                        chk.Text = "IN PAUSE";
+                    }
+
+                    if (value == 2)
+                    {
+                        chk.CheckState = CheckState.Unchecked;
+                        chk.Image = imageListStartStop.Images[2];
+                        chk.Text = "PAUSE";
                     }
                 });
             }
@@ -1038,30 +1081,7 @@ namespace GUI
         //    }
         //}
 
-        public void WriteAsyncMPauseCheckBox(bool value, CheckBox chk)
-        {
-            if (chk.InvokeRequired)
-            {
-                chk.Invoke((MethodInvoker)delegate
-                {
-                    if (value == true)
-                    {
-                        chk.CheckState = CheckState.Checked;
-                        chk.Image = imageListStartStop.Images[3];
-                        chk.Text = "IN PAUSE";
-                        chk.CheckState = CheckState.Checked;
-                    }
 
-                    if (value == false)
-                    {
-                        chk.CheckState = CheckState.Unchecked;
-                        chk.Image = imageListStartStop.Images[2];
-                        chk.Text = "PAUSE";
-                        chk.CheckState = CheckState.Unchecked;
-                    }
-                });
-            }
-        }
 
         public void UpdateOPCUAMHomingDone(ClientResult cr, LBSoft.IndustrialCtrls.Leds.LBLed lblLed)
         {
