@@ -48,6 +48,23 @@ namespace GUI
 
         CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
         private ReadProgramsService _readProgramService { get; set; } = null;
+
+        public enum Priority
+        {
+            normal = 0,
+            high = 1,
+            critical = 2
+        }
+
+        public enum Machine
+        {
+            trimmer = 0,
+            padprintInt = 1,
+            padprintExt = 2,
+            padLaser = 3,
+            manipulator = 4,
+            oven = 5
+        }
         public FormApp(SplashScreen splashScreen)
         {
             _splashScreen = splashScreen;
@@ -260,6 +277,7 @@ namespace GUI
             DateTime local = zone.ToLocalTime(DateTime.Now);
             toolStripStatusLabelDateTime.Text = local.ToString();
             toolStripStatusLabelSN.Text = Properties.Settings.Default.RSASN;
+            dataGridViewMessages.ClearSelection();
             #endregion
         }
         public void Start()
@@ -302,6 +320,67 @@ namespace GUI
             {
 
             }
+        }
+
+        private void AddMessageToDataGridOnTop(DateTime dt, Priority pr, Machine machine, string messageText)
+        {
+            try
+            {
+                dataGridViewMessages.Rows.Insert(0, dt.ToString(), pr.ToString(), machine.ToString(), messageText.ToString());
+                SetColorToDataGridRow(0, pr);
+
+            }
+            catch(Exception Ex)
+            {
+
+            }            
+        }
+
+        private void SetColorToDataGridRow(int index, Priority pr)
+        {
+            try
+            {               
+                if (pr == Priority.critical)
+                {
+                    dataGridViewMessages.Rows[index].DefaultCellStyle.BackColor = Color.Red;
+                }
+                else if (pr == Priority.high)
+                {
+                    dataGridViewMessages.Rows[index].DefaultCellStyle.BackColor = Color.Orange;
+                }
+                else if (pr == Priority.normal)
+                {
+                    dataGridViewMessages.Rows[index].DefaultCellStyle.BackColor = Color.FromArgb(65, 68, 65);
+                }
+            }
+            catch (Exception Ex)
+            {
+
+            }
+        }
+
+        private void SetPriorityToDataGridRow(int index, Priority pr)
+        {
+            dataGridViewMessages.Rows[index].Cells["priority"].Value = pr.ToString();
+            SetColorToDataGridRow(index, pr);
+        }
+
+        private void UpdateColorToDataGridRow()
+        {
+            int index = 0;
+            foreach (DataGridViewRow item in dataGridViewMessages.Rows)
+            {
+                Priority tmp = Priority.normal;
+                Enum.TryParse<Priority>(item.Cells["priority"].Value.ToString(), out tmp);
+                SetColorToDataGridRow(index, tmp);
+                index = index + 1; 
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SetPriorityToDataGridRow(1, Priority.normal);
+            UpdateColorToDataGridRow();
         }
     }
 }

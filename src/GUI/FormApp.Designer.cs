@@ -89,6 +89,11 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle17 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle39 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle47 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle18 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle40 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle41 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -133,8 +138,6 @@
             LidorSystems.IntegralUI.Containers.Style.TabStripStyle tabStripStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabStripStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolTipStyle toolTipStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolTipStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPageT3_1 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.labelM2TeachAxisQuoteName = new System.Windows.Forms.Label();
             this.labelM2TeachAxisQuoteValue = new System.Windows.Forms.Label();
@@ -211,9 +214,17 @@
             this.tabPageT6 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT7 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT0_1 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridViewMessages = new System.Windows.Forms.DataGridView();
+            this.datetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priority = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.machine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.messagetext = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusStripSeparator = new System.Windows.Forms.StatusStrip();
             this.statusStripT0 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelSN = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelDateTime = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelSystem = new System.Windows.Forms.ToolStripStatusLabel();
             this.checkBoxPause = new System.Windows.Forms.CheckBox();
             this.imageListStartStop = new System.Windows.Forms.ImageList(this.components);
             this.checkBoxStartStop = new System.Windows.Forms.CheckBox();
@@ -328,20 +339,12 @@
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
             this.imageListMainControl = new System.Windows.Forms.ImageList(this.components);
             this.imageListNodes = new System.Windows.Forms.ImageList(this.components);
-            this.toolStripStatusLabelSystem = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statusStripSeparator = new System.Windows.Forms.StatusStrip();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tabPageT3_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TeachPoints)).BeginInit();
             this.tabPageT3_3.SuspendLayout();
             this.tabPageT4_1.SuspendLayout();
             this.tabPageT0_1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMessages)).BeginInit();
             this.statusStripT0.SuspendLayout();
             this.groupBoxM6.SuspendLayout();
             this.groupBoxM5.SuspendLayout();
@@ -362,7 +365,6 @@
             this.tabPageT2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).BeginInit();
             this.tabControlMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPageT3_1
@@ -1993,7 +1995,8 @@
             // 
             // tabPageT0_1
             // 
-            this.tabPageT0_1.Controls.Add(this.dataGridView1);
+            this.tabPageT0_1.Controls.Add(this.button1);
+            this.tabPageT0_1.Controls.Add(this.dataGridViewMessages);
             this.tabPageT0_1.Controls.Add(this.statusStripSeparator);
             this.tabPageT0_1.Controls.Add(this.statusStripT0);
             this.tabPageT0_1.Controls.Add(this.checkBoxPause);
@@ -2034,6 +2037,119 @@
             this.tabPageT0_1.TextSize = new System.Drawing.SizeF(87.68488F, 21.44531F);
             this.tabPageT0_1.UseParentTabStripPlacement = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(780, 431);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 142;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dataGridViewMessages
+            // 
+            this.dataGridViewMessages.AllowUserToAddRows = false;
+            this.dataGridViewMessages.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(68)))), ((int)(((byte)(65)))));
+            this.dataGridViewMessages.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewMessages.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridViewMessages.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(68)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(113)))), ((int)(((byte)(36)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewMessages.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewMessages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMessages.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.datetime,
+            this.priority,
+            this.machine,
+            this.messagetext});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewMessages.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewMessages.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridViewMessages.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dataGridViewMessages.EnableHeadersVisualStyles = false;
+            this.dataGridViewMessages.Location = new System.Drawing.Point(0, 563);
+            this.dataGridViewMessages.MultiSelect = false;
+            this.dataGridViewMessages.Name = "dataGridViewMessages";
+            this.dataGridViewMessages.ReadOnly = true;
+            this.dataGridViewMessages.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(41)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(133)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewMessages.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewMessages.RowHeadersVisible = false;
+            this.dataGridViewMessages.RowHeadersWidth = 48;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(68)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.dataGridViewMessages.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewMessages.RowTemplate.Height = 24;
+            this.dataGridViewMessages.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridViewMessages.Size = new System.Drawing.Size(914, 100);
+            this.dataGridViewMessages.TabIndex = 141;
+            // 
+            // datetime
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datetime.DefaultCellStyle = dataGridViewCellStyle4;
+            this.datetime.Frozen = true;
+            this.datetime.HeaderText = "datetime";
+            this.datetime.Name = "datetime";
+            this.datetime.ReadOnly = true;
+            this.datetime.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.datetime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.datetime.Width = 160;
+            // 
+            // priority
+            // 
+            this.priority.Frozen = true;
+            this.priority.HeaderText = "priority";
+            this.priority.Name = "priority";
+            this.priority.ReadOnly = true;
+            // 
+            // machine
+            // 
+            this.machine.Frozen = true;
+            this.machine.HeaderText = "machine";
+            this.machine.Name = "machine";
+            this.machine.ReadOnly = true;
+            this.machine.Width = 140;
+            // 
+            // messagetext
+            // 
+            this.messagetext.Frozen = true;
+            this.messagetext.HeaderText = "message text";
+            this.messagetext.Name = "messagetext";
+            this.messagetext.ReadOnly = true;
+            this.messagetext.Width = 520;
+            // 
+            // statusStripSeparator
+            // 
+            this.statusStripSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(190)))), ((int)(((byte)(186)))));
+            this.statusStripSeparator.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusStripSeparator.Location = new System.Drawing.Point(0, 663);
+            this.statusStripSeparator.Name = "statusStripSeparator";
+            this.statusStripSeparator.Size = new System.Drawing.Size(914, 22);
+            this.statusStripSeparator.SizingGrip = false;
+            this.statusStripSeparator.TabIndex = 140;
+            // 
             // statusStripT0
             // 
             this.statusStripT0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(41)))), ((int)(((byte)(47)))));
@@ -2053,8 +2169,8 @@
             // 
             this.toolStripStatusLabelSN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.toolStripStatusLabelSN.Name = "toolStripStatusLabelSN";
-            this.toolStripStatusLabelSN.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
-            this.toolStripStatusLabelSN.Size = new System.Drawing.Size(71, 26);
+            this.toolStripStatusLabelSN.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.toolStripStatusLabelSN.Size = new System.Drawing.Size(51, 26);
             this.toolStripStatusLabelSN.Text = "S/N";
             // 
             // toolStripStatusLabelDateTime
@@ -2068,6 +2184,13 @@
             this.toolStripStatusLabelDateTime.Size = new System.Drawing.Size(390, 26);
             this.toolStripStatusLabelDateTime.Text = "date time";
             // 
+            // toolStripStatusLabelSystem
+            // 
+            this.toolStripStatusLabelSystem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.toolStripStatusLabelSystem.Name = "toolStripStatusLabelSystem";
+            this.toolStripStatusLabelSystem.Size = new System.Drawing.Size(99, 26);
+            this.toolStripStatusLabelSystem.Text = "system offline";
+            // 
             // checkBoxPause
             // 
             this.checkBoxPause.Appearance = System.Windows.Forms.Appearance.Button;
@@ -2076,7 +2199,7 @@
             this.checkBoxPause.ImageIndex = 2;
             this.checkBoxPause.ImageList = this.imageListStartStop;
             this.checkBoxPause.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxPause.Location = new System.Drawing.Point(500, 450);
+            this.checkBoxPause.Location = new System.Drawing.Point(500, 420);
             this.checkBoxPause.Name = "checkBoxPause";
             this.checkBoxPause.Size = new System.Drawing.Size(112, 135);
             this.checkBoxPause.TabIndex = 135;
@@ -2103,7 +2226,7 @@
             this.checkBoxStartStop.ImageIndex = 0;
             this.checkBoxStartStop.ImageList = this.imageListStartStop;
             this.checkBoxStartStop.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxStartStop.Location = new System.Drawing.Point(250, 450);
+            this.checkBoxStartStop.Location = new System.Drawing.Point(250, 420);
             this.checkBoxStartStop.Name = "checkBoxStartStop";
             this.checkBoxStartStop.Size = new System.Drawing.Size(110, 135);
             this.checkBoxStartStop.TabIndex = 134;
@@ -3765,22 +3888,22 @@
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
             this.tabControlMain.Controls.Add(this.tabPageT0_1);
-            this.tabControlMain.Controls.Add(this.tabPageT0);
-            this.tabControlMain.Controls.Add(this.tabPageT3_1);
-            this.tabControlMain.Controls.Add(this.tabPageT3);
-            this.tabControlMain.Controls.Add(this.tabPageT2);
-            this.tabControlMain.Controls.Add(this.tabPageT1_2);
-            this.tabControlMain.Controls.Add(this.tabPageT1_1);
-            this.tabControlMain.Controls.Add(this.tabPageT1);
-            this.tabControlMain.Controls.Add(this.tabPageT0_3);
-            this.tabControlMain.Controls.Add(this.tabPageT0_2);
             this.tabControlMain.Controls.Add(this.tabPageT7);
             this.tabControlMain.Controls.Add(this.tabPageT6);
             this.tabControlMain.Controls.Add(this.tabPageT5);
             this.tabControlMain.Controls.Add(this.tabPageT4);
+            this.tabControlMain.Controls.Add(this.tabPageT3);
+            this.tabControlMain.Controls.Add(this.tabPageT2);
+            this.tabControlMain.Controls.Add(this.tabPageT1);
+            this.tabControlMain.Controls.Add(this.tabPageT0);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2);
+            this.tabControlMain.Controls.Add(this.tabPageT0_3);
+            this.tabControlMain.Controls.Add(this.tabPageT1_1);
+            this.tabControlMain.Controls.Add(this.tabPageT1_2);
             this.tabControlMain.Controls.Add(this.tabPageT1_3);
             this.tabControlMain.Controls.Add(this.tabPageT1_4);
             this.tabControlMain.Controls.Add(this.tabPage1);
+            this.tabControlMain.Controls.Add(this.tabPageT3_1);
             this.tabControlMain.Controls.Add(this.tabPageT3_2);
             this.tabControlMain.Controls.Add(this.tabPageT3_3);
             this.tabControlMain.Controls.Add(this.tabPageT3_4);
@@ -3887,91 +4010,6 @@
             this.imageListNodes.Images.SetKeyName(2, "iot_on.png");
             this.imageListNodes.Images.SetKeyName(3, "iot_off.png");
             // 
-            // toolStripStatusLabelSystem
-            // 
-            this.toolStripStatusLabelSystem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.toolStripStatusLabelSystem.Name = "toolStripStatusLabelSystem";
-            this.toolStripStatusLabelSystem.Size = new System.Drawing.Size(99, 26);
-            this.toolStripStatusLabelSystem.Text = "system offline";
-            // 
-            // statusStripSeparator
-            // 
-            this.statusStripSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(190)))), ((int)(((byte)(186)))));
-            this.statusStripSeparator.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusStripSeparator.Location = new System.Drawing.Point(0, 663);
-            this.statusStripSeparator.Name = "statusStripSeparator";
-            this.statusStripSeparator.Size = new System.Drawing.Size(914, 22);
-            this.statusStripSeparator.SizingGrip = false;
-            this.statusStripSeparator.TabIndex = 140;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewButtonColumn1,
-            this.dataGridViewButtonColumn2,
-            this.dataGridViewImageColumn1});
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 520);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 48;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.RowTemplate.Height = 48;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(575, 140);
-            this.dataGridView1.TabIndex = 141;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridViewTextBoxColumn1.Frozen = true;
-            this.dataGridViewTextBoxColumn1.HeaderText = "point";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn1.Width = 60;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.Frozen = true;
-            this.dataGridViewTextBoxColumn2.HeaderText = "quote (mm)";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 130;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.Frozen = true;
-            this.dataGridViewTextBoxColumn3.HeaderText = "speed (%)";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 130;
-            // 
-            // dataGridViewButtonColumn1
-            // 
-            this.dataGridViewButtonColumn1.HeaderText = "register";
-            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
-            // 
-            // dataGridViewButtonColumn2
-            // 
-            this.dataGridViewButtonColumn2.HeaderText = "start";
-            this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "reached";
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Width = 48;
-            // 
             // FormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3989,6 +4027,7 @@
             this.tabPageT4_1.PerformLayout();
             this.tabPageT0_1.ResumeLayout(false);
             this.tabPageT0_1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMessages)).EndInit();
             this.statusStripT0.ResumeLayout(false);
             this.statusStripT0.PerformLayout();
             this.groupBoxM6.ResumeLayout(false);
@@ -4019,7 +4058,6 @@
             this.tabPageT2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).EndInit();
             this.tabControlMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4221,12 +4259,11 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSN;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSystem;
         private System.Windows.Forms.StatusStrip statusStripSeparator;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn2;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridView dataGridViewMessages;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datetime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priority;
+        private System.Windows.Forms.DataGridViewTextBoxColumn machine;
+        private System.Windows.Forms.DataGridViewTextBoxColumn messagetext;
     }
 }

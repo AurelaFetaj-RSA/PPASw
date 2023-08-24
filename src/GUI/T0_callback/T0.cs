@@ -52,9 +52,13 @@ namespace GUI
                     }
                     else
                     {
-
+                        AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "comunication error with the machine");
                     }    
                 }
+            }
+            else
+            {
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "verify program file");
             }
         }
 

@@ -572,7 +572,7 @@ namespace GUI
                     if (value)
                     {
                         lbl.BackColor = Color.FromArgb(107, 227, 162);
-                        lbl.ForeColor = Color.FromArgb(241, 241, 241);
+                        lbl.ForeColor = Color.FromArgb(51, 51, 51);
                         lbl.Text = "system online";
                     }
                     else
