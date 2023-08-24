@@ -234,6 +234,52 @@ namespace GUI
 
                     #endregion
 
+                    #region(* node keep alive/connection *)
+                    //keep alive to plc
+                    keys = new List<string>()
+                    {
+                        "pcM1KeepAliveW",
+                        "pcM2KeepAliveW",
+                        "pcM3KeepAliveW",
+                        "pcM4KeepAliveW",
+                        "pcM5KeepAliveW"
+                    };
+
+                    readResult = await ccService.Read(keys);
+                    UpdateOPCUAMKeepAlive(readResult["pcM1KeepAliveW"], lbLedM1PCKeepAlive);
+                    UpdateOPCUAMKeepAlive(readResult["pcM2KeepAliveW"], lbLedM2PCKeepAlive);
+                    UpdateOPCUAMKeepAlive(readResult["pcM3KeepAliveW"], lbLedM3PCKeepAlive);
+                    UpdateOPCUAMKeepAlive(readResult["pcM4KeepAliveW"], lbLedM4PCKeepAlive);
+                    UpdateOPCUAMKeepAlive(readResult["pcM5KeepAliveW"], lbLedM5PCKeepAlive);
+
+                    //keep alive from plc
+                    keys = new List<string>()
+                    {
+                        "pcM1KeepAliveR",
+                        "pcM2KeepAliveR",
+                        "pcM3KeepAliveR",
+                        "pcM4KeepAliveR",
+                        "pcM5KeepAliveR"
+                        //"pcM6KeepAliveR"
+                    };
+
+                    var readResultPLC = await ccService.Read(keys);
+                    UpdateOPCUAMNodeConnection(readResultPLC["pcM1KeepAliveR"], lastLifeBit[0], ref LifeBitTimeout[0], ref LifeBitCounter[0], pictureBoxM1PLCNode, labelM1Node);
+                    UpdateOPCUAMNodeConnection(readResultPLC["pcM2KeepAliveR"], lastLifeBit[1], ref LifeBitTimeout[1], ref LifeBitCounter[1], pictureBoxM2PLCNode, labelM2Node);
+                    UpdateOPCUAMNodeConnection(readResultPLC["pcM3KeepAliveR"], lastLifeBit[2], ref LifeBitTimeout[2], ref LifeBitCounter[2], pictureBoxM3PLCNode, labelM3Node);
+                    UpdateOPCUAMNodeConnection(readResultPLC["pcM4KeepAliveR"], lastLifeBit[3], ref LifeBitTimeout[3], ref LifeBitCounter[3], pictureBoxM4PLCNode, labelM4Node);
+                    UpdateOPCUAMNodeConnection(readResultPLC["pcM5KeepAliveR"], lastLifeBit[4], ref LifeBitTimeout[4], ref LifeBitCounter[4], pictureBoxM5PLCNode, labelM5Node);
+                    ManageLastLifeBit(readResultPLC["pcM1KeepAliveR"], ref lastLifeBit[0]);
+                    ManageLastLifeBit(readResultPLC["pcM2KeepAliveR"], ref lastLifeBit[1]);
+                    ManageLastLifeBit(readResultPLC["pcM3KeepAliveR"], ref lastLifeBit[2]);
+                    ManageLastLifeBit(readResultPLC["pcM4KeepAliveR"], ref lastLifeBit[3]);
+                    ManageLastLifeBit(readResultPLC["pcM5KeepAliveR"], ref lastLifeBit[4]);
+
+                    //if all nodes are connected -> not in timeout
+                    //UpdateOPCUASystemConnection((LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]), buttonSystemStatus, labelSystemStatus);
+                    WriteOnToolStripAsync((LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]), toolStripStatusLabelSystem);
+                    #endregion
+
                     #region (* machine homing done *)
                     keys = new List<string>()
                     {
@@ -287,56 +333,6 @@ namespace GUI
                     UpdateOPCUAM2PointReached(readResult["pcM2PointReached"]);
                     #endregion
 
-                    #region(* node keep alive/connection *)
-                    //keep alive to plc
-                    keys = new List<string>()
-                    {
-                        "pcM1KeepAliveW",
-                        "pcM2KeepAliveW",
-                        "pcM3KeepAliveW",
-                        "pcM4KeepAliveW",
-                        "pcM5KeepAliveW"
-                    };
-
-                    readResult = await ccService.Read(keys);
-                    UpdateOPCUAMKeepAlive(readResult["pcM1KeepAliveW"], lbLedM1PCKeepAlive);
-                    UpdateOPCUAMKeepAlive(readResult["pcM2KeepAliveW"], lbLedM2PCKeepAlive);
-                    UpdateOPCUAMKeepAlive(readResult["pcM3KeepAliveW"], lbLedM3PCKeepAlive);
-                    UpdateOPCUAMKeepAlive(readResult["pcM4KeepAliveW"], lbLedM4PCKeepAlive);
-                    UpdateOPCUAMKeepAlive(readResult["pcM5KeepAliveW"], lbLedM5PCKeepAlive);
-
-                    //keep alive from plc
-                    keys = new List<string>()
-                    {
-                        "pcM1KeepAliveR",
-                        "pcM2KeepAliveR",
-                        "pcM3KeepAliveR",
-                        "pcM4KeepAliveR",
-                        "pcM5KeepAliveR"
-                        //"pcM6KeepAliveR"
-                    };
-
-                    var readResultPLC = await ccService.Read(keys);
-                    UpdateOPCUAMNodeConnection(readResultPLC["pcM1KeepAliveR"], lastLifeBit[0], ref LifeBitTimeout[0], ref LifeBitCounter[0], pictureBoxM1PLCNode);
-                    UpdateOPCUAMNodeConnection(readResultPLC["pcM2KeepAliveR"], lastLifeBit[1], ref LifeBitTimeout[1], ref LifeBitCounter[1], pictureBoxM2PLCNode);
-                    UpdateOPCUAMNodeConnection(readResultPLC["pcM3KeepAliveR"], lastLifeBit[2], ref LifeBitTimeout[2], ref LifeBitCounter[2], pictureBoxM3PLCNode);
-                    UpdateOPCUAMNodeConnection(readResultPLC["pcM4KeepAliveR"], lastLifeBit[3], ref LifeBitTimeout[3], ref LifeBitCounter[3], pictureBoxM4PLCNode);
-                    UpdateOPCUAMNodeConnection(readResultPLC["pcM5KeepAliveR"], lastLifeBit[4], ref LifeBitTimeout[4], ref LifeBitCounter[4], pictureBoxM5PLCNode);
-                    ManageLastLifeBit(readResultPLC["pcM1KeepAliveR"], ref lastLifeBit[0]);
-                    ManageLastLifeBit(readResultPLC["pcM2KeepAliveR"], ref lastLifeBit[1]);
-                    ManageLastLifeBit(readResultPLC["pcM3KeepAliveR"], ref lastLifeBit[2]);
-                    ManageLastLifeBit(readResultPLC["pcM4KeepAliveR"], ref lastLifeBit[3]);
-                    ManageLastLifeBit(readResultPLC["pcM5KeepAliveR"], ref lastLifeBit[4]);
-                    #endregion
-
-                    #region(* system status *)
-                    //if all nodes are connected -> not in timeout
-                    //UpdateOPCUASystemConnection((LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]), buttonSystemConnection, labelSystemConnection);
-
-                    //emergenza, air pressure, 
-
-                    #endregion
-
                     #region(* *)
 
                     #endregion
@@ -385,26 +381,7 @@ namespace GUI
 
             }
         }
-        public void WriteOnLabelAsync(ClientResult cr, Label lbl)
-        {
-            string textToAppend = "";
-
-            if ((cr == null) || (cr.OpcResult == false))
-            {
-                textToAppend = "offline";
-            }
-            else
-            {
-                textToAppend = cr.Value.ToString();
-            }
-            if (lbl.InvokeRequired)
-            {
-                lbl.Invoke((MethodInvoker)delegate
-                {
-                    lbl.Text = textToAppend;
-                });
-            }
-        }
+      
         public void WriteOnCheckBoxStartAsync(ClientResult cr, CheckBox chk)
         {
             short value = -1;
@@ -554,12 +531,63 @@ namespace GUI
             }
         }
 
+        public void WriteOnLabelAsync(ClientResult cr, Label lbl)
+        {
+            string textToAppend = "";
 
-      
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                textToAppend = "offline";
+            }
+            else
+            {
+                textToAppend = cr.Value.ToString();
+            }
+            if (lbl.InvokeRequired)
+            {
+                lbl.Invoke((MethodInvoker)delegate
+                {
+                    lbl.Text = textToAppend;
+                });
+            }
+        }
 
+        public void WriteOnLabelAsync(Label lbl, string textToSet)
+        {
+            if (lbl.InvokeRequired)
+            {
+                lbl.Invoke((MethodInvoker)delegate
+                {
+                    lbl.Text = textToSet;
+                });
+            }
+        }
+
+        public void WriteOnToolStripAsync(bool value, ToolStripLabel lbl)
+        {
+            if (lbl.GetCurrentParent().InvokeRequired)
+            {
+                lbl.GetCurrentParent().Invoke((MethodInvoker)delegate
+                {
+                    if (value)
+                    {
+                        lbl.BackColor = Color.FromArgb(107, 227, 162);
+                        lbl.ForeColor = Color.FromArgb(241, 241, 241);
+                        lbl.Text = "system online";
+                    }
+                    else
+                    {
+                        lbl.BackColor = Color.Red;
+                        lbl.ForeColor = Color.FromArgb(241, 241, 241);
+                        lbl.Text = "system offline";
+                    }
+                });
+                
+            }
+        }
 
         #region (* machines status *)
-      
+
 
         private void GUIWithOPCUAClientConnected()
         {
@@ -594,8 +622,8 @@ namespace GUI
             WriteOnCheckBoxPauseAsync(null, checkBoxM6Pause);
 
             //line status
-            buttonSystemStatus.BackColor = Color.Black;
-            WriteOnLabelAsync(null, labelSystemStatus);
+
+            WriteOnToolStripAsync(false, toolStripStatusLabelSystem);
 
             WriteAsyncSystemStartStopCheckBox(0, checkBoxStartStop);
             WriteAsyncSystemPauseCheckBox(0, checkBoxPause);
@@ -619,15 +647,15 @@ namespace GUI
             UpdateOPCUAM4CAQ(null);
 
             pictureBoxM1PLCNode.Image = imageListNodes.Images[1];
-            labelM1Node.Text = "node offline";
+            WriteOnLabelAsync(labelM1Node, "node offline");
             pictureBoxM2PLCNode.Image = imageListNodes.Images[1];
-            labelM2Node.Text = "node offline";
+            WriteOnLabelAsync(labelM2Node, "node offline");
             pictureBoxM3PLCNode.Image = imageListNodes.Images[1];
-            labelM3Node.Text = "node offline";
+            WriteOnLabelAsync(labelM3Node, "node offline");
             pictureBoxM4PLCNode.Image = imageListNodes.Images[1];
-            labelM4Node.Text = "node offline";
+            WriteOnLabelAsync(labelM4Node, "node offline");
             pictureBoxM5PLCNode.Image = imageListNodes.Images[1];
-            labelM5Node.Text = "node offline";
+            WriteOnLabelAsync(labelM5Node, "node offline");
 
             pictureBoxIOTNode.Image = imageListNodes.Images[3];
             
@@ -638,7 +666,7 @@ namespace GUI
             lbLedM5PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
         }
 
-        private void UpdateOPCUAMNodeConnection(ClientResult cr, bool oldValue, ref bool lBitTimeout, ref int lBitCounter, PictureBox pict)
+        private void UpdateOPCUAMNodeConnection(ClientResult cr, bool oldValue, ref bool lBitTimeout, ref int lBitCounter, PictureBox pict, Label lbl)
         {
             if ((cr == null) || (cr.OpcResult == false))
             {
@@ -662,6 +690,7 @@ namespace GUI
                         lBitCounter = 0;
                         lBitTimeout = false;
                         pict.Image = imageListNodes.Images[0];
+                        WriteOnLabelAsync(lbl, "node online");
                     }
                 }
                 else
@@ -671,10 +700,12 @@ namespace GUI
                         lBitCounter = 0;
                         lBitTimeout = false;
                         pict.Image = imageListNodes.Images[0];
+                        WriteOnLabelAsync(lbl, "node online");
                     }
                     else
                     {
                         pict.Image = imageListNodes.Images[1];
+                        WriteOnLabelAsync(lbl, "node offline");
                     }
                 }
             }
@@ -859,6 +890,7 @@ namespace GUI
             if ((cr == null) || (cr.OpcResult == false))
             {
                 //todo manage error
+                lblLed.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Blink;
             }
             else
             {
@@ -878,28 +910,7 @@ namespace GUI
                 
         public void UpdateOPCUASystemConnection(bool value, Button btn, Label lbl)
         {
-            WriteOnButtonSystemConnection(value, btn, lbl);
-        }
-
-        public void WriteOnButtonSystemConnection(bool value, Button btn, Label lbl)
-        {
-            if (btn.InvokeRequired)
-            {
-                btn.Invoke((MethodInvoker)delegate
-                {
-                    if (value == true)
-                    {
-                        btn.BackColor = Color.FromArgb(107, 227, 162);
-                        lbl.Text = "system online";
-                    }
-
-                    if (value == false)
-                    {
-                        btn.BackColor = Color.Black;
-                        lbl.Text = "system offline";
-                    }
-                });
-            }
+            
         }
 
         public void UpdateOPCUAMStatus(ClientResult cr, Button btn, Label lbl)
@@ -939,12 +950,12 @@ namespace GUI
                     btn.BackColor = Color.DarkOrange;
                 }
             }
-            WriteOnLabelAsync(cr, lbl);
+            WriteOnLabelMStatusAsync(cr, lbl);
         }       
 
         public void ManageOPCUAMBtnStatus(ClientResult cr, CheckBox btn)
         {
-            
+            WriteOnCheckBoxStartAsync(cr, btn);
         }
 
         public void ManageOPCUAMBtnPause(ClientResult cr, CheckBox btn)

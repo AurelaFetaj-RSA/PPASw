@@ -17,5 +17,8 @@
     <Setting Name="OpcClient_2_URI" Type="System.String" Scope="User">
       <Value Profile="(Default)">opc.tcp://localhost:6000</Value>
     </Setting>
+    <Setting Name="RSASN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">S/N: RSA9999</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

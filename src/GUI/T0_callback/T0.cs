@@ -15,6 +15,49 @@ namespace GUI
 {
     public partial class FormApp : Form
     {
+        private async void comboBoxM1PrgName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //send recipe (todo: waiting mysql)
+            string keyValue = "pcM1Param1";
+            var sendResult = await ccService.Send(keyValue, short.Parse(textBoxM1Test.Text));
+            labelM1Param1Value.Text = textBoxM1Test.Text;
+
+            //send quote, speed
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM1PrgName.Text + config.Extensions[0]);
+                if (objPoints != null)
+                {
+                    List<string> keys = new List<string>()
+                    {
+                        "pcM1AutoQuote",
+                        "pcM1AutoSpeed"
+                    };
+
+                    List<object> values = new List<object>()
+                    {
+                        new short[] { (short)objPoints.Points[0].Q1, (short)objPoints.Points[0].Q2, (short)objPoints.Points[0].Q3, (short)objPoints.Points[0].Q4},
+                        new short[] { (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                    };
+
+                    var sendResults = await ccService.Send(keys, values);
+
+                    if (sendResult.OpcResult)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }    
+                }
+            }
+        }
+
         //private async void checkBoxM1Inclusion_CheckStateChanged(object sender, EventArgs e)
         //{
         //    string keyToSend = null;

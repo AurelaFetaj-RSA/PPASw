@@ -82,5 +82,17 @@ namespace GUI.Properties {
                 this["OpcClient_2_URI"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("S/N: RSA9999")]
+        public string RSASN {
+            get {
+                return ((string)(this["RSASN"]));
+            }
+            set {
+                this["RSASN"] = value;
+            }
+        }
     }
 }

@@ -59,7 +59,7 @@ namespace GUI
 
             InitializeComponent();
 
-            //InitGUI();
+            InitGUI();
 
             _splashScreen?.WriteOnTextboxAsync($"Set the GUI");
             //StartDiagnosticGUI();
@@ -124,6 +124,144 @@ namespace GUI
             _splashScreen?.WriteOnTextboxAsync($"Core Started");
         }
 
+        private void InitGUI()
+        {
+            InitLastParameter();
+        }
+
+        private void InitLastParameter()
+        {
+            #region (* init datagridviewM2 *)
+            dataGridViewM2TeachPoints.Rows.Add(4);
+            dataGridViewM2TeachPoints.Rows[0].Cells[0].Value = 1;
+            dataGridViewM2TeachPoints.Rows[1].Cells[0].Value = 2;
+            dataGridViewM2TeachPoints.Rows[2].Cells[0].Value = 3;
+            dataGridViewM2TeachPoints.Rows[3].Cells[0].Value = 4;
+
+            dataGridViewM2TeachPoints.Rows[0].Cells[1].Value = 100;
+            dataGridViewM2TeachPoints.Rows[1].Cells[1].Value = 200;
+            dataGridViewM2TeachPoints.Rows[2].Cells[1].Value = 300;
+            dataGridViewM2TeachPoints.Rows[3].Cells[1].Value = 400;
+
+            dataGridViewM2TeachPoints.Rows[0].Cells[2].Value = 10;
+            dataGridViewM2TeachPoints.Rows[1].Cells[2].Value = 20;
+            dataGridViewM2TeachPoints.Rows[2].Cells[2].Value = 30;
+            dataGridViewM2TeachPoints.Rows[3].Cells[2].Value = 40;
+            dataGridViewM2TeachPoints.ClearSelection();
+
+            //dataGridViewM2TestPoints.Rows.Add(4);
+            //dataGridViewM2TestPoints.Rows[0].Cells[0].Value = 1;
+            //dataGridViewM2TestPoints.Rows[1].Cells[0].Value = 2;
+            //dataGridViewM2TestPoints.Rows[2].Cells[0].Value = 3;
+            //dataGridViewM2TestPoints.Rows[3].Cells[0].Value = 4;
+
+            //dataGridViewM2TestPoints.Rows[0].Cells[1].Value = 100;
+            //dataGridViewM2TestPoints.Rows[1].Cells[1].Value = 200;
+            //dataGridViewM2TestPoints.Rows[2].Cells[1].Value = 300;
+            //dataGridViewM2TestPoints.Rows[3].Cells[1].Value = 400;
+
+            //dataGridViewM2TestPoints.Rows[0].Cells[2].Value = 10;
+            //dataGridViewM2TestPoints.Rows[1].Cells[2].Value = 20;
+            //dataGridViewM2TestPoints.Rows[2].Cells[2].Value = 30;
+            //dataGridViewM2TestPoints.Rows[3].Cells[2].Value = 40;
+
+            //dataGridViewM2TestPoints.ClearSelection();
+            //#endregion
+
+            //#region(* init datagridviewM3 *)
+            //dataGridViewM3TeachPoints.Rows.Add(4);
+            //dataGridViewM3TeachPoints.Rows[0].Cells[0].Value = 1;
+            //dataGridViewM3TeachPoints.Rows[1].Cells[0].Value = 2;
+            //dataGridViewM3TeachPoints.Rows[2].Cells[0].Value = 3;
+            //dataGridViewM3TeachPoints.Rows[3].Cells[0].Value = 4;
+
+            //dataGridViewM3TeachPoints.Rows[0].Cells[1].Value = 100;
+            //dataGridViewM3TeachPoints.Rows[1].Cells[1].Value = 200;
+            //dataGridViewM3TeachPoints.Rows[2].Cells[1].Value = 300;
+            //dataGridViewM3TeachPoints.Rows[3].Cells[1].Value = 400;
+
+            //dataGridViewM3TeachPoints.Rows[0].Cells[2].Value = 10;
+            //dataGridViewM3TeachPoints.Rows[1].Cells[2].Value = 20;
+            //dataGridViewM3TeachPoints.Rows[2].Cells[2].Value = 30;
+            //dataGridViewM3TeachPoints.Rows[3].Cells[2].Value = 40;
+            //dataGridViewM3TeachPoints.ClearSelection();
+
+            //dataGridViewM3TestPoints.Rows.Add(4);
+            //dataGridViewM3TestPoints.Rows[0].Cells[0].Value = 1;
+            //dataGridViewM3TestPoints.Rows[1].Cells[0].Value = 2;
+            //dataGridViewM3TestPoints.Rows[2].Cells[0].Value = 3;
+            //dataGridViewM3TestPoints.Rows[3].Cells[0].Value = 4;
+
+            //dataGridViewM3TestPoints.Rows[0].Cells[1].Value = 100;
+            //dataGridViewM3TestPoints.Rows[1].Cells[1].Value = 200;
+            //dataGridViewM3TestPoints.Rows[2].Cells[1].Value = 300;
+            //dataGridViewM3TestPoints.Rows[3].Cells[1].Value = 400;
+
+            //dataGridViewM3TestPoints.Rows[0].Cells[2].Value = 10;
+            //dataGridViewM3TestPoints.Rows[1].Cells[2].Value = 20;
+            //dataGridViewM3TestPoints.Rows[2].Cells[2].Value = 30;
+            //dataGridViewM3TestPoints.Rows[3].Cells[2].Value = 40;
+
+            //dataGridViewM3TestPoints.ClearSelection();
+            //#endregion
+
+            //#region (* init AUTO combobox model name list *)
+            //var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            //ReadProgramsConfiguration config = null;
+            //List<string> mList = new List<string>();
+            //ReadProgramsService progRS = (ReadProgramsService)dummyS[0];
+
+            //if (dummyS != null && dummyS.Count > 0)
+            //{
+            //    config = progRS.Configuration as ReadProgramsConfiguration;
+            //    mList = progRS.GetModel(config.ProgramsPath, config.Extensions);
+
+            //    foreach (string modelName in mList)
+            //    {
+            //        comboBoxAutoModelNameLst.Items.Add(modelName);
+            //    }
+            //}
+            //#endregion
+
+            //#region (* init M2 combobox model name list *)
+            //mList = progRS.GetModel(config.ProgramsPath[1], config.Extensions);
+
+            //foreach (string modelName in mList)
+            //{
+            //    comboBoxM2TeachModelName.Items.Add(modelName);
+            //}
+
+            //#endregion
+
+            //#region (* init M3 combobox model name list *)
+            //mList = progRS.GetModel(config.ProgramsPath[2], config.Extensions);
+
+            //foreach (string modelName in mList)
+            //{
+            //    comboBoxM3TeachModelName.Items.Add(modelName);
+            //}
+
+            #endregion
+
+            #region(* init tabControlMain *)
+            tabPageT0.Text = "";
+            tabPageT1.Text = "";
+            tabPageT2.Text = "";
+            tabPageT3.Text = "";
+            tabPageT4.Text = "";
+            tabPageT5.Text = "";
+            tabPageT6.Text = "";
+            tabPageT7.Text = "";
+            tabControlMain.SelectedPage = tabPageT0;
+            #endregion
+
+            #region(* init T0 *)
+            TimeZone zone = TimeZone.CurrentTimeZone;
+            DateTime local = zone.ToLocalTime(DateTime.Now);
+            toolStripStatusLabelDateTime.Text = local.ToString();
+            toolStripStatusLabelSN.Text = Properties.Settings.Default.RSASN;
+            #endregion
+        }
         public void Start()
         {
             //myCore.Start();
@@ -165,7 +303,5 @@ namespace GUI
 
             }
         }
-
-
     }
 }
