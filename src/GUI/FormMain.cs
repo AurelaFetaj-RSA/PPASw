@@ -633,7 +633,7 @@ namespace GUI
             string keyToSend = null;
 
             keyToSend = "pcM1Inclusion";
-            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
+            if (checkBoxM1Inclusion.CheckState == CheckState.Checked)
             {
                 var readResult = await ccService.Send(keyToSend, true);
             }
@@ -699,7 +699,7 @@ namespace GUI
             string keyToSend = null;
 
             keyToSend = "pcM6Inclusion";
-            if (checkBoxM2Inclusion.CheckState == CheckState.Checked)
+            if (checkBoxM6Inclusion.CheckState == CheckState.Checked)
             {
                 var readResult = await ccService.Send(keyToSend, true);
             }

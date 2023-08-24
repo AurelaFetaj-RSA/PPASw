@@ -63,7 +63,8 @@ namespace GUI
             padprintExt = 2,
             padLaser = 3,
             manipulator = 4,
-            oven = 5
+            oven = 5,
+            line = 6
         }
         public FormApp(SplashScreen splashScreen)
         {
@@ -222,23 +223,23 @@ namespace GUI
             //dataGridViewM3TestPoints.ClearSelection();
             //#endregion
 
-            //#region (* init AUTO combobox model name list *)
-            //var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-            //ReadProgramsConfiguration config = null;
-            //List<string> mList = new List<string>();
-            //ReadProgramsService progRS = (ReadProgramsService)dummyS[0];
+            #region (* init AUTO combobox model name list *)
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            ReadProgramsConfiguration config = null;
+            List<string> mList = new List<string>();
+            ReadProgramsService progRS = (ReadProgramsService)dummyS[0];
 
-            //if (dummyS != null && dummyS.Count > 0)
-            //{
-            //    config = progRS.Configuration as ReadProgramsConfiguration;
-            //    mList = progRS.GetModel(config.ProgramsPath, config.Extensions);
+            if (dummyS != null && dummyS.Count > 0)
+            {
+                config = progRS.Configuration as ReadProgramsConfiguration;
+                mList = progRS.GetModel(config.ProgramsPath, config.Extensions);
 
-            //    foreach (string modelName in mList)
-            //    {
-            //        comboBoxAutoModelNameLst.Items.Add(modelName);
-            //    }
-            //}
-            //#endregion
+                foreach (string modelName in mList)
+                {
+                    comboBoxAutoModelNameLst.Items.Add(modelName);
+                }
+            }
+            #endregion
 
             //#region (* init M2 combobox model name list *)
             //mList = progRS.GetModel(config.ProgramsPath[1], config.Extensions);
@@ -277,7 +278,16 @@ namespace GUI
             DateTime local = zone.ToLocalTime(DateTime.Now);
             toolStripStatusLabelDateTime.Text = local.ToString();
             toolStripStatusLabelSN.Text = Properties.Settings.Default.RSASN;
+            AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.line, "PBoots application started");
             dataGridViewMessages.ClearSelection();
+
+            checkBoxM1Inclusion.Text = "";
+            checkBoxM2Inclusion.Text = "";
+            checkBoxM3Inclusion.Text = "";
+            checkBoxM4Inclusion.Text = "";
+            checkBoxM5Inclusion.Text = "";
+            checkBoxM6Inclusion.Text = "";
+
             #endregion
         }
         public void Start()
