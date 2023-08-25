@@ -32,7 +32,6 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle11 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("teach");
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle2 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
@@ -42,20 +41,16 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle3 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle4 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle5 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("test");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle4 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle6 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle7 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("input");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle5 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle8 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle9 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("output");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle6 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle12 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle22 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("teach");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle7 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle13 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle14 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -63,19 +58,15 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle8 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle15 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle16 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("test");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle9 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle17 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle18 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("input");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle10 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle19 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle20 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("output");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle11 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle23 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle32 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("manual");
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle24 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle12 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle25 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -84,12 +75,9 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle13 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle28 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("input");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle14 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle29 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle30 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("output");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("info");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle15 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle33 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle34 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -104,7 +92,7 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle41 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle18 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle42 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle50 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle51 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -113,37 +101,40 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle19 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle43 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle44 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle49 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle50 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle20 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle45 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle46 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle21 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle47 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle48 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle21 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle46 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle22 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle51 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle61 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle23 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle52 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle53 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle60 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle48 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle49 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle24 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle54 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle55 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle52 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle62 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle25 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle56 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle57 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle53 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle54 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle61 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle55 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle56 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle57 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle58 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle28 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle59 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle60 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Style.ControlColorStyle controlColorStyle1 = new LidorSystems.IntegralUI.Style.ControlColorStyle();
             LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle1 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle62 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle63 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Controls.Style.CommandButtonColorStyle commandButtonColorStyle1 = new LidorSystems.IntegralUI.Controls.Style.CommandButtonColorStyle();
             LidorSystems.IntegralUI.Controls.Style.CommandButtonColorStyle commandButtonColorStyle2 = new LidorSystems.IntegralUI.Controls.Style.CommandButtonColorStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemColorStyle toolItemColorStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolItemColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle63 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle29 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle64 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Controls.Style.CommandButtonColorStyle commandButtonColorStyle3 = new LidorSystems.IntegralUI.Controls.Style.CommandButtonColorStyle();
             LidorSystems.IntegralUI.Controls.Style.CommandButtonColorStyle commandButtonColorStyle4 = new LidorSystems.IntegralUI.Controls.Style.CommandButtonColorStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemColorStyle toolItemColorStyle2 = new LidorSystems.IntegralUI.Controls.Style.ToolItemColorStyle();
@@ -310,16 +301,79 @@
             this.checkBoxM1Start = new System.Windows.Forms.CheckBox();
             this.tabPageT0 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT0_2 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.buttonSendLaser = new System.Windows.Forms.Button();
-            this.textBoxLaserLine2 = new System.Windows.Forms.TextBox();
-            this.textBoxLaserLine1 = new System.Windows.Forms.TextBox();
+            this.textBoxManageD4Param4 = new System.Windows.Forms.TextBox();
+            this.textBoxManageD4Param2 = new System.Windows.Forms.TextBox();
+            this.textBoxManageD4Param3 = new System.Windows.Forms.TextBox();
+            this.textBoxManageD4Param1 = new System.Windows.Forms.TextBox();
+            this.labelManageD4Param4Name = new System.Windows.Forms.Label();
+            this.labelManageD4Param3Name = new System.Windows.Forms.Label();
+            this.labelManageD4Param2Name = new System.Windows.Forms.Label();
+            this.labelManageD4Param1Name = new System.Windows.Forms.Label();
+            this.labelManageD4Name = new System.Windows.Forms.Label();
+            this.textBoxManageD3Param4 = new System.Windows.Forms.TextBox();
+            this.textBoxManageD3Param2 = new System.Windows.Forms.TextBox();
+            this.textBoxManageD3Param3 = new System.Windows.Forms.TextBox();
+            this.textBoxManageD3Param1 = new System.Windows.Forms.TextBox();
+            this.labelManageD3Param4Name = new System.Windows.Forms.Label();
+            this.labelManageD3Param3Name = new System.Windows.Forms.Label();
+            this.labelManageD3Param2Name = new System.Windows.Forms.Label();
+            this.labelManageD3Param1Name = new System.Windows.Forms.Label();
+            this.labelManageD3Name = new System.Windows.Forms.Label();
+            this.textBoxManageD2Param4 = new System.Windows.Forms.TextBox();
+            this.textBoxManageD2Param2 = new System.Windows.Forms.TextBox();
+            this.textBoxManageD2Param3 = new System.Windows.Forms.TextBox();
+            this.textBoxManageD2Param1 = new System.Windows.Forms.TextBox();
+            this.labelManageD2Param4Name = new System.Windows.Forms.Label();
+            this.labelManageD2Param3Name = new System.Windows.Forms.Label();
+            this.labelManageD2Param2Name = new System.Windows.Forms.Label();
+            this.labelManageD2Param1Name = new System.Windows.Forms.Label();
+            this.labelManageD2Name = new System.Windows.Forms.Label();
+            this.textBoxManageD1Param4 = new System.Windows.Forms.TextBox();
+            this.textBoxManageD1Param2 = new System.Windows.Forms.TextBox();
+            this.textBoxManageD1Param3 = new System.Windows.Forms.TextBox();
+            this.textBoxManageD1Param1 = new System.Windows.Forms.TextBox();
+            this.labelManageD1Param4Name = new System.Windows.Forms.Label();
+            this.labelManageD1Param3Name = new System.Windows.Forms.Label();
+            this.labelManageD1Param2Name = new System.Windows.Forms.Label();
+            this.labelManageD1Param1Name = new System.Windows.Forms.Label();
+            this.labelManageD1Name = new System.Windows.Forms.Label();
+            this.tabPageT0_2_1 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.textBoxTypeOrder = new System.Windows.Forms.TextBox();
             this.textBoxM6Test = new System.Windows.Forms.TextBox();
             this.textBoxM5Test = new System.Windows.Forms.TextBox();
             this.textBoxM4Test = new System.Windows.Forms.TextBox();
             this.textBoxM3Test = new System.Windows.Forms.TextBox();
             this.textBoxM2Test = new System.Windows.Forms.TextBox();
             this.textBoxM1Test = new System.Windows.Forms.TextBox();
-            this.textBoxTypeOrder = new System.Windows.Forms.TextBox();
+            this.groupBoxRecipeM5 = new System.Windows.Forms.GroupBox();
+            this.labelM5Param1 = new System.Windows.Forms.Label();
+            this.checkBoxM5Param1 = new System.Windows.Forms.CheckBox();
+            this.groupBoxRecipeM6 = new System.Windows.Forms.GroupBox();
+            this.labelM6Param1 = new System.Windows.Forms.Label();
+            this.checkBoxM6Param1 = new System.Windows.Forms.CheckBox();
+            this.groupBoxRecipeM4 = new System.Windows.Forms.GroupBox();
+            this.labelPadLaserLine2 = new System.Windows.Forms.Label();
+            this.labelPadLaserLine1 = new System.Windows.Forms.Label();
+            this.labelM4Param1 = new System.Windows.Forms.Label();
+            this.checkBoxM4Param1 = new System.Windows.Forms.CheckBox();
+            this.textBoxLaserLine2 = new System.Windows.Forms.TextBox();
+            this.textBoxLaserLine1 = new System.Windows.Forms.TextBox();
+            this.groupBoxRecipeM3 = new System.Windows.Forms.GroupBox();
+            this.labelFootOrder = new System.Windows.Forms.Label();
+            this.radioButtonFootOrderOpt2 = new System.Windows.Forms.RadioButton();
+            this.labelM3Param1 = new System.Windows.Forms.Label();
+            this.checkBoxM3Param1 = new System.Windows.Forms.CheckBox();
+            this.radioButtonFootOrderOpt1 = new System.Windows.Forms.RadioButton();
+            this.groupBoxRecipeM2 = new System.Windows.Forms.GroupBox();
+            this.labelM2Param1 = new System.Windows.Forms.Label();
+            this.checkBoxM2Param1 = new System.Windows.Forms.CheckBox();
+            this.groupBoxRecipeM1 = new System.Windows.Forms.GroupBox();
+            this.labelM1Param1 = new System.Windows.Forms.Label();
+            this.checkBoxM1Param1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxR1Aux2_01 = new System.Windows.Forms.CheckBox();
+            this.labelRecipeName = new System.Windows.Forms.Label();
+            this.textBoxRecipeName = new System.Windows.Forms.TextBox();
+            this.tabPageT0_2_2 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT0_3 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.groupBoxKeepAliveToPlc = new System.Windows.Forms.GroupBox();
             this.lbLedM5PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -352,6 +406,8 @@
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
             this.imageListMainControl = new System.Windows.Forms.ImageList(this.components);
             this.imageListNodes = new System.Windows.Forms.ImageList(this.components);
+            this.imageListRecipe = new System.Windows.Forms.ImageList(this.components);
+            this.buttonAddNewRecipe = new System.Windows.Forms.Button();
             this.tabPageT3_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TeachPoints)).BeginInit();
             this.tabPageT3_3.SuspendLayout();
@@ -367,6 +423,13 @@
             this.groupBoxM4.SuspendLayout();
             this.groupBoxM1.SuspendLayout();
             this.tabPageT0_2.SuspendLayout();
+            this.tabPageT0_2_1.SuspendLayout();
+            this.groupBoxRecipeM5.SuspendLayout();
+            this.groupBoxRecipeM6.SuspendLayout();
+            this.groupBoxRecipeM4.SuspendLayout();
+            this.groupBoxRecipeM3.SuspendLayout();
+            this.groupBoxRecipeM2.SuspendLayout();
+            this.groupBoxRecipeM1.SuspendLayout();
             this.tabPageT0_3.SuspendLayout();
             this.groupBoxKeepAliveToPlc.SuspendLayout();
             this.groupBoxKeepAliveFromPlc.SuspendLayout();
@@ -408,10 +471,6 @@
             this.tabPageT3_1.Size = new System.Drawing.Size(0, 0);
             this.tabPageT3_1.StyleFromParent = false;
             this.tabPageT3_1.TabIndex = 9;
-            treeNode4.Name = "";
-            treeNode4.Tag = this.tabPageT3_1;
-            treeNode4.Text = "teach";
-            this.tabPageT3_1.Tag = treeNode4;
             this.tabPageT3_1.Text = "teach";
             this.tabPageT3_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT3_1.TextBounds")));
             this.tabPageT3_1.TextSize = new System.Drawing.SizeF(0F, 0F);
@@ -544,10 +603,9 @@
             tabPageColorStyle10.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle10.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT3.SelectedStyle = tabPageColorStyle10;
-            this.tabPageT3.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT3.Size = new System.Drawing.Size(914, 692);
             this.tabPageT3.StyleFromParent = false;
             this.tabPageT3.TabIndex = 8;
-            this.tabPageT3.Tag = "TreeNode: T3";
             this.tabPageT3.Text = "page";
             this.tabPageT3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT3.TextBounds")));
             this.tabPageT3.TextSize = new System.Drawing.SizeF(37.03645F, 17.42431F);
@@ -577,10 +635,6 @@
             this.tabPageT3_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT3_2.StyleFromParent = false;
             this.tabPageT3_2.TabIndex = 10;
-            treeNode1.Name = "";
-            treeNode1.Tag = this.tabPageT3_2;
-            treeNode1.Text = "test";
-            this.tabPageT3_2.Tag = treeNode1;
             this.tabPageT3_2.Text = "test";
             this.tabPageT3_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT3_2.TextBounds")));
             this.tabPageT3_2.TextSize = new System.Drawing.SizeF(0F, 0F);
@@ -659,10 +713,6 @@
             this.tabPageT3_3.Size = new System.Drawing.Size(0, 0);
             this.tabPageT3_3.StyleFromParent = false;
             this.tabPageT3_3.TabIndex = 11;
-            treeNode2.Name = "";
-            treeNode2.Tag = this.tabPageT3_3;
-            treeNode2.Text = "input";
-            this.tabPageT3_3.Tag = treeNode2;
             this.tabPageT3_3.Text = "input";
             this.tabPageT3_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT3_3.TextBounds")));
             this.tabPageT3_3.TextSize = new System.Drawing.SizeF(0F, 0F);
@@ -1605,10 +1655,6 @@
             this.tabPageT3_4.Size = new System.Drawing.Size(0, 0);
             this.tabPageT3_4.StyleFromParent = false;
             this.tabPageT3_4.TabIndex = 12;
-            treeNode3.Name = "";
-            treeNode3.Tag = this.tabPageT3_4;
-            treeNode3.Text = "output";
-            this.tabPageT3_4.Tag = treeNode3;
             this.tabPageT3_4.Text = "output";
             this.tabPageT3_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT3_4.TextBounds")));
             this.tabPageT3_4.TextSize = new System.Drawing.SizeF(0F, 0F);
@@ -1641,10 +1687,6 @@
             this.tabPageT4_1.Size = new System.Drawing.Size(0, 0);
             this.tabPageT4_1.StyleFromParent = false;
             this.tabPageT4_1.TabIndex = 14;
-            treeNode8.Name = "";
-            treeNode8.Tag = this.tabPageT4_1;
-            treeNode8.Text = "teach";
-            this.tabPageT4_1.Tag = treeNode8;
             this.tabPageT4_1.Text = "teach";
             this.tabPageT4_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_1.TextBounds")));
             this.tabPageT4_1.TextSize = new System.Drawing.SizeF(0F, 0F);
@@ -1709,10 +1751,9 @@
             tabPageColorStyle21.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle21.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT4.SelectedStyle = tabPageColorStyle21;
-            this.tabPageT4.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT4.Size = new System.Drawing.Size(914, 692);
             this.tabPageT4.StyleFromParent = false;
             this.tabPageT4.TabIndex = 13;
-            this.tabPageT4.Tag = "TreeNode: T4";
             this.tabPageT4.Text = "page";
             this.tabPageT4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4.TextBounds")));
             this.tabPageT4.TextSize = new System.Drawing.SizeF(37.03645F, 17.42431F);
@@ -1742,10 +1783,6 @@
             this.tabPageT4_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT4_2.StyleFromParent = false;
             this.tabPageT4_2.TabIndex = 15;
-            treeNode5.Name = "";
-            treeNode5.Tag = this.tabPageT4_2;
-            treeNode5.Text = "test";
-            this.tabPageT4_2.Tag = treeNode5;
             this.tabPageT4_2.Text = "test";
             this.tabPageT4_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_2.TextBounds")));
             this.tabPageT4_2.TextSize = new System.Drawing.SizeF(0F, 0F);
@@ -1776,10 +1813,6 @@
             this.tabPageT4_3.Size = new System.Drawing.Size(0, 0);
             this.tabPageT4_3.StyleFromParent = false;
             this.tabPageT4_3.TabIndex = 16;
-            treeNode6.Name = "";
-            treeNode6.Tag = this.tabPageT4_3;
-            treeNode6.Text = "input";
-            this.tabPageT4_3.Tag = treeNode6;
             this.tabPageT4_3.Text = "input";
             this.tabPageT4_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_3.TextBounds")));
             this.tabPageT4_3.TextSize = new System.Drawing.SizeF(0F, 0F);
@@ -1810,10 +1843,6 @@
             this.tabPageT4_4.Size = new System.Drawing.Size(0, 0);
             this.tabPageT4_4.StyleFromParent = false;
             this.tabPageT4_4.TabIndex = 17;
-            treeNode7.Name = "";
-            treeNode7.Tag = this.tabPageT4_4;
-            treeNode7.Text = "output";
-            this.tabPageT4_4.Tag = treeNode7;
             this.tabPageT4_4.Text = "output";
             this.tabPageT4_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_4.TextBounds")));
             this.tabPageT4_4.TextSize = new System.Drawing.SizeF(0F, 0F);
@@ -1844,10 +1873,6 @@
             this.tabPageT5_1.Size = new System.Drawing.Size(0, 0);
             this.tabPageT5_1.StyleFromParent = false;
             this.tabPageT5_1.TabIndex = 19;
-            treeNode11.Name = "";
-            treeNode11.Tag = this.tabPageT5_1;
-            treeNode11.Text = "manual";
-            this.tabPageT5_1.Tag = treeNode11;
             this.tabPageT5_1.Text = "manual";
             this.tabPageT5_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT5_1.TextBounds")));
             this.tabPageT5_1.TextSize = new System.Drawing.SizeF(0F, 0F);
@@ -1898,10 +1923,9 @@
             tabPageColorStyle31.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle31.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT5.SelectedStyle = tabPageColorStyle31;
-            this.tabPageT5.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT5.Size = new System.Drawing.Size(914, 692);
             this.tabPageT5.StyleFromParent = false;
             this.tabPageT5.TabIndex = 18;
-            this.tabPageT5.Tag = "TreeNode: T5";
             this.tabPageT5.Text = "page";
             this.tabPageT5.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT5.TextBounds")));
             this.tabPageT5.TextSize = new System.Drawing.SizeF(37.03645F, 17.42431F);
@@ -1931,10 +1955,6 @@
             this.tabPageT5_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT5_2.StyleFromParent = false;
             this.tabPageT5_2.TabIndex = 20;
-            treeNode9.Name = "";
-            treeNode9.Tag = this.tabPageT5_2;
-            treeNode9.Text = "input";
-            this.tabPageT5_2.Tag = treeNode9;
             this.tabPageT5_2.Text = "input";
             this.tabPageT5_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT5_2.TextBounds")));
             this.tabPageT5_2.TextSize = new System.Drawing.SizeF(0F, 0F);
@@ -1965,10 +1985,6 @@
             this.tabPageT5_3.Size = new System.Drawing.Size(0, 0);
             this.tabPageT5_3.StyleFromParent = false;
             this.tabPageT5_3.TabIndex = 21;
-            treeNode10.Name = "";
-            treeNode10.Tag = this.tabPageT5_3;
-            treeNode10.Text = "output";
-            this.tabPageT5_3.Tag = treeNode10;
             this.tabPageT5_3.Text = "output";
             this.tabPageT5_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT5_3.TextBounds")));
             this.tabPageT5_3.TextSize = new System.Drawing.SizeF(0F, 0F);
@@ -1982,10 +1998,6 @@
             this.tabPage1.Size = new System.Drawing.Size(0, 0);
             this.tabPage1.StyleFromParent = false;
             this.tabPage1.TabIndex = 24;
-            treeNode12.Name = "";
-            treeNode12.Tag = this.tabPage1;
-            treeNode12.Text = "info";
-            this.tabPage1.Tag = treeNode12;
             this.tabPage1.Text = "info";
             this.tabPage1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage1.TextBounds")));
             this.tabPage1.TextSize = new System.Drawing.SizeF(0F, 0F);
@@ -2027,10 +2039,9 @@
             tabPageColorStyle35.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle35.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT2.SelectedStyle = tabPageColorStyle35;
-            this.tabPageT2.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT2.Size = new System.Drawing.Size(914, 692);
             this.tabPageT2.StyleFromParent = false;
             this.tabPageT2.TabIndex = 0;
-            this.tabPageT2.Tag = "TreeNode: T2";
             this.tabPageT2.Text = "page";
             this.tabPageT2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT2.TextBounds")));
             this.tabPageT2.TextSize = new System.Drawing.SizeF(37.03645F, 17.42431F);
@@ -2089,10 +2100,9 @@
             tabPageColorStyle38.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle38.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT6.SelectedStyle = tabPageColorStyle38;
-            this.tabPageT6.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT6.Size = new System.Drawing.Size(914, 692);
             this.tabPageT6.StyleFromParent = false;
             this.tabPageT6.TabIndex = 22;
-            this.tabPageT6.Tag = "TreeNode: T6";
             this.tabPageT6.Text = "page";
             this.tabPageT6.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT6.TextBounds")));
             this.tabPageT6.TextSize = new System.Drawing.SizeF(37.03645F, 17.42431F);
@@ -2130,10 +2140,9 @@
             tabPageColorStyle41.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
             tabPageColorStyle41.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT7.SelectedStyle = tabPageColorStyle41;
-            this.tabPageT7.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT7.Size = new System.Drawing.Size(914, 692);
             this.tabPageT7.StyleFromParent = false;
             this.tabPageT7.TabIndex = 23;
-            this.tabPageT7.Tag = "TreeNode: T7";
             this.tabPageT7.Text = "page";
             this.tabPageT7.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT7.TextBounds")));
             this.tabPageT7.TextSize = new System.Drawing.SizeF(37.03645F, 17.42431F);
@@ -2167,18 +2176,17 @@
             tabPageColorStyle42.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
             this.tabPageT0_1.NormalStyle = tabPageColorStyle42;
             this.tabPageT0_1.ParentPage = this.tabPageT0;
-            tabPageColorStyle50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle50.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle50.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle50.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle50.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.tabPageT0_1.SelectedStyle = tabPageColorStyle50;
-            this.tabPageT0_1.Size = new System.Drawing.Size(914, 716);
+            tabPageColorStyle51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle51.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle51.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle51.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle51.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tabPageT0_1.SelectedStyle = tabPageColorStyle51;
+            this.tabPageT0_1.Size = new System.Drawing.Size(914, 692);
             this.tabPageT0_1.StyleFromParent = false;
             this.tabPageT0_1.TabIndex = 1;
             this.tabPageT0_1.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabPageT0_1.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Bottom;
-            this.tabPageT0_1.Tag = "TreeNode: T0_1";
             this.tabPageT0_1.Text = "automatic";
             this.tabPageT0_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_1.TextBounds")));
             this.tabPageT0_1.TextSize = new System.Drawing.SizeF(87.68488F, 21.44531F);
@@ -2236,7 +2244,7 @@
             this.dataGridViewMessages.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewMessages.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridViewMessages.EnableHeadersVisualStyles = false;
-            this.dataGridViewMessages.Location = new System.Drawing.Point(0, 563);
+            this.dataGridViewMessages.Location = new System.Drawing.Point(0, 539);
             this.dataGridViewMessages.MultiSelect = false;
             this.dataGridViewMessages.Name = "dataGridViewMessages";
             this.dataGridViewMessages.ReadOnly = true;
@@ -2301,7 +2309,7 @@
             // 
             this.statusStripSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(190)))), ((int)(((byte)(186)))));
             this.statusStripSeparator.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusStripSeparator.Location = new System.Drawing.Point(0, 663);
+            this.statusStripSeparator.Location = new System.Drawing.Point(0, 639);
             this.statusStripSeparator.Name = "statusStripSeparator";
             this.statusStripSeparator.Size = new System.Drawing.Size(914, 22);
             this.statusStripSeparator.SizingGrip = false;
@@ -2316,7 +2324,7 @@
             this.toolStripStatusLabelSN,
             this.toolStripStatusLabelDateTime,
             this.toolStripStatusLabelSystem});
-            this.statusStripT0.Location = new System.Drawing.Point(0, 685);
+            this.statusStripT0.Location = new System.Drawing.Point(0, 661);
             this.statusStripT0.Name = "statusStripT0";
             this.statusStripT0.Size = new System.Drawing.Size(914, 31);
             this.statusStripT0.SizingGrip = false;
@@ -2509,6 +2517,7 @@
             this.checkBoxM6Inclusion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxM6Inclusion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkBoxM6Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM6Inclusion.CheckStateChanged += new System.EventHandler(this.checkBoxM6Inclusion_CheckStateChanged);
             // 
             // imageListMIncEsc
             // 
@@ -2516,6 +2525,7 @@
             this.imageListMIncEsc.TransparentColor = System.Drawing.Color.Transparent;
             this.imageListMIncEsc.Images.SetKeyName(0, "preached.png");
             this.imageListMIncEsc.Images.SetKeyName(1, "pnotreached.png");
+            this.imageListMIncEsc.Images.SetKeyName(2, "indeterminate.png");
             // 
             // labelM6Param1Value
             // 
@@ -2684,6 +2694,7 @@
             this.checkBoxM5Inclusion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxM5Inclusion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkBoxM5Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM5Inclusion.CheckStateChanged += new System.EventHandler(this.checkBoxM5Inclusion_CheckStateChanged);
             // 
             // labelM5Param1Name
             // 
@@ -2842,6 +2853,7 @@
             this.checkBoxM3Inclusion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxM3Inclusion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkBoxM3Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM3Inclusion.CheckStateChanged += new System.EventHandler(this.checkBoxM3Inclusion_CheckStateChanged);
             // 
             // labelM3Param1Name
             // 
@@ -3092,6 +3104,7 @@
             this.checkBoxM4Inclusion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxM4Inclusion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkBoxM4Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM4Inclusion.CheckStateChanged += new System.EventHandler(this.checkBoxM4Inclusion_CheckStateChanged);
             // 
             // labelM4Param1Value
             // 
@@ -3247,6 +3260,7 @@
             this.checkBoxM1Inclusion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxM1Inclusion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkBoxM1Inclusion.UseVisualStyleBackColor = true;
+            this.checkBoxM1Inclusion.CheckStateChanged += new System.EventHandler(this.checkBoxM1Inclusion_CheckStateChanged);
             // 
             // labelM1Param1Value
             // 
@@ -3318,33 +3332,57 @@
             this.tabPageT0_3});
             this.tabPageT0.ParentPage = null;
             this.tabPageT0.SelectedImageIndex = 1;
-            tabPageColorStyle49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(136)))));
-            tabPageColorStyle49.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle49.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle49.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle49.TextShadowColor = System.Drawing.Color.Transparent;
-            this.tabPageT0.SelectedStyle = tabPageColorStyle49;
-            this.tabPageT0.Size = new System.Drawing.Size(914, 716);
+            tabPageColorStyle50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(136)))));
+            tabPageColorStyle50.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle50.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle50.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle50.TextShadowColor = System.Drawing.Color.Transparent;
+            this.tabPageT0.SelectedStyle = tabPageColorStyle50;
+            this.tabPageT0.Size = new System.Drawing.Size(914, 692);
             this.tabPageT0.StyleFromParent = false;
             this.tabPageT0.TabIndex = 0;
-            this.tabPageT0.Tag = "TreeNode: T0";
             this.tabPageT0.Text = "page";
             this.tabPageT0.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0.TextBounds")));
             this.tabPageT0.TextSize = new System.Drawing.SizeF(37.03645F, 17.42431F);
             // 
             // tabPageT0_2
             // 
-            this.tabPageT0_2.Controls.Add(this.buttonSendLaser);
-            this.tabPageT0_2.Controls.Add(this.textBoxLaserLine2);
-            this.tabPageT0_2.Controls.Add(this.textBoxLaserLine1);
-            this.tabPageT0_2.Controls.Add(this.textBoxM6Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM5Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM4Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM3Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM2Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM1Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxTypeOrder);
-            this.tabPageT0_2.Expanded = false;
+            this.tabPageT0_2.Controls.Add(this.textBoxManageD4Param4);
+            this.tabPageT0_2.Controls.Add(this.textBoxManageD4Param2);
+            this.tabPageT0_2.Controls.Add(this.textBoxManageD4Param3);
+            this.tabPageT0_2.Controls.Add(this.textBoxManageD4Param1);
+            this.tabPageT0_2.Controls.Add(this.labelManageD4Param4Name);
+            this.tabPageT0_2.Controls.Add(this.labelManageD4Param3Name);
+            this.tabPageT0_2.Controls.Add(this.labelManageD4Param2Name);
+            this.tabPageT0_2.Controls.Add(this.labelManageD4Param1Name);
+            this.tabPageT0_2.Controls.Add(this.labelManageD4Name);
+            this.tabPageT0_2.Controls.Add(this.textBoxManageD3Param4);
+            this.tabPageT0_2.Controls.Add(this.textBoxManageD3Param2);
+            this.tabPageT0_2.Controls.Add(this.textBoxManageD3Param3);
+            this.tabPageT0_2.Controls.Add(this.textBoxManageD3Param1);
+            this.tabPageT0_2.Controls.Add(this.labelManageD3Param4Name);
+            this.tabPageT0_2.Controls.Add(this.labelManageD3Param3Name);
+            this.tabPageT0_2.Controls.Add(this.labelManageD3Param2Name);
+            this.tabPageT0_2.Controls.Add(this.labelManageD3Param1Name);
+            this.tabPageT0_2.Controls.Add(this.labelManageD3Name);
+            this.tabPageT0_2.Controls.Add(this.textBoxManageD2Param4);
+            this.tabPageT0_2.Controls.Add(this.textBoxManageD2Param2);
+            this.tabPageT0_2.Controls.Add(this.textBoxManageD2Param3);
+            this.tabPageT0_2.Controls.Add(this.textBoxManageD2Param1);
+            this.tabPageT0_2.Controls.Add(this.labelManageD2Param4Name);
+            this.tabPageT0_2.Controls.Add(this.labelManageD2Param3Name);
+            this.tabPageT0_2.Controls.Add(this.labelManageD2Param2Name);
+            this.tabPageT0_2.Controls.Add(this.labelManageD2Param1Name);
+            this.tabPageT0_2.Controls.Add(this.labelManageD2Name);
+            this.tabPageT0_2.Controls.Add(this.textBoxManageD1Param4);
+            this.tabPageT0_2.Controls.Add(this.textBoxManageD1Param2);
+            this.tabPageT0_2.Controls.Add(this.textBoxManageD1Param3);
+            this.tabPageT0_2.Controls.Add(this.textBoxManageD1Param1);
+            this.tabPageT0_2.Controls.Add(this.labelManageD1Param4Name);
+            this.tabPageT0_2.Controls.Add(this.labelManageD1Param3Name);
+            this.tabPageT0_2.Controls.Add(this.labelManageD1Param2Name);
+            this.tabPageT0_2.Controls.Add(this.labelManageD1Param1Name);
+            this.tabPageT0_2.Controls.Add(this.labelManageD1Name);
             tabPageFormatStyle20.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle20.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT0_2.FormatStyle = tabPageFormatStyle20;
@@ -3358,137 +3396,940 @@
             tabPageColorStyle45.Transparency = 60;
             tabPageColorStyle45.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
             this.tabPageT0_2.NormalStyle = tabPageColorStyle45;
+            this.tabPageT0_2.Pages.AddRange(new object[] {
+            this.tabPageT0_2_1,
+            this.tabPageT0_2_2});
             this.tabPageT0_2.ParentPage = this.tabPageT0;
-            tabPageColorStyle46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle46.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle46.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle46.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle46.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.tabPageT0_2.SelectedStyle = tabPageColorStyle46;
-            this.tabPageT0_2.Size = new System.Drawing.Size(914, 716);
+            tabPageColorStyle47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle47.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle47.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle47.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle47.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tabPageT0_2.SelectedStyle = tabPageColorStyle47;
+            this.tabPageT0_2.Size = new System.Drawing.Size(914, 692);
             this.tabPageT0_2.StyleFromParent = false;
             this.tabPageT0_2.TabIndex = 2;
             this.tabPageT0_2.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabPageT0_2.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Bottom;
-            this.tabPageT0_2.Tag = "TreeNode: T0_2";
             this.tabPageT0_2.Text = "recipies";
             this.tabPageT0_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2.TextBounds")));
             this.tabPageT0_2.TextSize = new System.Drawing.SizeF(68.48957F, 21.44531F);
             this.tabPageT0_2.UseParentTabStripPlacement = false;
             // 
-            // buttonSendLaser
+            // textBoxManageD4Param4
             // 
-            this.buttonSendLaser.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonSendLaser.Location = new System.Drawing.Point(426, 282);
-            this.buttonSendLaser.Name = "buttonSendLaser";
-            this.buttonSendLaser.Size = new System.Drawing.Size(63, 33);
-            this.buttonSendLaser.TabIndex = 138;
-            this.buttonSendLaser.Text = "send laser";
-            this.buttonSendLaser.UseVisualStyleBackColor = true;
+            this.textBoxManageD4Param4.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.textBoxManageD4Param4.Location = new System.Drawing.Point(-345, 108);
+            this.textBoxManageD4Param4.Name = "textBoxManageD4Param4";
+            this.textBoxManageD4Param4.Size = new System.Drawing.Size(80, 31);
+            this.textBoxManageD4Param4.TabIndex = 173;
+            this.textBoxManageD4Param4.Text = "600";
             // 
-            // textBoxLaserLine2
+            // textBoxManageD4Param2
             // 
-            this.textBoxLaserLine2.Location = new System.Drawing.Point(288, 298);
-            this.textBoxLaserLine2.Name = "textBoxLaserLine2";
-            this.textBoxLaserLine2.Size = new System.Drawing.Size(121, 20);
-            this.textBoxLaserLine2.TabIndex = 137;
-            this.textBoxLaserLine2.Text = "PAPERINO 123456";
+            this.textBoxManageD4Param2.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.textBoxManageD4Param2.Location = new System.Drawing.Point(-345, -12);
+            this.textBoxManageD4Param2.Name = "textBoxManageD4Param2";
+            this.textBoxManageD4Param2.Size = new System.Drawing.Size(80, 31);
+            this.textBoxManageD4Param2.TabIndex = 170;
+            this.textBoxManageD4Param2.Text = "3";
             // 
-            // textBoxLaserLine1
+            // textBoxManageD4Param3
             // 
-            this.textBoxLaserLine1.Location = new System.Drawing.Point(290, 259);
-            this.textBoxLaserLine1.Name = "textBoxLaserLine1";
-            this.textBoxLaserLine1.Size = new System.Drawing.Size(84, 20);
-            this.textBoxLaserLine1.TabIndex = 136;
-            this.textBoxLaserLine1.Text = "PIPPO PLUTO";
+            this.textBoxManageD4Param3.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.textBoxManageD4Param3.Location = new System.Drawing.Point(-345, 48);
+            this.textBoxManageD4Param3.Name = "textBoxManageD4Param3";
+            this.textBoxManageD4Param3.Size = new System.Drawing.Size(80, 31);
+            this.textBoxManageD4Param3.TabIndex = 165;
+            this.textBoxManageD4Param3.Text = "1200";
+            // 
+            // textBoxManageD4Param1
+            // 
+            this.textBoxManageD4Param1.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.textBoxManageD4Param1.Location = new System.Drawing.Point(-345, -72);
+            this.textBoxManageD4Param1.Name = "textBoxManageD4Param1";
+            this.textBoxManageD4Param1.Size = new System.Drawing.Size(80, 31);
+            this.textBoxManageD4Param1.TabIndex = 160;
+            this.textBoxManageD4Param1.Text = "1";
+            // 
+            // labelManageD4Param4Name
+            // 
+            this.labelManageD4Param4Name.AutoSize = true;
+            this.labelManageD4Param4Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD4Param4Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD4Param4Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD4Param4Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD4Param4Name.Location = new System.Drawing.Point(-490, 108);
+            this.labelManageD4Param4Name.Name = "labelManageD4Param4Name";
+            this.labelManageD4Param4Name.Size = new System.Drawing.Size(121, 16);
+            this.labelManageD4Param4Name.TabIndex = 156;
+            this.labelManageD4Param4Name.Text = "d4 param 4 name";
+            // 
+            // labelManageD4Param3Name
+            // 
+            this.labelManageD4Param3Name.AutoSize = true;
+            this.labelManageD4Param3Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD4Param3Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD4Param3Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD4Param3Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD4Param3Name.Location = new System.Drawing.Point(-490, 48);
+            this.labelManageD4Param3Name.Name = "labelManageD4Param3Name";
+            this.labelManageD4Param3Name.Size = new System.Drawing.Size(121, 16);
+            this.labelManageD4Param3Name.TabIndex = 151;
+            this.labelManageD4Param3Name.Text = "d4 param 3 name";
+            // 
+            // labelManageD4Param2Name
+            // 
+            this.labelManageD4Param2Name.AutoSize = true;
+            this.labelManageD4Param2Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD4Param2Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD4Param2Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD4Param2Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD4Param2Name.Location = new System.Drawing.Point(-490, -12);
+            this.labelManageD4Param2Name.Name = "labelManageD4Param2Name";
+            this.labelManageD4Param2Name.Size = new System.Drawing.Size(121, 16);
+            this.labelManageD4Param2Name.TabIndex = 147;
+            this.labelManageD4Param2Name.Text = "d4 param 2 name";
+            // 
+            // labelManageD4Param1Name
+            // 
+            this.labelManageD4Param1Name.AutoSize = true;
+            this.labelManageD4Param1Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD4Param1Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD4Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD4Param1Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD4Param1Name.Location = new System.Drawing.Point(-490, -72);
+            this.labelManageD4Param1Name.Name = "labelManageD4Param1Name";
+            this.labelManageD4Param1Name.Size = new System.Drawing.Size(121, 16);
+            this.labelManageD4Param1Name.TabIndex = 143;
+            this.labelManageD4Param1Name.Text = "d4 param 1 name";
+            // 
+            // labelManageD4Name
+            // 
+            this.labelManageD4Name.AutoSize = true;
+            this.labelManageD4Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD4Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD4Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD4Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD4Name.Location = new System.Drawing.Point(-470, -112);
+            this.labelManageD4Name.Name = "labelManageD4Name";
+            this.labelManageD4Name.Size = new System.Drawing.Size(63, 16);
+            this.labelManageD4Name.TabIndex = 141;
+            this.labelManageD4Name.Text = "d4 name";
+            // 
+            // textBoxManageD3Param4
+            // 
+            this.textBoxManageD3Param4.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.textBoxManageD3Param4.Location = new System.Drawing.Point(-345, 108);
+            this.textBoxManageD3Param4.Name = "textBoxManageD3Param4";
+            this.textBoxManageD3Param4.Size = new System.Drawing.Size(80, 31);
+            this.textBoxManageD3Param4.TabIndex = 175;
+            this.textBoxManageD3Param4.Text = "0";
+            // 
+            // textBoxManageD3Param2
+            // 
+            this.textBoxManageD3Param2.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.textBoxManageD3Param2.Location = new System.Drawing.Point(-345, -12);
+            this.textBoxManageD3Param2.Name = "textBoxManageD3Param2";
+            this.textBoxManageD3Param2.Size = new System.Drawing.Size(80, 31);
+            this.textBoxManageD3Param2.TabIndex = 169;
+            this.textBoxManageD3Param2.Text = "0.5";
+            // 
+            // textBoxManageD3Param3
+            // 
+            this.textBoxManageD3Param3.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.textBoxManageD3Param3.Location = new System.Drawing.Point(-345, 48);
+            this.textBoxManageD3Param3.Name = "textBoxManageD3Param3";
+            this.textBoxManageD3Param3.Size = new System.Drawing.Size(80, 31);
+            this.textBoxManageD3Param3.TabIndex = 167;
+            this.textBoxManageD3Param3.Text = "0";
+            // 
+            // textBoxManageD3Param1
+            // 
+            this.textBoxManageD3Param1.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.textBoxManageD3Param1.Location = new System.Drawing.Point(-345, -72);
+            this.textBoxManageD3Param1.Name = "textBoxManageD3Param1";
+            this.textBoxManageD3Param1.Size = new System.Drawing.Size(80, 31);
+            this.textBoxManageD3Param1.TabIndex = 162;
+            this.textBoxManageD3Param1.Text = "2.3";
+            // 
+            // labelManageD3Param4Name
+            // 
+            this.labelManageD3Param4Name.AutoSize = true;
+            this.labelManageD3Param4Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD3Param4Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD3Param4Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD3Param4Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD3Param4Name.Location = new System.Drawing.Point(-490, 108);
+            this.labelManageD3Param4Name.Name = "labelManageD3Param4Name";
+            this.labelManageD3Param4Name.Size = new System.Drawing.Size(121, 16);
+            this.labelManageD3Param4Name.TabIndex = 158;
+            this.labelManageD3Param4Name.Text = "d3 param 4 name";
+            // 
+            // labelManageD3Param3Name
+            // 
+            this.labelManageD3Param3Name.AutoSize = true;
+            this.labelManageD3Param3Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD3Param3Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD3Param3Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD3Param3Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD3Param3Name.Location = new System.Drawing.Point(-490, 48);
+            this.labelManageD3Param3Name.Name = "labelManageD3Param3Name";
+            this.labelManageD3Param3Name.Size = new System.Drawing.Size(121, 16);
+            this.labelManageD3Param3Name.TabIndex = 154;
+            this.labelManageD3Param3Name.Text = "d3 param 3 name";
+            // 
+            // labelManageD3Param2Name
+            // 
+            this.labelManageD3Param2Name.AutoSize = true;
+            this.labelManageD3Param2Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD3Param2Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD3Param2Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD3Param2Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD3Param2Name.Location = new System.Drawing.Point(-490, -12);
+            this.labelManageD3Param2Name.Name = "labelManageD3Param2Name";
+            this.labelManageD3Param2Name.Size = new System.Drawing.Size(121, 16);
+            this.labelManageD3Param2Name.TabIndex = 149;
+            this.labelManageD3Param2Name.Text = "d3 param 2 name";
+            // 
+            // labelManageD3Param1Name
+            // 
+            this.labelManageD3Param1Name.AutoSize = true;
+            this.labelManageD3Param1Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD3Param1Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD3Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD3Param1Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD3Param1Name.Location = new System.Drawing.Point(-490, -72);
+            this.labelManageD3Param1Name.Name = "labelManageD3Param1Name";
+            this.labelManageD3Param1Name.Size = new System.Drawing.Size(121, 16);
+            this.labelManageD3Param1Name.TabIndex = 145;
+            this.labelManageD3Param1Name.Text = "d3 param 1 name";
+            // 
+            // labelManageD3Name
+            // 
+            this.labelManageD3Name.AutoSize = true;
+            this.labelManageD3Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD3Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD3Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD3Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD3Name.Location = new System.Drawing.Point(-470, -112);
+            this.labelManageD3Name.Name = "labelManageD3Name";
+            this.labelManageD3Name.Size = new System.Drawing.Size(63, 16);
+            this.labelManageD3Name.TabIndex = 139;
+            this.labelManageD3Name.Text = "d3 name";
+            // 
+            // textBoxManageD2Param4
+            // 
+            this.textBoxManageD2Param4.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.textBoxManageD2Param4.Location = new System.Drawing.Point(-345, 108);
+            this.textBoxManageD2Param4.Name = "textBoxManageD2Param4";
+            this.textBoxManageD2Param4.Size = new System.Drawing.Size(80, 31);
+            this.textBoxManageD2Param4.TabIndex = 172;
+            this.textBoxManageD2Param4.Text = "0";
+            // 
+            // textBoxManageD2Param2
+            // 
+            this.textBoxManageD2Param2.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.textBoxManageD2Param2.Location = new System.Drawing.Point(-345, -12);
+            this.textBoxManageD2Param2.Name = "textBoxManageD2Param2";
+            this.textBoxManageD2Param2.Size = new System.Drawing.Size(80, 31);
+            this.textBoxManageD2Param2.TabIndex = 171;
+            this.textBoxManageD2Param2.Text = "0";
+            // 
+            // textBoxManageD2Param3
+            // 
+            this.textBoxManageD2Param3.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.textBoxManageD2Param3.Location = new System.Drawing.Point(-345, 48);
+            this.textBoxManageD2Param3.Name = "textBoxManageD2Param3";
+            this.textBoxManageD2Param3.Size = new System.Drawing.Size(80, 31);
+            this.textBoxManageD2Param3.TabIndex = 164;
+            this.textBoxManageD2Param3.Text = "0";
+            // 
+            // textBoxManageD2Param1
+            // 
+            this.textBoxManageD2Param1.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.textBoxManageD2Param1.Location = new System.Drawing.Point(-345, -72);
+            this.textBoxManageD2Param1.Name = "textBoxManageD2Param1";
+            this.textBoxManageD2Param1.Size = new System.Drawing.Size(80, 31);
+            this.textBoxManageD2Param1.TabIndex = 163;
+            this.textBoxManageD2Param1.Text = "0";
+            // 
+            // labelManageD2Param4Name
+            // 
+            this.labelManageD2Param4Name.AutoSize = true;
+            this.labelManageD2Param4Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD2Param4Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD2Param4Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD2Param4Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD2Param4Name.Location = new System.Drawing.Point(-490, 108);
+            this.labelManageD2Param4Name.Name = "labelManageD2Param4Name";
+            this.labelManageD2Param4Name.Size = new System.Drawing.Size(121, 16);
+            this.labelManageD2Param4Name.TabIndex = 155;
+            this.labelManageD2Param4Name.Text = "d2 param 4 name";
+            // 
+            // labelManageD2Param3Name
+            // 
+            this.labelManageD2Param3Name.AutoSize = true;
+            this.labelManageD2Param3Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD2Param3Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD2Param3Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD2Param3Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD2Param3Name.Location = new System.Drawing.Point(-490, 48);
+            this.labelManageD2Param3Name.Name = "labelManageD2Param3Name";
+            this.labelManageD2Param3Name.Size = new System.Drawing.Size(121, 16);
+            this.labelManageD2Param3Name.TabIndex = 153;
+            this.labelManageD2Param3Name.Text = "d2 param 3 name";
+            // 
+            // labelManageD2Param2Name
+            // 
+            this.labelManageD2Param2Name.AutoSize = true;
+            this.labelManageD2Param2Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD2Param2Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD2Param2Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD2Param2Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD2Param2Name.Location = new System.Drawing.Point(-490, -12);
+            this.labelManageD2Param2Name.Name = "labelManageD2Param2Name";
+            this.labelManageD2Param2Name.Size = new System.Drawing.Size(121, 16);
+            this.labelManageD2Param2Name.TabIndex = 150;
+            this.labelManageD2Param2Name.Text = "d2 param 2 name";
+            // 
+            // labelManageD2Param1Name
+            // 
+            this.labelManageD2Param1Name.AutoSize = true;
+            this.labelManageD2Param1Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD2Param1Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD2Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD2Param1Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD2Param1Name.Location = new System.Drawing.Point(-490, -72);
+            this.labelManageD2Param1Name.Name = "labelManageD2Param1Name";
+            this.labelManageD2Param1Name.Size = new System.Drawing.Size(121, 16);
+            this.labelManageD2Param1Name.TabIndex = 144;
+            this.labelManageD2Param1Name.Text = "d2 param 1 name";
+            // 
+            // labelManageD2Name
+            // 
+            this.labelManageD2Name.AutoSize = true;
+            this.labelManageD2Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD2Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD2Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD2Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD2Name.Location = new System.Drawing.Point(-470, -112);
+            this.labelManageD2Name.Name = "labelManageD2Name";
+            this.labelManageD2Name.Size = new System.Drawing.Size(63, 16);
+            this.labelManageD2Name.TabIndex = 140;
+            this.labelManageD2Name.Text = "d2 name";
+            // 
+            // textBoxManageD1Param4
+            // 
+            this.textBoxManageD1Param4.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.textBoxManageD1Param4.Location = new System.Drawing.Point(-345, 108);
+            this.textBoxManageD1Param4.Name = "textBoxManageD1Param4";
+            this.textBoxManageD1Param4.Size = new System.Drawing.Size(80, 31);
+            this.textBoxManageD1Param4.TabIndex = 174;
+            this.textBoxManageD1Param4.Text = "0";
+            // 
+            // textBoxManageD1Param2
+            // 
+            this.textBoxManageD1Param2.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.textBoxManageD1Param2.Location = new System.Drawing.Point(-345, -12);
+            this.textBoxManageD1Param2.Name = "textBoxManageD1Param2";
+            this.textBoxManageD1Param2.Size = new System.Drawing.Size(80, 31);
+            this.textBoxManageD1Param2.TabIndex = 168;
+            this.textBoxManageD1Param2.Text = "4.5";
+            // 
+            // textBoxManageD1Param3
+            // 
+            this.textBoxManageD1Param3.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.textBoxManageD1Param3.Location = new System.Drawing.Point(-345, 48);
+            this.textBoxManageD1Param3.Name = "textBoxManageD1Param3";
+            this.textBoxManageD1Param3.Size = new System.Drawing.Size(80, 31);
+            this.textBoxManageD1Param3.TabIndex = 166;
+            this.textBoxManageD1Param3.Text = "0";
+            // 
+            // textBoxManageD1Param1
+            // 
+            this.textBoxManageD1Param1.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.textBoxManageD1Param1.Location = new System.Drawing.Point(-345, -72);
+            this.textBoxManageD1Param1.Name = "textBoxManageD1Param1";
+            this.textBoxManageD1Param1.Size = new System.Drawing.Size(80, 31);
+            this.textBoxManageD1Param1.TabIndex = 159;
+            this.textBoxManageD1Param1.Text = "1";
+            // 
+            // labelManageD1Param4Name
+            // 
+            this.labelManageD1Param4Name.AutoSize = true;
+            this.labelManageD1Param4Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD1Param4Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD1Param4Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD1Param4Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD1Param4Name.Location = new System.Drawing.Point(-490, 108);
+            this.labelManageD1Param4Name.Name = "labelManageD1Param4Name";
+            this.labelManageD1Param4Name.Size = new System.Drawing.Size(121, 16);
+            this.labelManageD1Param4Name.TabIndex = 157;
+            this.labelManageD1Param4Name.Text = "d1 param 4 name";
+            // 
+            // labelManageD1Param3Name
+            // 
+            this.labelManageD1Param3Name.AutoSize = true;
+            this.labelManageD1Param3Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD1Param3Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD1Param3Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD1Param3Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD1Param3Name.Location = new System.Drawing.Point(-490, 48);
+            this.labelManageD1Param3Name.Name = "labelManageD1Param3Name";
+            this.labelManageD1Param3Name.Size = new System.Drawing.Size(121, 16);
+            this.labelManageD1Param3Name.TabIndex = 152;
+            this.labelManageD1Param3Name.Text = "d1 param 3 name";
+            // 
+            // labelManageD1Param2Name
+            // 
+            this.labelManageD1Param2Name.AutoSize = true;
+            this.labelManageD1Param2Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD1Param2Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD1Param2Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD1Param2Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD1Param2Name.Location = new System.Drawing.Point(-490, -12);
+            this.labelManageD1Param2Name.Name = "labelManageD1Param2Name";
+            this.labelManageD1Param2Name.Size = new System.Drawing.Size(121, 16);
+            this.labelManageD1Param2Name.TabIndex = 148;
+            this.labelManageD1Param2Name.Text = "d1 param 2 name";
+            // 
+            // labelManageD1Param1Name
+            // 
+            this.labelManageD1Param1Name.AutoSize = true;
+            this.labelManageD1Param1Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD1Param1Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD1Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD1Param1Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD1Param1Name.Location = new System.Drawing.Point(-490, -72);
+            this.labelManageD1Param1Name.Name = "labelManageD1Param1Name";
+            this.labelManageD1Param1Name.Size = new System.Drawing.Size(121, 16);
+            this.labelManageD1Param1Name.TabIndex = 146;
+            this.labelManageD1Param1Name.Text = "d1 param 1 name";
+            // 
+            // labelManageD1Name
+            // 
+            this.labelManageD1Name.AutoSize = true;
+            this.labelManageD1Name.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.labelManageD1Name.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelManageD1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelManageD1Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelManageD1Name.Location = new System.Drawing.Point(-470, -112);
+            this.labelManageD1Name.Name = "labelManageD1Name";
+            this.labelManageD1Name.Size = new System.Drawing.Size(63, 16);
+            this.labelManageD1Name.TabIndex = 142;
+            this.labelManageD1Name.Text = "d1 name";
+            // 
+            // tabPageT0_2_1
+            // 
+            this.tabPageT0_2_1.Controls.Add(this.buttonAddNewRecipe);
+            this.tabPageT0_2_1.Controls.Add(this.textBoxTypeOrder);
+            this.tabPageT0_2_1.Controls.Add(this.textBoxM6Test);
+            this.tabPageT0_2_1.Controls.Add(this.textBoxM5Test);
+            this.tabPageT0_2_1.Controls.Add(this.textBoxM4Test);
+            this.tabPageT0_2_1.Controls.Add(this.textBoxM3Test);
+            this.tabPageT0_2_1.Controls.Add(this.textBoxM2Test);
+            this.tabPageT0_2_1.Controls.Add(this.textBoxM1Test);
+            this.tabPageT0_2_1.Controls.Add(this.groupBoxRecipeM5);
+            this.tabPageT0_2_1.Controls.Add(this.groupBoxRecipeM6);
+            this.tabPageT0_2_1.Controls.Add(this.groupBoxRecipeM4);
+            this.tabPageT0_2_1.Controls.Add(this.groupBoxRecipeM3);
+            this.tabPageT0_2_1.Controls.Add(this.groupBoxRecipeM2);
+            this.tabPageT0_2_1.Controls.Add(this.groupBoxRecipeM1);
+            this.tabPageT0_2_1.Controls.Add(this.checkBoxR1Aux2_01);
+            this.tabPageT0_2_1.Controls.Add(this.labelRecipeName);
+            this.tabPageT0_2_1.Controls.Add(this.textBoxRecipeName);
+            tabPageFormatStyle21.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT0_2_1.FormatStyle = tabPageFormatStyle21;
+            this.tabPageT0_2_1.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT0_2_1.Name = "tabPageT0_2_1";
+            this.tabPageT0_2_1.ParentPage = this.tabPageT0_2;
+            tabPageColorStyle46.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            this.tabPageT0_2_1.SelectedStyle = tabPageColorStyle46;
+            this.tabPageT0_2_1.Size = new System.Drawing.Size(914, 692);
+            this.tabPageT0_2_1.StyleFromParent = false;
+            this.tabPageT0_2_1.TabIndex = 25;
+            this.tabPageT0_2_1.Text = "add new";
+            this.tabPageT0_2_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2_1.TextBounds")));
+            this.tabPageT0_2_1.TextSize = new System.Drawing.SizeF(61.17658F, 17.42431F);
+            this.tabPageT0_2_1.UseParentButtons = false;
+            this.tabPageT0_2_1.UseParentTabStripPlacement = false;
+            // 
+            // textBoxTypeOrder
+            // 
+            this.textBoxTypeOrder.Location = new System.Drawing.Point(570, 664);
+            this.textBoxTypeOrder.Name = "textBoxTypeOrder";
+            this.textBoxTypeOrder.Size = new System.Drawing.Size(64, 20);
+            this.textBoxTypeOrder.TabIndex = 130;
+            this.textBoxTypeOrder.Text = "1";
             // 
             // textBoxM6Test
             // 
-            this.textBoxM6Test.Location = new System.Drawing.Point(478, 177);
+            this.textBoxM6Test.Location = new System.Drawing.Point(842, 661);
             this.textBoxM6Test.Name = "textBoxM6Test";
             this.textBoxM6Test.Size = new System.Drawing.Size(64, 20);
-            this.textBoxM6Test.TabIndex = 135;
+            this.textBoxM6Test.TabIndex = 141;
             this.textBoxM6Test.Text = "1";
             // 
             // textBoxM5Test
             // 
-            this.textBoxM5Test.Location = new System.Drawing.Point(389, 178);
+            this.textBoxM5Test.Location = new System.Drawing.Point(753, 662);
             this.textBoxM5Test.Name = "textBoxM5Test";
             this.textBoxM5Test.Size = new System.Drawing.Size(64, 20);
-            this.textBoxM5Test.TabIndex = 134;
+            this.textBoxM5Test.TabIndex = 140;
             this.textBoxM5Test.Text = "1";
             // 
             // textBoxM4Test
             // 
-            this.textBoxM4Test.Location = new System.Drawing.Point(288, 180);
+            this.textBoxM4Test.Location = new System.Drawing.Point(652, 664);
             this.textBoxM4Test.Name = "textBoxM4Test";
             this.textBoxM4Test.Size = new System.Drawing.Size(64, 20);
-            this.textBoxM4Test.TabIndex = 133;
+            this.textBoxM4Test.TabIndex = 139;
             this.textBoxM4Test.Text = "1";
             // 
             // textBoxM3Test
             // 
-            this.textBoxM3Test.Location = new System.Drawing.Point(473, 127);
+            this.textBoxM3Test.Location = new System.Drawing.Point(837, 611);
             this.textBoxM3Test.Name = "textBoxM3Test";
             this.textBoxM3Test.Size = new System.Drawing.Size(64, 20);
-            this.textBoxM3Test.TabIndex = 132;
+            this.textBoxM3Test.TabIndex = 138;
             this.textBoxM3Test.Text = "1";
             // 
             // textBoxM2Test
             // 
-            this.textBoxM2Test.Location = new System.Drawing.Point(388, 124);
+            this.textBoxM2Test.Location = new System.Drawing.Point(752, 608);
             this.textBoxM2Test.Name = "textBoxM2Test";
             this.textBoxM2Test.Size = new System.Drawing.Size(64, 20);
-            this.textBoxM2Test.TabIndex = 131;
+            this.textBoxM2Test.TabIndex = 137;
             this.textBoxM2Test.Text = "1";
             // 
             // textBoxM1Test
             // 
-            this.textBoxM1Test.Location = new System.Drawing.Point(290, 122);
+            this.textBoxM1Test.Location = new System.Drawing.Point(654, 606);
             this.textBoxM1Test.Name = "textBoxM1Test";
             this.textBoxM1Test.Size = new System.Drawing.Size(64, 20);
-            this.textBoxM1Test.TabIndex = 130;
+            this.textBoxM1Test.TabIndex = 136;
             this.textBoxM1Test.Text = "1";
             // 
-            // textBoxTypeOrder
+            // groupBoxRecipeM5
             // 
-            this.textBoxTypeOrder.Location = new System.Drawing.Point(395, 348);
-            this.textBoxTypeOrder.Name = "textBoxTypeOrder";
-            this.textBoxTypeOrder.Size = new System.Drawing.Size(64, 20);
-            this.textBoxTypeOrder.TabIndex = 129;
-            this.textBoxTypeOrder.Text = "1";
+            this.groupBoxRecipeM5.Controls.Add(this.labelM5Param1);
+            this.groupBoxRecipeM5.Controls.Add(this.checkBoxM5Param1);
+            this.groupBoxRecipeM5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxRecipeM5.Location = new System.Drawing.Point(360, 300);
+            this.groupBoxRecipeM5.Name = "groupBoxRecipeM5";
+            this.groupBoxRecipeM5.Size = new System.Drawing.Size(200, 200);
+            this.groupBoxRecipeM5.TabIndex = 119;
+            this.groupBoxRecipeM5.TabStop = false;
+            this.groupBoxRecipeM5.Text = "manipulator";
+            // 
+            // labelM5Param1
+            // 
+            this.labelM5Param1.AutoSize = true;
+            this.labelM5Param1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelM5Param1.Location = new System.Drawing.Point(90, 55);
+            this.labelM5Param1.Name = "labelM5Param1";
+            this.labelM5Param1.Size = new System.Drawing.Size(21, 13);
+            this.labelM5Param1.TabIndex = 122;
+            this.labelM5Param1.Text = "on";
+            // 
+            // checkBoxM5Param1
+            // 
+            this.checkBoxM5Param1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxM5Param1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxM5Param1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.checkBoxM5Param1.FlatAppearance.BorderSize = 0;
+            this.checkBoxM5Param1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM5Param1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM5Param1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM5Param1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxM5Param1.ForeColor = System.Drawing.Color.Transparent;
+            this.checkBoxM5Param1.ImageIndex = 0;
+            this.checkBoxM5Param1.ImageList = this.imageListRecipe;
+            this.checkBoxM5Param1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxM5Param1.Location = new System.Drawing.Point(10, 30);
+            this.checkBoxM5Param1.Name = "checkBoxM5Param1";
+            this.checkBoxM5Param1.Size = new System.Drawing.Size(64, 64);
+            this.checkBoxM5Param1.TabIndex = 112;
+            this.checkBoxM5Param1.UseVisualStyleBackColor = true;
+            this.checkBoxM5Param1.CheckStateChanged += new System.EventHandler(this.checkBoxM5Param1_CheckStateChanged);
+            // 
+            // groupBoxRecipeM6
+            // 
+            this.groupBoxRecipeM6.Controls.Add(this.labelM6Param1);
+            this.groupBoxRecipeM6.Controls.Add(this.checkBoxM6Param1);
+            this.groupBoxRecipeM6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxRecipeM6.Location = new System.Drawing.Point(690, 300);
+            this.groupBoxRecipeM6.Name = "groupBoxRecipeM6";
+            this.groupBoxRecipeM6.Size = new System.Drawing.Size(200, 200);
+            this.groupBoxRecipeM6.TabIndex = 118;
+            this.groupBoxRecipeM6.TabStop = false;
+            this.groupBoxRecipeM6.Text = "oven";
+            // 
+            // labelM6Param1
+            // 
+            this.labelM6Param1.AutoSize = true;
+            this.labelM6Param1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelM6Param1.Location = new System.Drawing.Point(90, 55);
+            this.labelM6Param1.Name = "labelM6Param1";
+            this.labelM6Param1.Size = new System.Drawing.Size(21, 13);
+            this.labelM6Param1.TabIndex = 122;
+            this.labelM6Param1.Text = "on";
+            // 
+            // checkBoxM6Param1
+            // 
+            this.checkBoxM6Param1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxM6Param1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxM6Param1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.checkBoxM6Param1.FlatAppearance.BorderSize = 0;
+            this.checkBoxM6Param1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM6Param1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM6Param1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM6Param1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxM6Param1.ForeColor = System.Drawing.Color.Transparent;
+            this.checkBoxM6Param1.ImageIndex = 0;
+            this.checkBoxM6Param1.ImageList = this.imageListRecipe;
+            this.checkBoxM6Param1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxM6Param1.Location = new System.Drawing.Point(10, 30);
+            this.checkBoxM6Param1.Name = "checkBoxM6Param1";
+            this.checkBoxM6Param1.Size = new System.Drawing.Size(64, 64);
+            this.checkBoxM6Param1.TabIndex = 113;
+            this.checkBoxM6Param1.UseVisualStyleBackColor = true;
+            this.checkBoxM6Param1.CheckStateChanged += new System.EventHandler(this.checkBoxM6Param1_CheckStateChanged);
+            // 
+            // groupBoxRecipeM4
+            // 
+            this.groupBoxRecipeM4.Controls.Add(this.labelPadLaserLine2);
+            this.groupBoxRecipeM4.Controls.Add(this.labelPadLaserLine1);
+            this.groupBoxRecipeM4.Controls.Add(this.labelM4Param1);
+            this.groupBoxRecipeM4.Controls.Add(this.checkBoxM4Param1);
+            this.groupBoxRecipeM4.Controls.Add(this.textBoxLaserLine2);
+            this.groupBoxRecipeM4.Controls.Add(this.textBoxLaserLine1);
+            this.groupBoxRecipeM4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxRecipeM4.Location = new System.Drawing.Point(20, 300);
+            this.groupBoxRecipeM4.Name = "groupBoxRecipeM4";
+            this.groupBoxRecipeM4.Size = new System.Drawing.Size(200, 200);
+            this.groupBoxRecipeM4.TabIndex = 117;
+            this.groupBoxRecipeM4.TabStop = false;
+            this.groupBoxRecipeM4.Text = "padlaser";
+            // 
+            // labelPadLaserLine2
+            // 
+            this.labelPadLaserLine2.AutoSize = true;
+            this.labelPadLaserLine2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPadLaserLine2.Location = new System.Drawing.Point(15, 140);
+            this.labelPadLaserLine2.Name = "labelPadLaserLine2";
+            this.labelPadLaserLine2.Size = new System.Drawing.Size(71, 13);
+            this.labelPadLaserLine2.TabIndex = 144;
+            this.labelPadLaserLine2.Text = "bottom line";
+            // 
+            // labelPadLaserLine1
+            // 
+            this.labelPadLaserLine1.AutoSize = true;
+            this.labelPadLaserLine1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPadLaserLine1.Location = new System.Drawing.Point(15, 90);
+            this.labelPadLaserLine1.Name = "labelPadLaserLine1";
+            this.labelPadLaserLine1.Size = new System.Drawing.Size(49, 13);
+            this.labelPadLaserLine1.TabIndex = 143;
+            this.labelPadLaserLine1.Text = "top line";
+            // 
+            // labelM4Param1
+            // 
+            this.labelM4Param1.AutoSize = true;
+            this.labelM4Param1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelM4Param1.Location = new System.Drawing.Point(90, 55);
+            this.labelM4Param1.Name = "labelM4Param1";
+            this.labelM4Param1.Size = new System.Drawing.Size(21, 13);
+            this.labelM4Param1.TabIndex = 141;
+            this.labelM4Param1.Text = "on";
+            // 
+            // checkBoxM4Param1
+            // 
+            this.checkBoxM4Param1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxM4Param1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxM4Param1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.checkBoxM4Param1.FlatAppearance.BorderSize = 0;
+            this.checkBoxM4Param1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM4Param1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM4Param1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM4Param1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxM4Param1.ForeColor = System.Drawing.Color.Transparent;
+            this.checkBoxM4Param1.ImageIndex = 0;
+            this.checkBoxM4Param1.ImageList = this.imageListRecipe;
+            this.checkBoxM4Param1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxM4Param1.Location = new System.Drawing.Point(10, 30);
+            this.checkBoxM4Param1.Name = "checkBoxM4Param1";
+            this.checkBoxM4Param1.Size = new System.Drawing.Size(64, 64);
+            this.checkBoxM4Param1.TabIndex = 111;
+            this.checkBoxM4Param1.UseVisualStyleBackColor = true;
+            this.checkBoxM4Param1.CheckStateChanged += new System.EventHandler(this.checkBoxM4Param1_CheckStateChanged);
+            // 
+            // textBoxLaserLine2
+            // 
+            this.textBoxLaserLine2.Location = new System.Drawing.Point(15, 160);
+            this.textBoxLaserLine2.Name = "textBoxLaserLine2";
+            this.textBoxLaserLine2.Size = new System.Drawing.Size(160, 21);
+            this.textBoxLaserLine2.TabIndex = 140;
+            this.textBoxLaserLine2.Text = "YYYYYYYYYYYYYYYYYYY";
+            // 
+            // textBoxLaserLine1
+            // 
+            this.textBoxLaserLine1.Location = new System.Drawing.Point(15, 110);
+            this.textBoxLaserLine1.Name = "textBoxLaserLine1";
+            this.textBoxLaserLine1.Size = new System.Drawing.Size(160, 21);
+            this.textBoxLaserLine1.TabIndex = 139;
+            this.textBoxLaserLine1.Text = "XXXXXXXXXXXXXXXXXXX";
+            // 
+            // groupBoxRecipeM3
+            // 
+            this.groupBoxRecipeM3.Controls.Add(this.labelFootOrder);
+            this.groupBoxRecipeM3.Controls.Add(this.radioButtonFootOrderOpt2);
+            this.groupBoxRecipeM3.Controls.Add(this.labelM3Param1);
+            this.groupBoxRecipeM3.Controls.Add(this.checkBoxM3Param1);
+            this.groupBoxRecipeM3.Controls.Add(this.radioButtonFootOrderOpt1);
+            this.groupBoxRecipeM3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxRecipeM3.Location = new System.Drawing.Point(690, 80);
+            this.groupBoxRecipeM3.Name = "groupBoxRecipeM3";
+            this.groupBoxRecipeM3.Size = new System.Drawing.Size(200, 200);
+            this.groupBoxRecipeM3.TabIndex = 116;
+            this.groupBoxRecipeM3.TabStop = false;
+            this.groupBoxRecipeM3.Text = "padprint ext";
+            // 
+            // labelFootOrder
+            // 
+            this.labelFootOrder.AutoSize = true;
+            this.labelFootOrder.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFootOrder.Location = new System.Drawing.Point(20, 140);
+            this.labelFootOrder.Name = "labelFootOrder";
+            this.labelFootOrder.Size = new System.Drawing.Size(64, 13);
+            this.labelFootOrder.TabIndex = 142;
+            this.labelFootOrder.Text = "foot order";
+            // 
+            // radioButtonFootOrderOpt2
+            // 
+            this.radioButtonFootOrderOpt2.AutoSize = true;
+            this.radioButtonFootOrderOpt2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonFootOrderOpt2.Location = new System.Drawing.Point(110, 160);
+            this.radioButtonFootOrderOpt2.Name = "radioButtonFootOrderOpt2";
+            this.radioButtonFootOrderOpt2.Size = new System.Drawing.Size(58, 17);
+            this.radioButtonFootOrderOpt2.TabIndex = 142;
+            this.radioButtonFootOrderOpt2.Text = "lf->rg";
+            this.radioButtonFootOrderOpt2.UseVisualStyleBackColor = true;
+            // 
+            // labelM3Param1
+            // 
+            this.labelM3Param1.AutoSize = true;
+            this.labelM3Param1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelM3Param1.Location = new System.Drawing.Point(90, 55);
+            this.labelM3Param1.Name = "labelM3Param1";
+            this.labelM3Param1.Size = new System.Drawing.Size(21, 13);
+            this.labelM3Param1.TabIndex = 131;
+            this.labelM3Param1.Text = "on";
+            // 
+            // checkBoxM3Param1
+            // 
+            this.checkBoxM3Param1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxM3Param1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxM3Param1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.checkBoxM3Param1.FlatAppearance.BorderSize = 0;
+            this.checkBoxM3Param1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM3Param1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM3Param1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM3Param1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxM3Param1.ForeColor = System.Drawing.Color.Transparent;
+            this.checkBoxM3Param1.ImageIndex = 0;
+            this.checkBoxM3Param1.ImageList = this.imageListRecipe;
+            this.checkBoxM3Param1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxM3Param1.Location = new System.Drawing.Point(10, 30);
+            this.checkBoxM3Param1.Name = "checkBoxM3Param1";
+            this.checkBoxM3Param1.Size = new System.Drawing.Size(64, 64);
+            this.checkBoxM3Param1.TabIndex = 110;
+            this.checkBoxM3Param1.UseVisualStyleBackColor = true;
+            this.checkBoxM3Param1.CheckStateChanged += new System.EventHandler(this.checkBoxM3Param1_CheckStateChanged);
+            // 
+            // radioButtonFootOrderOpt1
+            // 
+            this.radioButtonFootOrderOpt1.AutoSize = true;
+            this.radioButtonFootOrderOpt1.Checked = true;
+            this.radioButtonFootOrderOpt1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonFootOrderOpt1.Location = new System.Drawing.Point(20, 160);
+            this.radioButtonFootOrderOpt1.Name = "radioButtonFootOrderOpt1";
+            this.radioButtonFootOrderOpt1.Size = new System.Drawing.Size(58, 17);
+            this.radioButtonFootOrderOpt1.TabIndex = 120;
+            this.radioButtonFootOrderOpt1.TabStop = true;
+            this.radioButtonFootOrderOpt1.Text = "rg->lf";
+            this.radioButtonFootOrderOpt1.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxRecipeM2
+            // 
+            this.groupBoxRecipeM2.Controls.Add(this.labelM2Param1);
+            this.groupBoxRecipeM2.Controls.Add(this.checkBoxM2Param1);
+            this.groupBoxRecipeM2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxRecipeM2.Location = new System.Drawing.Point(360, 80);
+            this.groupBoxRecipeM2.Name = "groupBoxRecipeM2";
+            this.groupBoxRecipeM2.Size = new System.Drawing.Size(200, 200);
+            this.groupBoxRecipeM2.TabIndex = 115;
+            this.groupBoxRecipeM2.TabStop = false;
+            this.groupBoxRecipeM2.Text = "padprint int";
+            // 
+            // labelM2Param1
+            // 
+            this.labelM2Param1.AutoSize = true;
+            this.labelM2Param1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelM2Param1.Location = new System.Drawing.Point(90, 55);
+            this.labelM2Param1.Name = "labelM2Param1";
+            this.labelM2Param1.Size = new System.Drawing.Size(21, 13);
+            this.labelM2Param1.TabIndex = 122;
+            this.labelM2Param1.Text = "on";
+            // 
+            // checkBoxM2Param1
+            // 
+            this.checkBoxM2Param1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxM2Param1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxM2Param1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.checkBoxM2Param1.FlatAppearance.BorderSize = 0;
+            this.checkBoxM2Param1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM2Param1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM2Param1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM2Param1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxM2Param1.ForeColor = System.Drawing.Color.Transparent;
+            this.checkBoxM2Param1.ImageIndex = 0;
+            this.checkBoxM2Param1.ImageList = this.imageListRecipe;
+            this.checkBoxM2Param1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxM2Param1.Location = new System.Drawing.Point(10, 30);
+            this.checkBoxM2Param1.Name = "checkBoxM2Param1";
+            this.checkBoxM2Param1.Size = new System.Drawing.Size(64, 64);
+            this.checkBoxM2Param1.TabIndex = 109;
+            this.checkBoxM2Param1.UseVisualStyleBackColor = true;
+            this.checkBoxM2Param1.CheckStateChanged += new System.EventHandler(this.checkBoxM2Param1_CheckStateChanged);
+            // 
+            // groupBoxRecipeM1
+            // 
+            this.groupBoxRecipeM1.Controls.Add(this.labelM1Param1);
+            this.groupBoxRecipeM1.Controls.Add(this.checkBoxM1Param1);
+            this.groupBoxRecipeM1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxRecipeM1.Location = new System.Drawing.Point(20, 80);
+            this.groupBoxRecipeM1.Name = "groupBoxRecipeM1";
+            this.groupBoxRecipeM1.Size = new System.Drawing.Size(200, 200);
+            this.groupBoxRecipeM1.TabIndex = 114;
+            this.groupBoxRecipeM1.TabStop = false;
+            this.groupBoxRecipeM1.Text = "trimmer";
+            // 
+            // labelM1Param1
+            // 
+            this.labelM1Param1.AutoSize = true;
+            this.labelM1Param1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelM1Param1.Location = new System.Drawing.Point(90, 55);
+            this.labelM1Param1.Name = "labelM1Param1";
+            this.labelM1Param1.Size = new System.Drawing.Size(21, 13);
+            this.labelM1Param1.TabIndex = 121;
+            this.labelM1Param1.Text = "on";
+            // 
+            // checkBoxM1Param1
+            // 
+            this.checkBoxM1Param1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxM1Param1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxM1Param1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.checkBoxM1Param1.FlatAppearance.BorderSize = 0;
+            this.checkBoxM1Param1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM1Param1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM1Param1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxM1Param1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxM1Param1.ForeColor = System.Drawing.Color.Transparent;
+            this.checkBoxM1Param1.ImageIndex = 0;
+            this.checkBoxM1Param1.ImageList = this.imageListRecipe;
+            this.checkBoxM1Param1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxM1Param1.Location = new System.Drawing.Point(10, 30);
+            this.checkBoxM1Param1.Name = "checkBoxM1Param1";
+            this.checkBoxM1Param1.Size = new System.Drawing.Size(64, 64);
+            this.checkBoxM1Param1.TabIndex = 108;
+            this.checkBoxM1Param1.UseVisualStyleBackColor = true;
+            this.checkBoxM1Param1.CheckStateChanged += new System.EventHandler(this.checkBoxM1Param1_CheckStateChanged);
+            // 
+            // checkBoxR1Aux2_01
+            // 
+            this.checkBoxR1Aux2_01.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxR1Aux2_01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxR1Aux2_01.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.checkBoxR1Aux2_01.FlatAppearance.BorderSize = 0;
+            this.checkBoxR1Aux2_01.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxR1Aux2_01.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxR1Aux2_01.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.checkBoxR1Aux2_01.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.checkBoxR1Aux2_01.ForeColor = System.Drawing.Color.Transparent;
+            this.checkBoxR1Aux2_01.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxR1Aux2_01.Location = new System.Drawing.Point(54, 173);
+            this.checkBoxR1Aux2_01.Name = "checkBoxR1Aux2_01";
+            this.checkBoxR1Aux2_01.Size = new System.Drawing.Size(70, 31);
+            this.checkBoxR1Aux2_01.TabIndex = 107;
+            this.checkBoxR1Aux2_01.UseVisualStyleBackColor = true;
+            this.checkBoxR1Aux2_01.Visible = false;
+            // 
+            // labelRecipeName
+            // 
+            this.labelRecipeName.AutoSize = true;
+            this.labelRecipeName.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRecipeName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelRecipeName.Location = new System.Drawing.Point(20, 20);
+            this.labelRecipeName.Name = "labelRecipeName";
+            this.labelRecipeName.Size = new System.Drawing.Size(85, 16);
+            this.labelRecipeName.TabIndex = 8;
+            this.labelRecipeName.Text = "Model name";
+            // 
+            // textBoxRecipeName
+            // 
+            this.textBoxRecipeName.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.textBoxRecipeName.Location = new System.Drawing.Point(115, 15);
+            this.textBoxRecipeName.MaxLength = 4;
+            this.textBoxRecipeName.Name = "textBoxRecipeName";
+            this.textBoxRecipeName.Size = new System.Drawing.Size(100, 31);
+            this.textBoxRecipeName.TabIndex = 7;
+            // 
+            // tabPageT0_2_2
+            // 
+            tabPageFormatStyle22.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT0_2_2.FormatStyle = tabPageFormatStyle22;
+            this.tabPageT0_2_2.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT0_2_2.Name = "tabPageT0_2_2";
+            this.tabPageT0_2_2.ParentPage = this.tabPageT0_2;
+            this.tabPageT0_2_2.Size = new System.Drawing.Size(914, 692);
+            this.tabPageT0_2_2.StyleFromParent = false;
+            this.tabPageT0_2_2.TabIndex = 26;
+            this.tabPageT0_2_2.Text = "find/modify";
+            this.tabPageT0_2_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2_2.TextBounds")));
+            this.tabPageT0_2_2.TextSize = new System.Drawing.SizeF(81.41291F, 17.42431F);
+            this.tabPageT0_2_2.UseParentTabStripPlacement = false;
             // 
             // tabPageT0_3
             // 
             this.tabPageT0_3.Controls.Add(this.groupBoxKeepAliveToPlc);
             this.tabPageT0_3.Controls.Add(this.groupBoxKeepAliveFromPlc);
             this.tabPageT0_3.Expanded = false;
-            tabPageFormatStyle21.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tabPageFormatStyle21.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
-            this.tabPageT0_3.FormatStyle = tabPageFormatStyle21;
+            tabPageFormatStyle23.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tabPageFormatStyle23.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
+            this.tabPageT0_3.FormatStyle = tabPageFormatStyle23;
             this.tabPageT0_3.Location = new System.Drawing.Point(96, 36);
             this.tabPageT0_3.Name = "tabPageT0_3";
-            tabPageColorStyle47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            tabPageColorStyle47.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle47.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle47.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle47.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle47.Transparency = 60;
-            tabPageColorStyle47.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
-            this.tabPageT0_3.NormalStyle = tabPageColorStyle47;
-            this.tabPageT0_3.ParentPage = this.tabPageT0;
-            tabPageColorStyle48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle48.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle48.BorderColor = System.Drawing.Color.Transparent;
             tabPageColorStyle48.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle48.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.tabPageT0_3.SelectedStyle = tabPageColorStyle48;
-            this.tabPageT0_3.Size = new System.Drawing.Size(914, 716);
+            tabPageColorStyle48.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle48.Transparency = 60;
+            tabPageColorStyle48.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
+            this.tabPageT0_3.NormalStyle = tabPageColorStyle48;
+            this.tabPageT0_3.ParentPage = this.tabPageT0;
+            tabPageColorStyle49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle49.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle49.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle49.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle49.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tabPageT0_3.SelectedStyle = tabPageColorStyle49;
+            this.tabPageT0_3.Size = new System.Drawing.Size(914, 692);
             this.tabPageT0_3.StyleFromParent = false;
             this.tabPageT0_3.TabIndex = 3;
             this.tabPageT0_3.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabPageT0_3.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Bottom;
-            this.tabPageT0_3.Tag = "TreeNode: T0_3";
             this.tabPageT0_3.Text = "nodes";
             this.tabPageT0_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_3.TextBounds")));
             this.tabPageT0_3.TextSize = new System.Drawing.SizeF(54.43489F, 21.44531F);
@@ -3806,30 +4647,29 @@
             // 
             // tabPageT1_1
             // 
-            tabPageFormatStyle22.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tabPageFormatStyle22.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
-            this.tabPageT1_1.FormatStyle = tabPageFormatStyle22;
+            tabPageFormatStyle24.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tabPageFormatStyle24.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
+            this.tabPageT1_1.FormatStyle = tabPageFormatStyle24;
             this.tabPageT1_1.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_1.Name = "tabPageT1_1";
-            tabPageColorStyle51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            tabPageColorStyle51.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle51.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle51.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle51.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle51.Transparency = 80;
-            tabPageColorStyle51.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
-            this.tabPageT1_1.NormalStyle = tabPageColorStyle51;
+            tabPageColorStyle52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            tabPageColorStyle52.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle52.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle52.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle52.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle52.Transparency = 80;
+            tabPageColorStyle52.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
+            this.tabPageT1_1.NormalStyle = tabPageColorStyle52;
             this.tabPageT1_1.ParentPage = this.tabPageT1;
-            tabPageColorStyle61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle61.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle61.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle61.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle61.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.tabPageT1_1.SelectedStyle = tabPageColorStyle61;
+            tabPageColorStyle62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle62.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle62.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle62.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle62.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tabPageT1_1.SelectedStyle = tabPageColorStyle62;
             this.tabPageT1_1.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_1.StyleFromParent = false;
             this.tabPageT1_1.TabIndex = 5;
-            this.tabPageT1_1.Tag = "TreeNode: T1_1";
             this.tabPageT1_1.Text = "teach";
             this.tabPageT1_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_1.TextBounds")));
             this.tabPageT1_1.TextSize = new System.Drawing.SizeF(0F, 0F);
@@ -3837,29 +4677,29 @@
             // 
             // tabPageT1
             // 
-            tabPageFormatStyle23.BorderCornerRadius = 2;
-            tabPageFormatStyle23.ContentSpacing = 0;
-            tabPageFormatStyle23.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tabPageFormatStyle23.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
-            tabPageFormatStyle23.TabContentAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.tabPageT1.FormatStyle = tabPageFormatStyle23;
-            tabPageColorStyle52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            tabPageColorStyle52.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle52.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle52.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle52.TextShadowColor = System.Drawing.Color.Transparent;
-            this.tabPageT1.HoverStyle = tabPageColorStyle52;
+            tabPageFormatStyle25.BorderCornerRadius = 2;
+            tabPageFormatStyle25.ContentSpacing = 0;
+            tabPageFormatStyle25.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tabPageFormatStyle25.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            tabPageFormatStyle25.TabContentAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.tabPageT1.FormatStyle = tabPageFormatStyle25;
+            tabPageColorStyle53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            tabPageColorStyle53.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle53.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle53.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle53.TextShadowColor = System.Drawing.Color.Transparent;
+            this.tabPageT1.HoverStyle = tabPageColorStyle53;
             this.tabPageT1.ImageIndex = 2;
             this.tabPageT1.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT1.Name = "tabPageT1";
-            tabPageColorStyle53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            tabPageColorStyle53.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle53.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle53.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle53.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            tabPageColorStyle53.TextShadowColor = System.Drawing.Color.Transparent;
-            this.tabPageT1.NormalStyle = tabPageColorStyle53;
+            tabPageColorStyle54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            tabPageColorStyle54.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle54.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle54.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle54.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            tabPageColorStyle54.TextShadowColor = System.Drawing.Color.Transparent;
+            this.tabPageT1.NormalStyle = tabPageColorStyle54;
             this.tabPageT1.Pages.AddRange(new object[] {
             this.tabPageT1_1,
             this.tabPageT1_2,
@@ -3867,46 +4707,44 @@
             this.tabPageT1_4});
             this.tabPageT1.ParentPage = null;
             this.tabPageT1.SelectedImageIndex = 3;
-            tabPageColorStyle60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(136)))));
-            tabPageColorStyle60.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle60.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle60.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle60.TextShadowColor = System.Drawing.Color.Transparent;
-            this.tabPageT1.SelectedStyle = tabPageColorStyle60;
-            this.tabPageT1.Size = new System.Drawing.Size(914, 716);
+            tabPageColorStyle61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(136)))));
+            tabPageColorStyle61.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle61.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle61.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle61.TextShadowColor = System.Drawing.Color.Transparent;
+            this.tabPageT1.SelectedStyle = tabPageColorStyle61;
+            this.tabPageT1.Size = new System.Drawing.Size(914, 692);
             this.tabPageT1.StyleFromParent = false;
             this.tabPageT1.TabIndex = 4;
-            this.tabPageT1.Tag = "TreeNode: T1";
             this.tabPageT1.Text = "page";
             this.tabPageT1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1.TextBounds")));
             this.tabPageT1.TextSize = new System.Drawing.SizeF(37.03645F, 17.42431F);
             // 
             // tabPageT1_2
             // 
-            tabPageFormatStyle24.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tabPageFormatStyle24.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
-            this.tabPageT1_2.FormatStyle = tabPageFormatStyle24;
+            tabPageFormatStyle26.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tabPageFormatStyle26.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
+            this.tabPageT1_2.FormatStyle = tabPageFormatStyle26;
             this.tabPageT1_2.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_2.Name = "tabPageT1_2";
-            tabPageColorStyle54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            tabPageColorStyle54.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle54.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle54.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle54.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle54.Transparency = 80;
-            tabPageColorStyle54.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
-            this.tabPageT1_2.NormalStyle = tabPageColorStyle54;
-            this.tabPageT1_2.ParentPage = this.tabPageT1;
-            tabPageColorStyle55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle55.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle55.BorderColor = System.Drawing.Color.Transparent;
             tabPageColorStyle55.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle55.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.tabPageT1_2.SelectedStyle = tabPageColorStyle55;
+            tabPageColorStyle55.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle55.Transparency = 80;
+            tabPageColorStyle55.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
+            this.tabPageT1_2.NormalStyle = tabPageColorStyle55;
+            this.tabPageT1_2.ParentPage = this.tabPageT1;
+            tabPageColorStyle56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle56.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle56.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle56.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle56.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tabPageT1_2.SelectedStyle = tabPageColorStyle56;
             this.tabPageT1_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_2.StyleFromParent = false;
             this.tabPageT1_2.TabIndex = 8;
-            this.tabPageT1_2.Tag = "TreeNode: T1_2";
             this.tabPageT1_2.Text = "test";
             this.tabPageT1_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_2.TextBounds")));
             this.tabPageT1_2.TextSize = new System.Drawing.SizeF(0F, 0F);
@@ -3914,60 +4752,58 @@
             // 
             // tabPageT1_3
             // 
-            tabPageFormatStyle25.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tabPageFormatStyle25.Padding = new System.Windows.Forms.Padding(17, 5, 17, 5);
-            this.tabPageT1_3.FormatStyle = tabPageFormatStyle25;
+            tabPageFormatStyle27.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tabPageFormatStyle27.Padding = new System.Windows.Forms.Padding(17, 5, 17, 5);
+            this.tabPageT1_3.FormatStyle = tabPageFormatStyle27;
             this.tabPageT1_3.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_3.Name = "tabPageT1_3";
-            tabPageColorStyle56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            tabPageColorStyle56.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle56.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle56.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle56.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle56.Transparency = 80;
-            tabPageColorStyle56.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
-            this.tabPageT1_3.NormalStyle = tabPageColorStyle56;
-            this.tabPageT1_3.ParentPage = this.tabPageT1;
-            tabPageColorStyle57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle57.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle57.BorderColor = System.Drawing.Color.Transparent;
             tabPageColorStyle57.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle57.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.tabPageT1_3.SelectedStyle = tabPageColorStyle57;
+            tabPageColorStyle57.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle57.Transparency = 80;
+            tabPageColorStyle57.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
+            this.tabPageT1_3.NormalStyle = tabPageColorStyle57;
+            this.tabPageT1_3.ParentPage = this.tabPageT1;
+            tabPageColorStyle58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle58.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle58.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle58.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle58.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tabPageT1_3.SelectedStyle = tabPageColorStyle58;
             this.tabPageT1_3.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_3.StyleFromParent = false;
             this.tabPageT1_3.TabIndex = 6;
-            this.tabPageT1_3.Tag = "TreeNode: T1_3";
             this.tabPageT1_3.Text = "input";
             this.tabPageT1_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_3.TextBounds")));
             this.tabPageT1_3.TextSize = new System.Drawing.SizeF(0F, 0F);
             // 
             // tabPageT1_4
             // 
-            tabPageFormatStyle26.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            tabPageFormatStyle26.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.tabPageT1_4.FormatStyle = tabPageFormatStyle26;
+            tabPageFormatStyle28.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tabPageFormatStyle28.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
+            this.tabPageT1_4.FormatStyle = tabPageFormatStyle28;
             this.tabPageT1_4.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_4.Name = "tabPageT1_4";
-            tabPageColorStyle58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            tabPageColorStyle58.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle58.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle58.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle58.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle58.Transparency = 80;
-            tabPageColorStyle58.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
-            this.tabPageT1_4.NormalStyle = tabPageColorStyle58;
-            this.tabPageT1_4.ParentPage = this.tabPageT1;
-            tabPageColorStyle59.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle59.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle59.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle59.BorderColor = System.Drawing.Color.Transparent;
             tabPageColorStyle59.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle59.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.tabPageT1_4.SelectedStyle = tabPageColorStyle59;
+            tabPageColorStyle59.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle59.Transparency = 80;
+            tabPageColorStyle59.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
+            this.tabPageT1_4.NormalStyle = tabPageColorStyle59;
+            this.tabPageT1_4.ParentPage = this.tabPageT1;
+            tabPageColorStyle60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle60.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle60.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle60.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle60.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tabPageT1_4.SelectedStyle = tabPageColorStyle60;
             this.tabPageT1_4.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_4.StyleFromParent = false;
             this.tabPageT1_4.TabIndex = 7;
-            this.tabPageT1_4.Tag = "TreeNode: T1_4";
             this.tabPageT1_4.Text = "output";
             this.tabPageT1_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_4.TextBounds")));
             this.tabPageT1_4.TextSize = new System.Drawing.SizeF(0F, 0F);
@@ -3978,7 +4814,10 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
+            this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_1);
+            this.tabControlMain.Controls.Add(this.tabPageT0);
             this.tabControlMain.Controls.Add(this.tabPageT7);
             this.tabControlMain.Controls.Add(this.tabPageT6);
             this.tabControlMain.Controls.Add(this.tabPageT5);
@@ -3986,8 +4825,7 @@
             this.tabControlMain.Controls.Add(this.tabPageT3);
             this.tabControlMain.Controls.Add(this.tabPageT2);
             this.tabControlMain.Controls.Add(this.tabPageT1);
-            this.tabControlMain.Controls.Add(this.tabPageT0);
-            this.tabControlMain.Controls.Add(this.tabPageT0_2);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_3);
             this.tabControlMain.Controls.Add(this.tabPageT1_1);
             this.tabControlMain.Controls.Add(this.tabPageT1_2);
@@ -4015,10 +4853,10 @@
             this.tabControlMain.Location = new System.Drawing.Point(0, 0);
             this.tabControlMain.Margin = new System.Windows.Forms.Padding(10);
             this.tabControlMain.Name = "tabControlMain";
-            tabPageColorStyle62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            tabPageColorStyle62.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle62.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.tabControlMain.NormalPageStyle = tabPageColorStyle62;
+            tabPageColorStyle63.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            tabPageColorStyle63.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle63.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.tabControlMain.NormalPageStyle = tabPageColorStyle63;
             commandButtonColorStyle1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             commandButtonColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.NormalTabButtonStyle = commandButtonColorStyle1;
@@ -4029,8 +4867,8 @@
             toolItemColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             toolItemColorStyle1.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.tabControlMain.NormalToolItemStyle = toolItemColorStyle1;
-            tabPageFormatStyle27.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlMain.PageFormatStyle = tabPageFormatStyle27;
+            tabPageFormatStyle29.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlMain.PageFormatStyle = tabPageFormatStyle29;
             this.tabControlMain.Pages.AddRange(new object[] {
             this.tabPageT0,
             this.tabPageT1,
@@ -4041,13 +4879,13 @@
             this.tabPageT6,
             this.tabPageT7});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageT0_1;
-            tabPageColorStyle63.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            tabPageColorStyle63.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle63.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
-            tabPageColorStyle63.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle63.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.tabControlMain.SelectedPageStyle = tabPageColorStyle63;
+            this.tabControlMain.SelectedPage = this.tabPageT0_2_1;
+            tabPageColorStyle64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            tabPageColorStyle64.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle64.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
+            tabPageColorStyle64.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle64.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.tabControlMain.SelectedPageStyle = tabPageColorStyle64;
             commandButtonColorStyle3.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.SelectedTabButtonStyle = commandButtonColorStyle3;
             commandButtonColorStyle4.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
@@ -4101,6 +4939,25 @@
             this.imageListNodes.Images.SetKeyName(2, "iot_on.png");
             this.imageListNodes.Images.SetKeyName(3, "iot_off.png");
             // 
+            // imageListRecipe
+            // 
+            this.imageListRecipe.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListRecipe.ImageStream")));
+            this.imageListRecipe.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListRecipe.Images.SetKeyName(0, "on.png");
+            this.imageListRecipe.Images.SetKeyName(1, "off.png");
+            // 
+            // buttonAddNewRecipe
+            // 
+            this.buttonAddNewRecipe.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonAddNewRecipe.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonAddNewRecipe.Location = new System.Drawing.Point(382, 504);
+            this.buttonAddNewRecipe.Name = "buttonAddNewRecipe";
+            this.buttonAddNewRecipe.Size = new System.Drawing.Size(160, 110);
+            this.buttonAddNewRecipe.TabIndex = 142;
+            this.buttonAddNewRecipe.Text = "CREATE RECIPE";
+            this.buttonAddNewRecipe.UseVisualStyleBackColor = true;
+            this.buttonAddNewRecipe.Click += new System.EventHandler(this.buttonAddNewRecipe_Click);
+            // 
             // FormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4137,6 +4994,20 @@
             this.groupBoxM1.PerformLayout();
             this.tabPageT0_2.ResumeLayout(false);
             this.tabPageT0_2.PerformLayout();
+            this.tabPageT0_2_1.ResumeLayout(false);
+            this.tabPageT0_2_1.PerformLayout();
+            this.groupBoxRecipeM5.ResumeLayout(false);
+            this.groupBoxRecipeM5.PerformLayout();
+            this.groupBoxRecipeM6.ResumeLayout(false);
+            this.groupBoxRecipeM6.PerformLayout();
+            this.groupBoxRecipeM4.ResumeLayout(false);
+            this.groupBoxRecipeM4.PerformLayout();
+            this.groupBoxRecipeM3.ResumeLayout(false);
+            this.groupBoxRecipeM3.PerformLayout();
+            this.groupBoxRecipeM2.ResumeLayout(false);
+            this.groupBoxRecipeM2.PerformLayout();
+            this.groupBoxRecipeM1.ResumeLayout(false);
+            this.groupBoxRecipeM1.PerformLayout();
             this.tabPageT0_3.ResumeLayout(false);
             this.groupBoxKeepAliveToPlc.ResumeLayout(false);
             this.groupBoxKeepAliveFromPlc.ResumeLayout(false);
@@ -4334,17 +5205,7 @@
         private System.Windows.Forms.Label labelM4Node;
         private System.Windows.Forms.Label labelM3Node;
         private System.Windows.Forms.Label labelM2Node;
-        private System.Windows.Forms.TextBox textBoxTypeOrder;
         private System.Windows.Forms.ImageList imageListMainControl;
-        private System.Windows.Forms.Button buttonSendLaser;
-        private System.Windows.Forms.TextBox textBoxLaserLine2;
-        private System.Windows.Forms.TextBox textBoxLaserLine1;
-        private System.Windows.Forms.TextBox textBoxM6Test;
-        private System.Windows.Forms.TextBox textBoxM5Test;
-        private System.Windows.Forms.TextBox textBoxM4Test;
-        private System.Windows.Forms.TextBox textBoxM3Test;
-        private System.Windows.Forms.TextBox textBoxM2Test;
-        private System.Windows.Forms.TextBox textBoxM1Test;
         private System.Windows.Forms.StatusStrip statusStripT0;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelDateTime;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelSN;
@@ -4357,5 +5218,80 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn machine;
         private System.Windows.Forms.DataGridViewTextBoxColumn messagetext;
         private System.Windows.Forms.ComboBox comboBoxAutoModelNameLst;
+        private System.Windows.Forms.TextBox textBoxManageD4Param4;
+        private System.Windows.Forms.TextBox textBoxManageD4Param2;
+        private System.Windows.Forms.TextBox textBoxManageD4Param3;
+        private System.Windows.Forms.TextBox textBoxManageD4Param1;
+        private System.Windows.Forms.Label labelManageD4Param4Name;
+        private System.Windows.Forms.Label labelManageD4Param3Name;
+        private System.Windows.Forms.Label labelManageD4Param2Name;
+        private System.Windows.Forms.Label labelManageD4Param1Name;
+        private System.Windows.Forms.Label labelManageD4Name;
+        private System.Windows.Forms.TextBox textBoxManageD3Param4;
+        private System.Windows.Forms.TextBox textBoxManageD3Param2;
+        private System.Windows.Forms.TextBox textBoxManageD3Param3;
+        private System.Windows.Forms.TextBox textBoxManageD3Param1;
+        private System.Windows.Forms.Label labelManageD3Param4Name;
+        private System.Windows.Forms.Label labelManageD3Param3Name;
+        private System.Windows.Forms.Label labelManageD3Param2Name;
+        private System.Windows.Forms.Label labelManageD3Param1Name;
+        private System.Windows.Forms.Label labelManageD3Name;
+        private System.Windows.Forms.TextBox textBoxManageD2Param4;
+        private System.Windows.Forms.TextBox textBoxManageD2Param2;
+        private System.Windows.Forms.TextBox textBoxManageD2Param3;
+        private System.Windows.Forms.TextBox textBoxManageD2Param1;
+        private System.Windows.Forms.Label labelManageD2Param4Name;
+        private System.Windows.Forms.Label labelManageD2Param3Name;
+        private System.Windows.Forms.Label labelManageD2Param2Name;
+        private System.Windows.Forms.Label labelManageD2Param1Name;
+        private System.Windows.Forms.Label labelManageD2Name;
+        private System.Windows.Forms.TextBox textBoxManageD1Param4;
+        private System.Windows.Forms.TextBox textBoxManageD1Param2;
+        private System.Windows.Forms.TextBox textBoxManageD1Param3;
+        private System.Windows.Forms.TextBox textBoxManageD1Param1;
+        private System.Windows.Forms.Label labelManageD1Param4Name;
+        private System.Windows.Forms.Label labelManageD1Param3Name;
+        private System.Windows.Forms.Label labelManageD1Param2Name;
+        private System.Windows.Forms.Label labelManageD1Param1Name;
+        private System.Windows.Forms.Label labelManageD1Name;
+        private LidorSystems.IntegralUI.Containers.TabPage tabPageT0_2_1;
+        private LidorSystems.IntegralUI.Containers.TabPage tabPageT0_2_2;
+        private System.Windows.Forms.CheckBox checkBoxR1Aux2_01;
+        private System.Windows.Forms.Label labelRecipeName;
+        private System.Windows.Forms.TextBox textBoxRecipeName;
+        private System.Windows.Forms.CheckBox checkBoxM1Param1;
+        private System.Windows.Forms.TextBox textBoxM6Test;
+        private System.Windows.Forms.TextBox textBoxM5Test;
+        private System.Windows.Forms.TextBox textBoxM4Test;
+        private System.Windows.Forms.TextBox textBoxM3Test;
+        private System.Windows.Forms.TextBox textBoxM2Test;
+        private System.Windows.Forms.TextBox textBoxM1Test;
+        private System.Windows.Forms.RadioButton radioButtonFootOrderOpt1;
+        private System.Windows.Forms.GroupBox groupBoxRecipeM5;
+        private System.Windows.Forms.Label labelM5Param1;
+        private System.Windows.Forms.CheckBox checkBoxM5Param1;
+        private System.Windows.Forms.GroupBox groupBoxRecipeM6;
+        private System.Windows.Forms.Label labelM6Param1;
+        private System.Windows.Forms.CheckBox checkBoxM6Param1;
+        private System.Windows.Forms.GroupBox groupBoxRecipeM4;
+        private System.Windows.Forms.Label labelM4Param1;
+        private System.Windows.Forms.CheckBox checkBoxM4Param1;
+        private System.Windows.Forms.TextBox textBoxLaserLine2;
+        private System.Windows.Forms.TextBox textBoxLaserLine1;
+        private System.Windows.Forms.GroupBox groupBoxRecipeM3;
+        private System.Windows.Forms.Label labelM3Param1;
+        private System.Windows.Forms.TextBox textBoxTypeOrder;
+        private System.Windows.Forms.CheckBox checkBoxM3Param1;
+        private System.Windows.Forms.GroupBox groupBoxRecipeM2;
+        private System.Windows.Forms.Label labelM2Param1;
+        private System.Windows.Forms.CheckBox checkBoxM2Param1;
+        private System.Windows.Forms.GroupBox groupBoxRecipeM1;
+        private System.Windows.Forms.Label labelM1Param1;
+        private System.Windows.Forms.RadioButton radioButtonFootOrderOpt2;
+        private System.Windows.Forms.Label labelPadLaserLine2;
+        private System.Windows.Forms.Label labelPadLaserLine1;
+        private System.Windows.Forms.Label labelFootOrder;
+        private System.Windows.Forms.ImageList imageListRecipe;
+        private System.Windows.Forms.Button buttonAddNewRecipe;
     }
 }

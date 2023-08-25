@@ -392,5 +392,14 @@ namespace GUI
             SetPriorityToDataGridRow(1, Priority.normal);
             UpdateColorToDataGridRow();
         }
+
+        private void buttonAddNewRecipe_Click(object sender, EventArgs e)
+        {
+            if (textBoxRecipeName.Text.Length >= 0 && textBoxRecipeName.Text.Length < 4)
+            {
+                //todo
+                MessageBox.Show("recipe name not valid");
+            }
+        }
     }
 }

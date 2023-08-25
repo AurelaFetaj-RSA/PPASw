@@ -312,128 +312,228 @@ namespace GUI
                 AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padLaser, "error sending " + readResult.NodeString);
             }
         }
+        private async void checkBoxM1Inclusion_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM1Inclusion";
+                chkValue = (checkBoxM1Inclusion.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM1Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM1Inclusion.ImageIndex = 2;
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
+                }
+            }
+            else
+            {
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "system offline");
+            }
+        }
         private async void checkBoxM2Inclusion_CheckStateChanged(object sender, EventArgs e)
         {
-            string keyToSend = null;
-            bool chkValue = false;
-
-             //todo: to remove once initialized
-            keyToSend = "pcM2Inclusion";
-            chkValue = (checkBoxM2Inclusion.CheckState == CheckState.Checked) ? true : false;
-
-            var sendResult = await ccService.Send(keyToSend, chkValue);
-            checkBoxM2Inclusion.Image = null;
-            if (sendResult.OpcResult)
+            if (ccService.ClientIsConnected)
             {
-                checkBoxM2Inclusion.BackgroundImage = (chkValue) ? imageListMIncEsc.Images[0] : imageListMIncEsc.Images[1];
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM2Inclusion";
+                chkValue = (checkBoxM2Inclusion.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM2Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM2Inclusion.ImageIndex = 2;
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintInt, "padprint int offline");
+                }
             }
-            else checkBoxM2Inclusion.BackgroundImage = imageListMIncEsc.Images[2];
+            else
+            {
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintInt, "system offline");
+            }
+        }
+        private async void checkBoxM3Inclusion_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM3Inclusion";
+                chkValue = (checkBoxM3Inclusion.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM3Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM3Inclusion.ImageIndex = 2;
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintExt, "padprint ext offline");
+                }
+            }
+            else
+            {
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintExt, "system offline");
+            }
+        }
+        private async void checkBoxM4Inclusion_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM4Inclusion";
+                chkValue = (checkBoxM4Inclusion.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM4Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM4Inclusion.ImageIndex = 2;
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padLaser, "padlaser offline");
+                }
+            }
+            else
+            {
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padLaser, "system offline");
+            }
+        }
+        private async void checkBoxM5Inclusion_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM5Inclusion";
+                chkValue = (checkBoxM5Inclusion.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM5Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM5Inclusion.ImageIndex = 2;
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.manipulator, "manipulator offline");
+                }
+            }
+            else
+            {
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.manipulator, "system offline");
+            }
+        }
+        private async void checkBoxM6Inclusion_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM6Inclusion";
+                chkValue = (checkBoxM6Inclusion.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM6Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM6Inclusion.ImageIndex = 2;
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.oven, "oven offline");
+                }
+            }
+            else
+            {
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.oven, "system offline");
+            }
         }
 
-        //private async void checkBoxM1Inclusion_CheckStateChanged(object sender, EventArgs e)
-        //{
-        //    string keyToSend = null;
-        //    bool chkValue = false;
+        private void checkBoxM1Param1_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool chkValue = false;
 
-        //    checkBoxM1Inclusion.Text = ""; //todo: to remove once initialized
-        //    keyToSend = "pcM1Inclusion";
-        //    chkValue = (checkBoxM1Inclusion.CheckState == CheckState.Checked) ? true : false;
+            chkValue = (checkBoxM1Param1.CheckState == CheckState.Checked) ? true : false;
 
-        //    var sendResult = await ccService.Send(keyToSend, chkValue);
-        //    if (sendResult.OpcResult)
-        //    {
-        //        checkBoxM1Inclusion.BackgroundImage = (chkValue) ? imageListMIncEsc.Images[0] : imageListMIncEsc.Images[1];
-        //    }
-        //    else checkBoxM1Inclusion.BackgroundImage = imageListMIncEsc.Images[2];
-        //}
+            checkBoxM1Param1.ImageIndex = (chkValue) ? 0 : 1;
+            labelM1Param1.Text = (chkValue) ? "on" : "off";
+        }
 
-        //private async void checkBoxM2Inclusion_CheckStateChanged(object sender, EventArgs e)
-        //{
-        //    string keyToSend = null;
-        //    bool chkValue = false;
+        private void checkBoxM2Param1_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool chkValue = false;
 
-        //    checkBoxM2Inclusion.Text = ""; //todo: to remove once initialized
-        //    keyToSend = "pcM2Inclusion";
-        //    chkValue = (checkBoxM2Inclusion.CheckState == CheckState.Checked) ? true : false;
+            chkValue = (checkBoxM2Param1.CheckState == CheckState.Checked) ? true : false;
 
-        //    var sendResult = await ccService.Send(keyToSend, chkValue);
-        //    if (sendResult.OpcResult)
-        //    {
-        //        checkBoxM2Inclusion.BackgroundImage = (chkValue) ? imageListMIncEsc.Images[0] : imageListMIncEsc.Images[1];
-        //    }
-        //    else checkBoxM2Inclusion.BackgroundImage = imageListMIncEsc.Images[2];
-        //}
+            checkBoxM2Param1.ImageIndex = (chkValue) ? 0 : 1;
+            labelM2Param1.Text = (chkValue) ? "on" : "off";
+        }
 
-        //private async void checkBoxM3Inclusion_CheckStateChanged(object sender, EventArgs e)
-        //{
-        //    string keyToSend = null;
-        //    bool chkValue = false;
+        private void checkBoxM3Param1_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool chkValue = false;
 
-        //    checkBoxM3Inclusion.Text = ""; //todo: to remove once initialized
-        //    keyToSend = "pcM3Inclusion";
-        //    chkValue = (checkBoxM3Inclusion.CheckState == CheckState.Checked) ? true : false;
+            chkValue = (checkBoxM3Param1.CheckState == CheckState.Checked) ? true : false;
 
-        //    var sendResult = await ccService.Send(keyToSend, chkValue);
-        //    if (sendResult.OpcResult)
-        //    {
-        //        checkBoxM3Inclusion.BackgroundImage = (chkValue) ? imageListMIncEsc.Images[0] : imageListMIncEsc.Images[1];
-        //    }
-        //    else checkBoxM3Inclusion.BackgroundImage = imageListMIncEsc.Images[2];
-        //}
+            checkBoxM3Param1.ImageIndex = (chkValue) ? 0 : 1;
+            labelM3Param1.Text = (chkValue) ? "on" : "off";
+        }
 
-        //private async void checkBoxM4Inclusion_CheckStateChanged(object sender, EventArgs e)
-        //{
-        //    string keyToSend = null;
-        //    bool chkValue = false;
+        private void checkBoxM4Param1_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool chkValue = false;
 
-        //    checkBoxM4Inclusion.Text = ""; //todo: to remove once initialized
-        //    keyToSend = "pcM4Inclusion";
-        //    chkValue = (checkBoxM4Inclusion.CheckState == CheckState.Checked) ? true : false;
+            chkValue = (checkBoxM4Param1.CheckState == CheckState.Checked) ? true : false;
 
-        //    var sendResult = await ccService.Send(keyToSend, chkValue);
-        //    if (sendResult.OpcResult)
-        //    {
-        //        checkBoxM4Inclusion.BackgroundImage = (chkValue) ? imageListMIncEsc.Images[0] : imageListMIncEsc.Images[1];
-        //    }
-        //    else checkBoxM4Inclusion.BackgroundImage = imageListMIncEsc.Images[2];
-        //}
+            checkBoxM4Param1.ImageIndex = (chkValue) ? 0 : 1;
+            labelM4Param1.Text = (chkValue) ? "on" : "off";
+        }
 
-        //private async void checkBoxM5Inclusion_CheckStateChanged(object sender, EventArgs e)
-        //{
-        //    string keyToSend = null;
-        //    bool chkValue = false;
+        private void checkBoxM5Param1_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool chkValue = false;
 
-        //    checkBoxM5Inclusion.Text = ""; //todo: to remove once initialized
-        //    keyToSend = "pcM5Inclusion";
-        //    chkValue = (checkBoxM5Inclusion.CheckState == CheckState.Checked) ? true : false;
+            chkValue = (checkBoxM5Param1.CheckState == CheckState.Checked) ? true : false;
 
-        //    var sendResult = await ccService.Send(keyToSend, chkValue);
-        //    if (sendResult.OpcResult)
-        //    {
-        //        checkBoxM5Inclusion.BackgroundImage = (chkValue) ? imageListMIncEsc.Images[0] : imageListMIncEsc.Images[1];
-        //    }
-        //    else checkBoxM5Inclusion.BackgroundImage = imageListMIncEsc.Images[2];
-        //}
+            checkBoxM5Param1.ImageIndex = (chkValue) ? 0 : 1;
+            labelM5Param1.Text = (chkValue) ? "on" : "off";
+        }
 
-        //private async void checkBoxM6Inclusion_CheckStateChanged(object sender, EventArgs e)
-        //{
-        //    string keyToSend = null;
-        //    bool chkValue = false;
+        private void checkBoxM6Param1_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool chkValue = false;
 
-        //    checkBoxM6Inclusion.Text = ""; //todo: to remove once initialized
-        //    keyToSend = "pcM6Inclusion";
-        //    chkValue = (checkBoxM6Inclusion.CheckState == CheckState.Checked) ? true : false;
+            chkValue = (checkBoxM6Param1.CheckState == CheckState.Checked) ? true : false;
 
-        //    var sendResult = await ccService.Send(keyToSend, chkValue);
-        //    if (sendResult.OpcResult)
-        //    {
-        //        checkBoxM6Inclusion.BackgroundImage = (chkValue) ? imageListMIncEsc.Images[0] : imageListMIncEsc.Images[1];
-        //    }
-        //    else checkBoxM6Inclusion.BackgroundImage = imageListMIncEsc.Images[2];
-        //}
-
-
-
+            checkBoxM6Param1.ImageIndex = (chkValue) ? 0 : 1;
+            labelM6Param1.Text = (chkValue) ? "on" : "off";
+        }
 
         private void tabPageT0_3_Paint(object sender, PaintEventArgs e)
         {

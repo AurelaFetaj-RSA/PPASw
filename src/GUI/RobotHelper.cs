@@ -621,6 +621,7 @@ namespace GUI
             WriteOnCheckBoxStartAsync(null, checkBoxM6Start);
             WriteOnCheckBoxPauseAsync(null, checkBoxM6Pause);
 
+
             //line status
 
             WriteOnToolStripAsync(false, toolStripStatusLabelSystem);
