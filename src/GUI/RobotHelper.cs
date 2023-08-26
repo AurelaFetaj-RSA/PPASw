@@ -166,7 +166,6 @@ namespace GUI
             {
                 if (ccService.ClientIsConnected)
                 {
-
                     #region (* machine/line status *)
                     /*machine status
                      * = 0 -> emergency
@@ -209,7 +208,7 @@ namespace GUI
                     readResult["pcM4Status"], readResult["pcM5Status"], readResult["pcM6Status"]);
                     #endregion
 
-                    #region(* system in pause *)
+                    #region(* machine pause status *)
                     keys = new List<string>()
                     {
                         "pcM1Pause",
@@ -280,27 +279,27 @@ namespace GUI
                     WriteOnToolStripAsync((LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]), toolStripStatusLabelSystem);
                     #endregion
 
-                    #region (* machine homing done *)
+                    #region (* machine homing done status *)
                     keys = new List<string>()
                     {
                         "pcM1HomingDone",
                         "pcM2HomingDone",
                         "pcM3HomingDone",
-                        "pcM4HomingDone",
+                        "pcM4HomingDone"
                         //"pcM5HomingDone",
-                        "pcM6HomingDone"
+                        //"pcM6HomingDone"
                     };
 
                     readResult = await ccService.Read(keys);
-                    //UpdateOPCUAMHomingDone(readResult["pcM1HomingDone"], lbLedM1HomingDone);
-                    //UpdateOPCUAMHomingDone(readResult["pcM2HomingDone"], lbLedM2HomingDone);
-                    //UpdateOPCUAMHomingDone(readResult["pcM3HomingDone"], lbLedM3HomingDone);
-                    //UpdateOPCUAMHomingDone(readResult["pcM4HomingDone"], lbLedM4HomingDone);
-                    //UpdateOPCUAMHomingDone(readResult["pcM5HomingDone"], lbLedM5HomingDone);
-                    //UpdateOPCUAMHomingDone(readResult["pcM6HomingDone"], lbLedM6HomingDone);
+                    UpdateOPCUAMHomingDone(readResult["pcM1HomingDone"], buttonM1HomingDone, labelM1HomingDone);
+                    UpdateOPCUAMHomingDone(readResult["pcM2HomingDone"], buttonM2HomingDone, labelM2HomingDone);
+                    UpdateOPCUAMHomingDone(readResult["pcM3HomingDone"], buttonM3HomingDone, labelM3HomingDone);
+                    UpdateOPCUAMHomingDone(readResult["pcM4HomingDone"], buttonM4HomingDone, labelM4HomingDone);
+                    //UpdateOPCUAMHomingDone(readResult["pcM5HomingDone"], buttonM5HomingDone, labelM5HomingDone);
+                    //UpdateOPCUAMHomingDone(readResult["pcM6HomingDone"], buttonM6HomingDone, labelM6HomingDone);
                     #endregion
 
-                    #region(* machine current vertical axis quote *9
+                    #region(* machine runtime vertical axis quote * )
                     keys = new List<string>()
                     {
                         "pcM1CurrentAxisQuote",
@@ -312,10 +311,10 @@ namespace GUI
                     };
 
                     readResult = await ccService.Read(keys);
-                    UpdateOPCUAM1CAQ(readResult["pcM1CurrentAxisQuote"]);
-                    UpdateOPCUAM2CAQ(readResult["pcM2CurrentAxisQuote"]);
-                    UpdateOPCUAM3CAQ(readResult["pcM3CurrentAxisQuote"]);
-                    UpdateOPCUAM4CAQ(readResult["pcM4CurrentAxisQuote"]);
+                    WriteOnLabelAsync(readResult["pcM1CurrentAxisQuote"], labelM1TeachAxisQuoteValue);
+                    WriteOnLabelAsync(readResult["pcM2CurrentAxisQuote"], labelM2TeachAxisQuoteValue);
+                    WriteOnLabelAsync(readResult["pcM3CurrentAxisQuote"], labelM3TeachAxisQuoteValue);
+                    WriteOnLabelAsync(readResult["pcM4CurrentAxisQuote"], labelM4TeachAxisQuoteValue);
                     #endregion
 
                     #region(* machine point reached - teach*)
@@ -336,6 +335,8 @@ namespace GUI
                     #region(* *)
 
                     #endregion
+
+
                     //manipulator digital input
                     //try
                     //{
@@ -438,7 +439,7 @@ namespace GUI
                 });
             }
         }
-        public void WriteOnCheckBoxPauseAsync(ClientResult cr, CheckBox chk)
+        public void WriteAsyncOnCheckBoxPause(ClientResult cr, CheckBox chk)
         {
             bool value = false;
             bool founded = false;
@@ -599,53 +600,33 @@ namespace GUI
             //machines status
             UpdateOPCUAMStatus(null, buttonM1Status, labelM1Status);
             WriteOnCheckBoxStartAsync(null, checkBoxM1Start);
-            WriteOnCheckBoxPauseAsync(null, checkBoxM1Pause);
+            WriteAsyncOnCheckBoxPause(null, checkBoxM1Pause);
 
             UpdateOPCUAMStatus(null, buttonM2Status, labelM2Status);
             WriteOnCheckBoxStartAsync(null, checkBoxM2Start);
-            WriteOnCheckBoxPauseAsync(null, checkBoxM2Pause);
+            WriteAsyncOnCheckBoxPause(null, checkBoxM2Pause);
 
             UpdateOPCUAMStatus(null, buttonM3Status, labelM3Status);
             WriteOnCheckBoxStartAsync(null, checkBoxM3Start);
-            WriteOnCheckBoxPauseAsync(null, checkBoxM3Pause);
+            WriteAsyncOnCheckBoxPause(null, checkBoxM3Pause);
 
             UpdateOPCUAMStatus(null, buttonM4Status, labelM4Status);
             WriteOnCheckBoxStartAsync(null, checkBoxM4Start);
-            WriteOnCheckBoxPauseAsync(null, checkBoxM4Pause);
+            WriteAsyncOnCheckBoxPause(null, checkBoxM4Pause);
 
             UpdateOPCUAMStatus(null, buttonM5Status, labelM5Status);
             WriteOnCheckBoxStartAsync(null, checkBoxM5Start);
-            WriteOnCheckBoxPauseAsync(null, checkBoxM5Pause);
+            WriteAsyncOnCheckBoxPause(null, checkBoxM5Pause);
 
             UpdateOPCUAMStatus(null, buttonM6Status, labelM6Status);
             WriteOnCheckBoxStartAsync(null, checkBoxM6Start);
-            WriteOnCheckBoxPauseAsync(null, checkBoxM6Pause);
-
+            WriteAsyncOnCheckBoxPause(null, checkBoxM6Pause);
 
             //line status
-
             WriteOnToolStripAsync(false, toolStripStatusLabelSystem);
 
             WriteAsyncSystemStartStopCheckBox(0, checkBoxStartStop);
             WriteAsyncSystemPauseCheckBox(0, checkBoxPause);
-
-            //UpdateOPCUAMHomingDone(null, lbLedM1HomingDone);
-            //UpdateOPCUAMHomingDone(null, lbLedM2HomingDone);
-            //UpdateOPCUAMHomingDone(null, lbLedM3HomingDone);
-            //UpdateOPCUAMHomingDone(null, lbLedM4HomingDone);
-            //UpdateOPCUAMHomingDone(null, lbLedM5HomingDone);
-            //UpdateOPCUAMHomingDone(null, lbLedM6HomingDone);
-
-            //UpdateOPCUAMHomingDone(null, lbLedM1HomingDone);
-            //UpdateOPCUAMHomingDone(null, lbLedM2HomingDone);
-            //UpdateOPCUAMHomingDone(null, lbLedM3HomingDone);
-            //UpdateOPCUAMHomingDone(null, lbLedM4HomingDone);
-            //UpdateOPCUAMHomingDone(null, lbLedM5HomingDone);
-            //UpdateOPCUAMHomingDone(null, lbLedM6HomingDone);
-            UpdateOPCUAM1CAQ(null);
-            UpdateOPCUAM2CAQ(null);
-            UpdateOPCUAM3CAQ(null);
-            UpdateOPCUAM4CAQ(null);
 
             pictureBoxM1PLCNode.Image = imageListNodes.Images[1];
             WriteOnLabelAsync(labelM1Node, "node offline");
@@ -659,12 +640,26 @@ namespace GUI
             WriteOnLabelAsync(labelM5Node, "node offline");
 
             pictureBoxIOTNode.Image = imageListNodes.Images[3];
-            
+
             lbLedM1PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
             lbLedM2PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
             lbLedM3PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
             lbLedM4PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
             lbLedM5PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+
+            UpdateOPCUAMHomingDone(null, buttonM1HomingDone, labelM1HomingDone);
+            UpdateOPCUAMHomingDone(null, buttonM2HomingDone, labelM2HomingDone);
+            UpdateOPCUAMHomingDone(null, buttonM3HomingDone, labelM3HomingDone);
+            UpdateOPCUAMHomingDone(null, buttonM4HomingDone, labelM4HomingDone);
+            //UpdateOPCUAMHomingDone(readResult["pcM5HomingDone"], buttonM5HomingDone, labelM5HomingDone);
+            //UpdateOPCUAMHomingDone(readResult["pcM6HomingDone"], buttonM6HomingDone, labelM6HomingDone);
+
+            WriteOnLabelAsync(null, labelM1TeachAxisQuoteValue);
+            WriteOnLabelAsync(null, labelM2TeachAxisQuoteValue);
+            WriteOnLabelAsync(null, labelM3TeachAxisQuoteValue);
+            WriteOnLabelAsync(null, labelM4TeachAxisQuoteValue);
+            //WriteOnLabelAsync(null, labelM3TeachAxisQuoteValue);
+            //WriteOnLabelAsync(null, labelM4TeachAxisQuoteValue);
         }
 
         private void UpdateOPCUAMNodeConnection(ClientResult cr, bool oldValue, ref bool lBitTimeout, ref int lBitCounter, PictureBox pict, Label lbl)
@@ -864,27 +859,7 @@ namespace GUI
                     }
                 }
             }
-        }
-
-        public void UpdateOPCUAM1CAQ(ClientResult cr)
-        {
-            // WriteOnLabelAsync(cr, labelM1TeachAxisQuoteValue);
-        }
-
-        public void UpdateOPCUAM2CAQ(ClientResult cr)
-        {
-            WriteOnLabelAsync(cr, labelM2TeachAxisQuoteValue);
-        }
-
-        public void UpdateOPCUAM3CAQ(ClientResult cr)
-        {
-            WriteOnLabelAsync(cr, labelM3TeachAxisQuoteValue);
-        }
-
-        public void UpdateOPCUAM4CAQ(ClientResult cr)
-        {
-            WriteOnLabelAsync(cr, labelM4TeachAxisQuoteValue);
-        }
+        }      
 
         public async void UpdateOPCUAMKeepAlive(ClientResult cr, LBSoft.IndustrialCtrls.Leds.LBLed lblLed)
         {
@@ -933,7 +908,7 @@ namespace GUI
 
                 if (value == 1)
                 {
-                    btn.BackColor = Color.Blue;
+                    btn.BackColor = Color.FromArgb(59, 130, 246);
                 }
 
                 if (value == 2)
@@ -961,7 +936,7 @@ namespace GUI
 
         public void ManageOPCUAMBtnPause(ClientResult cr, CheckBox btn)
         {
-            WriteOnCheckBoxPauseAsync(cr, btn);
+            WriteAsyncOnCheckBoxPause(cr, btn);
         }
 
         public void ManageStartStatus(ClientResult crM1, ClientResult crM2, ClientResult crM3, ClientResult crM4, ClientResult crM5, ClientResult crM6)
@@ -983,9 +958,7 @@ namespace GUI
                 }
             }
         }
-
       
-
         public void ManagePauseStatus(ClientResult crM1, ClientResult crM2, ClientResult crM3, ClientResult crM4, ClientResult crM5, ClientResult crM6)
         {
             if ((crM1 == null) || (crM2 == null) || (crM3 == null) || (crM4 == null) || (crM5 == null) || (crM6 == null) ||
@@ -1092,34 +1065,28 @@ namespace GUI
         //        });
         //    }
         //}
-
-
-
-        public void UpdateOPCUAMHomingDone(ClientResult cr, LBSoft.IndustrialCtrls.Leds.LBLed lblLed)
+        public void UpdateOPCUAMHomingDone(ClientResult cr, Button btn, Label lbl)
         {
             if ((cr == null) || (cr.OpcResult == false))
             {
-                lblLed.LedColor = Color.Black;
-                lblLed.Label = "offline";
+                btn.BackColor = Color.Black;
+                WriteOnLabelAsync(lbl, "offline");
             }
             else
             {
                 if (!(bool)cr.Value)
                 {
-                    lblLed.LedColor = Color.Red;
-                    lblLed.Label = "homing not done";
+                    btn.BackColor = Color.Red;
+                    WriteOnLabelAsync(lbl, "homing not done");
                 }
 
                 else
                 {
-                    lblLed.LedColor = Color.FromArgb(195, 222, 155);
-                    lblLed.Label = "homing done";
+                    btn.BackColor = Color.FromArgb(107, 227, 162);
+                    WriteOnLabelAsync(lbl, "homing done");
                 }
             }
         }
-
-
-   
 
         #region (* send M1 teaching package *)
         public async void OPCUAM1TeachPckSend(short pointID, short[] pointQuote, short[] pointSpeed, bool[] pointReg)

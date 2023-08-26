@@ -118,10 +118,10 @@ namespace GUI
             LidorSystems.IntegralUI.Containers.Style.TabStripStyle tabStripStyle4 = new LidorSystems.IntegralUI.Containers.Style.TabStripStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle5 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolTipStyle toolTipStyle5 = new LidorSystems.IntegralUI.Controls.Style.ToolTipStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle25 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Automatic");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("RSA");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Automatic");
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle25 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("RSA");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Recipies");
             LidorSystems.IntegralUI.Style.ControlColorStyle controlColorStyle1 = new LidorSystems.IntegralUI.Style.ControlColorStyle();
@@ -4386,9 +4386,9 @@ namespace GUI
             // 
             // tabControlT0
             // 
-            this.tabControlT0.Controls.Add(this.tabPageT0_1);
-            this.tabControlT0.Controls.Add(this.tabPageT0_2);
             this.tabControlT0.Controls.Add(this.tabPageT0_3);
+            this.tabControlT0.Controls.Add(this.tabPageT0_2);
+            this.tabControlT0.Controls.Add(this.tabPageT0_1);
             this.tabControlT0.Cursor = System.Windows.Forms.Cursors.Default;
             controlFormatStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlT0.FormatStyle = controlFormatStyle5;
@@ -4401,7 +4401,7 @@ namespace GUI
             this.tabPageT0_2,
             this.tabPageT0_3});
             this.tabControlT0.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlT0.SelectedPage = this.tabPageT0_1;
+            this.tabControlT0.SelectedPage = this.tabPageT0_3;
             this.tabControlT0.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabControlT0.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Left;
             tabStripStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
@@ -4421,15 +4421,15 @@ namespace GUI
             this.tabPageT0_1.Controls.Add(this.groupBoxM4);
             this.tabPageT0_1.Controls.Add(this.groupBoxM2);
             this.tabPageT0_1.Controls.Add(this.groupBoxM1);
-            tabPageFormatStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT0_1.FormatStyle = tabPageFormatStyle25;
+            tabPageFormatStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT0_1.FormatStyle = tabPageFormatStyle27;
             resources.ApplyResources(this.tabPageT0_1, "tabPageT0_1");
             this.tabPageT0_1.Name = "tabPageT0_1";
             this.tabPageT0_1.ParentPage = null;
-            treeNode8.Name = "";
-            treeNode8.Tag = this.tabPageT0_1;
-            resources.ApplyResources(treeNode8, "treeNode8");
-            this.tabPageT0_1.Tag = treeNode8;
+            treeNode10.Name = "";
+            treeNode10.Tag = this.tabPageT0_1;
+            resources.ApplyResources(treeNode10, "treeNode10");
+            this.tabPageT0_1.Tag = treeNode10;
             this.tabPageT0_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_1.TextBounds")));
             this.tabPageT0_1.TextSize = new System.Drawing.SizeF(105.7493F, 25.4663F);
             // 
@@ -5103,15 +5103,15 @@ namespace GUI
             // 
             this.tabPageT0_3.Controls.Add(this.groupBoxKeepAliveFromPlc);
             this.tabPageT0_3.Controls.Add(this.groupBoxKeepAliveToPlc);
-            tabPageFormatStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT0_3.FormatStyle = tabPageFormatStyle27;
+            tabPageFormatStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT0_3.FormatStyle = tabPageFormatStyle25;
             resources.ApplyResources(this.tabPageT0_3, "tabPageT0_3");
             this.tabPageT0_3.Name = "tabPageT0_3";
             this.tabPageT0_3.ParentPage = null;
-            treeNode10.Name = "";
-            treeNode10.Tag = this.tabPageT0_3;
-            resources.ApplyResources(treeNode10, "treeNode10");
-            this.tabPageT0_3.Tag = treeNode10;
+            treeNode8.Name = "";
+            treeNode8.Tag = this.tabPageT0_3;
+            resources.ApplyResources(treeNode8, "treeNode8");
+            this.tabPageT0_3.Tag = treeNode8;
             this.tabPageT0_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_3.TextBounds")));
             this.tabPageT0_3.TextSize = new System.Drawing.SizeF(46.69904F, 25.4663F);
             this.tabPageT0_3.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageT0_3_Paint);
@@ -5352,14 +5352,14 @@ namespace GUI
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Controls.Add(this.tabPageConsole);
-            this.tabControlMain.Controls.Add(this.tabPageHide);
-            this.tabControlMain.Controls.Add(this.tabPageHelp);
-            this.tabControlMain.Controls.Add(this.tabPageSettings);
             this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
             this.tabControlMain.Controls.Add(this.tabPage4);
             this.tabControlMain.Controls.Add(this.tabPageRecipe);
+            this.tabControlMain.Controls.Add(this.tabPageSettings);
+            this.tabControlMain.Controls.Add(this.tabPageMain);
+            this.tabControlMain.Controls.Add(this.tabPageHide);
+            this.tabControlMain.Controls.Add(this.tabPageHelp);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlMain, "tabControlMain");
             controlFormatStyle6.BorderCornerRadius = 5;
@@ -5387,7 +5387,7 @@ namespace GUI
             this.tabPageHelp,
             this.tabPageHide});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageMain;
+            this.tabControlMain.SelectedPage = this.tabPageConsole;
             tabPageColorStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle27.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle27.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));

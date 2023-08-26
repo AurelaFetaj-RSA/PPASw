@@ -401,5 +401,22 @@ namespace GUI
                 MessageBox.Show("recipe name not valid");
             }
         }
+
+        private async void buttonM2Home_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2Homing";
+
+            var readResult = await ccService.Send(keyToSend, true);
+
+            if (readResult.OpcResult)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+
     }
 }
