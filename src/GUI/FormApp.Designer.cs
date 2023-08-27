@@ -42,6 +42,8 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle3 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle4 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle5 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle4 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle6 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle7 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -51,8 +53,8 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle6 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle12 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle22 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle7 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle13 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle14 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -94,50 +96,51 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle41 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle18 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle42 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle51 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle52 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle19 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle43 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle44 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle50 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle51 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle20 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle45 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle47 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle48 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle21 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle46 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle22 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle47 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle23 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle48 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle49 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle50 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle24 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle52 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle62 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle25 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle53 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle63 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle25 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle54 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle61 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle55 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle62 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle56 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle57 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle58 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle28 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle59 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle28 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle60 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle61 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Style.ControlColorStyle controlColorStyle1 = new LidorSystems.IntegralUI.Style.ControlColorStyle();
             LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle1 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle63 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle64 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Controls.Style.CommandButtonColorStyle commandButtonColorStyle1 = new LidorSystems.IntegralUI.Controls.Style.CommandButtonColorStyle();
             LidorSystems.IntegralUI.Controls.Style.CommandButtonColorStyle commandButtonColorStyle2 = new LidorSystems.IntegralUI.Controls.Style.CommandButtonColorStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemColorStyle toolItemColorStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolItemColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle29 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle64 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle65 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Controls.Style.CommandButtonColorStyle commandButtonColorStyle3 = new LidorSystems.IntegralUI.Controls.Style.CommandButtonColorStyle();
             LidorSystems.IntegralUI.Controls.Style.CommandButtonColorStyle commandButtonColorStyle4 = new LidorSystems.IntegralUI.Controls.Style.CommandButtonColorStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemColorStyle toolItemColorStyle2 = new LidorSystems.IntegralUI.Controls.Style.ToolItemColorStyle();
@@ -145,27 +148,38 @@
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolTipStyle toolTipStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolTipStyle();
             this.tabPageT3_1 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.textBoxM2Separator = new System.Windows.Forms.TextBox();
+            this.groupBoxM2Print = new System.Windows.Forms.GroupBox();
+            this.buttonM2PrintCycle = new System.Windows.Forms.Button();
+            this.lbLed6 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.groupBoxM2Servo = new System.Windows.Forms.GroupBox();
+            this.buttonM2ResetServo = new System.Windows.Forms.Button();
+            this.lbLed5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.groupBoxM2Constrast = new System.Windows.Forms.GroupBox();
+            this.buttonM2ContrastOpening = new System.Windows.Forms.Button();
+            this.buttonM2ContrastClosing = new System.Windows.Forms.Button();
+            this.lbLed3 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.groupBoxM2CenteringClamp = new System.Windows.Forms.GroupBox();
+            this.buttonM2CenteringClampsOpening = new System.Windows.Forms.Button();
+            this.buttonM2CenteringClampsClosing = new System.Windows.Forms.Button();
+            this.lbLed4 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.groupBoxM2BigClamp = new System.Windows.Forms.GroupBox();
+            this.buttonM2BigClampOpening = new System.Windows.Forms.Button();
+            this.buttonM2BigClampClosing = new System.Windows.Forms.Button();
+            this.lbLed1 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.groupBoxM2SmallClamp = new System.Windows.Forms.GroupBox();
+            this.buttonM2SmallClampOpening = new System.Windows.Forms.Button();
+            this.buttonM2SmallClampClosing = new System.Windows.Forms.Button();
+            this.lbLed2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.checkBoxM2ExitBelt = new System.Windows.Forms.CheckBox();
             this.imageListBelt = new System.Windows.Forms.ImageList(this.components);
             this.checkBoxM2WorkingBelt = new System.Windows.Forms.CheckBox();
-            this.lbLed2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed1 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.buttonM2PrintCycle = new System.Windows.Forms.Button();
-            this.buttonM2ResetServo = new System.Windows.Forms.Button();
-            this.buttonM2ContrastClosing = new System.Windows.Forms.Button();
-            this.buttonM2ContrastOpening = new System.Windows.Forms.Button();
-            this.buttonM2CenteringClampsClosing = new System.Windows.Forms.Button();
-            this.buttonM2CenteringClampsOpening = new System.Windows.Forms.Button();
-            this.buttonM2BigClampClosing = new System.Windows.Forms.Button();
-            this.buttonM2BigClampOpening = new System.Windows.Forms.Button();
-            this.buttonM2SmallClampClosing = new System.Windows.Forms.Button();
-            this.buttonM2SmallClampOpening = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBoxM2Homing = new System.Windows.Forms.GroupBox();
             this.labelM2HomingDone = new System.Windows.Forms.Label();
             this.buttonM2HomingDone = new System.Windows.Forms.Button();
             this.buttonM2Home = new System.Windows.Forms.Button();
             this.buttonM2ResetHome = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBoxM2StartQuote = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.buttonM2StartQuote = new System.Windows.Forms.Button();
@@ -185,14 +199,24 @@
             this.ColumnM2Register = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ColumnM2StartQuote = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.comboBoxM2TeachModelName = new System.Windows.Forms.ComboBox();
             this.buttonM2TeachDeleteProgram = new System.Windows.Forms.Button();
             this.comboBoxM2TeachProgramList = new System.Windows.Forms.ComboBox();
             this.buttonM2TeachNewProgram = new System.Windows.Forms.Button();
             this.buttonM2TeachSaveProgram = new System.Windows.Forms.Button();
             this.buttonM2TeachLoadProgram = new System.Windows.Forms.Button();
             this.tabPageT3 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.contextMenuStripT3 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItemT3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripComboBoxT3 = new System.Windows.Forms.ToolStripComboBox();
             this.tabPageT3_2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.comboBoxM2TestProgramList = new System.Windows.Forms.ComboBox();
+            this.buttonM2TestSaveProgram = new System.Windows.Forms.Button();
+            this.buttonM2TestLoadProgram = new System.Windows.Forms.Button();
+            this.dataGridViewM2TestPoints = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbButtonM2StartTest = new LBSoft.IndustrialCtrls.Buttons.LBButton();
             this.tabPageT3_3 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.lbLed1040M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed1039M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -309,7 +333,9 @@
             this.tabPageT6 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT7 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT0_1 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.comboBoxAutoModelNameLst = new System.Windows.Forms.ComboBox();
+            this.contextMenuStripT0 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripMenuItemT0 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripComboBoxT0 = new System.Windows.Forms.ToolStripComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewMessages = new System.Windows.Forms.DataGridView();
             this.datetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -502,25 +528,23 @@
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
             this.imageListMainControl = new System.Windows.Forms.ImageList(this.components);
             this.imageListNodes = new System.Windows.Forms.ImageList(this.components);
-            this.lbLed3 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed4 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed6 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPageT3_1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBoxM2Print.SuspendLayout();
+            this.groupBoxM2Servo.SuspendLayout();
+            this.groupBoxM2Constrast.SuspendLayout();
+            this.groupBoxM2CenteringClamp.SuspendLayout();
+            this.groupBoxM2BigClamp.SuspendLayout();
+            this.groupBoxM2SmallClamp.SuspendLayout();
+            this.groupBoxM2Homing.SuspendLayout();
+            this.groupBoxM2StartQuote.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualQuote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualSpeed)).BeginInit();
             this.groupBoxM2Jog.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2JogSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TeachPoints)).BeginInit();
+            this.contextMenuStripT3.SuspendLayout();
+            this.tabPageT3_2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TestPoints)).BeginInit();
             this.tabPageT3_3.SuspendLayout();
             this.tabPageT4_1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -533,6 +557,7 @@
             this.tabPageT5_1.SuspendLayout();
             this.tabPageT2.SuspendLayout();
             this.tabPageT0_1.SuspendLayout();
+            this.contextMenuStripT0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMessages)).BeginInit();
             this.statusStripT0.SuspendLayout();
             this.groupBoxM6.SuspendLayout();
@@ -563,30 +588,24 @@
             this.tabPageT1_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).BeginInit();
             this.tabControlMain.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPageT3_1
             // 
-            this.tabPageT3_1.Controls.Add(this.textBox1);
-            this.tabPageT3_1.Controls.Add(this.groupBox10);
-            this.tabPageT3_1.Controls.Add(this.groupBox9);
-            this.tabPageT3_1.Controls.Add(this.groupBox8);
-            this.tabPageT3_1.Controls.Add(this.groupBox7);
-            this.tabPageT3_1.Controls.Add(this.groupBox6);
-            this.tabPageT3_1.Controls.Add(this.groupBox5);
+            this.tabPageT3_1.ContextMenuStrip = this.contextMenuStripT3;
+            this.tabPageT3_1.Controls.Add(this.textBoxM2Separator);
+            this.tabPageT3_1.Controls.Add(this.groupBoxM2Print);
+            this.tabPageT3_1.Controls.Add(this.groupBoxM2Servo);
+            this.tabPageT3_1.Controls.Add(this.groupBoxM2Constrast);
+            this.tabPageT3_1.Controls.Add(this.groupBoxM2CenteringClamp);
+            this.tabPageT3_1.Controls.Add(this.groupBoxM2BigClamp);
+            this.tabPageT3_1.Controls.Add(this.groupBoxM2SmallClamp);
             this.tabPageT3_1.Controls.Add(this.checkBoxM2ExitBelt);
             this.tabPageT3_1.Controls.Add(this.checkBoxM2WorkingBelt);
-            this.tabPageT3_1.Controls.Add(this.groupBox3);
-            this.tabPageT3_1.Controls.Add(this.groupBox2);
+            this.tabPageT3_1.Controls.Add(this.groupBoxM2Homing);
+            this.tabPageT3_1.Controls.Add(this.groupBoxM2StartQuote);
             this.tabPageT3_1.Controls.Add(this.groupBoxM2Jog);
             this.tabPageT3_1.Controls.Add(this.dataGridViewM2TeachPoints);
-            this.tabPageT3_1.Controls.Add(this.comboBoxM2TeachModelName);
             this.tabPageT3_1.Controls.Add(this.buttonM2TeachDeleteProgram);
             this.tabPageT3_1.Controls.Add(this.comboBoxM2TeachProgramList);
             this.tabPageT3_1.Controls.Add(this.buttonM2TeachNewProgram);
@@ -620,69 +639,252 @@
             this.tabPageT3_1.TextSize = new System.Drawing.SizeF(50.55989F, 21.44531F);
             this.tabPageT3_1.UseParentTabStripPlacement = false;
             // 
-            // checkBoxM2ExitBelt
+            // textBoxM2Separator
             // 
-            this.checkBoxM2ExitBelt.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBoxM2ExitBelt.AutoSize = true;
-            this.checkBoxM2ExitBelt.FlatAppearance.BorderSize = 5;
-            this.checkBoxM2ExitBelt.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxM2ExitBelt.ImageIndex = 3;
-            this.checkBoxM2ExitBelt.ImageList = this.imageListBelt;
-            this.checkBoxM2ExitBelt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM2ExitBelt.Location = new System.Drawing.Point(595, 635);
-            this.checkBoxM2ExitBelt.Name = "checkBoxM2ExitBelt";
-            this.checkBoxM2ExitBelt.Size = new System.Drawing.Size(105, 70);
-            this.checkBoxM2ExitBelt.TabIndex = 266;
-            this.checkBoxM2ExitBelt.Text = "exit";
-            this.checkBoxM2ExitBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.checkBoxM2ExitBelt.UseVisualStyleBackColor = true;
-            this.checkBoxM2ExitBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM2ExitBelt_CheckStateChanged);
+            this.textBoxM2Separator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(190)))), ((int)(((byte)(186)))));
+            this.textBoxM2Separator.Enabled = false;
+            this.textBoxM2Separator.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxM2Separator.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(133)))), ((int)(((byte)(46)))));
+            this.textBoxM2Separator.Location = new System.Drawing.Point(10, 340);
+            this.textBoxM2Separator.Name = "textBoxM2Separator";
+            this.textBoxM2Separator.Size = new System.Drawing.Size(575, 27);
+            this.textBoxM2Separator.TabIndex = 296;
+            this.textBoxM2Separator.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // imageListBelt
+            // groupBoxM2Print
             // 
-            this.imageListBelt.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListBelt.ImageStream")));
-            this.imageListBelt.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListBelt.Images.SetKeyName(0, "working_belt_on.png");
-            this.imageListBelt.Images.SetKeyName(1, "working_belt_off.png");
-            this.imageListBelt.Images.SetKeyName(2, "exit_belt_on.png");
-            this.imageListBelt.Images.SetKeyName(3, "exit_belt_off.png");
+            this.groupBoxM2Print.Controls.Add(this.buttonM2PrintCycle);
+            this.groupBoxM2Print.Controls.Add(this.lbLed6);
+            this.groupBoxM2Print.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxM2Print.Location = new System.Drawing.Point(305, 625);
+            this.groupBoxM2Print.Name = "groupBoxM2Print";
+            this.groupBoxM2Print.Size = new System.Drawing.Size(280, 80);
+            this.groupBoxM2Print.TabIndex = 295;
+            this.groupBoxM2Print.TabStop = false;
+            this.groupBoxM2Print.Text = "print";
             // 
-            // checkBoxM2WorkingBelt
+            // buttonM2PrintCycle
             // 
-            this.checkBoxM2WorkingBelt.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBoxM2WorkingBelt.AutoSize = true;
-            this.checkBoxM2WorkingBelt.FlatAppearance.BorderSize = 5;
-            this.checkBoxM2WorkingBelt.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxM2WorkingBelt.ImageIndex = 1;
-            this.checkBoxM2WorkingBelt.ImageList = this.imageListBelt;
-            this.checkBoxM2WorkingBelt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM2WorkingBelt.Location = new System.Drawing.Point(724, 635);
-            this.checkBoxM2WorkingBelt.Name = "checkBoxM2WorkingBelt";
-            this.checkBoxM2WorkingBelt.Size = new System.Drawing.Size(131, 70);
-            this.checkBoxM2WorkingBelt.TabIndex = 265;
-            this.checkBoxM2WorkingBelt.Text = "working";
-            this.checkBoxM2WorkingBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.checkBoxM2WorkingBelt.UseVisualStyleBackColor = true;
-            this.checkBoxM2WorkingBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM2WorkingBelt_CheckStateChanged);
+            this.buttonM2PrintCycle.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM2PrintCycle.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM2PrintCycle.Location = new System.Drawing.Point(20, 20);
+            this.buttonM2PrintCycle.Name = "buttonM2PrintCycle";
+            this.buttonM2PrintCycle.Size = new System.Drawing.Size(80, 48);
+            this.buttonM2PrintCycle.TabIndex = 150;
+            this.buttonM2PrintCycle.Text = "cycle";
+            this.buttonM2PrintCycle.UseVisualStyleBackColor = true;
+            this.buttonM2PrintCycle.Click += new System.EventHandler(this.buttonM2PrintCycle_Click);
             // 
-            // lbLed2
+            // lbLed6
             // 
-            this.lbLed2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2.BlinkInterval = 500;
-            this.lbLed2.Enabled = false;
-            this.lbLed2.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.lbLed2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2.Label = "small clamp closed";
-            this.lbLed2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2.Location = new System.Drawing.Point(20, 80);
-            this.lbLed2.Name = "lbLed2";
-            this.lbLed2.Renderer = null;
-            this.lbLed2.Size = new System.Drawing.Size(220, 24);
-            this.lbLed2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            this.lbLed2.TabIndex = 264;
+            this.lbLed6.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed6.BlinkInterval = 500;
+            this.lbLed6.Enabled = false;
+            this.lbLed6.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed6.Label = "GTO print ended";
+            this.lbLed6.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed6.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed6.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed6.Location = new System.Drawing.Point(120, 30);
+            this.lbLed6.Name = "lbLed6";
+            this.lbLed6.Renderer = null;
+            this.lbLed6.Size = new System.Drawing.Size(137, 24);
+            this.lbLed6.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed6.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed6.TabIndex = 289;
+            // 
+            // groupBoxM2Servo
+            // 
+            this.groupBoxM2Servo.Controls.Add(this.buttonM2ResetServo);
+            this.groupBoxM2Servo.Controls.Add(this.lbLed5);
+            this.groupBoxM2Servo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxM2Servo.Location = new System.Drawing.Point(10, 625);
+            this.groupBoxM2Servo.Name = "groupBoxM2Servo";
+            this.groupBoxM2Servo.Size = new System.Drawing.Size(280, 80);
+            this.groupBoxM2Servo.TabIndex = 294;
+            this.groupBoxM2Servo.TabStop = false;
+            this.groupBoxM2Servo.Text = "servo";
+            // 
+            // buttonM2ResetServo
+            // 
+            this.buttonM2ResetServo.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM2ResetServo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM2ResetServo.Location = new System.Drawing.Point(20, 20);
+            this.buttonM2ResetServo.Name = "buttonM2ResetServo";
+            this.buttonM2ResetServo.Size = new System.Drawing.Size(90, 48);
+            this.buttonM2ResetServo.TabIndex = 149;
+            this.buttonM2ResetServo.Text = "reset alarm";
+            this.buttonM2ResetServo.UseVisualStyleBackColor = true;
+            this.buttonM2ResetServo.Click += new System.EventHandler(this.buttonM2ResetServo_Click);
+            // 
+            // lbLed5
+            // 
+            this.lbLed5.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed5.BlinkInterval = 500;
+            this.lbLed5.Enabled = false;
+            this.lbLed5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed5.Label = "servo ready";
+            this.lbLed5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed5.Location = new System.Drawing.Point(130, 30);
+            this.lbLed5.Name = "lbLed5";
+            this.lbLed5.Renderer = null;
+            this.lbLed5.Size = new System.Drawing.Size(135, 24);
+            this.lbLed5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed5.TabIndex = 288;
+            // 
+            // groupBoxM2Constrast
+            // 
+            this.groupBoxM2Constrast.Controls.Add(this.buttonM2ContrastOpening);
+            this.groupBoxM2Constrast.Controls.Add(this.buttonM2ContrastClosing);
+            this.groupBoxM2Constrast.Controls.Add(this.lbLed3);
+            this.groupBoxM2Constrast.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxM2Constrast.Location = new System.Drawing.Point(305, 500);
+            this.groupBoxM2Constrast.Name = "groupBoxM2Constrast";
+            this.groupBoxM2Constrast.Size = new System.Drawing.Size(280, 120);
+            this.groupBoxM2Constrast.TabIndex = 293;
+            this.groupBoxM2Constrast.TabStop = false;
+            this.groupBoxM2Constrast.Text = "contrast";
+            // 
+            // buttonM2ContrastOpening
+            // 
+            this.buttonM2ContrastOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM2ContrastOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM2ContrastOpening.Location = new System.Drawing.Point(20, 20);
+            this.buttonM2ContrastOpening.Name = "buttonM2ContrastOpening";
+            this.buttonM2ContrastOpening.Size = new System.Drawing.Size(80, 48);
+            this.buttonM2ContrastOpening.TabIndex = 147;
+            this.buttonM2ContrastOpening.Text = "opening";
+            this.buttonM2ContrastOpening.UseVisualStyleBackColor = true;
+            this.buttonM2ContrastOpening.Click += new System.EventHandler(this.buttonM2ContrastOpening_Click);
+            // 
+            // buttonM2ContrastClosing
+            // 
+            this.buttonM2ContrastClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM2ContrastClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM2ContrastClosing.Location = new System.Drawing.Point(154, 20);
+            this.buttonM2ContrastClosing.Name = "buttonM2ContrastClosing";
+            this.buttonM2ContrastClosing.Size = new System.Drawing.Size(80, 48);
+            this.buttonM2ContrastClosing.TabIndex = 148;
+            this.buttonM2ContrastClosing.Text = "closing";
+            this.buttonM2ContrastClosing.UseVisualStyleBackColor = true;
+            this.buttonM2ContrastClosing.Click += new System.EventHandler(this.buttonM2ContrastClosing_Click);
+            // 
+            // lbLed3
+            // 
+            this.lbLed3.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed3.BlinkInterval = 500;
+            this.lbLed3.Enabled = false;
+            this.lbLed3.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed3.Label = "centering clamp 2 opened";
+            this.lbLed3.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed3.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed3.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed3.Location = new System.Drawing.Point(20, 80);
+            this.lbLed3.Name = "lbLed3";
+            this.lbLed3.Renderer = null;
+            this.lbLed3.Size = new System.Drawing.Size(220, 24);
+            this.lbLed3.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed3.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed3.TabIndex = 287;
+            // 
+            // groupBoxM2CenteringClamp
+            // 
+            this.groupBoxM2CenteringClamp.Controls.Add(this.buttonM2CenteringClampsOpening);
+            this.groupBoxM2CenteringClamp.Controls.Add(this.buttonM2CenteringClampsClosing);
+            this.groupBoxM2CenteringClamp.Controls.Add(this.lbLed4);
+            this.groupBoxM2CenteringClamp.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxM2CenteringClamp.Location = new System.Drawing.Point(10, 500);
+            this.groupBoxM2CenteringClamp.Name = "groupBoxM2CenteringClamp";
+            this.groupBoxM2CenteringClamp.Size = new System.Drawing.Size(280, 120);
+            this.groupBoxM2CenteringClamp.TabIndex = 292;
+            this.groupBoxM2CenteringClamp.TabStop = false;
+            this.groupBoxM2CenteringClamp.Text = "centering clamp";
+            // 
+            // buttonM2CenteringClampsOpening
+            // 
+            this.buttonM2CenteringClampsOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM2CenteringClampsOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM2CenteringClampsOpening.Location = new System.Drawing.Point(20, 20);
+            this.buttonM2CenteringClampsOpening.Name = "buttonM2CenteringClampsOpening";
+            this.buttonM2CenteringClampsOpening.Size = new System.Drawing.Size(80, 48);
+            this.buttonM2CenteringClampsOpening.TabIndex = 145;
+            this.buttonM2CenteringClampsOpening.Text = "opening";
+            this.buttonM2CenteringClampsOpening.UseVisualStyleBackColor = true;
+            this.buttonM2CenteringClampsOpening.Click += new System.EventHandler(this.buttonM2CenteringClampsOpening_Click);
+            // 
+            // buttonM2CenteringClampsClosing
+            // 
+            this.buttonM2CenteringClampsClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM2CenteringClampsClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM2CenteringClampsClosing.Location = new System.Drawing.Point(180, 20);
+            this.buttonM2CenteringClampsClosing.Name = "buttonM2CenteringClampsClosing";
+            this.buttonM2CenteringClampsClosing.Size = new System.Drawing.Size(80, 48);
+            this.buttonM2CenteringClampsClosing.TabIndex = 146;
+            this.buttonM2CenteringClampsClosing.Text = "closing";
+            this.buttonM2CenteringClampsClosing.UseVisualStyleBackColor = true;
+            this.buttonM2CenteringClampsClosing.Click += new System.EventHandler(this.buttonM2CenteringClampsClosing_Click);
+            // 
+            // lbLed4
+            // 
+            this.lbLed4.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed4.BlinkInterval = 500;
+            this.lbLed4.Enabled = false;
+            this.lbLed4.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed4.Label = "centering clamp 1 opened";
+            this.lbLed4.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed4.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed4.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed4.Location = new System.Drawing.Point(20, 80);
+            this.lbLed4.Name = "lbLed4";
+            this.lbLed4.Renderer = null;
+            this.lbLed4.Size = new System.Drawing.Size(182, 24);
+            this.lbLed4.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed4.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed4.TabIndex = 286;
+            // 
+            // groupBoxM2BigClamp
+            // 
+            this.groupBoxM2BigClamp.Controls.Add(this.buttonM2BigClampOpening);
+            this.groupBoxM2BigClamp.Controls.Add(this.buttonM2BigClampClosing);
+            this.groupBoxM2BigClamp.Controls.Add(this.lbLed1);
+            this.groupBoxM2BigClamp.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxM2BigClamp.Location = new System.Drawing.Point(305, 370);
+            this.groupBoxM2BigClamp.Name = "groupBoxM2BigClamp";
+            this.groupBoxM2BigClamp.Size = new System.Drawing.Size(280, 120);
+            this.groupBoxM2BigClamp.TabIndex = 291;
+            this.groupBoxM2BigClamp.TabStop = false;
+            this.groupBoxM2BigClamp.Text = "big clamp";
+            // 
+            // buttonM2BigClampOpening
+            // 
+            this.buttonM2BigClampOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM2BigClampOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM2BigClampOpening.Location = new System.Drawing.Point(20, 20);
+            this.buttonM2BigClampOpening.Name = "buttonM2BigClampOpening";
+            this.buttonM2BigClampOpening.Size = new System.Drawing.Size(80, 48);
+            this.buttonM2BigClampOpening.TabIndex = 143;
+            this.buttonM2BigClampOpening.Text = "opening";
+            this.buttonM2BigClampOpening.UseVisualStyleBackColor = true;
+            this.buttonM2BigClampOpening.Click += new System.EventHandler(this.buttonM2BigClampOpening_Click);
+            // 
+            // buttonM2BigClampClosing
+            // 
+            this.buttonM2BigClampClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM2BigClampClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM2BigClampClosing.Location = new System.Drawing.Point(154, 20);
+            this.buttonM2BigClampClosing.Name = "buttonM2BigClampClosing";
+            this.buttonM2BigClampClosing.Size = new System.Drawing.Size(80, 48);
+            this.buttonM2BigClampClosing.TabIndex = 144;
+            this.buttonM2BigClampClosing.Text = "closing";
+            this.buttonM2BigClampClosing.UseVisualStyleBackColor = true;
+            this.buttonM2BigClampClosing.Click += new System.EventHandler(this.buttonM2BigClampClosing_Click);
             // 
             // lbLed1
             // 
@@ -703,113 +905,18 @@
             this.lbLed1.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
             this.lbLed1.TabIndex = 263;
             // 
-            // buttonM2PrintCycle
+            // groupBoxM2SmallClamp
             // 
-            this.buttonM2PrintCycle.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM2PrintCycle.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2PrintCycle.Location = new System.Drawing.Point(20, 20);
-            this.buttonM2PrintCycle.Name = "buttonM2PrintCycle";
-            this.buttonM2PrintCycle.Size = new System.Drawing.Size(80, 48);
-            this.buttonM2PrintCycle.TabIndex = 150;
-            this.buttonM2PrintCycle.Text = "cycle";
-            this.buttonM2PrintCycle.UseVisualStyleBackColor = true;
-            this.buttonM2PrintCycle.Click += new System.EventHandler(this.buttonM2PrintCycle_Click);
-            // 
-            // buttonM2ResetServo
-            // 
-            this.buttonM2ResetServo.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM2ResetServo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2ResetServo.Location = new System.Drawing.Point(20, 27);
-            this.buttonM2ResetServo.Name = "buttonM2ResetServo";
-            this.buttonM2ResetServo.Size = new System.Drawing.Size(90, 48);
-            this.buttonM2ResetServo.TabIndex = 149;
-            this.buttonM2ResetServo.Text = "reset alarm";
-            this.buttonM2ResetServo.UseVisualStyleBackColor = true;
-            this.buttonM2ResetServo.Click += new System.EventHandler(this.buttonM2ResetServo_Click);
-            // 
-            // buttonM2ContrastClosing
-            // 
-            this.buttonM2ContrastClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM2ContrastClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2ContrastClosing.Location = new System.Drawing.Point(154, 20);
-            this.buttonM2ContrastClosing.Name = "buttonM2ContrastClosing";
-            this.buttonM2ContrastClosing.Size = new System.Drawing.Size(80, 48);
-            this.buttonM2ContrastClosing.TabIndex = 148;
-            this.buttonM2ContrastClosing.Text = "closing";
-            this.buttonM2ContrastClosing.UseVisualStyleBackColor = true;
-            this.buttonM2ContrastClosing.Click += new System.EventHandler(this.buttonM2ContrastClosing_Click);
-            // 
-            // buttonM2ContrastOpening
-            // 
-            this.buttonM2ContrastOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM2ContrastOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2ContrastOpening.Location = new System.Drawing.Point(20, 20);
-            this.buttonM2ContrastOpening.Name = "buttonM2ContrastOpening";
-            this.buttonM2ContrastOpening.Size = new System.Drawing.Size(80, 48);
-            this.buttonM2ContrastOpening.TabIndex = 147;
-            this.buttonM2ContrastOpening.Text = "opening";
-            this.buttonM2ContrastOpening.UseVisualStyleBackColor = true;
-            this.buttonM2ContrastOpening.Click += new System.EventHandler(this.buttonM2ContrastOpening_Click);
-            // 
-            // buttonM2CenteringClampsClosing
-            // 
-            this.buttonM2CenteringClampsClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM2CenteringClampsClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2CenteringClampsClosing.Location = new System.Drawing.Point(180, 20);
-            this.buttonM2CenteringClampsClosing.Name = "buttonM2CenteringClampsClosing";
-            this.buttonM2CenteringClampsClosing.Size = new System.Drawing.Size(80, 48);
-            this.buttonM2CenteringClampsClosing.TabIndex = 146;
-            this.buttonM2CenteringClampsClosing.Text = "closing";
-            this.buttonM2CenteringClampsClosing.UseVisualStyleBackColor = true;
-            this.buttonM2CenteringClampsClosing.Click += new System.EventHandler(this.buttonM2CenteringClampsClosing_Click);
-            // 
-            // buttonM2CenteringClampsOpening
-            // 
-            this.buttonM2CenteringClampsOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM2CenteringClampsOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2CenteringClampsOpening.Location = new System.Drawing.Point(20, 20);
-            this.buttonM2CenteringClampsOpening.Name = "buttonM2CenteringClampsOpening";
-            this.buttonM2CenteringClampsOpening.Size = new System.Drawing.Size(80, 48);
-            this.buttonM2CenteringClampsOpening.TabIndex = 145;
-            this.buttonM2CenteringClampsOpening.Text = "opening";
-            this.buttonM2CenteringClampsOpening.UseVisualStyleBackColor = true;
-            this.buttonM2CenteringClampsOpening.Click += new System.EventHandler(this.buttonM2CenteringClampsOpening_Click);
-            // 
-            // buttonM2BigClampClosing
-            // 
-            this.buttonM2BigClampClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM2BigClampClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2BigClampClosing.Location = new System.Drawing.Point(154, 20);
-            this.buttonM2BigClampClosing.Name = "buttonM2BigClampClosing";
-            this.buttonM2BigClampClosing.Size = new System.Drawing.Size(80, 48);
-            this.buttonM2BigClampClosing.TabIndex = 144;
-            this.buttonM2BigClampClosing.Text = "closing";
-            this.buttonM2BigClampClosing.UseVisualStyleBackColor = true;
-            this.buttonM2BigClampClosing.Click += new System.EventHandler(this.buttonM2BigClampClosing_Click);
-            // 
-            // buttonM2BigClampOpening
-            // 
-            this.buttonM2BigClampOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM2BigClampOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2BigClampOpening.Location = new System.Drawing.Point(20, 20);
-            this.buttonM2BigClampOpening.Name = "buttonM2BigClampOpening";
-            this.buttonM2BigClampOpening.Size = new System.Drawing.Size(80, 48);
-            this.buttonM2BigClampOpening.TabIndex = 143;
-            this.buttonM2BigClampOpening.Text = "opening";
-            this.buttonM2BigClampOpening.UseVisualStyleBackColor = true;
-            this.buttonM2BigClampOpening.Click += new System.EventHandler(this.buttonM2BigClampOpening_Click);
-            // 
-            // buttonM2SmallClampClosing
-            // 
-            this.buttonM2SmallClampClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM2SmallClampClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2SmallClampClosing.Location = new System.Drawing.Point(180, 20);
-            this.buttonM2SmallClampClosing.Name = "buttonM2SmallClampClosing";
-            this.buttonM2SmallClampClosing.Size = new System.Drawing.Size(80, 48);
-            this.buttonM2SmallClampClosing.TabIndex = 142;
-            this.buttonM2SmallClampClosing.Text = "closing";
-            this.buttonM2SmallClampClosing.UseVisualStyleBackColor = true;
-            this.buttonM2SmallClampClosing.Click += new System.EventHandler(this.buttonM2SmallClampClosing_Click);
+            this.groupBoxM2SmallClamp.Controls.Add(this.buttonM2SmallClampOpening);
+            this.groupBoxM2SmallClamp.Controls.Add(this.buttonM2SmallClampClosing);
+            this.groupBoxM2SmallClamp.Controls.Add(this.lbLed2);
+            this.groupBoxM2SmallClamp.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxM2SmallClamp.Location = new System.Drawing.Point(10, 370);
+            this.groupBoxM2SmallClamp.Name = "groupBoxM2SmallClamp";
+            this.groupBoxM2SmallClamp.Size = new System.Drawing.Size(280, 120);
+            this.groupBoxM2SmallClamp.TabIndex = 290;
+            this.groupBoxM2SmallClamp.TabStop = false;
+            this.groupBoxM2SmallClamp.Text = "small clamp";
             // 
             // buttonM2SmallClampOpening
             // 
@@ -823,19 +930,97 @@
             this.buttonM2SmallClampOpening.UseVisualStyleBackColor = true;
             this.buttonM2SmallClampOpening.Click += new System.EventHandler(this.buttonM2SmallClampOpening_Click);
             // 
-            // groupBox3
+            // buttonM2SmallClampClosing
             // 
-            this.groupBox3.Controls.Add(this.labelM2HomingDone);
-            this.groupBox3.Controls.Add(this.buttonM2HomingDone);
-            this.groupBox3.Controls.Add(this.buttonM2Home);
-            this.groupBox3.Controls.Add(this.buttonM2ResetHome);
-            this.groupBox3.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.groupBox3.Location = new System.Drawing.Point(595, 500);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(260, 120);
-            this.groupBox3.TabIndex = 140;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "vertical axis home";
+            this.buttonM2SmallClampClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM2SmallClampClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM2SmallClampClosing.Location = new System.Drawing.Point(180, 20);
+            this.buttonM2SmallClampClosing.Name = "buttonM2SmallClampClosing";
+            this.buttonM2SmallClampClosing.Size = new System.Drawing.Size(80, 48);
+            this.buttonM2SmallClampClosing.TabIndex = 142;
+            this.buttonM2SmallClampClosing.Text = "closing";
+            this.buttonM2SmallClampClosing.UseVisualStyleBackColor = true;
+            this.buttonM2SmallClampClosing.Click += new System.EventHandler(this.buttonM2SmallClampClosing_Click);
+            // 
+            // lbLed2
+            // 
+            this.lbLed2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2.BlinkInterval = 500;
+            this.lbLed2.Enabled = false;
+            this.lbLed2.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2.Label = "small clamp closed";
+            this.lbLed2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2.Location = new System.Drawing.Point(20, 80);
+            this.lbLed2.Name = "lbLed2";
+            this.lbLed2.Renderer = null;
+            this.lbLed2.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2.TabIndex = 264;
+            // 
+            // checkBoxM2ExitBelt
+            // 
+            this.checkBoxM2ExitBelt.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxM2ExitBelt.AutoSize = true;
+            this.checkBoxM2ExitBelt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxM2ExitBelt.FlatAppearance.BorderSize = 5;
+            this.checkBoxM2ExitBelt.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxM2ExitBelt.ImageIndex = 3;
+            this.checkBoxM2ExitBelt.ImageList = this.imageListBelt;
+            this.checkBoxM2ExitBelt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxM2ExitBelt.Location = new System.Drawing.Point(595, 635);
+            this.checkBoxM2ExitBelt.Name = "checkBoxM2ExitBelt";
+            this.checkBoxM2ExitBelt.Size = new System.Drawing.Size(105, 70);
+            this.checkBoxM2ExitBelt.TabIndex = 266;
+            this.checkBoxM2ExitBelt.Text = "exit";
+            this.checkBoxM2ExitBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.checkBoxM2ExitBelt.UseVisualStyleBackColor = true;
+            this.checkBoxM2ExitBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM2ExitBelt_CheckStateChanged);
+            // 
+            // imageListBelt
+            // 
+            this.imageListBelt.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListBelt.ImageStream")));
+            this.imageListBelt.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListBelt.Images.SetKeyName(0, "working_belton.png");
+            this.imageListBelt.Images.SetKeyName(1, "working_beltoff.png");
+            this.imageListBelt.Images.SetKeyName(2, "exit_belt_on.png");
+            this.imageListBelt.Images.SetKeyName(3, "exit_belt_off.png");
+            // 
+            // checkBoxM2WorkingBelt
+            // 
+            this.checkBoxM2WorkingBelt.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxM2WorkingBelt.AutoSize = true;
+            this.checkBoxM2WorkingBelt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxM2WorkingBelt.FlatAppearance.BorderSize = 5;
+            this.checkBoxM2WorkingBelt.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxM2WorkingBelt.ImageIndex = 1;
+            this.checkBoxM2WorkingBelt.ImageList = this.imageListBelt;
+            this.checkBoxM2WorkingBelt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxM2WorkingBelt.Location = new System.Drawing.Point(724, 635);
+            this.checkBoxM2WorkingBelt.Name = "checkBoxM2WorkingBelt";
+            this.checkBoxM2WorkingBelt.Size = new System.Drawing.Size(131, 70);
+            this.checkBoxM2WorkingBelt.TabIndex = 265;
+            this.checkBoxM2WorkingBelt.Text = "working";
+            this.checkBoxM2WorkingBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.checkBoxM2WorkingBelt.UseVisualStyleBackColor = true;
+            this.checkBoxM2WorkingBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM2WorkingBelt_CheckStateChanged);
+            // 
+            // groupBoxM2Homing
+            // 
+            this.groupBoxM2Homing.Controls.Add(this.labelM2HomingDone);
+            this.groupBoxM2Homing.Controls.Add(this.buttonM2HomingDone);
+            this.groupBoxM2Homing.Controls.Add(this.buttonM2Home);
+            this.groupBoxM2Homing.Controls.Add(this.buttonM2ResetHome);
+            this.groupBoxM2Homing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.groupBoxM2Homing.Location = new System.Drawing.Point(595, 500);
+            this.groupBoxM2Homing.Name = "groupBoxM2Homing";
+            this.groupBoxM2Homing.Size = new System.Drawing.Size(260, 120);
+            this.groupBoxM2Homing.TabIndex = 140;
+            this.groupBoxM2Homing.TabStop = false;
+            this.groupBoxM2Homing.Text = "vertical axis home";
             // 
             // labelM2HomingDone
             // 
@@ -887,20 +1072,20 @@
             this.buttonM2ResetHome.UseVisualStyleBackColor = true;
             this.buttonM2ResetHome.Click += new System.EventHandler(this.buttonM2ResetHome_Click);
             // 
-            // groupBox2
+            // groupBoxM2StartQuote
             // 
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.buttonM2StartQuote);
-            this.groupBox2.Controls.Add(this.numericUpDownM2ManualQuote);
-            this.groupBox2.Controls.Add(this.numericUpDownM2ManualSpeed);
-            this.groupBox2.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.groupBox2.Location = new System.Drawing.Point(595, 340);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(260, 150);
-            this.groupBox2.TabIndex = 139;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "vertical axis start quote";
+            this.groupBoxM2StartQuote.Controls.Add(this.label7);
+            this.groupBoxM2StartQuote.Controls.Add(this.label6);
+            this.groupBoxM2StartQuote.Controls.Add(this.buttonM2StartQuote);
+            this.groupBoxM2StartQuote.Controls.Add(this.numericUpDownM2ManualQuote);
+            this.groupBoxM2StartQuote.Controls.Add(this.numericUpDownM2ManualSpeed);
+            this.groupBoxM2StartQuote.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.groupBoxM2StartQuote.Location = new System.Drawing.Point(595, 340);
+            this.groupBoxM2StartQuote.Name = "groupBoxM2StartQuote";
+            this.groupBoxM2StartQuote.Size = new System.Drawing.Size(260, 150);
+            this.groupBoxM2StartQuote.TabIndex = 139;
+            this.groupBoxM2StartQuote.TabStop = false;
+            this.groupBoxM2StartQuote.Text = "vertical axis start quote";
             // 
             // label7
             // 
@@ -1109,6 +1294,8 @@
             this.dataGridViewM2TeachPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridViewM2TeachPoints.Size = new System.Drawing.Size(575, 220);
             this.dataGridViewM2TeachPoints.TabIndex = 137;
+            this.dataGridViewM2TeachPoints.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridViewM2TeachPoints_CellFormatting);
+            this.dataGridViewM2TeachPoints.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridViewM2TeachPoints_CellPainting);
             // 
             // ColumnM2PointID
             // 
@@ -1150,19 +1337,11 @@
             // Column1
             // 
             this.Column1.HeaderText = "reached";
+            this.Column1.Image = ((System.Drawing.Image)(resources.GetObject("Column1.Image")));
             this.Column1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Width = 48;
-            // 
-            // comboBoxM2TeachModelName
-            // 
-            this.comboBoxM2TeachModelName.Font = new System.Drawing.Font("Verdana", 12F);
-            this.comboBoxM2TeachModelName.FormattingEnabled = true;
-            this.comboBoxM2TeachModelName.Location = new System.Drawing.Point(10, 65);
-            this.comboBoxM2TeachModelName.Name = "comboBoxM2TeachModelName";
-            this.comboBoxM2TeachModelName.Size = new System.Drawing.Size(164, 26);
-            this.comboBoxM2TeachModelName.TabIndex = 136;
             // 
             // buttonM2TeachDeleteProgram
             // 
@@ -1273,8 +1452,41 @@
             this.tabPageT3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT3.TextBounds")));
             this.tabPageT3.TextSize = new System.Drawing.SizeF(37.03645F, 17.42431F);
             // 
+            // contextMenuStripT3
+            // 
+            this.contextMenuStripT3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.contextMenuStripT3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contextMenuStripT3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemT3});
+            this.contextMenuStripT3.Name = "contextMenuStrip1";
+            this.contextMenuStripT3.Size = new System.Drawing.Size(177, 26);
+            this.contextMenuStripT3.Text = "recipe name";
+            // 
+            // toolStripMenuItemT3
+            // 
+            this.toolStripMenuItemT3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripComboBoxT3});
+            this.toolStripMenuItemT3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItemT3.Name = "toolStripMenuItemT3";
+            this.toolStripMenuItemT3.Size = new System.Drawing.Size(176, 22);
+            this.toolStripMenuItemT3.Text = "recipe name";
+            // 
+            // toolStripComboBoxT3
+            // 
+            this.toolStripComboBoxT3.DropDownHeight = 80;
+            this.toolStripComboBoxT3.DropDownWidth = 80;
+            this.toolStripComboBoxT3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripComboBoxT3.IntegralHeight = false;
+            this.toolStripComboBoxT3.Name = "toolStripComboBoxT3";
+            this.toolStripComboBoxT3.Size = new System.Drawing.Size(120, 26);
+            // 
             // tabPageT3_2
             // 
+            this.tabPageT3_2.Controls.Add(this.comboBoxM2TestProgramList);
+            this.tabPageT3_2.Controls.Add(this.buttonM2TestSaveProgram);
+            this.tabPageT3_2.Controls.Add(this.buttonM2TestLoadProgram);
+            this.tabPageT3_2.Controls.Add(this.dataGridViewM2TestPoints);
+            this.tabPageT3_2.Controls.Add(this.lbButtonM2StartTest);
             tabPageFormatStyle3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle3.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT3_2.FormatStyle = tabPageFormatStyle3;
@@ -1302,6 +1514,103 @@
             this.tabPageT3_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT3_2.TextBounds")));
             this.tabPageT3_2.TextSize = new System.Drawing.SizeF(36.72395F, 21.44531F);
             this.tabPageT3_2.UseParentTabStripPlacement = false;
+            // 
+            // comboBoxM2TestProgramList
+            // 
+            this.comboBoxM2TestProgramList.Font = new System.Drawing.Font("Verdana", 12F);
+            this.comboBoxM2TestProgramList.FormattingEnabled = true;
+            this.comboBoxM2TestProgramList.Location = new System.Drawing.Point(37, 40);
+            this.comboBoxM2TestProgramList.Name = "comboBoxM2TestProgramList";
+            this.comboBoxM2TestProgramList.Size = new System.Drawing.Size(164, 26);
+            this.comboBoxM2TestProgramList.TabIndex = 118;
+            // 
+            // buttonM2TestSaveProgram
+            // 
+            this.buttonM2TestSaveProgram.Font = new System.Drawing.Font("Verdana", 12F);
+            this.buttonM2TestSaveProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM2TestSaveProgram.Image")));
+            this.buttonM2TestSaveProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonM2TestSaveProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM2TestSaveProgram.Location = new System.Drawing.Point(397, 40);
+            this.buttonM2TestSaveProgram.Name = "buttonM2TestSaveProgram";
+            this.buttonM2TestSaveProgram.Size = new System.Drawing.Size(161, 53);
+            this.buttonM2TestSaveProgram.TabIndex = 117;
+            this.buttonM2TestSaveProgram.Text = "save program";
+            this.buttonM2TestSaveProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonM2TestSaveProgram.UseVisualStyleBackColor = true;
+            // 
+            // buttonM2TestLoadProgram
+            // 
+            this.buttonM2TestLoadProgram.Font = new System.Drawing.Font("Verdana", 12F);
+            this.buttonM2TestLoadProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM2TestLoadProgram.Image")));
+            this.buttonM2TestLoadProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonM2TestLoadProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM2TestLoadProgram.Location = new System.Drawing.Point(227, 40);
+            this.buttonM2TestLoadProgram.Name = "buttonM2TestLoadProgram";
+            this.buttonM2TestLoadProgram.Size = new System.Drawing.Size(160, 53);
+            this.buttonM2TestLoadProgram.TabIndex = 116;
+            this.buttonM2TestLoadProgram.Text = "load program";
+            this.buttonM2TestLoadProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonM2TestLoadProgram.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewM2TestPoints
+            // 
+            this.dataGridViewM2TestPoints.AllowUserToAddRows = false;
+            this.dataGridViewM2TestPoints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewM2TestPoints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dataGridViewM2TestPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dataGridViewM2TestPoints.Location = new System.Drawing.Point(37, 115);
+            this.dataGridViewM2TestPoints.Name = "dataGridViewM2TestPoints";
+            this.dataGridViewM2TestPoints.RowHeadersVisible = false;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewM2TestPoints.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewM2TestPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewM2TestPoints.Size = new System.Drawing.Size(521, 298);
+            this.dataGridViewM2TestPoints.TabIndex = 115;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewTextBoxColumn4.Frozen = true;
+            this.dataGridViewTextBoxColumn4.HeaderText = "point id";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.Frozen = true;
+            this.dataGridViewTextBoxColumn5.HeaderText = "quote (mm)";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.Frozen = true;
+            this.dataGridViewTextBoxColumn6.HeaderText = "speed (%)";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // lbButtonM2StartTest
+            // 
+            this.lbButtonM2StartTest.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM2StartTest.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            this.lbButtonM2StartTest.Font = new System.Drawing.Font("Verdana", 39.75F, System.Drawing.FontStyle.Bold);
+            this.lbButtonM2StartTest.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM2StartTest.Label = "START TEST";
+            this.lbButtonM2StartTest.Location = new System.Drawing.Point(587, 115);
+            this.lbButtonM2StartTest.Name = "lbButtonM2StartTest";
+            this.lbButtonM2StartTest.Renderer = null;
+            this.lbButtonM2StartTest.RepeatInterval = 100;
+            this.lbButtonM2StartTest.RepeatState = false;
+            this.lbButtonM2StartTest.Size = new System.Drawing.Size(200, 73);
+            this.lbButtonM2StartTest.StartRepeatInterval = 500;
+            this.lbButtonM2StartTest.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM2StartTest.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2StartTest.TabIndex = 114;
             // 
             // tabPageT3_3
             // 
@@ -2903,8 +3212,8 @@
             this.dataGridViewM3TeachPoints.Name = "dataGridViewM3TeachPoints";
             this.dataGridViewM3TeachPoints.RowHeadersVisible = false;
             this.dataGridViewM3TeachPoints.RowHeadersWidth = 48;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewM3TeachPoints.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewM3TeachPoints.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewM3TeachPoints.RowTemplate.Height = 48;
             this.dataGridViewM3TeachPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridViewM3TeachPoints.Size = new System.Drawing.Size(575, 220);
@@ -2912,9 +3221,9 @@
             // 
             // dataGridViewTextBoxColumn1
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn1.Frozen = true;
             this.dataGridViewTextBoxColumn1.HeaderText = "point";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
@@ -3446,7 +3755,7 @@
             // 
             // tabPageT0_1
             // 
-            this.tabPageT0_1.Controls.Add(this.comboBoxAutoModelNameLst);
+            this.tabPageT0_1.ContextMenuStrip = this.contextMenuStripT0;
             this.tabPageT0_1.Controls.Add(this.button1);
             this.tabPageT0_1.Controls.Add(this.dataGridViewMessages);
             this.tabPageT0_1.Controls.Add(this.statusStripSeparator);
@@ -3473,12 +3782,12 @@
             tabPageColorStyle42.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
             this.tabPageT0_1.NormalStyle = tabPageColorStyle42;
             this.tabPageT0_1.ParentPage = this.tabPageT0;
-            tabPageColorStyle51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle51.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle51.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle51.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle51.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.tabPageT0_1.SelectedStyle = tabPageColorStyle51;
+            tabPageColorStyle52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle52.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle52.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle52.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle52.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tabPageT0_1.SelectedStyle = tabPageColorStyle52;
             this.tabPageT0_1.Size = new System.Drawing.Size(0, 0);
             this.tabPageT0_1.StyleFromParent = false;
             this.tabPageT0_1.TabIndex = 1;
@@ -3489,15 +3798,33 @@
             this.tabPageT0_1.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT0_1.UseParentTabStripPlacement = false;
             // 
-            // comboBoxAutoModelNameLst
+            // contextMenuStripT0
             // 
-            this.comboBoxAutoModelNameLst.Font = new System.Drawing.Font("Verdana", 12F);
-            this.comboBoxAutoModelNameLst.FormattingEnabled = true;
-            this.comboBoxAutoModelNameLst.Location = new System.Drawing.Point(10, 414);
-            this.comboBoxAutoModelNameLst.Name = "comboBoxAutoModelNameLst";
-            this.comboBoxAutoModelNameLst.Size = new System.Drawing.Size(164, 26);
-            this.comboBoxAutoModelNameLst.TabIndex = 143;
-            this.comboBoxAutoModelNameLst.SelectedIndexChanged += new System.EventHandler(this.comboBoxAutoModelNameLst_SelectedIndexChanged);
+            this.contextMenuStripT0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.contextMenuStripT0.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contextMenuStripT0.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemT0});
+            this.contextMenuStripT0.Name = "contextMenuStrip1";
+            this.contextMenuStripT0.Size = new System.Drawing.Size(177, 26);
+            this.contextMenuStripT0.Text = "recipe name";
+            // 
+            // toolStripMenuItemT0
+            // 
+            this.toolStripMenuItemT0.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripComboBoxT0});
+            this.toolStripMenuItemT0.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItemT0.Name = "toolStripMenuItemT0";
+            this.toolStripMenuItemT0.Size = new System.Drawing.Size(176, 22);
+            this.toolStripMenuItemT0.Text = "recipe name";
+            // 
+            // toolStripComboBoxT0
+            // 
+            this.toolStripComboBoxT0.DropDownHeight = 80;
+            this.toolStripComboBoxT0.DropDownWidth = 80;
+            this.toolStripComboBoxT0.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripComboBoxT0.IntegralHeight = false;
+            this.toolStripComboBoxT0.Name = "toolStripComboBoxT0";
+            this.toolStripComboBoxT0.Size = new System.Drawing.Size(120, 26);
             // 
             // button1
             // 
@@ -3516,28 +3843,28 @@
             this.dataGridViewMessages.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewMessages.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridViewMessages.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(68)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(113)))), ((int)(((byte)(36)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewMessages.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(68)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(113)))), ((int)(((byte)(36)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewMessages.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewMessages.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMessages.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.datetime,
             this.priority,
             this.machine,
             this.messagetext});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewMessages.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewMessages.DefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewMessages.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewMessages.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridViewMessages.EnableHeadersVisualStyles = false;
@@ -3546,22 +3873,22 @@
             this.dataGridViewMessages.Name = "dataGridViewMessages";
             this.dataGridViewMessages.ReadOnly = true;
             this.dataGridViewMessages.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(41)))), ((int)(((byte)(47)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(133)))), ((int)(((byte)(46)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewMessages.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(41)))), ((int)(((byte)(47)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(133)))), ((int)(((byte)(46)))));
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewMessages.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewMessages.RowHeadersVisible = false;
             this.dataGridViewMessages.RowHeadersWidth = 48;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(68)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Transparent;
-            this.dataGridViewMessages.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(68)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Transparent;
+            this.dataGridViewMessages.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewMessages.RowTemplate.Height = 24;
             this.dataGridViewMessages.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridViewMessages.Size = new System.Drawing.Size(0, 100);
@@ -3569,8 +3896,8 @@
             // 
             // datetime
             // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.datetime.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.datetime.DefaultCellStyle = dataGridViewCellStyle8;
             this.datetime.Frozen = true;
             this.datetime.HeaderText = "datetime";
             this.datetime.Name = "datetime";
@@ -3841,6 +4168,7 @@
             this.comboBoxM6PrgName.Size = new System.Drawing.Size(184, 26);
             this.comboBoxM6PrgName.TabIndex = 13;
             this.comboBoxM6PrgName.Text = "PRYYYY-YYY-XX00";
+            this.comboBoxM6PrgName.Visible = false;
             // 
             // labelM6Param1Name
             // 
@@ -4641,12 +4969,12 @@
             this.tabPageT0_3});
             this.tabPageT0.ParentPage = null;
             this.tabPageT0.SelectedImageIndex = 1;
-            tabPageColorStyle50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(136)))));
-            tabPageColorStyle50.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle50.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle50.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle50.TextShadowColor = System.Drawing.Color.Transparent;
-            this.tabPageT0.SelectedStyle = tabPageColorStyle50;
+            tabPageColorStyle51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(136)))));
+            tabPageColorStyle51.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle51.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle51.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle51.TextShadowColor = System.Drawing.Color.Transparent;
+            this.tabPageT0.SelectedStyle = tabPageColorStyle51;
             this.tabPageT0.Size = new System.Drawing.Size(914, 716);
             this.tabPageT0.StyleFromParent = false;
             this.tabPageT0.TabIndex = 0;
@@ -4709,17 +5037,16 @@
             this.tabPageT0_2_1,
             this.tabPageT0_2_2});
             this.tabPageT0_2.ParentPage = this.tabPageT0;
-            tabPageColorStyle47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle47.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle47.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle47.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle47.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.tabPageT0_2.SelectedStyle = tabPageColorStyle47;
+            tabPageColorStyle48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle48.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle48.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle48.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle48.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tabPageT0_2.SelectedStyle = tabPageColorStyle48;
             this.tabPageT0_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT0_2.StyleFromParent = false;
             this.tabPageT0_2.TabIndex = 2;
-            this.tabPageT0_2.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
-            this.tabPageT0_2.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Bottom;
+            this.tabPageT0_2.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Left;
             this.tabPageT0_2.Text = "recipies";
             this.tabPageT0_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2.TextBounds")));
             this.tabPageT0_2.TextSize = new System.Drawing.SizeF(0F, 0F);
@@ -5149,10 +5476,12 @@
             this.tabPageT0_2_1.Controls.Add(this.labelRecipeNameT0_1);
             this.tabPageT0_2_1.Controls.Add(this.textBoxRecipeName);
             tabPageFormatStyle21.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tabPageFormatStyle21.Padding = new System.Windows.Forms.Padding(22, 5, 15, 5);
             this.tabPageT0_2_1.FormatStyle = tabPageFormatStyle21;
             this.tabPageT0_2_1.Location = new System.Drawing.Point(0, 0);
             this.tabPageT0_2_1.Name = "tabPageT0_2_1";
             this.tabPageT0_2_1.ParentPage = this.tabPageT0_2;
+            tabPageColorStyle46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle46.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabPageT0_2_1.SelectedStyle = tabPageColorStyle46;
             this.tabPageT0_2_1.Size = new System.Drawing.Size(0, 0);
@@ -5168,7 +5497,7 @@
             // 
             this.buttonAddNewRecipe.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonAddNewRecipe.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonAddNewRecipe.Location = new System.Drawing.Point(382, 504);
+            this.buttonAddNewRecipe.Location = new System.Drawing.Point(314, 523);
             this.buttonAddNewRecipe.Name = "buttonAddNewRecipe";
             this.buttonAddNewRecipe.Size = new System.Drawing.Size(160, 110);
             this.buttonAddNewRecipe.TabIndex = 142;
@@ -5237,7 +5566,7 @@
             this.groupBoxRecipeM5.Controls.Add(this.labelM5Param1);
             this.groupBoxRecipeM5.Controls.Add(this.checkBoxM5Param1);
             this.groupBoxRecipeM5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxRecipeM5.Location = new System.Drawing.Point(360, 300);
+            this.groupBoxRecipeM5.Location = new System.Drawing.Point(300, 300);
             this.groupBoxRecipeM5.Name = "groupBoxRecipeM5";
             this.groupBoxRecipeM5.Size = new System.Drawing.Size(200, 200);
             this.groupBoxRecipeM5.TabIndex = 119;
@@ -5287,7 +5616,7 @@
             this.groupBoxRecipeM6.Controls.Add(this.labelM6Param1);
             this.groupBoxRecipeM6.Controls.Add(this.checkBoxM6Param1);
             this.groupBoxRecipeM6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxRecipeM6.Location = new System.Drawing.Point(690, 300);
+            this.groupBoxRecipeM6.Location = new System.Drawing.Point(600, 300);
             this.groupBoxRecipeM6.Name = "groupBoxRecipeM6";
             this.groupBoxRecipeM6.Size = new System.Drawing.Size(200, 200);
             this.groupBoxRecipeM6.TabIndex = 118;
@@ -5416,7 +5745,7 @@
             this.groupBoxRecipeM3.Controls.Add(this.checkBoxM3Param1);
             this.groupBoxRecipeM3.Controls.Add(this.radioButtonFootOrderOpt1);
             this.groupBoxRecipeM3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxRecipeM3.Location = new System.Drawing.Point(690, 80);
+            this.groupBoxRecipeM3.Location = new System.Drawing.Point(600, 80);
             this.groupBoxRecipeM3.Name = "groupBoxRecipeM3";
             this.groupBoxRecipeM3.Size = new System.Drawing.Size(200, 200);
             this.groupBoxRecipeM3.TabIndex = 116;
@@ -5493,7 +5822,7 @@
             this.groupBoxRecipeM2.Controls.Add(this.labelM2Param1);
             this.groupBoxRecipeM2.Controls.Add(this.checkBoxM2Param1);
             this.groupBoxRecipeM2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxRecipeM2.Location = new System.Drawing.Point(360, 80);
+            this.groupBoxRecipeM2.Location = new System.Drawing.Point(300, 80);
             this.groupBoxRecipeM2.Name = "groupBoxRecipeM2";
             this.groupBoxRecipeM2.Size = new System.Drawing.Size(200, 200);
             this.groupBoxRecipeM2.TabIndex = 115;
@@ -5619,10 +5948,14 @@
             this.tabPageT0_2_2.Controls.Add(this.labelRecipeNameT0_2);
             this.tabPageT0_2_2.Controls.Add(this.dataGridViewEditRecipe);
             tabPageFormatStyle22.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            tabPageFormatStyle22.Padding = new System.Windows.Forms.Padding(5, 5, 10, 5);
             this.tabPageT0_2_2.FormatStyle = tabPageFormatStyle22;
             this.tabPageT0_2_2.Location = new System.Drawing.Point(0, 0);
             this.tabPageT0_2_2.Name = "tabPageT0_2_2";
             this.tabPageT0_2_2.ParentPage = this.tabPageT0_2;
+            tabPageColorStyle47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle47.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            this.tabPageT0_2_2.SelectedStyle = tabPageColorStyle47;
             this.tabPageT0_2_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT0_2_2.StyleFromParent = false;
             this.tabPageT0_2_2.TabIndex = 26;
@@ -5655,14 +5988,14 @@
             // 
             this.dataGridViewEditRecipe.AllowUserToOrderColumns = true;
             this.dataGridViewEditRecipe.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Verdana", 12F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEditRecipe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Verdana", 12F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewEditRecipe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewEditRecipe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewEditRecipe.Location = new System.Drawing.Point(30, 120);
             this.dataGridViewEditRecipe.Name = "dataGridViewEditRecipe";
@@ -5681,21 +6014,21 @@
             this.tabPageT0_3.FormatStyle = tabPageFormatStyle23;
             this.tabPageT0_3.Location = new System.Drawing.Point(0, 0);
             this.tabPageT0_3.Name = "tabPageT0_3";
-            tabPageColorStyle48.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            tabPageColorStyle48.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle48.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle48.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle48.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle48.Transparency = 60;
-            tabPageColorStyle48.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
-            this.tabPageT0_3.NormalStyle = tabPageColorStyle48;
-            this.tabPageT0_3.ParentPage = this.tabPageT0;
-            tabPageColorStyle49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle49.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle49.BorderColor = System.Drawing.Color.Transparent;
             tabPageColorStyle49.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle49.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.tabPageT0_3.SelectedStyle = tabPageColorStyle49;
+            tabPageColorStyle49.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle49.Transparency = 60;
+            tabPageColorStyle49.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
+            this.tabPageT0_3.NormalStyle = tabPageColorStyle49;
+            this.tabPageT0_3.ParentPage = this.tabPageT0;
+            tabPageColorStyle50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle50.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle50.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle50.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle50.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tabPageT0_3.SelectedStyle = tabPageColorStyle50;
             this.tabPageT0_3.Size = new System.Drawing.Size(0, 0);
             this.tabPageT0_3.StyleFromParent = false;
             this.tabPageT0_3.TabIndex = 3;
@@ -6027,21 +6360,21 @@
             this.tabPageT1_1.FormatStyle = tabPageFormatStyle24;
             this.tabPageT1_1.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_1.Name = "tabPageT1_1";
-            tabPageColorStyle52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            tabPageColorStyle52.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle52.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle52.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle52.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle52.Transparency = 80;
-            tabPageColorStyle52.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
-            this.tabPageT1_1.NormalStyle = tabPageColorStyle52;
+            tabPageColorStyle53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            tabPageColorStyle53.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle53.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle53.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle53.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle53.Transparency = 80;
+            tabPageColorStyle53.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
+            this.tabPageT1_1.NormalStyle = tabPageColorStyle53;
             this.tabPageT1_1.ParentPage = this.tabPageT1;
-            tabPageColorStyle62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle62.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle62.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle62.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle62.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.tabPageT1_1.SelectedStyle = tabPageColorStyle62;
+            tabPageColorStyle63.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle63.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle63.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle63.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle63.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tabPageT1_1.SelectedStyle = tabPageColorStyle63;
             this.tabPageT1_1.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_1.StyleFromParent = false;
             this.tabPageT1_1.TabIndex = 5;
@@ -6106,23 +6439,23 @@
             tabPageFormatStyle25.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
             tabPageFormatStyle25.TabContentAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.tabPageT1.FormatStyle = tabPageFormatStyle25;
-            tabPageColorStyle53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            tabPageColorStyle53.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle53.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle53.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle53.TextShadowColor = System.Drawing.Color.Transparent;
-            this.tabPageT1.HoverStyle = tabPageColorStyle53;
+            tabPageColorStyle54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            tabPageColorStyle54.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle54.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle54.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle54.TextShadowColor = System.Drawing.Color.Transparent;
+            this.tabPageT1.HoverStyle = tabPageColorStyle54;
             this.tabPageT1.ImageIndex = 2;
             this.tabPageT1.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT1.Name = "tabPageT1";
-            tabPageColorStyle54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
-            tabPageColorStyle54.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle54.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle54.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle54.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            tabPageColorStyle54.TextShadowColor = System.Drawing.Color.Transparent;
-            this.tabPageT1.NormalStyle = tabPageColorStyle54;
+            tabPageColorStyle55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            tabPageColorStyle55.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle55.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle55.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle55.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            tabPageColorStyle55.TextShadowColor = System.Drawing.Color.Transparent;
+            this.tabPageT1.NormalStyle = tabPageColorStyle55;
             this.tabPageT1.Pages.AddRange(new object[] {
             this.tabPageT1_1,
             this.tabPageT1_2,
@@ -6130,12 +6463,12 @@
             this.tabPageT1_4});
             this.tabPageT1.ParentPage = null;
             this.tabPageT1.SelectedImageIndex = 3;
-            tabPageColorStyle61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(136)))));
-            tabPageColorStyle61.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle61.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle61.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle61.TextShadowColor = System.Drawing.Color.Transparent;
-            this.tabPageT1.SelectedStyle = tabPageColorStyle61;
+            tabPageColorStyle62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(115)))), ((int)(((byte)(136)))));
+            tabPageColorStyle62.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle62.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle62.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle62.TextShadowColor = System.Drawing.Color.Transparent;
+            this.tabPageT1.SelectedStyle = tabPageColorStyle62;
             this.tabPageT1.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1.StyleFromParent = false;
             this.tabPageT1.TabIndex = 4;
@@ -6150,21 +6483,21 @@
             this.tabPageT1_2.FormatStyle = tabPageFormatStyle26;
             this.tabPageT1_2.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_2.Name = "tabPageT1_2";
-            tabPageColorStyle55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            tabPageColorStyle55.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle55.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle55.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle55.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle55.Transparency = 80;
-            tabPageColorStyle55.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
-            this.tabPageT1_2.NormalStyle = tabPageColorStyle55;
-            this.tabPageT1_2.ParentPage = this.tabPageT1;
-            tabPageColorStyle56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle56.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle56.BorderColor = System.Drawing.Color.Transparent;
             tabPageColorStyle56.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle56.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.tabPageT1_2.SelectedStyle = tabPageColorStyle56;
+            tabPageColorStyle56.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle56.Transparency = 80;
+            tabPageColorStyle56.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
+            this.tabPageT1_2.NormalStyle = tabPageColorStyle56;
+            this.tabPageT1_2.ParentPage = this.tabPageT1;
+            tabPageColorStyle57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle57.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle57.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle57.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle57.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tabPageT1_2.SelectedStyle = tabPageColorStyle57;
             this.tabPageT1_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_2.StyleFromParent = false;
             this.tabPageT1_2.TabIndex = 8;
@@ -6180,21 +6513,21 @@
             this.tabPageT1_3.FormatStyle = tabPageFormatStyle27;
             this.tabPageT1_3.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_3.Name = "tabPageT1_3";
-            tabPageColorStyle57.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            tabPageColorStyle57.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle57.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle57.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle57.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle57.Transparency = 80;
-            tabPageColorStyle57.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
-            this.tabPageT1_3.NormalStyle = tabPageColorStyle57;
-            this.tabPageT1_3.ParentPage = this.tabPageT1;
-            tabPageColorStyle58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle58.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle58.BorderColor = System.Drawing.Color.Transparent;
             tabPageColorStyle58.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle58.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.tabPageT1_3.SelectedStyle = tabPageColorStyle58;
+            tabPageColorStyle58.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle58.Transparency = 80;
+            tabPageColorStyle58.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
+            this.tabPageT1_3.NormalStyle = tabPageColorStyle58;
+            this.tabPageT1_3.ParentPage = this.tabPageT1;
+            tabPageColorStyle59.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle59.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle59.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle59.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle59.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tabPageT1_3.SelectedStyle = tabPageColorStyle59;
             this.tabPageT1_3.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_3.StyleFromParent = false;
             this.tabPageT1_3.TabIndex = 6;
@@ -6209,21 +6542,21 @@
             this.tabPageT1_4.FormatStyle = tabPageFormatStyle28;
             this.tabPageT1_4.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_4.Name = "tabPageT1_4";
-            tabPageColorStyle59.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            tabPageColorStyle59.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle59.BorderColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle59.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle59.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            tabPageColorStyle59.Transparency = 80;
-            tabPageColorStyle59.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
-            this.tabPageT1_4.NormalStyle = tabPageColorStyle59;
-            this.tabPageT1_4.ParentPage = this.tabPageT1;
-            tabPageColorStyle60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle60.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle60.BorderColor = System.Drawing.Color.Transparent;
             tabPageColorStyle60.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle60.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.tabPageT1_4.SelectedStyle = tabPageColorStyle60;
+            tabPageColorStyle60.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle60.Transparency = 80;
+            tabPageColorStyle60.TransparencyLevel = LidorSystems.IntegralUI.Style.TransparencyLevel.Full;
+            this.tabPageT1_4.NormalStyle = tabPageColorStyle60;
+            this.tabPageT1_4.ParentPage = this.tabPageT1;
+            tabPageColorStyle61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            tabPageColorStyle61.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle61.BorderColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle61.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle61.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.tabPageT1_4.SelectedStyle = tabPageColorStyle61;
             this.tabPageT1_4.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_4.StyleFromParent = false;
             this.tabPageT1_4.TabIndex = 7;
@@ -6239,17 +6572,16 @@
             this.tabControlMain.ColorStyle = controlColorStyle1;
             this.tabControlMain.Controls.Add(this.tabPageT3_1);
             this.tabControlMain.Controls.Add(this.tabPageT3);
+            this.tabControlMain.Controls.Add(this.tabPageT2);
+            this.tabControlMain.Controls.Add(this.tabPageT1);
             this.tabControlMain.Controls.Add(this.tabPageT0_1);
             this.tabControlMain.Controls.Add(this.tabPageT0);
-            this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
-            this.tabControlMain.Controls.Add(this.tabPageT0_2);
-            this.tabControlMain.Controls.Add(this.tabPageT1);
-            this.tabControlMain.Controls.Add(this.tabPageT3_3);
+            this.tabControlMain.Controls.Add(this.tabPageT4);
             this.tabControlMain.Controls.Add(this.tabPageT7);
             this.tabControlMain.Controls.Add(this.tabPageT6);
             this.tabControlMain.Controls.Add(this.tabPageT5);
-            this.tabControlMain.Controls.Add(this.tabPageT4);
-            this.tabControlMain.Controls.Add(this.tabPageT2);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_3);
             this.tabControlMain.Controls.Add(this.tabPageT1_1);
@@ -6258,6 +6590,7 @@
             this.tabControlMain.Controls.Add(this.tabPageT1_4);
             this.tabControlMain.Controls.Add(this.tabPage1);
             this.tabControlMain.Controls.Add(this.tabPageT3_2);
+            this.tabControlMain.Controls.Add(this.tabPageT3_3);
             this.tabControlMain.Controls.Add(this.tabPageT3_4);
             this.tabControlMain.Controls.Add(this.tabPageT4_1);
             this.tabControlMain.Controls.Add(this.tabPageT4_2);
@@ -6276,10 +6609,10 @@
             this.tabControlMain.Location = new System.Drawing.Point(0, 0);
             this.tabControlMain.Margin = new System.Windows.Forms.Padding(10);
             this.tabControlMain.Name = "tabControlMain";
-            tabPageColorStyle63.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            tabPageColorStyle63.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle63.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.tabControlMain.NormalPageStyle = tabPageColorStyle63;
+            tabPageColorStyle64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            tabPageColorStyle64.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle64.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.tabControlMain.NormalPageStyle = tabPageColorStyle64;
             commandButtonColorStyle1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             commandButtonColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.NormalTabButtonStyle = commandButtonColorStyle1;
@@ -6303,12 +6636,12 @@
             this.tabPageT7});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
             this.tabControlMain.SelectedPage = this.tabPageT3_1;
-            tabPageColorStyle64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            tabPageColorStyle64.BackFadeColor = System.Drawing.Color.Transparent;
-            tabPageColorStyle64.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
-            tabPageColorStyle64.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
-            tabPageColorStyle64.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.tabControlMain.SelectedPageStyle = tabPageColorStyle64;
+            tabPageColorStyle65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            tabPageColorStyle65.BackFadeColor = System.Drawing.Color.Transparent;
+            tabPageColorStyle65.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
+            tabPageColorStyle65.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
+            tabPageColorStyle65.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
+            this.tabControlMain.SelectedPageStyle = tabPageColorStyle65;
             commandButtonColorStyle3.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.SelectedTabButtonStyle = commandButtonColorStyle3;
             commandButtonColorStyle4.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
@@ -6362,170 +6695,6 @@
             this.imageListNodes.Images.SetKeyName(2, "iot_on.png");
             this.imageListNodes.Images.SetKeyName(3, "iot_off.png");
             // 
-            // lbLed3
-            // 
-            this.lbLed3.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed3.BlinkInterval = 500;
-            this.lbLed3.Enabled = false;
-            this.lbLed3.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.lbLed3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed3.Label = "centering clamp 2 opened";
-            this.lbLed3.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed3.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed3.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed3.Location = new System.Drawing.Point(20, 80);
-            this.lbLed3.Name = "lbLed3";
-            this.lbLed3.Renderer = null;
-            this.lbLed3.Size = new System.Drawing.Size(220, 24);
-            this.lbLed3.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed3.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            this.lbLed3.TabIndex = 287;
-            // 
-            // lbLed4
-            // 
-            this.lbLed4.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed4.BlinkInterval = 500;
-            this.lbLed4.Enabled = false;
-            this.lbLed4.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.lbLed4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed4.Label = "centering clamp 1 opened";
-            this.lbLed4.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed4.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed4.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed4.Location = new System.Drawing.Point(20, 80);
-            this.lbLed4.Name = "lbLed4";
-            this.lbLed4.Renderer = null;
-            this.lbLed4.Size = new System.Drawing.Size(182, 24);
-            this.lbLed4.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed4.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            this.lbLed4.TabIndex = 286;
-            // 
-            // lbLed5
-            // 
-            this.lbLed5.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed5.BlinkInterval = 500;
-            this.lbLed5.Enabled = false;
-            this.lbLed5.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.lbLed5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed5.Label = "servo ready";
-            this.lbLed5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed5.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed5.Location = new System.Drawing.Point(137, 44);
-            this.lbLed5.Name = "lbLed5";
-            this.lbLed5.Renderer = null;
-            this.lbLed5.Size = new System.Drawing.Size(135, 24);
-            this.lbLed5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            this.lbLed5.TabIndex = 288;
-            // 
-            // lbLed6
-            // 
-            this.lbLed6.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed6.BlinkInterval = 500;
-            this.lbLed6.Enabled = false;
-            this.lbLed6.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.lbLed6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed6.Label = "GTO print ended";
-            this.lbLed6.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed6.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed6.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed6.Location = new System.Drawing.Point(122, 33);
-            this.lbLed6.Name = "lbLed6";
-            this.lbLed6.Renderer = null;
-            this.lbLed6.Size = new System.Drawing.Size(137, 24);
-            this.lbLed6.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed6.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            this.lbLed6.TabIndex = 289;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.buttonM2SmallClampOpening);
-            this.groupBox5.Controls.Add(this.buttonM2SmallClampClosing);
-            this.groupBox5.Controls.Add(this.lbLed2);
-            this.groupBox5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(10, 370);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(280, 120);
-            this.groupBox5.TabIndex = 290;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "small clamp";
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.buttonM2BigClampOpening);
-            this.groupBox6.Controls.Add(this.buttonM2BigClampClosing);
-            this.groupBox6.Controls.Add(this.lbLed1);
-            this.groupBox6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(305, 370);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(280, 120);
-            this.groupBox6.TabIndex = 291;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "big clamp";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.buttonM2CenteringClampsOpening);
-            this.groupBox7.Controls.Add(this.buttonM2CenteringClampsClosing);
-            this.groupBox7.Controls.Add(this.lbLed4);
-            this.groupBox7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(10, 500);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(280, 120);
-            this.groupBox7.TabIndex = 292;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "centering clamp";
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.buttonM2ContrastOpening);
-            this.groupBox8.Controls.Add(this.buttonM2ContrastClosing);
-            this.groupBox8.Controls.Add(this.lbLed3);
-            this.groupBox8.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox8.Location = new System.Drawing.Point(305, 500);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(280, 120);
-            this.groupBox8.TabIndex = 293;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "contrast";
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.buttonM2ResetServo);
-            this.groupBox9.Controls.Add(this.lbLed5);
-            this.groupBox9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(10, 625);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(280, 80);
-            this.groupBox9.TabIndex = 294;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "servo";
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.buttonM2PrintCycle);
-            this.groupBox10.Controls.Add(this.lbLed6);
-            this.groupBox10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox10.Location = new System.Drawing.Point(305, 625);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(280, 80);
-            this.groupBox10.TabIndex = 295;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "print";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(190)))), ((int)(((byte)(186)))));
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(133)))), ((int)(((byte)(46)))));
-            this.textBox1.Location = new System.Drawing.Point(10, 340);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(574, 27);
-            this.textBox1.TabIndex = 296;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // FormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6537,16 +6706,25 @@
             this.Text = "Form1";
             this.tabPageT3_1.ResumeLayout(false);
             this.tabPageT3_1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBoxM2Print.ResumeLayout(false);
+            this.groupBoxM2Servo.ResumeLayout(false);
+            this.groupBoxM2Constrast.ResumeLayout(false);
+            this.groupBoxM2CenteringClamp.ResumeLayout(false);
+            this.groupBoxM2BigClamp.ResumeLayout(false);
+            this.groupBoxM2SmallClamp.ResumeLayout(false);
+            this.groupBoxM2Homing.ResumeLayout(false);
+            this.groupBoxM2Homing.PerformLayout();
+            this.groupBoxM2StartQuote.ResumeLayout(false);
+            this.groupBoxM2StartQuote.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualQuote)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2ManualSpeed)).EndInit();
             this.groupBoxM2Jog.ResumeLayout(false);
             this.groupBoxM2Jog.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2JogSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TeachPoints)).EndInit();
+            this.contextMenuStripT3.ResumeLayout(false);
+            this.tabPageT3_2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TestPoints)).EndInit();
             this.tabPageT3_3.ResumeLayout(false);
             this.tabPageT4_1.ResumeLayout(false);
             this.tabPageT4_1.PerformLayout();
@@ -6565,6 +6743,7 @@
             this.tabPageT2.PerformLayout();
             this.tabPageT0_1.ResumeLayout(false);
             this.tabPageT0_1.PerformLayout();
+            this.contextMenuStripT0.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMessages)).EndInit();
             this.statusStripT0.ResumeLayout(false);
             this.statusStripT0.PerformLayout();
@@ -6613,12 +6792,6 @@
             this.tabPageT1_1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).EndInit();
             this.tabControlMain.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -6805,7 +6978,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn priority;
         private System.Windows.Forms.DataGridViewTextBoxColumn machine;
         private System.Windows.Forms.DataGridViewTextBoxColumn messagetext;
-        private System.Windows.Forms.ComboBox comboBoxAutoModelNameLst;
         private System.Windows.Forms.TextBox textBoxManageD4Param4;
         private System.Windows.Forms.TextBox textBoxManageD4Param2;
         private System.Windows.Forms.TextBox textBoxManageD4Param3;
@@ -6884,16 +7056,15 @@
         private System.Windows.Forms.DataGridView dataGridViewEditRecipe;
         private System.Windows.Forms.ComboBox comboBoxRecipeName;
         private System.Windows.Forms.Label labelRecipeNameT0_2;
-        private System.Windows.Forms.ComboBox comboBoxM2TeachModelName;
         private System.Windows.Forms.Button buttonM2TeachDeleteProgram;
         private System.Windows.Forms.ComboBox comboBoxM2TeachProgramList;
         private System.Windows.Forms.Button buttonM2TeachNewProgram;
         private System.Windows.Forms.Button buttonM2TeachSaveProgram;
         private System.Windows.Forms.Button buttonM2TeachLoadProgram;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBoxM2Homing;
         private System.Windows.Forms.Button buttonM2Home;
         private System.Windows.Forms.Button buttonM2ResetHome;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBoxM2StartQuote;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button buttonM2StartQuote;
@@ -6907,12 +7078,6 @@
         private System.Windows.Forms.Label labelM2TeachAxisQuoteName;
         private System.Windows.Forms.Label labelM2TeachAxisQuoteValue;
         private System.Windows.Forms.DataGridView dataGridViewM2TeachPoints;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2PointID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMeQuote;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2Speed;
-        private System.Windows.Forms.DataGridViewButtonColumn ColumnM2Register;
-        private System.Windows.Forms.DataGridViewButtonColumn ColumnM2StartQuote;
-        private System.Windows.Forms.DataGridViewImageColumn Column1;
         private System.Windows.Forms.Button buttonM2PrintCycle;
         private System.Windows.Forms.Button buttonM2ResetServo;
         private System.Windows.Forms.Button buttonM2ContrastClosing;
@@ -6983,16 +7148,36 @@
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed1;
         private System.Windows.Forms.ImageList imageListBelt;
         private System.Windows.Forms.CheckBox checkBoxM2ExitBelt;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.TextBox textBoxM2Separator;
+        private System.Windows.Forms.GroupBox groupBoxM2Print;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed6;
-        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.GroupBox groupBoxM2Servo;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed5;
-        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox groupBoxM2Constrast;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed3;
-        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBoxM2CenteringClamp;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed4;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBoxM2BigClamp;
+        private System.Windows.Forms.GroupBox groupBoxM2SmallClamp;
+        private System.Windows.Forms.ComboBox comboBoxM2TestProgramList;
+        private System.Windows.Forms.Button buttonM2TestSaveProgram;
+        private System.Windows.Forms.Button buttonM2TestLoadProgram;
+        private System.Windows.Forms.DataGridView dataGridViewM2TestPoints;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM2StartTest;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2PointID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMeQuote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2Speed;
+        private System.Windows.Forms.DataGridViewButtonColumn ColumnM2Register;
+        private System.Windows.Forms.DataGridViewButtonColumn ColumnM2StartQuote;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripT0;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT0;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxT0;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripT3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT3;
+        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxT3;
     }
 }

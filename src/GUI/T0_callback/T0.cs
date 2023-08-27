@@ -16,7 +16,7 @@ namespace GUI
 {
     public partial class FormApp : Form
     {
-        private void comboBoxAutoModelNameLst_SelectedIndexChanged(object sender, EventArgs e)
+        private void toolStripComboBoxT0_SelectedIndexChanged(object sender, EventArgs e)
         {
             var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
             List<IObjProgram> pList = new List<IObjProgram>();
@@ -24,7 +24,7 @@ namespace GUI
             if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, comboBoxAutoModelNameLst.Text);
+                pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, toolStripComboBoxT0.Text);
                 comboBoxM1PrgName.Items.Clear();
 
                 foreach (IObjProgram prgName in pList)
@@ -32,7 +32,7 @@ namespace GUI
                     comboBoxM1PrgName.Items.Add(prgName.ProgramName);
                 }
 
-                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxAutoModelNameLst.Text);
+                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, toolStripComboBoxT0.Text);
                 comboBoxM2PrgName.Items.Clear();
 
                 foreach (IObjProgram prgName in pList)
@@ -40,7 +40,7 @@ namespace GUI
                     comboBoxM2PrgName.Items.Add(prgName.ProgramName);
                 }
 
-                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxAutoModelNameLst.Text);
+                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, toolStripComboBoxT0.Text);
                 comboBoxM3PrgName_st1.Items.Clear();
 
                 foreach (IObjProgram prgName in pList)
@@ -48,7 +48,7 @@ namespace GUI
                     comboBoxM3PrgName_st1.Items.Add(prgName.ProgramName);
                 }
 
-                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxAutoModelNameLst.Text);
+                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, toolStripComboBoxT0.Text);
                 comboBoxM3PrgName_st2.Items.Clear();
 
                 foreach (IObjProgram prgName in pList)
@@ -57,7 +57,7 @@ namespace GUI
                 }
 
                 //da rimuovere
-                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxAutoModelNameLst.Text);
+                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, toolStripComboBoxT0.Text);
                 comboBoxM4PrgName.Items.Clear();
 
                 foreach (IObjProgram prgName in pList)
@@ -473,7 +473,6 @@ namespace GUI
                 AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
             }
         }
-
         private void checkBoxM1Param1_CheckStateChanged(object sender, EventArgs e)
         {
             bool chkValue = false;
@@ -483,7 +482,6 @@ namespace GUI
             checkBoxM1Param1.ImageIndex = (chkValue) ? 0 : 1;
             labelM1Param1.Text = (chkValue) ? "on" : "off";
         }
-
         private void checkBoxM2Param1_CheckStateChanged(object sender, EventArgs e)
         {
             bool chkValue = false;
@@ -493,7 +491,6 @@ namespace GUI
             checkBoxM2Param1.ImageIndex = (chkValue) ? 0 : 1;
             labelM2Param1.Text = (chkValue) ? "on" : "off";
         }
-
         private void checkBoxM3Param1_CheckStateChanged(object sender, EventArgs e)
         {
             bool chkValue = false;
@@ -503,7 +500,6 @@ namespace GUI
             checkBoxM3Param1.ImageIndex = (chkValue) ? 0 : 1;
             labelM3Param1.Text = (chkValue) ? "on" : "off";
         }
-
         private void checkBoxM4Param1_CheckStateChanged(object sender, EventArgs e)
         {
             bool chkValue = false;
@@ -513,7 +509,6 @@ namespace GUI
             checkBoxM4Param1.ImageIndex = (chkValue) ? 0 : 1;
             labelM4Param1.Text = (chkValue) ? "on" : "off";
         }
-
         private void checkBoxM5Param1_CheckStateChanged(object sender, EventArgs e)
         {
             bool chkValue = false;
@@ -523,7 +518,6 @@ namespace GUI
             checkBoxM5Param1.ImageIndex = (chkValue) ? 0 : 1;
             labelM5Param1.Text = (chkValue) ? "on" : "off";
         }
-
         private void checkBoxM6Param1_CheckStateChanged(object sender, EventArgs e)
         {
             bool chkValue = false;
@@ -533,7 +527,6 @@ namespace GUI
             checkBoxM6Param1.ImageIndex = (chkValue) ? 0 : 1;
             labelM6Param1.Text = (chkValue) ? "on" : "off";
         }
-
         private void tabPageT0_3_Paint(object sender, PaintEventArgs e)
         {
             Graphics g;
@@ -558,7 +551,6 @@ namespace GUI
             g.DrawLine(myPen, pictureBoxIOTNode.Location.X + pictureBoxIOTNode.Width / 2 + groupboxXShift, pictureBoxIOTNode.Location.Y + pictureBoxIOTNode.Height + groupboxYShift, pictureBoxIOTNode.Location.X + pictureBoxIOTNode.Width / 2 + groupboxXShift, pictureBoxIOTNode.Location.Y + pictureBoxIOTNode.Height + lineHeight - 10 + groupboxYShift);
 
         }
-
         private async void checkBoxM1Start_CheckStateChanged(object sender, EventArgs e)
         {
             if (ccService.ClientIsConnected)
@@ -877,7 +869,6 @@ namespace GUI
                 AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
             }
         }
-
         private async void buttonM2Reset_Click(object sender, EventArgs e)
         {
             if (ccService.ClientIsConnected)
@@ -895,7 +886,6 @@ namespace GUI
                 AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
             }
         }
-
         private async void buttonM4Reset_Click(object sender, EventArgs e)
         {
             if (ccService.ClientIsConnected)

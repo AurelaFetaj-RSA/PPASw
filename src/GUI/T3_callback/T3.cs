@@ -16,6 +16,24 @@ namespace GUI
 {
     public partial class FormApp : Form
     {
+        private void toolStripComboBoxT3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                List<IObjProgram> pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, toolStripComboBoxT3.Text);
+
+                comboBoxM2TeachProgramList.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM2TeachProgramList.Items.Add(prgName.ProgramName);
+                }
+            }
+        }
+
         private async void buttonM2SmallClampOpening_Click(object sender, EventArgs e)
         {
             if (ccService.ClientIsConnected)

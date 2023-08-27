@@ -329,7 +329,7 @@ namespace GUI
                     };
 
                     readResult = await ccService.Read(keys);
-                    UpdateOPCUAM2PointReached(readResult["pcM2PointReached"]);
+                    //UpdateOPCUAM2PointReached(readResult["pcM2PointReached"]);
                     #endregion
 
                     #region(* *)

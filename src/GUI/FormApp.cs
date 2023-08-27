@@ -236,20 +236,15 @@ namespace GUI
 
                 foreach (string modelName in mList)
                 {
-                    comboBoxAutoModelNameLst.Items.Add(modelName);
+                    toolStripComboBoxT0.Items.Add(modelName);
+                    toolStripComboBoxT0.SelectedIndex = 0;
+                    toolStripComboBoxT0.SelectedIndexChanged += toolStripComboBoxT0_SelectedIndexChanged;
+                    toolStripComboBoxT3.Items.Add(modelName);
+                    toolStripComboBoxT3.SelectedIndex = 0;
+                    toolStripComboBoxT3.SelectedIndexChanged += toolStripComboBoxT3_SelectedIndexChanged;
                 }
             }
             #endregion
-
-            //#region (* init M2 combobox model name list *)
-            //mList = progRS.GetModel(config.ProgramsPath[1], config.Extensions);
-
-            //foreach (string modelName in mList)
-            //{
-            //    comboBoxM2TeachModelName.Items.Add(modelName);
-            //}
-
-            //#endregion
 
             //#region (* init M3 combobox model name list *)
             //mList = progRS.GetModel(config.ProgramsPath[2], config.Extensions);
@@ -325,6 +320,14 @@ namespace GUI
 
                 if (parentPage.Pages.Count != 0) nextPage = parentPage.Pages[0];
                 if (nextPage != null) this.tabControlMain.SelectedPage = nextPage;
+
+                if (nextPage != null)
+                {
+                    if (tabControlMain.SelectedPage.Index == 0) 
+                    {
+                        tabControlMain.SelectedPage.ContextMenuStrip.Show();
+                    }
+                }
             }
             else
             {
@@ -418,5 +421,58 @@ namespace GUI
             }
         }
 
+        private void dataGridViewM2TeachPoints_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
+        }
+
+        private void dataGridViewM2TeachPoints_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if ((e.ColumnIndex == 3) && (e.RowIndex >= 0 ))
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                System.Drawing.Image img = new Bitmap("C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\register.png");
+                var w = 32;// img.Width;
+                var h = 32;// img.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+                
+
+                
+                e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+
+            if ((e.ColumnIndex == 4) && (e.RowIndex >= 0))
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                System.Drawing.Image img = new Bitmap("C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\startquote.png");
+                var w = 32;// img.Width;
+                var h = 32;// img.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+
+
+                e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+
+            if ((e.ColumnIndex == 5) && (e.RowIndex >= 0))
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                System.Drawing.Image img = new Bitmap("C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\preached.png");
+                var w = 32;// img.Width;
+                var h = 32;// img.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+
+
+                e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+            
+        }
     }
 }

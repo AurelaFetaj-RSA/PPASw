@@ -98,11 +98,11 @@ namespace GUI
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle18 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle19 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle20 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle21 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle19 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle20 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle24 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle20 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle21 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -118,12 +118,12 @@ namespace GUI
             LidorSystems.IntegralUI.Containers.Style.TabStripStyle tabStripStyle4 = new LidorSystems.IntegralUI.Containers.Style.TabStripStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle5 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolTipStyle toolTipStyle5 = new LidorSystems.IntegralUI.Controls.Style.ToolTipStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Automatic");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle25 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("RSA");
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Recipies");
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Automatic");
             LidorSystems.IntegralUI.Style.ControlColorStyle controlColorStyle1 = new LidorSystems.IntegralUI.Style.ControlColorStyle();
             LidorSystems.IntegralUI.Style.ControlFormatStyle controlFormatStyle6 = new LidorSystems.IntegralUI.Style.ControlFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -258,6 +258,15 @@ namespace GUI
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageConsole = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlT2 = new LidorSystems.IntegralUI.Containers.TabControl();
+            this.tabPageT2M2_2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.comboBoxM2TestProgramList = new System.Windows.Forms.ComboBox();
+            this.buttonM2TestSaveProgram = new System.Windows.Forms.Button();
+            this.buttonM2TestLoadProgram = new System.Windows.Forms.Button();
+            this.dataGridViewM2TestPoints = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbButtonM2StartTest = new LBSoft.IndustrialCtrls.Buttons.LBButton();
             this.tabPageT2M2_1 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.comboBoxM2TeachModelName = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -399,18 +408,33 @@ namespace GUI
             this.lbLed1003M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed1004M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed1001M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.tabPageT2M2_2 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.comboBoxM2TestProgramList = new System.Windows.Forms.ComboBox();
-            this.buttonM2TestSaveProgram = new System.Windows.Forms.Button();
-            this.buttonM2TestLoadProgram = new System.Windows.Forms.Button();
-            this.dataGridViewM2TestPoints = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbButtonM2StartTest = new LBSoft.IndustrialCtrls.Buttons.LBButton();
             this.tabPageRecipe = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageMain = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlT0 = new LidorSystems.IntegralUI.Containers.TabControl();
+            this.tabPageT0_3 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.groupBoxKeepAliveFromPlc = new System.Windows.Forms.GroupBox();
+            this.pictureBoxIOTNode = new System.Windows.Forms.PictureBox();
+            this.pictureBoxM5PLCNode = new System.Windows.Forms.PictureBox();
+            this.pictureBoxM1PLCNode = new System.Windows.Forms.PictureBox();
+            this.pictureBoxM4PLCNode = new System.Windows.Forms.PictureBox();
+            this.pictureBoxM2PLCNode = new System.Windows.Forms.PictureBox();
+            this.pictureBoxM3PLCNode = new System.Windows.Forms.PictureBox();
+            this.groupBoxKeepAliveToPlc = new System.Windows.Forms.GroupBox();
+            this.lbLedM5PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedM2PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedM3PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedM1PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLedM4PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.tabPageT0_2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.buttonSendLaser = new System.Windows.Forms.Button();
+            this.textBoxLaserLine2 = new System.Windows.Forms.TextBox();
+            this.textBoxLaserLine1 = new System.Windows.Forms.TextBox();
+            this.textBoxM6Test = new System.Windows.Forms.TextBox();
+            this.textBoxM5Test = new System.Windows.Forms.TextBox();
+            this.textBoxM4Test = new System.Windows.Forms.TextBox();
+            this.textBoxM3Test = new System.Windows.Forms.TextBox();
+            this.textBoxM2Test = new System.Windows.Forms.TextBox();
+            this.textBoxM1Test = new System.Windows.Forms.TextBox();
             this.tabPageT0_1 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.groupBoxLine = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -488,30 +512,6 @@ namespace GUI
             this.labelM1Param1Value = new System.Windows.Forms.Label();
             this.labelM1Param1Name = new System.Windows.Forms.Label();
             this.checkBoxM1Start = new System.Windows.Forms.CheckBox();
-            this.tabPageT0_3 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.groupBoxKeepAliveFromPlc = new System.Windows.Forms.GroupBox();
-            this.pictureBoxIOTNode = new System.Windows.Forms.PictureBox();
-            this.pictureBoxM5PLCNode = new System.Windows.Forms.PictureBox();
-            this.pictureBoxM1PLCNode = new System.Windows.Forms.PictureBox();
-            this.pictureBoxM4PLCNode = new System.Windows.Forms.PictureBox();
-            this.pictureBoxM2PLCNode = new System.Windows.Forms.PictureBox();
-            this.pictureBoxM3PLCNode = new System.Windows.Forms.PictureBox();
-            this.groupBoxKeepAliveToPlc = new System.Windows.Forms.GroupBox();
-            this.lbLedM5PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedM2PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedM3PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedM1PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLedM4PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.tabPageT0_2 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.buttonSendLaser = new System.Windows.Forms.Button();
-            this.textBoxLaserLine2 = new System.Windows.Forms.TextBox();
-            this.textBoxLaserLine1 = new System.Windows.Forms.TextBox();
-            this.textBoxM6Test = new System.Windows.Forms.TextBox();
-            this.textBoxM5Test = new System.Windows.Forms.TextBox();
-            this.textBoxM4Test = new System.Windows.Forms.TextBox();
-            this.textBoxM3Test = new System.Windows.Forms.TextBox();
-            this.textBoxM2Test = new System.Windows.Forms.TextBox();
-            this.textBoxM1Test = new System.Windows.Forms.TextBox();
             this.labelLoginLevel = new System.Windows.Forms.Label();
             this.labelDateTime = new System.Windows.Forms.Label();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
@@ -544,6 +544,8 @@ namespace GUI
             this.tabPageConsole.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT2)).BeginInit();
             this.tabControlT2.SuspendLayout();
+            this.tabPageT2M2_2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TestPoints)).BeginInit();
             this.tabPageT2M2_1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -554,19 +556,9 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TeachPoints)).BeginInit();
             this.tabPageT2M2_4.SuspendLayout();
             this.tabPageT2M2_3.SuspendLayout();
-            this.tabPageT2M2_2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TestPoints)).BeginInit();
             this.tabPageMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT0)).BeginInit();
             this.tabControlT0.SuspendLayout();
-            this.tabPageT0_1.SuspendLayout();
-            this.groupBoxLine.SuspendLayout();
-            this.groupBoxM6.SuspendLayout();
-            this.groupBoxM3.SuspendLayout();
-            this.groupBoxM5.SuspendLayout();
-            this.groupBoxM4.SuspendLayout();
-            this.groupBoxM2.SuspendLayout();
-            this.groupBoxM1.SuspendLayout();
             this.tabPageT0_3.SuspendLayout();
             this.groupBoxKeepAliveFromPlc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIOTNode)).BeginInit();
@@ -577,6 +569,14 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3PLCNode)).BeginInit();
             this.groupBoxKeepAliveToPlc.SuspendLayout();
             this.tabPageT0_2.SuspendLayout();
+            this.tabPageT0_1.SuspendLayout();
+            this.groupBoxLine.SuspendLayout();
+            this.groupBoxM6.SuspendLayout();
+            this.groupBoxM3.SuspendLayout();
+            this.groupBoxM5.SuspendLayout();
+            this.groupBoxM4.SuspendLayout();
+            this.groupBoxM2.SuspendLayout();
+            this.groupBoxM1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
             this.splitContainer6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).BeginInit();
@@ -2205,10 +2205,10 @@ namespace GUI
             // 
             // tabControlT2
             // 
-            this.tabControlT2.Controls.Add(this.tabPageT2M2_1);
+            this.tabControlT2.Controls.Add(this.tabPageT2M2_2);
             this.tabControlT2.Controls.Add(this.tabPageT2M2_4);
             this.tabControlT2.Controls.Add(this.tabPageT2M2_3);
-            this.tabControlT2.Controls.Add(this.tabPageT2M2_2);
+            this.tabControlT2.Controls.Add(this.tabPageT2M2_1);
             this.tabControlT2.Cursor = System.Windows.Forms.Cursors.Default;
             controlFormatStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlT2.FormatStyle = controlFormatStyle4;
@@ -2222,7 +2222,7 @@ namespace GUI
             this.tabPageT2M2_3,
             this.tabPageT2M2_4});
             this.tabControlT2.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlT2.SelectedPage = this.tabPageT2M2_1;
+            this.tabControlT2.SelectedPage = this.tabPageT2M2_2;
             this.tabControlT2.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabControlT2.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Left;
             tabStripStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
@@ -2232,6 +2232,98 @@ namespace GUI
             this.tabControlT2.ToolItemFormatStyle = toolItemFormatStyle4;
             toolTipStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlT2.ToolTipStyle = toolTipStyle4;
+            // 
+            // tabPageT2M2_2
+            // 
+            this.tabPageT2M2_2.Controls.Add(this.comboBoxM2TestProgramList);
+            this.tabPageT2M2_2.Controls.Add(this.buttonM2TestSaveProgram);
+            this.tabPageT2M2_2.Controls.Add(this.buttonM2TestLoadProgram);
+            this.tabPageT2M2_2.Controls.Add(this.dataGridViewM2TestPoints);
+            this.tabPageT2M2_2.Controls.Add(this.lbButtonM2StartTest);
+            tabPageFormatStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT2M2_2.FormatStyle = tabPageFormatStyle18;
+            resources.ApplyResources(this.tabPageT2M2_2, "tabPageT2M2_2");
+            this.tabPageT2M2_2.Name = "tabPageT2M2_2";
+            this.tabPageT2M2_2.ParentPage = null;
+            this.tabPageT2M2_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT2M2_2.TextBounds")));
+            this.tabPageT2M2_2.TextSize = new System.Drawing.SizeF(43.60969F, 25.4663F);
+            // 
+            // comboBoxM2TestProgramList
+            // 
+            resources.ApplyResources(this.comboBoxM2TestProgramList, "comboBoxM2TestProgramList");
+            this.comboBoxM2TestProgramList.FormattingEnabled = true;
+            this.comboBoxM2TestProgramList.Name = "comboBoxM2TestProgramList";
+            // 
+            // buttonM2TestSaveProgram
+            // 
+            resources.ApplyResources(this.buttonM2TestSaveProgram, "buttonM2TestSaveProgram");
+            this.buttonM2TestSaveProgram.Name = "buttonM2TestSaveProgram";
+            this.buttonM2TestSaveProgram.UseVisualStyleBackColor = true;
+            this.buttonM2TestSaveProgram.Click += new System.EventHandler(this.buttonM2TestSaveProgram_Click);
+            // 
+            // buttonM2TestLoadProgram
+            // 
+            resources.ApplyResources(this.buttonM2TestLoadProgram, "buttonM2TestLoadProgram");
+            this.buttonM2TestLoadProgram.Name = "buttonM2TestLoadProgram";
+            this.buttonM2TestLoadProgram.UseVisualStyleBackColor = true;
+            this.buttonM2TestLoadProgram.Click += new System.EventHandler(this.buttonM2TestLoadProgram_Click);
+            // 
+            // dataGridViewM2TestPoints
+            // 
+            this.dataGridViewM2TestPoints.AllowUserToAddRows = false;
+            this.dataGridViewM2TestPoints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewM2TestPoints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dataGridViewM2TestPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            resources.ApplyResources(this.dataGridViewM2TestPoints, "dataGridViewM2TestPoints");
+            this.dataGridViewM2TestPoints.Name = "dataGridViewM2TestPoints";
+            this.dataGridViewM2TestPoints.RowHeadersVisible = false;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewM2TestPoints.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewM2TestPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewM2TestPoints.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM2TestPoints_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewTextBoxColumn4.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // lbButtonM2StartTest
+            // 
+            this.lbButtonM2StartTest.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM2StartTest.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM2StartTest, "lbButtonM2StartTest");
+            this.lbButtonM2StartTest.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM2StartTest.Label = "START TEST";
+            this.lbButtonM2StartTest.Name = "lbButtonM2StartTest";
+            this.lbButtonM2StartTest.Renderer = null;
+            this.lbButtonM2StartTest.RepeatInterval = 100;
+            this.lbButtonM2StartTest.RepeatState = false;
+            this.lbButtonM2StartTest.StartRepeatInterval = 500;
+            this.lbButtonM2StartTest.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM2StartTest.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2StartTest.Click += new System.EventHandler(this.lbButtonM2StartTest_Click);
             // 
             // tabPageT2M2_1
             // 
@@ -2257,10 +2349,10 @@ namespace GUI
             this.tabPageT2M2_1.Controls.Add(this.buttonM2BigClampOpening);
             this.tabPageT2M2_1.Controls.Add(this.buttonM2SmallClampClosing);
             this.tabPageT2M2_1.Controls.Add(this.buttonM2SmallClampOpening);
-            tabPageFormatStyle18.BorderCornerRadius = 30;
-            tabPageFormatStyle18.ContentSpacing = 30;
-            tabPageFormatStyle18.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT2M2_1.FormatStyle = tabPageFormatStyle18;
+            tabPageFormatStyle21.BorderCornerRadius = 30;
+            tabPageFormatStyle21.ContentSpacing = 30;
+            tabPageFormatStyle21.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT2M2_1.FormatStyle = tabPageFormatStyle21;
             resources.ApplyResources(this.tabPageT2M2_1, "tabPageT2M2_1");
             this.tabPageT2M2_1.Name = "tabPageT2M2_1";
             this.tabPageT2M2_1.ParentPage = null;
@@ -2537,17 +2629,17 @@ namespace GUI
             resources.ApplyResources(this.dataGridViewM2TeachPoints, "dataGridViewM2TeachPoints");
             this.dataGridViewM2TeachPoints.Name = "dataGridViewM2TeachPoints";
             this.dataGridViewM2TeachPoints.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewM2TeachPoints.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewM2TeachPoints.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewM2TeachPoints.RowTemplate.Height = 48;
             this.dataGridViewM2TeachPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridViewM2TeachPoints.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM2Points_CellContentClick);
             // 
             // ColumnM2PointID
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColumnM2PointID.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColumnM2PointID.DefaultCellStyle = dataGridViewCellStyle7;
             this.ColumnM2PointID.Frozen = true;
             resources.ApplyResources(this.ColumnM2PointID, "ColumnM2PointID");
             this.ColumnM2PointID.Name = "ColumnM2PointID";
@@ -4210,98 +4302,6 @@ namespace GUI
             this.lbLed1001M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
             this.lbLed1001M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
             // 
-            // tabPageT2M2_2
-            // 
-            this.tabPageT2M2_2.Controls.Add(this.comboBoxM2TestProgramList);
-            this.tabPageT2M2_2.Controls.Add(this.buttonM2TestSaveProgram);
-            this.tabPageT2M2_2.Controls.Add(this.buttonM2TestLoadProgram);
-            this.tabPageT2M2_2.Controls.Add(this.dataGridViewM2TestPoints);
-            this.tabPageT2M2_2.Controls.Add(this.lbButtonM2StartTest);
-            tabPageFormatStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT2M2_2.FormatStyle = tabPageFormatStyle21;
-            resources.ApplyResources(this.tabPageT2M2_2, "tabPageT2M2_2");
-            this.tabPageT2M2_2.Name = "tabPageT2M2_2";
-            this.tabPageT2M2_2.ParentPage = null;
-            this.tabPageT2M2_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT2M2_2.TextBounds")));
-            this.tabPageT2M2_2.TextSize = new System.Drawing.SizeF(43.60969F, 25.4663F);
-            // 
-            // comboBoxM2TestProgramList
-            // 
-            resources.ApplyResources(this.comboBoxM2TestProgramList, "comboBoxM2TestProgramList");
-            this.comboBoxM2TestProgramList.FormattingEnabled = true;
-            this.comboBoxM2TestProgramList.Name = "comboBoxM2TestProgramList";
-            // 
-            // buttonM2TestSaveProgram
-            // 
-            resources.ApplyResources(this.buttonM2TestSaveProgram, "buttonM2TestSaveProgram");
-            this.buttonM2TestSaveProgram.Name = "buttonM2TestSaveProgram";
-            this.buttonM2TestSaveProgram.UseVisualStyleBackColor = true;
-            this.buttonM2TestSaveProgram.Click += new System.EventHandler(this.buttonM2TestSaveProgram_Click);
-            // 
-            // buttonM2TestLoadProgram
-            // 
-            resources.ApplyResources(this.buttonM2TestLoadProgram, "buttonM2TestLoadProgram");
-            this.buttonM2TestLoadProgram.Name = "buttonM2TestLoadProgram";
-            this.buttonM2TestLoadProgram.UseVisualStyleBackColor = true;
-            this.buttonM2TestLoadProgram.Click += new System.EventHandler(this.buttonM2TestLoadProgram_Click);
-            // 
-            // dataGridViewM2TestPoints
-            // 
-            this.dataGridViewM2TestPoints.AllowUserToAddRows = false;
-            this.dataGridViewM2TestPoints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewM2TestPoints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.dataGridViewM2TestPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            resources.ApplyResources(this.dataGridViewM2TestPoints, "dataGridViewM2TestPoints");
-            this.dataGridViewM2TestPoints.Name = "dataGridViewM2TestPoints";
-            this.dataGridViewM2TestPoints.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewM2TestPoints.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridViewM2TestPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridViewM2TestPoints.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM2TestPoints_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridViewTextBoxColumn4.Frozen = true;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.Frozen = true;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.Frozen = true;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // lbButtonM2StartTest
-            // 
-            this.lbButtonM2StartTest.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonM2StartTest.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            resources.ApplyResources(this.lbButtonM2StartTest, "lbButtonM2StartTest");
-            this.lbButtonM2StartTest.ForeColor = System.Drawing.Color.White;
-            this.lbButtonM2StartTest.Label = "START TEST";
-            this.lbButtonM2StartTest.Name = "lbButtonM2StartTest";
-            this.lbButtonM2StartTest.Renderer = null;
-            this.lbButtonM2StartTest.RepeatInterval = 100;
-            this.lbButtonM2StartTest.RepeatState = false;
-            this.lbButtonM2StartTest.StartRepeatInterval = 500;
-            this.lbButtonM2StartTest.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonM2StartTest.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            this.lbButtonM2StartTest.Click += new System.EventHandler(this.lbButtonM2StartTest_Click);
-            // 
             // tabPageRecipe
             // 
             tabPageFormatStyle24.BorderCornerRadius = 5;
@@ -4411,6 +4411,226 @@ namespace GUI
             this.tabControlT0.ToolItemFormatStyle = toolItemFormatStyle5;
             toolTipStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlT0.ToolTipStyle = toolTipStyle5;
+            // 
+            // tabPageT0_3
+            // 
+            this.tabPageT0_3.Controls.Add(this.groupBoxKeepAliveFromPlc);
+            this.tabPageT0_3.Controls.Add(this.groupBoxKeepAliveToPlc);
+            tabPageFormatStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT0_3.FormatStyle = tabPageFormatStyle25;
+            resources.ApplyResources(this.tabPageT0_3, "tabPageT0_3");
+            this.tabPageT0_3.Name = "tabPageT0_3";
+            this.tabPageT0_3.ParentPage = null;
+            treeNode8.Name = "";
+            treeNode8.Tag = this.tabPageT0_3;
+            resources.ApplyResources(treeNode8, "treeNode8");
+            this.tabPageT0_3.Tag = treeNode8;
+            this.tabPageT0_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_3.TextBounds")));
+            this.tabPageT0_3.TextSize = new System.Drawing.SizeF(46.69904F, 25.4663F);
+            this.tabPageT0_3.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageT0_3_Paint);
+            // 
+            // groupBoxKeepAliveFromPlc
+            // 
+            this.groupBoxKeepAliveFromPlc.Controls.Add(this.pictureBoxIOTNode);
+            this.groupBoxKeepAliveFromPlc.Controls.Add(this.pictureBoxM5PLCNode);
+            this.groupBoxKeepAliveFromPlc.Controls.Add(this.pictureBoxM1PLCNode);
+            this.groupBoxKeepAliveFromPlc.Controls.Add(this.pictureBoxM4PLCNode);
+            this.groupBoxKeepAliveFromPlc.Controls.Add(this.pictureBoxM2PLCNode);
+            this.groupBoxKeepAliveFromPlc.Controls.Add(this.pictureBoxM3PLCNode);
+            resources.ApplyResources(this.groupBoxKeepAliveFromPlc, "groupBoxKeepAliveFromPlc");
+            this.groupBoxKeepAliveFromPlc.Name = "groupBoxKeepAliveFromPlc";
+            this.groupBoxKeepAliveFromPlc.TabStop = false;
+            // 
+            // pictureBoxIOTNode
+            // 
+            resources.ApplyResources(this.pictureBoxIOTNode, "pictureBoxIOTNode");
+            this.pictureBoxIOTNode.Name = "pictureBoxIOTNode";
+            this.pictureBoxIOTNode.TabStop = false;
+            // 
+            // pictureBoxM5PLCNode
+            // 
+            resources.ApplyResources(this.pictureBoxM5PLCNode, "pictureBoxM5PLCNode");
+            this.pictureBoxM5PLCNode.Name = "pictureBoxM5PLCNode";
+            this.pictureBoxM5PLCNode.TabStop = false;
+            // 
+            // pictureBoxM1PLCNode
+            // 
+            resources.ApplyResources(this.pictureBoxM1PLCNode, "pictureBoxM1PLCNode");
+            this.pictureBoxM1PLCNode.Name = "pictureBoxM1PLCNode";
+            this.pictureBoxM1PLCNode.TabStop = false;
+            // 
+            // pictureBoxM4PLCNode
+            // 
+            resources.ApplyResources(this.pictureBoxM4PLCNode, "pictureBoxM4PLCNode");
+            this.pictureBoxM4PLCNode.Name = "pictureBoxM4PLCNode";
+            this.pictureBoxM4PLCNode.TabStop = false;
+            // 
+            // pictureBoxM2PLCNode
+            // 
+            resources.ApplyResources(this.pictureBoxM2PLCNode, "pictureBoxM2PLCNode");
+            this.pictureBoxM2PLCNode.Name = "pictureBoxM2PLCNode";
+            this.pictureBoxM2PLCNode.TabStop = false;
+            // 
+            // pictureBoxM3PLCNode
+            // 
+            resources.ApplyResources(this.pictureBoxM3PLCNode, "pictureBoxM3PLCNode");
+            this.pictureBoxM3PLCNode.Name = "pictureBoxM3PLCNode";
+            this.pictureBoxM3PLCNode.TabStop = false;
+            // 
+            // groupBoxKeepAliveToPlc
+            // 
+            this.groupBoxKeepAliveToPlc.Controls.Add(this.lbLedM5PCKeepAlive);
+            this.groupBoxKeepAliveToPlc.Controls.Add(this.lbLedM2PCKeepAlive);
+            this.groupBoxKeepAliveToPlc.Controls.Add(this.lbLedM3PCKeepAlive);
+            this.groupBoxKeepAliveToPlc.Controls.Add(this.lbLedM1PCKeepAlive);
+            this.groupBoxKeepAliveToPlc.Controls.Add(this.lbLedM4PCKeepAlive);
+            resources.ApplyResources(this.groupBoxKeepAliveToPlc, "groupBoxKeepAliveToPlc");
+            this.groupBoxKeepAliveToPlc.Name = "groupBoxKeepAliveToPlc";
+            this.groupBoxKeepAliveToPlc.TabStop = false;
+            // 
+            // lbLedM5PCKeepAlive
+            // 
+            this.lbLedM5PCKeepAlive.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM5PCKeepAlive.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM5PCKeepAlive, "lbLedM5PCKeepAlive");
+            this.lbLedM5PCKeepAlive.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM5PCKeepAlive.Label = "M5 keep alive";
+            this.lbLedM5PCKeepAlive.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM5PCKeepAlive.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLedM5PCKeepAlive.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLedM5PCKeepAlive.Name = "lbLedM5PCKeepAlive";
+            this.lbLedM5PCKeepAlive.Renderer = null;
+            this.lbLedM5PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM5PCKeepAlive.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedM2PCKeepAlive
+            // 
+            this.lbLedM2PCKeepAlive.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM2PCKeepAlive.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM2PCKeepAlive, "lbLedM2PCKeepAlive");
+            this.lbLedM2PCKeepAlive.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM2PCKeepAlive.Label = "M2 keep alive";
+            this.lbLedM2PCKeepAlive.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM2PCKeepAlive.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLedM2PCKeepAlive.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLedM2PCKeepAlive.Name = "lbLedM2PCKeepAlive";
+            this.lbLedM2PCKeepAlive.Renderer = null;
+            this.lbLedM2PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM2PCKeepAlive.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedM3PCKeepAlive
+            // 
+            this.lbLedM3PCKeepAlive.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM3PCKeepAlive.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM3PCKeepAlive, "lbLedM3PCKeepAlive");
+            this.lbLedM3PCKeepAlive.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM3PCKeepAlive.Label = "M3 keep alive";
+            this.lbLedM3PCKeepAlive.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM3PCKeepAlive.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLedM3PCKeepAlive.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLedM3PCKeepAlive.Name = "lbLedM3PCKeepAlive";
+            this.lbLedM3PCKeepAlive.Renderer = null;
+            this.lbLedM3PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM3PCKeepAlive.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedM1PCKeepAlive
+            // 
+            this.lbLedM1PCKeepAlive.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM1PCKeepAlive.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM1PCKeepAlive, "lbLedM1PCKeepAlive");
+            this.lbLedM1PCKeepAlive.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM1PCKeepAlive.Label = "M1 keep alive";
+            this.lbLedM1PCKeepAlive.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM1PCKeepAlive.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLedM1PCKeepAlive.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLedM1PCKeepAlive.Name = "lbLedM1PCKeepAlive";
+            this.lbLedM1PCKeepAlive.Renderer = null;
+            this.lbLedM1PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM1PCKeepAlive.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // lbLedM4PCKeepAlive
+            // 
+            this.lbLedM4PCKeepAlive.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM4PCKeepAlive.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM4PCKeepAlive, "lbLedM4PCKeepAlive");
+            this.lbLedM4PCKeepAlive.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM4PCKeepAlive.Label = "M4 keep alive";
+            this.lbLedM4PCKeepAlive.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM4PCKeepAlive.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLedM4PCKeepAlive.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLedM4PCKeepAlive.Name = "lbLedM4PCKeepAlive";
+            this.lbLedM4PCKeepAlive.Renderer = null;
+            this.lbLedM4PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM4PCKeepAlive.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // tabPageT0_2
+            // 
+            this.tabPageT0_2.Controls.Add(this.buttonSendLaser);
+            this.tabPageT0_2.Controls.Add(this.textBoxLaserLine2);
+            this.tabPageT0_2.Controls.Add(this.textBoxLaserLine1);
+            this.tabPageT0_2.Controls.Add(this.textBoxM6Test);
+            this.tabPageT0_2.Controls.Add(this.textBoxM5Test);
+            this.tabPageT0_2.Controls.Add(this.textBoxM4Test);
+            this.tabPageT0_2.Controls.Add(this.textBoxM3Test);
+            this.tabPageT0_2.Controls.Add(this.textBoxM2Test);
+            this.tabPageT0_2.Controls.Add(this.textBoxM1Test);
+            tabPageFormatStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT0_2.FormatStyle = tabPageFormatStyle26;
+            resources.ApplyResources(this.tabPageT0_2, "tabPageT0_2");
+            this.tabPageT0_2.Name = "tabPageT0_2";
+            this.tabPageT0_2.ParentPage = null;
+            treeNode9.Name = "";
+            treeNode9.Tag = this.tabPageT0_2;
+            resources.ApplyResources(treeNode9, "treeNode9");
+            this.tabPageT0_2.Tag = treeNode9;
+            this.tabPageT0_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2.TextBounds")));
+            this.tabPageT0_2.TextSize = new System.Drawing.SizeF(86.59161F, 25.4663F);
+            // 
+            // buttonSendLaser
+            // 
+            resources.ApplyResources(this.buttonSendLaser, "buttonSendLaser");
+            this.buttonSendLaser.Name = "buttonSendLaser";
+            this.buttonSendLaser.UseVisualStyleBackColor = true;
+            // 
+            // textBoxLaserLine2
+            // 
+            resources.ApplyResources(this.textBoxLaserLine2, "textBoxLaserLine2");
+            this.textBoxLaserLine2.Name = "textBoxLaserLine2";
+            // 
+            // textBoxLaserLine1
+            // 
+            resources.ApplyResources(this.textBoxLaserLine1, "textBoxLaserLine1");
+            this.textBoxLaserLine1.Name = "textBoxLaserLine1";
+            // 
+            // textBoxM6Test
+            // 
+            resources.ApplyResources(this.textBoxM6Test, "textBoxM6Test");
+            this.textBoxM6Test.Name = "textBoxM6Test";
+            // 
+            // textBoxM5Test
+            // 
+            resources.ApplyResources(this.textBoxM5Test, "textBoxM5Test");
+            this.textBoxM5Test.Name = "textBoxM5Test";
+            // 
+            // textBoxM4Test
+            // 
+            resources.ApplyResources(this.textBoxM4Test, "textBoxM4Test");
+            this.textBoxM4Test.Name = "textBoxM4Test";
+            // 
+            // textBoxM3Test
+            // 
+            resources.ApplyResources(this.textBoxM3Test, "textBoxM3Test");
+            this.textBoxM3Test.Name = "textBoxM3Test";
+            // 
+            // textBoxM2Test
+            // 
+            resources.ApplyResources(this.textBoxM2Test, "textBoxM2Test");
+            this.textBoxM2Test.Name = "textBoxM2Test";
+            // 
+            // textBoxM1Test
+            // 
+            resources.ApplyResources(this.textBoxM1Test, "textBoxM1Test");
+            this.textBoxM1Test.Name = "textBoxM1Test";
             // 
             // tabPageT0_1
             // 
@@ -5099,226 +5319,6 @@ namespace GUI
             this.checkBoxM1Start.UseVisualStyleBackColor = true;
             this.checkBoxM1Start.CheckStateChanged += new System.EventHandler(this.checkBoxM1Start_CheckStateChanged);
             // 
-            // tabPageT0_3
-            // 
-            this.tabPageT0_3.Controls.Add(this.groupBoxKeepAliveFromPlc);
-            this.tabPageT0_3.Controls.Add(this.groupBoxKeepAliveToPlc);
-            tabPageFormatStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT0_3.FormatStyle = tabPageFormatStyle25;
-            resources.ApplyResources(this.tabPageT0_3, "tabPageT0_3");
-            this.tabPageT0_3.Name = "tabPageT0_3";
-            this.tabPageT0_3.ParentPage = null;
-            treeNode8.Name = "";
-            treeNode8.Tag = this.tabPageT0_3;
-            resources.ApplyResources(treeNode8, "treeNode8");
-            this.tabPageT0_3.Tag = treeNode8;
-            this.tabPageT0_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_3.TextBounds")));
-            this.tabPageT0_3.TextSize = new System.Drawing.SizeF(46.69904F, 25.4663F);
-            this.tabPageT0_3.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageT0_3_Paint);
-            // 
-            // groupBoxKeepAliveFromPlc
-            // 
-            this.groupBoxKeepAliveFromPlc.Controls.Add(this.pictureBoxIOTNode);
-            this.groupBoxKeepAliveFromPlc.Controls.Add(this.pictureBoxM5PLCNode);
-            this.groupBoxKeepAliveFromPlc.Controls.Add(this.pictureBoxM1PLCNode);
-            this.groupBoxKeepAliveFromPlc.Controls.Add(this.pictureBoxM4PLCNode);
-            this.groupBoxKeepAliveFromPlc.Controls.Add(this.pictureBoxM2PLCNode);
-            this.groupBoxKeepAliveFromPlc.Controls.Add(this.pictureBoxM3PLCNode);
-            resources.ApplyResources(this.groupBoxKeepAliveFromPlc, "groupBoxKeepAliveFromPlc");
-            this.groupBoxKeepAliveFromPlc.Name = "groupBoxKeepAliveFromPlc";
-            this.groupBoxKeepAliveFromPlc.TabStop = false;
-            // 
-            // pictureBoxIOTNode
-            // 
-            resources.ApplyResources(this.pictureBoxIOTNode, "pictureBoxIOTNode");
-            this.pictureBoxIOTNode.Name = "pictureBoxIOTNode";
-            this.pictureBoxIOTNode.TabStop = false;
-            // 
-            // pictureBoxM5PLCNode
-            // 
-            resources.ApplyResources(this.pictureBoxM5PLCNode, "pictureBoxM5PLCNode");
-            this.pictureBoxM5PLCNode.Name = "pictureBoxM5PLCNode";
-            this.pictureBoxM5PLCNode.TabStop = false;
-            // 
-            // pictureBoxM1PLCNode
-            // 
-            resources.ApplyResources(this.pictureBoxM1PLCNode, "pictureBoxM1PLCNode");
-            this.pictureBoxM1PLCNode.Name = "pictureBoxM1PLCNode";
-            this.pictureBoxM1PLCNode.TabStop = false;
-            // 
-            // pictureBoxM4PLCNode
-            // 
-            resources.ApplyResources(this.pictureBoxM4PLCNode, "pictureBoxM4PLCNode");
-            this.pictureBoxM4PLCNode.Name = "pictureBoxM4PLCNode";
-            this.pictureBoxM4PLCNode.TabStop = false;
-            // 
-            // pictureBoxM2PLCNode
-            // 
-            resources.ApplyResources(this.pictureBoxM2PLCNode, "pictureBoxM2PLCNode");
-            this.pictureBoxM2PLCNode.Name = "pictureBoxM2PLCNode";
-            this.pictureBoxM2PLCNode.TabStop = false;
-            // 
-            // pictureBoxM3PLCNode
-            // 
-            resources.ApplyResources(this.pictureBoxM3PLCNode, "pictureBoxM3PLCNode");
-            this.pictureBoxM3PLCNode.Name = "pictureBoxM3PLCNode";
-            this.pictureBoxM3PLCNode.TabStop = false;
-            // 
-            // groupBoxKeepAliveToPlc
-            // 
-            this.groupBoxKeepAliveToPlc.Controls.Add(this.lbLedM5PCKeepAlive);
-            this.groupBoxKeepAliveToPlc.Controls.Add(this.lbLedM2PCKeepAlive);
-            this.groupBoxKeepAliveToPlc.Controls.Add(this.lbLedM3PCKeepAlive);
-            this.groupBoxKeepAliveToPlc.Controls.Add(this.lbLedM1PCKeepAlive);
-            this.groupBoxKeepAliveToPlc.Controls.Add(this.lbLedM4PCKeepAlive);
-            resources.ApplyResources(this.groupBoxKeepAliveToPlc, "groupBoxKeepAliveToPlc");
-            this.groupBoxKeepAliveToPlc.Name = "groupBoxKeepAliveToPlc";
-            this.groupBoxKeepAliveToPlc.TabStop = false;
-            // 
-            // lbLedM5PCKeepAlive
-            // 
-            this.lbLedM5PCKeepAlive.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM5PCKeepAlive.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM5PCKeepAlive, "lbLedM5PCKeepAlive");
-            this.lbLedM5PCKeepAlive.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM5PCKeepAlive.Label = "M5 keep alive";
-            this.lbLedM5PCKeepAlive.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM5PCKeepAlive.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM5PCKeepAlive.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLedM5PCKeepAlive.Name = "lbLedM5PCKeepAlive";
-            this.lbLedM5PCKeepAlive.Renderer = null;
-            this.lbLedM5PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM5PCKeepAlive.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedM2PCKeepAlive
-            // 
-            this.lbLedM2PCKeepAlive.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM2PCKeepAlive.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM2PCKeepAlive, "lbLedM2PCKeepAlive");
-            this.lbLedM2PCKeepAlive.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM2PCKeepAlive.Label = "M2 keep alive";
-            this.lbLedM2PCKeepAlive.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM2PCKeepAlive.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM2PCKeepAlive.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLedM2PCKeepAlive.Name = "lbLedM2PCKeepAlive";
-            this.lbLedM2PCKeepAlive.Renderer = null;
-            this.lbLedM2PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM2PCKeepAlive.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedM3PCKeepAlive
-            // 
-            this.lbLedM3PCKeepAlive.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM3PCKeepAlive.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM3PCKeepAlive, "lbLedM3PCKeepAlive");
-            this.lbLedM3PCKeepAlive.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM3PCKeepAlive.Label = "M3 keep alive";
-            this.lbLedM3PCKeepAlive.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM3PCKeepAlive.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM3PCKeepAlive.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLedM3PCKeepAlive.Name = "lbLedM3PCKeepAlive";
-            this.lbLedM3PCKeepAlive.Renderer = null;
-            this.lbLedM3PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM3PCKeepAlive.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedM1PCKeepAlive
-            // 
-            this.lbLedM1PCKeepAlive.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM1PCKeepAlive.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM1PCKeepAlive, "lbLedM1PCKeepAlive");
-            this.lbLedM1PCKeepAlive.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM1PCKeepAlive.Label = "M1 keep alive";
-            this.lbLedM1PCKeepAlive.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM1PCKeepAlive.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM1PCKeepAlive.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLedM1PCKeepAlive.Name = "lbLedM1PCKeepAlive";
-            this.lbLedM1PCKeepAlive.Renderer = null;
-            this.lbLedM1PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM1PCKeepAlive.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // lbLedM4PCKeepAlive
-            // 
-            this.lbLedM4PCKeepAlive.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM4PCKeepAlive.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM4PCKeepAlive, "lbLedM4PCKeepAlive");
-            this.lbLedM4PCKeepAlive.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM4PCKeepAlive.Label = "M4 keep alive";
-            this.lbLedM4PCKeepAlive.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM4PCKeepAlive.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM4PCKeepAlive.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLedM4PCKeepAlive.Name = "lbLedM4PCKeepAlive";
-            this.lbLedM4PCKeepAlive.Renderer = null;
-            this.lbLedM4PCKeepAlive.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM4PCKeepAlive.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // tabPageT0_2
-            // 
-            this.tabPageT0_2.Controls.Add(this.buttonSendLaser);
-            this.tabPageT0_2.Controls.Add(this.textBoxLaserLine2);
-            this.tabPageT0_2.Controls.Add(this.textBoxLaserLine1);
-            this.tabPageT0_2.Controls.Add(this.textBoxM6Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM5Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM4Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM3Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM2Test);
-            this.tabPageT0_2.Controls.Add(this.textBoxM1Test);
-            tabPageFormatStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT0_2.FormatStyle = tabPageFormatStyle26;
-            resources.ApplyResources(this.tabPageT0_2, "tabPageT0_2");
-            this.tabPageT0_2.Name = "tabPageT0_2";
-            this.tabPageT0_2.ParentPage = null;
-            treeNode9.Name = "";
-            treeNode9.Tag = this.tabPageT0_2;
-            resources.ApplyResources(treeNode9, "treeNode9");
-            this.tabPageT0_2.Tag = treeNode9;
-            this.tabPageT0_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2.TextBounds")));
-            this.tabPageT0_2.TextSize = new System.Drawing.SizeF(86.59161F, 25.4663F);
-            // 
-            // buttonSendLaser
-            // 
-            resources.ApplyResources(this.buttonSendLaser, "buttonSendLaser");
-            this.buttonSendLaser.Name = "buttonSendLaser";
-            this.buttonSendLaser.UseVisualStyleBackColor = true;
-            // 
-            // textBoxLaserLine2
-            // 
-            resources.ApplyResources(this.textBoxLaserLine2, "textBoxLaserLine2");
-            this.textBoxLaserLine2.Name = "textBoxLaserLine2";
-            // 
-            // textBoxLaserLine1
-            // 
-            resources.ApplyResources(this.textBoxLaserLine1, "textBoxLaserLine1");
-            this.textBoxLaserLine1.Name = "textBoxLaserLine1";
-            // 
-            // textBoxM6Test
-            // 
-            resources.ApplyResources(this.textBoxM6Test, "textBoxM6Test");
-            this.textBoxM6Test.Name = "textBoxM6Test";
-            // 
-            // textBoxM5Test
-            // 
-            resources.ApplyResources(this.textBoxM5Test, "textBoxM5Test");
-            this.textBoxM5Test.Name = "textBoxM5Test";
-            // 
-            // textBoxM4Test
-            // 
-            resources.ApplyResources(this.textBoxM4Test, "textBoxM4Test");
-            this.textBoxM4Test.Name = "textBoxM4Test";
-            // 
-            // textBoxM3Test
-            // 
-            resources.ApplyResources(this.textBoxM3Test, "textBoxM3Test");
-            this.textBoxM3Test.Name = "textBoxM3Test";
-            // 
-            // textBoxM2Test
-            // 
-            resources.ApplyResources(this.textBoxM2Test, "textBoxM2Test");
-            this.textBoxM2Test.Name = "textBoxM2Test";
-            // 
-            // textBoxM1Test
-            // 
-            resources.ApplyResources(this.textBoxM1Test, "textBoxM1Test");
-            this.textBoxM1Test.Name = "textBoxM1Test";
-            // 
             // labelLoginLevel
             // 
             resources.ApplyResources(this.labelLoginLevel, "labelLoginLevel");
@@ -5353,13 +5353,13 @@ namespace GUI
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
             this.tabControlMain.Controls.Add(this.tabPageConsole);
+            this.tabControlMain.Controls.Add(this.tabPageHide);
+            this.tabControlMain.Controls.Add(this.tabPageHelp);
+            this.tabControlMain.Controls.Add(this.tabPageSettings);
             this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
             this.tabControlMain.Controls.Add(this.tabPage4);
             this.tabControlMain.Controls.Add(this.tabPageRecipe);
-            this.tabControlMain.Controls.Add(this.tabPageSettings);
             this.tabControlMain.Controls.Add(this.tabPageMain);
-            this.tabControlMain.Controls.Add(this.tabPageHide);
-            this.tabControlMain.Controls.Add(this.tabPageHelp);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             resources.ApplyResources(this.tabControlMain, "tabControlMain");
             controlFormatStyle6.BorderCornerRadius = 5;
@@ -5481,6 +5481,8 @@ namespace GUI
             this.tabPageConsole.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT2)).EndInit();
             this.tabControlT2.ResumeLayout(false);
+            this.tabPageT2M2_2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TestPoints)).EndInit();
             this.tabPageT2M2_1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -5493,12 +5495,21 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TeachPoints)).EndInit();
             this.tabPageT2M2_4.ResumeLayout(false);
             this.tabPageT2M2_3.ResumeLayout(false);
-            this.tabPageT2M2_2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TestPoints)).EndInit();
             this.tabPageMain.ResumeLayout(false);
             this.tabPageMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT0)).EndInit();
             this.tabControlT0.ResumeLayout(false);
+            this.tabPageT0_3.ResumeLayout(false);
+            this.groupBoxKeepAliveFromPlc.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIOTNode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM5PLCNode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM1PLCNode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM4PLCNode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM2PLCNode)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3PLCNode)).EndInit();
+            this.groupBoxKeepAliveToPlc.ResumeLayout(false);
+            this.tabPageT0_2.ResumeLayout(false);
+            this.tabPageT0_2.PerformLayout();
             this.tabPageT0_1.ResumeLayout(false);
             this.groupBoxLine.ResumeLayout(false);
             this.groupBoxLine.PerformLayout();
@@ -5514,17 +5525,6 @@ namespace GUI
             this.groupBoxM2.PerformLayout();
             this.groupBoxM1.ResumeLayout(false);
             this.groupBoxM1.PerformLayout();
-            this.tabPageT0_3.ResumeLayout(false);
-            this.groupBoxKeepAliveFromPlc.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxIOTNode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM5PLCNode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM1PLCNode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM4PLCNode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM2PLCNode)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3PLCNode)).EndInit();
-            this.groupBoxKeepAliveToPlc.ResumeLayout(false);
-            this.tabPageT0_2.ResumeLayout(false);
-            this.tabPageT0_2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
             this.splitContainer6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).EndInit();
