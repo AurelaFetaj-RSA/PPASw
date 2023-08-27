@@ -6241,15 +6241,15 @@
             this.tabControlMain.Controls.Add(this.tabPageT3);
             this.tabControlMain.Controls.Add(this.tabPageT0_1);
             this.tabControlMain.Controls.Add(this.tabPageT0);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2);
+            this.tabControlMain.Controls.Add(this.tabPageT1);
             this.tabControlMain.Controls.Add(this.tabPageT3_3);
             this.tabControlMain.Controls.Add(this.tabPageT7);
             this.tabControlMain.Controls.Add(this.tabPageT6);
             this.tabControlMain.Controls.Add(this.tabPageT5);
             this.tabControlMain.Controls.Add(this.tabPageT4);
             this.tabControlMain.Controls.Add(this.tabPageT2);
-            this.tabControlMain.Controls.Add(this.tabPageT1);
-            this.tabControlMain.Controls.Add(this.tabPageT0_2);
-            this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_3);
             this.tabControlMain.Controls.Add(this.tabPageT1_1);
@@ -6516,7 +6516,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(68)))), ((int)(((byte)(65)))));
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(190)))), ((int)(((byte)(186)))));
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(133)))), ((int)(((byte)(46)))));
@@ -6524,7 +6524,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(574, 27);
             this.textBox1.TabIndex = 296;
-            this.textBox1.Text = "pneumatic commands";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FormApp
