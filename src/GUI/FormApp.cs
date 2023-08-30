@@ -31,6 +31,7 @@ using RSACommon.Service;
 using RSACommon.Configuration;
 using RSACommon.ProgramParser;
 using RSACommon.Points;
+using xDialog;
 
 namespace GUI
 {
@@ -167,61 +168,61 @@ namespace GUI
             dataGridViewM2TeachPoints.Rows[3].Cells[2].Value = 40;
             dataGridViewM2TeachPoints.ClearSelection();
 
-            //dataGridViewM2TestPoints.Rows.Add(4);
-            //dataGridViewM2TestPoints.Rows[0].Cells[0].Value = 1;
-            //dataGridViewM2TestPoints.Rows[1].Cells[0].Value = 2;
-            //dataGridViewM2TestPoints.Rows[2].Cells[0].Value = 3;
-            //dataGridViewM2TestPoints.Rows[3].Cells[0].Value = 4;
+            dataGridViewM2TestPoints.Rows.Add(4);
+            dataGridViewM2TestPoints.Rows[0].Cells[0].Value = 1;
+            dataGridViewM2TestPoints.Rows[1].Cells[0].Value = 2;
+            dataGridViewM2TestPoints.Rows[2].Cells[0].Value = 3;
+            dataGridViewM2TestPoints.Rows[3].Cells[0].Value = 4;
 
-            //dataGridViewM2TestPoints.Rows[0].Cells[1].Value = 100;
-            //dataGridViewM2TestPoints.Rows[1].Cells[1].Value = 200;
-            //dataGridViewM2TestPoints.Rows[2].Cells[1].Value = 300;
-            //dataGridViewM2TestPoints.Rows[3].Cells[1].Value = 400;
+            dataGridViewM2TestPoints.Rows[0].Cells[1].Value = 100;
+            dataGridViewM2TestPoints.Rows[1].Cells[1].Value = 200;
+            dataGridViewM2TestPoints.Rows[2].Cells[1].Value = 300;
+            dataGridViewM2TestPoints.Rows[3].Cells[1].Value = 400;
 
-            //dataGridViewM2TestPoints.Rows[0].Cells[2].Value = 10;
-            //dataGridViewM2TestPoints.Rows[1].Cells[2].Value = 20;
-            //dataGridViewM2TestPoints.Rows[2].Cells[2].Value = 30;
-            //dataGridViewM2TestPoints.Rows[3].Cells[2].Value = 40;
+            dataGridViewM2TestPoints.Rows[0].Cells[2].Value = 10;
+            dataGridViewM2TestPoints.Rows[1].Cells[2].Value = 20;
+            dataGridViewM2TestPoints.Rows[2].Cells[2].Value = 30;
+            dataGridViewM2TestPoints.Rows[3].Cells[2].Value = 40;
 
-            //dataGridViewM2TestPoints.ClearSelection();
-            //#endregion
+            dataGridViewM2TestPoints.ClearSelection();
+            #endregion
 
-            //#region(* init datagridviewM3 *)
-            //dataGridViewM3TeachPoints.Rows.Add(4);
-            //dataGridViewM3TeachPoints.Rows[0].Cells[0].Value = 1;
-            //dataGridViewM3TeachPoints.Rows[1].Cells[0].Value = 2;
-            //dataGridViewM3TeachPoints.Rows[2].Cells[0].Value = 3;
-            //dataGridViewM3TeachPoints.Rows[3].Cells[0].Value = 4;
+            #region(* init datagridviewM3 *)
+            dataGridViewM3TeachPoints.Rows.Add(4);
+            dataGridViewM3TeachPoints.Rows[0].Cells[0].Value = 1;
+            dataGridViewM3TeachPoints.Rows[1].Cells[0].Value = 2;
+            dataGridViewM3TeachPoints.Rows[2].Cells[0].Value = 3;
+            dataGridViewM3TeachPoints.Rows[3].Cells[0].Value = 4;
 
-            //dataGridViewM3TeachPoints.Rows[0].Cells[1].Value = 100;
-            //dataGridViewM3TeachPoints.Rows[1].Cells[1].Value = 200;
-            //dataGridViewM3TeachPoints.Rows[2].Cells[1].Value = 300;
-            //dataGridViewM3TeachPoints.Rows[3].Cells[1].Value = 400;
+            dataGridViewM3TeachPoints.Rows[0].Cells[1].Value = 100;
+            dataGridViewM3TeachPoints.Rows[1].Cells[1].Value = 200;
+            dataGridViewM3TeachPoints.Rows[2].Cells[1].Value = 300;
+            dataGridViewM3TeachPoints.Rows[3].Cells[1].Value = 400;
 
-            //dataGridViewM3TeachPoints.Rows[0].Cells[2].Value = 10;
-            //dataGridViewM3TeachPoints.Rows[1].Cells[2].Value = 20;
-            //dataGridViewM3TeachPoints.Rows[2].Cells[2].Value = 30;
-            //dataGridViewM3TeachPoints.Rows[3].Cells[2].Value = 40;
-            //dataGridViewM3TeachPoints.ClearSelection();
+            dataGridViewM3TeachPoints.Rows[0].Cells[2].Value = 10;
+            dataGridViewM3TeachPoints.Rows[1].Cells[2].Value = 20;
+            dataGridViewM3TeachPoints.Rows[2].Cells[2].Value = 30;
+            dataGridViewM3TeachPoints.Rows[3].Cells[2].Value = 40;
+            dataGridViewM3TeachPoints.ClearSelection();
 
-            //dataGridViewM3TestPoints.Rows.Add(4);
-            //dataGridViewM3TestPoints.Rows[0].Cells[0].Value = 1;
-            //dataGridViewM3TestPoints.Rows[1].Cells[0].Value = 2;
-            //dataGridViewM3TestPoints.Rows[2].Cells[0].Value = 3;
-            //dataGridViewM3TestPoints.Rows[3].Cells[0].Value = 4;
+            dataGridViewM3TestPoints.Rows.Add(4);
+            dataGridViewM3TestPoints.Rows[0].Cells[0].Value = 1;
+            dataGridViewM3TestPoints.Rows[1].Cells[0].Value = 2;
+            dataGridViewM3TestPoints.Rows[2].Cells[0].Value = 3;
+            dataGridViewM3TestPoints.Rows[3].Cells[0].Value = 4;
 
-            //dataGridViewM3TestPoints.Rows[0].Cells[1].Value = 100;
-            //dataGridViewM3TestPoints.Rows[1].Cells[1].Value = 200;
-            //dataGridViewM3TestPoints.Rows[2].Cells[1].Value = 300;
-            //dataGridViewM3TestPoints.Rows[3].Cells[1].Value = 400;
+            dataGridViewM3TestPoints.Rows[0].Cells[1].Value = 100;
+            dataGridViewM3TestPoints.Rows[1].Cells[1].Value = 200;
+            dataGridViewM3TestPoints.Rows[2].Cells[1].Value = 300;
+            dataGridViewM3TestPoints.Rows[3].Cells[1].Value = 400;
 
-            //dataGridViewM3TestPoints.Rows[0].Cells[2].Value = 10;
-            //dataGridViewM3TestPoints.Rows[1].Cells[2].Value = 20;
-            //dataGridViewM3TestPoints.Rows[2].Cells[2].Value = 30;
-            //dataGridViewM3TestPoints.Rows[3].Cells[2].Value = 40;
+            dataGridViewM3TestPoints.Rows[0].Cells[2].Value = 10;
+            dataGridViewM3TestPoints.Rows[1].Cells[2].Value = 20;
+            dataGridViewM3TestPoints.Rows[2].Cells[2].Value = 30;
+            dataGridViewM3TestPoints.Rows[3].Cells[2].Value = 40;
 
-            //dataGridViewM3TestPoints.ClearSelection();
-            //#endregion
+            dataGridViewM3TestPoints.ClearSelection();
+            #endregion
 
             #region (* init AUTO combobox model name list *)
             var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
@@ -239,21 +240,26 @@ namespace GUI
                     toolStripComboBoxT0.Items.Add(modelName);
                     toolStripComboBoxT0.SelectedIndex = 0;
                     toolStripComboBoxT0.SelectedIndexChanged += toolStripComboBoxT0_SelectedIndexChanged;
-                    toolStripComboBoxT3.Items.Add(modelName);
-                    toolStripComboBoxT3.SelectedIndex = 0;
-                    toolStripComboBoxT3.SelectedIndexChanged += toolStripComboBoxT3_SelectedIndexChanged;
+                    toolStripComboBoxT1_1.Items.Add(modelName);
+                    toolStripComboBoxT1_1.SelectedIndex = 0;
+                    toolStripComboBoxT1_1.SelectedIndexChanged += toolStripComboBoxT1_1_SelectedIndexChanged;
+                    toolStripComboBoxT1_2.Items.Add(modelName);
+                    toolStripComboBoxT1_2.SelectedIndex = 0;
+                    toolStripComboBoxT1_2.SelectedIndexChanged += toolStripComboBoxT1_2_SelectedIndexChanged;
+                    toolStripComboBoxT3_1.Items.Add(modelName);
+                    toolStripComboBoxT3_1.SelectedIndex = 0;
+                    toolStripComboBoxT3_1.SelectedIndexChanged += toolStripComboBoxT3_1_SelectedIndexChanged;
+                    toolStripComboBoxT3_2.Items.Add(modelName);
+                    toolStripComboBoxT3_2.SelectedIndex = 0;
+                    toolStripComboBoxT3_2.SelectedIndexChanged += toolStripComboBoxT3_2_SelectedIndexChanged;
+                    toolStripComboBoxT4_1.Items.Add(modelName);
+                    toolStripComboBoxT4_1.SelectedIndex = 0;
+                    toolStripComboBoxT4_1.SelectedIndexChanged += toolStripComboBoxT4_1_SelectedIndexChanged;
+                    toolStripComboBoxT4_2.Items.Add(modelName);
+                    toolStripComboBoxT4_2.SelectedIndex = 0;
+                    toolStripComboBoxT4_2.SelectedIndexChanged += toolStripComboBoxT4_2_SelectedIndexChanged;
                 }
             }
-            #endregion
-
-            //#region (* init M3 combobox model name list *)
-            //mList = progRS.GetModel(config.ProgramsPath[2], config.Extensions);
-
-            //foreach (string modelName in mList)
-            //{
-            //    comboBoxM3TeachModelName.Items.Add(modelName);
-            //}
-
             #endregion
 
             #region(* init tabControlMain *)
@@ -323,7 +329,7 @@ namespace GUI
 
                 if (nextPage != null)
                 {
-                    if (tabControlMain.SelectedPage.Index == 0) 
+                    if (tabControlMain.SelectedPage.Index == 0)
                     {
                         tabControlMain.SelectedPage.ContextMenuStrip.Show();
                     }
@@ -343,16 +349,16 @@ namespace GUI
                 SetColorToDataGridRow(0, pr);
 
             }
-            catch(Exception Ex)
+            catch (Exception Ex)
             {
 
-            }            
+            }
         }
 
         private void SetColorToDataGridRow(int index, Priority pr)
         {
             try
-            {               
+            {
                 if (pr == Priority.critical)
                 {
                     dataGridViewMessages.Rows[index].DefaultCellStyle.BackColor = Color.Red;
@@ -386,7 +392,7 @@ namespace GUI
                 Priority tmp = Priority.normal;
                 Enum.TryParse<Priority>(item.Cells["priority"].Value.ToString(), out tmp);
                 SetColorToDataGridRow(index, tmp);
-                index = index + 1; 
+                index = index + 1;
             }
         }
 
@@ -400,24 +406,7 @@ namespace GUI
         {
             if (textBoxRecipeName.Text.Length >= 0 && textBoxRecipeName.Text.Length < 4)
             {
-                //todo
-                MessageBox.Show("recipe name not valid");
-            }
-        }
-
-        private async void buttonM2Home_Click(object sender, EventArgs e)
-        {
-            string keyToSend = "pcM2Homing";
-
-            var readResult = await ccService.Send(keyToSend, true);
-
-            if (readResult.OpcResult)
-            {
-
-            }
-            else
-            {
-
+                xDialog.MsgBox.Show("recipe name not valid", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
             }
         }
 
@@ -428,17 +417,15 @@ namespace GUI
 
         private void dataGridViewM2TeachPoints_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            if ((e.ColumnIndex == 3) && (e.RowIndex >= 0 ))
+            if ((e.ColumnIndex == 3) && (e.RowIndex >= 0))
             {
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-                System.Drawing.Image img = new Bitmap("C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\register.png");
+                System.Drawing.Image img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\register.png");
                 var w = 32;// img.Width;
                 var h = 32;// img.Height;
                 var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
                 var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
-                
 
-                
                 e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
                 e.Handled = true;
             }
@@ -446,7 +433,7 @@ namespace GUI
             if ((e.ColumnIndex == 4) && (e.RowIndex >= 0))
             {
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-                System.Drawing.Image img = new Bitmap("C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\startquote.png");
+                System.Drawing.Image img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\startquote.png");
                 var w = 32;// img.Width;
                 var h = 32;// img.Height;
                 var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
@@ -461,7 +448,7 @@ namespace GUI
             if ((e.ColumnIndex == 5) && (e.RowIndex >= 0))
             {
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-                System.Drawing.Image img = new Bitmap("C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\preached.png");
+                System.Drawing.Image img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\preached.png");
                 var w = 32;// img.Width;
                 var h = 32;// img.Height;
                 var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
@@ -472,7 +459,72 @@ namespace GUI
                 e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
                 e.Handled = true;
             }
-            
         }
+
+        private void ResetM2Datagrid()
+        {
+            dataGridViewM2TeachPoints.Rows.Clear();
+            dataGridViewM2TeachPoints.Rows.Add(4);
+            dataGridViewM2TeachPoints.Rows[0].Cells[0].Value = 1;
+            dataGridViewM2TeachPoints.Rows[1].Cells[0].Value = 2;
+            dataGridViewM2TeachPoints.Rows[2].Cells[0].Value = 3;
+            dataGridViewM2TeachPoints.Rows[3].Cells[0].Value = 4;
+
+            dataGridViewM2TeachPoints.Rows[0].Cells[1].Value = 100;
+            dataGridViewM2TeachPoints.Rows[1].Cells[1].Value = 200;
+            dataGridViewM2TeachPoints.Rows[2].Cells[1].Value = 300;
+            dataGridViewM2TeachPoints.Rows[3].Cells[1].Value = 400;
+
+            dataGridViewM2TeachPoints.Rows[0].Cells[2].Value = 10;
+            dataGridViewM2TeachPoints.Rows[1].Cells[2].Value = 20;
+            dataGridViewM2TeachPoints.Rows[2].Cells[2].Value = 30;
+            dataGridViewM2TeachPoints.Rows[3].Cells[2].Value = 40;
+            dataGridViewM2TeachPoints.ClearSelection();
+        }
+
+        private void ResetM3Datagrid()
+        {
+            dataGridViewM3TeachPoints.Rows.Clear();
+            dataGridViewM3TeachPoints.Rows.Add(4);
+            dataGridViewM3TeachPoints.Rows[0].Cells[0].Value = 1;
+            dataGridViewM3TeachPoints.Rows[1].Cells[0].Value = 2;
+            dataGridViewM3TeachPoints.Rows[2].Cells[0].Value = 3;
+            dataGridViewM3TeachPoints.Rows[3].Cells[0].Value = 4;
+
+            dataGridViewM3TeachPoints.Rows[0].Cells[1].Value = 100;
+            dataGridViewM3TeachPoints.Rows[1].Cells[1].Value = 200;
+            dataGridViewM3TeachPoints.Rows[2].Cells[1].Value = 300;
+            dataGridViewM3TeachPoints.Rows[3].Cells[1].Value = 400;
+
+            dataGridViewM3TeachPoints.Rows[0].Cells[2].Value = 10;
+            dataGridViewM3TeachPoints.Rows[1].Cells[2].Value = 20;
+            dataGridViewM3TeachPoints.Rows[2].Cells[2].Value = 30;
+            dataGridViewM3TeachPoints.Rows[3].Cells[2].Value = 40;
+            dataGridViewM3TeachPoints.ClearSelection();
+        }
+
+        private void M2TestSendProgram()
+        {
+            int i = 0;
+            short[] quote = new short[5];
+            short[] speed = new short[5];
+
+            try
+            {
+                for (i = 0; i <= dataGridViewM2TestPoints.RowCount - 1; i++)
+                {
+                    quote[i + 1] = short.Parse(dataGridViewM2TestPoints[1, i].Value.ToString());
+                    speed[i + 1] = short.Parse(dataGridViewM2TestPoints[2, i].Value.ToString());
+                }
+
+                OPCUAM2TestPckSend(quote, speed);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
     }
+    
 }

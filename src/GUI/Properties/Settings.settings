@@ -20,5 +20,8 @@
     <Setting Name="RSASN" Type="System.String" Scope="User">
       <Value Profile="(Default)">S/N: RSA9999</Value>
     </Setting>
+    <Setting Name="ImagesFilepath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\RSA\github_repositories\PPASw\src\GUI\images</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

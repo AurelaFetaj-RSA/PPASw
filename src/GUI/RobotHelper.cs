@@ -1118,13 +1118,15 @@ namespace GUI
 
         public async void OPCUAM2TeachPckSend(short pointID, short[] pointQuote, short[] pointSpeed, bool[] pointReg)
         {
-            List<string> keys = new List<string>();
-            keys.Add("pcM2TeachPointID");
-            keys.Add("pcM2TeachSpeed");
-            keys.Add("pcM2TeachQuote");
-            keys.Add("pcM2TeachPointReg");
+            if (ccService != null)
+            {
+                List<string> keys = new List<string>();
+                keys.Add("pcM2TeachPointID");
+                keys.Add("pcM2TeachSpeed");
+                keys.Add("pcM2TeachQuote");
+                keys.Add("pcM2TeachPointReg");
 
-            List<object> obj = new List<object>()
+                List<object> obj = new List<object>()
             {
                 pointID,
                 pointSpeed,
@@ -1132,14 +1134,28 @@ namespace GUI
                 pointReg
             };
 
-            Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
-            try
-            {
-                sendResult = await ccService.Send(keys, obj);
-            }
-            catch (Exception ex)
-            {
+                Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
+                try
+                {
+                    sendResult = await ccService.Send(keys, obj);
+                    bool allSent = true;
+                    foreach(var result in sendResult)
+                    {
+                        allSent = (allSent & result.Value.OpcResult);
+                    }
+                    if (!allSent)
+                    {
+                        
+                    }                    
+                }
+                catch (Exception ex)
+                {
 
+                }
+            }
+            else
+            {
+                //todo message box
             }
         }
 

@@ -11,19 +11,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using xDialog;
 
 namespace GUI
 {
     public partial class FormApp : Form
     {
-        private void toolStripComboBoxT3_SelectedIndexChanged(object sender, EventArgs e)
+        private void toolStripComboBoxT3_1_SelectedIndexChanged(object sender, EventArgs e)
         {
             var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
             if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                List<IObjProgram> pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, toolStripComboBoxT3.Text);
+                List<IObjProgram> pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, toolStripComboBoxT3_1.Text);
 
                 comboBoxM2TeachProgramList.Items.Clear();
 
@@ -31,6 +32,126 @@ namespace GUI
                 {
                     comboBoxM2TeachProgramList.Items.Add(prgName.ProgramName);
                 }
+            }
+        }
+
+        private void toolStripComboBoxT3_2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                List<IObjProgram> pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, toolStripComboBoxT3_2.Text);
+
+                comboBoxM2TestProgramList.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM2TestProgramList.Items.Add(prgName.ProgramName);
+                }
+            }
+        }
+
+        private async void buttonM2TeachLoadProgram_Click(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + comboBoxM2TeachProgramList.Text + config.Extensions[0]);
+                if (objPoints != null)
+                {
+                    dataGridViewM2TeachPoints[1, 0].Value = objPoints.Points[0].Q1;
+                    dataGridViewM2TeachPoints[1, 1].Value = objPoints.Points[0].Q2;
+                    dataGridViewM2TeachPoints[1, 2].Value = objPoints.Points[0].Q3;
+                    dataGridViewM2TeachPoints[1, 3].Value = objPoints.Points[0].Q4;
+                    dataGridViewM2TeachPoints[2, 0].Value = objPoints.Points[0].V1;
+                    dataGridViewM2TeachPoints[2, 1].Value = objPoints.Points[0].V2;
+                    dataGridViewM2TeachPoints[2, 2].Value = objPoints.Points[0].V3;
+                    dataGridViewM2TeachPoints[2, 3].Value = objPoints.Points[0].V4;
+                }
+            }
+        }
+
+        private void buttonM2TeachSaveProgram_Click(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+
+                int p1 = Convert.ToInt32(dataGridViewM2TeachPoints[1, 0].Value);
+                int p2 = Convert.ToInt32(dataGridViewM2TeachPoints[1, 1].Value);
+                int p3 = Convert.ToInt32(dataGridViewM2TeachPoints[1, 2].Value);
+                int p4 = Convert.ToInt32(dataGridViewM2TeachPoints[1, 3].Value);
+                int s1 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 0].Value);
+                int s2 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 1].Value);
+                int s3 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 2].Value);
+                int s4 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 3].Value);
+                ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM2TeachProgramList.Text);
+                prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
+                prgObj.Save(comboBoxM2TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[1], true);
+            }
+        }
+
+        private void buttonM2TeachNewProgram_Click(object sender, EventArgs e)
+        {
+            ResetM2Datagrid();
+        }
+
+        private void buttonM2TeachDeleteProgram_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewM2TeachPoints_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = 0;
+            short[] quote = new short[5];
+            short[] speed = new short[5];
+            bool[] start = new bool[5] { false, false, false, false, false };
+
+            try
+            {
+                //get selected row index
+                int currentRow = int.Parse(e.RowIndex.ToString());
+
+                short idPoint = (short)(currentRow + 1);
+                for (i = 0; i <= dataGridViewM2TeachPoints.RowCount - 1; i++)
+                {
+                    quote[i + 1] = short.Parse(dataGridViewM2TeachPoints[1, i].Value.ToString());
+                    speed[i + 1] = short.Parse(dataGridViewM2TeachPoints[2, i].Value.ToString());
+                }
+
+                if (idPoint < 0 || idPoint > 4)
+                {
+                    xDialog.MsgBox.Show("point selection not admitted", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+                    return;
+                }
+
+                // register button
+                if ((e.ColumnIndex == 3) & currentRow >= 0)
+                {
+                    //register current axis value
+                    dataGridViewM2TeachPoints[1, currentRow].Value = Convert.ToInt32((labelM2TeachAxisQuoteValue.Text));
+                    //register current speed value
+                    dataGridViewM2TeachPoints[2, currentRow].Value = Convert.ToInt32((numericUpDownM2JogSpeed.Value));
+                }
+
+                // start quote button
+                if ((e.ColumnIndex == 4) & currentRow >= 0)
+                {
+                    start[idPoint] = true;
+                    OPCUAM2TeachPckSend(idPoint, quote, speed, start);
+                }
+            }
+            catch (Exception ex)
+            {
+
             }
         }
 
@@ -215,6 +336,100 @@ namespace GUI
             }
         }
 
+        private async void buttonM2Home_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM2Homing";
+
+                var readResult = await ccService.Send(keyToSend, true);
+
+                if (readResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private async void lbButtonM2JogUp_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+
+                if (e.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+                {
+                    //send quote
+                    keyToSend = "pcM2JogDown";
+                    var readResult1 = await ccService.Send(keyToSend, false);
+                    if (readResult1.OpcResult)
+                    {
+                    }
+
+                    keyToSend = "pcM2JogUp";
+                    var readResult2 = await ccService.Send(keyToSend, true);
+                    if (readResult2.OpcResult)
+                    {
+                    }
+                }
+                else
+                {
+                    keyToSend = "pcM2JogDown";
+                    var readResult1 = await ccService.Send(keyToSend, false);
+                    if (readResult1.OpcResult)
+                    {
+                    }
+
+                    keyToSend = "pcM2JogUp";
+                    var readResult2 = await ccService.Send(keyToSend, false);
+                    if (readResult2.OpcResult)
+                    {
+                    }
+                }
+            }
+        }
+
+        private async void lbButtonM2JogDown_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+
+                if (e.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+                {
+                    keyToSend = "pcM2JogUp";
+                    var readResult1 = await ccService.Send(keyToSend, false);
+                    if (readResult1.OpcResult)
+                    {
+                    }
+
+                    keyToSend = "pcM2JogDown";
+                    var readResult2 = await ccService.Send(keyToSend, true);
+                    if (readResult2.OpcResult)
+                    {
+                    }
+                }
+                else
+                {
+                    keyToSend = "pcM2JogUp";
+                    var readResult1 = await ccService.Send(keyToSend, false);
+                    if (readResult1.OpcResult)
+                    {
+                    }
+
+                    keyToSend = "pcM2JogDown";
+                    var readResult2 = await ccService.Send(keyToSend, false);
+                    if (readResult2.OpcResult)
+                    {
+                    }
+                }
+            }
+        }
+
         private async void numericUpDownM2JogSpeed_ValueChanged(object sender, EventArgs e)
         {
             if (ccService.ClientIsConnected)
@@ -300,58 +515,154 @@ namespace GUI
 
         private async void checkBoxM2WorkingBelt_CheckStateChanged(object sender, EventArgs e)
         {
-            //if (ccService.ClientIsConnected)
+            if (ccService.ClientIsConnected)
             {
                 string keyToSend = null;
                 bool chkValue = false;
 
-                keyToSend = "pcM1Inclusion";
+                keyToSend = "pcM2StartStopWorkingBelt";
                 chkValue = (checkBoxM2WorkingBelt.CheckState == CheckState.Checked) ? true : false;
 
-                //var sendResult = await ccService.Send(keyToSend, chkValue);
+                var sendResult = await ccService.Send(keyToSend, chkValue);
 
-                //if (sendResult.OpcResult)
+                if (sendResult.OpcResult)
                 {
                     checkBoxM2WorkingBelt.ImageIndex = (chkValue) ? 0 : 1;
                 }
-                //else
-                //{
-                //    checkBoxM2WorkingBelt.ImageIndex = 2;
-                    //AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
-                //}
+                else
+                {
+                    checkBoxM2WorkingBelt.ImageIndex = 2;                    
+                }
             }
-            //else
-            //{
-                //AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
-            //}
+            else
+            {
+                
+            }
         }
 
-        private void checkBoxM2ExitBelt_CheckStateChanged(object sender, EventArgs e)
+        private async void checkBoxM2ExitBelt_CheckStateChanged(object sender, EventArgs e)
         {
-            //if (ccService.ClientIsConnected)
+            if (ccService.ClientIsConnected)
             {
                 string keyToSend = null;
                 bool chkValue = false;
 
-                keyToSend = "pcM1Inclusion";
+                keyToSend = "pcM2StartStopExitBelt";
                 chkValue = (checkBoxM2ExitBelt.CheckState == CheckState.Checked) ? true : false;
 
-                //var sendResult = await ccService.Send(keyToSend, chkValue);
+                var sendResult = await ccService.Send(keyToSend, chkValue);
 
-                //if (sendResult.OpcResult)
+                if (sendResult.OpcResult)
                 {
                     checkBoxM2ExitBelt.ImageIndex = (chkValue) ? 2 : 3;
                 }
-                //else
-                //{
-                //    checkBoxM2WorkingBelt.ImageIndex = 2;
-                //AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
-                //}
+                else
+                {
+                    checkBoxM2WorkingBelt.ImageIndex = 2;                    
+                }
             }
-            //else
-            //{
-            //AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
-            //}
+            else
+            {                
+            }
+        }
+
+        private async void buttonM2TestLoadProgram_Click(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + comboBoxM2TestProgramList.Text + config.Extensions[0]);
+                if (objPoints != null)
+                {
+
+                    dataGridViewM2TestPoints[1, 0].Value = objPoints.Points[0].Q1;
+                    dataGridViewM2TestPoints[1, 1].Value = objPoints.Points[0].Q2;
+                    dataGridViewM2TestPoints[1, 2].Value = objPoints.Points[0].Q3;
+                    dataGridViewM2TestPoints[1, 3].Value = objPoints.Points[0].Q4;
+                    dataGridViewM2TestPoints[2, 0].Value = objPoints.Points[0].V1;
+                    dataGridViewM2TestPoints[2, 1].Value = objPoints.Points[0].V2;
+                    dataGridViewM2TestPoints[2, 2].Value = objPoints.Points[0].V3;
+                    dataGridViewM2TestPoints[2, 3].Value = objPoints.Points[0].V4;
+
+                }
+            }
+        }
+
+        private void buttonM2TestSaveProgram_Click(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+
+                int p1 = Convert.ToInt32(dataGridViewM2TestPoints[1, 0].Value);
+                int p2 = Convert.ToInt32(dataGridViewM2TestPoints[1, 1].Value);
+                int p3 = Convert.ToInt32(dataGridViewM2TestPoints[1, 2].Value);
+                int p4 = Convert.ToInt32(dataGridViewM2TestPoints[1, 3].Value);
+                int s1 = Convert.ToInt32(dataGridViewM2TestPoints[2, 0].Value);
+                int s2 = Convert.ToInt32(dataGridViewM2TestPoints[2, 1].Value);
+                int s3 = Convert.ToInt32(dataGridViewM2TestPoints[2, 2].Value);
+                int s4 = Convert.ToInt32(dataGridViewM2TestPoints[2, 3].Value);
+                ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM2TestProgramList.Text);
+                prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
+                prgObj.Save(comboBoxM2TestProgramList.Text + config.Extensions[0], config.ProgramsPath[1], true);
+            }
+        }
+
+        private void dataGridViewM2TestPoints_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = 0;
+            short[] quote = new short[5];
+            short[] speed = new short[5];
+
+            try
+            {
+                //get selected row index
+                int currentRow = int.Parse(e.RowIndex.ToString());
+
+                short idPoint = (short)(currentRow + 1);
+                for (i = 0; i <= dataGridViewM2TestPoints.RowCount - 1; i++)
+                {
+                    quote[i + 1] = short.Parse(dataGridViewM2TestPoints[1, i].Value.ToString());
+                    speed[i + 1] = short.Parse(dataGridViewM2TestPoints[2, i].Value.ToString());
+                }
+
+                if (idPoint < 0 || idPoint > 4)
+                {
+                    //todo message
+                    return;
+                }
+
+                // edit button
+                if ((e.ColumnIndex == 3) & currentRow >= 0)
+                {
+
+                    OPCUAM2TestPckSend(quote, speed);
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private async void buttonM2StartTest_Click(object sender, EventArgs e)
+        {
+            //send quote/speed
+            M2TestSendProgram();
+
+            //send start command
+            string keyToSend = "pcM2StartTest";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else xDialog.MsgBox.Show("offline", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
         }
     }
 }

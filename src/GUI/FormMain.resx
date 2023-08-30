@@ -3820,6 +3820,1224 @@
   <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="comboBoxM2TeachModelName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt</value>
+  </data>
+  <data name="comboBoxM2TeachModelName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 65</value>
+  </data>
+  <data name="comboBoxM2TeachModelName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 26</value>
+  </data>
+  <data name="comboBoxM2TeachModelName.TabIndex" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="&gt;&gt;comboBoxM2TeachModelName.Name" xml:space="preserve">
+    <value>comboBoxM2TeachModelName</value>
+  </data>
+  <data name="&gt;&gt;comboBoxM2TeachModelName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxM2TeachModelName.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;comboBoxM2TeachModelName.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonM2Home.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM2Home.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2Home.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 30</value>
+  </data>
+  <data name="buttonM2Home.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 50</value>
+  </data>
+  <data name="buttonM2Home.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="buttonM2Home.Text" xml:space="preserve">
+    <value>home</value>
+  </data>
+  <data name="&gt;&gt;buttonM2Home.Name" xml:space="preserve">
+    <value>buttonM2Home</value>
+  </data>
+  <data name="&gt;&gt;buttonM2Home.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2Home.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;buttonM2Home.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonM2ResetHome.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM2ResetHome.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2ResetHome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 30</value>
+  </data>
+  <data name="buttonM2ResetHome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 50</value>
+  </data>
+  <data name="buttonM2ResetHome.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="buttonM2ResetHome.Text" xml:space="preserve">
+    <value>reset home</value>
+  </data>
+  <data name="&gt;&gt;buttonM2ResetHome.Name" xml:space="preserve">
+    <value>buttonM2ResetHome</value>
+  </data>
+  <data name="&gt;&gt;buttonM2ResetHome.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2ResetHome.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;buttonM2ResetHome.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbLedM2T2HomingDone.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLedM2T2HomingDone.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="lbLedM2T2HomingDone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 85</value>
+  </data>
+  <data name="lbLedM2T2HomingDone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 20</value>
+  </data>
+  <data name="lbLedM2T2HomingDone.TabIndex" type="System.Int32, mscorlib">
+    <value>92</value>
+  </data>
+  <data name="&gt;&gt;lbLedM2T2HomingDone.Name" xml:space="preserve">
+    <value>lbLedM2T2HomingDone</value>
+  </data>
+  <data name="&gt;&gt;lbLedM2T2HomingDone.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLedM2T2HomingDone.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;lbLedM2T2HomingDone.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBox3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>595, 500</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 110</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>112</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>vertical axis home</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 16</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>quote(mm)</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 20</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 16</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>104</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>speed(%)</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonM2StartQuote.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM2StartQuote.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2StartQuote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 90</value>
+  </data>
+  <data name="buttonM2StartQuote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 50</value>
+  </data>
+  <data name="buttonM2StartQuote.TabIndex" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="buttonM2StartQuote.Text" xml:space="preserve">
+    <value>start quote</value>
+  </data>
+  <data name="&gt;&gt;buttonM2StartQuote.Name" xml:space="preserve">
+    <value>buttonM2StartQuote</value>
+  </data>
+  <data name="&gt;&gt;buttonM2StartQuote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2StartQuote.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;buttonM2StartQuote.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericUpDownM2ManualQuote.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 21.75pt</value>
+  </data>
+  <data name="numericUpDownM2ManualQuote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 40</value>
+  </data>
+  <data name="numericUpDownM2ManualQuote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 43</value>
+  </data>
+  <data name="numericUpDownM2ManualQuote.TabIndex" type="System.Int32, mscorlib">
+    <value>82</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM2ManualQuote.Name" xml:space="preserve">
+    <value>numericUpDownM2ManualQuote</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM2ManualQuote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM2ManualQuote.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM2ManualQuote.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="numericUpDownM2ManualSpeed.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 21.75pt</value>
+  </data>
+  <data name="numericUpDownM2ManualSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 40</value>
+  </data>
+  <data name="numericUpDownM2ManualSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 43</value>
+  </data>
+  <data name="numericUpDownM2ManualSpeed.TabIndex" type="System.Int32, mscorlib">
+    <value>83</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM2ManualSpeed.Name" xml:space="preserve">
+    <value>numericUpDownM2ManualSpeed</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM2ManualSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM2ManualSpeed.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM2ManualSpeed.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>595, 339</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>295, 150</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Vertical axis start quote</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelM2JogSpeed.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelM2JogSpeed.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="labelM2JogSpeed.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelM2JogSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 19</value>
+  </data>
+  <data name="labelM2JogSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 16</value>
+  </data>
+  <data name="labelM2JogSpeed.TabIndex" type="System.Int32, mscorlib">
+    <value>103</value>
+  </data>
+  <data name="labelM2JogSpeed.Text" xml:space="preserve">
+    <value>speed(%)</value>
+  </data>
+  <data name="&gt;&gt;labelM2JogSpeed.Name" xml:space="preserve">
+    <value>labelM2JogSpeed</value>
+  </data>
+  <data name="&gt;&gt;labelM2JogSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelM2JogSpeed.Parent" xml:space="preserve">
+    <value>groupBoxM2Jog</value>
+  </data>
+  <data name="&gt;&gt;labelM2JogSpeed.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbButtonM2JogUp.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAApJJREFUeF7tmE1uGzEMhX2JBM39r5Fd0kXTrNpFjpPqGWLAEqIoipo/RR/wEJtv
+        RqNHjRV7bgfymPSehdffioekP0mfWR9JT0nfAqz23yQEx1/+evo7ga88Vv1HoTbtnVAKT0zfhFp4Ytom
+        tIQnpmuCJzwxTRPkbi93eLzHd4Df+TXHOvf0WCvPfW2lL3snWKsnfc+x0j8dnpUn31rpy9wJPeGJyzch
+        Ep64bBNGhCcu14SR4YnLNMHaoVt87XlAy7k1f3OiK899Osa70ofdCdHVkb7nWK8/nJErT350pS1/GD3h
+        ODU/GtLyw0TCAcsH0ZCW3000nOVzoiEt3000nOWXiIa0/Gai4Sy/RjSk5TeBLygY4Kh/T9FrcB8PXdxo
+        DfBcuOR7iFyLe10NKA1euyBo8d+Snu/v/ge1X0k9Y0rfOqcZOVBtUOui3IckVI+Ojb+1Y93wDQXq2fDk
+        GJCEe9GNj47xbLxV0EV8jnqe4EqfJiihumeskq/NcxM8K08+XkMSqntWuuTvRk94gPeQhNdP34Te8AA1
+        SCLrp21CJDxAHZKU6qdrQjQ8gAdJtPppmjAiPIAPSbQ6OLwJo8IDHANJtDpxWBNGhgc4DpJodc7uTRgd
+        HuBYSKLVJbs1oeVbV83/mQQPekUhQzWJVi8RnVsTkecBAKHhQy8oZKgm0eoa1hy43/VzuPd5gAXOgyRa
+        vUZtLtzrakDps9TzmZfgXEii1S22mucd2WGt2x5wPiTR6i1sMc8v+OCeQbfcBEv0zrMJDOT9nb31Jlii
+        Z567s2UDLsFqQJZkugbsvQmejiM2wUuwGpAlWQ3Imoa1CSZRqLUJMlYDsiSrAVnTsDbBJAq1NkEGBdU0
+        PfzOkOJ3yg7cbv8AErvZqWEJrekAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="lbButtonM2JogUp.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="lbButtonM2JogUp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM2JogUp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 20</value>
+  </data>
+  <data name="lbButtonM2JogUp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 68</value>
+  </data>
+  <data name="lbButtonM2JogUp.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2JogUp.Name" xml:space="preserve">
+    <value>lbButtonM2JogUp</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2JogUp.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2JogUp.Parent" xml:space="preserve">
+    <value>groupBoxM2Jog</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2JogUp.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbButtonM2JogDown.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAApVJREFUeF7tmFFuGzEMRH2JFMn9j9H+NQUKpF/tR4/TaoxlwE4lURRlW6voAQPb
+        nF2tOForG18ewLekPwW9Ji1PrnGt5Sk1ynV9pyx1Z3CjAtfRtNS+orAK3KhQqi/HDuAQswM4JOxNMElq
+        exNciR3AIWYHcEjYm2CS1PYmuBI7gEPM1AF8SvqR9Ha8j9AaQM8mOHKe72CgX0kyGbyPDC7jMFz3boKj
+        53lFD4pX/b53cJkgU6q3cIt5Xp6SfiZhoN9Jz5naS5IXnAsxpbrFreZ5/S5hAE6R0/YmjPMgplSvUZuL
+        9rAnuCkFAGoXtsA5EMN1axO05qD9rgA8F8j5JXA8xHC9tgneam7/YX2Xer5rOBZiSnUm953XWL6b0SHg
+        OIgp1TV3b14YGQKOgZhSXXhY88KoEOBDTKkOHt68MCIEeBBTqk/TvBANAXWIydWna16IhIAaxHB92uaF
+        3hDwGWJ0ffrmhZ4Q8B5ipD5l83iSwqMx5H3qYh+vECN1z1g5f/jvATpxqHWlNTwGxGivZ+Vb5umGE7fS
+        b/UhRurRsfFaO7aZ3EVzNU2L/z3p8/XTv3xJgtczJvvWOU30/h4w5OIHkWtp7+6/B1h+C9FraL8rAM/G
+        1uPX8Gx4PX4z0SYtP0e0Oct3E23S8jXR5iy/m2iTlg+izVl+mGiTNT/anOUPI9IkyPnR5ix/OCP/POHV
+        c6zXvxk9K63Rvhwz/coz0dXBZzyg5P5zazm35t+N6J2QY/qVZ0aGcLrmhREhnLZ5IRLC6ZsXekJYpnnB
+        u4N7jmV/Wjx3ghxz+pVnrNXD597ngNNg3Qk5Tr/yjCeE5ZoXWkJYtnmhFsLyzQu5ED5M8wLv8Evs9l70
+        qn+YlWew2qXngDtxufwF/jTZpf1UTC4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="lbButtonM2JogDown.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="lbButtonM2JogDown.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM2JogDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 143</value>
+  </data>
+  <data name="lbButtonM2JogDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 68</value>
+  </data>
+  <data name="lbButtonM2JogDown.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2JogDown.Name" xml:space="preserve">
+    <value>lbButtonM2JogDown</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2JogDown.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2JogDown.Parent" xml:space="preserve">
+    <value>groupBoxM2Jog</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2JogDown.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="numericUpDownM2JogSpeed.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 21.75pt</value>
+  </data>
+  <data name="numericUpDownM2JogSpeed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 41</value>
+  </data>
+  <data name="numericUpDownM2JogSpeed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 43</value>
+  </data>
+  <data name="numericUpDownM2JogSpeed.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM2JogSpeed.Name" xml:space="preserve">
+    <value>numericUpDownM2JogSpeed</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM2JogSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM2JogSpeed.Parent" xml:space="preserve">
+    <value>groupBoxM2Jog</value>
+  </data>
+  <data name="&gt;&gt;numericUpDownM2JogSpeed.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 105</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 16</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteName.TabIndex" type="System.Int32, mscorlib">
+    <value>102</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteName.Text" xml:space="preserve">
+    <value>quote (mm)</value>
+  </data>
+  <data name="&gt;&gt;labelM2TeachAxisQuoteName.Name" xml:space="preserve">
+    <value>labelM2TeachAxisQuoteName</value>
+  </data>
+  <data name="&gt;&gt;labelM2TeachAxisQuoteName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelM2TeachAxisQuoteName.Parent" xml:space="preserve">
+    <value>groupBoxM2Jog</value>
+  </data>
+  <data name="&gt;&gt;labelM2TeachAxisQuoteName.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteValue.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteValue.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 14.25pt</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteValue.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteValue.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 135</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteValue.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 23</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteValue.TabIndex" type="System.Int32, mscorlib">
+    <value>103</value>
+  </data>
+  <data name="labelM2TeachAxisQuoteValue.Text" xml:space="preserve">
+    <value>9999</value>
+  </data>
+  <data name="&gt;&gt;labelM2TeachAxisQuoteValue.Name" xml:space="preserve">
+    <value>labelM2TeachAxisQuoteValue</value>
+  </data>
+  <data name="&gt;&gt;labelM2TeachAxisQuoteValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelM2TeachAxisQuoteValue.Parent" xml:space="preserve">
+    <value>groupBoxM2Jog</value>
+  </data>
+  <data name="&gt;&gt;labelM2TeachAxisQuoteValue.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBoxM2Jog.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="groupBoxM2Jog.Location" type="System.Drawing.Point, System.Drawing">
+    <value>595, 100</value>
+  </data>
+  <data name="groupBoxM2Jog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 227</value>
+  </data>
+  <data name="groupBoxM2Jog.TabIndex" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="groupBoxM2Jog.Text" xml:space="preserve">
+    <value>Vertical axis jog</value>
+  </data>
+  <data name="&gt;&gt;groupBoxM2Jog.Name" xml:space="preserve">
+    <value>groupBoxM2Jog</value>
+  </data>
+  <data name="&gt;&gt;groupBoxM2Jog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBoxM2Jog.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;groupBoxM2Jog.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonM2TeachDeleteProgram.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt</value>
+  </data>
+  <data name="buttonM2TeachDeleteProgram.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAehJREFUWEftlckuBUEUhnuBDbFEPAFC2JgfifcQ8/QkVhaeQsxbw4YFQoIg/F/f
+        e5LSqa6uvuomFr7ky62qPlV1bg3d2T9/ma/E1sY3yG+sTcsdC7Q1gVQxXlINHhPjpeWOBdqaQKoYL6kG
+        j4nx0nLHAm1NIFWMl1SDx8R4CXXskMvSYijT5iM0TpBQxxVpz03afNjz2oQ63kqezcn5Zpk2GJbb8kQ+
+        SxtnVQ7JaKyjjxvJMya3BO7llvxs1n2+y3XZKSuxTj6WpDuw64skkSnZ3XRasiqvkph92SWD2IA+6EwS
+        rMSdfJLEXsoxWca4vJLEkmSQUAIuo/JD8s9t8gU50CjmUKYNSIKVYKtGaCgjNoFdSdxmXsuyRUn9TDIx
+        UqaNZ7AjqbMtpRCAVZxK4ibz2s8J+XXLtiqcCdqO81oJBGAVLD1xPXmtQZ9kcBvjXA5Kg1jauaalWOcq
+        7AC6CfRLN4EL6SbQK2l/zGslWOcqbCKuHcRswYyk7SivlUAAVrEhibMDFXMI7eDyUiqFgDpytbhiELqG
+        E/JNcnWjrmEdeclYEj6Y/FoSW/kiqgNvxj3JwKwE95x95mDirGTZ+efEHMio70EdSGJNsrS2IkX5GPHP
+        k0/uwr7y6T2UD5JrymnnwBX2PMu+AWKYGRV7kODxAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="buttonM2TeachDeleteProgram.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="buttonM2TeachDeleteProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2TeachDeleteProgram.Location" type="System.Drawing.Point, System.Drawing">
+    <value>710, 25</value>
+  </data>
+  <data name="buttonM2TeachDeleteProgram.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 53</value>
+  </data>
+  <data name="buttonM2TeachDeleteProgram.TabIndex" type="System.Int32, mscorlib">
+    <value>109</value>
+  </data>
+  <data name="buttonM2TeachDeleteProgram.Text" xml:space="preserve">
+    <value>delete program</value>
+  </data>
+  <data name="buttonM2TeachDeleteProgram.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TeachDeleteProgram.Name" xml:space="preserve">
+    <value>buttonM2TeachDeleteProgram</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TeachDeleteProgram.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TeachDeleteProgram.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TeachDeleteProgram.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="comboBoxM2TeachProgramList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt</value>
+  </data>
+  <data name="comboBoxM2TeachProgramList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 25</value>
+  </data>
+  <data name="comboBoxM2TeachProgramList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 26</value>
+  </data>
+  <data name="comboBoxM2TeachProgramList.TabIndex" type="System.Int32, mscorlib">
+    <value>108</value>
+  </data>
+  <data name="&gt;&gt;comboBoxM2TeachProgramList.Name" xml:space="preserve">
+    <value>comboBoxM2TeachProgramList</value>
+  </data>
+  <data name="&gt;&gt;comboBoxM2TeachProgramList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxM2TeachProgramList.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;comboBoxM2TeachProgramList.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="buttonM2TeachNewProgram.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt</value>
+  </data>
+  <data name="buttonM2TeachNewProgram.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAcZJREFUWEftlctKLDEQhmfhcaP4HCqKbrw/oHi/PYkrFz6FeHkALxtdHEVBRUX/
+        r5lwMqEqpscMuDgffNBJV1XXpJOezn9+M5+VbY1V5Ce2pu/EhIE2UCvGpFbxkhiTvhMTBtpArRiTWsVL
+        Ykz6TkwYaAO1YkxqFS+JMcklDsk1GWK4Zs4iVydLLnFdhvtB5izC/dbkEm8l95blSveaOZiQe/JcPslQ
+        Z0OOy2JCosWN5B4PDw38lbvyozu2fJNb8o/8lpBksSrjwrHPkkbm5UjXBcmqvEhijuSwzBIKWpBME6zE
+        nXyUxF7KaekxI68ksTSZJddAzJR8l/zy9OFWDZpgJXhVk0x4lDZwIInbaUa9eDX2JfO8FhcvOeVCEjfX
+        jHrxarAnmD9rRg5ecgpLT9xoM/qX5wnEcs0xdYkTcoQN2KaBMcn1QzNyiBNysIzEcexSvBqLkvnTZuTg
+        JadsS+KsDeXVCBuXj5JLSC6Vo8URiwn3Ymblq+ToFh3DNvKRSZuI4eHXkthvP0Rt4Mt4KCnMSnDOec9s
+        TFySLDu/nJhjWfR/0Aaa2JQsbViRVP6M+OXVHx7De+Wv90TeS44pu50Nl7zzTucLNwUWu571h9MAAAAA
+        SUVORK5CYII=
+</value>
+  </data>
+  <data name="buttonM2TeachNewProgram.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="buttonM2TeachNewProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2TeachNewProgram.Location" type="System.Drawing.Point, System.Drawing">
+    <value>540, 25</value>
+  </data>
+  <data name="buttonM2TeachNewProgram.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 53</value>
+  </data>
+  <data name="buttonM2TeachNewProgram.TabIndex" type="System.Int32, mscorlib">
+    <value>106</value>
+  </data>
+  <data name="buttonM2TeachNewProgram.Text" xml:space="preserve">
+    <value>new program</value>
+  </data>
+  <data name="buttonM2TeachNewProgram.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TeachNewProgram.Name" xml:space="preserve">
+    <value>buttonM2TeachNewProgram</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TeachNewProgram.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TeachNewProgram.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TeachNewProgram.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="buttonM2TeachSaveProgram.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt</value>
+  </data>
+  <data name="buttonM2TeachSaveProgram.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAASlJREFUWEftkl0KwkAMhH0Qr6B4FL2A4rlE9HyiPvvz4iXqDBhY0zTbbVP0wQ8G
+        u9nJbLp29OeXqYJVjBXSR8W0aYzymHRuVAw6QJTHJCq8jcekc6Ni0AGiPCZR4W08Jp0bFYMOEOUxiQpv
+        4zHxGsfQHhIPn1mz8HJcvMYDJPsi1ixkvxiv8QlxbwEt38+sWXg5Ll7jA+IeD5cB7pAwg06QZHhqxDPs
+        oDSE2kKEh58hvd+kRjzDBOIQvAm+OQ9nLT2cv1w30WsAiyl0hNhzgeYQkRydp9c1sgaF/Of6zSVH5+l1
+        jaxBIX7v2lOy+VmDItwfEbiB+JHeoDULCdn8rEFh+Xmw1K8sJFj+D8RQqpSvD8Br5xA8fMVCguXvRWng
+        YAOUKgwrPKNR9QLUlRthLlvAOgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="buttonM2TeachSaveProgram.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="buttonM2TeachSaveProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2TeachSaveProgram.Location" type="System.Drawing.Point, System.Drawing">
+    <value>370, 25</value>
+  </data>
+  <data name="buttonM2TeachSaveProgram.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 53</value>
+  </data>
+  <data name="buttonM2TeachSaveProgram.TabIndex" type="System.Int32, mscorlib">
+    <value>105</value>
+  </data>
+  <data name="buttonM2TeachSaveProgram.Text" xml:space="preserve">
+    <value>save program</value>
+  </data>
+  <data name="buttonM2TeachSaveProgram.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TeachSaveProgram.Name" xml:space="preserve">
+    <value>buttonM2TeachSaveProgram</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TeachSaveProgram.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TeachSaveProgram.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TeachSaveProgram.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="buttonM2TeachLoadProgram.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt</value>
+  </data>
+  <data name="buttonM2TeachLoadProgram.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAVJJREFUWEftkr8uRFEQh08QElsLjUaIRK2ioREPoFF6AOENVCI8wjbUeu+g1Kkk
+        ChoPoBF/fr85ZwqbubN7cs5Jtrhf8mVn5pyZO3t3Q88081vZbKwhJWajjU+ShTCABzF02YYLMZTe4gV0
+        2B38gkeS2RzCTziULPYWL6CcwUe4IpnNGnyGF5JFqi1AZtLnHlyNocB4P4ZhMX0qVRcgJ/AbPkgWYfwD
+        jyX7T/UFluELPIV8I5Qxa0twlOoLEP0pZpNEa6M0WYDwT/maPGehg2YL3EK9c89CB+PmdDKucR1uwg24
+        xUIHzRaYlKYL1LpjUmv4JHdMvMY5eA31DmPWLLw5Ll7jDdRzlTULPc/Ga/yAPNuBuylmzcKb4+I1vkOe
+        8eG6wBu08Oa4eI1XUM/VS2ih59l4jfOQS/BN8Jvz4axZNFkgh36B4gVqmY01pMSeaSSEP4L42ubU3goW
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="buttonM2TeachLoadProgram.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="buttonM2TeachLoadProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2TeachLoadProgram.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 25</value>
+  </data>
+  <data name="buttonM2TeachLoadProgram.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 53</value>
+  </data>
+  <data name="buttonM2TeachLoadProgram.TabIndex" type="System.Int32, mscorlib">
+    <value>104</value>
+  </data>
+  <data name="buttonM2TeachLoadProgram.Text" xml:space="preserve">
+    <value>load program</value>
+  </data>
+  <data name="buttonM2TeachLoadProgram.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TeachLoadProgram.Name" xml:space="preserve">
+    <value>buttonM2TeachLoadProgram</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TeachLoadProgram.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TeachLoadProgram.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TeachLoadProgram.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lbButtonM2StartStopExitBelt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM2StartStopExitBelt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 557</value>
+  </data>
+  <data name="lbButtonM2StartStopExitBelt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 57</value>
+  </data>
+  <data name="lbButtonM2StartStopExitBelt.TabIndex" type="System.Int32, mscorlib">
+    <value>101</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartStopExitBelt.Name" xml:space="preserve">
+    <value>lbButtonM2StartStopExitBelt</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartStopExitBelt.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartStopExitBelt.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartStopExitBelt.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lbButtonM2StartStopWorkingBelt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM2StartStopWorkingBelt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 491</value>
+  </data>
+  <data name="lbButtonM2StartStopWorkingBelt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 53</value>
+  </data>
+  <data name="lbButtonM2StartStopWorkingBelt.TabIndex" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartStopWorkingBelt.Name" xml:space="preserve">
+    <value>lbButtonM2StartStopWorkingBelt</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartStopWorkingBelt.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartStopWorkingBelt.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartStopWorkingBelt.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <metadata name="ColumnM2PointID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ColumnM2PointID.HeaderText" xml:space="preserve">
+    <value>point</value>
+  </data>
+  <data name="ColumnM2PointID.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <metadata name="ColumnMeQuote.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ColumnMeQuote.HeaderText" xml:space="preserve">
+    <value>quote (mm)</value>
+  </data>
+  <data name="ColumnMeQuote.Width" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <metadata name="ColumnM2Speed.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ColumnM2Speed.HeaderText" xml:space="preserve">
+    <value>speed (%)</value>
+  </data>
+  <data name="ColumnM2Speed.Width" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <metadata name="ColumnM2Register.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ColumnM2Register.HeaderText" xml:space="preserve">
+    <value>register</value>
+  </data>
+  <metadata name="ColumnM2StartQuote.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ColumnM2StartQuote.HeaderText" xml:space="preserve">
+    <value>start</value>
+  </data>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Column1.HeaderText" xml:space="preserve">
+    <value>reached</value>
+  </data>
+  <data name="Column1.Width" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="dataGridViewM2TeachPoints.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 100</value>
+  </data>
+  <data name="dataGridViewM2TeachPoints.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>48</value>
+  </data>
+  <data name="dataGridViewM2TeachPoints.Size" type="System.Drawing.Size, System.Drawing">
+    <value>575, 220</value>
+  </data>
+  <data name="dataGridViewM2TeachPoints.TabIndex" type="System.Int32, mscorlib">
+    <value>97</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewM2TeachPoints.Name" xml:space="preserve">
+    <value>dataGridViewM2TeachPoints</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewM2TeachPoints.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewM2TeachPoints.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewM2TeachPoints.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="buttonM2PrintCycle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM2PrintCycle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2PrintCycle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 540</value>
+  </data>
+  <data name="buttonM2PrintCycle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 53</value>
+  </data>
+  <data name="buttonM2PrintCycle.TabIndex" type="System.Int32, mscorlib">
+    <value>81</value>
+  </data>
+  <data name="buttonM2PrintCycle.Text" xml:space="preserve">
+    <value>print cycle</value>
+  </data>
+  <data name="&gt;&gt;buttonM2PrintCycle.Name" xml:space="preserve">
+    <value>buttonM2PrintCycle</value>
+  </data>
+  <data name="&gt;&gt;buttonM2PrintCycle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2PrintCycle.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM2PrintCycle.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="buttonM2ResetServo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM2ResetServo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2ResetServo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 480</value>
+  </data>
+  <data name="buttonM2ResetServo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 53</value>
+  </data>
+  <data name="buttonM2ResetServo.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="buttonM2ResetServo.Text" xml:space="preserve">
+    <value>reset servo alarm</value>
+  </data>
+  <data name="&gt;&gt;buttonM2ResetServo.Name" xml:space="preserve">
+    <value>buttonM2ResetServo</value>
+  </data>
+  <data name="&gt;&gt;buttonM2ResetServo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2ResetServo.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM2ResetServo.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="buttonM2ContrastClosing.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM2ContrastClosing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2ContrastClosing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 420</value>
+  </data>
+  <data name="buttonM2ContrastClosing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 53</value>
+  </data>
+  <data name="buttonM2ContrastClosing.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="buttonM2ContrastClosing.Text" xml:space="preserve">
+    <value>contrast closing</value>
+  </data>
+  <data name="&gt;&gt;buttonM2ContrastClosing.Name" xml:space="preserve">
+    <value>buttonM2ContrastClosing</value>
+  </data>
+  <data name="&gt;&gt;buttonM2ContrastClosing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2ContrastClosing.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM2ContrastClosing.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="buttonM2ContrastOpening.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM2ContrastOpening.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2ContrastOpening.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 360</value>
+  </data>
+  <data name="buttonM2ContrastOpening.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 53</value>
+  </data>
+  <data name="buttonM2ContrastOpening.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="buttonM2ContrastOpening.Text" xml:space="preserve">
+    <value>constrast opening</value>
+  </data>
+  <data name="&gt;&gt;buttonM2ContrastOpening.Name" xml:space="preserve">
+    <value>buttonM2ContrastOpening</value>
+  </data>
+  <data name="&gt;&gt;buttonM2ContrastOpening.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2ContrastOpening.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM2ContrastOpening.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="buttonM2CenteringClampsClosing.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM2CenteringClampsClosing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2CenteringClampsClosing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 540</value>
+  </data>
+  <data name="buttonM2CenteringClampsClosing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 53</value>
+  </data>
+  <data name="buttonM2CenteringClampsClosing.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="buttonM2CenteringClampsClosing.Text" xml:space="preserve">
+    <value>centering clamp closing</value>
+  </data>
+  <data name="&gt;&gt;buttonM2CenteringClampsClosing.Name" xml:space="preserve">
+    <value>buttonM2CenteringClampsClosing</value>
+  </data>
+  <data name="&gt;&gt;buttonM2CenteringClampsClosing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2CenteringClampsClosing.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM2CenteringClampsClosing.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="buttonM2CenteringClampsOpening.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM2CenteringClampsOpening.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2CenteringClampsOpening.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 480</value>
+  </data>
+  <data name="buttonM2CenteringClampsOpening.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 53</value>
+  </data>
+  <data name="buttonM2CenteringClampsOpening.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="buttonM2CenteringClampsOpening.Text" xml:space="preserve">
+    <value>centering clamp opening</value>
+  </data>
+  <data name="&gt;&gt;buttonM2CenteringClampsOpening.Name" xml:space="preserve">
+    <value>buttonM2CenteringClampsOpening</value>
+  </data>
+  <data name="&gt;&gt;buttonM2CenteringClampsOpening.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2CenteringClampsOpening.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM2CenteringClampsOpening.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="buttonM2BigClampClosing.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM2BigClampClosing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2BigClampClosing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 420</value>
+  </data>
+  <data name="buttonM2BigClampClosing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 53</value>
+  </data>
+  <data name="buttonM2BigClampClosing.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="buttonM2BigClampClosing.Text" xml:space="preserve">
+    <value>big clamp closing</value>
+  </data>
+  <data name="&gt;&gt;buttonM2BigClampClosing.Name" xml:space="preserve">
+    <value>buttonM2BigClampClosing</value>
+  </data>
+  <data name="&gt;&gt;buttonM2BigClampClosing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2BigClampClosing.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM2BigClampClosing.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="buttonM2BigClampOpening.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM2BigClampOpening.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2BigClampOpening.Location" type="System.Drawing.Point, System.Drawing">
+    <value>180, 360</value>
+  </data>
+  <data name="buttonM2BigClampOpening.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 53</value>
+  </data>
+  <data name="buttonM2BigClampOpening.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="buttonM2BigClampOpening.Text" xml:space="preserve">
+    <value>big clamp opening</value>
+  </data>
+  <data name="&gt;&gt;buttonM2BigClampOpening.Name" xml:space="preserve">
+    <value>buttonM2BigClampOpening</value>
+  </data>
+  <data name="&gt;&gt;buttonM2BigClampOpening.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2BigClampOpening.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM2BigClampOpening.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="buttonM2SmallClampClosing.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM2SmallClampClosing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2SmallClampClosing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 420</value>
+  </data>
+  <data name="buttonM2SmallClampClosing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 53</value>
+  </data>
+  <data name="buttonM2SmallClampClosing.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonM2SmallClampClosing.Text" xml:space="preserve">
+    <value>small clamp closing</value>
+  </data>
+  <data name="&gt;&gt;buttonM2SmallClampClosing.Name" xml:space="preserve">
+    <value>buttonM2SmallClampClosing</value>
+  </data>
+  <data name="&gt;&gt;buttonM2SmallClampClosing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2SmallClampClosing.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM2SmallClampClosing.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="buttonM2SmallClampOpening.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM2SmallClampOpening.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2SmallClampOpening.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 360</value>
+  </data>
+  <data name="buttonM2SmallClampOpening.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 53</value>
+  </data>
+  <data name="buttonM2SmallClampOpening.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="buttonM2SmallClampOpening.Text" xml:space="preserve">
+    <value>small clamp opening</value>
+  </data>
+  <data name="&gt;&gt;buttonM2SmallClampOpening.Name" xml:space="preserve">
+    <value>buttonM2SmallClampOpening</value>
+  </data>
+  <data name="&gt;&gt;buttonM2SmallClampOpening.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2SmallClampOpening.Parent" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM2SmallClampOpening.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="tabPageT2M2_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 3</value>
+  </data>
+  <data name="tabPageT2M2_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>900, 634</value>
+  </data>
+  <data name="tabPageT2M2_1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageT2M2_1.Text" xml:space="preserve">
+    <value>teach</value>
+  </data>
+  <data name="tabPageT2M2_1.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQDJwtUEAAAAA
+        /brLQQs=
+</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_1.Name" xml:space="preserve">
+    <value>tabPageT2M2_1</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_1.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_1.Parent" xml:space="preserve">
+    <value>tabControlT2</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="comboBoxM2TestProgramList.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
   </data>
@@ -4032,7 +5250,7 @@
     <value>tabControlT2</value>
   </data>
   <data name="&gt;&gt;tabPageT2M2_2.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="lbLed2040M2.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -5360,7 +6578,7 @@
     <value>tabControlT2</value>
   </data>
   <data name="&gt;&gt;tabPageT2M2_4.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="lbLed1040M2.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -6688,1224 +7906,6 @@
     <value>tabControlT2</value>
   </data>
   <data name="&gt;&gt;tabPageT2M2_3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="comboBoxM2TeachModelName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 12pt</value>
-  </data>
-  <data name="comboBoxM2TeachModelName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 65</value>
-  </data>
-  <data name="comboBoxM2TeachModelName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 26</value>
-  </data>
-  <data name="comboBoxM2TeachModelName.TabIndex" type="System.Int32, mscorlib">
-    <value>130</value>
-  </data>
-  <data name="&gt;&gt;comboBoxM2TeachModelName.Name" xml:space="preserve">
-    <value>comboBoxM2TeachModelName</value>
-  </data>
-  <data name="&gt;&gt;comboBoxM2TeachModelName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBoxM2TeachModelName.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;comboBoxM2TeachModelName.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="buttonM2Home.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="buttonM2Home.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2Home.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 30</value>
-  </data>
-  <data name="buttonM2Home.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 50</value>
-  </data>
-  <data name="buttonM2Home.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="buttonM2Home.Text" xml:space="preserve">
-    <value>home</value>
-  </data>
-  <data name="&gt;&gt;buttonM2Home.Name" xml:space="preserve">
-    <value>buttonM2Home</value>
-  </data>
-  <data name="&gt;&gt;buttonM2Home.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2Home.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;buttonM2Home.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="buttonM2ResetHome.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="buttonM2ResetHome.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2ResetHome.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 30</value>
-  </data>
-  <data name="buttonM2ResetHome.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 50</value>
-  </data>
-  <data name="buttonM2ResetHome.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="buttonM2ResetHome.Text" xml:space="preserve">
-    <value>reset home</value>
-  </data>
-  <data name="&gt;&gt;buttonM2ResetHome.Name" xml:space="preserve">
-    <value>buttonM2ResetHome</value>
-  </data>
-  <data name="&gt;&gt;buttonM2ResetHome.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2ResetHome.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;buttonM2ResetHome.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lbLedM2T2HomingDone.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLedM2T2HomingDone.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="lbLedM2T2HomingDone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 85</value>
-  </data>
-  <data name="lbLedM2T2HomingDone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>144, 20</value>
-  </data>
-  <data name="lbLedM2T2HomingDone.TabIndex" type="System.Int32, mscorlib">
-    <value>92</value>
-  </data>
-  <data name="&gt;&gt;lbLedM2T2HomingDone.Name" xml:space="preserve">
-    <value>lbLedM2T2HomingDone</value>
-  </data>
-  <data name="&gt;&gt;lbLedM2T2HomingDone.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLedM2T2HomingDone.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;lbLedM2T2HomingDone.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="groupBox3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>595, 500</value>
-  </data>
-  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 110</value>
-  </data>
-  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>112</value>
-  </data>
-  <data name="groupBox3.Text" xml:space="preserve">
-    <value>vertical axis home</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label7.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 20</value>
-  </data>
-  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>79, 16</value>
-  </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>105</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>quote(mm)</value>
-  </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 20</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 16</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>104</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>speed(%)</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="buttonM2StartQuote.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="buttonM2StartQuote.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2StartQuote.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 90</value>
-  </data>
-  <data name="buttonM2StartQuote.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 50</value>
-  </data>
-  <data name="buttonM2StartQuote.TabIndex" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <data name="buttonM2StartQuote.Text" xml:space="preserve">
-    <value>start quote</value>
-  </data>
-  <data name="&gt;&gt;buttonM2StartQuote.Name" xml:space="preserve">
-    <value>buttonM2StartQuote</value>
-  </data>
-  <data name="&gt;&gt;buttonM2StartQuote.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2StartQuote.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;buttonM2StartQuote.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="numericUpDownM2ManualQuote.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 21.75pt</value>
-  </data>
-  <data name="numericUpDownM2ManualQuote.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 40</value>
-  </data>
-  <data name="numericUpDownM2ManualQuote.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 43</value>
-  </data>
-  <data name="numericUpDownM2ManualQuote.TabIndex" type="System.Int32, mscorlib">
-    <value>82</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownM2ManualQuote.Name" xml:space="preserve">
-    <value>numericUpDownM2ManualQuote</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownM2ManualQuote.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownM2ManualQuote.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownM2ManualQuote.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="numericUpDownM2ManualSpeed.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 21.75pt</value>
-  </data>
-  <data name="numericUpDownM2ManualSpeed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 40</value>
-  </data>
-  <data name="numericUpDownM2ManualSpeed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 43</value>
-  </data>
-  <data name="numericUpDownM2ManualSpeed.TabIndex" type="System.Int32, mscorlib">
-    <value>83</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownM2ManualSpeed.Name" xml:space="preserve">
-    <value>numericUpDownM2ManualSpeed</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownM2ManualSpeed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownM2ManualSpeed.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownM2ManualSpeed.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="groupBox2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>595, 339</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 150</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>111</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Vertical axis start quote</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="labelM2JogSpeed.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelM2JogSpeed.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="labelM2JogSpeed.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelM2JogSpeed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 19</value>
-  </data>
-  <data name="labelM2JogSpeed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 16</value>
-  </data>
-  <data name="labelM2JogSpeed.TabIndex" type="System.Int32, mscorlib">
-    <value>103</value>
-  </data>
-  <data name="labelM2JogSpeed.Text" xml:space="preserve">
-    <value>speed(%)</value>
-  </data>
-  <data name="&gt;&gt;labelM2JogSpeed.Name" xml:space="preserve">
-    <value>labelM2JogSpeed</value>
-  </data>
-  <data name="&gt;&gt;labelM2JogSpeed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelM2JogSpeed.Parent" xml:space="preserve">
-    <value>groupBoxM2Jog</value>
-  </data>
-  <data name="&gt;&gt;labelM2JogSpeed.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lbButtonM2JogUp.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAApJJREFUeF7tmE1uGzEMhX2JBM39r5Fd0kXTrNpFjpPqGWLAEqIoipo/RR/wEJtv
-        RqNHjRV7bgfymPSehdffioekP0mfWR9JT0nfAqz23yQEx1/+evo7ga88Vv1HoTbtnVAKT0zfhFp4Ytom
-        tIQnpmuCJzwxTRPkbi93eLzHd4Df+TXHOvf0WCvPfW2lL3snWKsnfc+x0j8dnpUn31rpy9wJPeGJyzch
-        Ep64bBNGhCcu14SR4YnLNMHaoVt87XlAy7k1f3OiK899Osa70ofdCdHVkb7nWK8/nJErT350pS1/GD3h
-        ODU/GtLyw0TCAcsH0ZCW3000nOVzoiEt3000nOWXiIa0/Gai4Sy/RjSk5TeBLygY4Kh/T9FrcB8PXdxo
-        DfBcuOR7iFyLe10NKA1euyBo8d+Snu/v/ge1X0k9Y0rfOqcZOVBtUOui3IckVI+Ojb+1Y93wDQXq2fDk
-        GJCEe9GNj47xbLxV0EV8jnqe4EqfJiihumeskq/NcxM8K08+XkMSqntWuuTvRk94gPeQhNdP34Te8AA1
-        SCLrp21CJDxAHZKU6qdrQjQ8gAdJtPppmjAiPIAPSbQ6OLwJo8IDHANJtDpxWBNGhgc4DpJodc7uTRgd
-        HuBYSKLVJbs1oeVbV83/mQQPekUhQzWJVi8RnVsTkecBAKHhQy8oZKgm0eoa1hy43/VzuPd5gAXOgyRa
-        vUZtLtzrakDps9TzmZfgXEii1S22mucd2WGt2x5wPiTR6i1sMc8v+OCeQbfcBEv0zrMJDOT9nb31Jlii
-        Z567s2UDLsFqQJZkugbsvQmejiM2wUuwGpAlWQ3Imoa1CSZRqLUJMlYDsiSrAVnTsDbBJAq1NkEGBdU0
-        PfzOkOJ3yg7cbv8AErvZqWEJrekAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="lbButtonM2JogUp.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="lbButtonM2JogUp.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 39.75pt, style=Bold</value>
-  </data>
-  <data name="lbButtonM2JogUp.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 20</value>
-  </data>
-  <data name="lbButtonM2JogUp.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 68</value>
-  </data>
-  <data name="lbButtonM2JogUp.TabIndex" type="System.Int32, mscorlib">
-    <value>78</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2JogUp.Name" xml:space="preserve">
-    <value>lbButtonM2JogUp</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2JogUp.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2JogUp.Parent" xml:space="preserve">
-    <value>groupBoxM2Jog</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2JogUp.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lbButtonM2JogDown.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAApVJREFUeF7tmFFuGzEMRH2JFMn9j9H+NQUKpF/tR4/TaoxlwE4lURRlW6voAQPb
-        nF2tOForG18ewLekPwW9Ji1PrnGt5Sk1ynV9pyx1Z3CjAtfRtNS+orAK3KhQqi/HDuAQswM4JOxNMElq
-        exNciR3AIWYHcEjYm2CS1PYmuBI7gEPM1AF8SvqR9Ha8j9AaQM8mOHKe72CgX0kyGbyPDC7jMFz3boKj
-        53lFD4pX/b53cJkgU6q3cIt5Xp6SfiZhoN9Jz5naS5IXnAsxpbrFreZ5/S5hAE6R0/YmjPMgplSvUZuL
-        9rAnuCkFAGoXtsA5EMN1axO05qD9rgA8F8j5JXA8xHC9tgneam7/YX2Xer5rOBZiSnUm953XWL6b0SHg
-        OIgp1TV3b14YGQKOgZhSXXhY88KoEOBDTKkOHt68MCIEeBBTqk/TvBANAXWIydWna16IhIAaxHB92uaF
-        3hDwGWJ0ffrmhZ4Q8B5ipD5l83iSwqMx5H3qYh+vECN1z1g5f/jvATpxqHWlNTwGxGivZ+Vb5umGE7fS
-        b/UhRurRsfFaO7aZ3EVzNU2L/z3p8/XTv3xJgtczJvvWOU30/h4w5OIHkWtp7+6/B1h+C9FraL8rAM/G
-        1uPX8Gx4PX4z0SYtP0e0Oct3E23S8jXR5iy/m2iTlg+izVl+mGiTNT/anOUPI9IkyPnR5ix/OCP/POHV
-        c6zXvxk9K63Rvhwz/coz0dXBZzyg5P5zazm35t+N6J2QY/qVZ0aGcLrmhREhnLZ5IRLC6ZsXekJYpnnB
-        u4N7jmV/Wjx3ghxz+pVnrNXD597ngNNg3Qk5Tr/yjCeE5ZoXWkJYtnmhFsLyzQu5ED5M8wLv8Evs9l70
-        qn+YlWew2qXngDtxufwF/jTZpf1UTC4AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="lbButtonM2JogDown.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="lbButtonM2JogDown.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 39.75pt, style=Bold</value>
-  </data>
-  <data name="lbButtonM2JogDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 143</value>
-  </data>
-  <data name="lbButtonM2JogDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 68</value>
-  </data>
-  <data name="lbButtonM2JogDown.TabIndex" type="System.Int32, mscorlib">
-    <value>79</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2JogDown.Name" xml:space="preserve">
-    <value>lbButtonM2JogDown</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2JogDown.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2JogDown.Parent" xml:space="preserve">
-    <value>groupBoxM2Jog</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2JogDown.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="numericUpDownM2JogSpeed.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 21.75pt</value>
-  </data>
-  <data name="numericUpDownM2JogSpeed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 41</value>
-  </data>
-  <data name="numericUpDownM2JogSpeed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>93, 43</value>
-  </data>
-  <data name="numericUpDownM2JogSpeed.TabIndex" type="System.Int32, mscorlib">
-    <value>98</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownM2JogSpeed.Name" xml:space="preserve">
-    <value>numericUpDownM2JogSpeed</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownM2JogSpeed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownM2JogSpeed.Parent" xml:space="preserve">
-    <value>groupBoxM2Jog</value>
-  </data>
-  <data name="&gt;&gt;numericUpDownM2JogSpeed.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="labelM2TeachAxisQuoteName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelM2TeachAxisQuoteName.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="labelM2TeachAxisQuoteName.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelM2TeachAxisQuoteName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 105</value>
-  </data>
-  <data name="labelM2TeachAxisQuoteName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 16</value>
-  </data>
-  <data name="labelM2TeachAxisQuoteName.TabIndex" type="System.Int32, mscorlib">
-    <value>102</value>
-  </data>
-  <data name="labelM2TeachAxisQuoteName.Text" xml:space="preserve">
-    <value>quote (mm)</value>
-  </data>
-  <data name="&gt;&gt;labelM2TeachAxisQuoteName.Name" xml:space="preserve">
-    <value>labelM2TeachAxisQuoteName</value>
-  </data>
-  <data name="&gt;&gt;labelM2TeachAxisQuoteName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelM2TeachAxisQuoteName.Parent" xml:space="preserve">
-    <value>groupBoxM2Jog</value>
-  </data>
-  <data name="&gt;&gt;labelM2TeachAxisQuoteName.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="labelM2TeachAxisQuoteValue.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="labelM2TeachAxisQuoteValue.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 14.25pt</value>
-  </data>
-  <data name="labelM2TeachAxisQuoteValue.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="labelM2TeachAxisQuoteValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>190, 135</value>
-  </data>
-  <data name="labelM2TeachAxisQuoteValue.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 23</value>
-  </data>
-  <data name="labelM2TeachAxisQuoteValue.TabIndex" type="System.Int32, mscorlib">
-    <value>103</value>
-  </data>
-  <data name="labelM2TeachAxisQuoteValue.Text" xml:space="preserve">
-    <value>9999</value>
-  </data>
-  <data name="&gt;&gt;labelM2TeachAxisQuoteValue.Name" xml:space="preserve">
-    <value>labelM2TeachAxisQuoteValue</value>
-  </data>
-  <data name="&gt;&gt;labelM2TeachAxisQuoteValue.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;labelM2TeachAxisQuoteValue.Parent" xml:space="preserve">
-    <value>groupBoxM2Jog</value>
-  </data>
-  <data name="&gt;&gt;labelM2TeachAxisQuoteValue.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="groupBoxM2Jog.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="groupBoxM2Jog.Location" type="System.Drawing.Point, System.Drawing">
-    <value>595, 100</value>
-  </data>
-  <data name="groupBoxM2Jog.Size" type="System.Drawing.Size, System.Drawing">
-    <value>300, 227</value>
-  </data>
-  <data name="groupBoxM2Jog.TabIndex" type="System.Int32, mscorlib">
-    <value>110</value>
-  </data>
-  <data name="groupBoxM2Jog.Text" xml:space="preserve">
-    <value>Vertical axis jog</value>
-  </data>
-  <data name="&gt;&gt;groupBoxM2Jog.Name" xml:space="preserve">
-    <value>groupBoxM2Jog</value>
-  </data>
-  <data name="&gt;&gt;groupBoxM2Jog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBoxM2Jog.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;groupBoxM2Jog.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="buttonM2TeachDeleteProgram.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 12pt</value>
-  </data>
-  <data name="buttonM2TeachDeleteProgram.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAehJREFUWEftlckuBUEUhnuBDbFEPAFC2JgfifcQ8/QkVhaeQsxbw4YFQoIg/F/f
-        e5LSqa6uvuomFr7ky62qPlV1bg3d2T9/ma/E1sY3yG+sTcsdC7Q1gVQxXlINHhPjpeWOBdqaQKoYL6kG
-        j4nx0nLHAm1NIFWMl1SDx8R4CXXskMvSYijT5iM0TpBQxxVpz03afNjz2oQ63kqezcn5Zpk2GJbb8kQ+
-        SxtnVQ7JaKyjjxvJMya3BO7llvxs1n2+y3XZKSuxTj6WpDuw64skkSnZ3XRasiqvkph92SWD2IA+6EwS
-        rMSdfJLEXsoxWca4vJLEkmSQUAIuo/JD8s9t8gU50CjmUKYNSIKVYKtGaCgjNoFdSdxmXsuyRUn9TDIx
-        UqaNZ7AjqbMtpRCAVZxK4ibz2s8J+XXLtiqcCdqO81oJBGAVLD1xPXmtQZ9kcBvjXA5Kg1jauaalWOcq
-        7AC6CfRLN4EL6SbQK2l/zGslWOcqbCKuHcRswYyk7SivlUAAVrEhibMDFXMI7eDyUiqFgDpytbhiELqG
-        E/JNcnWjrmEdeclYEj6Y/FoSW/kiqgNvxj3JwKwE95x95mDirGTZ+efEHMio70EdSGJNsrS2IkX5GPHP
-        k0/uwr7y6T2UD5JrymnnwBX2PMu+AWKYGRV7kODxAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="buttonM2TeachDeleteProgram.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="buttonM2TeachDeleteProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2TeachDeleteProgram.Location" type="System.Drawing.Point, System.Drawing">
-    <value>710, 25</value>
-  </data>
-  <data name="buttonM2TeachDeleteProgram.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 53</value>
-  </data>
-  <data name="buttonM2TeachDeleteProgram.TabIndex" type="System.Int32, mscorlib">
-    <value>109</value>
-  </data>
-  <data name="buttonM2TeachDeleteProgram.Text" xml:space="preserve">
-    <value>delete program</value>
-  </data>
-  <data name="buttonM2TeachDeleteProgram.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TeachDeleteProgram.Name" xml:space="preserve">
-    <value>buttonM2TeachDeleteProgram</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TeachDeleteProgram.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TeachDeleteProgram.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TeachDeleteProgram.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="comboBoxM2TeachProgramList.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 12pt</value>
-  </data>
-  <data name="comboBoxM2TeachProgramList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 25</value>
-  </data>
-  <data name="comboBoxM2TeachProgramList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 26</value>
-  </data>
-  <data name="comboBoxM2TeachProgramList.TabIndex" type="System.Int32, mscorlib">
-    <value>108</value>
-  </data>
-  <data name="&gt;&gt;comboBoxM2TeachProgramList.Name" xml:space="preserve">
-    <value>comboBoxM2TeachProgramList</value>
-  </data>
-  <data name="&gt;&gt;comboBoxM2TeachProgramList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBoxM2TeachProgramList.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;comboBoxM2TeachProgramList.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="buttonM2TeachNewProgram.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 12pt</value>
-  </data>
-  <data name="buttonM2TeachNewProgram.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAcZJREFUWEftlctKLDEQhmfhcaP4HCqKbrw/oHi/PYkrFz6FeHkALxtdHEVBRUX/
-        r5lwMqEqpscMuDgffNBJV1XXpJOezn9+M5+VbY1V5Ce2pu/EhIE2UCvGpFbxkhiTvhMTBtpArRiTWsVL
-        Ykz6TkwYaAO1YkxqFS+JMcklDsk1GWK4Zs4iVydLLnFdhvtB5izC/dbkEm8l95blSveaOZiQe/JcPslQ
-        Z0OOy2JCosWN5B4PDw38lbvyozu2fJNb8o/8lpBksSrjwrHPkkbm5UjXBcmqvEhijuSwzBIKWpBME6zE
-        nXyUxF7KaekxI68ksTSZJddAzJR8l/zy9OFWDZpgJXhVk0x4lDZwIInbaUa9eDX2JfO8FhcvOeVCEjfX
-        jHrxarAnmD9rRg5ecgpLT9xoM/qX5wnEcs0xdYkTcoQN2KaBMcn1QzNyiBNysIzEcexSvBqLkvnTZuTg
-        JadsS+KsDeXVCBuXj5JLSC6Vo8URiwn3Ymblq+ToFh3DNvKRSZuI4eHXkthvP0Rt4Mt4KCnMSnDOec9s
-        TFySLDu/nJhjWfR/0Aaa2JQsbViRVP6M+OXVHx7De+Wv90TeS44pu50Nl7zzTucLNwUWu571h9MAAAAA
-        SUVORK5CYII=
-</value>
-  </data>
-  <data name="buttonM2TeachNewProgram.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="buttonM2TeachNewProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2TeachNewProgram.Location" type="System.Drawing.Point, System.Drawing">
-    <value>540, 25</value>
-  </data>
-  <data name="buttonM2TeachNewProgram.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 53</value>
-  </data>
-  <data name="buttonM2TeachNewProgram.TabIndex" type="System.Int32, mscorlib">
-    <value>106</value>
-  </data>
-  <data name="buttonM2TeachNewProgram.Text" xml:space="preserve">
-    <value>new program</value>
-  </data>
-  <data name="buttonM2TeachNewProgram.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TeachNewProgram.Name" xml:space="preserve">
-    <value>buttonM2TeachNewProgram</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TeachNewProgram.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TeachNewProgram.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TeachNewProgram.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="buttonM2TeachSaveProgram.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 12pt</value>
-  </data>
-  <data name="buttonM2TeachSaveProgram.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAASlJREFUWEftkl0KwkAMhH0Qr6B4FL2A4rlE9HyiPvvz4iXqDBhY0zTbbVP0wQ8G
-        u9nJbLp29OeXqYJVjBXSR8W0aYzymHRuVAw6QJTHJCq8jcekc6Ni0AGiPCZR4W08Jp0bFYMOEOUxiQpv
-        4zHxGsfQHhIPn1mz8HJcvMYDJPsi1ixkvxiv8QlxbwEt38+sWXg5Ll7jA+IeD5cB7pAwg06QZHhqxDPs
-        oDSE2kKEh58hvd+kRjzDBOIQvAm+OQ9nLT2cv1w30WsAiyl0hNhzgeYQkRydp9c1sgaF/Of6zSVH5+l1
-        jaxBIX7v2lOy+VmDItwfEbiB+JHeoDULCdn8rEFh+Xmw1K8sJFj+D8RQqpSvD8Br5xA8fMVCguXvRWng
-        YAOUKgwrPKNR9QLUlRthLlvAOgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="buttonM2TeachSaveProgram.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="buttonM2TeachSaveProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2TeachSaveProgram.Location" type="System.Drawing.Point, System.Drawing">
-    <value>370, 25</value>
-  </data>
-  <data name="buttonM2TeachSaveProgram.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 53</value>
-  </data>
-  <data name="buttonM2TeachSaveProgram.TabIndex" type="System.Int32, mscorlib">
-    <value>105</value>
-  </data>
-  <data name="buttonM2TeachSaveProgram.Text" xml:space="preserve">
-    <value>save program</value>
-  </data>
-  <data name="buttonM2TeachSaveProgram.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TeachSaveProgram.Name" xml:space="preserve">
-    <value>buttonM2TeachSaveProgram</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TeachSaveProgram.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TeachSaveProgram.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TeachSaveProgram.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="buttonM2TeachLoadProgram.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 12pt</value>
-  </data>
-  <data name="buttonM2TeachLoadProgram.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAVJJREFUWEftkr8uRFEQh08QElsLjUaIRK2ioREPoFF6AOENVCI8wjbUeu+g1Kkk
-        ChoPoBF/fr85ZwqbubN7cs5Jtrhf8mVn5pyZO3t3Q88081vZbKwhJWajjU+ShTCABzF02YYLMZTe4gV0
-        2B38gkeS2RzCTziULPYWL6CcwUe4IpnNGnyGF5JFqi1AZtLnHlyNocB4P4ZhMX0qVRcgJ/AbPkgWYfwD
-        jyX7T/UFluELPIV8I5Qxa0twlOoLEP0pZpNEa6M0WYDwT/maPGehg2YL3EK9c89CB+PmdDKucR1uwg24
-        xUIHzRaYlKYL1LpjUmv4JHdMvMY5eA31DmPWLLw5Ll7jDdRzlTULPc/Ga/yAPNuBuylmzcKb4+I1vkOe
-        8eG6wBu08Oa4eI1XUM/VS2ih59l4jfOQS/BN8Jvz4axZNFkgh36B4gVqmY01pMSeaSSEP4L42ubU3goW
-        AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="buttonM2TeachLoadProgram.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="buttonM2TeachLoadProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2TeachLoadProgram.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 25</value>
-  </data>
-  <data name="buttonM2TeachLoadProgram.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 53</value>
-  </data>
-  <data name="buttonM2TeachLoadProgram.TabIndex" type="System.Int32, mscorlib">
-    <value>104</value>
-  </data>
-  <data name="buttonM2TeachLoadProgram.Text" xml:space="preserve">
-    <value>load program</value>
-  </data>
-  <data name="buttonM2TeachLoadProgram.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TeachLoadProgram.Name" xml:space="preserve">
-    <value>buttonM2TeachLoadProgram</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TeachLoadProgram.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TeachLoadProgram.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TeachLoadProgram.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="lbButtonM2StartStopExitBelt.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 39.75pt, style=Bold</value>
-  </data>
-  <data name="lbButtonM2StartStopExitBelt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>350, 557</value>
-  </data>
-  <data name="lbButtonM2StartStopExitBelt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 57</value>
-  </data>
-  <data name="lbButtonM2StartStopExitBelt.TabIndex" type="System.Int32, mscorlib">
-    <value>101</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2StartStopExitBelt.Name" xml:space="preserve">
-    <value>lbButtonM2StartStopExitBelt</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2StartStopExitBelt.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2StartStopExitBelt.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2StartStopExitBelt.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="lbButtonM2StartStopWorkingBelt.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 39.75pt, style=Bold</value>
-  </data>
-  <data name="lbButtonM2StartStopWorkingBelt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>350, 491</value>
-  </data>
-  <data name="lbButtonM2StartStopWorkingBelt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 53</value>
-  </data>
-  <data name="lbButtonM2StartStopWorkingBelt.TabIndex" type="System.Int32, mscorlib">
-    <value>100</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2StartStopWorkingBelt.Name" xml:space="preserve">
-    <value>lbButtonM2StartStopWorkingBelt</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2StartStopWorkingBelt.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2StartStopWorkingBelt.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2StartStopWorkingBelt.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <metadata name="ColumnM2PointID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="ColumnM2PointID.HeaderText" xml:space="preserve">
-    <value>point</value>
-  </data>
-  <data name="ColumnM2PointID.Width" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
-  <metadata name="ColumnMeQuote.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="ColumnMeQuote.HeaderText" xml:space="preserve">
-    <value>quote (mm)</value>
-  </data>
-  <data name="ColumnMeQuote.Width" type="System.Int32, mscorlib">
-    <value>130</value>
-  </data>
-  <metadata name="ColumnM2Speed.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="ColumnM2Speed.HeaderText" xml:space="preserve">
-    <value>speed (%)</value>
-  </data>
-  <data name="ColumnM2Speed.Width" type="System.Int32, mscorlib">
-    <value>130</value>
-  </data>
-  <metadata name="ColumnM2Register.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="ColumnM2Register.HeaderText" xml:space="preserve">
-    <value>register</value>
-  </data>
-  <metadata name="ColumnM2StartQuote.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="ColumnM2StartQuote.HeaderText" xml:space="preserve">
-    <value>start</value>
-  </data>
-  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Column1.HeaderText" xml:space="preserve">
-    <value>reached</value>
-  </data>
-  <data name="Column1.Width" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="dataGridViewM2TeachPoints.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 100</value>
-  </data>
-  <data name="dataGridViewM2TeachPoints.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>48</value>
-  </data>
-  <data name="dataGridViewM2TeachPoints.Size" type="System.Drawing.Size, System.Drawing">
-    <value>575, 220</value>
-  </data>
-  <data name="dataGridViewM2TeachPoints.TabIndex" type="System.Int32, mscorlib">
-    <value>97</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewM2TeachPoints.Name" xml:space="preserve">
-    <value>dataGridViewM2TeachPoints</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewM2TeachPoints.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewM2TeachPoints.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewM2TeachPoints.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="buttonM2PrintCycle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="buttonM2PrintCycle.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2PrintCycle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 540</value>
-  </data>
-  <data name="buttonM2PrintCycle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 53</value>
-  </data>
-  <data name="buttonM2PrintCycle.TabIndex" type="System.Int32, mscorlib">
-    <value>81</value>
-  </data>
-  <data name="buttonM2PrintCycle.Text" xml:space="preserve">
-    <value>print cycle</value>
-  </data>
-  <data name="&gt;&gt;buttonM2PrintCycle.Name" xml:space="preserve">
-    <value>buttonM2PrintCycle</value>
-  </data>
-  <data name="&gt;&gt;buttonM2PrintCycle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2PrintCycle.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM2PrintCycle.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="buttonM2ResetServo.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="buttonM2ResetServo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2ResetServo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 480</value>
-  </data>
-  <data name="buttonM2ResetServo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 53</value>
-  </data>
-  <data name="buttonM2ResetServo.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="buttonM2ResetServo.Text" xml:space="preserve">
-    <value>reset servo alarm</value>
-  </data>
-  <data name="&gt;&gt;buttonM2ResetServo.Name" xml:space="preserve">
-    <value>buttonM2ResetServo</value>
-  </data>
-  <data name="&gt;&gt;buttonM2ResetServo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2ResetServo.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM2ResetServo.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="buttonM2ContrastClosing.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="buttonM2ContrastClosing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2ContrastClosing.Location" type="System.Drawing.Point, System.Drawing">
-    <value>350, 420</value>
-  </data>
-  <data name="buttonM2ContrastClosing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 53</value>
-  </data>
-  <data name="buttonM2ContrastClosing.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="buttonM2ContrastClosing.Text" xml:space="preserve">
-    <value>contrast closing</value>
-  </data>
-  <data name="&gt;&gt;buttonM2ContrastClosing.Name" xml:space="preserve">
-    <value>buttonM2ContrastClosing</value>
-  </data>
-  <data name="&gt;&gt;buttonM2ContrastClosing.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2ContrastClosing.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM2ContrastClosing.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="buttonM2ContrastOpening.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="buttonM2ContrastOpening.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2ContrastOpening.Location" type="System.Drawing.Point, System.Drawing">
-    <value>350, 360</value>
-  </data>
-  <data name="buttonM2ContrastOpening.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 53</value>
-  </data>
-  <data name="buttonM2ContrastOpening.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="buttonM2ContrastOpening.Text" xml:space="preserve">
-    <value>constrast opening</value>
-  </data>
-  <data name="&gt;&gt;buttonM2ContrastOpening.Name" xml:space="preserve">
-    <value>buttonM2ContrastOpening</value>
-  </data>
-  <data name="&gt;&gt;buttonM2ContrastOpening.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2ContrastOpening.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM2ContrastOpening.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="buttonM2CenteringClampsClosing.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="buttonM2CenteringClampsClosing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2CenteringClampsClosing.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 540</value>
-  </data>
-  <data name="buttonM2CenteringClampsClosing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 53</value>
-  </data>
-  <data name="buttonM2CenteringClampsClosing.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="buttonM2CenteringClampsClosing.Text" xml:space="preserve">
-    <value>centering clamp closing</value>
-  </data>
-  <data name="&gt;&gt;buttonM2CenteringClampsClosing.Name" xml:space="preserve">
-    <value>buttonM2CenteringClampsClosing</value>
-  </data>
-  <data name="&gt;&gt;buttonM2CenteringClampsClosing.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2CenteringClampsClosing.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM2CenteringClampsClosing.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="buttonM2CenteringClampsOpening.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="buttonM2CenteringClampsOpening.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2CenteringClampsOpening.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 480</value>
-  </data>
-  <data name="buttonM2CenteringClampsOpening.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 53</value>
-  </data>
-  <data name="buttonM2CenteringClampsOpening.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="buttonM2CenteringClampsOpening.Text" xml:space="preserve">
-    <value>centering clamp opening</value>
-  </data>
-  <data name="&gt;&gt;buttonM2CenteringClampsOpening.Name" xml:space="preserve">
-    <value>buttonM2CenteringClampsOpening</value>
-  </data>
-  <data name="&gt;&gt;buttonM2CenteringClampsOpening.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2CenteringClampsOpening.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM2CenteringClampsOpening.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="buttonM2BigClampClosing.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="buttonM2BigClampClosing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2BigClampClosing.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 420</value>
-  </data>
-  <data name="buttonM2BigClampClosing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 53</value>
-  </data>
-  <data name="buttonM2BigClampClosing.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="buttonM2BigClampClosing.Text" xml:space="preserve">
-    <value>big clamp closing</value>
-  </data>
-  <data name="&gt;&gt;buttonM2BigClampClosing.Name" xml:space="preserve">
-    <value>buttonM2BigClampClosing</value>
-  </data>
-  <data name="&gt;&gt;buttonM2BigClampClosing.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2BigClampClosing.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM2BigClampClosing.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="buttonM2BigClampOpening.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="buttonM2BigClampOpening.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2BigClampOpening.Location" type="System.Drawing.Point, System.Drawing">
-    <value>180, 360</value>
-  </data>
-  <data name="buttonM2BigClampOpening.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 53</value>
-  </data>
-  <data name="buttonM2BigClampOpening.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="buttonM2BigClampOpening.Text" xml:space="preserve">
-    <value>big clamp opening</value>
-  </data>
-  <data name="&gt;&gt;buttonM2BigClampOpening.Name" xml:space="preserve">
-    <value>buttonM2BigClampOpening</value>
-  </data>
-  <data name="&gt;&gt;buttonM2BigClampOpening.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2BigClampOpening.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM2BigClampOpening.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="buttonM2SmallClampClosing.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="buttonM2SmallClampClosing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2SmallClampClosing.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 420</value>
-  </data>
-  <data name="buttonM2SmallClampClosing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 53</value>
-  </data>
-  <data name="buttonM2SmallClampClosing.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="buttonM2SmallClampClosing.Text" xml:space="preserve">
-    <value>small clamp closing</value>
-  </data>
-  <data name="&gt;&gt;buttonM2SmallClampClosing.Name" xml:space="preserve">
-    <value>buttonM2SmallClampClosing</value>
-  </data>
-  <data name="&gt;&gt;buttonM2SmallClampClosing.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2SmallClampClosing.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM2SmallClampClosing.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="buttonM2SmallClampOpening.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="buttonM2SmallClampOpening.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2SmallClampOpening.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 360</value>
-  </data>
-  <data name="buttonM2SmallClampOpening.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 53</value>
-  </data>
-  <data name="buttonM2SmallClampOpening.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="buttonM2SmallClampOpening.Text" xml:space="preserve">
-    <value>small clamp opening</value>
-  </data>
-  <data name="&gt;&gt;buttonM2SmallClampOpening.Name" xml:space="preserve">
-    <value>buttonM2SmallClampOpening</value>
-  </data>
-  <data name="&gt;&gt;buttonM2SmallClampOpening.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2SmallClampOpening.Parent" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM2SmallClampOpening.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="tabPageT2M2_1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 3</value>
-  </data>
-  <data name="tabPageT2M2_1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>900, 634</value>
-  </data>
-  <data name="tabPageT2M2_1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tabPageT2M2_1.Text" xml:space="preserve">
-    <value>teach</value>
-  </data>
-  <data name="tabPageT2M2_1.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
-        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQDJwtUEAAAAA
-        /brLQQs=
-</value>
-  </data>
-  <data name="&gt;&gt;tabPageT2M2_1.Name" xml:space="preserve">
-    <value>tabPageT2M2_1</value>
-  </data>
-  <data name="&gt;&gt;tabPageT2M2_1.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
-  </data>
-  <data name="&gt;&gt;tabPageT2M2_1.Parent" xml:space="preserve">
-    <value>tabControlT2</value>
-  </data>
-  <data name="&gt;&gt;tabPageT2M2_1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="tabControlT2.Location" type="System.Drawing.Point, System.Drawing">
@@ -11977,7 +11977,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACW
-        JQAAAk1TRnQBSQFMAgEBBAEAAYgBAAGIAQABYAEAAWABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        JQAAAk1TRnQBSQFMAgEBBAEAAZgBAAGYAQABYAEAAWABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAEBAgABwAMAAQEBAAEIBgABIAEBFwABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHA
         AdwBwAEAAfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANC
         AQADOQEAAYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/
@@ -12652,7 +12652,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAs
-        DgAAAk1TRnQBSQFMAgEBAwEAAXgBAAF4AQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DgAAAk1TRnQBSQFMAgEBAwEAAYgBAAGIAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAMAASADAAEBAQABCAYAARAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -14995,7 +14995,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAs
-        YwAAAk1TRnQBSQFMAgEBBAEAAagBAAGoAQABUAEAAVABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        YwAAAk1TRnQBSQFMAgEBBAEAAbgBAAG4AQABUAEAAVABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAEBAgABoAMAAQEBAAEIBgAByBgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
         AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
         AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
@@ -15429,7 +15429,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        EQAAAk1TRnQBSQFMAgEBBQEAAYgBAAGIAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        EQAAAk1TRnQBSQFMAgEBBQEAAZgBAAGYAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAMAAUADAAEBAQABCAYAASAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA

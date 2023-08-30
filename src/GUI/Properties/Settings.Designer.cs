@@ -94,5 +94,17 @@ namespace GUI.Properties {
                 this["RSASN"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images")]
+        public string ImagesFilepath {
+            get {
+                return ((string)(this["ImagesFilepath"]));
+            }
+            set {
+                this["ImagesFilepath"] = value;
+            }
+        }
     }
 }

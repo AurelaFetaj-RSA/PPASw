@@ -11,17 +11,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using xDialog;
 
 namespace GUI
 {
     public partial class FormApp : Form
     {
-        private void toolStripComboBoxT1_1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-        private void toolStripComboBoxT1_2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
     }
 }
