@@ -32,6 +32,7 @@ using RSACommon.Configuration;
 using RSACommon.ProgramParser;
 using RSAPoints.Points;
 using RSACommon.Points;
+using RSAPoints.ConcretePoints;
 
 namespace GUI
 {
