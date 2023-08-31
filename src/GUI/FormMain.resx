@@ -3820,6 +3820,1548 @@
   <data name="&gt;&gt;tabPage4.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="lbLed1040M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1040M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1040M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 590</value>
+  </data>
+  <data name="lbLed1040M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1040M2.TabIndex" type="System.Int32, mscorlib">
+    <value>258</value>
+  </data>
+  <data name="&gt;&gt;lbLed1040M2.Name" xml:space="preserve">
+    <value>lbLed1040M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1040M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1040M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1040M2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbLed1039M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1039M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1039M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 560</value>
+  </data>
+  <data name="lbLed1039M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1039M2.TabIndex" type="System.Int32, mscorlib">
+    <value>257</value>
+  </data>
+  <data name="&gt;&gt;lbLed1039M2.Name" xml:space="preserve">
+    <value>lbLed1039M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1039M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1039M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1039M2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbLed1020M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1020M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1020M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 590</value>
+  </data>
+  <data name="lbLed1020M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1020M2.TabIndex" type="System.Int32, mscorlib">
+    <value>256</value>
+  </data>
+  <data name="&gt;&gt;lbLed1020M2.Name" xml:space="preserve">
+    <value>lbLed1020M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1020M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1020M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1020M2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbLed1019M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1019M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1019M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 560</value>
+  </data>
+  <data name="lbLed1019M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 24</value>
+  </data>
+  <data name="lbLed1019M2.TabIndex" type="System.Int32, mscorlib">
+    <value>255</value>
+  </data>
+  <data name="&gt;&gt;lbLed1019M2.Name" xml:space="preserve">
+    <value>lbLed1019M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1019M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1019M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1019M2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbLed1046M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1046M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1046M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>650, 170</value>
+  </data>
+  <data name="lbLed1046M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1046M2.TabIndex" type="System.Int32, mscorlib">
+    <value>254</value>
+  </data>
+  <data name="&gt;&gt;lbLed1046M2.Name" xml:space="preserve">
+    <value>lbLed1046M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1046M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1046M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1046M2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lbLed1047M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1047M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1047M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>650, 200</value>
+  </data>
+  <data name="lbLed1047M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1047M2.TabIndex" type="System.Int32, mscorlib">
+    <value>253</value>
+  </data>
+  <data name="&gt;&gt;lbLed1047M2.Name" xml:space="preserve">
+    <value>lbLed1047M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1047M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1047M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1047M2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lbLed1048M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1048M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1048M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>650, 230</value>
+  </data>
+  <data name="lbLed1048M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1048M2.TabIndex" type="System.Int32, mscorlib">
+    <value>252</value>
+  </data>
+  <data name="&gt;&gt;lbLed1048M2.Name" xml:space="preserve">
+    <value>lbLed1048M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1048M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1048M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1048M2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lbLed1045M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1045M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1045M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>650, 140</value>
+  </data>
+  <data name="lbLed1045M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1045M2.TabIndex" type="System.Int32, mscorlib">
+    <value>251</value>
+  </data>
+  <data name="&gt;&gt;lbLed1045M2.Name" xml:space="preserve">
+    <value>lbLed1045M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1045M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1045M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1045M2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lbLed1042M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1042M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1042M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>650, 50</value>
+  </data>
+  <data name="lbLed1042M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1042M2.TabIndex" type="System.Int32, mscorlib">
+    <value>250</value>
+  </data>
+  <data name="&gt;&gt;lbLed1042M2.Name" xml:space="preserve">
+    <value>lbLed1042M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1042M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1042M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1042M2.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lbLed1043M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1043M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1043M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>650, 80</value>
+  </data>
+  <data name="lbLed1043M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1043M2.TabIndex" type="System.Int32, mscorlib">
+    <value>249</value>
+  </data>
+  <data name="&gt;&gt;lbLed1043M2.Name" xml:space="preserve">
+    <value>lbLed1043M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1043M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1043M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1043M2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lbLed1044M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1044M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1044M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>650, 110</value>
+  </data>
+  <data name="lbLed1044M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1044M2.TabIndex" type="System.Int32, mscorlib">
+    <value>248</value>
+  </data>
+  <data name="&gt;&gt;lbLed1044M2.Name" xml:space="preserve">
+    <value>lbLed1044M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1044M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1044M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1044M2.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lbLed1041M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1041M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1041M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>650, 20</value>
+  </data>
+  <data name="lbLed1041M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1041M2.TabIndex" type="System.Int32, mscorlib">
+    <value>247</value>
+  </data>
+  <data name="&gt;&gt;lbLed1041M2.Name" xml:space="preserve">
+    <value>lbLed1041M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1041M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1041M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1041M2.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="lbLed1032M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1032M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1032M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 350</value>
+  </data>
+  <data name="lbLed1032M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1032M2.TabIndex" type="System.Int32, mscorlib">
+    <value>216</value>
+  </data>
+  <data name="&gt;&gt;lbLed1032M2.Name" xml:space="preserve">
+    <value>lbLed1032M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1032M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1032M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1032M2.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lbLed1036M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1036M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1036M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 470</value>
+  </data>
+  <data name="lbLed1036M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1036M2.TabIndex" type="System.Int32, mscorlib">
+    <value>215</value>
+  </data>
+  <data name="&gt;&gt;lbLed1036M2.Name" xml:space="preserve">
+    <value>lbLed1036M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1036M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1036M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1036M2.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="lbLed1037M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1037M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1037M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 500</value>
+  </data>
+  <data name="lbLed1037M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1037M2.TabIndex" type="System.Int32, mscorlib">
+    <value>214</value>
+  </data>
+  <data name="&gt;&gt;lbLed1037M2.Name" xml:space="preserve">
+    <value>lbLed1037M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1037M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1037M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1037M2.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="lbLed1038M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1038M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1038M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 530</value>
+  </data>
+  <data name="lbLed1038M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1038M2.TabIndex" type="System.Int32, mscorlib">
+    <value>213</value>
+  </data>
+  <data name="&gt;&gt;lbLed1038M2.Name" xml:space="preserve">
+    <value>lbLed1038M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1038M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1038M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1038M2.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="lbLed1035M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1035M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1035M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 440</value>
+  </data>
+  <data name="lbLed1035M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1035M2.TabIndex" type="System.Int32, mscorlib">
+    <value>212</value>
+  </data>
+  <data name="&gt;&gt;lbLed1035M2.Name" xml:space="preserve">
+    <value>lbLed1035M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1035M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1035M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1035M2.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="lbLed1034M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1034M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1034M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 410</value>
+  </data>
+  <data name="lbLed1034M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1034M2.TabIndex" type="System.Int32, mscorlib">
+    <value>211</value>
+  </data>
+  <data name="&gt;&gt;lbLed1034M2.Name" xml:space="preserve">
+    <value>lbLed1034M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1034M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1034M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1034M2.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="lbLed1030M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1030M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1030M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 290</value>
+  </data>
+  <data name="lbLed1030M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1030M2.TabIndex" type="System.Int32, mscorlib">
+    <value>210</value>
+  </data>
+  <data name="&gt;&gt;lbLed1030M2.Name" xml:space="preserve">
+    <value>lbLed1030M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1030M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1030M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1030M2.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="lbLed1031M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1031M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1031M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 320</value>
+  </data>
+  <data name="lbLed1031M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1031M2.TabIndex" type="System.Int32, mscorlib">
+    <value>209</value>
+  </data>
+  <data name="&gt;&gt;lbLed1031M2.Name" xml:space="preserve">
+    <value>lbLed1031M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1031M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1031M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1031M2.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="lbLed1033M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1033M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1033M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 380</value>
+  </data>
+  <data name="lbLed1033M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1033M2.TabIndex" type="System.Int32, mscorlib">
+    <value>208</value>
+  </data>
+  <data name="&gt;&gt;lbLed1033M2.Name" xml:space="preserve">
+    <value>lbLed1033M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1033M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1033M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1033M2.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="lbLed1029M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1029M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1029M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 260</value>
+  </data>
+  <data name="lbLed1029M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1029M2.TabIndex" type="System.Int32, mscorlib">
+    <value>207</value>
+  </data>
+  <data name="&gt;&gt;lbLed1029M2.Name" xml:space="preserve">
+    <value>lbLed1029M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1029M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1029M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1029M2.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="lbLed1026M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1026M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1026M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 170</value>
+  </data>
+  <data name="lbLed1026M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1026M2.TabIndex" type="System.Int32, mscorlib">
+    <value>206</value>
+  </data>
+  <data name="&gt;&gt;lbLed1026M2.Name" xml:space="preserve">
+    <value>lbLed1026M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1026M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1026M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1026M2.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="lbLed1027M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1027M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1027M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 200</value>
+  </data>
+  <data name="lbLed1027M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1027M2.TabIndex" type="System.Int32, mscorlib">
+    <value>205</value>
+  </data>
+  <data name="&gt;&gt;lbLed1027M2.Name" xml:space="preserve">
+    <value>lbLed1027M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1027M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1027M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1027M2.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="lbLed1028M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1028M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1028M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 230</value>
+  </data>
+  <data name="lbLed1028M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1028M2.TabIndex" type="System.Int32, mscorlib">
+    <value>204</value>
+  </data>
+  <data name="&gt;&gt;lbLed1028M2.Name" xml:space="preserve">
+    <value>lbLed1028M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1028M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1028M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1028M2.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="lbLed1025M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1025M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1025M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 140</value>
+  </data>
+  <data name="lbLed1025M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1025M2.TabIndex" type="System.Int32, mscorlib">
+    <value>203</value>
+  </data>
+  <data name="&gt;&gt;lbLed1025M2.Name" xml:space="preserve">
+    <value>lbLed1025M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1025M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1025M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1025M2.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="lbLed1022M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1022M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1022M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 50</value>
+  </data>
+  <data name="lbLed1022M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1022M2.TabIndex" type="System.Int32, mscorlib">
+    <value>202</value>
+  </data>
+  <data name="&gt;&gt;lbLed1022M2.Name" xml:space="preserve">
+    <value>lbLed1022M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1022M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1022M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1022M2.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="lbLed1023M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1023M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1023M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 80</value>
+  </data>
+  <data name="lbLed1023M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1023M2.TabIndex" type="System.Int32, mscorlib">
+    <value>201</value>
+  </data>
+  <data name="&gt;&gt;lbLed1023M2.Name" xml:space="preserve">
+    <value>lbLed1023M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1023M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1023M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1023M2.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="lbLed1024M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1024M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1024M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 110</value>
+  </data>
+  <data name="lbLed1024M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1024M2.TabIndex" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="&gt;&gt;lbLed1024M2.Name" xml:space="preserve">
+    <value>lbLed1024M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1024M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1024M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1024M2.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="lbLed1021M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1021M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1021M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>340, 20</value>
+  </data>
+  <data name="lbLed1021M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1021M2.TabIndex" type="System.Int32, mscorlib">
+    <value>199</value>
+  </data>
+  <data name="&gt;&gt;lbLed1021M2.Name" xml:space="preserve">
+    <value>lbLed1021M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1021M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1021M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1021M2.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="lbLed1012M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1012M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1012M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 350</value>
+  </data>
+  <data name="lbLed1012M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1012M2.TabIndex" type="System.Int32, mscorlib">
+    <value>196</value>
+  </data>
+  <data name="&gt;&gt;lbLed1012M2.Name" xml:space="preserve">
+    <value>lbLed1012M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1012M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1012M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1012M2.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="lbLed1016M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1016M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1016M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 470</value>
+  </data>
+  <data name="lbLed1016M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1016M2.TabIndex" type="System.Int32, mscorlib">
+    <value>195</value>
+  </data>
+  <data name="&gt;&gt;lbLed1016M2.Name" xml:space="preserve">
+    <value>lbLed1016M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1016M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1016M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1016M2.ZOrder" xml:space="preserve">
+    <value>31</value>
+  </data>
+  <data name="lbLed1017M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1017M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1017M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 500</value>
+  </data>
+  <data name="lbLed1017M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1017M2.TabIndex" type="System.Int32, mscorlib">
+    <value>194</value>
+  </data>
+  <data name="&gt;&gt;lbLed1017M2.Name" xml:space="preserve">
+    <value>lbLed1017M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1017M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1017M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1017M2.ZOrder" xml:space="preserve">
+    <value>32</value>
+  </data>
+  <data name="lbLed1018M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1018M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1018M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 530</value>
+  </data>
+  <data name="lbLed1018M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1018M2.TabIndex" type="System.Int32, mscorlib">
+    <value>193</value>
+  </data>
+  <data name="&gt;&gt;lbLed1018M2.Name" xml:space="preserve">
+    <value>lbLed1018M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1018M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1018M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1018M2.ZOrder" xml:space="preserve">
+    <value>33</value>
+  </data>
+  <data name="lbLed1015M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1015M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1015M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 440</value>
+  </data>
+  <data name="lbLed1015M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1015M2.TabIndex" type="System.Int32, mscorlib">
+    <value>192</value>
+  </data>
+  <data name="&gt;&gt;lbLed1015M2.Name" xml:space="preserve">
+    <value>lbLed1015M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1015M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1015M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1015M2.ZOrder" xml:space="preserve">
+    <value>34</value>
+  </data>
+  <data name="lbLed1014M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1014M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1014M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 410</value>
+  </data>
+  <data name="lbLed1014M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1014M2.TabIndex" type="System.Int32, mscorlib">
+    <value>191</value>
+  </data>
+  <data name="&gt;&gt;lbLed1014M2.Name" xml:space="preserve">
+    <value>lbLed1014M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1014M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1014M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1014M2.ZOrder" xml:space="preserve">
+    <value>35</value>
+  </data>
+  <data name="lbLed1010M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1010M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1010M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 290</value>
+  </data>
+  <data name="lbLed1010M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1010M2.TabIndex" type="System.Int32, mscorlib">
+    <value>190</value>
+  </data>
+  <data name="&gt;&gt;lbLed1010M2.Name" xml:space="preserve">
+    <value>lbLed1010M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1010M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1010M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1010M2.ZOrder" xml:space="preserve">
+    <value>36</value>
+  </data>
+  <data name="lbLed1011M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1011M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1011M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 320</value>
+  </data>
+  <data name="lbLed1011M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1011M2.TabIndex" type="System.Int32, mscorlib">
+    <value>189</value>
+  </data>
+  <data name="&gt;&gt;lbLed1011M2.Name" xml:space="preserve">
+    <value>lbLed1011M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1011M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1011M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1011M2.ZOrder" xml:space="preserve">
+    <value>37</value>
+  </data>
+  <data name="lbLed1013M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1013M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1013M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 380</value>
+  </data>
+  <data name="lbLed1013M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1013M2.TabIndex" type="System.Int32, mscorlib">
+    <value>188</value>
+  </data>
+  <data name="&gt;&gt;lbLed1013M2.Name" xml:space="preserve">
+    <value>lbLed1013M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1013M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1013M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1013M2.ZOrder" xml:space="preserve">
+    <value>38</value>
+  </data>
+  <data name="lbLed1009M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1009M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1009M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 260</value>
+  </data>
+  <data name="lbLed1009M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1009M2.TabIndex" type="System.Int32, mscorlib">
+    <value>187</value>
+  </data>
+  <data name="&gt;&gt;lbLed1009M2.Name" xml:space="preserve">
+    <value>lbLed1009M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1009M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1009M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1009M2.ZOrder" xml:space="preserve">
+    <value>39</value>
+  </data>
+  <data name="lbLed1006M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1006M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1006M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 170</value>
+  </data>
+  <data name="lbLed1006M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1006M2.TabIndex" type="System.Int32, mscorlib">
+    <value>186</value>
+  </data>
+  <data name="&gt;&gt;lbLed1006M2.Name" xml:space="preserve">
+    <value>lbLed1006M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1006M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1006M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1006M2.ZOrder" xml:space="preserve">
+    <value>40</value>
+  </data>
+  <data name="lbLed1007M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1007M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1007M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 200</value>
+  </data>
+  <data name="lbLed1007M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1007M2.TabIndex" type="System.Int32, mscorlib">
+    <value>185</value>
+  </data>
+  <data name="&gt;&gt;lbLed1007M2.Name" xml:space="preserve">
+    <value>lbLed1007M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1007M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1007M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1007M2.ZOrder" xml:space="preserve">
+    <value>41</value>
+  </data>
+  <data name="lbLed1008M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1008M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1008M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 230</value>
+  </data>
+  <data name="lbLed1008M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1008M2.TabIndex" type="System.Int32, mscorlib">
+    <value>184</value>
+  </data>
+  <data name="&gt;&gt;lbLed1008M2.Name" xml:space="preserve">
+    <value>lbLed1008M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1008M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1008M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1008M2.ZOrder" xml:space="preserve">
+    <value>42</value>
+  </data>
+  <data name="lbLed1005M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1005M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1005M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 140</value>
+  </data>
+  <data name="lbLed1005M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1005M2.TabIndex" type="System.Int32, mscorlib">
+    <value>183</value>
+  </data>
+  <data name="&gt;&gt;lbLed1005M2.Name" xml:space="preserve">
+    <value>lbLed1005M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1005M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1005M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1005M2.ZOrder" xml:space="preserve">
+    <value>43</value>
+  </data>
+  <data name="lbLed1002M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1002M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1002M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 50</value>
+  </data>
+  <data name="lbLed1002M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1002M2.TabIndex" type="System.Int32, mscorlib">
+    <value>182</value>
+  </data>
+  <data name="&gt;&gt;lbLed1002M2.Name" xml:space="preserve">
+    <value>lbLed1002M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1002M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1002M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1002M2.ZOrder" xml:space="preserve">
+    <value>44</value>
+  </data>
+  <data name="lbLed1003M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1003M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1003M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 80</value>
+  </data>
+  <data name="lbLed1003M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1003M2.TabIndex" type="System.Int32, mscorlib">
+    <value>181</value>
+  </data>
+  <data name="&gt;&gt;lbLed1003M2.Name" xml:space="preserve">
+    <value>lbLed1003M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1003M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1003M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1003M2.ZOrder" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="lbLed1004M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1004M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1004M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 110</value>
+  </data>
+  <data name="lbLed1004M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1004M2.TabIndex" type="System.Int32, mscorlib">
+    <value>180</value>
+  </data>
+  <data name="&gt;&gt;lbLed1004M2.Name" xml:space="preserve">
+    <value>lbLed1004M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1004M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1004M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1004M2.ZOrder" xml:space="preserve">
+    <value>46</value>
+  </data>
+  <data name="lbLed1001M2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="lbLed1001M2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 8.25pt</value>
+  </data>
+  <data name="lbLed1001M2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>20, 20</value>
+  </data>
+  <data name="lbLed1001M2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 24</value>
+  </data>
+  <data name="lbLed1001M2.TabIndex" type="System.Int32, mscorlib">
+    <value>179</value>
+  </data>
+  <data name="&gt;&gt;lbLed1001M2.Name" xml:space="preserve">
+    <value>lbLed1001M2</value>
+  </data>
+  <data name="&gt;&gt;lbLed1001M2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbLed1001M2.Parent" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;lbLed1001M2.ZOrder" xml:space="preserve">
+    <value>47</value>
+  </data>
+  <data name="tabPageT2M2_3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 3</value>
+  </data>
+  <data name="tabPageT2M2_3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>900, 634</value>
+  </data>
+  <data name="tabPageT2M2_3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPageT2M2_3.Text" xml:space="preserve">
+    <value>input</value>
+  </data>
+  <data name="tabPageT2M2_3.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQAxc9UIAAAAA
+        /brLQQs=
+</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_3.Name" xml:space="preserve">
+    <value>tabPageT2M2_3</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_3.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_3.Parent" xml:space="preserve">
+    <value>tabControlT2</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="comboBoxM2TestProgramList.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt</value>
+  </data>
+  <data name="comboBoxM2TestProgramList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 25</value>
+  </data>
+  <data name="comboBoxM2TestProgramList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 26</value>
+  </data>
+  <data name="comboBoxM2TestProgramList.TabIndex" type="System.Int32, mscorlib">
+    <value>113</value>
+  </data>
+  <data name="&gt;&gt;comboBoxM2TestProgramList.Name" xml:space="preserve">
+    <value>comboBoxM2TestProgramList</value>
+  </data>
+  <data name="&gt;&gt;comboBoxM2TestProgramList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboBoxM2TestProgramList.Parent" xml:space="preserve">
+    <value>tabPageT2M2_2</value>
+  </data>
+  <data name="&gt;&gt;comboBoxM2TestProgramList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonM2TestSaveProgram.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt</value>
+  </data>
+  <data name="buttonM2TestSaveProgram.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAASlJREFUWEftkl0KwkAMhH0Qr6B4FL2A4rlE9HyiPvvz4iXqDBhY0zTbbVP0wQ8G
+        u9nJbLp29OeXqYJVjBXSR8W0aYzymHRuVAw6QJTHJCq8jcekc6Ni0AGiPCZR4W08Jp0bFYMOEOUxiQpv
+        4zHxGsfQHhIPn1mz8HJcvMYDJPsi1ixkvxiv8QlxbwEt38+sWXg5Ll7jA+IeD5cB7pAwg06QZHhqxDPs
+        oDSE2kKEh58hvd+kRjzDBOIQvAm+OQ9nLT2cv1w30WsAiyl0hNhzgeYQkRydp9c1sgaF/Of6zSVH5+l1
+        jaxBIX7v2lOy+VmDItwfEbiB+JHeoDULCdn8rEFh+Xmw1K8sJFj+D8RQqpSvD8Br5xA8fMVCguXvRWng
+        YAOUKgwrPKNR9QLUlRthLlvAOgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="buttonM2TestSaveProgram.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="buttonM2TestSaveProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2TestSaveProgram.Location" type="System.Drawing.Point, System.Drawing">
+    <value>370, 25</value>
+  </data>
+  <data name="buttonM2TestSaveProgram.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM2TestSaveProgram.TabIndex" type="System.Int32, mscorlib">
+    <value>111</value>
+  </data>
+  <data name="buttonM2TestSaveProgram.Text" xml:space="preserve">
+    <value>save program</value>
+  </data>
+  <data name="buttonM2TestSaveProgram.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TestSaveProgram.Name" xml:space="preserve">
+    <value>buttonM2TestSaveProgram</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TestSaveProgram.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TestSaveProgram.Parent" xml:space="preserve">
+    <value>tabPageT2M2_2</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TestSaveProgram.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonM2TestLoadProgram.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 12pt</value>
+  </data>
+  <data name="buttonM2TestLoadProgram.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        DAAACwwBP0AiyAAAAVJJREFUWEftkr8uRFEQh08QElsLjUaIRK2ioREPoFF6AOENVCI8wjbUeu+g1Kkk
+        ChoPoBF/fr85ZwqbubN7cs5Jtrhf8mVn5pyZO3t3Q88081vZbKwhJWajjU+ShTCABzF02YYLMZTe4gV0
+        2B38gkeS2RzCTziULPYWL6CcwUe4IpnNGnyGF5JFqi1AZtLnHlyNocB4P4ZhMX0qVRcgJ/AbPkgWYfwD
+        jyX7T/UFluELPIV8I5Qxa0twlOoLEP0pZpNEa6M0WYDwT/maPGehg2YL3EK9c89CB+PmdDKucR1uwg24
+        xUIHzRaYlKYL1LpjUmv4JHdMvMY5eA31DmPWLLw5Ll7jDdRzlTULPc/Ga/yAPNuBuylmzcKb4+I1vkOe
+        8eG6wBu08Oa4eI1XUM/VS2ih59l4jfOQS/BN8Jvz4axZNFkgh36B4gVqmY01pMSeaSSEP4L42ubU3goW
+        AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="buttonM2TestLoadProgram.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="buttonM2TestLoadProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM2TestLoadProgram.Location" type="System.Drawing.Point, System.Drawing">
+    <value>200, 25</value>
+  </data>
+  <data name="buttonM2TestLoadProgram.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 53</value>
+  </data>
+  <data name="buttonM2TestLoadProgram.TabIndex" type="System.Int32, mscorlib">
+    <value>110</value>
+  </data>
+  <data name="buttonM2TestLoadProgram.Text" xml:space="preserve">
+    <value>load program</value>
+  </data>
+  <data name="buttonM2TestLoadProgram.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TestLoadProgram.Name" xml:space="preserve">
+    <value>buttonM2TestLoadProgram</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TestLoadProgram.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TestLoadProgram.Parent" xml:space="preserve">
+    <value>tabPageT2M2_2</value>
+  </data>
+  <data name="&gt;&gt;buttonM2TestLoadProgram.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
+    <value>point id</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
+    <value>quote (mm)</value>
+  </data>
+  <metadata name="dataGridViewTextBoxColumn6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
+    <value>speed (%)</value>
+  </data>
+  <data name="dataGridViewM2TestPoints.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 100</value>
+  </data>
+  <data name="dataGridViewM2TestPoints.Size" type="System.Drawing.Size, System.Drawing">
+    <value>521, 298</value>
+  </data>
+  <data name="dataGridViewM2TestPoints.TabIndex" type="System.Int32, mscorlib">
+    <value>99</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewM2TestPoints.Name" xml:space="preserve">
+    <value>dataGridViewM2TestPoints</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewM2TestPoints.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewM2TestPoints.Parent" xml:space="preserve">
+    <value>tabPageT2M2_2</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewM2TestPoints.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lbButtonM2StartTest.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM2StartTest.Location" type="System.Drawing.Point, System.Drawing">
+    <value>560, 100</value>
+  </data>
+  <data name="lbButtonM2StartTest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>200, 73</value>
+  </data>
+  <data name="lbButtonM2StartTest.TabIndex" type="System.Int32, mscorlib">
+    <value>98</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartTest.Name" xml:space="preserve">
+    <value>lbButtonM2StartTest</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartTest.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartTest.Parent" xml:space="preserve">
+    <value>tabPageT2M2_2</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM2StartTest.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="tabPageT2M2_2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 3</value>
+  </data>
+  <data name="tabPageT2M2_2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>900, 634</value>
+  </data>
+  <data name="tabPageT2M2_2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tabPageT2M2_2.Text" xml:space="preserve">
+    <value>test</value>
+  </data>
+  <data name="tabPageT2M2_2.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQAxckUIAAAAA
+        /brLQQs=
+</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_2.Name" xml:space="preserve">
+    <value>tabPageT2M2_2</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_2.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_2.Parent" xml:space="preserve">
+    <value>tabControlT2</value>
+  </data>
+  <data name="&gt;&gt;tabPageT2M2_2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="comboBoxM2TeachModelName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Verdana, 12pt</value>
   </data>
@@ -5036,221 +6578,7 @@
     <value>tabControlT2</value>
   </data>
   <data name="&gt;&gt;tabPageT2M2_1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="comboBoxM2TestProgramList.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 12pt</value>
-  </data>
-  <data name="comboBoxM2TestProgramList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 25</value>
-  </data>
-  <data name="comboBoxM2TestProgramList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 26</value>
-  </data>
-  <data name="comboBoxM2TestProgramList.TabIndex" type="System.Int32, mscorlib">
-    <value>113</value>
-  </data>
-  <data name="&gt;&gt;comboBoxM2TestProgramList.Name" xml:space="preserve">
-    <value>comboBoxM2TestProgramList</value>
-  </data>
-  <data name="&gt;&gt;comboBoxM2TestProgramList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboBoxM2TestProgramList.Parent" xml:space="preserve">
-    <value>tabPageT2M2_2</value>
-  </data>
-  <data name="&gt;&gt;comboBoxM2TestProgramList.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="buttonM2TestSaveProgram.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 12pt</value>
-  </data>
-  <data name="buttonM2TestSaveProgram.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAASlJREFUWEftkl0KwkAMhH0Qr6B4FL2A4rlE9HyiPvvz4iXqDBhY0zTbbVP0wQ8G
-        u9nJbLp29OeXqYJVjBXSR8W0aYzymHRuVAw6QJTHJCq8jcekc6Ni0AGiPCZR4W08Jp0bFYMOEOUxiQpv
-        4zHxGsfQHhIPn1mz8HJcvMYDJPsi1ixkvxiv8QlxbwEt38+sWXg5Ll7jA+IeD5cB7pAwg06QZHhqxDPs
-        oDSE2kKEh58hvd+kRjzDBOIQvAm+OQ9nLT2cv1w30WsAiyl0hNhzgeYQkRydp9c1sgaF/Of6zSVH5+l1
-        jaxBIX7v2lOy+VmDItwfEbiB+JHeoDULCdn8rEFh+Xmw1K8sJFj+D8RQqpSvD8Br5xA8fMVCguXvRWng
-        YAOUKgwrPKNR9QLUlRthLlvAOgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="buttonM2TestSaveProgram.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="buttonM2TestSaveProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2TestSaveProgram.Location" type="System.Drawing.Point, System.Drawing">
-    <value>370, 25</value>
-  </data>
-  <data name="buttonM2TestSaveProgram.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="buttonM2TestSaveProgram.TabIndex" type="System.Int32, mscorlib">
-    <value>111</value>
-  </data>
-  <data name="buttonM2TestSaveProgram.Text" xml:space="preserve">
-    <value>save program</value>
-  </data>
-  <data name="buttonM2TestSaveProgram.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TestSaveProgram.Name" xml:space="preserve">
-    <value>buttonM2TestSaveProgram</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TestSaveProgram.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TestSaveProgram.Parent" xml:space="preserve">
-    <value>tabPageT2M2_2</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TestSaveProgram.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="buttonM2TestLoadProgram.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 12pt</value>
-  </data>
-  <data name="buttonM2TestLoadProgram.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAVJJREFUWEftkr8uRFEQh08QElsLjUaIRK2ioREPoFF6AOENVCI8wjbUeu+g1Kkk
-        ChoPoBF/fr85ZwqbubN7cs5Jtrhf8mVn5pyZO3t3Q88081vZbKwhJWajjU+ShTCABzF02YYLMZTe4gV0
-        2B38gkeS2RzCTziULPYWL6CcwUe4IpnNGnyGF5JFqi1AZtLnHlyNocB4P4ZhMX0qVRcgJ/AbPkgWYfwD
-        jyX7T/UFluELPIV8I5Qxa0twlOoLEP0pZpNEa6M0WYDwT/maPGehg2YL3EK9c89CB+PmdDKucR1uwg24
-        xUIHzRaYlKYL1LpjUmv4JHdMvMY5eA31DmPWLLw5Ll7jDdRzlTULPc/Ga/yAPNuBuylmzcKb4+I1vkOe
-        8eG6wBu08Oa4eI1XUM/VS2ih59l4jfOQS/BN8Jvz4axZNFkgh36B4gVqmY01pMSeaSSEP4L42ubU3goW
-        AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="buttonM2TestLoadProgram.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="buttonM2TestLoadProgram.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM2TestLoadProgram.Location" type="System.Drawing.Point, System.Drawing">
-    <value>200, 25</value>
-  </data>
-  <data name="buttonM2TestLoadProgram.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 53</value>
-  </data>
-  <data name="buttonM2TestLoadProgram.TabIndex" type="System.Int32, mscorlib">
-    <value>110</value>
-  </data>
-  <data name="buttonM2TestLoadProgram.Text" xml:space="preserve">
-    <value>load program</value>
-  </data>
-  <data name="buttonM2TestLoadProgram.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TestLoadProgram.Name" xml:space="preserve">
-    <value>buttonM2TestLoadProgram</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TestLoadProgram.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TestLoadProgram.Parent" xml:space="preserve">
-    <value>tabPageT2M2_2</value>
-  </data>
-  <data name="&gt;&gt;buttonM2TestLoadProgram.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn4.HeaderText" xml:space="preserve">
-    <value>point id</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn5.HeaderText" xml:space="preserve">
-    <value>quote (mm)</value>
-  </data>
-  <metadata name="dataGridViewTextBoxColumn6.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="dataGridViewTextBoxColumn6.HeaderText" xml:space="preserve">
-    <value>speed (%)</value>
-  </data>
-  <data name="dataGridViewM2TestPoints.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 100</value>
-  </data>
-  <data name="dataGridViewM2TestPoints.Size" type="System.Drawing.Size, System.Drawing">
-    <value>521, 298</value>
-  </data>
-  <data name="dataGridViewM2TestPoints.TabIndex" type="System.Int32, mscorlib">
-    <value>99</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewM2TestPoints.Name" xml:space="preserve">
-    <value>dataGridViewM2TestPoints</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewM2TestPoints.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewM2TestPoints.Parent" xml:space="preserve">
-    <value>tabPageT2M2_2</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewM2TestPoints.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lbButtonM2StartTest.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 39.75pt, style=Bold</value>
-  </data>
-  <data name="lbButtonM2StartTest.Location" type="System.Drawing.Point, System.Drawing">
-    <value>560, 100</value>
-  </data>
-  <data name="lbButtonM2StartTest.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 73</value>
-  </data>
-  <data name="lbButtonM2StartTest.TabIndex" type="System.Int32, mscorlib">
-    <value>98</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2StartTest.Name" xml:space="preserve">
-    <value>lbButtonM2StartTest</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2StartTest.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2StartTest.Parent" xml:space="preserve">
-    <value>tabPageT2M2_2</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM2StartTest.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="tabPageT2M2_2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 3</value>
-  </data>
-  <data name="tabPageT2M2_2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>900, 634</value>
-  </data>
-  <data name="tabPageT2M2_2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tabPageT2M2_2.Text" xml:space="preserve">
-    <value>test</value>
-  </data>
-  <data name="tabPageT2M2_2.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
-        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQAxckUIAAAAA
-        /brLQQs=
-</value>
-  </data>
-  <data name="&gt;&gt;tabPageT2M2_2.Name" xml:space="preserve">
-    <value>tabPageT2M2_2</value>
-  </data>
-  <data name="&gt;&gt;tabPageT2M2_2.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
-  </data>
-  <data name="&gt;&gt;tabPageT2M2_2.Parent" xml:space="preserve">
-    <value>tabControlT2</value>
-  </data>
-  <data name="&gt;&gt;tabPageT2M2_2.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="lbLed2040M2.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -6578,1334 +7906,6 @@
     <value>tabControlT2</value>
   </data>
   <data name="&gt;&gt;tabPageT2M2_4.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbLed1040M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1040M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1040M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 590</value>
-  </data>
-  <data name="lbLed1040M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1040M2.TabIndex" type="System.Int32, mscorlib">
-    <value>258</value>
-  </data>
-  <data name="&gt;&gt;lbLed1040M2.Name" xml:space="preserve">
-    <value>lbLed1040M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1040M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1040M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1040M2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lbLed1039M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1039M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1039M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 560</value>
-  </data>
-  <data name="lbLed1039M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1039M2.TabIndex" type="System.Int32, mscorlib">
-    <value>257</value>
-  </data>
-  <data name="&gt;&gt;lbLed1039M2.Name" xml:space="preserve">
-    <value>lbLed1039M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1039M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1039M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1039M2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lbLed1020M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1020M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1020M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 590</value>
-  </data>
-  <data name="lbLed1020M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1020M2.TabIndex" type="System.Int32, mscorlib">
-    <value>256</value>
-  </data>
-  <data name="&gt;&gt;lbLed1020M2.Name" xml:space="preserve">
-    <value>lbLed1020M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1020M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1020M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1020M2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbLed1019M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1019M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1019M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 560</value>
-  </data>
-  <data name="lbLed1019M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>275, 24</value>
-  </data>
-  <data name="lbLed1019M2.TabIndex" type="System.Int32, mscorlib">
-    <value>255</value>
-  </data>
-  <data name="&gt;&gt;lbLed1019M2.Name" xml:space="preserve">
-    <value>lbLed1019M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1019M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1019M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1019M2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lbLed1046M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1046M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1046M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>650, 170</value>
-  </data>
-  <data name="lbLed1046M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1046M2.TabIndex" type="System.Int32, mscorlib">
-    <value>254</value>
-  </data>
-  <data name="&gt;&gt;lbLed1046M2.Name" xml:space="preserve">
-    <value>lbLed1046M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1046M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1046M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1046M2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lbLed1047M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1047M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1047M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>650, 200</value>
-  </data>
-  <data name="lbLed1047M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1047M2.TabIndex" type="System.Int32, mscorlib">
-    <value>253</value>
-  </data>
-  <data name="&gt;&gt;lbLed1047M2.Name" xml:space="preserve">
-    <value>lbLed1047M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1047M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1047M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1047M2.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lbLed1048M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1048M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1048M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>650, 230</value>
-  </data>
-  <data name="lbLed1048M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1048M2.TabIndex" type="System.Int32, mscorlib">
-    <value>252</value>
-  </data>
-  <data name="&gt;&gt;lbLed1048M2.Name" xml:space="preserve">
-    <value>lbLed1048M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1048M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1048M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1048M2.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="lbLed1045M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1045M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1045M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>650, 140</value>
-  </data>
-  <data name="lbLed1045M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1045M2.TabIndex" type="System.Int32, mscorlib">
-    <value>251</value>
-  </data>
-  <data name="&gt;&gt;lbLed1045M2.Name" xml:space="preserve">
-    <value>lbLed1045M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1045M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1045M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1045M2.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="lbLed1042M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1042M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1042M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>650, 50</value>
-  </data>
-  <data name="lbLed1042M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1042M2.TabIndex" type="System.Int32, mscorlib">
-    <value>250</value>
-  </data>
-  <data name="&gt;&gt;lbLed1042M2.Name" xml:space="preserve">
-    <value>lbLed1042M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1042M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1042M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1042M2.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="lbLed1043M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1043M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1043M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>650, 80</value>
-  </data>
-  <data name="lbLed1043M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1043M2.TabIndex" type="System.Int32, mscorlib">
-    <value>249</value>
-  </data>
-  <data name="&gt;&gt;lbLed1043M2.Name" xml:space="preserve">
-    <value>lbLed1043M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1043M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1043M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1043M2.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="lbLed1044M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1044M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1044M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>650, 110</value>
-  </data>
-  <data name="lbLed1044M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1044M2.TabIndex" type="System.Int32, mscorlib">
-    <value>248</value>
-  </data>
-  <data name="&gt;&gt;lbLed1044M2.Name" xml:space="preserve">
-    <value>lbLed1044M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1044M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1044M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1044M2.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="lbLed1041M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1041M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1041M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>650, 20</value>
-  </data>
-  <data name="lbLed1041M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1041M2.TabIndex" type="System.Int32, mscorlib">
-    <value>247</value>
-  </data>
-  <data name="&gt;&gt;lbLed1041M2.Name" xml:space="preserve">
-    <value>lbLed1041M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1041M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1041M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1041M2.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="lbLed1032M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1032M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1032M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 350</value>
-  </data>
-  <data name="lbLed1032M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1032M2.TabIndex" type="System.Int32, mscorlib">
-    <value>216</value>
-  </data>
-  <data name="&gt;&gt;lbLed1032M2.Name" xml:space="preserve">
-    <value>lbLed1032M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1032M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1032M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1032M2.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="lbLed1036M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1036M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1036M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 470</value>
-  </data>
-  <data name="lbLed1036M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1036M2.TabIndex" type="System.Int32, mscorlib">
-    <value>215</value>
-  </data>
-  <data name="&gt;&gt;lbLed1036M2.Name" xml:space="preserve">
-    <value>lbLed1036M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1036M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1036M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1036M2.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="lbLed1037M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1037M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1037M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 500</value>
-  </data>
-  <data name="lbLed1037M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1037M2.TabIndex" type="System.Int32, mscorlib">
-    <value>214</value>
-  </data>
-  <data name="&gt;&gt;lbLed1037M2.Name" xml:space="preserve">
-    <value>lbLed1037M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1037M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1037M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1037M2.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="lbLed1038M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1038M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1038M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 530</value>
-  </data>
-  <data name="lbLed1038M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1038M2.TabIndex" type="System.Int32, mscorlib">
-    <value>213</value>
-  </data>
-  <data name="&gt;&gt;lbLed1038M2.Name" xml:space="preserve">
-    <value>lbLed1038M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1038M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1038M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1038M2.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="lbLed1035M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1035M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1035M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 440</value>
-  </data>
-  <data name="lbLed1035M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1035M2.TabIndex" type="System.Int32, mscorlib">
-    <value>212</value>
-  </data>
-  <data name="&gt;&gt;lbLed1035M2.Name" xml:space="preserve">
-    <value>lbLed1035M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1035M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1035M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1035M2.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="lbLed1034M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1034M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1034M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 410</value>
-  </data>
-  <data name="lbLed1034M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1034M2.TabIndex" type="System.Int32, mscorlib">
-    <value>211</value>
-  </data>
-  <data name="&gt;&gt;lbLed1034M2.Name" xml:space="preserve">
-    <value>lbLed1034M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1034M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1034M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1034M2.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="lbLed1030M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1030M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1030M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 290</value>
-  </data>
-  <data name="lbLed1030M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1030M2.TabIndex" type="System.Int32, mscorlib">
-    <value>210</value>
-  </data>
-  <data name="&gt;&gt;lbLed1030M2.Name" xml:space="preserve">
-    <value>lbLed1030M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1030M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1030M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1030M2.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="lbLed1031M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1031M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1031M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 320</value>
-  </data>
-  <data name="lbLed1031M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1031M2.TabIndex" type="System.Int32, mscorlib">
-    <value>209</value>
-  </data>
-  <data name="&gt;&gt;lbLed1031M2.Name" xml:space="preserve">
-    <value>lbLed1031M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1031M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1031M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1031M2.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="lbLed1033M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1033M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1033M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 380</value>
-  </data>
-  <data name="lbLed1033M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1033M2.TabIndex" type="System.Int32, mscorlib">
-    <value>208</value>
-  </data>
-  <data name="&gt;&gt;lbLed1033M2.Name" xml:space="preserve">
-    <value>lbLed1033M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1033M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1033M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1033M2.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="lbLed1029M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1029M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1029M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 260</value>
-  </data>
-  <data name="lbLed1029M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1029M2.TabIndex" type="System.Int32, mscorlib">
-    <value>207</value>
-  </data>
-  <data name="&gt;&gt;lbLed1029M2.Name" xml:space="preserve">
-    <value>lbLed1029M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1029M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1029M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1029M2.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="lbLed1026M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1026M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1026M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 170</value>
-  </data>
-  <data name="lbLed1026M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1026M2.TabIndex" type="System.Int32, mscorlib">
-    <value>206</value>
-  </data>
-  <data name="&gt;&gt;lbLed1026M2.Name" xml:space="preserve">
-    <value>lbLed1026M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1026M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1026M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1026M2.ZOrder" xml:space="preserve">
-    <value>22</value>
-  </data>
-  <data name="lbLed1027M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1027M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1027M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 200</value>
-  </data>
-  <data name="lbLed1027M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1027M2.TabIndex" type="System.Int32, mscorlib">
-    <value>205</value>
-  </data>
-  <data name="&gt;&gt;lbLed1027M2.Name" xml:space="preserve">
-    <value>lbLed1027M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1027M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1027M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1027M2.ZOrder" xml:space="preserve">
-    <value>23</value>
-  </data>
-  <data name="lbLed1028M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1028M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1028M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 230</value>
-  </data>
-  <data name="lbLed1028M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1028M2.TabIndex" type="System.Int32, mscorlib">
-    <value>204</value>
-  </data>
-  <data name="&gt;&gt;lbLed1028M2.Name" xml:space="preserve">
-    <value>lbLed1028M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1028M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1028M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1028M2.ZOrder" xml:space="preserve">
-    <value>24</value>
-  </data>
-  <data name="lbLed1025M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1025M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1025M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 140</value>
-  </data>
-  <data name="lbLed1025M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1025M2.TabIndex" type="System.Int32, mscorlib">
-    <value>203</value>
-  </data>
-  <data name="&gt;&gt;lbLed1025M2.Name" xml:space="preserve">
-    <value>lbLed1025M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1025M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1025M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1025M2.ZOrder" xml:space="preserve">
-    <value>25</value>
-  </data>
-  <data name="lbLed1022M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1022M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1022M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 50</value>
-  </data>
-  <data name="lbLed1022M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1022M2.TabIndex" type="System.Int32, mscorlib">
-    <value>202</value>
-  </data>
-  <data name="&gt;&gt;lbLed1022M2.Name" xml:space="preserve">
-    <value>lbLed1022M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1022M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1022M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1022M2.ZOrder" xml:space="preserve">
-    <value>26</value>
-  </data>
-  <data name="lbLed1023M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1023M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1023M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 80</value>
-  </data>
-  <data name="lbLed1023M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1023M2.TabIndex" type="System.Int32, mscorlib">
-    <value>201</value>
-  </data>
-  <data name="&gt;&gt;lbLed1023M2.Name" xml:space="preserve">
-    <value>lbLed1023M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1023M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1023M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1023M2.ZOrder" xml:space="preserve">
-    <value>27</value>
-  </data>
-  <data name="lbLed1024M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1024M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1024M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 110</value>
-  </data>
-  <data name="lbLed1024M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1024M2.TabIndex" type="System.Int32, mscorlib">
-    <value>200</value>
-  </data>
-  <data name="&gt;&gt;lbLed1024M2.Name" xml:space="preserve">
-    <value>lbLed1024M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1024M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1024M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1024M2.ZOrder" xml:space="preserve">
-    <value>28</value>
-  </data>
-  <data name="lbLed1021M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1021M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1021M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>340, 20</value>
-  </data>
-  <data name="lbLed1021M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1021M2.TabIndex" type="System.Int32, mscorlib">
-    <value>199</value>
-  </data>
-  <data name="&gt;&gt;lbLed1021M2.Name" xml:space="preserve">
-    <value>lbLed1021M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1021M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1021M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1021M2.ZOrder" xml:space="preserve">
-    <value>29</value>
-  </data>
-  <data name="lbLed1012M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1012M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1012M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 350</value>
-  </data>
-  <data name="lbLed1012M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1012M2.TabIndex" type="System.Int32, mscorlib">
-    <value>196</value>
-  </data>
-  <data name="&gt;&gt;lbLed1012M2.Name" xml:space="preserve">
-    <value>lbLed1012M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1012M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1012M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1012M2.ZOrder" xml:space="preserve">
-    <value>30</value>
-  </data>
-  <data name="lbLed1016M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1016M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1016M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 470</value>
-  </data>
-  <data name="lbLed1016M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1016M2.TabIndex" type="System.Int32, mscorlib">
-    <value>195</value>
-  </data>
-  <data name="&gt;&gt;lbLed1016M2.Name" xml:space="preserve">
-    <value>lbLed1016M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1016M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1016M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1016M2.ZOrder" xml:space="preserve">
-    <value>31</value>
-  </data>
-  <data name="lbLed1017M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1017M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1017M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 500</value>
-  </data>
-  <data name="lbLed1017M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1017M2.TabIndex" type="System.Int32, mscorlib">
-    <value>194</value>
-  </data>
-  <data name="&gt;&gt;lbLed1017M2.Name" xml:space="preserve">
-    <value>lbLed1017M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1017M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1017M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1017M2.ZOrder" xml:space="preserve">
-    <value>32</value>
-  </data>
-  <data name="lbLed1018M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1018M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1018M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 530</value>
-  </data>
-  <data name="lbLed1018M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1018M2.TabIndex" type="System.Int32, mscorlib">
-    <value>193</value>
-  </data>
-  <data name="&gt;&gt;lbLed1018M2.Name" xml:space="preserve">
-    <value>lbLed1018M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1018M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1018M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1018M2.ZOrder" xml:space="preserve">
-    <value>33</value>
-  </data>
-  <data name="lbLed1015M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1015M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1015M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 440</value>
-  </data>
-  <data name="lbLed1015M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1015M2.TabIndex" type="System.Int32, mscorlib">
-    <value>192</value>
-  </data>
-  <data name="&gt;&gt;lbLed1015M2.Name" xml:space="preserve">
-    <value>lbLed1015M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1015M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1015M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1015M2.ZOrder" xml:space="preserve">
-    <value>34</value>
-  </data>
-  <data name="lbLed1014M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1014M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1014M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 410</value>
-  </data>
-  <data name="lbLed1014M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1014M2.TabIndex" type="System.Int32, mscorlib">
-    <value>191</value>
-  </data>
-  <data name="&gt;&gt;lbLed1014M2.Name" xml:space="preserve">
-    <value>lbLed1014M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1014M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1014M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1014M2.ZOrder" xml:space="preserve">
-    <value>35</value>
-  </data>
-  <data name="lbLed1010M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1010M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1010M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 290</value>
-  </data>
-  <data name="lbLed1010M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1010M2.TabIndex" type="System.Int32, mscorlib">
-    <value>190</value>
-  </data>
-  <data name="&gt;&gt;lbLed1010M2.Name" xml:space="preserve">
-    <value>lbLed1010M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1010M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1010M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1010M2.ZOrder" xml:space="preserve">
-    <value>36</value>
-  </data>
-  <data name="lbLed1011M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1011M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1011M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 320</value>
-  </data>
-  <data name="lbLed1011M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1011M2.TabIndex" type="System.Int32, mscorlib">
-    <value>189</value>
-  </data>
-  <data name="&gt;&gt;lbLed1011M2.Name" xml:space="preserve">
-    <value>lbLed1011M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1011M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1011M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1011M2.ZOrder" xml:space="preserve">
-    <value>37</value>
-  </data>
-  <data name="lbLed1013M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1013M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1013M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 380</value>
-  </data>
-  <data name="lbLed1013M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1013M2.TabIndex" type="System.Int32, mscorlib">
-    <value>188</value>
-  </data>
-  <data name="&gt;&gt;lbLed1013M2.Name" xml:space="preserve">
-    <value>lbLed1013M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1013M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1013M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1013M2.ZOrder" xml:space="preserve">
-    <value>38</value>
-  </data>
-  <data name="lbLed1009M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1009M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1009M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 260</value>
-  </data>
-  <data name="lbLed1009M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1009M2.TabIndex" type="System.Int32, mscorlib">
-    <value>187</value>
-  </data>
-  <data name="&gt;&gt;lbLed1009M2.Name" xml:space="preserve">
-    <value>lbLed1009M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1009M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1009M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1009M2.ZOrder" xml:space="preserve">
-    <value>39</value>
-  </data>
-  <data name="lbLed1006M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1006M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1006M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 170</value>
-  </data>
-  <data name="lbLed1006M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1006M2.TabIndex" type="System.Int32, mscorlib">
-    <value>186</value>
-  </data>
-  <data name="&gt;&gt;lbLed1006M2.Name" xml:space="preserve">
-    <value>lbLed1006M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1006M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1006M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1006M2.ZOrder" xml:space="preserve">
-    <value>40</value>
-  </data>
-  <data name="lbLed1007M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1007M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1007M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 200</value>
-  </data>
-  <data name="lbLed1007M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1007M2.TabIndex" type="System.Int32, mscorlib">
-    <value>185</value>
-  </data>
-  <data name="&gt;&gt;lbLed1007M2.Name" xml:space="preserve">
-    <value>lbLed1007M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1007M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1007M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1007M2.ZOrder" xml:space="preserve">
-    <value>41</value>
-  </data>
-  <data name="lbLed1008M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1008M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1008M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 230</value>
-  </data>
-  <data name="lbLed1008M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1008M2.TabIndex" type="System.Int32, mscorlib">
-    <value>184</value>
-  </data>
-  <data name="&gt;&gt;lbLed1008M2.Name" xml:space="preserve">
-    <value>lbLed1008M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1008M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1008M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1008M2.ZOrder" xml:space="preserve">
-    <value>42</value>
-  </data>
-  <data name="lbLed1005M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1005M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1005M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 140</value>
-  </data>
-  <data name="lbLed1005M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1005M2.TabIndex" type="System.Int32, mscorlib">
-    <value>183</value>
-  </data>
-  <data name="&gt;&gt;lbLed1005M2.Name" xml:space="preserve">
-    <value>lbLed1005M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1005M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1005M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1005M2.ZOrder" xml:space="preserve">
-    <value>43</value>
-  </data>
-  <data name="lbLed1002M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1002M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1002M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 50</value>
-  </data>
-  <data name="lbLed1002M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1002M2.TabIndex" type="System.Int32, mscorlib">
-    <value>182</value>
-  </data>
-  <data name="&gt;&gt;lbLed1002M2.Name" xml:space="preserve">
-    <value>lbLed1002M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1002M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1002M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1002M2.ZOrder" xml:space="preserve">
-    <value>44</value>
-  </data>
-  <data name="lbLed1003M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1003M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1003M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 80</value>
-  </data>
-  <data name="lbLed1003M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1003M2.TabIndex" type="System.Int32, mscorlib">
-    <value>181</value>
-  </data>
-  <data name="&gt;&gt;lbLed1003M2.Name" xml:space="preserve">
-    <value>lbLed1003M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1003M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1003M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1003M2.ZOrder" xml:space="preserve">
-    <value>45</value>
-  </data>
-  <data name="lbLed1004M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1004M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1004M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 110</value>
-  </data>
-  <data name="lbLed1004M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1004M2.TabIndex" type="System.Int32, mscorlib">
-    <value>180</value>
-  </data>
-  <data name="&gt;&gt;lbLed1004M2.Name" xml:space="preserve">
-    <value>lbLed1004M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1004M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1004M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1004M2.ZOrder" xml:space="preserve">
-    <value>46</value>
-  </data>
-  <data name="lbLed1001M2.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="lbLed1001M2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 8.25pt</value>
-  </data>
-  <data name="lbLed1001M2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 20</value>
-  </data>
-  <data name="lbLed1001M2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 24</value>
-  </data>
-  <data name="lbLed1001M2.TabIndex" type="System.Int32, mscorlib">
-    <value>179</value>
-  </data>
-  <data name="&gt;&gt;lbLed1001M2.Name" xml:space="preserve">
-    <value>lbLed1001M2</value>
-  </data>
-  <data name="&gt;&gt;lbLed1001M2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Leds.LBLed, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbLed1001M2.Parent" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;lbLed1001M2.ZOrder" xml:space="preserve">
-    <value>47</value>
-  </data>
-  <data name="tabPageT2M2_3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 3</value>
-  </data>
-  <data name="tabPageT2M2_3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>900, 634</value>
-  </data>
-  <data name="tabPageT2M2_3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tabPageT2M2_3.Text" xml:space="preserve">
-    <value>input</value>
-  </data>
-  <data name="tabPageT2M2_3.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
-        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQAxc9UIAAAAA
-        /brLQQs=
-</value>
-  </data>
-  <data name="&gt;&gt;tabPageT2M2_3.Name" xml:space="preserve">
-    <value>tabPageT2M2_3</value>
-  </data>
-  <data name="&gt;&gt;tabPageT2M2_3.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
-  </data>
-  <data name="&gt;&gt;tabPageT2M2_3.Parent" xml:space="preserve">
-    <value>tabControlT2</value>
-  </data>
-  <data name="&gt;&gt;tabPageT2M2_3.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="tabControlT2.Location" type="System.Drawing.Point, System.Drawing">
@@ -11977,7 +11977,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACW
-        JQAAAk1TRnQBSQFMAgEBBAEAAZgBAAGYAQABYAEAAWABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        JQAAAk1TRnQBSQFMAgEBBAEAAaABAAGgAQABYAEAAWABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAEBAgABwAMAAQEBAAEIBgABIAEBFwABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHA
         AdwBwAEAAfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANC
         AQADOQEAAYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/
@@ -12652,7 +12652,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAs
-        DgAAAk1TRnQBSQFMAgEBAwEAAYgBAAGIAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DgAAAk1TRnQBSQFMAgEBAwEAAZABAAGQAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAMAASADAAEBAQABCAYAARAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -14995,7 +14995,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAs
-        YwAAAk1TRnQBSQFMAgEBBAEAAbgBAAG4AQABUAEAAVABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        YwAAAk1TRnQBSQFMAgEBBAEAAcABAAHAAQABUAEAAVABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAEBAgABoAMAAQEBAAEIBgAByBgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
         AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
         AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
@@ -15429,7 +15429,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        EQAAAk1TRnQBSQFMAgEBBQEAAZgBAAGYAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        EQAAAk1TRnQBSQFMAgEBBQEAAaABAAGgAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAMAAUADAAEBAQABCAYAASAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -15576,24 +15576,6 @@
   <data name="&gt;&gt;dataGridViewTextBoxColumn9.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn4</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn5</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn6</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;ColumnM2PointID.Name" xml:space="preserve">
     <value>ColumnM2PointID</value>
   </data>
@@ -15629,6 +15611,24 @@
   </data>
   <data name="&gt;&gt;Column1.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewImageColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn4</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn5</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn6</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;imageListStartStop.Name" xml:space="preserve">
     <value>imageListStartStop</value>
