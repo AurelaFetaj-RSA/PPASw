@@ -30,7 +30,9 @@ using OpcCustom;
 using RSACommon.Service;
 using RSACommon.Configuration;
 using RSACommon.ProgramParser;
+using RSAPoints.Points;
 using RSACommon.Points;
+using RSAPoints.ConcretePoints;
 
 namespace GUI
 {
@@ -185,24 +187,7 @@ namespace GUI
             myCore.AddScoped<Diagnostic.Core.Diagnostic>();
             myCore.AddScoped<OpcClientService>();
             myCore.AddScoped<ReadProgramsService>();
-            //OpcClientConfiguration Config = new OpcClientConfiguration()
-            //{
-            //    ServiceName = "OpcClient",
-            //    Active = true,
-            //    Host = "192.168.0.38",
-            //    Port = 48011,
-            //    DefaultKeepAliveFutureValueExpected = 0,
-            //    DefaultKeepAliveFutureValueToSet = 1,
-            //    Scheme = "opc.tcp",
-            //    TimeoutMilliseconds = 5000,
-            //    DisconnectionTimeoutMilliseconds = 5000
-            //};
 
-            //CoreConfigurations newConfiguration = new CoreConfigurations();
-            //newConfiguration.ServiceConfigurations.Add(Config);
-
-            //myCore.AddScoped<RSACommon.Service.OpcClientService>();
-            //myCore.CreateServiceList(newConfiguration, null);
             var listOfService = myCore.CreateServiceList(myCore.CoreConfigurations, loadedloggerConfigurator);
 
             List<IService> listFound = myCore.FindPerType(typeof(OpcClientService));
@@ -524,7 +509,7 @@ namespace GUI
         private void openConfigFormTextbox_Click(object sender, EventArgs e)
         {
             if (_configForm == null)
-                _configForm = new ServiceSetup();
+                _configForm = new ServiceSetup(myCore);
 
             _configForm.Show();
             _configForm.Activate();
@@ -1465,7 +1450,10 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + comboBoxM2TestProgramList.Text + config.Extensions[0]);
+
+                string path = Path.Combine(config.ProgramsPath[0], textBoxM2TestProgramName.Text + config.Extensions[0]);
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(path);
+
                 if (objPoints != null)
                 {
 
