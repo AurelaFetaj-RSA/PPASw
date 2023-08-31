@@ -284,12 +284,12 @@
             this.toolStripComboBoxT4_1 = new System.Windows.Forms.ToolStripComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBoxM3Constrast = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.buttonM3ContrastOpening = new System.Windows.Forms.Button();
+            this.buttonM3ContrastClosing = new System.Windows.Forms.Button();
             this.lbLed7 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.groupBoxM3CenteringClamp = new System.Windows.Forms.GroupBox();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.buttonM3CenteringClampsOpening = new System.Windows.Forms.Button();
+            this.buttonM3CenteringClampsClosing = new System.Windows.Forms.Button();
             this.lbLed8 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.groupBoxM3BigClamp = new System.Windows.Forms.GroupBox();
             this.buttonM3BigClampOpening = new System.Windows.Forms.Button();
@@ -300,10 +300,10 @@
             this.buttonM3SmallClampClosing = new System.Windows.Forms.Button();
             this.lbLed10 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.groupBoxM3Print = new System.Windows.Forms.GroupBox();
-            this.button14 = new System.Windows.Forms.Button();
+            this.buttonM3PrintCycle = new System.Windows.Forms.Button();
             this.lbLed12 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.groupBoxM3Servo = new System.Windows.Forms.GroupBox();
-            this.button15 = new System.Windows.Forms.Button();
+            this.buttonM3ResetServo = new System.Windows.Forms.Button();
             this.lbLed11 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.checkBoxM3ExitBelt = new System.Windows.Forms.CheckBox();
             this.checkBoxM3WorkingBelt = new System.Windows.Forms.CheckBox();
@@ -2857,8 +2857,8 @@
             // 
             // groupBoxM3Constrast
             // 
-            this.groupBoxM3Constrast.Controls.Add(this.button6);
-            this.groupBoxM3Constrast.Controls.Add(this.button7);
+            this.groupBoxM3Constrast.Controls.Add(this.buttonM3ContrastOpening);
+            this.groupBoxM3Constrast.Controls.Add(this.buttonM3ContrastClosing);
             this.groupBoxM3Constrast.Controls.Add(this.lbLed7);
             this.groupBoxM3Constrast.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxM3Constrast.Location = new System.Drawing.Point(305, 500);
@@ -2868,27 +2868,29 @@
             this.groupBoxM3Constrast.TabStop = false;
             this.groupBoxM3Constrast.Text = "contrast";
             // 
-            // button6
+            // buttonM3ContrastOpening
             // 
-            this.button6.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.button6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button6.Location = new System.Drawing.Point(20, 20);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(80, 48);
-            this.button6.TabIndex = 147;
-            this.button6.Text = "opening";
-            this.button6.UseVisualStyleBackColor = true;
+            this.buttonM3ContrastOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3ContrastOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3ContrastOpening.Location = new System.Drawing.Point(20, 20);
+            this.buttonM3ContrastOpening.Name = "buttonM3ContrastOpening";
+            this.buttonM3ContrastOpening.Size = new System.Drawing.Size(80, 48);
+            this.buttonM3ContrastOpening.TabIndex = 147;
+            this.buttonM3ContrastOpening.Text = "opening";
+            this.buttonM3ContrastOpening.UseVisualStyleBackColor = true;
+            this.buttonM3ContrastOpening.Click += new System.EventHandler(this.buttonM3ContrastOpening_Click);
             // 
-            // button7
+            // buttonM3ContrastClosing
             // 
-            this.button7.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.button7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button7.Location = new System.Drawing.Point(154, 20);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(80, 48);
-            this.button7.TabIndex = 148;
-            this.button7.Text = "closing";
-            this.button7.UseVisualStyleBackColor = true;
+            this.buttonM3ContrastClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3ContrastClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3ContrastClosing.Location = new System.Drawing.Point(154, 20);
+            this.buttonM3ContrastClosing.Name = "buttonM3ContrastClosing";
+            this.buttonM3ContrastClosing.Size = new System.Drawing.Size(80, 48);
+            this.buttonM3ContrastClosing.TabIndex = 148;
+            this.buttonM3ContrastClosing.Text = "closing";
+            this.buttonM3ContrastClosing.UseVisualStyleBackColor = true;
+            this.buttonM3ContrastClosing.Click += new System.EventHandler(this.buttonM3ContrastClosing_Click);
             // 
             // lbLed7
             // 
@@ -2911,8 +2913,8 @@
             // 
             // groupBoxM3CenteringClamp
             // 
-            this.groupBoxM3CenteringClamp.Controls.Add(this.button8);
-            this.groupBoxM3CenteringClamp.Controls.Add(this.button9);
+            this.groupBoxM3CenteringClamp.Controls.Add(this.buttonM3CenteringClampsOpening);
+            this.groupBoxM3CenteringClamp.Controls.Add(this.buttonM3CenteringClampsClosing);
             this.groupBoxM3CenteringClamp.Controls.Add(this.lbLed8);
             this.groupBoxM3CenteringClamp.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxM3CenteringClamp.Location = new System.Drawing.Point(10, 500);
@@ -2922,27 +2924,29 @@
             this.groupBoxM3CenteringClamp.TabStop = false;
             this.groupBoxM3CenteringClamp.Text = "centering clamp";
             // 
-            // button8
+            // buttonM3CenteringClampsOpening
             // 
-            this.button8.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.button8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button8.Location = new System.Drawing.Point(20, 20);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(80, 48);
-            this.button8.TabIndex = 145;
-            this.button8.Text = "opening";
-            this.button8.UseVisualStyleBackColor = true;
+            this.buttonM3CenteringClampsOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3CenteringClampsOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3CenteringClampsOpening.Location = new System.Drawing.Point(20, 20);
+            this.buttonM3CenteringClampsOpening.Name = "buttonM3CenteringClampsOpening";
+            this.buttonM3CenteringClampsOpening.Size = new System.Drawing.Size(80, 48);
+            this.buttonM3CenteringClampsOpening.TabIndex = 145;
+            this.buttonM3CenteringClampsOpening.Text = "opening";
+            this.buttonM3CenteringClampsOpening.UseVisualStyleBackColor = true;
+            this.buttonM3CenteringClampsOpening.Click += new System.EventHandler(this.buttonM3CenteringClampsOpening_Click);
             // 
-            // button9
+            // buttonM3CenteringClampsClosing
             // 
-            this.button9.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.button9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button9.Location = new System.Drawing.Point(180, 20);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(80, 48);
-            this.button9.TabIndex = 146;
-            this.button9.Text = "closing";
-            this.button9.UseVisualStyleBackColor = true;
+            this.buttonM3CenteringClampsClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3CenteringClampsClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3CenteringClampsClosing.Location = new System.Drawing.Point(180, 20);
+            this.buttonM3CenteringClampsClosing.Name = "buttonM3CenteringClampsClosing";
+            this.buttonM3CenteringClampsClosing.Size = new System.Drawing.Size(80, 48);
+            this.buttonM3CenteringClampsClosing.TabIndex = 146;
+            this.buttonM3CenteringClampsClosing.Text = "closing";
+            this.buttonM3CenteringClampsClosing.UseVisualStyleBackColor = true;
+            this.buttonM3CenteringClampsClosing.Click += new System.EventHandler(this.buttonM3CenteringClampsClosing_Click);
             // 
             // lbLed8
             // 
@@ -3077,7 +3081,7 @@
             // 
             // groupBoxM3Print
             // 
-            this.groupBoxM3Print.Controls.Add(this.button14);
+            this.groupBoxM3Print.Controls.Add(this.buttonM3PrintCycle);
             this.groupBoxM3Print.Controls.Add(this.lbLed12);
             this.groupBoxM3Print.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxM3Print.Location = new System.Drawing.Point(305, 625);
@@ -3087,16 +3091,17 @@
             this.groupBoxM3Print.TabStop = false;
             this.groupBoxM3Print.Text = "print";
             // 
-            // button14
+            // buttonM3PrintCycle
             // 
-            this.button14.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.button14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button14.Location = new System.Drawing.Point(20, 20);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(80, 48);
-            this.button14.TabIndex = 150;
-            this.button14.Text = "cycle";
-            this.button14.UseVisualStyleBackColor = true;
+            this.buttonM3PrintCycle.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3PrintCycle.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3PrintCycle.Location = new System.Drawing.Point(20, 20);
+            this.buttonM3PrintCycle.Name = "buttonM3PrintCycle";
+            this.buttonM3PrintCycle.Size = new System.Drawing.Size(80, 48);
+            this.buttonM3PrintCycle.TabIndex = 150;
+            this.buttonM3PrintCycle.Text = "cycle";
+            this.buttonM3PrintCycle.UseVisualStyleBackColor = true;
+            this.buttonM3PrintCycle.Click += new System.EventHandler(this.buttonM3PrintCycle_Click);
             // 
             // lbLed12
             // 
@@ -3119,7 +3124,7 @@
             // 
             // groupBoxM3Servo
             // 
-            this.groupBoxM3Servo.Controls.Add(this.button15);
+            this.groupBoxM3Servo.Controls.Add(this.buttonM3ResetServo);
             this.groupBoxM3Servo.Controls.Add(this.lbLed11);
             this.groupBoxM3Servo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxM3Servo.Location = new System.Drawing.Point(10, 625);
@@ -3129,16 +3134,17 @@
             this.groupBoxM3Servo.TabStop = false;
             this.groupBoxM3Servo.Text = "servo";
             // 
-            // button15
+            // buttonM3ResetServo
             // 
-            this.button15.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.button15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.button15.Location = new System.Drawing.Point(20, 20);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(90, 48);
-            this.button15.TabIndex = 149;
-            this.button15.Text = "reset alarm";
-            this.button15.UseVisualStyleBackColor = true;
+            this.buttonM3ResetServo.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3ResetServo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3ResetServo.Location = new System.Drawing.Point(20, 20);
+            this.buttonM3ResetServo.Name = "buttonM3ResetServo";
+            this.buttonM3ResetServo.Size = new System.Drawing.Size(90, 48);
+            this.buttonM3ResetServo.TabIndex = 149;
+            this.buttonM3ResetServo.Text = "reset alarm";
+            this.buttonM3ResetServo.UseVisualStyleBackColor = true;
+            this.buttonM3ResetServo.Click += new System.EventHandler(this.buttonM3ResetServo_Click);
             // 
             // lbLed11
             // 
@@ -7749,12 +7755,12 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBoxM3Constrast;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button buttonM3ContrastOpening;
+        private System.Windows.Forms.Button buttonM3ContrastClosing;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed7;
         private System.Windows.Forms.GroupBox groupBoxM3CenteringClamp;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button buttonM3CenteringClampsOpening;
+        private System.Windows.Forms.Button buttonM3CenteringClampsClosing;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed8;
         private System.Windows.Forms.GroupBox groupBoxM3BigClamp;
         private System.Windows.Forms.Button buttonM3BigClampOpening;
@@ -7765,10 +7771,10 @@
         private System.Windows.Forms.Button buttonM3SmallClampClosing;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed10;
         private System.Windows.Forms.GroupBox groupBoxM3Print;
-        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button buttonM3PrintCycle;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed12;
         private System.Windows.Forms.GroupBox groupBoxM3Servo;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button buttonM3ResetServo;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed11;
         private System.Windows.Forms.CheckBox checkBoxM3ExitBelt;
         private System.Windows.Forms.CheckBox checkBoxM3WorkingBelt;

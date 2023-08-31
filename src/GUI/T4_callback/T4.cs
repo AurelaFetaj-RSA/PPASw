@@ -499,5 +499,97 @@ namespace GUI
         }
 
 
+        private async void buttonM3ResetServo_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM3ResetServoAlarm";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private async void buttonM3CenteringClampsOpening_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM3CentrClampOpening";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+            }
+        }
+
+        private async void buttonM3CenteringClampsClosing_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM3CentrClampClosing";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+            }
+        }
+
+        private async void buttonM3ContrastOpening_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM3ContrOpening";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+            }
+        }
+
+        private async void buttonM3ContrastClosing_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM3ContrClosing";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+            }
+        }
+
+        private async void buttonM3PrintCycle_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM3Print";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
     }
 }
