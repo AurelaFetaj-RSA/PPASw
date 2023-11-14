@@ -32,6 +32,9 @@ using RSACommon.Configuration;
 using RSACommon.ProgramParser;
 using RSACommon.Points;
 using xDialog;
+using PPAUtils;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace GUI
 {
@@ -40,6 +43,7 @@ namespace GUI
         //core instance
         public static Core myCore;
         OpcClientService ccService = null;
+        MySQLService mysqlService = null;
 
         private LidorSystems.IntegralUI.Containers.TabPage lastPage { get; set; } = null;
 
@@ -101,6 +105,7 @@ namespace GUI
             myCore.AddScoped<Diagnostic.Core.Diagnostic>();
             myCore.AddScoped<OpcClientService>();
             myCore.AddScoped<ReadProgramsService>();
+            myCore.AddScoped<MySQLService>();
 
             var listOfService = myCore.CreateServiceList(myCore.CoreConfigurations, loadedloggerConfigurator);
 
@@ -127,6 +132,15 @@ namespace GUI
 
             }
 
+            listFound = myCore.FindPerType(typeof(MySQLService));
+            if (listFound[0] is MySQLService tmpService) mysqlService = tmpService;
+
+            mysqlService.AddTable<recipies>("recipies");
+            mysqlService.AddTable<padlaserprogram>("padlaserprograms");
+
+           
+
+
             foreach (var service in listOfService)
             {
                 _splashScreen?.WriteOnTextboxAsync($"Service: {service.Name} loaded");
@@ -137,7 +151,7 @@ namespace GUI
                 ccService.SetObjectData(new PlasticOpcClientConfig().Config());
             }
 
-            myCore?.Start();
+            myCore?.Start();            
 
             _splashScreen?.WriteOnTextboxAsync($"Core Configuration ended");
             _splashScreen?.WriteOnTextboxAsync($"Core Started");
@@ -146,9 +160,12 @@ namespace GUI
         private void InitGUI()
         {
             InitLastParameter();
+            this.Location = new Point(0, 0);
+            Size formSize = new Size(Screen.GetWorkingArea(this).Width, Screen.GetWorkingArea(this).Height);
+            this.Size = new Size(formSize.Width, formSize.Height);
         }
 
-        private void InitLastParameter()
+        private async void InitLastParameter()
         {
             #region (* init datagridviewM2 *)
             dataGridViewM2TeachPoints.Rows.Add(4);
@@ -225,40 +242,46 @@ namespace GUI
             #endregion
 
             #region (* init AUTO combobox model name list *)
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-            ReadProgramsConfiguration config = null;
             List<string> mList = new List<string>();
-            ReadProgramsService progRS = (ReadProgramsService)dummyS[0];
 
-            if (dummyS != null && dummyS.Count > 0)
+            //var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            //ReadProgramsConfiguration config = null;
+            //List<string> mList = new List<string>();
+            //ReadProgramsService progRS = (ReadProgramsService)dummyS[0];
+
+            //if (dummyS != null && dummyS.Count > 0)
+            //{
+            //    config = progRS.Configuration as ReadProgramsConfiguration;
+            //    mList = progRS.GetModel(config.ProgramsPath, config.Extensions);
+
+            //get model name list from DB
+            MySqlResult<recipies> result = await mysqlService.DBTable[0].SelectAllAsync<recipies>();
+            result.Result.ForEach(x => mList.Add(x.model_name));
+            foreach (string modelName in mList)
             {
-                config = progRS.Configuration as ReadProgramsConfiguration;
-                mList = progRS.GetModel(config.ProgramsPath, config.Extensions);
-
-                foreach (string modelName in mList)
-                {
-                    toolStripComboBoxT0.Items.Add(modelName);
-                    toolStripComboBoxT0.SelectedIndex = 0;
-                    toolStripComboBoxT0.SelectedIndexChanged += toolStripComboBoxT0_SelectedIndexChanged;
-                    toolStripComboBoxT1_1.Items.Add(modelName);
-                    toolStripComboBoxT1_1.SelectedIndex = 0;
-                    toolStripComboBoxT1_1.SelectedIndexChanged += toolStripComboBoxT1_1_SelectedIndexChanged;
-                    toolStripComboBoxT1_2.Items.Add(modelName);
-                    toolStripComboBoxT1_2.SelectedIndex = 0;
-                    toolStripComboBoxT1_2.SelectedIndexChanged += toolStripComboBoxT1_2_SelectedIndexChanged;
-                    toolStripComboBoxT3_1.Items.Add(modelName);
-                    toolStripComboBoxT3_1.SelectedIndex = 0;
-                    toolStripComboBoxT3_1.SelectedIndexChanged += toolStripComboBoxT3_1_SelectedIndexChanged;
-                    toolStripComboBoxT3_2.Items.Add(modelName);
-                    toolStripComboBoxT3_2.SelectedIndex = 0;
-                    toolStripComboBoxT3_2.SelectedIndexChanged += toolStripComboBoxT3_2_SelectedIndexChanged;
-                    toolStripComboBoxT4_1.Items.Add(modelName);
-                    toolStripComboBoxT4_1.SelectedIndex = 0;
-                    toolStripComboBoxT4_1.SelectedIndexChanged += toolStripComboBoxT4_1_SelectedIndexChanged;
-                    toolStripComboBoxT4_2.Items.Add(modelName);
-                    toolStripComboBoxT4_2.SelectedIndex = 0;
-                    toolStripComboBoxT4_2.SelectedIndexChanged += toolStripComboBoxT4_2_SelectedIndexChanged;
-                }
+                toolStripComboBoxT0.Items.Add(modelName);
+                toolStripComboBoxT0.SelectedIndex = 0;
+                toolStripComboBoxT0.SelectedIndexChanged += toolStripComboBoxT0_SelectedIndexChanged;
+                toolStripComboBoxT1_1.Items.Add(modelName);
+                toolStripComboBoxT1_1.SelectedIndex = 0;
+                toolStripComboBoxT1_1.SelectedIndexChanged += toolStripComboBoxT1_1_SelectedIndexChanged;
+                toolStripComboBoxT1_2.Items.Add(modelName);
+                toolStripComboBoxT1_2.SelectedIndex = 0;
+                toolStripComboBoxT1_2.SelectedIndexChanged += toolStripComboBoxT1_2_SelectedIndexChanged;
+                toolStripComboBoxT3_1.Items.Add(modelName);
+                toolStripComboBoxT3_1.SelectedIndex = 0;
+                toolStripComboBoxT3_1.SelectedIndexChanged += toolStripComboBoxT3_1_SelectedIndexChanged;
+                toolStripComboBoxT3_2.Items.Add(modelName);
+                toolStripComboBoxT3_2.SelectedIndex = 0;
+                toolStripComboBoxT3_2.SelectedIndexChanged += toolStripComboBoxT3_2_SelectedIndexChanged;
+                toolStripComboBoxT4_1.Items.Add(modelName);
+                toolStripComboBoxT4_1.SelectedIndex = 0;
+                toolStripComboBoxT4_1.SelectedIndexChanged += toolStripComboBoxT4_1_SelectedIndexChanged;
+                toolStripComboBoxT4_2.Items.Add(modelName);
+                toolStripComboBoxT4_2.SelectedIndex = 0;
+                toolStripComboBoxT4_2.SelectedIndexChanged += toolStripComboBoxT4_2_SelectedIndexChanged;
+                comboBoxMRecipeName.Items.Add(modelName);
+                comboBoxMRecipeName.SelectedIndex = 0;
             }
             #endregion
 
@@ -402,12 +425,34 @@ namespace GUI
             UpdateColorToDataGridRow();
         }
 
-        private void buttonAddNewRecipe_Click(object sender, EventArgs e)
+        private async void buttonAddNewRecipe_Click(object sender, EventArgs e)
         {
-            if (textBoxRecipeName.Text.Length >= 0 && textBoxRecipeName.Text.Length < 4)
+            if (textBoxMRecipeName.Text.Length >= 0 && textBoxMRecipeName.Text.Length < 4)
             {
                 xDialog.MsgBox.Show("recipe name not valid", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
             }
+
+            object[] value = new object[]
+                   {
+                    textBoxMRecipeName.Text,
+                    (checkBoxM1Param1.CheckState == CheckState.Checked)?1:0,
+                    0,
+                    (checkBoxM2Param1.CheckState == CheckState.Checked)?1:0,
+                    0,
+                    (checkBoxM3Param1.CheckState == CheckState.Checked)?1:0,
+                    0,
+                    (checkBoxM4Param1.CheckState == CheckState.Checked)?1:0,
+                    0,
+                    textBoxLaserLine1.Text,
+                    textBoxLaserLine2.Text,
+                    (checkBoxM5Param1.CheckState == CheckState.Checked)?1:0,
+                    0,
+                    (checkBoxM6Param1.CheckState == CheckState.Checked)?1:0,
+                    0,
+                   };
+
+            var testResult = await mysqlService.DBTable[0].InsertAutomaticAsync(value);
+
         }
 
         private void dataGridViewM2TeachPoints_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -415,50 +460,25 @@ namespace GUI
 
         }
 
-        private void dataGridViewM2TeachPoints_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        private void ResetM1Datagrid()
         {
-            if ((e.ColumnIndex == 3) && (e.RowIndex >= 0))
-            {
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-                System.Drawing.Image img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\register.png");
-                var w = 32;// img.Width;
-                var h = 32;// img.Height;
-                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
-                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+            dataGridViewM1TeachPoints.Rows.Clear();
+            dataGridViewM1TeachPoints.Rows.Add(4);
+            dataGridViewM1TeachPoints.Rows[0].Cells[0].Value = 1;
+            dataGridViewM1TeachPoints.Rows[1].Cells[0].Value = 2;
+            dataGridViewM1TeachPoints.Rows[2].Cells[0].Value = 3;
+            dataGridViewM1TeachPoints.Rows[3].Cells[0].Value = 4;
 
-                e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
-                e.Handled = true;
-            }
+            dataGridViewM1TeachPoints.Rows[0].Cells[1].Value = 100;
+            dataGridViewM1TeachPoints.Rows[1].Cells[1].Value = 200;
+            dataGridViewM1TeachPoints.Rows[2].Cells[1].Value = 300;
+            dataGridViewM1TeachPoints.Rows[3].Cells[1].Value = 400;
 
-            if ((e.ColumnIndex == 4) && (e.RowIndex >= 0))
-            {
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-                System.Drawing.Image img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\startquote.png");
-                var w = 32;// img.Width;
-                var h = 32;// img.Height;
-                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
-                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
-
-
-
-                e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
-                e.Handled = true;
-            }
-
-            if ((e.ColumnIndex == 5) && (e.RowIndex >= 0))
-            {
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-                System.Drawing.Image img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\preached.png");
-                var w = 32;// img.Width;
-                var h = 32;// img.Height;
-                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
-                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
-
-
-
-                e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
-                e.Handled = true;
-            }
+            dataGridViewM1TeachPoints.Rows[0].Cells[2].Value = 10;
+            dataGridViewM1TeachPoints.Rows[1].Cells[2].Value = 20;
+            dataGridViewM1TeachPoints.Rows[2].Cells[2].Value = 30;
+            dataGridViewM1TeachPoints.Rows[3].Cells[2].Value = 40;
+            dataGridViewM1TeachPoints.ClearSelection();
         }
 
         private void ResetM2Datagrid()
@@ -503,6 +523,28 @@ namespace GUI
             dataGridViewM3TeachPoints.ClearSelection();
         }
 
+        private void M3TestSendProgram()
+        {
+            int i = 0;
+            short[] quote = new short[5];
+            short[] speed = new short[5];
+
+            try
+            {
+                for (i = 0; i <= dataGridViewM2TestPoints.RowCount - 1; i++)
+                {
+                    quote[i + 1] = short.Parse(dataGridViewM3TestPoints[1, i].Value.ToString());
+                    speed[i + 1] = short.Parse(dataGridViewM3TestPoints[2, i].Value.ToString());
+                }
+
+                OPCUAM3TestPckSend(quote, speed);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
         private void M2TestSendProgram()
         {
             int i = 0;
@@ -525,7 +567,113 @@ namespace GUI
             }
         }
 
-      
-    }
-    
+        private void M1TestSendProgram()
+        {
+            int i = 0;
+            short[] quote = new short[5];
+            short[] speed = new short[5];
+
+            try
+            {
+                for (i = 0; i <= dataGridViewM1TestPoints.RowCount - 1; i++)
+                {
+                    quote[i + 1] = short.Parse(dataGridViewM1TestPoints[1, i].Value.ToString());
+                    speed[i + 1] = short.Parse(dataGridViewM1TestPoints[2, i].Value.ToString());
+                }
+
+                OPCUAM1TestPckSend(quote, speed);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+     
+
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (_configForm == null)
+                _configForm = new ServiceSetup(myCore);
+
+            _configForm.Show();
+            _configForm.Activate();
+        }
+
+        private void buttonMRecipiesShowAll_Click(object sender, EventArgs e)
+        {
+            //fill data
+            string connectionString = "Data Source=localhost;database=plasticaucho;uid=USER;pwd=Robots2023!";
+            string query = "Select * from recipies";
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
+                {
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+                    dataGridViewMEditRecipe.DataSource = ds.Tables[0];
+                    dataGridViewMEditRecipe.Columns[0].HeaderText = "recipe name";
+                    dataGridViewMEditRecipe.Columns[0].Width = 120;
+                    dataGridViewMEditRecipe.Columns[1].HeaderText = "trimmer on/off";
+                    dataGridViewMEditRecipe.Columns[1].Width = 140;
+                    dataGridViewMEditRecipe.Columns[2].Visible = false;
+                    dataGridViewMEditRecipe.Columns[3].HeaderText = "padprint int on/off";
+                    dataGridViewMEditRecipe.Columns[3].Width = 140;
+                    dataGridViewMEditRecipe.Columns[4].Visible = false;
+                    dataGridViewMEditRecipe.Columns[5].HeaderText = "padprint ext on/off";
+                    dataGridViewMEditRecipe.Columns[5].Width = 140;
+                    dataGridViewMEditRecipe.Columns[6].Visible = false;
+
+                    dataGridViewMEditRecipe.Columns[7].HeaderText = "padlaser on/off";
+                    dataGridViewMEditRecipe.Columns[7].Width = 140;
+                    dataGridViewMEditRecipe.Columns[8].HeaderText = "line top";
+                    dataGridViewMEditRecipe.Columns[8].Width = 140;
+                    dataGridViewMEditRecipe.Columns[9].HeaderText = "line bottom";
+                    dataGridViewMEditRecipe.Columns[9].Width = 140;
+
+
+                }
+            }
+        }
+
+        private void toolStripMenuItemT0Keyboard_Click(object sender, EventArgs e)
+        {
+
+            Process foo = new Process();
+
+            foo.StartInfo.FileName = @AppDomain.CurrentDomain.BaseDirectory + "Oskeyboard.exe";
+
+            bool isRunning = false; //TODO: Check to see if process foo.exe is already running
+            var processExists = Process.GetProcesses().Any(p => p.ProcessName.Contains("Oskeyboard"));
+
+            if (processExists)
+            {
+                //TODO: Switch to foo.exe process
+                foo.CloseMainWindow();
+                foo.Start();
+            }
+            else
+            {
+                foo.Start();
+            }
+        }
+
+        private async void buttonM3StartTest_Click(object sender, EventArgs e)
+        {
+            //send quote/speed
+            M3TestSendProgram();
+
+            //send start command
+            string keyToSend = "pcM3StartTest";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else xDialog.MsgBox.Show("offline", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+
+        }
+    }    
 }

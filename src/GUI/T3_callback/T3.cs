@@ -651,6 +651,56 @@ namespace GUI
             }
         }
 
+        private void dataGridViewM2TeachPoints_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if ((e.ColumnIndex == 3) && (e.RowIndex >= 0))
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                System.Drawing.Image img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\register.png");
+                var w = 32;// img.Width;
+                var h = 32;// img.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+
+            if ((e.ColumnIndex == 4) && (e.RowIndex >= 0))
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                System.Drawing.Image img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\startquote.png");
+                var w = 32;// img.Width;
+                var h = 32;// img.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+
+            if ((e.ColumnIndex == 5) && (e.RowIndex >= 0))
+            {
+                System.Drawing.Image img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\preached.png");
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                if (dataGridViewM2TeachPoints.Rows[e.RowIndex].Cells[e.ColumnIndex].ToolTipText == "reached")
+                {
+                    img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\preached.png");
+                }
+                else
+                {
+                    img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\pnotreached.png");
+                }
+                var w = 24;// img.Width;
+                var h = 24;// img.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+        }
+
         private async void buttonM2StartTest_Click(object sender, EventArgs e)
         {
             //send quote/speed

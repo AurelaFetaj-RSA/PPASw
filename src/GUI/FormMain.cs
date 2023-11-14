@@ -1910,7 +1910,6 @@ namespace GUI
                 objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + comboBoxM3TestProgramList.Text + config.Extensions[0]);
                 if (objPoints != null)
                 {
-
                     dataGridViewM3TestPoints[1, 0].Value = objPoints.Points[0].Q1;
                     dataGridViewM3TestPoints[1, 1].Value = objPoints.Points[0].Q2;
                     dataGridViewM3TestPoints[1, 2].Value = objPoints.Points[0].Q3;
@@ -1919,7 +1918,6 @@ namespace GUI
                     dataGridViewM3TestPoints[2, 1].Value = objPoints.Points[0].V2;
                     dataGridViewM3TestPoints[2, 2].Value = objPoints.Points[0].V3;
                     dataGridViewM3TestPoints[2, 3].Value = objPoints.Points[0].V4;
-
                 }
             }
         }

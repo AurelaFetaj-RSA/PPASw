@@ -95,14 +95,14 @@ namespace GUI
             LidorSystems.IntegralUI.Containers.Style.TabStripStyle tabStripStyle3 = new LidorSystems.IntegralUI.Containers.Style.TabStripStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle4 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolTipStyle toolTipStyle4 = new LidorSystems.IntegralUI.Controls.Style.ToolTipStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle20 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle18 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle19 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle20 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle21 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle18 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle24 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle20 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle21 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -258,107 +258,6 @@ namespace GUI
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageConsole = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlT2 = new LidorSystems.IntegralUI.Containers.TabControl();
-            this.tabPageT2M2_1 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.comboBoxM2TeachModelName = new System.Windows.Forms.ComboBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.buttonM2Home = new System.Windows.Forms.Button();
-            this.buttonM2ResetHome = new System.Windows.Forms.Button();
-            this.lbLedM2T2HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.buttonM2StartQuote = new System.Windows.Forms.Button();
-            this.numericUpDownM2ManualQuote = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownM2ManualSpeed = new System.Windows.Forms.NumericUpDown();
-            this.groupBoxM2Jog = new System.Windows.Forms.GroupBox();
-            this.labelM2JogSpeed = new System.Windows.Forms.Label();
-            this.lbButtonM2JogUp = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.lbButtonM2JogDown = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.numericUpDownM2JogSpeed = new System.Windows.Forms.NumericUpDown();
-            this.labelM2TeachAxisQuoteName = new System.Windows.Forms.Label();
-            this.labelM2TeachAxisQuoteValue = new System.Windows.Forms.Label();
-            this.buttonM2TeachDeleteProgram = new System.Windows.Forms.Button();
-            this.comboBoxM2TeachProgramList = new System.Windows.Forms.ComboBox();
-            this.buttonM2TeachNewProgram = new System.Windows.Forms.Button();
-            this.buttonM2TeachSaveProgram = new System.Windows.Forms.Button();
-            this.buttonM2TeachLoadProgram = new System.Windows.Forms.Button();
-            this.lbButtonM2StartStopExitBelt = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.lbButtonM2StartStopWorkingBelt = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.dataGridViewM2TeachPoints = new System.Windows.Forms.DataGridView();
-            this.ColumnM2PointID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnMeQuote = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnM2Speed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnM2Register = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ColumnM2StartQuote = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.buttonM2PrintCycle = new System.Windows.Forms.Button();
-            this.buttonM2ResetServo = new System.Windows.Forms.Button();
-            this.buttonM2ContrastClosing = new System.Windows.Forms.Button();
-            this.buttonM2ContrastOpening = new System.Windows.Forms.Button();
-            this.buttonM2CenteringClampsClosing = new System.Windows.Forms.Button();
-            this.buttonM2CenteringClampsOpening = new System.Windows.Forms.Button();
-            this.buttonM2BigClampClosing = new System.Windows.Forms.Button();
-            this.buttonM2BigClampOpening = new System.Windows.Forms.Button();
-            this.buttonM2SmallClampClosing = new System.Windows.Forms.Button();
-            this.buttonM2SmallClampOpening = new System.Windows.Forms.Button();
-            this.tabPageT2M2_2 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.comboBoxM2TestProgramList = new System.Windows.Forms.ComboBox();
-            this.buttonM2TestSaveProgram = new System.Windows.Forms.Button();
-            this.buttonM2TestLoadProgram = new System.Windows.Forms.Button();
-            this.dataGridViewM2TestPoints = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbButtonM2StartTest = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.tabPageT2M2_4 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.lbLed2040M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2039M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2020M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2019M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2046M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2047M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2048M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2045M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2042M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2043M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2044M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2041M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2032M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2036M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2037M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2038M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2035M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2034M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2030M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2031M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2033M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2029M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2026M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2027M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2028M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2025M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2022M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2023M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2024M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2021M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2012M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2016M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2017M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2018M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2015M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2014M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2010M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2011M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2013M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2009M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2006M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2007M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2008M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2005M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2002M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2003M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2004M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.lbLed2001M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.tabPageT2M2_3 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.lbLed1040M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed1039M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -408,6 +307,107 @@ namespace GUI
             this.lbLed1003M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed1004M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed1001M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.tabPageT2M2_4 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.lbLed2040M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2039M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2020M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2019M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2046M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2047M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2048M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2045M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2042M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2043M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2044M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2041M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2032M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2036M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2037M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2038M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2035M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2034M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2030M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2031M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2033M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2029M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2026M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2027M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2028M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2025M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2022M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2023M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2024M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2021M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2012M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2016M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2017M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2018M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2015M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2014M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2010M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2011M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2013M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2009M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2006M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2007M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2008M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2005M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2002M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2003M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2004M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2001M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.tabPageT2M2_2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.comboBoxM2TestProgramList = new System.Windows.Forms.ComboBox();
+            this.buttonM2TestSaveProgram = new System.Windows.Forms.Button();
+            this.buttonM2TestLoadProgram = new System.Windows.Forms.Button();
+            this.dataGridViewM2TestPoints = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbButtonM2StartTest = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.tabPageT2M2_1 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.comboBoxM2TeachModelName = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonM2Home = new System.Windows.Forms.Button();
+            this.buttonM2ResetHome = new System.Windows.Forms.Button();
+            this.lbLedM2T2HomingDone = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.buttonM2StartQuote = new System.Windows.Forms.Button();
+            this.numericUpDownM2ManualQuote = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownM2ManualSpeed = new System.Windows.Forms.NumericUpDown();
+            this.groupBoxM2Jog = new System.Windows.Forms.GroupBox();
+            this.labelM2JogSpeed = new System.Windows.Forms.Label();
+            this.lbButtonM2JogUp = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.lbButtonM2JogDown = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.numericUpDownM2JogSpeed = new System.Windows.Forms.NumericUpDown();
+            this.labelM2TeachAxisQuoteName = new System.Windows.Forms.Label();
+            this.labelM2TeachAxisQuoteValue = new System.Windows.Forms.Label();
+            this.buttonM2TeachDeleteProgram = new System.Windows.Forms.Button();
+            this.comboBoxM2TeachProgramList = new System.Windows.Forms.ComboBox();
+            this.buttonM2TeachNewProgram = new System.Windows.Forms.Button();
+            this.buttonM2TeachSaveProgram = new System.Windows.Forms.Button();
+            this.buttonM2TeachLoadProgram = new System.Windows.Forms.Button();
+            this.lbButtonM2StartStopExitBelt = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.lbButtonM2StartStopWorkingBelt = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.dataGridViewM2TeachPoints = new System.Windows.Forms.DataGridView();
+            this.ColumnM2PointID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnMeQuote = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnM2Speed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnM2Register = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ColumnM2StartQuote = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.buttonM2PrintCycle = new System.Windows.Forms.Button();
+            this.buttonM2ResetServo = new System.Windows.Forms.Button();
+            this.buttonM2ContrastClosing = new System.Windows.Forms.Button();
+            this.buttonM2ContrastOpening = new System.Windows.Forms.Button();
+            this.buttonM2CenteringClampsClosing = new System.Windows.Forms.Button();
+            this.buttonM2CenteringClampsOpening = new System.Windows.Forms.Button();
+            this.buttonM2BigClampClosing = new System.Windows.Forms.Button();
+            this.buttonM2BigClampOpening = new System.Windows.Forms.Button();
+            this.buttonM2SmallClampClosing = new System.Windows.Forms.Button();
+            this.buttonM2SmallClampOpening = new System.Windows.Forms.Button();
             this.tabPageRecipe = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageMain = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlT0 = new LidorSystems.IntegralUI.Containers.TabControl();
@@ -544,6 +544,10 @@ namespace GUI
             this.tabPageConsole.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT2)).BeginInit();
             this.tabControlT2.SuspendLayout();
+            this.tabPageT2M2_3.SuspendLayout();
+            this.tabPageT2M2_4.SuspendLayout();
+            this.tabPageT2M2_2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TestPoints)).BeginInit();
             this.tabPageT2M2_1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -552,10 +556,6 @@ namespace GUI
             this.groupBoxM2Jog.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2JogSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TeachPoints)).BeginInit();
-            this.tabPageT2M2_2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TestPoints)).BeginInit();
-            this.tabPageT2M2_4.SuspendLayout();
-            this.tabPageT2M2_3.SuspendLayout();
             this.tabPageMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT0)).BeginInit();
             this.tabControlT0.SuspendLayout();
@@ -2206,9 +2206,9 @@ namespace GUI
             // tabControlT2
             // 
             this.tabControlT2.Controls.Add(this.tabPageT2M2_3);
+            this.tabControlT2.Controls.Add(this.tabPageT2M2_4);
             this.tabControlT2.Controls.Add(this.tabPageT2M2_2);
             this.tabControlT2.Controls.Add(this.tabPageT2M2_1);
-            this.tabControlT2.Controls.Add(this.tabPageT2M2_4);
             this.tabControlT2.Cursor = System.Windows.Forms.Cursors.Default;
             controlFormatStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlT2.FormatStyle = controlFormatStyle4;
@@ -2232,1297 +2232,6 @@ namespace GUI
             this.tabControlT2.ToolItemFormatStyle = toolItemFormatStyle4;
             toolTipStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlT2.ToolTipStyle = toolTipStyle4;
-            // 
-            // tabPageT2M2_1
-            // 
-            this.tabPageT2M2_1.Controls.Add(this.comboBoxM2TeachModelName);
-            this.tabPageT2M2_1.Controls.Add(this.groupBox3);
-            this.tabPageT2M2_1.Controls.Add(this.groupBox2);
-            this.tabPageT2M2_1.Controls.Add(this.groupBoxM2Jog);
-            this.tabPageT2M2_1.Controls.Add(this.buttonM2TeachDeleteProgram);
-            this.tabPageT2M2_1.Controls.Add(this.comboBoxM2TeachProgramList);
-            this.tabPageT2M2_1.Controls.Add(this.buttonM2TeachNewProgram);
-            this.tabPageT2M2_1.Controls.Add(this.buttonM2TeachSaveProgram);
-            this.tabPageT2M2_1.Controls.Add(this.buttonM2TeachLoadProgram);
-            this.tabPageT2M2_1.Controls.Add(this.lbButtonM2StartStopExitBelt);
-            this.tabPageT2M2_1.Controls.Add(this.lbButtonM2StartStopWorkingBelt);
-            this.tabPageT2M2_1.Controls.Add(this.dataGridViewM2TeachPoints);
-            this.tabPageT2M2_1.Controls.Add(this.buttonM2PrintCycle);
-            this.tabPageT2M2_1.Controls.Add(this.buttonM2ResetServo);
-            this.tabPageT2M2_1.Controls.Add(this.buttonM2ContrastClosing);
-            this.tabPageT2M2_1.Controls.Add(this.buttonM2ContrastOpening);
-            this.tabPageT2M2_1.Controls.Add(this.buttonM2CenteringClampsClosing);
-            this.tabPageT2M2_1.Controls.Add(this.buttonM2CenteringClampsOpening);
-            this.tabPageT2M2_1.Controls.Add(this.buttonM2BigClampClosing);
-            this.tabPageT2M2_1.Controls.Add(this.buttonM2BigClampOpening);
-            this.tabPageT2M2_1.Controls.Add(this.buttonM2SmallClampClosing);
-            this.tabPageT2M2_1.Controls.Add(this.buttonM2SmallClampOpening);
-            tabPageFormatStyle20.BorderCornerRadius = 30;
-            tabPageFormatStyle20.ContentSpacing = 30;
-            tabPageFormatStyle20.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT2M2_1.FormatStyle = tabPageFormatStyle20;
-            resources.ApplyResources(this.tabPageT2M2_1, "tabPageT2M2_1");
-            this.tabPageT2M2_1.Name = "tabPageT2M2_1";
-            this.tabPageT2M2_1.ParentPage = null;
-            this.tabPageT2M2_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT2M2_1.TextBounds")));
-            this.tabPageT2M2_1.TextSize = new System.Drawing.SizeF(60.03986F, 25.4663F);
-            // 
-            // comboBoxM2TeachModelName
-            // 
-            resources.ApplyResources(this.comboBoxM2TeachModelName, "comboBoxM2TeachModelName");
-            this.comboBoxM2TeachModelName.FormattingEnabled = true;
-            this.comboBoxM2TeachModelName.Name = "comboBoxM2TeachModelName";
-            this.comboBoxM2TeachModelName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM2TeachModelName_SelectedIndexChanged);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.buttonM2Home);
-            this.groupBox3.Controls.Add(this.buttonM2ResetHome);
-            this.groupBox3.Controls.Add(this.lbLedM2T2HomingDone);
-            resources.ApplyResources(this.groupBox3, "groupBox3");
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.TabStop = false;
-            // 
-            // buttonM2Home
-            // 
-            resources.ApplyResources(this.buttonM2Home, "buttonM2Home");
-            this.buttonM2Home.Name = "buttonM2Home";
-            this.buttonM2Home.UseVisualStyleBackColor = true;
-            this.buttonM2Home.Click += new System.EventHandler(this.buttonM2Home_Click);
-            // 
-            // buttonM2ResetHome
-            // 
-            resources.ApplyResources(this.buttonM2ResetHome, "buttonM2ResetHome");
-            this.buttonM2ResetHome.Name = "buttonM2ResetHome";
-            this.buttonM2ResetHome.UseVisualStyleBackColor = true;
-            this.buttonM2ResetHome.Click += new System.EventHandler(this.buttonM2ResetHome_Click);
-            // 
-            // lbLedM2T2HomingDone
-            // 
-            this.lbLedM2T2HomingDone.BackColor = System.Drawing.Color.Transparent;
-            this.lbLedM2T2HomingDone.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLedM2T2HomingDone, "lbLedM2T2HomingDone");
-            this.lbLedM2T2HomingDone.ForeColor = System.Drawing.Color.Black;
-            this.lbLedM2T2HomingDone.Label = "homing done";
-            this.lbLedM2T2HomingDone.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLedM2T2HomingDone.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLedM2T2HomingDone.LedSize = new System.Drawing.SizeF(16F, 16F);
-            this.lbLedM2T2HomingDone.Name = "lbLedM2T2HomingDone";
-            this.lbLedM2T2HomingDone.Renderer = null;
-            this.lbLedM2T2HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLedM2T2HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.buttonM2StartQuote);
-            this.groupBox2.Controls.Add(this.numericUpDownM2ManualQuote);
-            this.groupBox2.Controls.Add(this.numericUpDownM2ManualSpeed);
-            resources.ApplyResources(this.groupBox2, "groupBox2");
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.TabStop = false;
-            // 
-            // label7
-            // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.Name = "label7";
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
-            // 
-            // buttonM2StartQuote
-            // 
-            resources.ApplyResources(this.buttonM2StartQuote, "buttonM2StartQuote");
-            this.buttonM2StartQuote.Name = "buttonM2StartQuote";
-            this.buttonM2StartQuote.UseVisualStyleBackColor = true;
-            this.buttonM2StartQuote.Click += new System.EventHandler(this.buttonM2StartQuote_Click);
-            // 
-            // numericUpDownM2ManualQuote
-            // 
-            resources.ApplyResources(this.numericUpDownM2ManualQuote, "numericUpDownM2ManualQuote");
-            this.numericUpDownM2ManualQuote.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDownM2ManualQuote.Minimum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownM2ManualQuote.Name = "numericUpDownM2ManualQuote";
-            this.numericUpDownM2ManualQuote.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownM2ManualQuote.ValueChanged += new System.EventHandler(this.numericUpDownM2ManualQuote_ValueChanged);
-            // 
-            // numericUpDownM2ManualSpeed
-            // 
-            resources.ApplyResources(this.numericUpDownM2ManualSpeed, "numericUpDownM2ManualSpeed");
-            this.numericUpDownM2ManualSpeed.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDownM2ManualSpeed.Name = "numericUpDownM2ManualSpeed";
-            this.numericUpDownM2ManualSpeed.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownM2ManualSpeed.ValueChanged += new System.EventHandler(this.numericUpDownM2ManualSpeed_ValueChanged);
-            // 
-            // groupBoxM2Jog
-            // 
-            this.groupBoxM2Jog.Controls.Add(this.labelM2JogSpeed);
-            this.groupBoxM2Jog.Controls.Add(this.lbButtonM2JogUp);
-            this.groupBoxM2Jog.Controls.Add(this.lbButtonM2JogDown);
-            this.groupBoxM2Jog.Controls.Add(this.numericUpDownM2JogSpeed);
-            this.groupBoxM2Jog.Controls.Add(this.labelM2TeachAxisQuoteName);
-            this.groupBoxM2Jog.Controls.Add(this.labelM2TeachAxisQuoteValue);
-            resources.ApplyResources(this.groupBoxM2Jog, "groupBoxM2Jog");
-            this.groupBoxM2Jog.Name = "groupBoxM2Jog";
-            this.groupBoxM2Jog.TabStop = false;
-            // 
-            // labelM2JogSpeed
-            // 
-            resources.ApplyResources(this.labelM2JogSpeed, "labelM2JogSpeed");
-            this.labelM2JogSpeed.Name = "labelM2JogSpeed";
-            // 
-            // lbButtonM2JogUp
-            // 
-            this.lbButtonM2JogUp.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.lbButtonM2JogUp, "lbButtonM2JogUp");
-            this.lbButtonM2JogUp.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbButtonM2JogUp.ForeColor = System.Drawing.Color.White;
-            this.lbButtonM2JogUp.Label = "up";
-            this.lbButtonM2JogUp.Name = "lbButtonM2JogUp";
-            this.lbButtonM2JogUp.Renderer = null;
-            this.lbButtonM2JogUp.RepeatInterval = 100;
-            this.lbButtonM2JogUp.RepeatState = false;
-            this.lbButtonM2JogUp.StartRepeatInterval = 500;
-            this.lbButtonM2JogUp.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonM2JogUp.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            this.lbButtonM2JogUp.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM2JogUp_ButtonChangeState);
-            this.lbButtonM2JogUp.Click += new System.EventHandler(this.lbButtonM2JogUp_Click);
-            // 
-            // lbButtonM2JogDown
-            // 
-            this.lbButtonM2JogDown.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.lbButtonM2JogDown, "lbButtonM2JogDown");
-            this.lbButtonM2JogDown.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbButtonM2JogDown.ForeColor = System.Drawing.Color.White;
-            this.lbButtonM2JogDown.Label = "down";
-            this.lbButtonM2JogDown.Name = "lbButtonM2JogDown";
-            this.lbButtonM2JogDown.Renderer = null;
-            this.lbButtonM2JogDown.RepeatInterval = 100;
-            this.lbButtonM2JogDown.RepeatState = false;
-            this.lbButtonM2JogDown.StartRepeatInterval = 500;
-            this.lbButtonM2JogDown.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonM2JogDown.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            this.lbButtonM2JogDown.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM2JogDown_ButtonChangeState);
-            this.lbButtonM2JogDown.Click += new System.EventHandler(this.lbButtonM2JogDown_Click);
-            // 
-            // numericUpDownM2JogSpeed
-            // 
-            resources.ApplyResources(this.numericUpDownM2JogSpeed, "numericUpDownM2JogSpeed");
-            this.numericUpDownM2JogSpeed.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDownM2JogSpeed.Name = "numericUpDownM2JogSpeed";
-            this.numericUpDownM2JogSpeed.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownM2JogSpeed.ValueChanged += new System.EventHandler(this.numericUpDownM2JogSpeed_ValueChanged);
-            this.numericUpDownM2JogSpeed.Click += new System.EventHandler(this.numericUpDownM2JogSpeed_Click);
-            // 
-            // labelM2TeachAxisQuoteName
-            // 
-            resources.ApplyResources(this.labelM2TeachAxisQuoteName, "labelM2TeachAxisQuoteName");
-            this.labelM2TeachAxisQuoteName.Name = "labelM2TeachAxisQuoteName";
-            // 
-            // labelM2TeachAxisQuoteValue
-            // 
-            resources.ApplyResources(this.labelM2TeachAxisQuoteValue, "labelM2TeachAxisQuoteValue");
-            this.labelM2TeachAxisQuoteValue.Name = "labelM2TeachAxisQuoteValue";
-            // 
-            // buttonM2TeachDeleteProgram
-            // 
-            resources.ApplyResources(this.buttonM2TeachDeleteProgram, "buttonM2TeachDeleteProgram");
-            this.buttonM2TeachDeleteProgram.Name = "buttonM2TeachDeleteProgram";
-            this.buttonM2TeachDeleteProgram.UseVisualStyleBackColor = true;
-            // 
-            // comboBoxM2TeachProgramList
-            // 
-            resources.ApplyResources(this.comboBoxM2TeachProgramList, "comboBoxM2TeachProgramList");
-            this.comboBoxM2TeachProgramList.FormattingEnabled = true;
-            this.comboBoxM2TeachProgramList.Name = "comboBoxM2TeachProgramList";
-            // 
-            // buttonM2TeachNewProgram
-            // 
-            resources.ApplyResources(this.buttonM2TeachNewProgram, "buttonM2TeachNewProgram");
-            this.buttonM2TeachNewProgram.Name = "buttonM2TeachNewProgram";
-            this.buttonM2TeachNewProgram.UseVisualStyleBackColor = true;
-            this.buttonM2TeachNewProgram.Click += new System.EventHandler(this.buttonM2TeachNewProgram_Click);
-            // 
-            // buttonM2TeachSaveProgram
-            // 
-            resources.ApplyResources(this.buttonM2TeachSaveProgram, "buttonM2TeachSaveProgram");
-            this.buttonM2TeachSaveProgram.Name = "buttonM2TeachSaveProgram";
-            this.buttonM2TeachSaveProgram.UseVisualStyleBackColor = true;
-            this.buttonM2TeachSaveProgram.Click += new System.EventHandler(this.buttonM2TeachSaveProgram_Click);
-            // 
-            // buttonM2TeachLoadProgram
-            // 
-            resources.ApplyResources(this.buttonM2TeachLoadProgram, "buttonM2TeachLoadProgram");
-            this.buttonM2TeachLoadProgram.Name = "buttonM2TeachLoadProgram";
-            this.buttonM2TeachLoadProgram.UseVisualStyleBackColor = true;
-            this.buttonM2TeachLoadProgram.Click += new System.EventHandler(this.buttonM2TeachLoadProgram_Click);
-            // 
-            // lbButtonM2StartStopExitBelt
-            // 
-            this.lbButtonM2StartStopExitBelt.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonM2StartStopExitBelt.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            resources.ApplyResources(this.lbButtonM2StartStopExitBelt, "lbButtonM2StartStopExitBelt");
-            this.lbButtonM2StartStopExitBelt.ForeColor = System.Drawing.Color.White;
-            this.lbButtonM2StartStopExitBelt.Label = "start/stop exit belt";
-            this.lbButtonM2StartStopExitBelt.Name = "lbButtonM2StartStopExitBelt";
-            this.lbButtonM2StartStopExitBelt.Renderer = null;
-            this.lbButtonM2StartStopExitBelt.RepeatInterval = 100;
-            this.lbButtonM2StartStopExitBelt.RepeatState = false;
-            this.lbButtonM2StartStopExitBelt.StartRepeatInterval = 500;
-            this.lbButtonM2StartStopExitBelt.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonM2StartStopExitBelt.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            this.lbButtonM2StartStopExitBelt.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM2StartStopExitBelt_ButtonChangeState);
-            this.lbButtonM2StartStopExitBelt.Click += new System.EventHandler(this.lbButtonM2StartStopExitBelt_Click);
-            // 
-            // lbButtonM2StartStopWorkingBelt
-            // 
-            this.lbButtonM2StartStopWorkingBelt.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonM2StartStopWorkingBelt.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            resources.ApplyResources(this.lbButtonM2StartStopWorkingBelt, "lbButtonM2StartStopWorkingBelt");
-            this.lbButtonM2StartStopWorkingBelt.ForeColor = System.Drawing.Color.White;
-            this.lbButtonM2StartStopWorkingBelt.Label = "start/stop working belt";
-            this.lbButtonM2StartStopWorkingBelt.Name = "lbButtonM2StartStopWorkingBelt";
-            this.lbButtonM2StartStopWorkingBelt.Renderer = null;
-            this.lbButtonM2StartStopWorkingBelt.RepeatInterval = 100;
-            this.lbButtonM2StartStopWorkingBelt.RepeatState = false;
-            this.lbButtonM2StartStopWorkingBelt.StartRepeatInterval = 500;
-            this.lbButtonM2StartStopWorkingBelt.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonM2StartStopWorkingBelt.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            this.lbButtonM2StartStopWorkingBelt.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM2StartStopWorkingBelt_ButtonChangeState);
-            this.lbButtonM2StartStopWorkingBelt.Click += new System.EventHandler(this.lbButtonM2StartStopWorkingBelt_Click);
-            // 
-            // dataGridViewM2TeachPoints
-            // 
-            this.dataGridViewM2TeachPoints.AllowUserToAddRows = false;
-            this.dataGridViewM2TeachPoints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewM2TeachPoints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ColumnM2PointID,
-            this.ColumnMeQuote,
-            this.ColumnM2Speed,
-            this.ColumnM2Register,
-            this.ColumnM2StartQuote,
-            this.Column1});
-            this.dataGridViewM2TeachPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            resources.ApplyResources(this.dataGridViewM2TeachPoints, "dataGridViewM2TeachPoints");
-            this.dataGridViewM2TeachPoints.Name = "dataGridViewM2TeachPoints";
-            this.dataGridViewM2TeachPoints.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewM2TeachPoints.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridViewM2TeachPoints.RowTemplate.Height = 48;
-            this.dataGridViewM2TeachPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridViewM2TeachPoints.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM2Points_CellContentClick);
-            // 
-            // ColumnM2PointID
-            // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ColumnM2PointID.DefaultCellStyle = dataGridViewCellStyle7;
-            this.ColumnM2PointID.Frozen = true;
-            resources.ApplyResources(this.ColumnM2PointID, "ColumnM2PointID");
-            this.ColumnM2PointID.Name = "ColumnM2PointID";
-            this.ColumnM2PointID.ReadOnly = true;
-            this.ColumnM2PointID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnM2PointID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ColumnMeQuote
-            // 
-            this.ColumnMeQuote.Frozen = true;
-            resources.ApplyResources(this.ColumnMeQuote, "ColumnMeQuote");
-            this.ColumnMeQuote.Name = "ColumnMeQuote";
-            // 
-            // ColumnM2Speed
-            // 
-            this.ColumnM2Speed.Frozen = true;
-            resources.ApplyResources(this.ColumnM2Speed, "ColumnM2Speed");
-            this.ColumnM2Speed.Name = "ColumnM2Speed";
-            // 
-            // ColumnM2Register
-            // 
-            resources.ApplyResources(this.ColumnM2Register, "ColumnM2Register");
-            this.ColumnM2Register.Name = "ColumnM2Register";
-            // 
-            // ColumnM2StartQuote
-            // 
-            resources.ApplyResources(this.ColumnM2StartQuote, "ColumnM2StartQuote");
-            this.ColumnM2StartQuote.Name = "ColumnM2StartQuote";
-            // 
-            // Column1
-            // 
-            resources.ApplyResources(this.Column1, "Column1");
-            this.Column1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // buttonM2PrintCycle
-            // 
-            resources.ApplyResources(this.buttonM2PrintCycle, "buttonM2PrintCycle");
-            this.buttonM2PrintCycle.Name = "buttonM2PrintCycle";
-            this.buttonM2PrintCycle.UseVisualStyleBackColor = true;
-            this.buttonM2PrintCycle.Click += new System.EventHandler(this.buttonM2PrintCycle_Click);
-            // 
-            // buttonM2ResetServo
-            // 
-            resources.ApplyResources(this.buttonM2ResetServo, "buttonM2ResetServo");
-            this.buttonM2ResetServo.Name = "buttonM2ResetServo";
-            this.buttonM2ResetServo.UseVisualStyleBackColor = true;
-            this.buttonM2ResetServo.Click += new System.EventHandler(this.buttonM2ResetServo_Click);
-            // 
-            // buttonM2ContrastClosing
-            // 
-            resources.ApplyResources(this.buttonM2ContrastClosing, "buttonM2ContrastClosing");
-            this.buttonM2ContrastClosing.Name = "buttonM2ContrastClosing";
-            this.buttonM2ContrastClosing.UseVisualStyleBackColor = true;
-            this.buttonM2ContrastClosing.Click += new System.EventHandler(this.buttonM2ContrastClosing_Click);
-            // 
-            // buttonM2ContrastOpening
-            // 
-            resources.ApplyResources(this.buttonM2ContrastOpening, "buttonM2ContrastOpening");
-            this.buttonM2ContrastOpening.Name = "buttonM2ContrastOpening";
-            this.buttonM2ContrastOpening.UseVisualStyleBackColor = true;
-            this.buttonM2ContrastOpening.Click += new System.EventHandler(this.buttonM2ContrastOpening_Click);
-            // 
-            // buttonM2CenteringClampsClosing
-            // 
-            resources.ApplyResources(this.buttonM2CenteringClampsClosing, "buttonM2CenteringClampsClosing");
-            this.buttonM2CenteringClampsClosing.Name = "buttonM2CenteringClampsClosing";
-            this.buttonM2CenteringClampsClosing.UseVisualStyleBackColor = true;
-            this.buttonM2CenteringClampsClosing.Click += new System.EventHandler(this.buttonM2CenteringClampsClosing_Click);
-            // 
-            // buttonM2CenteringClampsOpening
-            // 
-            resources.ApplyResources(this.buttonM2CenteringClampsOpening, "buttonM2CenteringClampsOpening");
-            this.buttonM2CenteringClampsOpening.Name = "buttonM2CenteringClampsOpening";
-            this.buttonM2CenteringClampsOpening.UseVisualStyleBackColor = true;
-            this.buttonM2CenteringClampsOpening.Click += new System.EventHandler(this.buttonM2CenteringClampsOpening_Click);
-            // 
-            // buttonM2BigClampClosing
-            // 
-            resources.ApplyResources(this.buttonM2BigClampClosing, "buttonM2BigClampClosing");
-            this.buttonM2BigClampClosing.Name = "buttonM2BigClampClosing";
-            this.buttonM2BigClampClosing.UseVisualStyleBackColor = true;
-            this.buttonM2BigClampClosing.Click += new System.EventHandler(this.buttonM2BigGripperClosing_Click);
-            // 
-            // buttonM2BigClampOpening
-            // 
-            resources.ApplyResources(this.buttonM2BigClampOpening, "buttonM2BigClampOpening");
-            this.buttonM2BigClampOpening.Name = "buttonM2BigClampOpening";
-            this.buttonM2BigClampOpening.UseVisualStyleBackColor = true;
-            this.buttonM2BigClampOpening.Click += new System.EventHandler(this.buttonM2BigClampOpening_Click);
-            // 
-            // buttonM2SmallClampClosing
-            // 
-            resources.ApplyResources(this.buttonM2SmallClampClosing, "buttonM2SmallClampClosing");
-            this.buttonM2SmallClampClosing.Name = "buttonM2SmallClampClosing";
-            this.buttonM2SmallClampClosing.UseVisualStyleBackColor = true;
-            this.buttonM2SmallClampClosing.Click += new System.EventHandler(this.buttonM2SmallClampClosing_Click);
-            // 
-            // buttonM2SmallClampOpening
-            // 
-            resources.ApplyResources(this.buttonM2SmallClampOpening, "buttonM2SmallClampOpening");
-            this.buttonM2SmallClampOpening.Name = "buttonM2SmallClampOpening";
-            this.buttonM2SmallClampOpening.UseVisualStyleBackColor = true;
-            this.buttonM2SmallClampOpening.Click += new System.EventHandler(this.buttonM2SmallClampOpening_Click);
-            // 
-            // tabPageT2M2_2
-            // 
-            this.tabPageT2M2_2.Controls.Add(this.comboBoxM2TestProgramList);
-            this.tabPageT2M2_2.Controls.Add(this.buttonM2TestSaveProgram);
-            this.tabPageT2M2_2.Controls.Add(this.buttonM2TestLoadProgram);
-            this.tabPageT2M2_2.Controls.Add(this.dataGridViewM2TestPoints);
-            this.tabPageT2M2_2.Controls.Add(this.lbButtonM2StartTest);
-            tabPageFormatStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT2M2_2.FormatStyle = tabPageFormatStyle19;
-            resources.ApplyResources(this.tabPageT2M2_2, "tabPageT2M2_2");
-            this.tabPageT2M2_2.Name = "tabPageT2M2_2";
-            this.tabPageT2M2_2.ParentPage = null;
-            this.tabPageT2M2_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT2M2_2.TextBounds")));
-            this.tabPageT2M2_2.TextSize = new System.Drawing.SizeF(43.60969F, 25.4663F);
-            // 
-            // comboBoxM2TestProgramList
-            // 
-            resources.ApplyResources(this.comboBoxM2TestProgramList, "comboBoxM2TestProgramList");
-            this.comboBoxM2TestProgramList.FormattingEnabled = true;
-            this.comboBoxM2TestProgramList.Name = "comboBoxM2TestProgramList";
-            // 
-            // buttonM2TestSaveProgram
-            // 
-            resources.ApplyResources(this.buttonM2TestSaveProgram, "buttonM2TestSaveProgram");
-            this.buttonM2TestSaveProgram.Name = "buttonM2TestSaveProgram";
-            this.buttonM2TestSaveProgram.UseVisualStyleBackColor = true;
-            this.buttonM2TestSaveProgram.Click += new System.EventHandler(this.buttonM2TestSaveProgram_Click);
-            // 
-            // buttonM2TestLoadProgram
-            // 
-            resources.ApplyResources(this.buttonM2TestLoadProgram, "buttonM2TestLoadProgram");
-            this.buttonM2TestLoadProgram.Name = "buttonM2TestLoadProgram";
-            this.buttonM2TestLoadProgram.UseVisualStyleBackColor = true;
-            this.buttonM2TestLoadProgram.Click += new System.EventHandler(this.buttonM2TestLoadProgram_Click);
-            // 
-            // dataGridViewM2TestPoints
-            // 
-            this.dataGridViewM2TestPoints.AllowUserToAddRows = false;
-            this.dataGridViewM2TestPoints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewM2TestPoints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.dataGridViewM2TestPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            resources.ApplyResources(this.dataGridViewM2TestPoints, "dataGridViewM2TestPoints");
-            this.dataGridViewM2TestPoints.Name = "dataGridViewM2TestPoints";
-            this.dataGridViewM2TestPoints.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewM2TestPoints.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewM2TestPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridViewM2TestPoints.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM2TestPoints_CellContentClick);
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewTextBoxColumn4.Frozen = true;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.Frozen = true;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.Frozen = true;
-            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // lbButtonM2StartTest
-            // 
-            this.lbButtonM2StartTest.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonM2StartTest.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            resources.ApplyResources(this.lbButtonM2StartTest, "lbButtonM2StartTest");
-            this.lbButtonM2StartTest.ForeColor = System.Drawing.Color.White;
-            this.lbButtonM2StartTest.Label = "START TEST";
-            this.lbButtonM2StartTest.Name = "lbButtonM2StartTest";
-            this.lbButtonM2StartTest.Renderer = null;
-            this.lbButtonM2StartTest.RepeatInterval = 100;
-            this.lbButtonM2StartTest.RepeatState = false;
-            this.lbButtonM2StartTest.StartRepeatInterval = 500;
-            this.lbButtonM2StartTest.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonM2StartTest.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            this.lbButtonM2StartTest.Click += new System.EventHandler(this.lbButtonM2StartTest_Click);
-            // 
-            // tabPageT2M2_4
-            // 
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2040M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2039M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2020M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2019M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2046M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2047M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2048M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2045M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2042M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2043M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2044M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2041M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2032M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2036M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2037M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2038M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2035M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2034M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2030M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2031M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2033M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2029M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2026M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2027M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2028M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2025M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2022M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2023M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2024M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2021M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2012M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2016M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2017M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2018M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2015M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2014M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2010M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2011M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2013M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2009M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2006M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2007M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2008M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2005M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2002M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2003M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2004M2);
-            this.tabPageT2M2_4.Controls.Add(this.lbLed2001M2);
-            tabPageFormatStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT2M2_4.FormatStyle = tabPageFormatStyle21;
-            resources.ApplyResources(this.tabPageT2M2_4, "tabPageT2M2_4");
-            this.tabPageT2M2_4.Name = "tabPageT2M2_4";
-            this.tabPageT2M2_4.ParentPage = null;
-            this.tabPageT2M2_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT2M2_4.TextBounds")));
-            this.tabPageT2M2_4.TextSize = new System.Drawing.SizeF(70.5882F, 25.4663F);
-            // 
-            // lbLed2040M2
-            // 
-            this.lbLed2040M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2040M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2040M2, "lbLed2040M2");
-            this.lbLed2040M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2040M2.Label = "spare";
-            this.lbLed2040M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2040M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2040M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2040M2.Name = "lbLed2040M2";
-            this.lbLed2040M2.Renderer = null;
-            this.lbLed2040M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2040M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2039M2
-            // 
-            this.lbLed2039M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2039M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2039M2, "lbLed2039M2");
-            this.lbLed2039M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2039M2.Label = "spare";
-            this.lbLed2039M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2039M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2039M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2039M2.Name = "lbLed2039M2";
-            this.lbLed2039M2.Renderer = null;
-            this.lbLed2039M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2039M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2020M2
-            // 
-            this.lbLed2020M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2020M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2020M2, "lbLed2020M2");
-            this.lbLed2020M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2020M2.Label = "clamp 1 centering opened";
-            this.lbLed2020M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2020M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2020M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2020M2.Name = "lbLed2020M2";
-            this.lbLed2020M2.Renderer = null;
-            this.lbLed2020M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2020M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2019M2
-            // 
-            this.lbLed2019M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2019M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2019M2, "lbLed2019M2");
-            this.lbLed2019M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2019M2.Label = "small clamp opening";
-            this.lbLed2019M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2019M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2019M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2019M2.Name = "lbLed2019M2";
-            this.lbLed2019M2.Renderer = null;
-            this.lbLed2019M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2019M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2046M2
-            // 
-            this.lbLed2046M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2046M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2046M2, "lbLed2046M2");
-            this.lbLed2046M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2046M2.Label = "spare";
-            this.lbLed2046M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2046M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2046M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2046M2.Name = "lbLed2046M2";
-            this.lbLed2046M2.Renderer = null;
-            this.lbLed2046M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2046M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2047M2
-            // 
-            this.lbLed2047M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2047M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2047M2, "lbLed2047M2");
-            this.lbLed2047M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2047M2.Label = "spare";
-            this.lbLed2047M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2047M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2047M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2047M2.Name = "lbLed2047M2";
-            this.lbLed2047M2.Renderer = null;
-            this.lbLed2047M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2047M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2048M2
-            // 
-            this.lbLed2048M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2048M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2048M2, "lbLed2048M2");
-            this.lbLed2048M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2048M2.Label = "spare";
-            this.lbLed2048M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2048M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2048M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2048M2.Name = "lbLed2048M2";
-            this.lbLed2048M2.Renderer = null;
-            this.lbLed2048M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2048M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2045M2
-            // 
-            this.lbLed2045M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2045M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2045M2, "lbLed2045M2");
-            this.lbLed2045M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2045M2.Label = "spare";
-            this.lbLed2045M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2045M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2045M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2045M2.Name = "lbLed2045M2";
-            this.lbLed2045M2.Renderer = null;
-            this.lbLed2045M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2045M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2042M2
-            // 
-            this.lbLed2042M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2042M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2042M2, "lbLed2042M2");
-            this.lbLed2042M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2042M2.Label = "spare";
-            this.lbLed2042M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2042M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2042M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2042M2.Name = "lbLed2042M2";
-            this.lbLed2042M2.Renderer = null;
-            this.lbLed2042M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2042M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2043M2
-            // 
-            this.lbLed2043M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2043M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2043M2, "lbLed2043M2");
-            this.lbLed2043M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2043M2.Label = "spare";
-            this.lbLed2043M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2043M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2043M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2043M2.Name = "lbLed2043M2";
-            this.lbLed2043M2.Renderer = null;
-            this.lbLed2043M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2043M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2044M2
-            // 
-            this.lbLed2044M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2044M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2044M2, "lbLed2044M2");
-            this.lbLed2044M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2044M2.Label = "spare";
-            this.lbLed2044M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2044M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2044M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2044M2.Name = "lbLed2044M2";
-            this.lbLed2044M2.Renderer = null;
-            this.lbLed2044M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2044M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2041M2
-            // 
-            this.lbLed2041M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2041M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2041M2, "lbLed2041M2");
-            this.lbLed2041M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2041M2.Label = "spare";
-            this.lbLed2041M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2041M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2041M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2041M2.Name = "lbLed2041M2";
-            this.lbLed2041M2.Renderer = null;
-            this.lbLed2041M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2041M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2032M2
-            // 
-            this.lbLed2032M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2032M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2032M2, "lbLed2032M2");
-            this.lbLed2032M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2032M2.Label = "spare";
-            this.lbLed2032M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2032M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2032M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2032M2.Name = "lbLed2032M2";
-            this.lbLed2032M2.Renderer = null;
-            this.lbLed2032M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2032M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2036M2
-            // 
-            this.lbLed2036M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2036M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2036M2, "lbLed2036M2");
-            this.lbLed2036M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2036M2.Label = "spare";
-            this.lbLed2036M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2036M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2036M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2036M2.Name = "lbLed2036M2";
-            this.lbLed2036M2.Renderer = null;
-            this.lbLed2036M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2036M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2037M2
-            // 
-            this.lbLed2037M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2037M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2037M2, "lbLed2037M2");
-            this.lbLed2037M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2037M2.Label = "spare";
-            this.lbLed2037M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2037M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2037M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2037M2.Name = "lbLed2037M2";
-            this.lbLed2037M2.Renderer = null;
-            this.lbLed2037M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2037M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2038M2
-            // 
-            this.lbLed2038M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2038M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2038M2, "lbLed2038M2");
-            this.lbLed2038M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2038M2.Label = "spare";
-            this.lbLed2038M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2038M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2038M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2038M2.Name = "lbLed2038M2";
-            this.lbLed2038M2.Renderer = null;
-            this.lbLed2038M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2038M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2035M2
-            // 
-            this.lbLed2035M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2035M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2035M2, "lbLed2035M2");
-            this.lbLed2035M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2035M2.Label = "semaphore red";
-            this.lbLed2035M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2035M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2035M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2035M2.Name = "lbLed2035M2";
-            this.lbLed2035M2.Renderer = null;
-            this.lbLed2035M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2035M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2034M2
-            // 
-            this.lbLed2034M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2034M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2034M2, "lbLed2034M2");
-            this.lbLed2034M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2034M2.Label = "semaphore yellow";
-            this.lbLed2034M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2034M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2034M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2034M2.Name = "lbLed2034M2";
-            this.lbLed2034M2.Renderer = null;
-            this.lbLed2034M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2034M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2030M2
-            // 
-            this.lbLed2030M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2030M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2030M2, "lbLed2030M2");
-            this.lbLed2030M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2030M2.Label = "spare";
-            this.lbLed2030M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2030M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2030M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2030M2.Name = "lbLed2030M2";
-            this.lbLed2030M2.Renderer = null;
-            this.lbLed2030M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2030M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2031M2
-            // 
-            this.lbLed2031M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2031M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2031M2, "lbLed2031M2");
-            this.lbLed2031M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2031M2.Label = "spare";
-            this.lbLed2031M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2031M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2031M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2031M2.Name = "lbLed2031M2";
-            this.lbLed2031M2.Renderer = null;
-            this.lbLed2031M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2031M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2033M2
-            // 
-            this.lbLed2033M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2033M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2033M2, "lbLed2033M2");
-            this.lbLed2033M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2033M2.Label = "semaphore green";
-            this.lbLed2033M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2033M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2033M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2033M2.Name = "lbLed2033M2";
-            this.lbLed2033M2.Renderer = null;
-            this.lbLed2033M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2033M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2029M2
-            // 
-            this.lbLed2029M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2029M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2029M2, "lbLed2029M2");
-            this.lbLed2029M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2029M2.Label = "spare";
-            this.lbLed2029M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2029M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2029M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2029M2.Name = "lbLed2029M2";
-            this.lbLed2029M2.Renderer = null;
-            this.lbLed2029M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2029M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2026M2
-            // 
-            this.lbLed2026M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2026M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2026M2, "lbLed2026M2");
-            this.lbLed2026M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2026M2.Label = "spare";
-            this.lbLed2026M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2026M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2026M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2026M2.Name = "lbLed2026M2";
-            this.lbLed2026M2.Renderer = null;
-            this.lbLed2026M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2026M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2027M2
-            // 
-            this.lbLed2027M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2027M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2027M2, "lbLed2027M2");
-            this.lbLed2027M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2027M2.Label = "spare";
-            this.lbLed2027M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2027M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2027M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2027M2.Name = "lbLed2027M2";
-            this.lbLed2027M2.Renderer = null;
-            this.lbLed2027M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2027M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2028M2
-            // 
-            this.lbLed2028M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2028M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2028M2, "lbLed2028M2");
-            this.lbLed2028M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2028M2.Label = "spare";
-            this.lbLed2028M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2028M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2028M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2028M2.Name = "lbLed2028M2";
-            this.lbLed2028M2.Renderer = null;
-            this.lbLed2028M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2028M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2025M2
-            // 
-            this.lbLed2025M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2025M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2025M2, "lbLed2025M2");
-            this.lbLed2025M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2025M2.Label = "spare";
-            this.lbLed2025M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2025M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2025M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2025M2.Name = "lbLed2025M2";
-            this.lbLed2025M2.Renderer = null;
-            this.lbLed2025M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2025M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2022M2
-            // 
-            this.lbLed2022M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2022M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2022M2, "lbLed2022M2");
-            this.lbLed2022M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2022M2.Label = "spare";
-            this.lbLed2022M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2022M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2022M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2022M2.Name = "lbLed2022M2";
-            this.lbLed2022M2.Renderer = null;
-            this.lbLed2022M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2022M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2023M2
-            // 
-            this.lbLed2023M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2023M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2023M2, "lbLed2023M2");
-            this.lbLed2023M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2023M2.Label = "spare";
-            this.lbLed2023M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2023M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2023M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2023M2.Name = "lbLed2023M2";
-            this.lbLed2023M2.Renderer = null;
-            this.lbLed2023M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2023M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2024M2
-            // 
-            this.lbLed2024M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2024M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2024M2, "lbLed2024M2");
-            this.lbLed2024M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2024M2.Label = "spare";
-            this.lbLed2024M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2024M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2024M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2024M2.Name = "lbLed2024M2";
-            this.lbLed2024M2.Renderer = null;
-            this.lbLed2024M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2024M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2021M2
-            // 
-            this.lbLed2021M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2021M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2021M2, "lbLed2021M2");
-            this.lbLed2021M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2021M2.Label = "clamp 2 centering opened";
-            this.lbLed2021M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2021M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2021M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2021M2.Name = "lbLed2021M2";
-            this.lbLed2021M2.Renderer = null;
-            this.lbLed2021M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2021M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2012M2
-            // 
-            this.lbLed2012M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2012M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2012M2, "lbLed2012M2");
-            this.lbLed2012M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2012M2.Label = "reset servo power";
-            this.lbLed2012M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2012M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2012M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2012M2.Name = "lbLed2012M2";
-            this.lbLed2012M2.Renderer = null;
-            this.lbLed2012M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2012M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2016M2
-            // 
-            this.lbLed2016M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2016M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2016M2, "lbLed2016M2");
-            this.lbLed2016M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2016M2.Label = "reset servo error";
-            this.lbLed2016M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2016M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2016M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2016M2.Name = "lbLed2016M2";
-            this.lbLed2016M2.Renderer = null;
-            this.lbLed2016M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2016M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2017M2
-            // 
-            this.lbLed2017M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2017M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2017M2, "lbLed2017M2");
-            this.lbLed2017M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2017M2.Label = "big clamp opening";
-            this.lbLed2017M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2017M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2017M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2017M2.Name = "lbLed2017M2";
-            this.lbLed2017M2.Renderer = null;
-            this.lbLed2017M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2017M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2018M2
-            // 
-            this.lbLed2018M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2018M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2018M2, "lbLed2018M2");
-            this.lbLed2018M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2018M2.Label = "spare";
-            this.lbLed2018M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2018M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2018M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2018M2.Name = "lbLed2018M2";
-            this.lbLed2018M2.Renderer = null;
-            this.lbLed2018M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2018M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2015M2
-            // 
-            this.lbLed2015M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2015M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2015M2, "lbLed2015M2");
-            this.lbLed2015M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2015M2.Label = "servo on";
-            this.lbLed2015M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2015M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2015M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2015M2.Name = "lbLed2015M2";
-            this.lbLed2015M2.Renderer = null;
-            this.lbLed2015M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2015M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2014M2
-            // 
-            this.lbLed2014M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2014M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2014M2, "lbLed2014M2");
-            this.lbLed2014M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2014M2.Label = "servo fast stop";
-            this.lbLed2014M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2014M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2014M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2014M2.Name = "lbLed2014M2";
-            this.lbLed2014M2.Renderer = null;
-            this.lbLed2014M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2014M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2010M2
-            // 
-            this.lbLed2010M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2010M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2010M2, "lbLed2010M2");
-            this.lbLed2010M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2010M2.Label = "servo power on";
-            this.lbLed2010M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2010M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2010M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2010M2.Name = "lbLed2010M2";
-            this.lbLed2010M2.Renderer = null;
-            this.lbLed2010M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2010M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2011M2
-            // 
-            this.lbLed2011M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2011M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2011M2, "lbLed2011M2");
-            this.lbLed2011M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2011M2.Label = "spare";
-            this.lbLed2011M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2011M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2011M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2011M2.Name = "lbLed2011M2";
-            this.lbLed2011M2.Renderer = null;
-            this.lbLed2011M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2011M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2013M2
-            // 
-            this.lbLed2013M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2013M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2013M2, "lbLed2013M2");
-            this.lbLed2013M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2013M2.Label = "servo homing";
-            this.lbLed2013M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2013M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2013M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2013M2.Name = "lbLed2013M2";
-            this.lbLed2013M2.Renderer = null;
-            this.lbLed2013M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2013M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2009M2
-            // 
-            this.lbLed2009M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2009M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2009M2, "lbLed2009M2");
-            this.lbLed2009M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2009M2.Label = "servo brake";
-            this.lbLed2009M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2009M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2009M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2009M2.Name = "lbLed2009M2";
-            this.lbLed2009M2.Renderer = null;
-            this.lbLed2009M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2009M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2006M2
-            // 
-            this.lbLed2006M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2006M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2006M2, "lbLed2006M2");
-            this.lbLed2006M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2006M2.Label = "working belt start inverter";
-            this.lbLed2006M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2006M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2006M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2006M2.Name = "lbLed2006M2";
-            this.lbLed2006M2.Renderer = null;
-            this.lbLed2006M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2006M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2007M2
-            // 
-            this.lbLed2007M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2007M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2007M2, "lbLed2007M2");
-            this.lbLed2007M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2007M2.Label = "start print";
-            this.lbLed2007M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2007M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2007M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2007M2.Name = "lbLed2007M2";
-            this.lbLed2007M2.Renderer = null;
-            this.lbLed2007M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2007M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2008M2
-            // 
-            this.lbLed2008M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2008M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2008M2, "lbLed2008M2");
-            this.lbLed2008M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2008M2.Label = "spare";
-            this.lbLed2008M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2008M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2008M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2008M2.Name = "lbLed2008M2";
-            this.lbLed2008M2.Renderer = null;
-            this.lbLed2008M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2008M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2005M2
-            // 
-            this.lbLed2005M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2005M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2005M2, "lbLed2005M2");
-            this.lbLed2005M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2005M2.Label = "exit belt start inverter";
-            this.lbLed2005M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2005M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2005M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2005M2.Name = "lbLed2005M2";
-            this.lbLed2005M2.Renderer = null;
-            this.lbLed2005M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2005M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2002M2
-            // 
-            this.lbLed2002M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2002M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2002M2, "lbLed2002M2");
-            this.lbLed2002M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2002M2.Label = "servo fault";
-            this.lbLed2002M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2002M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2002M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2002M2.Name = "lbLed2002M2";
-            this.lbLed2002M2.Renderer = null;
-            this.lbLed2002M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2002M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2003M2
-            // 
-            this.lbLed2003M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2003M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2003M2, "lbLed2003M2");
-            this.lbLed2003M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2003M2.Label = "spare";
-            this.lbLed2003M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2003M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2003M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2003M2.Name = "lbLed2003M2";
-            this.lbLed2003M2.Renderer = null;
-            this.lbLed2003M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2003M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2004M2
-            // 
-            this.lbLed2004M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2004M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2004M2, "lbLed2004M2");
-            this.lbLed2004M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2004M2.Label = "spare";
-            this.lbLed2004M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2004M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed2004M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2004M2.Name = "lbLed2004M2";
-            this.lbLed2004M2.Renderer = null;
-            this.lbLed2004M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed2004M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // lbLed2001M2
-            // 
-            this.lbLed2001M2.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed2001M2.BlinkInterval = 500;
-            resources.ApplyResources(this.lbLed2001M2, "lbLed2001M2");
-            this.lbLed2001M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2001M2.Label = "servo ready";
-            this.lbLed2001M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed2001M2.LedColor = System.Drawing.Color.Yellow;
-            this.lbLed2001M2.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed2001M2.Name = "lbLed2001M2";
-            this.lbLed2001M2.Renderer = null;
-            this.lbLed2001M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            this.lbLed2001M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
             // 
             // tabPageT2M2_3
             // 
@@ -4301,6 +3010,1297 @@ namespace GUI
             this.lbLed1001M2.Renderer = null;
             this.lbLed1001M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
             this.lbLed1001M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // tabPageT2M2_4
+            // 
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2040M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2039M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2020M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2019M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2046M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2047M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2048M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2045M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2042M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2043M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2044M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2041M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2032M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2036M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2037M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2038M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2035M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2034M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2030M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2031M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2033M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2029M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2026M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2027M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2028M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2025M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2022M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2023M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2024M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2021M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2012M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2016M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2017M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2018M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2015M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2014M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2010M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2011M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2013M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2009M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2006M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2007M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2008M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2005M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2002M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2003M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2004M2);
+            this.tabPageT2M2_4.Controls.Add(this.lbLed2001M2);
+            tabPageFormatStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT2M2_4.FormatStyle = tabPageFormatStyle19;
+            resources.ApplyResources(this.tabPageT2M2_4, "tabPageT2M2_4");
+            this.tabPageT2M2_4.Name = "tabPageT2M2_4";
+            this.tabPageT2M2_4.ParentPage = null;
+            this.tabPageT2M2_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT2M2_4.TextBounds")));
+            this.tabPageT2M2_4.TextSize = new System.Drawing.SizeF(70.5882F, 25.4663F);
+            // 
+            // lbLed2040M2
+            // 
+            this.lbLed2040M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2040M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2040M2, "lbLed2040M2");
+            this.lbLed2040M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2040M2.Label = "spare";
+            this.lbLed2040M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2040M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2040M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2040M2.Name = "lbLed2040M2";
+            this.lbLed2040M2.Renderer = null;
+            this.lbLed2040M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2040M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2039M2
+            // 
+            this.lbLed2039M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2039M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2039M2, "lbLed2039M2");
+            this.lbLed2039M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2039M2.Label = "spare";
+            this.lbLed2039M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2039M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2039M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2039M2.Name = "lbLed2039M2";
+            this.lbLed2039M2.Renderer = null;
+            this.lbLed2039M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2039M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2020M2
+            // 
+            this.lbLed2020M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2020M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2020M2, "lbLed2020M2");
+            this.lbLed2020M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2020M2.Label = "clamp 1 centering opened";
+            this.lbLed2020M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2020M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2020M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2020M2.Name = "lbLed2020M2";
+            this.lbLed2020M2.Renderer = null;
+            this.lbLed2020M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2020M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2019M2
+            // 
+            this.lbLed2019M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2019M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2019M2, "lbLed2019M2");
+            this.lbLed2019M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2019M2.Label = "small clamp opening";
+            this.lbLed2019M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2019M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2019M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2019M2.Name = "lbLed2019M2";
+            this.lbLed2019M2.Renderer = null;
+            this.lbLed2019M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2019M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2046M2
+            // 
+            this.lbLed2046M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2046M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2046M2, "lbLed2046M2");
+            this.lbLed2046M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2046M2.Label = "spare";
+            this.lbLed2046M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2046M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2046M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2046M2.Name = "lbLed2046M2";
+            this.lbLed2046M2.Renderer = null;
+            this.lbLed2046M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2046M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2047M2
+            // 
+            this.lbLed2047M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2047M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2047M2, "lbLed2047M2");
+            this.lbLed2047M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2047M2.Label = "spare";
+            this.lbLed2047M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2047M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2047M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2047M2.Name = "lbLed2047M2";
+            this.lbLed2047M2.Renderer = null;
+            this.lbLed2047M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2047M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2048M2
+            // 
+            this.lbLed2048M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2048M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2048M2, "lbLed2048M2");
+            this.lbLed2048M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2048M2.Label = "spare";
+            this.lbLed2048M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2048M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2048M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2048M2.Name = "lbLed2048M2";
+            this.lbLed2048M2.Renderer = null;
+            this.lbLed2048M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2048M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2045M2
+            // 
+            this.lbLed2045M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2045M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2045M2, "lbLed2045M2");
+            this.lbLed2045M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2045M2.Label = "spare";
+            this.lbLed2045M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2045M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2045M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2045M2.Name = "lbLed2045M2";
+            this.lbLed2045M2.Renderer = null;
+            this.lbLed2045M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2045M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2042M2
+            // 
+            this.lbLed2042M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2042M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2042M2, "lbLed2042M2");
+            this.lbLed2042M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2042M2.Label = "spare";
+            this.lbLed2042M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2042M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2042M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2042M2.Name = "lbLed2042M2";
+            this.lbLed2042M2.Renderer = null;
+            this.lbLed2042M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2042M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2043M2
+            // 
+            this.lbLed2043M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2043M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2043M2, "lbLed2043M2");
+            this.lbLed2043M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2043M2.Label = "spare";
+            this.lbLed2043M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2043M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2043M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2043M2.Name = "lbLed2043M2";
+            this.lbLed2043M2.Renderer = null;
+            this.lbLed2043M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2043M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2044M2
+            // 
+            this.lbLed2044M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2044M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2044M2, "lbLed2044M2");
+            this.lbLed2044M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2044M2.Label = "spare";
+            this.lbLed2044M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2044M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2044M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2044M2.Name = "lbLed2044M2";
+            this.lbLed2044M2.Renderer = null;
+            this.lbLed2044M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2044M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2041M2
+            // 
+            this.lbLed2041M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2041M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2041M2, "lbLed2041M2");
+            this.lbLed2041M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2041M2.Label = "spare";
+            this.lbLed2041M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2041M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2041M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2041M2.Name = "lbLed2041M2";
+            this.lbLed2041M2.Renderer = null;
+            this.lbLed2041M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2041M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2032M2
+            // 
+            this.lbLed2032M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2032M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2032M2, "lbLed2032M2");
+            this.lbLed2032M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2032M2.Label = "spare";
+            this.lbLed2032M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2032M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2032M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2032M2.Name = "lbLed2032M2";
+            this.lbLed2032M2.Renderer = null;
+            this.lbLed2032M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2032M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2036M2
+            // 
+            this.lbLed2036M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2036M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2036M2, "lbLed2036M2");
+            this.lbLed2036M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2036M2.Label = "spare";
+            this.lbLed2036M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2036M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2036M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2036M2.Name = "lbLed2036M2";
+            this.lbLed2036M2.Renderer = null;
+            this.lbLed2036M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2036M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2037M2
+            // 
+            this.lbLed2037M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2037M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2037M2, "lbLed2037M2");
+            this.lbLed2037M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2037M2.Label = "spare";
+            this.lbLed2037M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2037M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2037M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2037M2.Name = "lbLed2037M2";
+            this.lbLed2037M2.Renderer = null;
+            this.lbLed2037M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2037M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2038M2
+            // 
+            this.lbLed2038M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2038M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2038M2, "lbLed2038M2");
+            this.lbLed2038M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2038M2.Label = "spare";
+            this.lbLed2038M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2038M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2038M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2038M2.Name = "lbLed2038M2";
+            this.lbLed2038M2.Renderer = null;
+            this.lbLed2038M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2038M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2035M2
+            // 
+            this.lbLed2035M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2035M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2035M2, "lbLed2035M2");
+            this.lbLed2035M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2035M2.Label = "semaphore red";
+            this.lbLed2035M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2035M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2035M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2035M2.Name = "lbLed2035M2";
+            this.lbLed2035M2.Renderer = null;
+            this.lbLed2035M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2035M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2034M2
+            // 
+            this.lbLed2034M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2034M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2034M2, "lbLed2034M2");
+            this.lbLed2034M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2034M2.Label = "semaphore yellow";
+            this.lbLed2034M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2034M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2034M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2034M2.Name = "lbLed2034M2";
+            this.lbLed2034M2.Renderer = null;
+            this.lbLed2034M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2034M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2030M2
+            // 
+            this.lbLed2030M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2030M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2030M2, "lbLed2030M2");
+            this.lbLed2030M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2030M2.Label = "spare";
+            this.lbLed2030M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2030M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2030M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2030M2.Name = "lbLed2030M2";
+            this.lbLed2030M2.Renderer = null;
+            this.lbLed2030M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2030M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2031M2
+            // 
+            this.lbLed2031M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2031M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2031M2, "lbLed2031M2");
+            this.lbLed2031M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2031M2.Label = "spare";
+            this.lbLed2031M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2031M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2031M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2031M2.Name = "lbLed2031M2";
+            this.lbLed2031M2.Renderer = null;
+            this.lbLed2031M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2031M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2033M2
+            // 
+            this.lbLed2033M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2033M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2033M2, "lbLed2033M2");
+            this.lbLed2033M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2033M2.Label = "semaphore green";
+            this.lbLed2033M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2033M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2033M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2033M2.Name = "lbLed2033M2";
+            this.lbLed2033M2.Renderer = null;
+            this.lbLed2033M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2033M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2029M2
+            // 
+            this.lbLed2029M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2029M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2029M2, "lbLed2029M2");
+            this.lbLed2029M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2029M2.Label = "spare";
+            this.lbLed2029M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2029M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2029M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2029M2.Name = "lbLed2029M2";
+            this.lbLed2029M2.Renderer = null;
+            this.lbLed2029M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2029M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2026M2
+            // 
+            this.lbLed2026M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2026M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2026M2, "lbLed2026M2");
+            this.lbLed2026M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2026M2.Label = "spare";
+            this.lbLed2026M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2026M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2026M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2026M2.Name = "lbLed2026M2";
+            this.lbLed2026M2.Renderer = null;
+            this.lbLed2026M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2026M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2027M2
+            // 
+            this.lbLed2027M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2027M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2027M2, "lbLed2027M2");
+            this.lbLed2027M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2027M2.Label = "spare";
+            this.lbLed2027M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2027M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2027M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2027M2.Name = "lbLed2027M2";
+            this.lbLed2027M2.Renderer = null;
+            this.lbLed2027M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2027M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2028M2
+            // 
+            this.lbLed2028M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2028M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2028M2, "lbLed2028M2");
+            this.lbLed2028M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2028M2.Label = "spare";
+            this.lbLed2028M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2028M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2028M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2028M2.Name = "lbLed2028M2";
+            this.lbLed2028M2.Renderer = null;
+            this.lbLed2028M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2028M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2025M2
+            // 
+            this.lbLed2025M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2025M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2025M2, "lbLed2025M2");
+            this.lbLed2025M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2025M2.Label = "spare";
+            this.lbLed2025M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2025M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2025M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2025M2.Name = "lbLed2025M2";
+            this.lbLed2025M2.Renderer = null;
+            this.lbLed2025M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2025M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2022M2
+            // 
+            this.lbLed2022M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2022M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2022M2, "lbLed2022M2");
+            this.lbLed2022M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2022M2.Label = "spare";
+            this.lbLed2022M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2022M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2022M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2022M2.Name = "lbLed2022M2";
+            this.lbLed2022M2.Renderer = null;
+            this.lbLed2022M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2022M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2023M2
+            // 
+            this.lbLed2023M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2023M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2023M2, "lbLed2023M2");
+            this.lbLed2023M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2023M2.Label = "spare";
+            this.lbLed2023M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2023M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2023M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2023M2.Name = "lbLed2023M2";
+            this.lbLed2023M2.Renderer = null;
+            this.lbLed2023M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2023M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2024M2
+            // 
+            this.lbLed2024M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2024M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2024M2, "lbLed2024M2");
+            this.lbLed2024M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2024M2.Label = "spare";
+            this.lbLed2024M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2024M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2024M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2024M2.Name = "lbLed2024M2";
+            this.lbLed2024M2.Renderer = null;
+            this.lbLed2024M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2024M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2021M2
+            // 
+            this.lbLed2021M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2021M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2021M2, "lbLed2021M2");
+            this.lbLed2021M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2021M2.Label = "clamp 2 centering opened";
+            this.lbLed2021M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2021M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2021M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2021M2.Name = "lbLed2021M2";
+            this.lbLed2021M2.Renderer = null;
+            this.lbLed2021M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2021M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2012M2
+            // 
+            this.lbLed2012M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2012M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2012M2, "lbLed2012M2");
+            this.lbLed2012M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2012M2.Label = "reset servo power";
+            this.lbLed2012M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2012M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2012M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2012M2.Name = "lbLed2012M2";
+            this.lbLed2012M2.Renderer = null;
+            this.lbLed2012M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2012M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2016M2
+            // 
+            this.lbLed2016M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2016M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2016M2, "lbLed2016M2");
+            this.lbLed2016M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2016M2.Label = "reset servo error";
+            this.lbLed2016M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2016M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2016M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2016M2.Name = "lbLed2016M2";
+            this.lbLed2016M2.Renderer = null;
+            this.lbLed2016M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2016M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2017M2
+            // 
+            this.lbLed2017M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2017M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2017M2, "lbLed2017M2");
+            this.lbLed2017M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2017M2.Label = "big clamp opening";
+            this.lbLed2017M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2017M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2017M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2017M2.Name = "lbLed2017M2";
+            this.lbLed2017M2.Renderer = null;
+            this.lbLed2017M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2017M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2018M2
+            // 
+            this.lbLed2018M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2018M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2018M2, "lbLed2018M2");
+            this.lbLed2018M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2018M2.Label = "spare";
+            this.lbLed2018M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2018M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2018M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2018M2.Name = "lbLed2018M2";
+            this.lbLed2018M2.Renderer = null;
+            this.lbLed2018M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2018M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2015M2
+            // 
+            this.lbLed2015M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2015M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2015M2, "lbLed2015M2");
+            this.lbLed2015M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2015M2.Label = "servo on";
+            this.lbLed2015M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2015M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2015M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2015M2.Name = "lbLed2015M2";
+            this.lbLed2015M2.Renderer = null;
+            this.lbLed2015M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2015M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2014M2
+            // 
+            this.lbLed2014M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2014M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2014M2, "lbLed2014M2");
+            this.lbLed2014M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2014M2.Label = "servo fast stop";
+            this.lbLed2014M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2014M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2014M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2014M2.Name = "lbLed2014M2";
+            this.lbLed2014M2.Renderer = null;
+            this.lbLed2014M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2014M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2010M2
+            // 
+            this.lbLed2010M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2010M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2010M2, "lbLed2010M2");
+            this.lbLed2010M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2010M2.Label = "servo power on";
+            this.lbLed2010M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2010M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2010M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2010M2.Name = "lbLed2010M2";
+            this.lbLed2010M2.Renderer = null;
+            this.lbLed2010M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2010M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2011M2
+            // 
+            this.lbLed2011M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2011M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2011M2, "lbLed2011M2");
+            this.lbLed2011M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2011M2.Label = "spare";
+            this.lbLed2011M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2011M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2011M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2011M2.Name = "lbLed2011M2";
+            this.lbLed2011M2.Renderer = null;
+            this.lbLed2011M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2011M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2013M2
+            // 
+            this.lbLed2013M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2013M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2013M2, "lbLed2013M2");
+            this.lbLed2013M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2013M2.Label = "servo homing";
+            this.lbLed2013M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2013M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2013M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2013M2.Name = "lbLed2013M2";
+            this.lbLed2013M2.Renderer = null;
+            this.lbLed2013M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2013M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2009M2
+            // 
+            this.lbLed2009M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2009M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2009M2, "lbLed2009M2");
+            this.lbLed2009M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2009M2.Label = "servo brake";
+            this.lbLed2009M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2009M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2009M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2009M2.Name = "lbLed2009M2";
+            this.lbLed2009M2.Renderer = null;
+            this.lbLed2009M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2009M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2006M2
+            // 
+            this.lbLed2006M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2006M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2006M2, "lbLed2006M2");
+            this.lbLed2006M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2006M2.Label = "working belt start inverter";
+            this.lbLed2006M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2006M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2006M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2006M2.Name = "lbLed2006M2";
+            this.lbLed2006M2.Renderer = null;
+            this.lbLed2006M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2006M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2007M2
+            // 
+            this.lbLed2007M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2007M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2007M2, "lbLed2007M2");
+            this.lbLed2007M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2007M2.Label = "start print";
+            this.lbLed2007M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2007M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2007M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2007M2.Name = "lbLed2007M2";
+            this.lbLed2007M2.Renderer = null;
+            this.lbLed2007M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2007M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2008M2
+            // 
+            this.lbLed2008M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2008M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2008M2, "lbLed2008M2");
+            this.lbLed2008M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2008M2.Label = "spare";
+            this.lbLed2008M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2008M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2008M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2008M2.Name = "lbLed2008M2";
+            this.lbLed2008M2.Renderer = null;
+            this.lbLed2008M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2008M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2005M2
+            // 
+            this.lbLed2005M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2005M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2005M2, "lbLed2005M2");
+            this.lbLed2005M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2005M2.Label = "exit belt start inverter";
+            this.lbLed2005M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2005M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2005M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2005M2.Name = "lbLed2005M2";
+            this.lbLed2005M2.Renderer = null;
+            this.lbLed2005M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2005M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2002M2
+            // 
+            this.lbLed2002M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2002M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2002M2, "lbLed2002M2");
+            this.lbLed2002M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2002M2.Label = "servo fault";
+            this.lbLed2002M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2002M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2002M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2002M2.Name = "lbLed2002M2";
+            this.lbLed2002M2.Renderer = null;
+            this.lbLed2002M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2002M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2003M2
+            // 
+            this.lbLed2003M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2003M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2003M2, "lbLed2003M2");
+            this.lbLed2003M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2003M2.Label = "spare";
+            this.lbLed2003M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2003M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2003M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2003M2.Name = "lbLed2003M2";
+            this.lbLed2003M2.Renderer = null;
+            this.lbLed2003M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2003M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2004M2
+            // 
+            this.lbLed2004M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2004M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2004M2, "lbLed2004M2");
+            this.lbLed2004M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2004M2.Label = "spare";
+            this.lbLed2004M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2004M2.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2004M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2004M2.Name = "lbLed2004M2";
+            this.lbLed2004M2.Renderer = null;
+            this.lbLed2004M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2004M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // lbLed2001M2
+            // 
+            this.lbLed2001M2.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2001M2.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLed2001M2, "lbLed2001M2");
+            this.lbLed2001M2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2001M2.Label = "servo ready";
+            this.lbLed2001M2.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2001M2.LedColor = System.Drawing.Color.Yellow;
+            this.lbLed2001M2.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2001M2.Name = "lbLed2001M2";
+            this.lbLed2001M2.Renderer = null;
+            this.lbLed2001M2.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+            this.lbLed2001M2.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            // 
+            // tabPageT2M2_2
+            // 
+            this.tabPageT2M2_2.Controls.Add(this.comboBoxM2TestProgramList);
+            this.tabPageT2M2_2.Controls.Add(this.buttonM2TestSaveProgram);
+            this.tabPageT2M2_2.Controls.Add(this.buttonM2TestLoadProgram);
+            this.tabPageT2M2_2.Controls.Add(this.dataGridViewM2TestPoints);
+            this.tabPageT2M2_2.Controls.Add(this.lbButtonM2StartTest);
+            tabPageFormatStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT2M2_2.FormatStyle = tabPageFormatStyle20;
+            resources.ApplyResources(this.tabPageT2M2_2, "tabPageT2M2_2");
+            this.tabPageT2M2_2.Name = "tabPageT2M2_2";
+            this.tabPageT2M2_2.ParentPage = null;
+            this.tabPageT2M2_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT2M2_2.TextBounds")));
+            this.tabPageT2M2_2.TextSize = new System.Drawing.SizeF(43.60969F, 25.4663F);
+            // 
+            // comboBoxM2TestProgramList
+            // 
+            resources.ApplyResources(this.comboBoxM2TestProgramList, "comboBoxM2TestProgramList");
+            this.comboBoxM2TestProgramList.FormattingEnabled = true;
+            this.comboBoxM2TestProgramList.Name = "comboBoxM2TestProgramList";
+            // 
+            // buttonM2TestSaveProgram
+            // 
+            resources.ApplyResources(this.buttonM2TestSaveProgram, "buttonM2TestSaveProgram");
+            this.buttonM2TestSaveProgram.Name = "buttonM2TestSaveProgram";
+            this.buttonM2TestSaveProgram.UseVisualStyleBackColor = true;
+            this.buttonM2TestSaveProgram.Click += new System.EventHandler(this.buttonM2TestSaveProgram_Click);
+            // 
+            // buttonM2TestLoadProgram
+            // 
+            resources.ApplyResources(this.buttonM2TestLoadProgram, "buttonM2TestLoadProgram");
+            this.buttonM2TestLoadProgram.Name = "buttonM2TestLoadProgram";
+            this.buttonM2TestLoadProgram.UseVisualStyleBackColor = true;
+            this.buttonM2TestLoadProgram.Click += new System.EventHandler(this.buttonM2TestLoadProgram_Click);
+            // 
+            // dataGridViewM2TestPoints
+            // 
+            this.dataGridViewM2TestPoints.AllowUserToAddRows = false;
+            this.dataGridViewM2TestPoints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewM2TestPoints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dataGridViewM2TestPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            resources.ApplyResources(this.dataGridViewM2TestPoints, "dataGridViewM2TestPoints");
+            this.dataGridViewM2TestPoints.Name = "dataGridViewM2TestPoints";
+            this.dataGridViewM2TestPoints.RowHeadersVisible = false;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewM2TestPoints.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewM2TestPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewM2TestPoints.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM2TestPoints_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewTextBoxColumn4.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn4, "dataGridViewTextBoxColumn4");
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.Frozen = true;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // lbButtonM2StartTest
+            // 
+            this.lbButtonM2StartTest.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM2StartTest.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM2StartTest, "lbButtonM2StartTest");
+            this.lbButtonM2StartTest.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM2StartTest.Label = "START TEST";
+            this.lbButtonM2StartTest.Name = "lbButtonM2StartTest";
+            this.lbButtonM2StartTest.Renderer = null;
+            this.lbButtonM2StartTest.RepeatInterval = 100;
+            this.lbButtonM2StartTest.RepeatState = false;
+            this.lbButtonM2StartTest.StartRepeatInterval = 500;
+            this.lbButtonM2StartTest.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM2StartTest.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2StartTest.Click += new System.EventHandler(this.lbButtonM2StartTest_Click);
+            // 
+            // tabPageT2M2_1
+            // 
+            this.tabPageT2M2_1.Controls.Add(this.comboBoxM2TeachModelName);
+            this.tabPageT2M2_1.Controls.Add(this.groupBox3);
+            this.tabPageT2M2_1.Controls.Add(this.groupBox2);
+            this.tabPageT2M2_1.Controls.Add(this.groupBoxM2Jog);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2TeachDeleteProgram);
+            this.tabPageT2M2_1.Controls.Add(this.comboBoxM2TeachProgramList);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2TeachNewProgram);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2TeachSaveProgram);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2TeachLoadProgram);
+            this.tabPageT2M2_1.Controls.Add(this.lbButtonM2StartStopExitBelt);
+            this.tabPageT2M2_1.Controls.Add(this.lbButtonM2StartStopWorkingBelt);
+            this.tabPageT2M2_1.Controls.Add(this.dataGridViewM2TeachPoints);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2PrintCycle);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2ResetServo);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2ContrastClosing);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2ContrastOpening);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2CenteringClampsClosing);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2CenteringClampsOpening);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2BigClampClosing);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2BigClampOpening);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2SmallClampClosing);
+            this.tabPageT2M2_1.Controls.Add(this.buttonM2SmallClampOpening);
+            tabPageFormatStyle21.BorderCornerRadius = 30;
+            tabPageFormatStyle21.ContentSpacing = 30;
+            tabPageFormatStyle21.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT2M2_1.FormatStyle = tabPageFormatStyle21;
+            resources.ApplyResources(this.tabPageT2M2_1, "tabPageT2M2_1");
+            this.tabPageT2M2_1.Name = "tabPageT2M2_1";
+            this.tabPageT2M2_1.ParentPage = null;
+            this.tabPageT2M2_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT2M2_1.TextBounds")));
+            this.tabPageT2M2_1.TextSize = new System.Drawing.SizeF(60.03986F, 25.4663F);
+            // 
+            // comboBoxM2TeachModelName
+            // 
+            resources.ApplyResources(this.comboBoxM2TeachModelName, "comboBoxM2TeachModelName");
+            this.comboBoxM2TeachModelName.FormattingEnabled = true;
+            this.comboBoxM2TeachModelName.Name = "comboBoxM2TeachModelName";
+            this.comboBoxM2TeachModelName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM2TeachModelName_SelectedIndexChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.buttonM2Home);
+            this.groupBox3.Controls.Add(this.buttonM2ResetHome);
+            this.groupBox3.Controls.Add(this.lbLedM2T2HomingDone);
+            resources.ApplyResources(this.groupBox3, "groupBox3");
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.TabStop = false;
+            // 
+            // buttonM2Home
+            // 
+            resources.ApplyResources(this.buttonM2Home, "buttonM2Home");
+            this.buttonM2Home.Name = "buttonM2Home";
+            this.buttonM2Home.UseVisualStyleBackColor = true;
+            this.buttonM2Home.Click += new System.EventHandler(this.buttonM2Home_Click);
+            // 
+            // buttonM2ResetHome
+            // 
+            resources.ApplyResources(this.buttonM2ResetHome, "buttonM2ResetHome");
+            this.buttonM2ResetHome.Name = "buttonM2ResetHome";
+            this.buttonM2ResetHome.UseVisualStyleBackColor = true;
+            this.buttonM2ResetHome.Click += new System.EventHandler(this.buttonM2ResetHome_Click);
+            // 
+            // lbLedM2T2HomingDone
+            // 
+            this.lbLedM2T2HomingDone.BackColor = System.Drawing.Color.Transparent;
+            this.lbLedM2T2HomingDone.BlinkInterval = 500;
+            resources.ApplyResources(this.lbLedM2T2HomingDone, "lbLedM2T2HomingDone");
+            this.lbLedM2T2HomingDone.ForeColor = System.Drawing.Color.Black;
+            this.lbLedM2T2HomingDone.Label = "homing done";
+            this.lbLedM2T2HomingDone.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLedM2T2HomingDone.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLedM2T2HomingDone.LedSize = new System.Drawing.SizeF(16F, 16F);
+            this.lbLedM2T2HomingDone.Name = "lbLedM2T2HomingDone";
+            this.lbLedM2T2HomingDone.Renderer = null;
+            this.lbLedM2T2HomingDone.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLedM2T2HomingDone.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Circular;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.buttonM2StartQuote);
+            this.groupBox2.Controls.Add(this.numericUpDownM2ManualQuote);
+            this.groupBox2.Controls.Add(this.numericUpDownM2ManualSpeed);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.TabStop = false;
+            // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
+            // buttonM2StartQuote
+            // 
+            resources.ApplyResources(this.buttonM2StartQuote, "buttonM2StartQuote");
+            this.buttonM2StartQuote.Name = "buttonM2StartQuote";
+            this.buttonM2StartQuote.UseVisualStyleBackColor = true;
+            this.buttonM2StartQuote.Click += new System.EventHandler(this.buttonM2StartQuote_Click);
+            // 
+            // numericUpDownM2ManualQuote
+            // 
+            resources.ApplyResources(this.numericUpDownM2ManualQuote, "numericUpDownM2ManualQuote");
+            this.numericUpDownM2ManualQuote.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownM2ManualQuote.Minimum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownM2ManualQuote.Name = "numericUpDownM2ManualQuote";
+            this.numericUpDownM2ManualQuote.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownM2ManualQuote.ValueChanged += new System.EventHandler(this.numericUpDownM2ManualQuote_ValueChanged);
+            // 
+            // numericUpDownM2ManualSpeed
+            // 
+            resources.ApplyResources(this.numericUpDownM2ManualSpeed, "numericUpDownM2ManualSpeed");
+            this.numericUpDownM2ManualSpeed.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownM2ManualSpeed.Name = "numericUpDownM2ManualSpeed";
+            this.numericUpDownM2ManualSpeed.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownM2ManualSpeed.ValueChanged += new System.EventHandler(this.numericUpDownM2ManualSpeed_ValueChanged);
+            // 
+            // groupBoxM2Jog
+            // 
+            this.groupBoxM2Jog.Controls.Add(this.labelM2JogSpeed);
+            this.groupBoxM2Jog.Controls.Add(this.lbButtonM2JogUp);
+            this.groupBoxM2Jog.Controls.Add(this.lbButtonM2JogDown);
+            this.groupBoxM2Jog.Controls.Add(this.numericUpDownM2JogSpeed);
+            this.groupBoxM2Jog.Controls.Add(this.labelM2TeachAxisQuoteName);
+            this.groupBoxM2Jog.Controls.Add(this.labelM2TeachAxisQuoteValue);
+            resources.ApplyResources(this.groupBoxM2Jog, "groupBoxM2Jog");
+            this.groupBoxM2Jog.Name = "groupBoxM2Jog";
+            this.groupBoxM2Jog.TabStop = false;
+            // 
+            // labelM2JogSpeed
+            // 
+            resources.ApplyResources(this.labelM2JogSpeed, "labelM2JogSpeed");
+            this.labelM2JogSpeed.Name = "labelM2JogSpeed";
+            // 
+            // lbButtonM2JogUp
+            // 
+            this.lbButtonM2JogUp.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lbButtonM2JogUp, "lbButtonM2JogUp");
+            this.lbButtonM2JogUp.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbButtonM2JogUp.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM2JogUp.Label = "up";
+            this.lbButtonM2JogUp.Name = "lbButtonM2JogUp";
+            this.lbButtonM2JogUp.Renderer = null;
+            this.lbButtonM2JogUp.RepeatInterval = 100;
+            this.lbButtonM2JogUp.RepeatState = false;
+            this.lbButtonM2JogUp.StartRepeatInterval = 500;
+            this.lbButtonM2JogUp.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM2JogUp.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2JogUp.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM2JogUp_ButtonChangeState);
+            this.lbButtonM2JogUp.Click += new System.EventHandler(this.lbButtonM2JogUp_Click);
+            // 
+            // lbButtonM2JogDown
+            // 
+            this.lbButtonM2JogDown.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.lbButtonM2JogDown, "lbButtonM2JogDown");
+            this.lbButtonM2JogDown.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbButtonM2JogDown.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM2JogDown.Label = "down";
+            this.lbButtonM2JogDown.Name = "lbButtonM2JogDown";
+            this.lbButtonM2JogDown.Renderer = null;
+            this.lbButtonM2JogDown.RepeatInterval = 100;
+            this.lbButtonM2JogDown.RepeatState = false;
+            this.lbButtonM2JogDown.StartRepeatInterval = 500;
+            this.lbButtonM2JogDown.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM2JogDown.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2JogDown.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM2JogDown_ButtonChangeState);
+            this.lbButtonM2JogDown.Click += new System.EventHandler(this.lbButtonM2JogDown_Click);
+            // 
+            // numericUpDownM2JogSpeed
+            // 
+            resources.ApplyResources(this.numericUpDownM2JogSpeed, "numericUpDownM2JogSpeed");
+            this.numericUpDownM2JogSpeed.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownM2JogSpeed.Name = "numericUpDownM2JogSpeed";
+            this.numericUpDownM2JogSpeed.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownM2JogSpeed.ValueChanged += new System.EventHandler(this.numericUpDownM2JogSpeed_ValueChanged);
+            this.numericUpDownM2JogSpeed.Click += new System.EventHandler(this.numericUpDownM2JogSpeed_Click);
+            // 
+            // labelM2TeachAxisQuoteName
+            // 
+            resources.ApplyResources(this.labelM2TeachAxisQuoteName, "labelM2TeachAxisQuoteName");
+            this.labelM2TeachAxisQuoteName.Name = "labelM2TeachAxisQuoteName";
+            // 
+            // labelM2TeachAxisQuoteValue
+            // 
+            resources.ApplyResources(this.labelM2TeachAxisQuoteValue, "labelM2TeachAxisQuoteValue");
+            this.labelM2TeachAxisQuoteValue.Name = "labelM2TeachAxisQuoteValue";
+            // 
+            // buttonM2TeachDeleteProgram
+            // 
+            resources.ApplyResources(this.buttonM2TeachDeleteProgram, "buttonM2TeachDeleteProgram");
+            this.buttonM2TeachDeleteProgram.Name = "buttonM2TeachDeleteProgram";
+            this.buttonM2TeachDeleteProgram.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxM2TeachProgramList
+            // 
+            resources.ApplyResources(this.comboBoxM2TeachProgramList, "comboBoxM2TeachProgramList");
+            this.comboBoxM2TeachProgramList.FormattingEnabled = true;
+            this.comboBoxM2TeachProgramList.Name = "comboBoxM2TeachProgramList";
+            // 
+            // buttonM2TeachNewProgram
+            // 
+            resources.ApplyResources(this.buttonM2TeachNewProgram, "buttonM2TeachNewProgram");
+            this.buttonM2TeachNewProgram.Name = "buttonM2TeachNewProgram";
+            this.buttonM2TeachNewProgram.UseVisualStyleBackColor = true;
+            this.buttonM2TeachNewProgram.Click += new System.EventHandler(this.buttonM2TeachNewProgram_Click);
+            // 
+            // buttonM2TeachSaveProgram
+            // 
+            resources.ApplyResources(this.buttonM2TeachSaveProgram, "buttonM2TeachSaveProgram");
+            this.buttonM2TeachSaveProgram.Name = "buttonM2TeachSaveProgram";
+            this.buttonM2TeachSaveProgram.UseVisualStyleBackColor = true;
+            this.buttonM2TeachSaveProgram.Click += new System.EventHandler(this.buttonM2TeachSaveProgram_Click);
+            // 
+            // buttonM2TeachLoadProgram
+            // 
+            resources.ApplyResources(this.buttonM2TeachLoadProgram, "buttonM2TeachLoadProgram");
+            this.buttonM2TeachLoadProgram.Name = "buttonM2TeachLoadProgram";
+            this.buttonM2TeachLoadProgram.UseVisualStyleBackColor = true;
+            this.buttonM2TeachLoadProgram.Click += new System.EventHandler(this.buttonM2TeachLoadProgram_Click);
+            // 
+            // lbButtonM2StartStopExitBelt
+            // 
+            this.lbButtonM2StartStopExitBelt.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM2StartStopExitBelt.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM2StartStopExitBelt, "lbButtonM2StartStopExitBelt");
+            this.lbButtonM2StartStopExitBelt.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM2StartStopExitBelt.Label = "start/stop exit belt";
+            this.lbButtonM2StartStopExitBelt.Name = "lbButtonM2StartStopExitBelt";
+            this.lbButtonM2StartStopExitBelt.Renderer = null;
+            this.lbButtonM2StartStopExitBelt.RepeatInterval = 100;
+            this.lbButtonM2StartStopExitBelt.RepeatState = false;
+            this.lbButtonM2StartStopExitBelt.StartRepeatInterval = 500;
+            this.lbButtonM2StartStopExitBelt.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM2StartStopExitBelt.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2StartStopExitBelt.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM2StartStopExitBelt_ButtonChangeState);
+            this.lbButtonM2StartStopExitBelt.Click += new System.EventHandler(this.lbButtonM2StartStopExitBelt_Click);
+            // 
+            // lbButtonM2StartStopWorkingBelt
+            // 
+            this.lbButtonM2StartStopWorkingBelt.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM2StartStopWorkingBelt.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM2StartStopWorkingBelt, "lbButtonM2StartStopWorkingBelt");
+            this.lbButtonM2StartStopWorkingBelt.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM2StartStopWorkingBelt.Label = "start/stop working belt";
+            this.lbButtonM2StartStopWorkingBelt.Name = "lbButtonM2StartStopWorkingBelt";
+            this.lbButtonM2StartStopWorkingBelt.Renderer = null;
+            this.lbButtonM2StartStopWorkingBelt.RepeatInterval = 100;
+            this.lbButtonM2StartStopWorkingBelt.RepeatState = false;
+            this.lbButtonM2StartStopWorkingBelt.StartRepeatInterval = 500;
+            this.lbButtonM2StartStopWorkingBelt.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM2StartStopWorkingBelt.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM2StartStopWorkingBelt.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM2StartStopWorkingBelt_ButtonChangeState);
+            this.lbButtonM2StartStopWorkingBelt.Click += new System.EventHandler(this.lbButtonM2StartStopWorkingBelt_Click);
+            // 
+            // dataGridViewM2TeachPoints
+            // 
+            this.dataGridViewM2TeachPoints.AllowUserToAddRows = false;
+            this.dataGridViewM2TeachPoints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewM2TeachPoints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnM2PointID,
+            this.ColumnMeQuote,
+            this.ColumnM2Speed,
+            this.ColumnM2Register,
+            this.ColumnM2StartQuote,
+            this.Column1});
+            this.dataGridViewM2TeachPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            resources.ApplyResources(this.dataGridViewM2TeachPoints, "dataGridViewM2TeachPoints");
+            this.dataGridViewM2TeachPoints.Name = "dataGridViewM2TeachPoints";
+            this.dataGridViewM2TeachPoints.RowHeadersVisible = false;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewM2TeachPoints.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dataGridViewM2TeachPoints.RowTemplate.Height = 48;
+            this.dataGridViewM2TeachPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewM2TeachPoints.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM2Points_CellContentClick);
+            // 
+            // ColumnM2PointID
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ColumnM2PointID.DefaultCellStyle = dataGridViewCellStyle7;
+            this.ColumnM2PointID.Frozen = true;
+            resources.ApplyResources(this.ColumnM2PointID, "ColumnM2PointID");
+            this.ColumnM2PointID.Name = "ColumnM2PointID";
+            this.ColumnM2PointID.ReadOnly = true;
+            this.ColumnM2PointID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnM2PointID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ColumnMeQuote
+            // 
+            this.ColumnMeQuote.Frozen = true;
+            resources.ApplyResources(this.ColumnMeQuote, "ColumnMeQuote");
+            this.ColumnMeQuote.Name = "ColumnMeQuote";
+            // 
+            // ColumnM2Speed
+            // 
+            this.ColumnM2Speed.Frozen = true;
+            resources.ApplyResources(this.ColumnM2Speed, "ColumnM2Speed");
+            this.ColumnM2Speed.Name = "ColumnM2Speed";
+            // 
+            // ColumnM2Register
+            // 
+            resources.ApplyResources(this.ColumnM2Register, "ColumnM2Register");
+            this.ColumnM2Register.Name = "ColumnM2Register";
+            // 
+            // ColumnM2StartQuote
+            // 
+            resources.ApplyResources(this.ColumnM2StartQuote, "ColumnM2StartQuote");
+            this.ColumnM2StartQuote.Name = "ColumnM2StartQuote";
+            // 
+            // Column1
+            // 
+            resources.ApplyResources(this.Column1, "Column1");
+            this.Column1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // buttonM2PrintCycle
+            // 
+            resources.ApplyResources(this.buttonM2PrintCycle, "buttonM2PrintCycle");
+            this.buttonM2PrintCycle.Name = "buttonM2PrintCycle";
+            this.buttonM2PrintCycle.UseVisualStyleBackColor = true;
+            this.buttonM2PrintCycle.Click += new System.EventHandler(this.buttonM2PrintCycle_Click);
+            // 
+            // buttonM2ResetServo
+            // 
+            resources.ApplyResources(this.buttonM2ResetServo, "buttonM2ResetServo");
+            this.buttonM2ResetServo.Name = "buttonM2ResetServo";
+            this.buttonM2ResetServo.UseVisualStyleBackColor = true;
+            this.buttonM2ResetServo.Click += new System.EventHandler(this.buttonM2ResetServo_Click);
+            // 
+            // buttonM2ContrastClosing
+            // 
+            resources.ApplyResources(this.buttonM2ContrastClosing, "buttonM2ContrastClosing");
+            this.buttonM2ContrastClosing.Name = "buttonM2ContrastClosing";
+            this.buttonM2ContrastClosing.UseVisualStyleBackColor = true;
+            this.buttonM2ContrastClosing.Click += new System.EventHandler(this.buttonM2ContrastClosing_Click);
+            // 
+            // buttonM2ContrastOpening
+            // 
+            resources.ApplyResources(this.buttonM2ContrastOpening, "buttonM2ContrastOpening");
+            this.buttonM2ContrastOpening.Name = "buttonM2ContrastOpening";
+            this.buttonM2ContrastOpening.UseVisualStyleBackColor = true;
+            this.buttonM2ContrastOpening.Click += new System.EventHandler(this.buttonM2ContrastOpening_Click);
+            // 
+            // buttonM2CenteringClampsClosing
+            // 
+            resources.ApplyResources(this.buttonM2CenteringClampsClosing, "buttonM2CenteringClampsClosing");
+            this.buttonM2CenteringClampsClosing.Name = "buttonM2CenteringClampsClosing";
+            this.buttonM2CenteringClampsClosing.UseVisualStyleBackColor = true;
+            this.buttonM2CenteringClampsClosing.Click += new System.EventHandler(this.buttonM2CenteringClampsClosing_Click);
+            // 
+            // buttonM2CenteringClampsOpening
+            // 
+            resources.ApplyResources(this.buttonM2CenteringClampsOpening, "buttonM2CenteringClampsOpening");
+            this.buttonM2CenteringClampsOpening.Name = "buttonM2CenteringClampsOpening";
+            this.buttonM2CenteringClampsOpening.UseVisualStyleBackColor = true;
+            this.buttonM2CenteringClampsOpening.Click += new System.EventHandler(this.buttonM2CenteringClampsOpening_Click);
+            // 
+            // buttonM2BigClampClosing
+            // 
+            resources.ApplyResources(this.buttonM2BigClampClosing, "buttonM2BigClampClosing");
+            this.buttonM2BigClampClosing.Name = "buttonM2BigClampClosing";
+            this.buttonM2BigClampClosing.UseVisualStyleBackColor = true;
+            this.buttonM2BigClampClosing.Click += new System.EventHandler(this.buttonM2BigGripperClosing_Click);
+            // 
+            // buttonM2BigClampOpening
+            // 
+            resources.ApplyResources(this.buttonM2BigClampOpening, "buttonM2BigClampOpening");
+            this.buttonM2BigClampOpening.Name = "buttonM2BigClampOpening";
+            this.buttonM2BigClampOpening.UseVisualStyleBackColor = true;
+            this.buttonM2BigClampOpening.Click += new System.EventHandler(this.buttonM2BigClampOpening_Click);
+            // 
+            // buttonM2SmallClampClosing
+            // 
+            resources.ApplyResources(this.buttonM2SmallClampClosing, "buttonM2SmallClampClosing");
+            this.buttonM2SmallClampClosing.Name = "buttonM2SmallClampClosing";
+            this.buttonM2SmallClampClosing.UseVisualStyleBackColor = true;
+            this.buttonM2SmallClampClosing.Click += new System.EventHandler(this.buttonM2SmallClampClosing_Click);
+            // 
+            // buttonM2SmallClampOpening
+            // 
+            resources.ApplyResources(this.buttonM2SmallClampOpening, "buttonM2SmallClampOpening");
+            this.buttonM2SmallClampOpening.Name = "buttonM2SmallClampOpening";
+            this.buttonM2SmallClampOpening.UseVisualStyleBackColor = true;
+            this.buttonM2SmallClampOpening.Click += new System.EventHandler(this.buttonM2SmallClampOpening_Click);
             // 
             // tabPageRecipe
             // 
@@ -5352,12 +5352,12 @@ namespace GUI
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageConsole);
+            this.tabControlMain.Controls.Add(this.tabPageSettings);
             this.tabControlMain.Controls.Add(this.tabPageHide);
             this.tabControlMain.Controls.Add(this.tabPageHelp);
-            this.tabControlMain.Controls.Add(this.tabPageSettings);
             this.tabControlMain.Controls.Add(this.TabPageDiagnostic);
             this.tabControlMain.Controls.Add(this.tabPage4);
+            this.tabControlMain.Controls.Add(this.tabPageConsole);
             this.tabControlMain.Controls.Add(this.tabPageRecipe);
             this.tabControlMain.Controls.Add(this.tabPageMain);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
@@ -5387,7 +5387,7 @@ namespace GUI
             this.tabPageHelp,
             this.tabPageHide});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageConsole;
+            this.tabControlMain.SelectedPage = this.tabPageSettings;
             tabPageColorStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle27.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle27.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
@@ -5481,6 +5481,10 @@ namespace GUI
             this.tabPageConsole.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT2)).EndInit();
             this.tabControlT2.ResumeLayout(false);
+            this.tabPageT2M2_3.ResumeLayout(false);
+            this.tabPageT2M2_4.ResumeLayout(false);
+            this.tabPageT2M2_2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TestPoints)).EndInit();
             this.tabPageT2M2_1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -5491,10 +5495,6 @@ namespace GUI
             this.groupBoxM2Jog.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2JogSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TeachPoints)).EndInit();
-            this.tabPageT2M2_2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TestPoints)).EndInit();
-            this.tabPageT2M2_4.ResumeLayout(false);
-            this.tabPageT2M2_3.ResumeLayout(false);
             this.tabPageMain.ResumeLayout(false);
             this.tabPageMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT0)).EndInit();

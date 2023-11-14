@@ -16,6 +16,31 @@ namespace GUI
 
             //ClientDataConfig.Add(new OpcObjectData("pc_jog_alto", string.Format(stringToFill, "FPH0", "pc_jog_alto")));
             #region(* M1 OPCUA variables *)
+            ClientDataConfig.Add(new OpcObjectData("pcM1JogDown", $"ns=2;s=Tags.Rifilatrice/pc_jog_basso", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1JogUp", $"ns=2;s=Tags.Rifilatrice/pc_jog_alto", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1JogSpeed", $"ns=2;s=Tags.Rifilatrice/pc_velocita_a_jog", typeof(short)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1QuoteStart", $"ns=2;s=Tags.Rifilatrice/pc_start_a_quota", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1ResetServoAlarm", $"ns=2;s=Tags.Rifilatrice/pc_reset_allarme_servo", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1Homing", $"ns=2;s=Tags.Rifilatrice/pc_homing", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1ResetHoming", $"ns=2;s=Tags.Rifilatrice/pc_reset_homing", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1StartTest", $"ns=2;s=Tags.Rifilatrice/pc_start_programma_in_test", typeof(bool)));
+
+            ClientDataConfig.Add(new OpcObjectData("pcM1SpringsOpening", $"ns=2;s=Tags.Rifilatrice/pc_apertura_molle", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1SpringsClosing", $"ns=2;s=Tags.Rifilatrice/pc_chiusura_molle", typeof(bool)));
+
+            ClientDataConfig.Add(new OpcObjectData("pcM1CutOpening", $"ns=2;s=Tags.Rifilatrice/pc_apertura_taglio", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1CutClosing", $"ns=2;s=Tags.Rifilatrice/pc_chiusura_taglio", typeof(bool)));
+
+            ClientDataConfig.Add(new OpcObjectData("pcM1CutSlideForward", $"ns=2;s=Tags.Rifilatrice/pc_slitta_taglio_avanti", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1CutSlideBackward", $"ns=2;s=Tags.Rifilatrice/pc_slitta_taglio_indietro", typeof(bool)));
+
+            ClientDataConfig.Add(new OpcObjectData("pcM1BlockOpening", $"ns=2;s=Tags.Rifilatrice/pc_apertura_blocco", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1BlockClosing", $"ns=2;s=Tags.Rifilatrice/pc_chiusura_blocco", typeof(bool)));
+
+            ClientDataConfig.Add(new OpcObjectData("pcM1StartStopWorkingBelt", $"ns=2;s=Tags.Rifilatrice/pc_start_stop_nastro_lavoro", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1StartStopExitBelt", $"ns=2;s=Tags.Rifilatrice/pc_start_stop_nastro_uscita", typeof(bool)));
+
+
             ClientDataConfig.Add(new OpcObjectData("pcM1Status", $"ns=2;s=Tags.Rifilatrice/pc_stato_macchina", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM1Inclusion", $"ns=2;s=Tags.Rifilatrice/pc_inclusione_esclusione_generale", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM1CurrentAxisQuote", $"ns=2;s=Tags.Rifilatrice/pc_quota_attuale_asse", typeof(short)));
@@ -40,6 +65,8 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM2ResetServoAlarm", $"ns=2;s=Tags.Pad_print_interna/pc_reset_allarme_servo", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2Homing", $"ns=2;s=Tags.Pad_print_interna/pc_homing", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2ResetHoming", $"ns=2;s=Tags.Pad_print_interna/pc_reset_homing", typeof(bool)));
+
+
             ClientDataConfig.Add(new OpcObjectData("pcM2StartTest", $"ns=2;s=Tags.Pad_print_interna/pc_start_programma_in_test", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2TeachPointID", $"ns=2;s=Tags.Pad_print_interna/pc_numero_punto_in_teaching", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM2TeachPointReg", $"ns=2;s=Tags.Pad_print_interna/pc_vai_a_punto_in_teaching", typeof(int[])));
@@ -149,8 +176,8 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM3DO", $"ns=2;s=Tags.Pad_print_esterna/pc_output", typeof(bool[])));
 
             ClientDataConfig.Add(new OpcObjectData("pcM3TestType", $"ns=2;s=Tags.Pad_print_esterna/pc_piede_test", typeof(short)));
-            ClientDataConfig.Add(new OpcObjectData("pcM3TeachCWRotation", $"ns=2;s=Tags.Pad_print_esterna/pc_rotazione_avanti", typeof(short)));
-            ClientDataConfig.Add(new OpcObjectData("pcM3TeachCCWRotation", $"ns=2;s=Tags.Pad_print_esterna/pc_rotazione_indietro", typeof(short)));
+            ClientDataConfig.Add(new OpcObjectData("pcM3CWRotation", $"ns=2;s=Tags.Pad_print_esterna/pc_rotazione_avanti", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM3CCWRotation", $"ns=2;s=Tags.Pad_print_esterna/pc_rotazione_indietro", typeof(bool)));
             //keep alive
             ClientDataConfig.Add(new OpcObjectData("pcM3KeepAliveR", $"ns=2;s=Tags.Pad_print_esterna/pc_comunicazione_da_plc_a_opc", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM3KeepAliveW", $"ns=2;s=Tags.Pad_print_esterna/pc_comunicazione_da_opc_a_plc", typeof(bool)));

@@ -329,13 +329,14 @@ namespace GUI
                     };
 
                     readResult = await ccService.Read(keys);
-                    //UpdateOPCUAM2PointReached(readResult["pcM2PointReached"]);
+                    WriteAsyncDataGridViewPointReached(readResult["pcM2PointReached"], dataGridViewM2TeachPoints);
+                    //force repaint
+                    dataGridViewM2TeachPoints.Invalidate(false);
+                    
+                    WriteAsyncDataGridViewPointReached(readResult["pcM3PointReached"], dataGridViewM3TeachPoints);
+                    //force repaint
+                    dataGridViewM3TeachPoints.Invalidate(false);
                     #endregion
-
-                    #region(* *)
-
-                    #endregion
-
 
                     //manipulator digital input
                     //try
@@ -790,7 +791,7 @@ namespace GUI
             }
         }
 
-        public void UpdateOPCUAM2PointReached(ClientResult cr)
+        public void WriteAsyncDataGridViewPointReached(ClientResult cr, DataGridView dt)
         {
             if ((cr == null) || (cr.OpcResult == false))
             {
@@ -798,66 +799,25 @@ namespace GUI
             }
             else
             {
-                //todo ,amage error
-                return;
-
-                string fileNameReached = "";
-                string fileNameNotReached = "";
-                string fileNameNull = "";
-                byte[] binaryDataReached = null;
-                byte[] binaryDataNotReached = null;
-                byte[] binaryDataNull = null;
-                FileInfo fileInfoReached = null;
-                FileInfo fileInfoNotReached = null;
-                FileInfo fileInfoNull = null;
-                MemoryStream msReached = null;
-                MemoryStream msNotReached = null;
-                MemoryStream msNull = null;
-                Image returnImageReached = null;
-                Image returnImageNotReached = null;
-                Image returnImageNull = null;
-                fileNameReached = "C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\preached.png";
-                fileInfoReached = new FileInfo(fileNameReached);
-
-                binaryDataReached = File.ReadAllBytes(fileNameReached);
-                msReached = new MemoryStream(binaryDataReached);
-                returnImageReached = Image.FromStream(msReached, false, true);
-
-                fileNameNotReached = "C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\pnotreached.png";
-                fileInfoNotReached = new FileInfo(fileNameNotReached);
-
-                binaryDataNotReached = File.ReadAllBytes(fileNameNotReached);
-                msNotReached = new MemoryStream(binaryDataNotReached);
-                returnImageNotReached = Image.FromStream(msNotReached, false, true);
-
-                fileNameNull = "C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\null.png";
-                fileInfoNull = new FileInfo(fileNameNull);
-
-                binaryDataNull = File.ReadAllBytes(fileNameNull);
-                msNull = new MemoryStream(binaryDataNull);
-                returnImageNull = Image.FromStream(msNull, false, true);
-
-                bool[] arrayBool = (bool[])cr.Value;
-                int i = 0;
-                for (i = 1; i < arrayBool.Count(); i++)
+                if (dt.InvokeRequired)
                 {
-                    if (arrayBool[i])
+                    dt.Invoke((MethodInvoker)delegate
                     {
-                        dataGridViewM2TeachPoints.Rows[i - 1].Cells[5].Value = returnImageNull;
-                        dataGridViewM2TeachPoints.Refresh();
-                        dataGridViewM2TeachPoints.Rows[i - 1].Cells[5].Value = returnImageReached;
-                        dataGridViewM2TeachPoints.Refresh();
-                        dataGridViewM2TeachPoints.Rows[1 - 1].Cells[5].ToolTipText = fileInfoReached.ToString();
-                    }
-                    else
-                    {
-                        dataGridViewM2TeachPoints.Rows[i - 1].Cells[5].Value = returnImageNull;
-                        dataGridViewM2TeachPoints.Refresh();
-                        dataGridViewM2TeachPoints.Rows[i - 1].Cells[5].Value = returnImageNotReached;
-                        dataGridViewM2TeachPoints.Refresh();
-                        dataGridViewM2TeachPoints.Rows[i - 1].Cells[5].ToolTipText = fileInfoNotReached.ToString();
-                    }
-                }
+                        bool[] arrayBool = (bool[])cr.Value;
+                        int i = 0;
+                        for (i = 1; i < arrayBool.Count(); i++)
+                        {
+                            if (arrayBool[i])
+                            {
+                                dt.Rows[i - 1].Cells[5].ToolTipText = "reached";
+                            }
+                            else
+                            {
+                                dt.Rows[i - 1].Cells[5].ToolTipText = "notreached";
+                            }
+                        }
+                    });
+                }            
             }
         }      
 
@@ -1191,6 +1151,29 @@ namespace GUI
             List<string> keys = new List<string>();
             keys.Add("pcM2TestSpeed");
             keys.Add("pcM2TestQuote");
+
+            List<object> obj = new List<object>()
+            {
+                pointSpeed,
+                pointQuote
+            };
+
+            Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
+            try
+            {
+                sendResult = await ccService.Send(keys, obj);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        public async void OPCUAM1TestPckSend(short[] pointQuote, short[] pointSpeed)
+        {
+            List<string> keys = new List<string>();
+            keys.Add("pcM1TestSpeed");
+            keys.Add("pcM1TestQuote");
 
             List<object> obj = new List<object>()
             {

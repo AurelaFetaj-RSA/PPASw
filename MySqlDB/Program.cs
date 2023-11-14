@@ -12,10 +12,10 @@ namespace MySqlDB
 {
     internal class Program
     {
-        public static string USERNAME = "PlasticAuchoUser";
-        public static string PWD = "Robots_RSA";
-        public static string HOST = "192.168.0.242";
-        public static string DBNAME = "PlasticauchoDB";
+        public static string USERNAME = "USER";
+        public static string PWD = "Robots2023!";
+        public static string HOST = "localhost";
+        public static string DBNAME = "plasticaucho";
 
         public static RSACommon.Configuration.MySqlConfiguration CreateConfiguration(string user, string pwd, string host, string DB)
         {
@@ -41,7 +41,7 @@ namespace MySqlDB
             var config = CreateConfiguration(USERNAME, PWD, HOST, DBNAME);
             MySQLService service = new MySQLService(config);
 
-            service.AddTable<model>("models");
+            service.AddTable<recipies>("models");
             service.AddTable<padlaserprogram>("padlaserprograms");
 
             service.StartNoAsync();
@@ -63,7 +63,7 @@ namespace MySqlDB
                     Console.WriteLine($"{testResult.Error} {testResult.Message}");
                 }
 
-                MySqlResult<model> result = await service.DBTable[0].SelectAllAsync<model>();
+                MySqlResult<recipies> result = await service.DBTable[0].SelectAllAsync<recipies>();
 
                 result.Result.ForEach(x => Console.WriteLine(x.model_name));
 

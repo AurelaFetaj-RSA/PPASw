@@ -120,12 +120,16 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle22 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle47 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle23 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle49 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle50 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle24 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle53 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle63 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle25 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle54 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle55 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -133,6 +137,9 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle26 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle56 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle57 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle58 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle59 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -207,7 +214,7 @@
             this.ColumnM2Speed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnM2Register = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ColumnM2StartQuote = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.buttonM2TeachDeleteProgram = new System.Windows.Forms.Button();
             this.comboBoxM2TeachProgramList = new System.Windows.Forms.ComboBox();
             this.buttonM2TeachNewProgram = new System.Windows.Forms.Button();
@@ -282,6 +289,10 @@
             this.contextMenuStripT4_1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemT4_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT4_1 = new System.Windows.Forms.ToolStripComboBox();
+            this.groupBoxM3Rotation = new System.Windows.Forms.GroupBox();
+            this.buttonM3RotationCCW = new System.Windows.Forms.Button();
+            this.imageListRotation = new System.Windows.Forms.ImageList(this.components);
+            this.buttonM3RotationCW = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBoxM3Constrast = new System.Windows.Forms.GroupBox();
             this.buttonM3ContrastOpening = new System.Windows.Forms.Button();
@@ -336,7 +347,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dataGridViewButtonColumn2 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ColumnM3PReached = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPageT4 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT4_2 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.contextMenuStripT4_2 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -366,11 +377,13 @@
             this.labelM4TeachAxisQuoteName = new System.Windows.Forms.Label();
             this.labelM4TeachAxisQuoteValue = new System.Windows.Forms.Label();
             this.tabPageT6 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabPageT7 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT0_1 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.contextMenuStripT0 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemT0 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT0 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripMenuItemT0Keyboard = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridViewMessages = new System.Windows.Forms.DataGridView();
             this.datetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -522,11 +535,12 @@
             this.checkBoxM1Param1 = new System.Windows.Forms.CheckBox();
             this.checkBoxR1Aux2_01 = new System.Windows.Forms.CheckBox();
             this.labelRecipeNameT0_1 = new System.Windows.Forms.Label();
-            this.textBoxRecipeName = new System.Windows.Forms.TextBox();
+            this.textBoxMRecipeName = new System.Windows.Forms.TextBox();
             this.tabPageT0_2_2 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.comboBoxRecipeName = new System.Windows.Forms.ComboBox();
+            this.buttonMRecipiesShowAll = new System.Windows.Forms.Button();
+            this.comboBoxMRecipeName = new System.Windows.Forms.ComboBox();
             this.labelRecipeNameT0_2 = new System.Windows.Forms.Label();
-            this.dataGridViewEditRecipe = new System.Windows.Forms.DataGridView();
+            this.dataGridViewMEditRecipe = new System.Windows.Forms.DataGridView();
             this.tabPageT0_3 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.groupBoxKeepAliveToPlc = new System.Windows.Forms.GroupBox();
             this.lbLedM5PCKeepAlive = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -555,15 +569,75 @@
             this.contextMenuStripT1_1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemT1_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT1_1 = new System.Windows.Forms.ToolStripComboBox();
-            this.labelM1TeachAxisQuoteName = new System.Windows.Forms.Label();
-            this.labelM1TeachAxisQuoteValue = new System.Windows.Forms.Label();
+            this.groupBoxM1Varius = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.buttonM1Sharpening = new System.Windows.Forms.Button();
+            this.groupBoxM1CutSlide = new System.Windows.Forms.GroupBox();
+            this.buttonM1CutSlideForward = new System.Windows.Forms.Button();
+            this.buttonM1CutSlideBackward = new System.Windows.Forms.Button();
+            this.lbLed17 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.groupBoxM1Block = new System.Windows.Forms.GroupBox();
+            this.buttonM1BlockOpening = new System.Windows.Forms.Button();
+            this.buttonM1BlockClosing = new System.Windows.Forms.Button();
+            this.lbLed16 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.groupBoxM1Cut = new System.Windows.Forms.GroupBox();
+            this.buttonM1CutOpening = new System.Windows.Forms.Button();
+            this.buttonM1CutClosing = new System.Windows.Forms.Button();
+            this.lbLed15 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonM1SpringsOpening = new System.Windows.Forms.Button();
+            this.buttonM1SpringsClosing = new System.Windows.Forms.Button();
+            this.lbLed14 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.groupBoxM1Servo = new System.Windows.Forms.GroupBox();
+            this.buttonM1ResetServo = new System.Windows.Forms.Button();
+            this.lbLed13 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.checkBoxM1ExitBelt = new System.Windows.Forms.CheckBox();
+            this.checkBoxM1WorkingBelt = new System.Windows.Forms.CheckBox();
+            this.groupBoxM1Homing = new System.Windows.Forms.GroupBox();
             this.labelM1HomingDone = new System.Windows.Forms.Label();
             this.buttonM1HomingDone = new System.Windows.Forms.Button();
+            this.buttonM1Home = new System.Windows.Forms.Button();
+            this.buttonM1ResetHome = new System.Windows.Forms.Button();
+            this.groupBoxM1StartQuote = new System.Windows.Forms.GroupBox();
+            this.labelM1StartQuote = new System.Windows.Forms.Label();
+            this.labelM1StartSpeed = new System.Windows.Forms.Label();
+            this.buttonM1StartQuote = new System.Windows.Forms.Button();
+            this.numericUpDownM1ManualQuote = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownM1ManualSpeed = new System.Windows.Forms.NumericUpDown();
+            this.groupBoxM1Jog = new System.Windows.Forms.GroupBox();
+            this.labelM1JogSpeed = new System.Windows.Forms.Label();
+            this.lbButtonM1JogUp = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.lbButtonM1JogDown = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.numericUpDownM1JogSpeed = new System.Windows.Forms.NumericUpDown();
+            this.labelM1TeachAxisQuoteName = new System.Windows.Forms.Label();
+            this.labelM1TeachAxisQuoteValue = new System.Windows.Forms.Label();
+            this.dataGridViewM1TeachPoints = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewButtonColumn3 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewButtonColumn4 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewButtonColumn5 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.buttonM1TeachDeleteProgram = new System.Windows.Forms.Button();
+            this.buttonM1TeachNewProgram = new System.Windows.Forms.Button();
+            this.buttonM1TeachSaveProgram = new System.Windows.Forms.Button();
+            this.buttonM1TeachLoadProgram = new System.Windows.Forms.Button();
+            this.comboBoxM1TeachProgramList = new System.Windows.Forms.ComboBox();
             this.tabPageT1 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT1_2 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.contextMenuStripT1_2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemT1_2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT1_2 = new System.Windows.Forms.ToolStripComboBox();
+            this.buttonM1StartTest = new System.Windows.Forms.Button();
+            this.buttonM1TestSaveProgram = new System.Windows.Forms.Button();
+            this.buttonM1TestLoadProgram = new System.Windows.Forms.Button();
+            this.dataGridViewM1TestPoints = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.comboBoxM1TestProgramList = new System.Windows.Forms.ComboBox();
             this.tabPageT1_3 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT1_4 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
@@ -590,6 +664,7 @@
             this.tabPageT3_3.SuspendLayout();
             this.tabPageT4_1.SuspendLayout();
             this.contextMenuStripT4_1.SuspendLayout();
+            this.groupBoxM3Rotation.SuspendLayout();
             this.groupBoxM3Constrast.SuspendLayout();
             this.groupBoxM3CenteringClamp.SuspendLayout();
             this.groupBoxM3BigClamp.SuspendLayout();
@@ -608,6 +683,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM3TestPoints)).BeginInit();
             this.tabPageT5_1.SuspendLayout();
             this.tabPageT2.SuspendLayout();
+            this.tabPageT6.SuspendLayout();
             this.tabPageT0_1.SuspendLayout();
             this.contextMenuStripT0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMessages)).BeginInit();
@@ -627,7 +703,7 @@
             this.groupBoxRecipeM2.SuspendLayout();
             this.groupBoxRecipeM1.SuspendLayout();
             this.tabPageT0_2_2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEditRecipe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMEditRecipe)).BeginInit();
             this.tabPageT0_3.SuspendLayout();
             this.groupBoxKeepAliveToPlc.SuspendLayout();
             this.groupBoxKeepAliveFromPlc.SuspendLayout();
@@ -639,7 +715,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3PLCNode)).BeginInit();
             this.tabPageT1_1.SuspendLayout();
             this.contextMenuStripT1_1.SuspendLayout();
+            this.groupBoxM1Varius.SuspendLayout();
+            this.groupBoxM1CutSlide.SuspendLayout();
+            this.groupBoxM1Block.SuspendLayout();
+            this.groupBoxM1Cut.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBoxM1Servo.SuspendLayout();
+            this.groupBoxM1Homing.SuspendLayout();
+            this.groupBoxM1StartQuote.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1ManualQuote)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1ManualSpeed)).BeginInit();
+            this.groupBoxM1Jog.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1JogSpeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM1TeachPoints)).BeginInit();
+            this.tabPageT1_2.SuspendLayout();
             this.contextMenuStripT1_2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM1TestPoints)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).BeginInit();
             this.tabControlMain.SuspendLayout();
             this.SuspendLayout();
@@ -668,7 +759,7 @@
             tabPageFormatStyle1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle1.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT3_1.FormatStyle = tabPageFormatStyle1;
-            this.tabPageT3_1.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT3_1.Location = new System.Drawing.Point(0, 0);
             this.tabPageT3_1.Name = "tabPageT3_1";
             tabPageColorStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle1.BackFadeColor = System.Drawing.Color.Transparent;
@@ -685,12 +776,12 @@
             tabPageColorStyle11.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle11.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT3_1.SelectedStyle = tabPageColorStyle11;
-            this.tabPageT3_1.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT3_1.Size = new System.Drawing.Size(0, 0);
             this.tabPageT3_1.StyleFromParent = false;
             this.tabPageT3_1.TabIndex = 9;
             this.tabPageT3_1.Text = "teach";
             this.tabPageT3_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT3_1.TextBounds")));
-            this.tabPageT3_1.TextSize = new System.Drawing.SizeF(50.55989F, 21.44531F);
+            this.tabPageT3_1.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT3_1.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT3_1
@@ -1236,6 +1327,11 @@
             0,
             0});
             this.numericUpDownM2ManualSpeed.Location = new System.Drawing.Point(160, 40);
+            this.numericUpDownM2ManualSpeed.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.numericUpDownM2ManualSpeed.Name = "numericUpDownM2ManualSpeed";
             this.numericUpDownM2ManualSpeed.Size = new System.Drawing.Size(80, 43);
             this.numericUpDownM2ManualSpeed.TabIndex = 83;
@@ -1324,6 +1420,11 @@
             0,
             0});
             this.numericUpDownM2JogSpeed.Location = new System.Drawing.Point(160, 40);
+            this.numericUpDownM2JogSpeed.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.numericUpDownM2JogSpeed.Name = "numericUpDownM2JogSpeed";
             this.numericUpDownM2JogSpeed.Size = new System.Drawing.Size(80, 43);
             this.numericUpDownM2JogSpeed.TabIndex = 98;
@@ -1430,10 +1531,9 @@
             // Column1
             // 
             this.Column1.HeaderText = "reached";
-            this.Column1.Image = ((System.Drawing.Image)(resources.GetObject("Column1.Image")));
-            this.Column1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column1.Width = 56;
             // 
             // buttonM2TeachDeleteProgram
@@ -1565,7 +1665,7 @@
             tabPageFormatStyle3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle3.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT3_2.FormatStyle = tabPageFormatStyle3;
-            this.tabPageT3_2.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT3_2.Location = new System.Drawing.Point(0, 0);
             this.tabPageT3_2.Name = "tabPageT3_2";
             tabPageColorStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle4.BackFadeColor = System.Drawing.Color.Transparent;
@@ -1582,12 +1682,12 @@
             tabPageColorStyle5.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle5.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT3_2.SelectedStyle = tabPageColorStyle5;
-            this.tabPageT3_2.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT3_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT3_2.StyleFromParent = false;
             this.tabPageT3_2.TabIndex = 10;
             this.tabPageT3_2.Text = "test";
             this.tabPageT3_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT3_2.TextBounds")));
-            this.tabPageT3_2.TextSize = new System.Drawing.SizeF(36.72395F, 21.44531F);
+            this.tabPageT3_2.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT3_2.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT3_2
@@ -1789,7 +1889,7 @@
             tabPageFormatStyle4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle4.Padding = new System.Windows.Forms.Padding(17, 5, 17, 5);
             this.tabPageT3_3.FormatStyle = tabPageFormatStyle4;
-            this.tabPageT3_3.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT3_3.Location = new System.Drawing.Point(0, 0);
             this.tabPageT3_3.Name = "tabPageT3_3";
             tabPageColorStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle6.BackFadeColor = System.Drawing.Color.Transparent;
@@ -1806,12 +1906,12 @@
             tabPageColorStyle7.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle7.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT3_3.SelectedStyle = tabPageColorStyle7;
-            this.tabPageT3_3.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT3_3.Size = new System.Drawing.Size(0, 0);
             this.tabPageT3_3.StyleFromParent = false;
             this.tabPageT3_3.TabIndex = 11;
             this.tabPageT3_3.Text = "input";
             this.tabPageT3_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT3_3.TextBounds")));
-            this.tabPageT3_3.TextSize = new System.Drawing.SizeF(47.47395F, 21.44531F);
+            this.tabPageT3_3.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT3_3.UseParentTabStripPlacement = false;
             // 
             // lbLed1040M2
@@ -2731,7 +2831,7 @@
             tabPageFormatStyle5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle5.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.tabPageT3_4.FormatStyle = tabPageFormatStyle5;
-            this.tabPageT3_4.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT3_4.Location = new System.Drawing.Point(0, 0);
             this.tabPageT3_4.Name = "tabPageT3_4";
             tabPageColorStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle8.BackFadeColor = System.Drawing.Color.Transparent;
@@ -2748,12 +2848,12 @@
             tabPageColorStyle9.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle9.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT3_4.SelectedStyle = tabPageColorStyle9;
-            this.tabPageT3_4.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT3_4.Size = new System.Drawing.Size(0, 0);
             this.tabPageT3_4.StyleFromParent = false;
             this.tabPageT3_4.TabIndex = 12;
             this.tabPageT3_4.Text = "output";
             this.tabPageT3_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT3_4.TextBounds")));
-            this.tabPageT3_4.TextSize = new System.Drawing.SizeF(59.4427F, 21.44531F);
+            this.tabPageT3_4.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT3_4.UseParentTabStripPlacement = false;
             // 
             // imageListStart
@@ -2769,6 +2869,7 @@
             // tabPageT4_1
             // 
             this.tabPageT4_1.ContextMenuStrip = this.contextMenuStripT4_1;
+            this.tabPageT4_1.Controls.Add(this.groupBoxM3Rotation);
             this.tabPageT4_1.Controls.Add(this.textBox1);
             this.tabPageT4_1.Controls.Add(this.groupBoxM3Constrast);
             this.tabPageT4_1.Controls.Add(this.groupBoxM3CenteringClamp);
@@ -2790,7 +2891,7 @@
             tabPageFormatStyle6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle6.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT4_1.FormatStyle = tabPageFormatStyle6;
-            this.tabPageT4_1.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT4_1.Location = new System.Drawing.Point(96, 36);
             this.tabPageT4_1.Name = "tabPageT4_1";
             tabPageColorStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle12.BackFadeColor = System.Drawing.Color.Transparent;
@@ -2807,12 +2908,12 @@
             tabPageColorStyle22.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle22.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT4_1.SelectedStyle = tabPageColorStyle22;
-            this.tabPageT4_1.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT4_1.Size = new System.Drawing.Size(914, 716);
             this.tabPageT4_1.StyleFromParent = false;
             this.tabPageT4_1.TabIndex = 14;
             this.tabPageT4_1.Text = "teach";
             this.tabPageT4_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_1.TextBounds")));
-            this.tabPageT4_1.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT4_1.TextSize = new System.Drawing.SizeF(50.55989F, 21.44531F);
             this.tabPageT4_1.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT4_1
@@ -2842,6 +2943,53 @@
             this.toolStripComboBoxT4_1.IntegralHeight = false;
             this.toolStripComboBoxT4_1.Name = "toolStripComboBoxT4_1";
             this.toolStripComboBoxT4_1.Size = new System.Drawing.Size(120, 26);
+            // 
+            // groupBoxM3Rotation
+            // 
+            this.groupBoxM3Rotation.Controls.Add(this.buttonM3RotationCCW);
+            this.groupBoxM3Rotation.Controls.Add(this.buttonM3RotationCW);
+            this.groupBoxM3Rotation.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxM3Rotation.Location = new System.Drawing.Point(460, 625);
+            this.groupBoxM3Rotation.Name = "groupBoxM3Rotation";
+            this.groupBoxM3Rotation.Size = new System.Drawing.Size(125, 80);
+            this.groupBoxM3Rotation.TabIndex = 304;
+            this.groupBoxM3Rotation.TabStop = false;
+            this.groupBoxM3Rotation.Text = "rotation";
+            // 
+            // buttonM3RotationCCW
+            // 
+            this.buttonM3RotationCCW.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3RotationCCW.ImageIndex = 1;
+            this.buttonM3RotationCCW.ImageList = this.imageListRotation;
+            this.buttonM3RotationCCW.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3RotationCCW.Location = new System.Drawing.Point(65, 20);
+            this.buttonM3RotationCCW.Name = "buttonM3RotationCCW";
+            this.buttonM3RotationCCW.Size = new System.Drawing.Size(48, 48);
+            this.buttonM3RotationCCW.TabIndex = 152;
+            this.buttonM3RotationCCW.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonM3RotationCCW.UseVisualStyleBackColor = true;
+            this.buttonM3RotationCCW.Click += new System.EventHandler(this.buttonM3RotationCCW_Click);
+            // 
+            // imageListRotation
+            // 
+            this.imageListRotation.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListRotation.ImageStream")));
+            this.imageListRotation.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListRotation.Images.SetKeyName(0, "clockwise.png");
+            this.imageListRotation.Images.SetKeyName(1, "counterclockwise.png");
+            // 
+            // buttonM3RotationCW
+            // 
+            this.buttonM3RotationCW.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3RotationCW.ImageIndex = 0;
+            this.buttonM3RotationCW.ImageList = this.imageListRotation;
+            this.buttonM3RotationCW.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3RotationCW.Location = new System.Drawing.Point(10, 20);
+            this.buttonM3RotationCW.Name = "buttonM3RotationCW";
+            this.buttonM3RotationCW.Size = new System.Drawing.Size(48, 48);
+            this.buttonM3RotationCW.TabIndex = 151;
+            this.buttonM3RotationCW.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonM3RotationCW.UseVisualStyleBackColor = true;
+            this.buttonM3RotationCW.Click += new System.EventHandler(this.buttonM3RotationCW_Click);
             // 
             // textBox1
             // 
@@ -3084,9 +3232,9 @@
             this.groupBoxM3Print.Controls.Add(this.buttonM3PrintCycle);
             this.groupBoxM3Print.Controls.Add(this.lbLed12);
             this.groupBoxM3Print.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxM3Print.Location = new System.Drawing.Point(305, 625);
+            this.groupBoxM3Print.Location = new System.Drawing.Point(235, 625);
             this.groupBoxM3Print.Name = "groupBoxM3Print";
-            this.groupBoxM3Print.Size = new System.Drawing.Size(280, 80);
+            this.groupBoxM3Print.Size = new System.Drawing.Size(220, 80);
             this.groupBoxM3Print.TabIndex = 302;
             this.groupBoxM3Print.TabStop = false;
             this.groupBoxM3Print.Text = "print";
@@ -3095,7 +3243,7 @@
             // 
             this.buttonM3PrintCycle.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3PrintCycle.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3PrintCycle.Location = new System.Drawing.Point(20, 20);
+            this.buttonM3PrintCycle.Location = new System.Drawing.Point(10, 20);
             this.buttonM3PrintCycle.Name = "buttonM3PrintCycle";
             this.buttonM3PrintCycle.Size = new System.Drawing.Size(80, 48);
             this.buttonM3PrintCycle.TabIndex = 150;
@@ -3110,14 +3258,14 @@
             this.lbLed12.Enabled = false;
             this.lbLed12.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed12.Label = "GTO print ended";
+            this.lbLed12.Label = "print ended";
             this.lbLed12.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed12.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed12.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed12.Location = new System.Drawing.Point(130, 30);
+            this.lbLed12.Location = new System.Drawing.Point(95, 30);
             this.lbLed12.Name = "lbLed12";
             this.lbLed12.Renderer = null;
-            this.lbLed12.Size = new System.Drawing.Size(137, 24);
+            this.lbLed12.Size = new System.Drawing.Size(100, 24);
             this.lbLed12.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
             this.lbLed12.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
             this.lbLed12.TabIndex = 289;
@@ -3129,7 +3277,7 @@
             this.groupBoxM3Servo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxM3Servo.Location = new System.Drawing.Point(10, 625);
             this.groupBoxM3Servo.Name = "groupBoxM3Servo";
-            this.groupBoxM3Servo.Size = new System.Drawing.Size(280, 80);
+            this.groupBoxM3Servo.Size = new System.Drawing.Size(220, 80);
             this.groupBoxM3Servo.TabIndex = 301;
             this.groupBoxM3Servo.TabStop = false;
             this.groupBoxM3Servo.Text = "servo";
@@ -3138,7 +3286,7 @@
             // 
             this.buttonM3ResetServo.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3ResetServo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3ResetServo.Location = new System.Drawing.Point(20, 20);
+            this.buttonM3ResetServo.Location = new System.Drawing.Point(10, 20);
             this.buttonM3ResetServo.Name = "buttonM3ResetServo";
             this.buttonM3ResetServo.Size = new System.Drawing.Size(90, 48);
             this.buttonM3ResetServo.TabIndex = 149;
@@ -3157,10 +3305,10 @@
             this.lbLed11.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed11.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed11.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed11.Location = new System.Drawing.Point(130, 30);
+            this.lbLed11.Location = new System.Drawing.Point(105, 30);
             this.lbLed11.Name = "lbLed11";
             this.lbLed11.Renderer = null;
-            this.lbLed11.Size = new System.Drawing.Size(135, 24);
+            this.lbLed11.Size = new System.Drawing.Size(100, 24);
             this.lbLed11.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
             this.lbLed11.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
             this.lbLed11.TabIndex = 288;
@@ -3194,7 +3342,7 @@
             this.checkBoxM3WorkingBelt.ImageIndex = 1;
             this.checkBoxM3WorkingBelt.ImageList = this.imageListBelt;
             this.checkBoxM3WorkingBelt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM3WorkingBelt.Location = new System.Drawing.Point(724, 635);
+            this.checkBoxM3WorkingBelt.Location = new System.Drawing.Point(725, 635);
             this.checkBoxM3WorkingBelt.Name = "checkBoxM3WorkingBelt";
             this.checkBoxM3WorkingBelt.Size = new System.Drawing.Size(131, 70);
             this.checkBoxM3WorkingBelt.TabIndex = 269;
@@ -3349,6 +3497,11 @@
             0,
             0});
             this.numericUpDownM3ManualSpeed.Location = new System.Drawing.Point(160, 40);
+            this.numericUpDownM3ManualSpeed.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.numericUpDownM3ManualSpeed.Name = "numericUpDownM3ManualSpeed";
             this.numericUpDownM3ManualSpeed.Size = new System.Drawing.Size(80, 43);
             this.numericUpDownM3ManualSpeed.TabIndex = 83;
@@ -3437,6 +3590,11 @@
             0,
             0});
             this.numericUpDownM3JogSpeed.Location = new System.Drawing.Point(160, 40);
+            this.numericUpDownM3JogSpeed.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.numericUpDownM3JogSpeed.Name = "numericUpDownM3JogSpeed";
             this.numericUpDownM3JogSpeed.Size = new System.Drawing.Size(93, 43);
             this.numericUpDownM3JogSpeed.TabIndex = 98;
@@ -3545,6 +3703,7 @@
             // dataGridViewM3TeachPoints
             // 
             this.dataGridViewM3TeachPoints.AllowUserToAddRows = false;
+            this.dataGridViewM3TeachPoints.AllowUserToDeleteRows = false;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3560,7 +3719,7 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewButtonColumn1,
             this.dataGridViewButtonColumn2,
-            this.dataGridViewImageColumn1});
+            this.ColumnM3PReached});
             this.dataGridViewM3TeachPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridViewM3TeachPoints.Location = new System.Drawing.Point(10, 100);
             this.dataGridViewM3TeachPoints.Name = "dataGridViewM3TeachPoints";
@@ -3573,6 +3732,7 @@
             this.dataGridViewM3TeachPoints.Size = new System.Drawing.Size(580, 220);
             this.dataGridViewM3TeachPoints.TabIndex = 134;
             this.dataGridViewM3TeachPoints.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM3TeachPoints_CellContentClick);
+            this.dataGridViewM3TeachPoints.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridViewM3TeachPoints_CellPainting);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -3611,13 +3771,13 @@
             this.dataGridViewButtonColumn2.HeaderText = "start";
             this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
             // 
-            // dataGridViewImageColumn1
+            // ColumnM3PReached
             // 
-            this.dataGridViewImageColumn1.HeaderText = "reached";
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Width = 56;
+            this.ColumnM3PReached.HeaderText = "reached";
+            this.ColumnM3PReached.Name = "ColumnM3PReached";
+            this.ColumnM3PReached.ReadOnly = true;
+            this.ColumnM3PReached.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnM3PReached.Width = 56;
             // 
             // tabPageT4
             // 
@@ -3674,7 +3834,7 @@
             tabPageFormatStyle8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle8.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT4_2.FormatStyle = tabPageFormatStyle8;
-            this.tabPageT4_2.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT4_2.Location = new System.Drawing.Point(96, 36);
             this.tabPageT4_2.Name = "tabPageT4_2";
             tabPageColorStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle15.BackFadeColor = System.Drawing.Color.Transparent;
@@ -3691,12 +3851,12 @@
             tabPageColorStyle16.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle16.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT4_2.SelectedStyle = tabPageColorStyle16;
-            this.tabPageT4_2.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT4_2.Size = new System.Drawing.Size(914, 716);
             this.tabPageT4_2.StyleFromParent = false;
             this.tabPageT4_2.TabIndex = 15;
             this.tabPageT4_2.Text = "test";
             this.tabPageT4_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_2.TextBounds")));
-            this.tabPageT4_2.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT4_2.TextSize = new System.Drawing.SizeF(36.72395F, 21.44531F);
             this.tabPageT4_2.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT4_2
@@ -3737,6 +3897,7 @@
             this.buttonM3StartTest.TabIndex = 123;
             this.buttonM3StartTest.Text = "start test";
             this.buttonM3StartTest.UseVisualStyleBackColor = true;
+            this.buttonM3StartTest.Click += new System.EventHandler(this.buttonM3StartTest_Click);
             // 
             // buttonM3TestSaveProgram
             // 
@@ -3752,6 +3913,7 @@
             this.buttonM3TestSaveProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM3TestSaveProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM3TestSaveProgram.UseVisualStyleBackColor = true;
+            this.buttonM3TestSaveProgram.Click += new System.EventHandler(this.buttonM3TestSaveProgram_Click);
             // 
             // buttonM3TestLoadProgram
             // 
@@ -3767,6 +3929,7 @@
             this.buttonM3TestLoadProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM3TestLoadProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM3TestLoadProgram.UseVisualStyleBackColor = true;
+            this.buttonM3TestLoadProgram.Click += new System.EventHandler(this.buttonM3TestLoadProgram_Click);
             // 
             // dataGridViewM3TestPoints
             // 
@@ -3795,6 +3958,7 @@
             this.dataGridViewM3TestPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridViewM3TestPoints.Size = new System.Drawing.Size(380, 220);
             this.dataGridViewM3TestPoints.TabIndex = 120;
+            this.dataGridViewM3TestPoints.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM3TestPoints_CellContentClick);
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -3846,7 +4010,7 @@
             tabPageFormatStyle9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle9.Padding = new System.Windows.Forms.Padding(17, 5, 17, 5);
             this.tabPageT4_3.FormatStyle = tabPageFormatStyle9;
-            this.tabPageT4_3.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT4_3.Location = new System.Drawing.Point(96, 36);
             this.tabPageT4_3.Name = "tabPageT4_3";
             tabPageColorStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle17.BackFadeColor = System.Drawing.Color.Transparent;
@@ -3863,12 +4027,12 @@
             tabPageColorStyle18.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle18.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT4_3.SelectedStyle = tabPageColorStyle18;
-            this.tabPageT4_3.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT4_3.Size = new System.Drawing.Size(914, 716);
             this.tabPageT4_3.StyleFromParent = false;
             this.tabPageT4_3.TabIndex = 16;
             this.tabPageT4_3.Text = "input";
             this.tabPageT4_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_3.TextBounds")));
-            this.tabPageT4_3.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT4_3.TextSize = new System.Drawing.SizeF(47.47395F, 21.44531F);
             this.tabPageT4_3.UseParentTabStripPlacement = false;
             // 
             // tabPageT4_4
@@ -3876,7 +4040,7 @@
             tabPageFormatStyle10.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle10.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.tabPageT4_4.FormatStyle = tabPageFormatStyle10;
-            this.tabPageT4_4.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT4_4.Location = new System.Drawing.Point(96, 36);
             this.tabPageT4_4.Name = "tabPageT4_4";
             tabPageColorStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle19.BackFadeColor = System.Drawing.Color.Transparent;
@@ -3893,12 +4057,12 @@
             tabPageColorStyle20.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle20.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT4_4.SelectedStyle = tabPageColorStyle20;
-            this.tabPageT4_4.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT4_4.Size = new System.Drawing.Size(914, 716);
             this.tabPageT4_4.StyleFromParent = false;
             this.tabPageT4_4.TabIndex = 17;
             this.tabPageT4_4.Text = "output";
             this.tabPageT4_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_4.TextBounds")));
-            this.tabPageT4_4.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT4_4.TextSize = new System.Drawing.SizeF(59.4427F, 21.44531F);
             this.tabPageT4_4.UseParentTabStripPlacement = false;
             // 
             // tabPageT5_1
@@ -4179,6 +4343,7 @@
             // 
             // tabPageT6
             // 
+            this.tabPageT6.Controls.Add(this.button2);
             tabPageFormatStyle16.BorderCornerRadius = 2;
             tabPageFormatStyle16.ContentSpacing = 0;
             tabPageFormatStyle16.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4215,6 +4380,16 @@
             this.tabPageT6.Text = "page";
             this.tabPageT6.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT6.TextBounds")));
             this.tabPageT6.TextSize = new System.Drawing.SizeF(37.03645F, 17.42431F);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(213, 202);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(176, 90);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // tabPageT7
             // 
@@ -4306,9 +4481,10 @@
             this.contextMenuStripT0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.contextMenuStripT0.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contextMenuStripT0.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemT0});
+            this.toolStripMenuItemT0,
+            this.toolStripMenuItemT0Keyboard});
             this.contextMenuStripT0.Name = "contextMenuStrip1";
-            this.contextMenuStripT0.Size = new System.Drawing.Size(177, 26);
+            this.contextMenuStripT0.Size = new System.Drawing.Size(177, 48);
             this.contextMenuStripT0.Text = "recipe name";
             // 
             // toolStripMenuItemT0
@@ -4328,6 +4504,13 @@
             this.toolStripComboBoxT0.IntegralHeight = false;
             this.toolStripComboBoxT0.Name = "toolStripComboBoxT0";
             this.toolStripComboBoxT0.Size = new System.Drawing.Size(120, 26);
+            // 
+            // toolStripMenuItemT0Keyboard
+            // 
+            this.toolStripMenuItemT0Keyboard.Name = "toolStripMenuItemT0Keyboard";
+            this.toolStripMenuItemT0Keyboard.Size = new System.Drawing.Size(176, 22);
+            this.toolStripMenuItemT0Keyboard.Text = "keyboard";
+            this.toolStripMenuItemT0Keyboard.Click += new System.EventHandler(this.toolStripMenuItemT0Keyboard_Click);
             // 
             // button1
             // 
@@ -4541,9 +4724,9 @@
             this.groupBoxM6.Controls.Add(this.comboBoxM6PrgName);
             this.groupBoxM6.Controls.Add(this.labelM6Param1Name);
             this.groupBoxM6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxM6.Location = new System.Drawing.Point(572, 210);
+            this.groupBoxM6.Location = new System.Drawing.Point(570, 210);
             this.groupBoxM6.Name = "groupBoxM6";
-            this.groupBoxM6.Size = new System.Drawing.Size(280, 185);
+            this.groupBoxM6.Size = new System.Drawing.Size(275, 185);
             this.groupBoxM6.TabIndex = 7;
             this.groupBoxM6.TabStop = false;
             this.groupBoxM6.Text = "oven";
@@ -5977,7 +6160,7 @@
             this.tabPageT0_2_1.Controls.Add(this.groupBoxRecipeM1);
             this.tabPageT0_2_1.Controls.Add(this.checkBoxR1Aux2_01);
             this.tabPageT0_2_1.Controls.Add(this.labelRecipeNameT0_1);
-            this.tabPageT0_2_1.Controls.Add(this.textBoxRecipeName);
+            this.tabPageT0_2_1.Controls.Add(this.textBoxMRecipeName);
             tabPageFormatStyle21.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle21.Padding = new System.Windows.Forms.Padding(22, 5, 15, 5);
             this.tabPageT0_2_1.FormatStyle = tabPageFormatStyle21;
@@ -6436,20 +6619,21 @@
             this.labelRecipeNameT0_1.TabIndex = 8;
             this.labelRecipeNameT0_1.Text = "Recipe name";
             // 
-            // textBoxRecipeName
+            // textBoxMRecipeName
             // 
-            this.textBoxRecipeName.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRecipeName.Location = new System.Drawing.Point(115, 15);
-            this.textBoxRecipeName.MaxLength = 4;
-            this.textBoxRecipeName.Name = "textBoxRecipeName";
-            this.textBoxRecipeName.Size = new System.Drawing.Size(100, 23);
-            this.textBoxRecipeName.TabIndex = 7;
+            this.textBoxMRecipeName.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMRecipeName.Location = new System.Drawing.Point(115, 15);
+            this.textBoxMRecipeName.MaxLength = 4;
+            this.textBoxMRecipeName.Name = "textBoxMRecipeName";
+            this.textBoxMRecipeName.Size = new System.Drawing.Size(100, 23);
+            this.textBoxMRecipeName.TabIndex = 7;
             // 
             // tabPageT0_2_2
             // 
-            this.tabPageT0_2_2.Controls.Add(this.comboBoxRecipeName);
+            this.tabPageT0_2_2.Controls.Add(this.buttonMRecipiesShowAll);
+            this.tabPageT0_2_2.Controls.Add(this.comboBoxMRecipeName);
             this.tabPageT0_2_2.Controls.Add(this.labelRecipeNameT0_2);
-            this.tabPageT0_2_2.Controls.Add(this.dataGridViewEditRecipe);
+            this.tabPageT0_2_2.Controls.Add(this.dataGridViewMEditRecipe);
             tabPageFormatStyle22.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle22.Padding = new System.Windows.Forms.Padding(5, 5, 10, 5);
             this.tabPageT0_2_2.FormatStyle = tabPageFormatStyle22;
@@ -6467,14 +6651,24 @@
             this.tabPageT0_2_2.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT0_2_2.UseParentTabStripPlacement = false;
             // 
-            // comboBoxRecipeName
+            // buttonMRecipiesShowAll
             // 
-            this.comboBoxRecipeName.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxRecipeName.FormattingEnabled = true;
-            this.comboBoxRecipeName.Location = new System.Drawing.Point(115, 15);
-            this.comboBoxRecipeName.Name = "comboBoxRecipeName";
-            this.comboBoxRecipeName.Size = new System.Drawing.Size(100, 24);
-            this.comboBoxRecipeName.TabIndex = 10;
+            this.buttonMRecipiesShowAll.Location = new System.Drawing.Point(194, 15);
+            this.buttonMRecipiesShowAll.Name = "buttonMRecipiesShowAll";
+            this.buttonMRecipiesShowAll.Size = new System.Drawing.Size(75, 23);
+            this.buttonMRecipiesShowAll.TabIndex = 11;
+            this.buttonMRecipiesShowAll.Text = "button3";
+            this.buttonMRecipiesShowAll.UseVisualStyleBackColor = true;
+            this.buttonMRecipiesShowAll.Click += new System.EventHandler(this.buttonMRecipiesShowAll_Click);
+            // 
+            // comboBoxMRecipeName
+            // 
+            this.comboBoxMRecipeName.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxMRecipeName.FormattingEnabled = true;
+            this.comboBoxMRecipeName.Location = new System.Drawing.Point(115, 15);
+            this.comboBoxMRecipeName.Name = "comboBoxMRecipeName";
+            this.comboBoxMRecipeName.Size = new System.Drawing.Size(100, 24);
+            this.comboBoxMRecipeName.TabIndex = 10;
             // 
             // labelRecipeNameT0_2
             // 
@@ -6487,25 +6681,33 @@
             this.labelRecipeNameT0_2.TabIndex = 9;
             this.labelRecipeNameT0_2.Text = "Recipe name";
             // 
-            // dataGridViewEditRecipe
+            // dataGridViewMEditRecipe
             // 
-            this.dataGridViewEditRecipe.AllowUserToOrderColumns = true;
-            this.dataGridViewEditRecipe.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            this.dataGridViewMEditRecipe.AllowUserToOrderColumns = true;
+            this.dataGridViewMEditRecipe.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Verdana", 12F);
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewEditRecipe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
-            this.dataGridViewEditRecipe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewEditRecipe.Location = new System.Drawing.Point(30, 120);
-            this.dataGridViewEditRecipe.Name = "dataGridViewEditRecipe";
-            this.dataGridViewEditRecipe.RowHeadersVisible = false;
-            this.dataGridViewEditRecipe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewEditRecipe.Size = new System.Drawing.Size(854, 300);
-            this.dataGridViewEditRecipe.TabIndex = 2;
+            this.dataGridViewMEditRecipe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.dataGridViewMEditRecipe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewMEditRecipe.DefaultCellStyle = dataGridViewCellStyle19;
+            this.dataGridViewMEditRecipe.Location = new System.Drawing.Point(10, 100);
+            this.dataGridViewMEditRecipe.Name = "dataGridViewMEditRecipe";
+            this.dataGridViewMEditRecipe.RowHeadersVisible = false;
+            this.dataGridViewMEditRecipe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewMEditRecipe.Size = new System.Drawing.Size(690, 300);
+            this.dataGridViewMEditRecipe.TabIndex = 2;
             // 
             // tabPageT0_3
             // 
@@ -6855,10 +7057,24 @@
             // tabPageT1_1
             // 
             this.tabPageT1_1.ContextMenuStrip = this.contextMenuStripT1_1;
-            this.tabPageT1_1.Controls.Add(this.labelM1TeachAxisQuoteName);
-            this.tabPageT1_1.Controls.Add(this.labelM1TeachAxisQuoteValue);
-            this.tabPageT1_1.Controls.Add(this.labelM1HomingDone);
-            this.tabPageT1_1.Controls.Add(this.buttonM1HomingDone);
+            this.tabPageT1_1.Controls.Add(this.groupBoxM1Varius);
+            this.tabPageT1_1.Controls.Add(this.groupBoxM1CutSlide);
+            this.tabPageT1_1.Controls.Add(this.groupBoxM1Block);
+            this.tabPageT1_1.Controls.Add(this.groupBoxM1Cut);
+            this.tabPageT1_1.Controls.Add(this.groupBox1);
+            this.tabPageT1_1.Controls.Add(this.groupBoxM1Servo);
+            this.tabPageT1_1.Controls.Add(this.textBox2);
+            this.tabPageT1_1.Controls.Add(this.checkBoxM1ExitBelt);
+            this.tabPageT1_1.Controls.Add(this.checkBoxM1WorkingBelt);
+            this.tabPageT1_1.Controls.Add(this.groupBoxM1Homing);
+            this.tabPageT1_1.Controls.Add(this.groupBoxM1StartQuote);
+            this.tabPageT1_1.Controls.Add(this.groupBoxM1Jog);
+            this.tabPageT1_1.Controls.Add(this.dataGridViewM1TeachPoints);
+            this.tabPageT1_1.Controls.Add(this.buttonM1TeachDeleteProgram);
+            this.tabPageT1_1.Controls.Add(this.buttonM1TeachNewProgram);
+            this.tabPageT1_1.Controls.Add(this.buttonM1TeachSaveProgram);
+            this.tabPageT1_1.Controls.Add(this.buttonM1TeachLoadProgram);
+            this.tabPageT1_1.Controls.Add(this.comboBoxM1TeachProgramList);
             tabPageFormatStyle24.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle24.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT1_1.FormatStyle = tabPageFormatStyle24;
@@ -6915,27 +7131,374 @@
             this.toolStripComboBoxT1_1.Name = "toolStripComboBoxT1_1";
             this.toolStripComboBoxT1_1.Size = new System.Drawing.Size(120, 26);
             // 
-            // labelM1TeachAxisQuoteName
+            // groupBoxM1Varius
             // 
-            this.labelM1TeachAxisQuoteName.AutoSize = true;
-            this.labelM1TeachAxisQuoteName.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.labelM1TeachAxisQuoteName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1TeachAxisQuoteName.Location = new System.Drawing.Point(664, 99);
-            this.labelM1TeachAxisQuoteName.Name = "labelM1TeachAxisQuoteName";
-            this.labelM1TeachAxisQuoteName.Size = new System.Drawing.Size(84, 16);
-            this.labelM1TeachAxisQuoteName.TabIndex = 137;
-            this.labelM1TeachAxisQuoteName.Text = "quote (mm)";
+            this.groupBoxM1Varius.Controls.Add(this.button3);
+            this.groupBoxM1Varius.Controls.Add(this.buttonM1Sharpening);
+            this.groupBoxM1Varius.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxM1Varius.Location = new System.Drawing.Point(453, 628);
+            this.groupBoxM1Varius.Name = "groupBoxM1Varius";
+            this.groupBoxM1Varius.Size = new System.Drawing.Size(125, 80);
+            this.groupBoxM1Varius.TabIndex = 305;
+            this.groupBoxM1Varius.TabStop = false;
+            this.groupBoxM1Varius.Text = "varie";
             // 
-            // labelM1TeachAxisQuoteValue
+            // button3
             // 
-            this.labelM1TeachAxisQuoteValue.AutoSize = true;
-            this.labelM1TeachAxisQuoteValue.Font = new System.Drawing.Font("Verdana", 14.25F);
-            this.labelM1TeachAxisQuoteValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1TeachAxisQuoteValue.Location = new System.Drawing.Point(664, 129);
-            this.labelM1TeachAxisQuoteValue.Name = "labelM1TeachAxisQuoteValue";
-            this.labelM1TeachAxisQuoteValue.Size = new System.Drawing.Size(58, 23);
-            this.labelM1TeachAxisQuoteValue.TabIndex = 138;
-            this.labelM1TeachAxisQuoteValue.Text = "9999";
+            this.button3.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.button3.ImageIndex = 1;
+            this.button3.ImageList = this.imageListRotation;
+            this.button3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button3.Location = new System.Drawing.Point(65, 20);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(48, 48);
+            this.button3.TabIndex = 152;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // buttonM1Sharpening
+            // 
+            this.buttonM1Sharpening.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1Sharpening.ImageIndex = 0;
+            this.buttonM1Sharpening.ImageList = this.imageListRotation;
+            this.buttonM1Sharpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1Sharpening.Location = new System.Drawing.Point(10, 20);
+            this.buttonM1Sharpening.Name = "buttonM1Sharpening";
+            this.buttonM1Sharpening.Size = new System.Drawing.Size(48, 48);
+            this.buttonM1Sharpening.TabIndex = 151;
+            this.buttonM1Sharpening.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonM1Sharpening.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxM1CutSlide
+            // 
+            this.groupBoxM1CutSlide.Controls.Add(this.buttonM1CutSlideForward);
+            this.groupBoxM1CutSlide.Controls.Add(this.buttonM1CutSlideBackward);
+            this.groupBoxM1CutSlide.Controls.Add(this.lbLed17);
+            this.groupBoxM1CutSlide.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxM1CutSlide.Location = new System.Drawing.Point(305, 500);
+            this.groupBoxM1CutSlide.Name = "groupBoxM1CutSlide";
+            this.groupBoxM1CutSlide.Size = new System.Drawing.Size(280, 120);
+            this.groupBoxM1CutSlide.TabIndex = 302;
+            this.groupBoxM1CutSlide.TabStop = false;
+            this.groupBoxM1CutSlide.Text = "cut slide";
+            // 
+            // buttonM1CutSlideForward
+            // 
+            this.buttonM1CutSlideForward.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1CutSlideForward.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1CutSlideForward.Location = new System.Drawing.Point(20, 20);
+            this.buttonM1CutSlideForward.Name = "buttonM1CutSlideForward";
+            this.buttonM1CutSlideForward.Size = new System.Drawing.Size(80, 48);
+            this.buttonM1CutSlideForward.TabIndex = 143;
+            this.buttonM1CutSlideForward.Text = "forward";
+            this.buttonM1CutSlideForward.UseVisualStyleBackColor = true;
+            this.buttonM1CutSlideForward.Click += new System.EventHandler(this.buttonM1CutSlideForward_Click);
+            // 
+            // buttonM1CutSlideBackward
+            // 
+            this.buttonM1CutSlideBackward.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1CutSlideBackward.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1CutSlideBackward.Location = new System.Drawing.Point(154, 20);
+            this.buttonM1CutSlideBackward.Name = "buttonM1CutSlideBackward";
+            this.buttonM1CutSlideBackward.Size = new System.Drawing.Size(80, 48);
+            this.buttonM1CutSlideBackward.TabIndex = 144;
+            this.buttonM1CutSlideBackward.Text = "backward";
+            this.buttonM1CutSlideBackward.UseVisualStyleBackColor = true;
+            this.buttonM1CutSlideBackward.Click += new System.EventHandler(this.buttonM1CutSlideBackward_Click);
+            // 
+            // lbLed17
+            // 
+            this.lbLed17.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed17.BlinkInterval = 500;
+            this.lbLed17.Enabled = false;
+            this.lbLed17.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed17.Label = "cut slide forward";
+            this.lbLed17.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed17.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed17.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed17.Location = new System.Drawing.Point(20, 80);
+            this.lbLed17.Name = "lbLed17";
+            this.lbLed17.Renderer = null;
+            this.lbLed17.Size = new System.Drawing.Size(220, 24);
+            this.lbLed17.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed17.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed17.TabIndex = 263;
+            // 
+            // groupBoxM1Block
+            // 
+            this.groupBoxM1Block.Controls.Add(this.buttonM1BlockOpening);
+            this.groupBoxM1Block.Controls.Add(this.buttonM1BlockClosing);
+            this.groupBoxM1Block.Controls.Add(this.lbLed16);
+            this.groupBoxM1Block.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxM1Block.Location = new System.Drawing.Point(10, 500);
+            this.groupBoxM1Block.Name = "groupBoxM1Block";
+            this.groupBoxM1Block.Size = new System.Drawing.Size(280, 120);
+            this.groupBoxM1Block.TabIndex = 301;
+            this.groupBoxM1Block.TabStop = false;
+            this.groupBoxM1Block.Text = "block";
+            // 
+            // buttonM1BlockOpening
+            // 
+            this.buttonM1BlockOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1BlockOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1BlockOpening.Location = new System.Drawing.Point(20, 20);
+            this.buttonM1BlockOpening.Name = "buttonM1BlockOpening";
+            this.buttonM1BlockOpening.Size = new System.Drawing.Size(80, 48);
+            this.buttonM1BlockOpening.TabIndex = 143;
+            this.buttonM1BlockOpening.Text = "opening";
+            this.buttonM1BlockOpening.UseVisualStyleBackColor = true;
+            this.buttonM1BlockOpening.Click += new System.EventHandler(this.buttonM1BlockOpening_Click);
+            // 
+            // buttonM1BlockClosing
+            // 
+            this.buttonM1BlockClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1BlockClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1BlockClosing.Location = new System.Drawing.Point(150, 20);
+            this.buttonM1BlockClosing.Name = "buttonM1BlockClosing";
+            this.buttonM1BlockClosing.Size = new System.Drawing.Size(80, 48);
+            this.buttonM1BlockClosing.TabIndex = 144;
+            this.buttonM1BlockClosing.Text = "closing";
+            this.buttonM1BlockClosing.UseVisualStyleBackColor = true;
+            this.buttonM1BlockClosing.Click += new System.EventHandler(this.buttonM1BlockClosing_Click);
+            // 
+            // lbLed16
+            // 
+            this.lbLed16.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed16.BlinkInterval = 500;
+            this.lbLed16.Enabled = false;
+            this.lbLed16.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed16.Label = "block closed";
+            this.lbLed16.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed16.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed16.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed16.Location = new System.Drawing.Point(20, 80);
+            this.lbLed16.Name = "lbLed16";
+            this.lbLed16.Renderer = null;
+            this.lbLed16.Size = new System.Drawing.Size(220, 24);
+            this.lbLed16.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed16.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed16.TabIndex = 263;
+            // 
+            // groupBoxM1Cut
+            // 
+            this.groupBoxM1Cut.Controls.Add(this.buttonM1CutOpening);
+            this.groupBoxM1Cut.Controls.Add(this.buttonM1CutClosing);
+            this.groupBoxM1Cut.Controls.Add(this.lbLed15);
+            this.groupBoxM1Cut.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxM1Cut.Location = new System.Drawing.Point(305, 370);
+            this.groupBoxM1Cut.Name = "groupBoxM1Cut";
+            this.groupBoxM1Cut.Size = new System.Drawing.Size(280, 120);
+            this.groupBoxM1Cut.TabIndex = 300;
+            this.groupBoxM1Cut.TabStop = false;
+            this.groupBoxM1Cut.Text = "cut";
+            // 
+            // buttonM1CutOpening
+            // 
+            this.buttonM1CutOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1CutOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1CutOpening.Location = new System.Drawing.Point(20, 20);
+            this.buttonM1CutOpening.Name = "buttonM1CutOpening";
+            this.buttonM1CutOpening.Size = new System.Drawing.Size(80, 48);
+            this.buttonM1CutOpening.TabIndex = 143;
+            this.buttonM1CutOpening.Text = "opening";
+            this.buttonM1CutOpening.UseVisualStyleBackColor = true;
+            this.buttonM1CutOpening.Click += new System.EventHandler(this.buttonM1CutOpening_Click);
+            // 
+            // buttonM1CutClosing
+            // 
+            this.buttonM1CutClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1CutClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1CutClosing.Location = new System.Drawing.Point(154, 20);
+            this.buttonM1CutClosing.Name = "buttonM1CutClosing";
+            this.buttonM1CutClosing.Size = new System.Drawing.Size(80, 48);
+            this.buttonM1CutClosing.TabIndex = 144;
+            this.buttonM1CutClosing.Text = "closing";
+            this.buttonM1CutClosing.UseVisualStyleBackColor = true;
+            this.buttonM1CutClosing.Click += new System.EventHandler(this.buttonM1CutClosing_Click);
+            // 
+            // lbLed15
+            // 
+            this.lbLed15.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed15.BlinkInterval = 500;
+            this.lbLed15.Enabled = false;
+            this.lbLed15.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed15.Label = "cut closed";
+            this.lbLed15.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed15.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed15.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed15.Location = new System.Drawing.Point(20, 80);
+            this.lbLed15.Name = "lbLed15";
+            this.lbLed15.Renderer = null;
+            this.lbLed15.Size = new System.Drawing.Size(220, 24);
+            this.lbLed15.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed15.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed15.TabIndex = 263;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.buttonM1SpringsOpening);
+            this.groupBox1.Controls.Add(this.buttonM1SpringsClosing);
+            this.groupBox1.Controls.Add(this.lbLed14);
+            this.groupBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(10, 370);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(280, 120);
+            this.groupBox1.TabIndex = 299;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "springs";
+            // 
+            // buttonM1SpringsOpening
+            // 
+            this.buttonM1SpringsOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1SpringsOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1SpringsOpening.Location = new System.Drawing.Point(20, 20);
+            this.buttonM1SpringsOpening.Name = "buttonM1SpringsOpening";
+            this.buttonM1SpringsOpening.Size = new System.Drawing.Size(80, 48);
+            this.buttonM1SpringsOpening.TabIndex = 141;
+            this.buttonM1SpringsOpening.Text = "opening";
+            this.buttonM1SpringsOpening.UseVisualStyleBackColor = true;
+            this.buttonM1SpringsOpening.Click += new System.EventHandler(this.buttonM1SpringsOpening_Click);
+            // 
+            // buttonM1SpringsClosing
+            // 
+            this.buttonM1SpringsClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1SpringsClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1SpringsClosing.Location = new System.Drawing.Point(150, 20);
+            this.buttonM1SpringsClosing.Name = "buttonM1SpringsClosing";
+            this.buttonM1SpringsClosing.Size = new System.Drawing.Size(80, 48);
+            this.buttonM1SpringsClosing.TabIndex = 142;
+            this.buttonM1SpringsClosing.Text = "closing";
+            this.buttonM1SpringsClosing.UseVisualStyleBackColor = true;
+            this.buttonM1SpringsClosing.Click += new System.EventHandler(this.buttonM1SpringsClosing_Click);
+            // 
+            // lbLed14
+            // 
+            this.lbLed14.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed14.BlinkInterval = 500;
+            this.lbLed14.Enabled = false;
+            this.lbLed14.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed14.Label = "springs closed";
+            this.lbLed14.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed14.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed14.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed14.Location = new System.Drawing.Point(20, 80);
+            this.lbLed14.Name = "lbLed14";
+            this.lbLed14.Renderer = null;
+            this.lbLed14.Size = new System.Drawing.Size(220, 24);
+            this.lbLed14.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed14.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed14.TabIndex = 264;
+            // 
+            // groupBoxM1Servo
+            // 
+            this.groupBoxM1Servo.Controls.Add(this.buttonM1ResetServo);
+            this.groupBoxM1Servo.Controls.Add(this.lbLed13);
+            this.groupBoxM1Servo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxM1Servo.Location = new System.Drawing.Point(10, 625);
+            this.groupBoxM1Servo.Name = "groupBoxM1Servo";
+            this.groupBoxM1Servo.Size = new System.Drawing.Size(280, 80);
+            this.groupBoxM1Servo.TabIndex = 298;
+            this.groupBoxM1Servo.TabStop = false;
+            this.groupBoxM1Servo.Text = "servo";
+            // 
+            // buttonM1ResetServo
+            // 
+            this.buttonM1ResetServo.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1ResetServo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1ResetServo.Location = new System.Drawing.Point(20, 20);
+            this.buttonM1ResetServo.Name = "buttonM1ResetServo";
+            this.buttonM1ResetServo.Size = new System.Drawing.Size(90, 48);
+            this.buttonM1ResetServo.TabIndex = 149;
+            this.buttonM1ResetServo.Text = "reset alarm";
+            this.buttonM1ResetServo.UseVisualStyleBackColor = true;
+            this.buttonM1ResetServo.Click += new System.EventHandler(this.buttonM1ResetServo_Click);
+            // 
+            // lbLed13
+            // 
+            this.lbLed13.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed13.BlinkInterval = 500;
+            this.lbLed13.Enabled = false;
+            this.lbLed13.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed13.Label = "servo ready";
+            this.lbLed13.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed13.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed13.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed13.Location = new System.Drawing.Point(130, 30);
+            this.lbLed13.Name = "lbLed13";
+            this.lbLed13.Renderer = null;
+            this.lbLed13.Size = new System.Drawing.Size(135, 24);
+            this.lbLed13.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed13.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed13.TabIndex = 288;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(190)))), ((int)(((byte)(186)))));
+            this.textBox2.Enabled = false;
+            this.textBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(133)))), ((int)(((byte)(46)))));
+            this.textBox2.Location = new System.Drawing.Point(10, 340);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(580, 27);
+            this.textBox2.TabIndex = 297;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // checkBoxM1ExitBelt
+            // 
+            this.checkBoxM1ExitBelt.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxM1ExitBelt.AutoSize = true;
+            this.checkBoxM1ExitBelt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxM1ExitBelt.FlatAppearance.BorderSize = 5;
+            this.checkBoxM1ExitBelt.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxM1ExitBelt.ImageIndex = 3;
+            this.checkBoxM1ExitBelt.ImageList = this.imageListBelt;
+            this.checkBoxM1ExitBelt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxM1ExitBelt.Location = new System.Drawing.Point(595, 635);
+            this.checkBoxM1ExitBelt.Name = "checkBoxM1ExitBelt";
+            this.checkBoxM1ExitBelt.Size = new System.Drawing.Size(105, 70);
+            this.checkBoxM1ExitBelt.TabIndex = 272;
+            this.checkBoxM1ExitBelt.Text = "exit";
+            this.checkBoxM1ExitBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.checkBoxM1ExitBelt.UseVisualStyleBackColor = true;
+            this.checkBoxM1ExitBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM1ExitBelt_CheckStateChanged);
+            // 
+            // checkBoxM1WorkingBelt
+            // 
+            this.checkBoxM1WorkingBelt.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxM1WorkingBelt.AutoSize = true;
+            this.checkBoxM1WorkingBelt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxM1WorkingBelt.FlatAppearance.BorderSize = 5;
+            this.checkBoxM1WorkingBelt.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxM1WorkingBelt.ImageIndex = 1;
+            this.checkBoxM1WorkingBelt.ImageList = this.imageListBelt;
+            this.checkBoxM1WorkingBelt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxM1WorkingBelt.Location = new System.Drawing.Point(725, 635);
+            this.checkBoxM1WorkingBelt.Name = "checkBoxM1WorkingBelt";
+            this.checkBoxM1WorkingBelt.Size = new System.Drawing.Size(131, 70);
+            this.checkBoxM1WorkingBelt.TabIndex = 271;
+            this.checkBoxM1WorkingBelt.Text = "working";
+            this.checkBoxM1WorkingBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.checkBoxM1WorkingBelt.UseVisualStyleBackColor = true;
+            this.checkBoxM1WorkingBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM1WorkingBelt_CheckStateChanged);
+            // 
+            // groupBoxM1Homing
+            // 
+            this.groupBoxM1Homing.Controls.Add(this.labelM1HomingDone);
+            this.groupBoxM1Homing.Controls.Add(this.buttonM1HomingDone);
+            this.groupBoxM1Homing.Controls.Add(this.buttonM1Home);
+            this.groupBoxM1Homing.Controls.Add(this.buttonM1ResetHome);
+            this.groupBoxM1Homing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.groupBoxM1Homing.Location = new System.Drawing.Point(595, 500);
+            this.groupBoxM1Homing.Name = "groupBoxM1Homing";
+            this.groupBoxM1Homing.Size = new System.Drawing.Size(260, 120);
+            this.groupBoxM1Homing.TabIndex = 147;
+            this.groupBoxM1Homing.TabStop = false;
+            this.groupBoxM1Homing.Text = "vertical axis home";
             // 
             // labelM1HomingDone
             // 
@@ -6943,10 +7506,10 @@
             this.labelM1HomingDone.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM1HomingDone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM1HomingDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1HomingDone.Location = new System.Drawing.Point(414, 351);
+            this.labelM1HomingDone.Location = new System.Drawing.Point(50, 88);
             this.labelM1HomingDone.Name = "labelM1HomingDone";
             this.labelM1HomingDone.Size = new System.Drawing.Size(117, 16);
-            this.labelM1HomingDone.TabIndex = 136;
+            this.labelM1HomingDone.TabIndex = 134;
             this.labelM1HomingDone.Text = "homing not done";
             // 
             // buttonM1HomingDone
@@ -6955,13 +7518,399 @@
             this.buttonM1HomingDone.FlatAppearance.BorderSize = 10;
             this.buttonM1HomingDone.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1HomingDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1HomingDone.Location = new System.Drawing.Point(384, 346);
+            this.buttonM1HomingDone.Location = new System.Drawing.Point(20, 83);
             this.buttonM1HomingDone.Name = "buttonM1HomingDone";
             this.buttonM1HomingDone.Size = new System.Drawing.Size(24, 24);
-            this.buttonM1HomingDone.TabIndex = 135;
+            this.buttonM1HomingDone.TabIndex = 133;
             this.buttonM1HomingDone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonM1HomingDone.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.buttonM1HomingDone.UseVisualStyleBackColor = true;
+            // 
+            // buttonM1Home
+            // 
+            this.buttonM1Home.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1Home.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1Home.Location = new System.Drawing.Point(20, 20);
+            this.buttonM1Home.Name = "buttonM1Home";
+            this.buttonM1Home.Size = new System.Drawing.Size(100, 48);
+            this.buttonM1Home.TabIndex = 8;
+            this.buttonM1Home.Text = "go home";
+            this.buttonM1Home.UseVisualStyleBackColor = true;
+            this.buttonM1Home.Click += new System.EventHandler(this.buttonM1Home_Click);
+            // 
+            // buttonM1ResetHome
+            // 
+            this.buttonM1ResetHome.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1ResetHome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1ResetHome.Location = new System.Drawing.Point(140, 20);
+            this.buttonM1ResetHome.Name = "buttonM1ResetHome";
+            this.buttonM1ResetHome.Size = new System.Drawing.Size(100, 48);
+            this.buttonM1ResetHome.TabIndex = 9;
+            this.buttonM1ResetHome.Text = "reset home";
+            this.buttonM1ResetHome.UseVisualStyleBackColor = true;
+            this.buttonM1ResetHome.Click += new System.EventHandler(this.buttonM1ResetHome_Click);
+            // 
+            // groupBoxM1StartQuote
+            // 
+            this.groupBoxM1StartQuote.Controls.Add(this.labelM1StartQuote);
+            this.groupBoxM1StartQuote.Controls.Add(this.labelM1StartSpeed);
+            this.groupBoxM1StartQuote.Controls.Add(this.buttonM1StartQuote);
+            this.groupBoxM1StartQuote.Controls.Add(this.numericUpDownM1ManualQuote);
+            this.groupBoxM1StartQuote.Controls.Add(this.numericUpDownM1ManualSpeed);
+            this.groupBoxM1StartQuote.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.groupBoxM1StartQuote.Location = new System.Drawing.Point(595, 335);
+            this.groupBoxM1StartQuote.Name = "groupBoxM1StartQuote";
+            this.groupBoxM1StartQuote.Size = new System.Drawing.Size(260, 155);
+            this.groupBoxM1StartQuote.TabIndex = 146;
+            this.groupBoxM1StartQuote.TabStop = false;
+            this.groupBoxM1StartQuote.Text = "vertical axis start quote";
+            // 
+            // labelM1StartQuote
+            // 
+            this.labelM1StartQuote.AutoSize = true;
+            this.labelM1StartQuote.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM1StartQuote.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM1StartQuote.Location = new System.Drawing.Point(20, 20);
+            this.labelM1StartQuote.Name = "labelM1StartQuote";
+            this.labelM1StartQuote.Size = new System.Drawing.Size(79, 16);
+            this.labelM1StartQuote.TabIndex = 105;
+            this.labelM1StartQuote.Text = "quote(mm)";
+            // 
+            // labelM1StartSpeed
+            // 
+            this.labelM1StartSpeed.AutoSize = true;
+            this.labelM1StartSpeed.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM1StartSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM1StartSpeed.Location = new System.Drawing.Point(160, 20);
+            this.labelM1StartSpeed.Name = "labelM1StartSpeed";
+            this.labelM1StartSpeed.Size = new System.Drawing.Size(71, 16);
+            this.labelM1StartSpeed.TabIndex = 104;
+            this.labelM1StartSpeed.Text = "speed(%)";
+            // 
+            // buttonM1StartQuote
+            // 
+            this.buttonM1StartQuote.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1StartQuote.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1StartQuote.Location = new System.Drawing.Point(20, 90);
+            this.buttonM1StartQuote.Name = "buttonM1StartQuote";
+            this.buttonM1StartQuote.Size = new System.Drawing.Size(220, 48);
+            this.buttonM1StartQuote.TabIndex = 80;
+            this.buttonM1StartQuote.Text = "start quote";
+            this.buttonM1StartQuote.UseVisualStyleBackColor = true;
+            this.buttonM1StartQuote.Click += new System.EventHandler(this.buttonM1StartQuote_Click);
+            // 
+            // numericUpDownM1ManualQuote
+            // 
+            this.numericUpDownM1ManualQuote.Font = new System.Drawing.Font("Verdana", 21.75F);
+            this.numericUpDownM1ManualQuote.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownM1ManualQuote.Location = new System.Drawing.Point(20, 40);
+            this.numericUpDownM1ManualQuote.Minimum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownM1ManualQuote.Name = "numericUpDownM1ManualQuote";
+            this.numericUpDownM1ManualQuote.Size = new System.Drawing.Size(100, 43);
+            this.numericUpDownM1ManualQuote.TabIndex = 82;
+            this.numericUpDownM1ManualQuote.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownM1ManualQuote.ValueChanged += new System.EventHandler(this.numericUpDownM1ManualQuote_ValueChanged);
+            // 
+            // numericUpDownM1ManualSpeed
+            // 
+            this.numericUpDownM1ManualSpeed.Font = new System.Drawing.Font("Verdana", 21.75F);
+            this.numericUpDownM1ManualSpeed.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownM1ManualSpeed.Location = new System.Drawing.Point(160, 40);
+            this.numericUpDownM1ManualSpeed.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownM1ManualSpeed.Name = "numericUpDownM1ManualSpeed";
+            this.numericUpDownM1ManualSpeed.Size = new System.Drawing.Size(80, 43);
+            this.numericUpDownM1ManualSpeed.TabIndex = 83;
+            this.numericUpDownM1ManualSpeed.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownM1ManualSpeed.ValueChanged += new System.EventHandler(this.numericUpDownM1ManualSpeed_ValueChanged);
+            // 
+            // groupBoxM1Jog
+            // 
+            this.groupBoxM1Jog.Controls.Add(this.labelM1JogSpeed);
+            this.groupBoxM1Jog.Controls.Add(this.lbButtonM1JogUp);
+            this.groupBoxM1Jog.Controls.Add(this.lbButtonM1JogDown);
+            this.groupBoxM1Jog.Controls.Add(this.numericUpDownM1JogSpeed);
+            this.groupBoxM1Jog.Controls.Add(this.labelM1TeachAxisQuoteName);
+            this.groupBoxM1Jog.Controls.Add(this.labelM1TeachAxisQuoteValue);
+            this.groupBoxM1Jog.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.groupBoxM1Jog.Location = new System.Drawing.Point(595, 100);
+            this.groupBoxM1Jog.Name = "groupBoxM1Jog";
+            this.groupBoxM1Jog.Size = new System.Drawing.Size(260, 225);
+            this.groupBoxM1Jog.TabIndex = 145;
+            this.groupBoxM1Jog.TabStop = false;
+            this.groupBoxM1Jog.Text = "vertical axis jog";
+            // 
+            // labelM1JogSpeed
+            // 
+            this.labelM1JogSpeed.AutoSize = true;
+            this.labelM1JogSpeed.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM1JogSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM1JogSpeed.Location = new System.Drawing.Point(160, 20);
+            this.labelM1JogSpeed.Name = "labelM1JogSpeed";
+            this.labelM1JogSpeed.Size = new System.Drawing.Size(71, 16);
+            this.labelM1JogSpeed.TabIndex = 103;
+            this.labelM1JogSpeed.Text = "speed(%)";
+            // 
+            // lbButtonM1JogUp
+            // 
+            this.lbButtonM1JogUp.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM1JogUp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lbButtonM1JogUp.BackgroundImage")));
+            this.lbButtonM1JogUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.lbButtonM1JogUp.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbButtonM1JogUp.Font = new System.Drawing.Font("Verdana", 39.75F, System.Drawing.FontStyle.Bold);
+            this.lbButtonM1JogUp.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM1JogUp.Label = "up";
+            this.lbButtonM1JogUp.Location = new System.Drawing.Point(5, 20);
+            this.lbButtonM1JogUp.Name = "lbButtonM1JogUp";
+            this.lbButtonM1JogUp.Renderer = null;
+            this.lbButtonM1JogUp.RepeatInterval = 100;
+            this.lbButtonM1JogUp.RepeatState = false;
+            this.lbButtonM1JogUp.Size = new System.Drawing.Size(140, 68);
+            this.lbButtonM1JogUp.StartRepeatInterval = 500;
+            this.lbButtonM1JogUp.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM1JogUp.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM1JogUp.TabIndex = 78;
+            this.lbButtonM1JogUp.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM1JogUp_ButtonChangeState);
+            // 
+            // lbButtonM1JogDown
+            // 
+            this.lbButtonM1JogDown.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM1JogDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lbButtonM1JogDown.BackgroundImage")));
+            this.lbButtonM1JogDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.lbButtonM1JogDown.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbButtonM1JogDown.Font = new System.Drawing.Font("Verdana", 39.75F, System.Drawing.FontStyle.Bold);
+            this.lbButtonM1JogDown.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM1JogDown.Label = "down";
+            this.lbButtonM1JogDown.Location = new System.Drawing.Point(5, 145);
+            this.lbButtonM1JogDown.Name = "lbButtonM1JogDown";
+            this.lbButtonM1JogDown.Renderer = null;
+            this.lbButtonM1JogDown.RepeatInterval = 100;
+            this.lbButtonM1JogDown.RepeatState = false;
+            this.lbButtonM1JogDown.Size = new System.Drawing.Size(140, 68);
+            this.lbButtonM1JogDown.StartRepeatInterval = 500;
+            this.lbButtonM1JogDown.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM1JogDown.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM1JogDown.TabIndex = 79;
+            this.lbButtonM1JogDown.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM1JogDown_ButtonChangeState);
+            // 
+            // numericUpDownM1JogSpeed
+            // 
+            this.numericUpDownM1JogSpeed.Font = new System.Drawing.Font("Verdana", 21.75F);
+            this.numericUpDownM1JogSpeed.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownM1JogSpeed.Location = new System.Drawing.Point(160, 40);
+            this.numericUpDownM1JogSpeed.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownM1JogSpeed.Name = "numericUpDownM1JogSpeed";
+            this.numericUpDownM1JogSpeed.Size = new System.Drawing.Size(80, 43);
+            this.numericUpDownM1JogSpeed.TabIndex = 98;
+            this.numericUpDownM1JogSpeed.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDownM1JogSpeed.ValueChanged += new System.EventHandler(this.numericUpDownM1JogSpeed_ValueChanged);
+            // 
+            // labelM1TeachAxisQuoteName
+            // 
+            this.labelM1TeachAxisQuoteName.AutoSize = true;
+            this.labelM1TeachAxisQuoteName.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM1TeachAxisQuoteName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM1TeachAxisQuoteName.Location = new System.Drawing.Point(160, 105);
+            this.labelM1TeachAxisQuoteName.Name = "labelM1TeachAxisQuoteName";
+            this.labelM1TeachAxisQuoteName.Size = new System.Drawing.Size(84, 16);
+            this.labelM1TeachAxisQuoteName.TabIndex = 102;
+            this.labelM1TeachAxisQuoteName.Text = "quote (mm)";
+            // 
+            // labelM1TeachAxisQuoteValue
+            // 
+            this.labelM1TeachAxisQuoteValue.AutoSize = true;
+            this.labelM1TeachAxisQuoteValue.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.labelM1TeachAxisQuoteValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM1TeachAxisQuoteValue.Location = new System.Drawing.Point(160, 135);
+            this.labelM1TeachAxisQuoteValue.Name = "labelM1TeachAxisQuoteValue";
+            this.labelM1TeachAxisQuoteValue.Size = new System.Drawing.Size(58, 23);
+            this.labelM1TeachAxisQuoteValue.TabIndex = 103;
+            this.labelM1TeachAxisQuoteValue.Text = "9999";
+            // 
+            // dataGridViewM1TeachPoints
+            // 
+            this.dataGridViewM1TeachPoints.AllowUserToAddRows = false;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewM1TeachPoints.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            this.dataGridViewM1TeachPoints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewM1TeachPoints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewButtonColumn3,
+            this.dataGridViewButtonColumn4,
+            this.dataGridViewButtonColumn5});
+            this.dataGridViewM1TeachPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dataGridViewM1TeachPoints.Location = new System.Drawing.Point(10, 100);
+            this.dataGridViewM1TeachPoints.Name = "dataGridViewM1TeachPoints";
+            this.dataGridViewM1TeachPoints.RowHeadersVisible = false;
+            this.dataGridViewM1TeachPoints.RowHeadersWidth = 48;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewM1TeachPoints.RowsDefaultCellStyle = dataGridViewCellStyle22;
+            this.dataGridViewM1TeachPoints.RowTemplate.Height = 48;
+            this.dataGridViewM1TeachPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewM1TeachPoints.Size = new System.Drawing.Size(580, 220);
+            this.dataGridViewM1TeachPoints.TabIndex = 144;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle21;
+            this.dataGridViewTextBoxColumn10.Frozen = true;
+            this.dataGridViewTextBoxColumn10.HeaderText = "point";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn10.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.Frozen = true;
+            this.dataGridViewTextBoxColumn11.HeaderText = "quote (mm)";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 130;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.Frozen = true;
+            this.dataGridViewTextBoxColumn12.HeaderText = "speed (%)";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 130;
+            // 
+            // dataGridViewButtonColumn3
+            // 
+            this.dataGridViewButtonColumn3.HeaderText = "register";
+            this.dataGridViewButtonColumn3.Name = "dataGridViewButtonColumn3";
+            // 
+            // dataGridViewButtonColumn4
+            // 
+            this.dataGridViewButtonColumn4.HeaderText = "start";
+            this.dataGridViewButtonColumn4.Name = "dataGridViewButtonColumn4";
+            // 
+            // dataGridViewButtonColumn5
+            // 
+            this.dataGridViewButtonColumn5.HeaderText = "reached";
+            this.dataGridViewButtonColumn5.Name = "dataGridViewButtonColumn5";
+            this.dataGridViewButtonColumn5.ReadOnly = true;
+            this.dataGridViewButtonColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn5.Width = 56;
+            // 
+            // buttonM1TeachDeleteProgram
+            // 
+            this.buttonM1TeachDeleteProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonM1TeachDeleteProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM1TeachDeleteProgram.Image")));
+            this.buttonM1TeachDeleteProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonM1TeachDeleteProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1TeachDeleteProgram.Location = new System.Drawing.Point(695, 10);
+            this.buttonM1TeachDeleteProgram.Name = "buttonM1TeachDeleteProgram";
+            this.buttonM1TeachDeleteProgram.Size = new System.Drawing.Size(160, 53);
+            this.buttonM1TeachDeleteProgram.TabIndex = 143;
+            this.buttonM1TeachDeleteProgram.Text = "delete program";
+            this.buttonM1TeachDeleteProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonM1TeachDeleteProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonM1TeachDeleteProgram.UseVisualStyleBackColor = true;
+            this.buttonM1TeachDeleteProgram.Click += new System.EventHandler(this.buttonM1TeachDeleteProgram_Click);
+            // 
+            // buttonM1TeachNewProgram
+            // 
+            this.buttonM1TeachNewProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonM1TeachNewProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM1TeachNewProgram.Image")));
+            this.buttonM1TeachNewProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonM1TeachNewProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1TeachNewProgram.Location = new System.Drawing.Point(540, 10);
+            this.buttonM1TeachNewProgram.Name = "buttonM1TeachNewProgram";
+            this.buttonM1TeachNewProgram.Size = new System.Drawing.Size(140, 53);
+            this.buttonM1TeachNewProgram.TabIndex = 142;
+            this.buttonM1TeachNewProgram.Text = "new program";
+            this.buttonM1TeachNewProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonM1TeachNewProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonM1TeachNewProgram.UseVisualStyleBackColor = true;
+            this.buttonM1TeachNewProgram.Click += new System.EventHandler(this.buttonM1TeachNewProgram_Click);
+            // 
+            // buttonM1TeachSaveProgram
+            // 
+            this.buttonM1TeachSaveProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonM1TeachSaveProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM1TeachSaveProgram.Image")));
+            this.buttonM1TeachSaveProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonM1TeachSaveProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1TeachSaveProgram.Location = new System.Drawing.Point(380, 10);
+            this.buttonM1TeachSaveProgram.Name = "buttonM1TeachSaveProgram";
+            this.buttonM1TeachSaveProgram.Size = new System.Drawing.Size(140, 53);
+            this.buttonM1TeachSaveProgram.TabIndex = 141;
+            this.buttonM1TeachSaveProgram.Text = "save program";
+            this.buttonM1TeachSaveProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonM1TeachSaveProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonM1TeachSaveProgram.UseVisualStyleBackColor = true;
+            this.buttonM1TeachSaveProgram.Click += new System.EventHandler(this.buttonM1TeachSaveProgram_Click);
+            // 
+            // buttonM1TeachLoadProgram
+            // 
+            this.buttonM1TeachLoadProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonM1TeachLoadProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM1TeachLoadProgram.Image")));
+            this.buttonM1TeachLoadProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonM1TeachLoadProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1TeachLoadProgram.Location = new System.Drawing.Point(220, 10);
+            this.buttonM1TeachLoadProgram.Name = "buttonM1TeachLoadProgram";
+            this.buttonM1TeachLoadProgram.Size = new System.Drawing.Size(140, 53);
+            this.buttonM1TeachLoadProgram.TabIndex = 140;
+            this.buttonM1TeachLoadProgram.Text = "load program";
+            this.buttonM1TeachLoadProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonM1TeachLoadProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonM1TeachLoadProgram.UseVisualStyleBackColor = true;
+            this.buttonM1TeachLoadProgram.Click += new System.EventHandler(this.buttonM1TeachLoadProgram_Click);
+            // 
+            // comboBoxM1TeachProgramList
+            // 
+            this.comboBoxM1TeachProgramList.Font = new System.Drawing.Font("Verdana", 12F);
+            this.comboBoxM1TeachProgramList.FormattingEnabled = true;
+            this.comboBoxM1TeachProgramList.Location = new System.Drawing.Point(10, 10);
+            this.comboBoxM1TeachProgramList.Name = "comboBoxM1TeachProgramList";
+            this.comboBoxM1TeachProgramList.Size = new System.Drawing.Size(180, 26);
+            this.comboBoxM1TeachProgramList.TabIndex = 139;
+            this.comboBoxM1TeachProgramList.Text = "PRYYYY-YYY-XX00";
             // 
             // tabPageT1
             // 
@@ -7011,6 +7960,11 @@
             // tabPageT1_2
             // 
             this.tabPageT1_2.ContextMenuStrip = this.contextMenuStripT1_2;
+            this.tabPageT1_2.Controls.Add(this.buttonM1StartTest);
+            this.tabPageT1_2.Controls.Add(this.buttonM1TestSaveProgram);
+            this.tabPageT1_2.Controls.Add(this.buttonM1TestLoadProgram);
+            this.tabPageT1_2.Controls.Add(this.dataGridViewM1TestPoints);
+            this.tabPageT1_2.Controls.Add(this.comboBoxM1TestProgramList);
             tabPageFormatStyle26.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle26.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT1_2.FormatStyle = tabPageFormatStyle26;
@@ -7066,6 +8020,124 @@
             this.toolStripComboBoxT1_2.IntegralHeight = false;
             this.toolStripComboBoxT1_2.Name = "toolStripComboBoxT1_2";
             this.toolStripComboBoxT1_2.Size = new System.Drawing.Size(120, 26);
+            // 
+            // buttonM1StartTest
+            // 
+            this.buttonM1StartTest.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1StartTest.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1StartTest.Location = new System.Drawing.Point(418, 115);
+            this.buttonM1StartTest.Name = "buttonM1StartTest";
+            this.buttonM1StartTest.Size = new System.Drawing.Size(220, 64);
+            this.buttonM1StartTest.TabIndex = 128;
+            this.buttonM1StartTest.Text = "start test";
+            this.buttonM1StartTest.UseVisualStyleBackColor = true;
+            this.buttonM1StartTest.Click += new System.EventHandler(this.buttonM1StartTest_Click);
+            // 
+            // buttonM1TestSaveProgram
+            // 
+            this.buttonM1TestSaveProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonM1TestSaveProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM1TestSaveProgram.Image")));
+            this.buttonM1TestSaveProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonM1TestSaveProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1TestSaveProgram.Location = new System.Drawing.Point(388, 25);
+            this.buttonM1TestSaveProgram.Name = "buttonM1TestSaveProgram";
+            this.buttonM1TestSaveProgram.Size = new System.Drawing.Size(161, 53);
+            this.buttonM1TestSaveProgram.TabIndex = 127;
+            this.buttonM1TestSaveProgram.Text = "save program";
+            this.buttonM1TestSaveProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonM1TestSaveProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonM1TestSaveProgram.UseVisualStyleBackColor = true;
+            this.buttonM1TestSaveProgram.Click += new System.EventHandler(this.buttonM1TestSaveProgram_Click);
+            // 
+            // buttonM1TestLoadProgram
+            // 
+            this.buttonM1TestLoadProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonM1TestLoadProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM1TestLoadProgram.Image")));
+            this.buttonM1TestLoadProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonM1TestLoadProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1TestLoadProgram.Location = new System.Drawing.Point(218, 25);
+            this.buttonM1TestLoadProgram.Name = "buttonM1TestLoadProgram";
+            this.buttonM1TestLoadProgram.Size = new System.Drawing.Size(160, 53);
+            this.buttonM1TestLoadProgram.TabIndex = 126;
+            this.buttonM1TestLoadProgram.Text = "load program";
+            this.buttonM1TestLoadProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonM1TestLoadProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonM1TestLoadProgram.UseVisualStyleBackColor = true;
+            this.buttonM1TestLoadProgram.Click += new System.EventHandler(this.buttonM1TestLoadProgram_Click);
+            // 
+            // dataGridViewM1TestPoints
+            // 
+            this.dataGridViewM1TestPoints.AllowUserToAddRows = false;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewM1TestPoints.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            this.dataGridViewM1TestPoints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewM1TestPoints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewImageColumn1});
+            this.dataGridViewM1TestPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dataGridViewM1TestPoints.Location = new System.Drawing.Point(28, 115);
+            this.dataGridViewM1TestPoints.Name = "dataGridViewM1TestPoints";
+            this.dataGridViewM1TestPoints.RowHeadersVisible = false;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewM1TestPoints.RowsDefaultCellStyle = dataGridViewCellStyle25;
+            this.dataGridViewM1TestPoints.RowTemplate.Height = 48;
+            this.dataGridViewM1TestPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridViewM1TestPoints.Size = new System.Drawing.Size(380, 220);
+            this.dataGridViewM1TestPoints.TabIndex = 125;
+            this.dataGridViewM1TestPoints.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM1TestPoints_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle24;
+            this.dataGridViewTextBoxColumn13.Frozen = true;
+            this.dataGridViewTextBoxColumn13.HeaderText = "point id";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn13.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.Frozen = true;
+            this.dataGridViewTextBoxColumn14.HeaderText = "quote (mm)";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.Width = 130;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.Frozen = true;
+            this.dataGridViewTextBoxColumn15.HeaderText = "speed (%)";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.Width = 130;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "reached";
+            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Width = 56;
+            // 
+            // comboBoxM1TestProgramList
+            // 
+            this.comboBoxM1TestProgramList.Font = new System.Drawing.Font("Verdana", 12F);
+            this.comboBoxM1TestProgramList.FormattingEnabled = true;
+            this.comboBoxM1TestProgramList.Location = new System.Drawing.Point(25, 25);
+            this.comboBoxM1TestProgramList.Name = "comboBoxM1TestProgramList";
+            this.comboBoxM1TestProgramList.Size = new System.Drawing.Size(180, 26);
+            this.comboBoxM1TestProgramList.TabIndex = 124;
             // 
             // tabPageT1_3
             // 
@@ -7131,13 +8203,12 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageT3_1);
-            this.tabControlMain.Controls.Add(this.tabPageT3);
-            this.tabControlMain.Controls.Add(this.tabPageT4_1);
+            this.tabControlMain.Controls.Add(this.tabPageT4_2);
             this.tabControlMain.Controls.Add(this.tabPageT7);
             this.tabControlMain.Controls.Add(this.tabPageT6);
             this.tabControlMain.Controls.Add(this.tabPageT5);
             this.tabControlMain.Controls.Add(this.tabPageT4);
+            this.tabControlMain.Controls.Add(this.tabPageT3);
             this.tabControlMain.Controls.Add(this.tabPageT2);
             this.tabControlMain.Controls.Add(this.tabPageT1);
             this.tabControlMain.Controls.Add(this.tabPageT0);
@@ -7151,10 +8222,11 @@
             this.tabControlMain.Controls.Add(this.tabPageT1_3);
             this.tabControlMain.Controls.Add(this.tabPageT1_4);
             this.tabControlMain.Controls.Add(this.tabPage1);
+            this.tabControlMain.Controls.Add(this.tabPageT3_1);
             this.tabControlMain.Controls.Add(this.tabPageT3_2);
             this.tabControlMain.Controls.Add(this.tabPageT3_3);
             this.tabControlMain.Controls.Add(this.tabPageT3_4);
-            this.tabControlMain.Controls.Add(this.tabPageT4_2);
+            this.tabControlMain.Controls.Add(this.tabPageT4_1);
             this.tabControlMain.Controls.Add(this.tabPageT4_3);
             this.tabControlMain.Controls.Add(this.tabPageT4_4);
             this.tabControlMain.Controls.Add(this.tabPageT5_1);
@@ -7196,7 +8268,7 @@
             this.tabPageT6,
             this.tabPageT7});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageT3_1;
+            this.tabControlMain.SelectedPage = this.tabPageT4_2;
             tabPageColorStyle65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle65.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle65.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
@@ -7264,7 +8336,9 @@
             this.Controls.Add(this.tabControlMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormApp";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tabPageT3_1.ResumeLayout(false);
             this.tabPageT3_1.PerformLayout();
             this.contextMenuStripT3_1.ResumeLayout(false);
@@ -7291,6 +8365,7 @@
             this.tabPageT4_1.ResumeLayout(false);
             this.tabPageT4_1.PerformLayout();
             this.contextMenuStripT4_1.ResumeLayout(false);
+            this.groupBoxM3Rotation.ResumeLayout(false);
             this.groupBoxM3Constrast.ResumeLayout(false);
             this.groupBoxM3CenteringClamp.ResumeLayout(false);
             this.groupBoxM3BigClamp.ResumeLayout(false);
@@ -7314,6 +8389,7 @@
             this.tabPageT5_1.PerformLayout();
             this.tabPageT2.ResumeLayout(false);
             this.tabPageT2.PerformLayout();
+            this.tabPageT6.ResumeLayout(false);
             this.tabPageT0_1.ResumeLayout(false);
             this.tabPageT0_1.PerformLayout();
             this.contextMenuStripT0.ResumeLayout(false);
@@ -7350,7 +8426,7 @@
             this.groupBoxRecipeM1.PerformLayout();
             this.tabPageT0_2_2.ResumeLayout(false);
             this.tabPageT0_2_2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEditRecipe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMEditRecipe)).EndInit();
             this.tabPageT0_3.ResumeLayout(false);
             this.groupBoxKeepAliveToPlc.ResumeLayout(false);
             this.groupBoxKeepAliveFromPlc.ResumeLayout(false);
@@ -7364,7 +8440,25 @@
             this.tabPageT1_1.ResumeLayout(false);
             this.tabPageT1_1.PerformLayout();
             this.contextMenuStripT1_1.ResumeLayout(false);
+            this.groupBoxM1Varius.ResumeLayout(false);
+            this.groupBoxM1CutSlide.ResumeLayout(false);
+            this.groupBoxM1Block.ResumeLayout(false);
+            this.groupBoxM1Cut.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBoxM1Servo.ResumeLayout(false);
+            this.groupBoxM1Homing.ResumeLayout(false);
+            this.groupBoxM1Homing.PerformLayout();
+            this.groupBoxM1StartQuote.ResumeLayout(false);
+            this.groupBoxM1StartQuote.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1ManualQuote)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1ManualSpeed)).EndInit();
+            this.groupBoxM1Jog.ResumeLayout(false);
+            this.groupBoxM1Jog.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1JogSpeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM1TeachPoints)).EndInit();
+            this.tabPageT1_2.ResumeLayout(false);
             this.contextMenuStripT1_2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM1TestPoints)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).EndInit();
             this.tabControlMain.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -7593,7 +8687,7 @@
         private LidorSystems.IntegralUI.Containers.TabPage tabPageT0_2_2;
         private System.Windows.Forms.CheckBox checkBoxR1Aux2_01;
         private System.Windows.Forms.Label labelRecipeNameT0_1;
-        private System.Windows.Forms.TextBox textBoxRecipeName;
+        private System.Windows.Forms.TextBox textBoxMRecipeName;
         private System.Windows.Forms.CheckBox checkBoxM1Param1;
         private System.Windows.Forms.TextBox textBoxM6Test;
         private System.Windows.Forms.TextBox textBoxM5Test;
@@ -7628,8 +8722,8 @@
         private System.Windows.Forms.Label labelFootOrder;
         private System.Windows.Forms.ImageList imageListRecipe;
         private System.Windows.Forms.Button buttonAddNewRecipe;
-        private System.Windows.Forms.DataGridView dataGridViewEditRecipe;
-        private System.Windows.Forms.ComboBox comboBoxRecipeName;
+        private System.Windows.Forms.DataGridView dataGridViewMEditRecipe;
+        private System.Windows.Forms.ComboBox comboBoxMRecipeName;
         private System.Windows.Forms.Label labelRecipeNameT0_2;
         private System.Windows.Forms.Button buttonM2TeachDeleteProgram;
         private System.Windows.Forms.ComboBox comboBoxM2TeachProgramList;
@@ -7678,14 +8772,10 @@
         private System.Windows.Forms.DataGridView dataGridViewM3TeachPoints;
         private System.Windows.Forms.Label labelM2HomingDone;
         private System.Windows.Forms.Button buttonM2HomingDone;
-        private System.Windows.Forms.Label labelM1HomingDone;
-        private System.Windows.Forms.Button buttonM1HomingDone;
         private System.Windows.Forms.Label labelM5HomingDone;
         private System.Windows.Forms.Button buttonM5HomingDone;
         private System.Windows.Forms.Label labelM4HomingDone;
         private System.Windows.Forms.Button buttonM4HomingDone;
-        private System.Windows.Forms.Label labelM1TeachAxisQuoteName;
-        private System.Windows.Forms.Label labelM1TeachAxisQuoteValue;
         private System.Windows.Forms.CheckBox checkBoxM2WorkingBelt;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed1;
@@ -7716,12 +8806,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStripT3_2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT3_2;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBoxT3_2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2PointID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMeQuote;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2Speed;
-        private System.Windows.Forms.DataGridViewButtonColumn ColumnM2Register;
-        private System.Windows.Forms.DataGridViewButtonColumn ColumnM2StartQuote;
-        private System.Windows.Forms.DataGridViewImageColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
@@ -7739,12 +8823,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT1_2;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBoxT1_2;
         private System.Windows.Forms.ComboBox comboBoxM3TestProgramList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn2;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.Button buttonM3StartTest;
         private System.Windows.Forms.Button buttonM3TestSaveProgram;
         private System.Windows.Forms.Button buttonM3TestLoadProgram;
@@ -7789,5 +8867,88 @@
         private System.Windows.Forms.Button buttonM3StartQuote;
         private System.Windows.Forms.NumericUpDown numericUpDownM3ManualQuote;
         private System.Windows.Forms.NumericUpDown numericUpDownM3ManualSpeed;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2PointID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMeQuote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2Speed;
+        private System.Windows.Forms.DataGridViewButtonColumn ColumnM2Register;
+        private System.Windows.Forms.DataGridViewButtonColumn ColumnM2StartQuote;
+        private System.Windows.Forms.DataGridViewButtonColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn2;
+        private System.Windows.Forms.DataGridViewButtonColumn ColumnM3PReached;
+        private System.Windows.Forms.GroupBox groupBoxM3Rotation;
+        private System.Windows.Forms.Button buttonM3RotationCCW;
+        private System.Windows.Forms.ImageList imageListRotation;
+        private System.Windows.Forms.Button buttonM3RotationCW;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonMRecipiesShowAll;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT0Keyboard;
+        private System.Windows.Forms.ComboBox comboBoxM1TeachProgramList;
+        private System.Windows.Forms.Button buttonM1TeachDeleteProgram;
+        private System.Windows.Forms.Button buttonM1TeachNewProgram;
+        private System.Windows.Forms.Button buttonM1TeachSaveProgram;
+        private System.Windows.Forms.Button buttonM1TeachLoadProgram;
+        private System.Windows.Forms.DataGridView dataGridViewM1TeachPoints;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn3;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn4;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn5;
+        private System.Windows.Forms.GroupBox groupBoxM1Jog;
+        private System.Windows.Forms.Label labelM1JogSpeed;
+        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM1JogUp;
+        private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM1JogDown;
+        private System.Windows.Forms.NumericUpDown numericUpDownM1JogSpeed;
+        private System.Windows.Forms.Label labelM1TeachAxisQuoteName;
+        private System.Windows.Forms.Label labelM1TeachAxisQuoteValue;
+        private System.Windows.Forms.GroupBox groupBoxM1Homing;
+        private System.Windows.Forms.Label labelM1HomingDone;
+        private System.Windows.Forms.Button buttonM1HomingDone;
+        private System.Windows.Forms.Button buttonM1Home;
+        private System.Windows.Forms.Button buttonM1ResetHome;
+        private System.Windows.Forms.GroupBox groupBoxM1StartQuote;
+        private System.Windows.Forms.Label labelM1StartQuote;
+        private System.Windows.Forms.Label labelM1StartSpeed;
+        private System.Windows.Forms.Button buttonM1StartQuote;
+        private System.Windows.Forms.NumericUpDown numericUpDownM1ManualQuote;
+        private System.Windows.Forms.NumericUpDown numericUpDownM1ManualSpeed;
+        private System.Windows.Forms.CheckBox checkBoxM1ExitBelt;
+        private System.Windows.Forms.CheckBox checkBoxM1WorkingBelt;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.GroupBox groupBoxM1Servo;
+        private System.Windows.Forms.Button buttonM1ResetServo;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed13;
+        private System.Windows.Forms.Button buttonM1StartTest;
+        private System.Windows.Forms.Button buttonM1TestSaveProgram;
+        private System.Windows.Forms.Button buttonM1TestLoadProgram;
+        private System.Windows.Forms.DataGridView dataGridViewM1TestPoints;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.ComboBox comboBoxM1TestProgramList;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button buttonM1SpringsOpening;
+        private System.Windows.Forms.Button buttonM1SpringsClosing;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed14;
+        private System.Windows.Forms.GroupBox groupBoxM1Cut;
+        private System.Windows.Forms.Button buttonM1CutOpening;
+        private System.Windows.Forms.Button buttonM1CutClosing;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed15;
+        private System.Windows.Forms.GroupBox groupBoxM1CutSlide;
+        private System.Windows.Forms.Button buttonM1CutSlideForward;
+        private System.Windows.Forms.Button buttonM1CutSlideBackward;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed17;
+        private System.Windows.Forms.GroupBox groupBoxM1Block;
+        private System.Windows.Forms.Button buttonM1BlockOpening;
+        private System.Windows.Forms.Button buttonM1BlockClosing;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed16;
+        private System.Windows.Forms.GroupBox groupBoxM1Varius;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonM1Sharpening;
     }
 }

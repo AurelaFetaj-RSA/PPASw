@@ -11,6 +11,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using xDialog;
+using RSAPoints.ConcretePoints;
 
 namespace GUI
 {
@@ -23,5 +25,602 @@ namespace GUI
         {
         }
 
+        private async void buttonM1TeachLoadProgram_Click(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM1TeachProgramList.Text + config.Extensions[0]);
+                if (objPoints != null)
+                {
+                    dataGridViewM1TeachPoints[1, 0].Value = objPoints.Points[0].Q1;
+                    dataGridViewM1TeachPoints[1, 1].Value = objPoints.Points[0].Q2;
+                    dataGridViewM1TeachPoints[1, 2].Value = objPoints.Points[0].Q3;
+                    dataGridViewM1TeachPoints[1, 3].Value = objPoints.Points[0].Q4;
+                    dataGridViewM1TeachPoints[2, 0].Value = objPoints.Points[0].V1;
+                    dataGridViewM1TeachPoints[2, 1].Value = objPoints.Points[0].V2;
+                    dataGridViewM1TeachPoints[2, 2].Value = objPoints.Points[0].V3;
+                    dataGridViewM1TeachPoints[2, 3].Value = objPoints.Points[0].V4;
+                }
+            }
+        }
+
+        private async void buttonM1TeachSaveProgram_Click(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+
+                int p1 = Convert.ToInt32(dataGridViewM1TeachPoints[1, 0].Value);
+                int p2 = Convert.ToInt32(dataGridViewM1TeachPoints[1, 1].Value);
+                int p3 = Convert.ToInt32(dataGridViewM1TeachPoints[1, 2].Value);
+                int p4 = Convert.ToInt32(dataGridViewM1TeachPoints[1, 3].Value);
+                int s1 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 0].Value);
+                int s2 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 1].Value);
+                int s3 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 2].Value);
+                int s4 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 3].Value);
+                ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM1TeachProgramList.Text);
+                prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
+                prgObj.Save(comboBoxM2TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[0], true);
+            }
+        }
+
+        private void buttonM1TeachNewProgram_Click(object sender, EventArgs e)
+        {
+            ResetM1Datagrid();
+        }
+
+        private void buttonM1TeachDeleteProgram_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void lbButtonM1JogUp_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+
+                if (e.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+                {
+                    //send quote
+                    keyToSend = "pcM1JogDown";
+                    var readResult1 = await ccService.Send(keyToSend, false);
+                    if (readResult1.OpcResult)
+                    {
+                    }
+
+                    keyToSend = "pcM1JogUp";
+                    var readResult2 = await ccService.Send(keyToSend, true);
+                    if (readResult2.OpcResult)
+                    {
+                    }
+                }
+                else
+                {
+                    keyToSend = "pcM1JogDown";
+                    var readResult1 = await ccService.Send(keyToSend, false);
+                    if (readResult1.OpcResult)
+                    {
+                    }
+
+                    keyToSend = "pcM1JogUp";
+                    var readResult2 = await ccService.Send(keyToSend, false);
+                    if (readResult2.OpcResult)
+                    {
+                    }
+                }
+            }
+        }
+
+        private async void lbButtonM1JogDown_ButtonChangeState(object sender, LBSoft.IndustrialCtrls.Buttons.LBButtonEventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+
+                if (e.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
+                {
+                    keyToSend = "pcM1JogUp";
+                    var readResult1 = await ccService.Send(keyToSend, false);
+                    if (readResult1.OpcResult)
+                    {
+                    }
+
+                    keyToSend = "pcM1JogDown";
+                    var readResult2 = await ccService.Send(keyToSend, true);
+                    if (readResult2.OpcResult)
+                    {
+                    }
+                }
+                else
+                {
+                    keyToSend = "pcM1JogUp";
+                    var readResult1 = await ccService.Send(keyToSend, false);
+                    if (readResult1.OpcResult)
+                    {
+                    }
+
+                    keyToSend = "pcM1JogDown";
+                    var readResult2 = await ccService.Send(keyToSend, false);
+                    if (readResult2.OpcResult)
+                    {
+                    }
+                }
+            }
+        }
+
+        private async void numericUpDownM1JogSpeed_ValueChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1JogSpeed";
+
+                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1JogSpeed.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private async void numericUpDownM1ManualQuote_ValueChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1ManualQuote";
+
+                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1ManualQuote.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private async void numericUpDownM1ManualSpeed_ValueChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1ManualSpeed";
+
+                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1ManualSpeed.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private async void buttonM1StartQuote_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+
+                //quote 
+                keyToSend = "pcM1ManualQuote";
+                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1ManualQuote.Value.ToString()));
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+
+                keyToSend = "pcM1ManualSpeed";
+                var sendResult1 = await ccService.Send(keyToSend, short.Parse(numericUpDownM1ManualSpeed.Value.ToString()));
+
+                keyToSend = "pcM1QuoteStart";
+                var sendResult2 = await ccService.Send(keyToSend, true);
+                //todo: chi lo mette a false
+            }
+        }
+
+        private async void buttonM1ResetServo_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1ResetServoAlarm";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private async void buttonM1Home_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1Homing";
+
+                var readResult = await ccService.Send(keyToSend, true);
+
+                if (readResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private async void buttonM1ResetHome_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1ResetHoming";
+
+                var readResult = await ccService.Send(keyToSend, true);
+
+                if (readResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private async void buttonM1SpringsOpening_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1SpringsOpening";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM1SpringsClosing_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1SpringsClosing";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM1CutSlideForward_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1CutSlideForward";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM1CutSlideBackward_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1CutSlideBackward";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM1BlockOpening_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1BlockOpening";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM1BlockClosing_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1BlockClosing";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM1CutOpening_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1CutOpening";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM1CutClosing_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1CutClosing";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void checkBoxM1ExitBelt_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM1StartStopExitBelt";
+                chkValue = (checkBoxM1ExitBelt.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM1ExitBelt.ImageIndex = (chkValue) ? 2 : 3;
+                }
+                else
+                {
+                    checkBoxM1WorkingBelt.ImageIndex = 2;
+                }
+            }
+            else
+            {
+            }
+        }
+
+        private async void checkBoxM1WorkingBelt_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM1StartStopWorkingBelt";
+                chkValue = (checkBoxM1WorkingBelt.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM1WorkingBelt.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM1WorkingBelt.ImageIndex = 2;
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM1StartTest_Click(object sender, EventArgs e)
+        {
+            //send quote/speed
+            M1TestSendProgram();
+
+            //send start command
+            string keyToSend = "pcM1StartTest";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else xDialog.MsgBox.Show("offline", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+        }
+
+        private async void buttonM1TestLoadProgram_Click(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM1TestProgramList.Text + config.Extensions[0]);
+                if (objPoints != null)
+                {
+
+                    dataGridViewM1TestPoints[1, 0].Value = objPoints.Points[0].Q1;
+                    dataGridViewM1TestPoints[1, 1].Value = objPoints.Points[0].Q2;
+                    dataGridViewM1TestPoints[1, 2].Value = objPoints.Points[0].Q3;
+                    dataGridViewM1TestPoints[1, 3].Value = objPoints.Points[0].Q4;
+                    dataGridViewM1TestPoints[2, 0].Value = objPoints.Points[0].V1;
+                    dataGridViewM1TestPoints[2, 1].Value = objPoints.Points[0].V2;
+                    dataGridViewM1TestPoints[2, 2].Value = objPoints.Points[0].V3;
+                    dataGridViewM1TestPoints[2, 3].Value = objPoints.Points[0].V4;
+
+                }
+            }
+        }
+
+        private async void buttonM1TestSaveProgram_Click(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+
+                int p1 = Convert.ToInt32(dataGridViewM1TestPoints[1, 0].Value);
+                int p2 = Convert.ToInt32(dataGridViewM1TestPoints[1, 1].Value);
+                int p3 = Convert.ToInt32(dataGridViewM1TestPoints[1, 2].Value);
+                int p4 = Convert.ToInt32(dataGridViewM1TestPoints[1, 3].Value);
+                int s1 = Convert.ToInt32(dataGridViewM1TestPoints[2, 0].Value);
+                int s2 = Convert.ToInt32(dataGridViewM1TestPoints[2, 1].Value);
+                int s3 = Convert.ToInt32(dataGridViewM1TestPoints[2, 2].Value);
+                int s4 = Convert.ToInt32(dataGridViewM1TestPoints[2, 3].Value);
+                ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM1TestProgramList.Text);
+                prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
+                prgObj.Save(comboBoxM1TestProgramList.Text + config.Extensions[0], config.ProgramsPath[0], true);
+            }
+        }
+
+        private void dataGridViewM1TestPoints_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = 0;
+            short[] quote = new short[5];
+            short[] speed = new short[5];
+
+            try
+            {
+                //get selected row index
+                int currentRow = int.Parse(e.RowIndex.ToString());
+
+                short idPoint = (short)(currentRow + 1);
+                for (i = 0; i <= dataGridViewM1TestPoints.RowCount - 1; i++)
+                {
+                    quote[i + 1] = short.Parse(dataGridViewM1TestPoints[1, i].Value.ToString());
+                    speed[i + 1] = short.Parse(dataGridViewM1TestPoints[2, i].Value.ToString());
+                }
+
+                if (idPoint < 0 || idPoint > 4)
+                {
+                    //todo message
+                    return;
+                }
+
+                // edit button
+                if ((e.ColumnIndex == 3) & currentRow >= 0)
+                {
+
+                    OPCUAM1TestPckSend(quote, speed);
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
     }
 }

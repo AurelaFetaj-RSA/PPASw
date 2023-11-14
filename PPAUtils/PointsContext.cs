@@ -34,14 +34,14 @@ namespace PPAUtils
 
     }
 
-    public class model: RSACommon.DatabasesUtils.IDBSet
+    public class recipies: RSACommon.DatabasesUtils.IDBSet
     {
-        public model()
+        public recipies()
         {
 
         }
 
-        public model(model toCopy)
+        public recipies(recipies toCopy)
         {
             model_name = toCopy.model_name;
             m1_param1 = toCopy.m1_param1;
@@ -52,6 +52,8 @@ namespace PPAUtils
             m3_param2 = toCopy.m3_param2;
             m4_param1 = toCopy.m4_param1;
             m4_param2 = toCopy.m4_param2;
+            m4_param3 = toCopy.m4_param3;
+            m4_param4 = toCopy.m4_param4;
             m5_param1 = toCopy.m5_param1;
             m5_param2 = toCopy.m5_param2;
             m6_param1 = toCopy.m6_param1;
@@ -71,6 +73,8 @@ namespace PPAUtils
                 m3_param2 = Convert.ToInt32(toCopy["m3_param2"]);
                 m4_param1 = Convert.ToInt32(toCopy["m4_param1"]);
                 m4_param2 = Convert.ToInt32(toCopy["m4_param2"]);
+                m4_param3 = Convert.ToString(toCopy["m4_param3"]);
+                m4_param4 = Convert.ToString(toCopy["m4_param4"]);
                 m5_param1 = Convert.ToInt32(toCopy["m5_param1"]);
                 m5_param2 = Convert.ToInt32(toCopy["m5_param2"]);
                 m6_param1 = Convert.ToInt32(toCopy["m6_param1"]);
@@ -94,6 +98,8 @@ namespace PPAUtils
         public int m3_param2 { get; set; } = 0;
         public int m4_param1 { get; set; } = 0;
         public int m4_param2 { get; set; } = 0;
+        public string m4_param3 { get; set; } = "";
+        public string m4_param4 { get; set; } = "";
         public int m5_param1 { get; set; } = 0;
         public int m5_param2 { get; set; } = 0;
         public int m6_param1 { get; set; } = 0;
@@ -117,8 +123,7 @@ namespace PPAUtils
             S4 = toCopy.S4;
         }
         [Key]
-        public string program_name { get; set; } = "TTTT";
-        [Key]
+        public string program_name { get; set; } = "TTTT";        
         public int Q1 { get; set; } = 0;
         public int Q2 { get; set; } = 0;
         public int Q3 { get; set; } = 0;
