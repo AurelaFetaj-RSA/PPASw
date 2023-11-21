@@ -92,8 +92,8 @@ namespace GUI
 
                     List<object> values = new List<object>()
                     {
-                        new short[] { (short)objPoints.Points[0].Q1, (short)objPoints.Points[0].Q2, (short)objPoints.Points[0].Q3, (short)objPoints.Points[0].Q4},
-                        new short[] { (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                        new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
+                        new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
                     };
 
                     var sendResults = await ccService.Send(keys, values);
@@ -109,7 +109,17 @@ namespace GUI
                         }
                         allsent = allsent & result.Value.OpcResult;
                     }
-                    if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.trimmer, "program sent succesfully");  
+                    if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.trimmer, "program sent succesfully");
+
+                    string key = "pc_timer_stop_stivale";
+                    var sendResultsTimer = await ccService.Send("pcM1AutoTimer", 1.6);
+                    if (sendResultsTimer.OpcResult)
+                    {
+                    }
+                    else
+                    {
+
+                    }
                 }
             }
             else
@@ -339,6 +349,57 @@ namespace GUI
                 AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
             }
         }
+
+        private async void checkBoxM1SharpeningInclusion_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM1SharpeningInclusion";
+                chkValue = (checkBoxM1SharpeningInclusion.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM1SharpeningInclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM1SharpeningInclusion.ImageIndex = 2;
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
+                }
+            }
+            else
+            {
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+            }
+        }
+
+
+        private async void numericUpDownM1SharpeningTime_ValueChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1SharpeningCycleNumber";
+
+                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1SharpeningTime.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+
+            
+        }
+
         private async void checkBoxM2Inclusion_CheckStateChanged(object sender, EventArgs e)
         {
             if (ccService.ClientIsConnected)

@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class FormMain
+    partial class FormApp
     {
 
     }

@@ -135,7 +135,7 @@ namespace GUI
             listFound = myCore.FindPerType(typeof(MySQLService));
             if (listFound[0] is MySQLService tmpService) mysqlService = tmpService;
 
-            mysqlService.AddTable<recipies>("recipies");
+            mysqlService.AddTable<recipies>("models");
             mysqlService.AddTable<padlaserprogram>("padlaserprograms");
 
            
@@ -167,6 +167,43 @@ namespace GUI
 
         private async void InitLastParameter()
         {
+            #region (* init datagridviewM1 *)
+            dataGridViewM1TeachPoints.Rows.Add(4);
+            dataGridViewM1TeachPoints.Rows[0].Cells[0].Value = 1;
+            dataGridViewM1TeachPoints.Rows[1].Cells[0].Value = 2;
+            dataGridViewM1TeachPoints.Rows[2].Cells[0].Value = 3;
+            dataGridViewM1TeachPoints.Rows[3].Cells[0].Value = 4;
+
+            dataGridViewM1TeachPoints.Rows[0].Cells[1].Value = 100;
+            dataGridViewM1TeachPoints.Rows[1].Cells[1].Value = 200;
+            dataGridViewM1TeachPoints.Rows[2].Cells[1].Value = 300;
+            dataGridViewM1TeachPoints.Rows[3].Cells[1].Value = 400;
+
+            dataGridViewM1TeachPoints.Rows[0].Cells[2].Value = 10;
+            dataGridViewM1TeachPoints.Rows[1].Cells[2].Value = 20;
+            dataGridViewM1TeachPoints.Rows[2].Cells[2].Value = 30;
+            dataGridViewM1TeachPoints.Rows[3].Cells[2].Value = 40;
+            dataGridViewM1TeachPoints.ClearSelection();
+
+            dataGridViewM1TestPoints.Rows.Add(4);
+            dataGridViewM1TestPoints.Rows[0].Cells[0].Value = 1;
+            dataGridViewM1TestPoints.Rows[1].Cells[0].Value = 2;
+            dataGridViewM1TestPoints.Rows[2].Cells[0].Value = 3;
+            dataGridViewM1TestPoints.Rows[3].Cells[0].Value = 4;
+
+            dataGridViewM1TestPoints.Rows[0].Cells[1].Value = 100;
+            dataGridViewM1TestPoints.Rows[1].Cells[1].Value = 200;
+            dataGridViewM1TestPoints.Rows[2].Cells[1].Value = 300;
+            dataGridViewM1TestPoints.Rows[3].Cells[1].Value = 400;
+
+            dataGridViewM1TestPoints.Rows[0].Cells[2].Value = 10;
+            dataGridViewM1TestPoints.Rows[1].Cells[2].Value = 20;
+            dataGridViewM1TestPoints.Rows[2].Cells[2].Value = 30;
+            dataGridViewM1TestPoints.Rows[3].Cells[2].Value = 40;
+
+            dataGridViewM1TestPoints.ClearSelection();
+            #endregion
+
             #region (* init datagridviewM2 *)
             dataGridViewM2TeachPoints.Rows.Add(4);
             dataGridViewM2TeachPoints.Rows[0].Cells[0].Value = 1;
@@ -244,18 +281,18 @@ namespace GUI
             #region (* init AUTO combobox model name list *)
             List<string> mList = new List<string>();
 
-            //var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-            //ReadProgramsConfiguration config = null;
-            //List<string> mList = new List<string>();
-            //ReadProgramsService progRS = (ReadProgramsService)dummyS[0];
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            ReadProgramsConfiguration config = null;
+           
+            ReadProgramsService progRS = (ReadProgramsService)dummyS[0];
 
-            //if (dummyS != null && dummyS.Count > 0)
-            //{
-            //    config = progRS.Configuration as ReadProgramsConfiguration;
-            //    mList = progRS.GetModel(config.ProgramsPath, config.Extensions);
-
-            //get model name list from DB
-            MySqlResult<recipies> result = await mysqlService.DBTable[0].SelectAllAsync<recipies>();
+            if (dummyS != null && dummyS.Count > 0)
+            {
+                config = progRS.Configuration as ReadProgramsConfiguration;
+                mList = progRS.GetModel(config.ProgramsPath, config.Extensions);
+            }
+                //get model name list from DB
+                MySqlResult<recipies> result = await mysqlService.DBTable[0].SelectAllAsync<recipies>();
             result.Result.ForEach(x => mList.Add(x.model_name));
             foreach (string modelName in mList)
             {
@@ -453,6 +490,13 @@ namespace GUI
 
             var testResult = await mysqlService.DBTable[0].InsertAutomaticAsync(value);
 
+            //send recipe update to pad laser plc
+            
+            string keyToSend = "pcM4RecipeUpdate";
+
+            var readResult = await ccService.Send(keyToSend, 1);
+            Thread.Sleep(200);
+            readResult = await ccService.Send(keyToSend, 0);
         }
 
         private void dataGridViewM2TeachPoints_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -570,14 +614,14 @@ namespace GUI
         private void M1TestSendProgram()
         {
             int i = 0;
-            short[] quote = new short[5];
+            float[] quote = new float[5];
             short[] speed = new short[5];
 
             try
             {
                 for (i = 0; i <= dataGridViewM1TestPoints.RowCount - 1; i++)
                 {
-                    quote[i + 1] = short.Parse(dataGridViewM1TestPoints[1, i].Value.ToString());
+                    quote[i + 1] = float.Parse(dataGridViewM1TestPoints[1, i].Value.ToString());
                     speed[i + 1] = short.Parse(dataGridViewM1TestPoints[2, i].Value.ToString());
                 }
 
@@ -606,7 +650,7 @@ namespace GUI
         {
             //fill data
             string connectionString = "Data Source=localhost;database=plasticaucho;uid=USER;pwd=Robots2023!";
-            string query = "Select * from recipies";
+            string query = "Select * from models";
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))

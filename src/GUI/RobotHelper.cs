@@ -273,7 +273,7 @@ namespace GUI
                     ManageLastLifeBit(readResultPLC["pcM3KeepAliveR"], ref lastLifeBit[2]);
                     ManageLastLifeBit(readResultPLC["pcM4KeepAliveR"], ref lastLifeBit[3]);
                     ManageLastLifeBit(readResultPLC["pcM5KeepAliveR"], ref lastLifeBit[4]);
-
+                    UpdateOPCUAMNodeConnection(readResultPLC["pcM1KeepAliveR"], lastLifeBit[0], ref LifeBitTimeout[0], ref LifeBitCounter[0], pictureBoxM1PLCNode, labelM1Node);
                     //if all nodes are connected -> not in timeout
                     //UpdateOPCUASystemConnection((LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]), buttonSystemStatus, labelSystemStatus);
                     WriteOnToolStripAsync((LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]), toolStripStatusLabelSystem);
@@ -320,13 +320,16 @@ namespace GUI
                     #region(* machine point reached - teach*)
                     keys = new List<string>()
                     {
-                        //"pcM1PointReached",
+                        "pcM1PointReached",
                         "pcM2PointReached",
                         "pcM3PointReached"
                         //"pcM4PointReached",
                         //"pcM5PointReached",
                         //"pcM6PointReached"
                     };
+
+                    readResult = await ccService.Read(keys);
+                    WriteAsyncDataGridViewPointReached(readResult["pcM1PointReached"], dataGridViewM1TeachPoints);
 
                     readResult = await ccService.Read(keys);
                     WriteAsyncDataGridViewPointReached(readResult["pcM2PointReached"], dataGridViewM2TeachPoints);
@@ -353,10 +356,18 @@ namespace GUI
                     //}
                     //catch (Exception Ex)
                     //{
-
+                    
                     //}
 
-                    //manipulator digital input
+                    //M1 input/output
+                    keys = new List<string>()
+                    {
+                        "pcM1DI",
+                        "pcM1DO"
+                    };
+
+                    readResult = await ccService.Read(keys);
+                    UpdateOPCUAM1DI(readResult["pcM1DI"]);
 
                     keys = new List<string>()
                     {
@@ -366,6 +377,57 @@ namespace GUI
 
                     readResult = await ccService.Read(keys);
                     UpdateOPCUAM2DI(readResult["pcM2DI"]);
+
+
+                    #region (* M1 timeout alarms *)
+                    keys = new List<string>()
+                    {
+                        "pcM1TimeoutAlarms",
+                        "pcM1GeneralAlarms"
+                    };
+                    readResult = await ccService.Read(keys);
+                    UpdateOPCUAM1TimeoutAlarms(readResult["pcM1TimeoutAlarms"]);
+                    UpdateOPCUAM1GeneralAlarms(readResult["pcM1GeneralAlarms"]);
+
+                    #endregion
+
+                    #region(* cycle counter *)
+                    keys = new List<string>()
+                    {
+                        "pcM1CycleCounter",
+                        "pcM2CycleCounter",
+                        "pcM3CycleCounter",
+                        "pcM4CycleCounter",
+                        "pcM5CycleCounter"
+                    };
+
+                    readResultPLC = await ccService.Read(keys);
+                    WriteOnLabelAsync(readResultPLC["pcM1CycleCounter"], labelM1CycleId);
+                    WriteOnLabelAsync(readResultPLC["pcM2CycleCounter"], labelM2CycleId);
+                    WriteOnLabelAsync(readResultPLC["pcM3CycleCounter"], labelM3CycleId);
+                    WriteOnLabelAsync(readResultPLC["pcM4CycleCounter"], labelM4CycleId);
+                    WriteOnLabelAsync(readResultPLC["pcM5CycleCounter"], labelM5CycleId);                    
+
+                    
+
+                    #endregion
+
+                    #region(* state machine *)
+                    keys = new List<string>()
+                    {
+                        "pcM1TrimmingState",
+                        "pcM1LoadingBeltState",
+                        "pcM1WorkingBeltState",
+                        "pcM1ExitBeltState"
+                    };
+
+                    readResultPLC = await ccService.Read(keys);
+                    WriteOnLabelAsync(readResultPLC["pcM1TrimmingState"], labelM1TrimmerState);
+                    WriteOnLabelAsync(readResultPLC["pcM1LoadingBeltState"], labelM1LoadingBeltState);
+                    WriteOnLabelAsync(readResultPLC["pcM1WorkingBeltState"], labelM1WorkingBeltState);
+                    WriteOnLabelAsync(readResultPLC["pcM1ExitBeltState"], labelM1ExitBeltState);
+
+                    #endregion
 
                     #region (* GUI *)
                     GUIWithOPCUAClientConnected();
@@ -659,8 +721,7 @@ namespace GUI
             WriteOnLabelAsync(null, labelM2TeachAxisQuoteValue);
             WriteOnLabelAsync(null, labelM3TeachAxisQuoteValue);
             WriteOnLabelAsync(null, labelM4TeachAxisQuoteValue);
-            //WriteOnLabelAsync(null, labelM3TeachAxisQuoteValue);
-            //WriteOnLabelAsync(null, labelM4TeachAxisQuoteValue);
+            //WriteOnLabelAsync(null, labelM3TeachAxisQuoteValue);           
         }
 
         private void UpdateOPCUAMNodeConnection(ClientResult cr, bool oldValue, ref bool lBitTimeout, ref int lBitCounter, PictureBox pict, Label lbl)
@@ -732,6 +793,150 @@ namespace GUI
             //    myDict[result]
             //}
         }
+
+        public void UpdateOPCUAM1DI(ClientResult cr)
+        {
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                //todo da gestire
+            }
+            else
+            {
+            }
+        }
+
+        public void UpdateOPCUAM1TimeoutAlarms(ClientResult cr)
+        {
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                //todo da gestire
+            }
+            else
+            {
+                short[] arrayShort = (short[])cr.Value;
+                string alarms = ToBinary(arrayShort[1]);
+                alarms = alarms.PadLeft(16, '0');
+                int i = 0;
+
+                for (i = alarms.Length - 1; i>=0;i--)
+                {
+                    string exe = alarms.Substring(i,1);
+                    
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
+                    {
+                        Console.WriteLine("timeout start motore");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
+                    {
+                        Console.WriteLine("timeout homing motore");
+                    }
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
+                    {
+                        Console.WriteLine("timeout start posizionamento motore");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) &(i == alarms.Length - 4))
+                    {
+                        Console.WriteLine("timeout posizionamento motore");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) &(i == alarms.Length - 5))
+                    {
+                        Console.WriteLine("timeout slitta motore taglio");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) &(i == alarms.Length - 6))
+                    {
+                        Console.WriteLine("timeout pinza taglio stivale");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) &(i == alarms.Length - 7))
+                    {
+                        Console.WriteLine("timeout pinza molle");
+                    }
+
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
+                    {
+                        Console.WriteLine("timeout pinza blocco");
+                    }
+                }
+
+            }
+        }
+
+        public void UpdateOPCUAM1GeneralAlarms(ClientResult cr)
+        {
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                //todo da gestire
+            }
+            else
+            {
+                short[] arrayShort = (short[])cr.Value;
+                string alarms = ToBinary(arrayShort[1]);
+                alarms = alarms.PadLeft(16, '0');
+                int i = 0;
+
+                for (i = alarms.Length - 1; i >= 0; i--)
+                {
+                    string exe = alarms.Substring(i, 1);
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
+                    {
+                        Console.WriteLine("motore nastro carico in allarme");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
+                    {
+                        Console.WriteLine("motore nastro lavoro in allarme");
+                    }
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
+                    {
+                        Console.WriteLine("servo in allarme");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
+                    {
+                        Console.WriteLine("dispositivo fpi4C disconnesso");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
+                    {
+                        Console.WriteLine("");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
+                    {
+                        Console.WriteLine("");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
+                    {
+                        Console.WriteLine("");
+                    }
+
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
+                    {
+                        Console.WriteLine("");
+                    }
+                }
+
+            }
+        }
+
+        public string ToBinary(int n)
+        {
+            if (n < 2) return n.ToString();
+
+            var divisor = n / 2;
+            var remainder = n % 2;
+
+            return ToBinary(divisor) + remainder;
+        }
+
 
         public void UpdateOPCUAM2DI(ClientResult cr)
         {
@@ -1049,7 +1254,7 @@ namespace GUI
         }
 
         #region (* send M1 teaching package *)
-        public async void OPCUAM1TeachPckSend(short pointID, short[] pointQuote, short[] pointSpeed, bool[] pointReg)
+        public async void OPCUAM1TeachPckSend(short pointID, float[] pointQuote, short[] pointSpeed, bool[] pointReg)
         {
             List<string> keys = new List<string>();
             keys.Add("pcM1TeachPointID");
@@ -1169,7 +1374,7 @@ namespace GUI
             }
         }
 
-        public async void OPCUAM1TestPckSend(short[] pointQuote, short[] pointSpeed)
+        public async void OPCUAM1TestPckSend(float[] pointQuote, short[] pointSpeed)
         {
             List<string> keys = new List<string>();
             keys.Add("pcM1TestSpeed");

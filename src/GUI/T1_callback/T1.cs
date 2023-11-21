@@ -56,17 +56,17 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
 
-                int p1 = Convert.ToInt32(dataGridViewM1TeachPoints[1, 0].Value);
-                int p2 = Convert.ToInt32(dataGridViewM1TeachPoints[1, 1].Value);
-                int p3 = Convert.ToInt32(dataGridViewM1TeachPoints[1, 2].Value);
-                int p4 = Convert.ToInt32(dataGridViewM1TeachPoints[1, 3].Value);
+                float p1 = float.Parse(dataGridViewM1TeachPoints[1, 0].Value.ToString());
+                float p2 = float.Parse(dataGridViewM1TeachPoints[1, 1].Value.ToString());
+                float p3 = float.Parse(dataGridViewM1TeachPoints[1, 2].Value.ToString());
+                float p4 =  float.Parse(dataGridViewM1TeachPoints[1, 3].Value.ToString());
                 int s1 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 0].Value);
                 int s2 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 1].Value);
                 int s3 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 2].Value);
                 int s4 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 3].Value);
                 ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM1TeachProgramList.Text);
                 prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
-                prgObj.Save(comboBoxM2TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[0], true);
+                prgObj.Save(comboBoxM1TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[0], true);
             }
         }
 
@@ -179,8 +179,7 @@ namespace GUI
             if (ccService.ClientIsConnected)
             {
                 string keyToSend = "pcM1ManualQuote";
-
-                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1ManualQuote.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM1ManualQuote.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -219,7 +218,7 @@ namespace GUI
 
                 //quote 
                 keyToSend = "pcM1ManualQuote";
-                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1ManualQuote.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM1ManualQuote.Value.ToString()));
                 if (sendResult.OpcResult)
                 {
 
@@ -471,6 +470,195 @@ namespace GUI
             }
         }
 
+
+        private async void buttonM1PosV1Up_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1PosV1Up";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM1PosV1Down_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1PosV1Down";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM1PosV2Up_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1PosV2Up";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void buttonM1PosV2Down_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1PosV2Down";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void checkBoxM1CuttingMotor_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM1StartStopCuttingMotor";
+                chkValue = (checkBoxM1CuttingMotor.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM1CuttingMotor.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM1CuttingMotor.ImageIndex = 0;
+                }
+            }
+            else
+            {
+            }
+        }
+
+        private async void checkBoxM1CuttingDrainBlow_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM1StartStopCuttingDrainBlow";
+                chkValue = (checkBoxM1CuttingDrainBlow.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM1CuttingDrainBlow.ImageIndex = (chkValue) ? 2 : 3;
+                }
+                else
+                {
+                    checkBoxM1CuttingDrainBlow.ImageIndex = 2;
+                }
+            }
+            else
+            {
+            }
+        }
+
+        private async void buttonM1Sharpening_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1Sharpening";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void checkBoxM1CuttingSuction_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM1StartStopCuttingSuction";
+                chkValue = (checkBoxM1CuttingSuction.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM1CuttingSuction.ImageIndex = (chkValue) ? 2 : 3;
+                }
+                else
+                {
+                    checkBoxM1CuttingSuction.ImageIndex = 2;
+                }
+            }
+            else
+            {
+            }
+        }
+
         private async void checkBoxM1ExitBelt_CheckStateChanged(object sender, EventArgs e)
         {
             if (ccService.ClientIsConnected)
@@ -489,7 +677,7 @@ namespace GUI
                 }
                 else
                 {
-                    checkBoxM1WorkingBelt.ImageIndex = 2;
+                    checkBoxM1ExitBelt.ImageIndex = 2;
                 }
             }
             else
@@ -524,6 +712,33 @@ namespace GUI
             }
         }
 
+        private async void checkBoxM1LoadingBelt_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM1StartStopLoadingBelt";
+                chkValue = (checkBoxM1LoadingBelt.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM1LoadingBelt.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM1LoadingBelt.ImageIndex = 2;
+                }
+            }
+            else
+            {
+
+            }
+        }
+
         private async void buttonM1StartTest_Click(object sender, EventArgs e)
         {
             //send quote/speed
@@ -547,6 +762,7 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                comboBoxM1TestProgramList.Text = "PRMILE-CCC-0000";
                 objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM1TestProgramList.Text + config.Extensions[0]);
                 if (objPoints != null)
                 {
@@ -589,7 +805,7 @@ namespace GUI
         private void dataGridViewM1TestPoints_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = 0;
-            short[] quote = new short[5];
+            float[] quote = new float[5];
             short[] speed = new short[5];
 
             try
@@ -622,5 +838,57 @@ namespace GUI
 
             }
         }
+
+        private void dataGridViewM1TeachPoints_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = 0;
+            float[] quote = new float[5];
+            short[] speed = new short[5];
+            bool[] start = new bool[5] { false, false, false, false, false };
+
+            try
+            {
+                //get selected row index
+                int currentRow = int.Parse(e.RowIndex.ToString());
+
+                short idPoint = (short)(currentRow + 1);
+                for (i = 0; i <= dataGridViewM1TeachPoints.RowCount - 1; i++)
+                {
+                    quote[i + 1] = float.Parse(dataGridViewM1TeachPoints[1, i].Value.ToString());
+                    speed[i + 1] = short.Parse(dataGridViewM1TeachPoints[2, i].Value.ToString());
+                }
+
+                if (idPoint < 0 || idPoint > 4)
+                {
+                    xDialog.MsgBox.Show("point selection not admitted", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+                    return;
+                }
+
+                // register button
+                if ((e.ColumnIndex == 3) & currentRow >= 0)
+                {
+                    //register current axis value
+                    dataGridViewM1TeachPoints[1, currentRow].Value = float.Parse((labelM1TeachAxisQuoteValue.Text));
+                    //register current speed value
+                    dataGridViewM1TeachPoints[2, currentRow].Value = Convert.ToInt32((numericUpDownM1JogSpeed.Value));
+                }
+
+                // start quote button
+                if ((e.ColumnIndex == 4) & currentRow >= 0)
+                {
+                    start[idPoint] = true;
+                    OPCUAM1TeachPckSend(idPoint, quote, speed, start);
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+
+
+
+
     }
 }
