@@ -1076,7 +1076,9 @@ namespace GUI
                 bool[] arrayBool = (bool[])cr.Value;
 
                 lbLed1001M2.State = (arrayBool[1] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1002M2_T.State = lbLed1002M2.State;
                 lbLed1002M2.State = (arrayBool[2] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1003M2_T.State = lbLed1003M2.State;
                 lbLed1003M2.State = (arrayBool[3] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1004M2.State = (arrayBool[4] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1005M2.State = (arrayBool[5] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
@@ -1092,21 +1094,24 @@ namespace GUI
                 lbLed1014M2.State = (arrayBool[14] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1015M2.State = (arrayBool[15] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1016M2.State = (arrayBool[16] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
+                lbLed1016M2_T.State = lbLed1016M2.State;
                 lbLed1017M2.State = (arrayBool[17] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1018M2.State = (arrayBool[18] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1018M2_T.State = lbLed1018M2.State;
                 lbLed1019M2.State = (arrayBool[19] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1020M2.State = (arrayBool[20] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1021M2.State = (arrayBool[21] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1022M2.State = (arrayBool[22] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1023M2.State = (arrayBool[23] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1024M2.State = (arrayBool[24] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
+                
                 lbLed1025M2.State = (arrayBool[25] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1026M2.State = (arrayBool[26] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1027M2.State = (arrayBool[27] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1028M2.State = (arrayBool[28] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1029M2.State = (arrayBool[29] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1028M2_T.State = lbLed1028M2.State;
+                lbLed1029M2_T.State = lbLed1029M2.State;
                 lbLed1030M2.State = (arrayBool[30] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1031M2.State = (arrayBool[31] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1032M2.State = (arrayBool[32] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;

@@ -122,20 +122,20 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM2Inclusion", $"ns=2;s=Tags.Pad_print_interna/pc_inclusione_esclusione_generale", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2Param1", $"ns=2;s=Tags.Pad_print_interna/pc_inclusione_esclusione_da_ricetta", typeof(bool)));
             
-            ClientDataConfig.Add(new OpcObjectData("pcM2TestQuote", $"ns=2;s=Tags.Pad_print_interna/pc_quota_longitudinale_in_test", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pcM2TestQuote", $"ns=2;s=Tags.Pad_print_interna/pc_quota_longitudinale_in_test", typeof(float[])));
             ClientDataConfig.Add(new OpcObjectData("pcM2TestSpeed", $"ns=2;s=Tags.Pad_print_interna/pc_velocita_in_test", typeof(short[])));
-            ClientDataConfig.Add(new OpcObjectData("pcM2TeachQuote", $"ns=2;s=Tags.Pad_print_interna/pc_quota_longitudinale_in_teaching", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pcM2TeachQuote", $"ns=2;s=Tags.Pad_print_interna/pc_quota_longitudinale_in_teaching", typeof(float[])));
             ClientDataConfig.Add(new OpcObjectData("pcM2TeachSpeed", $"ns=2;s=Tags.Pad_print_interna/pc_velocita_in_teaching", typeof(short[])));
 
             ClientDataConfig.Add(new OpcObjectData("pcM2StartStop", $"ns=2;s=Tags.Pad_print_interna/pc_start_stop", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2Pause", $"ns=2;s=Tags.Pad_print_interna/pc_pausa", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2AutoSpeed", $"ns=2;s=Tags.Pad_print_interna/pc_velocita", typeof(short[])));
-            ClientDataConfig.Add(new OpcObjectData("pcM2AutoQuote", $"ns=2;s=Tags.Pad_print_interna/pc_quota_longitudinale", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pcM2AutoQuote", $"ns=2;s=Tags.Pad_print_interna/pc_quota_longitudinale", typeof(float[])));
 
             ClientDataConfig.Add(new OpcObjectData("pcM2HomingDone", $"ns=2;s=Tags.Pad_print_interna/pc_homing_done", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2PointReached", $"ns=2;s=Tags.Pad_print_interna/pc_punto_raggiunto", typeof(bool[])));
 
-            ClientDataConfig.Add(new OpcObjectData("pcM2CurrentAxisQuote", $"ns=2;s=Tags.Pad_print_interna/pc_quota_attuale_asse", typeof(short)));
+            ClientDataConfig.Add(new OpcObjectData("pcM2CurrentAxisQuote", $"ns=2;s=Tags.Pad_print_interna/pc_quota_attuale_asse", typeof(float)));
             ClientDataConfig.Add(new OpcObjectData("pc_numero_cicli", $"ns=2;s=Tags.Pad_print_interna/pc_numero_cicli", typeof(short)));
             
             ClientDataConfig.Add(new OpcObjectData("pcM2Status", $"ns=2;s=Tags.Pad_print_interna/pc_stato_macchina", typeof(short)));
@@ -201,7 +201,7 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM3HomingDone", $"ns=2;s=Tags.Pad_print_esterna/pc_homing_done", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM3PointReached", $"ns=2;s=Tags.Pad_print_esterna/pc_punto_raggiunto", typeof(bool[])));
 
-            ClientDataConfig.Add(new OpcObjectData("pcM3CurrentAxisQuote", $"ns=2;s=Tags.Pad_print_esterna/pc_quota_attuale_asse", typeof(short)));
+            ClientDataConfig.Add(new OpcObjectData("pcM3CurrentAxisQuote", $"ns=2;s=Tags.Pad_print_esterna/pc_quota_attuale_asse", typeof(float)));
             ClientDataConfig.Add(new OpcObjectData("pc_numero_cicli", $"ns=2;s=Tags.Pad_print_esterna/pc_numero_cicli", typeof(short)));
 
             ClientDataConfig.Add(new OpcObjectData("pcM3Status", $"ns=2;s=Tags.Pad_print_esterna/pc_stato_macchina", typeof(short)));
