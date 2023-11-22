@@ -10029,7 +10029,7 @@
             this.lbLed2040M1.Enabled = false;
             this.lbLed2040M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2040M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2040M1.Label = "disponibile";
+            this.lbLed2040M1.Label = "Y117 - red semaphore";
             this.lbLed2040M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2040M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2040M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10048,7 +10048,7 @@
             this.lbLed2020M1.Enabled = false;
             this.lbLed2020M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2020M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2020M1.Label = "disponibile";
+            this.lbLed2020M1.Label = "Y103 - cut clamp opening";
             this.lbLed2020M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2020M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2020M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10067,7 +10067,7 @@
             this.lbLed2039M1.Enabled = false;
             this.lbLed2039M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2039M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2039M1.Label = "disponibile";
+            this.lbLed2039M1.Label = "Y116 - tellow semaphore";
             this.lbLed2039M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2039M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2039M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10086,7 +10086,7 @@
             this.lbLed2019M1.Enabled = false;
             this.lbLed2019M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2019M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2019M1.Label = "spare";
+            this.lbLed2019M1.Label = "Y102 - cut clamp closing";
             this.lbLed2019M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2019M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2019M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10105,7 +10105,7 @@
             this.lbLed2046M1.Enabled = false;
             this.lbLed2046M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2046M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2046M1.Label = "spare";
+            this.lbLed2046M1.Label = "Y11D - spare";
             this.lbLed2046M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2046M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2046M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10124,7 +10124,7 @@
             this.lbLed2047M1.Enabled = false;
             this.lbLed2047M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2047M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2047M1.Label = "spare";
+            this.lbLed2047M1.Label = "Y11E - spare";
             this.lbLed2047M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2047M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2047M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10143,7 +10143,7 @@
             this.lbLed2048M1.Enabled = false;
             this.lbLed2048M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2048M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2048M1.Label = "spare";
+            this.lbLed2048M1.Label = "Y11F - spare";
             this.lbLed2048M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2048M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2048M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10162,7 +10162,7 @@
             this.lbLed2045M1.Enabled = false;
             this.lbLed2045M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2045M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2045M1.Label = "spare";
+            this.lbLed2045M1.Label = "Y11C - spare";
             this.lbLed2045M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2045M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2045M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10181,7 +10181,7 @@
             this.lbLed2042M1.Enabled = false;
             this.lbLed2042M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2042M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2042M1.Label = "spare";
+            this.lbLed2042M1.Label = "Y119 - spare";
             this.lbLed2042M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2042M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2042M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10200,7 +10200,7 @@
             this.lbLed2043M1.Enabled = false;
             this.lbLed2043M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2043M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2043M1.Label = "spare";
+            this.lbLed2043M1.Label = "Y11A - spare";
             this.lbLed2043M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2043M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2043M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10219,7 +10219,7 @@
             this.lbLed2044M1.Enabled = false;
             this.lbLed2044M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2044M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2044M1.Label = "spare";
+            this.lbLed2044M1.Label = "Y11B - spare";
             this.lbLed2044M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2044M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2044M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10238,7 +10238,7 @@
             this.lbLed2041M1.Enabled = false;
             this.lbLed2041M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2041M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2041M1.Label = "spare";
+            this.lbLed2041M1.Label = "Y118 - spare";
             this.lbLed2041M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2041M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2041M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10257,7 +10257,7 @@
             this.lbLed2032M1.Enabled = false;
             this.lbLed2032M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2032M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2032M1.Label = "photocell working belt";
+            this.lbLed2032M1.Label = "Y10F - spare";
             this.lbLed2032M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2032M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2032M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10276,7 +10276,7 @@
             this.lbLed2036M1.Enabled = false;
             this.lbLed2036M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2036M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2036M1.Label = "spare";
+            this.lbLed2036M1.Label = "Y113 - spare";
             this.lbLed2036M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2036M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2036M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10295,7 +10295,7 @@
             this.lbLed2037M1.Enabled = false;
             this.lbLed2037M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2037M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2037M1.Label = "disponibile";
+            this.lbLed2037M1.Label = "Y114 - spare";
             this.lbLed2037M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2037M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2037M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10314,7 +10314,7 @@
             this.lbLed2038M1.Enabled = false;
             this.lbLed2038M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2038M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2038M1.Label = "disponibile";
+            this.lbLed2038M1.Label = "Y115 - green semaphore";
             this.lbLed2038M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2038M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2038M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10333,7 +10333,7 @@
             this.lbLed2035M1.Enabled = false;
             this.lbLed2035M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2035M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2035M1.Label = "spare";
+            this.lbLed2035M1.Label = "Y112 - spare";
             this.lbLed2035M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2035M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2035M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10352,7 +10352,7 @@
             this.lbLed2034M1.Enabled = false;
             this.lbLed2034M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2034M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2034M1.Label = "spare";
+            this.lbLed2034M1.Label = "Y111 - start working belt";
             this.lbLed2034M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2034M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2034M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10371,7 +10371,7 @@
             this.lbLed2030M1.Enabled = false;
             this.lbLed2030M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2030M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2030M1.Label = "spare";
+            this.lbLed2030M1.Label = "Y10D - spare";
             this.lbLed2030M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2030M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2030M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10390,7 +10390,7 @@
             this.lbLed2031M1.Enabled = false;
             this.lbLed2031M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2031M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2031M1.Label = "spare";
+            this.lbLed2031M1.Label = "Y10E - suction";
             this.lbLed2031M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2031M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2031M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10409,7 +10409,7 @@
             this.lbLed2033M1.Enabled = false;
             this.lbLed2033M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2033M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2033M1.Label = "photocell exit belt";
+            this.lbLed2033M1.Label = "Y110 - start loading belt";
             this.lbLed2033M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2033M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2033M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10428,7 +10428,7 @@
             this.lbLed2029M1.Enabled = false;
             this.lbLed2029M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2029M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2029M1.Label = "centering clamp 2 opened";
+            this.lbLed2029M1.Label = "Y10C - spare";
             this.lbLed2029M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2029M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2029M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10447,7 +10447,7 @@
             this.lbLed2026M1.Enabled = false;
             this.lbLed2026M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2026M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2026M1.Label = "extra stroke low";
+            this.lbLed2026M1.Label = "Y109 - blow";
             this.lbLed2026M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2026M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2026M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10466,7 +10466,7 @@
             this.lbLed2027M1.Enabled = false;
             this.lbLed2027M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2027M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2027M1.Label = "spare";
+            this.lbLed2027M1.Label = "Y10A - vertical 1 axis position";
             this.lbLed2027M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2027M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2027M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10485,7 +10485,7 @@
             this.lbLed2028M1.Enabled = false;
             this.lbLed2028M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2028M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2028M1.Label = "centering clamp 1 opened";
+            this.lbLed2028M1.Label = "Y10B - vertical 2 axis position";
             this.lbLed2028M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2028M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2028M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10504,7 +10504,7 @@
             this.lbLed2025M1.Enabled = false;
             this.lbLed2025M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2025M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2025M1.Label = "extra stroke high";
+            this.lbLed2025M1.Label = "Y108 - sharpening cylinder";
             this.lbLed2025M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2025M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2025M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10523,7 +10523,7 @@
             this.lbLed2022M1.Enabled = false;
             this.lbLed2022M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2022M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2022M1.Label = "spare";
+            this.lbLed2022M1.Label = "Y105 - springs clamp opening";
             this.lbLed2022M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2022M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2022M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10542,7 +10542,7 @@
             this.lbLed2023M1.Enabled = false;
             this.lbLed2023M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2023M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2023M1.Label = "spare";
+            this.lbLed2023M1.Label = "Y106 - block clamp closing";
             this.lbLed2023M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2023M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2023M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10561,7 +10561,7 @@
             this.lbLed2024M1.Enabled = false;
             this.lbLed2024M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2024M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2024M1.Label = "vertical axis in home";
+            this.lbLed2024M1.Label = "Y107 - block clamp opening";
             this.lbLed2024M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2024M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2024M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10580,7 +10580,7 @@
             this.lbLed2021M1.Enabled = false;
             this.lbLed2021M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2021M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2021M1.Label = "spare";
+            this.lbLed2021M1.Label = "Y104 - springs clamp closing";
             this.lbLed2021M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2021M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2021M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10599,7 +10599,7 @@
             this.lbLed2012M1.Enabled = false;
             this.lbLed2012M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2012M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2012M1.Label = "spare";
+            this.lbLed2012M1.Label = "YB - reset servo";
             this.lbLed2012M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2012M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2012M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10618,7 +10618,7 @@
             this.lbLed2016M1.Enabled = false;
             this.lbLed2016M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2016M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2016M1.Label = "servo ready";
+            this.lbLed2016M1.Label = "YF - spare";
             this.lbLed2016M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2016M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2016M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10637,7 +10637,7 @@
             this.lbLed2017M1.Enabled = false;
             this.lbLed2017M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2017M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2017M1.Label = "GTO ready";
+            this.lbLed2017M1.Label = "Y100 - cut motor";
             this.lbLed2017M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2017M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2017M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10656,7 +10656,7 @@
             this.lbLed2018M1.Enabled = false;
             this.lbLed2018M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2018M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2018M1.Label = "GTO print ended";
+            this.lbLed2018M1.Label = "Y101 - cut slide motor";
             this.lbLed2018M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2018M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2018M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10675,7 +10675,7 @@
             this.lbLed2015M1.Enabled = false;
             this.lbLed2015M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2015M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2015M1.Label = "spare";
+            this.lbLed2015M1.Label = "YE - spare";
             this.lbLed2015M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2015M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2015M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10694,7 +10694,7 @@
             this.lbLed2014M1.Enabled = false;
             this.lbLed2014M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2014M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2014M1.Label = "servo in motion";
+            this.lbLed2014M1.Label = "YD - spare";
             this.lbLed2014M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2014M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2014M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10713,7 +10713,7 @@
             this.lbLed2010M1.Enabled = false;
             this.lbLed2010M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2010M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2010M1.Label = "exit belt inverter alarm";
+            this.lbLed2010M1.Label = "Y9 - servo on";
             this.lbLed2010M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2010M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2010M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10732,7 +10732,7 @@
             this.lbLed2011M1.Enabled = false;
             this.lbLed2011M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2011M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2011M1.Label = "servo alarm";
+            this.lbLed2011M1.Label = "YA - servo brake";
             this.lbLed2011M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2011M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2011M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10751,7 +10751,7 @@
             this.lbLed2013M1.Enabled = false;
             this.lbLed2013M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2013M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2013M1.Label = "servo in position";
+            this.lbLed2013M1.Label = "YC - spare";
             this.lbLed2013M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2013M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2013M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10770,7 +10770,7 @@
             this.lbLed2009M1.Enabled = false;
             this.lbLed2009M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2009M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2009M1.Label = "working belt inverter alarm";
+            this.lbLed2009M1.Label = "Y8 - spare";
             this.lbLed2009M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2009M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2009M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10789,7 +10789,7 @@
             this.lbLed2006M1.Enabled = false;
             this.lbLed2006M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2006M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2006M1.Label = "air pressure ok";
+            this.lbLed2006M1.Label = "Y5 - spare";
             this.lbLed2006M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2006M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2006M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10808,7 +10808,7 @@
             this.lbLed2007M1.Enabled = false;
             this.lbLed2007M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2007M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2007M1.Label = "emergency ok";
+            this.lbLed2007M1.Label = "Y6 - spare";
             this.lbLed2007M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2007M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2007M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10827,7 +10827,7 @@
             this.lbLed2008M1.Enabled = false;
             this.lbLed2008M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2008M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2008M1.Label = "selector in AUTO";
+            this.lbLed2008M1.Label = "Y7 - spare";
             this.lbLed2008M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2008M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2008M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10846,7 +10846,7 @@
             this.lbLed2005M1.Enabled = false;
             this.lbLed2005M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2005M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2005M1.Label = "spare";
+            this.lbLed2005M1.Label = "Y4 - spare";
             this.lbLed2005M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2005M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2005M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10865,7 +10865,7 @@
             this.lbLed2002M1.Enabled = false;
             this.lbLed2002M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2002M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2002M1.Label = " big clamp closed";
+            this.lbLed2002M1.Label = "Y1 - motor direction sign";
             this.lbLed2002M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2002M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2002M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10884,7 +10884,7 @@
             this.lbLed2003M1.Enabled = false;
             this.lbLed2003M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2003M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2003M1.Label = "small clamp closed";
+            this.lbLed2003M1.Label = "Y2 - spare";
             this.lbLed2003M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2003M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2003M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10903,7 +10903,7 @@
             this.lbLed2004M1.Enabled = false;
             this.lbLed2004M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2004M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2004M1.Label = "small clamp opened";
+            this.lbLed2004M1.Label = "Y3 - spare";
             this.lbLed2004M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2004M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2004M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10922,7 +10922,7 @@
             this.lbLed2001M1.Enabled = false;
             this.lbLed2001M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2001M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2001M1.Label = "spare";
+            this.lbLed2001M1.Label = "Y0 - motor pulse train";
             this.lbLed2001M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2001M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2001M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -10940,9 +10940,9 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
+            this.tabControlMain.Controls.Add(this.tabPageT1_4);
             this.tabControlMain.Controls.Add(this.tabPageT1_3);
             this.tabControlMain.Controls.Add(this.tabPageT1_1);
-            this.tabControlMain.Controls.Add(this.tabPageT1_4);
             this.tabControlMain.Controls.Add(this.tabPageT7);
             this.tabControlMain.Controls.Add(this.tabPageT6);
             this.tabControlMain.Controls.Add(this.tabPageT5);
@@ -11006,7 +11006,7 @@
             this.tabPageT6,
             this.tabPageT7});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageT1_3;
+            this.tabControlMain.SelectedPage = this.tabPageT1_4;
             tabPageColorStyle65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle65.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle65.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
