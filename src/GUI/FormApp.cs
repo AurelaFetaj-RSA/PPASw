@@ -31,6 +31,7 @@ using RSACommon.Service;
 using RSACommon.Configuration;
 using RSACommon.ProgramParser;
 using RSACommon.Points;
+using RSAPoints.ConcretePoints;
 using xDialog;
 using PPAUtils;
 using MySql.Data;
@@ -137,9 +138,6 @@ namespace GUI
 
             mysqlService.AddTable<recipies>("models");
             mysqlService.AddTable<padlaserprogram>("padlaserprograms");
-
-           
-
 
             foreach (var service in listOfService)
             {
@@ -278,49 +276,7 @@ namespace GUI
             dataGridViewM3TestPoints.ClearSelection();
             #endregion
 
-            #region (* init AUTO combobox model name list *)
-            List<string> mList = new List<string>();
-
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-            ReadProgramsConfiguration config = null;
-           
-            ReadProgramsService progRS = (ReadProgramsService)dummyS[0];
-
-            if (dummyS != null && dummyS.Count > 0)
-            {
-                config = progRS.Configuration as ReadProgramsConfiguration;
-                mList = progRS.GetModel(config.ProgramsPath, config.Extensions);
-            }
-                //get model name list from DB
-                MySqlResult<recipies> result = await mysqlService.DBTable[0].SelectAllAsync<recipies>();
-            result.Result.ForEach(x => mList.Add(x.model_name));
-            foreach (string modelName in mList)
-            {
-                toolStripComboBoxT0.Items.Add(modelName);
-                toolStripComboBoxT0.SelectedIndex = 0;
-                toolStripComboBoxT0.SelectedIndexChanged += toolStripComboBoxT0_SelectedIndexChanged;
-                toolStripComboBoxT1_1.Items.Add(modelName);
-                toolStripComboBoxT1_1.SelectedIndex = 0;
-                toolStripComboBoxT1_1.SelectedIndexChanged += toolStripComboBoxT1_1_SelectedIndexChanged;
-                toolStripComboBoxT1_2.Items.Add(modelName);
-                toolStripComboBoxT1_2.SelectedIndex = 0;
-                toolStripComboBoxT1_2.SelectedIndexChanged += toolStripComboBoxT1_2_SelectedIndexChanged;
-                toolStripComboBoxT3_1.Items.Add(modelName);
-                toolStripComboBoxT3_1.SelectedIndex = 0;
-                toolStripComboBoxT3_1.SelectedIndexChanged += toolStripComboBoxT3_1_SelectedIndexChanged;
-                toolStripComboBoxT3_2.Items.Add(modelName);
-                toolStripComboBoxT3_2.SelectedIndex = 0;
-                toolStripComboBoxT3_2.SelectedIndexChanged += toolStripComboBoxT3_2_SelectedIndexChanged;
-                toolStripComboBoxT4_1.Items.Add(modelName);
-                toolStripComboBoxT4_1.SelectedIndex = 0;
-                toolStripComboBoxT4_1.SelectedIndexChanged += toolStripComboBoxT4_1_SelectedIndexChanged;
-                toolStripComboBoxT4_2.Items.Add(modelName);
-                toolStripComboBoxT4_2.SelectedIndex = 0;
-                toolStripComboBoxT4_2.SelectedIndexChanged += toolStripComboBoxT4_2_SelectedIndexChanged;
-                comboBoxMRecipeName.Items.Add(modelName);
-                comboBoxMRecipeName.SelectedIndex = 0;
-            }
-            #endregion
+            RefreshModelNameComboBox();
 
             #region(* init tabControlMain *)
             tabPageT0.Text = "";
@@ -462,41 +418,260 @@ namespace GUI
             UpdateColorToDataGridRow();
         }
 
+        private async void RefreshModelNameComboBox()
+        {
+            #region (* refresh combobox model name list *)
+            List<string> mList = new List<string>();
+
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            ReadProgramsConfiguration config = null;
+
+            ReadProgramsService progRS = (ReadProgramsService)dummyS[0];
+
+            if (dummyS != null && dummyS.Count > 0)
+            {
+                config = progRS.Configuration as ReadProgramsConfiguration;
+                mList = progRS.GetModel(config.ProgramsPath, config.Extensions);
+            }
+            //get model name list from DB
+            MySqlResult<recipies> result = await mysqlService.DBTable[0].SelectAllAsync<recipies>();
+            result.Result.ForEach(x => mList.Add(x.model_name));
+            foreach (string modelName in mList)
+            {
+                toolStripComboBoxT0.Items.Add(modelName);
+                toolStripComboBoxT0.SelectedIndex = 0;
+                toolStripComboBoxT0.SelectedIndexChanged += toolStripComboBoxT0_SelectedIndexChanged;
+                toolStripComboBoxT1_1.Items.Add(modelName);
+                toolStripComboBoxT1_1.SelectedIndex = 0;
+                toolStripComboBoxT1_1.SelectedIndexChanged += toolStripComboBoxT1_1_SelectedIndexChanged;
+                toolStripComboBoxT1_2.Items.Add(modelName);
+                toolStripComboBoxT1_2.SelectedIndex = 0;
+                toolStripComboBoxT1_2.SelectedIndexChanged += toolStripComboBoxT1_2_SelectedIndexChanged;
+                toolStripComboBoxT3_1.Items.Add(modelName);
+                toolStripComboBoxT3_1.SelectedIndex = 0;
+                toolStripComboBoxT3_1.SelectedIndexChanged += toolStripComboBoxT3_1_SelectedIndexChanged;
+                toolStripComboBoxT3_2.Items.Add(modelName);
+                toolStripComboBoxT3_2.SelectedIndex = 0;
+                toolStripComboBoxT3_2.SelectedIndexChanged += toolStripComboBoxT3_2_SelectedIndexChanged;
+                toolStripComboBoxT4_1.Items.Add(modelName);
+                toolStripComboBoxT4_1.SelectedIndex = 0;
+                toolStripComboBoxT4_1.SelectedIndexChanged += toolStripComboBoxT4_1_SelectedIndexChanged;
+                toolStripComboBoxT4_2.Items.Add(modelName);
+                toolStripComboBoxT4_2.SelectedIndex = 0;
+                toolStripComboBoxT4_2.SelectedIndexChanged += toolStripComboBoxT4_2_SelectedIndexChanged;
+                comboBoxMRecipeName.Items.Add(modelName);
+                comboBoxMRecipeName.SelectedIndex = 0;
+            }
+        }
+        #endregion
+
         private async void buttonAddNewRecipe_Click(object sender, EventArgs e)
         {
             if (textBoxMRecipeName.Text.Length >= 0 && textBoxMRecipeName.Text.Length < 4)
             {
                 xDialog.MsgBox.Show("recipe name not valid", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+                return;
             }
 
             object[] value = new object[]
                    {
                     textBoxMRecipeName.Text,
+                    //M1 params
                     (checkBoxM1Param1.CheckState == CheckState.Checked)?1:0,
                     0,
+                    //M2 params
                     (checkBoxM2Param1.CheckState == CheckState.Checked)?1:0,
                     0,
+                    //M3 params
                     (checkBoxM3Param1.CheckState == CheckState.Checked)?1:0,
-                    0,
+                    (radioButtonFootOrderOpt1.Checked)?1:2,
+                    //M4 params
                     (checkBoxM4Param1.CheckState == CheckState.Checked)?1:0,
                     0,
                     textBoxLaserLine1.Text,
                     textBoxLaserLine2.Text,
+                    //M6 params
                     (checkBoxM5Param1.CheckState == CheckState.Checked)?1:0,
                     0,
+                    //M6 params
                     (checkBoxM6Param1.CheckState == CheckState.Checked)?1:0,
                     0,
                    };
 
             var testResult = await mysqlService.DBTable[0].InsertAutomaticAsync(value);
 
-            //send recipe update to pad laser plc
-            
-            string keyToSend = "pcM4RecipeUpdate";
+            if (testResult.Error == 0)
+            {
+                //send recipe update to pad laser plc
+                string keyToSend = "pcM4RecipeUpdate";
 
-            var readResult = await ccService.Send(keyToSend, 1);
-            Thread.Sleep(200);
-            readResult = await ccService.Send(keyToSend, 0);
+                var readResult = await ccService.Send(keyToSend, 1);
+                Thread.Sleep(200);
+                readResult = await ccService.Send(keyToSend, 0);
+                //refresh combobox
+                RefreshModelNameComboBox();
+            }
+            else
+            {
+                //manage db error
+            }
+        }
+
+        private async void comboBoxM3PrgName_st1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //get model name
+            string prgName = comboBoxM3PrgName_st1.Text;
+            string modelName = prgName.Substring(2, 4);
+
+            //check model name
+            if (modelName == "" )
+            {
+                //program name with incorrect format
+                //todo add message to the operator
+                return;
+            }
+
+            //get data from DB
+            MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+            if ((recs.Error == 0) & (recs.Result.Count != 0))
+            {                
+                //send recipe
+                string keyValue = "pcM3Param1";
+                var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param1.ToString()));
+
+                //send type order: RG, LF
+                //type order 2: LF, RG
+                keyValue = "pcM3TypeOrder";
+                sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
+
+                labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
+                labelM3Param2Value.Text = recs.Result[0].m3_param2.ToString();
+
+                //send quote, speed
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                {
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                    ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                    objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + comboBoxM3PrgName_st1.Text + config.Extensions[0]);
+                    if (objPoints != null)
+                    {
+                        List<string> keys = new List<string>()
+                    {
+                        "pcM3AutoQuoteSt1",
+                        "pcM3AutoSpeedSt1"
+                    };
+
+                        List<object> values = new List<object>()
+                    {
+                        new float[] {0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
+                        new short[] {0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                    };
+
+                        var sendResults = await ccService.Send(keys, values);
+                        bool allsent = true;
+                        foreach (var result in sendResults)
+                        {
+                            if (result.Value.OpcResult)
+                            {
+                            }
+                            else
+                            {
+                                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintExt, "error sending " + result.Value.NodeString + " station 1");
+                            }
+                            allsent = allsent & result.Value.OpcResult;
+                        }
+                        if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padprintExt, "program sent succesfully " + "station 1");
+                    }
+                }
+                else
+                {
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintExt, "verify program file " + "station 1");
+                }
+            }
+            else
+            {
+                //manage db error
+            }
+        }
+        private async void comboBoxM3PrgName_st2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //get model name
+            string prgName = comboBoxM3PrgName_st2.Text;
+            string modelName = prgName.Substring(2, 4);
+
+            //check model name
+            if (modelName == "")
+            {
+                //program name with incorrect format
+                //todo add message to the operator
+                return;
+            }
+
+            //get data from DB
+            MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+            if ((recs.Error == 0) & (recs.Result.Count != 0))
+            {
+
+                //send recipe
+                string keyValue = "pcM3Param1";
+                var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param1.ToString()));
+
+                keyValue = "pcM3TypeOrder";
+                sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
+
+                labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
+                labelM3Param2Value.Text = recs.Result[0].m3_param2.ToString();
+                //send quote, speed
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                {
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                    ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                    objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + comboBoxM3PrgName_st2.Text + config.Extensions[0]);
+                    if (objPoints != null)
+                    {
+                        List<string> keys = new List<string>()
+                    {
+                        "pcM3AutoQuoteSt2",
+                        "pcM3AutoSpeedSt2"
+                    };
+
+                        List<object> values = new List<object>()
+                    {
+                        new float[] {0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
+                        new short[] {0,  (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                    };
+
+                        var sendResults = await ccService.Send(keys, values);
+                        bool allsent = true;
+                        foreach (var result in sendResults)
+                        {
+                            if (result.Value.OpcResult)
+                            {
+                            }
+                            else
+                            {
+                                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintExt, "error sending " + result.Value.NodeString + " station 2");
+                            }
+                            allsent = allsent & result.Value.OpcResult;
+                        }
+                        if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padprintExt, "program sent succesfully " + "station 2");
+                    }
+                }
+                else
+                {
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintExt, "verify program file " + "station 2");
+                }
+            }
+            else
+            {
+                //manage db error
+            }
         }
 
         private void dataGridViewM2TeachPoints_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -668,7 +843,10 @@ namespace GUI
                     dataGridViewMEditRecipe.Columns[4].Visible = false;
                     dataGridViewMEditRecipe.Columns[5].HeaderText = "padprint ext on/off";
                     dataGridViewMEditRecipe.Columns[5].Width = 140;
-                    dataGridViewMEditRecipe.Columns[6].Visible = false;
+                    dataGridViewMEditRecipe.Columns[6].HeaderText = "padprint ext foot";
+                    dataGridViewMEditRecipe.Columns[6].Width = 140;
+
+                    //dataGridViewMEditRecipe.Columns[6].Visible = false;
 
                     dataGridViewMEditRecipe.Columns[7].HeaderText = "padlaser on/off";
                     dataGridViewMEditRecipe.Columns[7].Width = 140;
@@ -717,6 +895,67 @@ namespace GUI
 
             }
             else xDialog.MsgBox.Show("offline", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+
+        }
+
+        private async void toolStripComboBoxT0_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            List<IObjProgram> pList = new List<IObjProgram>();
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, toolStripComboBoxT0.Text);
+                comboBoxM1PrgName.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM1PrgName.Items.Add(prgName.ProgramName);
+                }
+
+                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, toolStripComboBoxT0.Text);
+                comboBoxM2PrgName.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM2PrgName.Items.Add(prgName.ProgramName);
+                }
+
+                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, toolStripComboBoxT0.Text);
+                comboBoxM3PrgName_st1.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM3PrgName_st1.Items.Add(prgName.ProgramName);
+                }
+
+                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, toolStripComboBoxT0.Text);
+                comboBoxM3PrgName_st2.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM3PrgName_st2.Items.Add(prgName.ProgramName);
+                }
+
+                //pad laser combobox
+                List<string> mList = new List<string>();
+                MySqlResult<padlaserprogram> result = mysqlService.DBTable[1].SelectAll<padlaserprogram>();
+                result.Result.ForEach(x => mList.Add(x.program_name));
+
+                
+                comboBoxM4PrgName.Items.Clear();
+                foreach (string prgName in mList)
+                {
+                    //filter by model name
+                    if (prgName.Contains(toolStripComboBoxT0.Text))
+                    comboBoxM4PrgName.Items.Add(prgName);
+                }
+            }
+        }
+
+        private void buttonMUpdateRecipe_Click(object sender, EventArgs e)
+        {
 
         }
     }    

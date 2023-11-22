@@ -12,61 +12,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RSAPoints.ConcretePoints;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace GUI
 {
     public partial class FormApp : Form
     {
-        private void toolStripComboBoxT0_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-            List<IObjProgram> pList = new List<IObjProgram>();
-
-            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-            {
-                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, toolStripComboBoxT0.Text);
-                comboBoxM1PrgName.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM1PrgName.Items.Add(prgName.ProgramName);
-                }
-
-                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, toolStripComboBoxT0.Text);
-                comboBoxM2PrgName.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM2PrgName.Items.Add(prgName.ProgramName);
-                }
-
-                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, toolStripComboBoxT0.Text);
-                comboBoxM3PrgName_st1.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM3PrgName_st1.Items.Add(prgName.ProgramName);
-                }
-
-                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, toolStripComboBoxT0.Text);
-                comboBoxM3PrgName_st2.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM3PrgName_st2.Items.Add(prgName.ProgramName);
-                }
-
-                //da rimuovere
-                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, toolStripComboBoxT0.Text);
-                comboBoxM4PrgName.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM4PrgName.Items.Add(prgName.ProgramName);
-                }
-            }
-        }
+      
         private async void comboBoxM1PrgName_SelectedIndexChanged(object sender, EventArgs e)
         {
             //send recipe (todo: waiting mysql)
@@ -184,113 +137,7 @@ namespace GUI
                 AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintInt, "verify program file");
             }
         }
-        private async void comboBoxM3PrgName_st1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //send recipe
-            string keyValue = "pcM3Param1";
-            var sendResult = await ccService.Send(keyValue, short.Parse(textBoxM3Test.Text));
-
-            //send type order: RG, LF
-            //type order 2: LF, RG
-            keyValue = "pcM3TypeOrder";
-            sendResult = await ccService.Send(keyValue, short.Parse(textBoxTypeOrder.Text));
-
-
-            //send quote, speed
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-            {
-                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + comboBoxM3PrgName_st1.Text + config.Extensions[0]);
-                if (objPoints != null)
-                {
-                    List<string> keys = new List<string>()
-                    {
-                        "pcM3AutoQuoteSt1",
-                        "pcM3AutoSpeedSt1"
-                    };
-
-                    List<object> values = new List<object>()
-                    {
-                        new short[] {0, (short)objPoints.Points[0].Q1, (short)objPoints.Points[0].Q2, (short)objPoints.Points[0].Q3, (short)objPoints.Points[0].Q4},
-                        new short[] {0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
-                    };
-
-                    var sendResults = await ccService.Send(keys, values);
-                    bool allsent = true;
-                    foreach (var result in sendResults)
-                    {
-                        if (result.Value.OpcResult)
-                        {
-                        }
-                        else
-                        {
-                            AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintExt, "error sending " + result.Value.NodeString + " station 1");
-                        }
-                        allsent = allsent & result.Value.OpcResult;
-                    }
-                    if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padprintExt, "program sent succesfully " + "station 1");
-                }
-            }
-            else
-            {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintExt, "verify program file " + "station 1");
-            }
-        }
-        private async void comboBoxM3PrgName_st2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //send recipe
-            string keyValue = "pcM3Param1";
-            var sendResult = await ccService.Send(keyValue, short.Parse(textBoxM3Test.Text));
-            labelM3Param1Value.Text = textBoxM3Test.Text;
-            keyValue = "pcM3TypeOrder";
-            sendResult = await ccService.Send(keyValue, short.Parse(textBoxTypeOrder.Text));
-            labelM3Param1Value.Text = textBoxM3Test.Text;
-            //send quote, speed
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-            {
-                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + comboBoxM3PrgName_st2.Text + config.Extensions[0]);
-                if (objPoints != null)
-                {
-                    List<string> keys = new List<string>()
-                    {
-                        "pcM3AutoQuoteSt2",
-                        "pcM3AutoSpeedSt2"
-                    };
-
-                    List<object> values = new List<object>()
-                    {
-                        new short[] {0, (short)objPoints.Points[0].Q1, (short)objPoints.Points[0].Q2, (short)objPoints.Points[0].Q3, (short)objPoints.Points[0].Q4},
-                        new short[] {0,  (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
-                    };
-
-                    var sendResults = await ccService.Send(keys, values);
-                    bool allsent = true;
-                    foreach (var result in sendResults)
-                    {
-                        if (result.Value.OpcResult)
-                        {
-                        }
-                        else
-                        {
-                            AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintExt, "error sending " + result.Value.NodeString + " station 2");
-                        }
-                        allsent = allsent & result.Value.OpcResult;
-                    }
-                    if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padprintExt, "program sent succesfully " + "station 2");
-                }
-            }
-            else
-            {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintExt, "verify program file " + "station 2");
-            }
-        }
+    
         private async void comboBoxM4PrgName_SelectedIndexChanged(object sender, EventArgs e)
         {
             //send recipe (todo: waiting mysql)
@@ -349,7 +196,6 @@ namespace GUI
                 AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
             }
         }
-
         private async void checkBoxM1SharpeningInclusion_CheckStateChanged(object sender, EventArgs e)
         {
             if (ccService.ClientIsConnected)
@@ -377,8 +223,6 @@ namespace GUI
                 AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
             }
         }
-
-
         private async void numericUpDownM1SharpeningTime_ValueChanged(object sender, EventArgs e)
         {
             if (ccService.ClientIsConnected)
@@ -399,7 +243,6 @@ namespace GUI
 
             
         }
-
         private async void checkBoxM2Inclusion_CheckStateChanged(object sender, EventArgs e)
         {
             if (ccService.ClientIsConnected)

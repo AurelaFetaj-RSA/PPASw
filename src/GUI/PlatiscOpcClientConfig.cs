@@ -184,15 +184,15 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM3Inclusion", $"ns=2;s=Tags.Pad_print_esterna/pc_inclusione_esclusione_generale", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM3Param1", $"ns=2;s=Tags.Pad_print_esterna/pc_inclusione_esclusione_da_ricetta", typeof(bool)));
             //manage auto
-            ClientDataConfig.Add(new OpcObjectData("pcM3AutoQuoteSt1", $"ns=2;s=Tags.Pad_print_esterna/pc_quota_longitudinale_stazione_1", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pcM3AutoQuoteSt1", $"ns=2;s=Tags.Pad_print_esterna/pc_quota_longitudinale_stazione_1", typeof(float[])));
             ClientDataConfig.Add(new OpcObjectData("pcM3AutoSpeedSt1", $"ns=2;s=Tags.Pad_print_esterna/pc_velocita_stazione_1", typeof(short[])));
-            ClientDataConfig.Add(new OpcObjectData("pcM3AutoQuoteSt2", $"ns=2;s=Tags.Pad_print_esterna/pc_quota_longitudinale_stazione_2", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pcM3AutoQuoteSt2", $"ns=2;s=Tags.Pad_print_esterna/pc_quota_longitudinale_stazione_2", typeof(float[])));
             ClientDataConfig.Add(new OpcObjectData("pcM3AutoSpeedSt2", $"ns=2;s=Tags.Pad_print_esterna/pc_velocita_stazione_2", typeof(short[])));
             ClientDataConfig.Add(new OpcObjectData("pcM3TypeOrder", $"ns=2;s=Tags.Pad_print_esterna/pc_piede", typeof(short)));
 
-            ClientDataConfig.Add(new OpcObjectData("pcM3TestQuote", $"ns=2;s=Tags.Pad_print_esterna/pc_quota_longitudinale_in_test", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pcM3TestQuote", $"ns=2;s=Tags.Pad_print_esterna/pc_quota_longitudinale_in_test", typeof(float[])));
             ClientDataConfig.Add(new OpcObjectData("pcM3TestSpeed", $"ns=2;s=Tags.Pad_print_esterna/pc_velocita_in_test", typeof(short[])));
-            ClientDataConfig.Add(new OpcObjectData("pcM3TeachQuote", $"ns=2;s=Tags.Pad_print_esterna/pc_quota_longitudinale_in_teaching", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pcM3TeachQuote", $"ns=2;s=Tags.Pad_print_esterna/pc_quota_longitudinale_in_teaching", typeof(float[])));
             ClientDataConfig.Add(new OpcObjectData("pcM3TeachSpeed", $"ns=2;s=Tags.Pad_print_esterna/pc_velocita_in_teaching", typeof(short[])));
 
             ClientDataConfig.Add(new OpcObjectData("pcM3StartStop", $"ns=2;s=Tags.Pad_print_esterna/pc_start_stop", typeof(bool)));
