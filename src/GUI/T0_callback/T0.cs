@@ -80,95 +80,9 @@ namespace GUI
                 AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "verify program file");
             }
         }
-        private async void comboBoxM2PrgName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //todo: send recipe (todo: waiting mysql integration)
-            string keyValue = "pcM2Param1";
-            var sendResult = await ccService.Send(keyValue, short.Parse(textBoxM2Test.Text));
-            if (sendResult.OpcResult)
-            {
-                labelM2Param1Value.Text = textBoxM2Test.Text;
-            }
-            else
-            {
-                //todo manage log/user error
-            }
-
-            //send quote, speed
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-            {
-                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + comboBoxM2PrgName.Text + config.Extensions[0]);
-                if (objPoints != null)
-                {
-                    List<string> keys = new List<string>()
-                    {
-                        "pcM2AutoQuote",
-                        "pcM2AutoSpeed"
-                    };
-
-                    List<object> values = new List<object>()
-                    {
-                        new short[] {0, (short)objPoints.Points[0].Q1, (short)objPoints.Points[0].Q2, (short)objPoints.Points[0].Q3, (short)objPoints.Points[0].Q4},
-                        new short[] {0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
-                    };
-
-                    var sendResults = await ccService.Send(keys, values);
-                    bool allsent = true;
-                    foreach (var result in sendResults)
-                    {
-                        if (result.Value.OpcResult)
-                        {
-                        }
-                        else
-                        {
-                            AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintInt, "error sending " + result.Value.NodeString);
-                        }
-                        allsent = allsent & result.Value.OpcResult;
-                    }
-                    if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padprintInt, "program sent succesfully");                    
-                }
-            }
-            else
-            {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintInt, "verify program file");
-            }
-        }
+     
     
-        private async void comboBoxM4PrgName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //send recipe (todo: waiting mysql)
-            string keyValue = "pcM4Param1";
-            var sendResult = await ccService.Send(keyValue, short.Parse(textBoxM4Test.Text));
-            labelM4Param1Value.Text = textBoxM4Test.Text;
-
-            string keyToSend = "pcM4ProgramName";
-
-            var readResult = await ccService.Send(keyToSend, "");
-            if (readResult.OpcResult)
-            {
-
-            }
-            else
-            {
-
-            }
-
-            keyToSend = "pcM4ProgramName";
-
-            readResult = await ccService.Send(keyToSend, comboBoxM4PrgName.Text);
-            if (readResult.OpcResult)
-            {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padLaser, "program sent succesfully");
-            }
-            else
-            {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padLaser, "error sending " + readResult.NodeString);
-            }
-        }
+      
         private async void checkBoxM1Inclusion_CheckStateChanged(object sender, EventArgs e)
         {
             if (ccService.ClientIsConnected)

@@ -388,6 +388,45 @@ namespace GUI
                     readResult = await ccService.Read(keys);
                     UpdateOPCUAM1TimeoutAlarms(readResult["pcM1TimeoutAlarms"]);
                     UpdateOPCUAM1GeneralAlarms(readResult["pcM1GeneralAlarms"]);
+
+                    keys = new List<string>()
+                    {
+                        "pcM2TimeoutAlarms",
+                        "pcM2GeneralAlarms"
+                    };
+                    readResult = await ccService.Read(keys);
+                    UpdateOPCUAM2TimeoutAlarms(readResult["pcM2TimeoutAlarms"]);
+                    UpdateOPCUAM2GeneralAlarms(readResult["pcM2GeneralAlarms"]);
+
+                    keys = new List<string>()
+                    {
+                        "pcM4TimeoutAlarms",
+                        "pcM4GeneralAlarms"
+                    };
+
+                    readResult = await ccService.Read(keys);
+                    UpdateOPCUAM4TimeoutAlarms(readResult["pcM4TimeoutAlarms"]);
+                    UpdateOPCUAM4GeneralAlarms(readResult["pcM4GeneralAlarms"]);
+
+                    keys = new List<string>()
+                    {
+                        "pcM3TimeoutAlarms",
+                        "pcM3GeneralAlarms"
+                    };
+
+                    readResult = await ccService.Read(keys);
+                    UpdateOPCUAM3TimeoutAlarms(readResult["pcM3TimeoutAlarms"]);
+                    UpdateOPCUAM3GeneralAlarms(readResult["pcM3GeneralAlarms"]);
+
+                    keys = new List<string>()
+                    {
+                        "pcM5TimeoutAlarms",
+                        "pcM5GeneralAlarms"
+                    };
+
+                    readResult = await ccService.Read(keys);
+                    UpdateOPCUAM5TimeoutAlarms(readResult["pcM5TimeoutAlarms"]);
+                    UpdateOPCUAM5GeneralAlarms(readResult["pcM5GeneralAlarms"]);
                     #endregion
 
                     #region(* cycle counter *)
@@ -426,7 +465,63 @@ namespace GUI
                     WriteOnLabelAsync(readResultPLC["pcM1WorkingBeltState"], labelM1WorkingBeltState);
                     WriteOnLabelAsync(readResultPLC["pcM1ExitBeltState"], labelM1ExitBeltState);
 
+                    keys = new List<string>()
+                    {
+                        "pcM4State",                        
+                        "pcM4WorkingBeltState",
+                        "pcM4ExitBeltState"
+                    };
+
+                    readResultPLC = await ccService.Read(keys);
+                    WriteOnLabelAsync(readResultPLC["pcM4State"], labelM4State);                    
+                    WriteOnLabelAsync(readResultPLC["pcM4WorkingBeltState"], labelM4WorkingBeltState);
+                    WriteOnLabelAsync(readResultPLC["pcM4ExitBeltState"], labelM4ExitBeltState);
+
+                    keys = new List<string>()
+                    {
+                        "pcM3PadPrintExtState",
+                        "pcM3WorkingBeltState",
+                        "pcM3ExitBeltState"
+                    };
+
+                    readResultPLC = await ccService.Read(keys);
+                    WriteOnLabelAsync(readResultPLC["pcM3PadPrintExtState"], labelM3State);
+                    WriteOnLabelAsync(readResultPLC["pcM3WorkingBeltState"], labelM3WorkingBeltState);
+                    WriteOnLabelAsync(readResultPLC["pcM3ExitBeltState"], labelM3ExitBeltState);
+
+                    keys = new List<string>()
+                    {
+                        "pcM2PadPrintIntState",
+                        "pcM2WorkingBeltState",
+                        "pcM2ExitBeltState"
+                    };
+
+                    readResultPLC = await ccService.Read(keys);
+                    WriteOnLabelAsync(readResultPLC["pcM2PadPrintIntState"], labelM2State);
+                    WriteOnLabelAsync(readResultPLC["pcM2WorkingBeltState"], labelM2WorkingBeltState);
+                    WriteOnLabelAsync(readResultPLC["pcM2ExitBeltState"], labelM2ExitBeltState);
+
+                    keys = new List<string>()
+                    {
+                        "pcM5State",
+                        "pcM5TranslationBeltState",
+                        "pcM5ExitBelt1State",
+                        "pcM5ExitBelt2State",
+                        "pcM5ExitBelt3State"
+                    };
+
+                    readResultPLC = await ccService.Read(keys);
+                    WriteOnLabelAsync(readResultPLC["pcM5State"], labelM5State);
+                    WriteOnLabelAsync(readResultPLC["pcM5TranslationBeltState"], labelM5TranslatorBeltState);
+                    WriteOnLabelAsync(readResultPLC["pcM5ExitBelt1State"], labelM5ExitBelt1State);
+                    WriteOnLabelAsync(readResultPLC["pcM5ExitBelt2State"], labelM5ExitBelt2State);
+                    WriteOnLabelAsync(readResultPLC["pcM5ExitBelt3State"], labelM5ExitBelt3State);
+
                     #endregion
+
+
+
+
 
                     #region (* GUI *)
                     GUIWithOPCUAClientConnected();
@@ -950,6 +1045,133 @@ namespace GUI
                     
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
                     {
+                        Console.WriteLine("trimmer timeout start motore");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
+                    {
+                        Console.WriteLine("trimmer timeout homing motore");
+                    }
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
+                    {
+                        Console.WriteLine("trimmer timeout start posizionamento motore");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) &(i == alarms.Length - 4))
+                    {
+                        Console.WriteLine("trimmer timeout posizionamento motore");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) &(i == alarms.Length - 5))
+                    {
+                        Console.WriteLine("trimmer timeout slitta motore taglio");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) &(i == alarms.Length - 6))
+                    {
+                        Console.WriteLine("timeout pinza taglio stivale");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) &(i == alarms.Length - 7))
+                    {
+                        Console.WriteLine("trimmer timeout pinza molle");
+                    }
+
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
+                    {
+                        Console.WriteLine("trimmer timeout pinza blocco");
+                    }
+                }
+
+            }
+        }
+
+        public void UpdateOPCUAM2TimeoutAlarms(ClientResult cr)
+        {
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                //todo da gestire
+            }
+            else
+            {
+                short[] arrayShort = (short[])cr.Value;
+                string alarms = ToBinary(arrayShort[1]);
+                alarms = alarms.PadLeft(16, '0');
+                int i = 0;
+
+                for (i = alarms.Length - 1; i >= 0; i--)
+                {
+                    string exe = alarms.Substring(i, 1);
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
+                    {
+                        Console.WriteLine("padint timeout start motore");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
+                    {
+                        Console.WriteLine("padint timeout homing motore");
+                    }
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
+                    {
+                        Console.WriteLine("padint timeout start posizionamento motore");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
+                    {
+                        Console.WriteLine("padint timeout posizionamento motore");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
+                    {
+                        Console.WriteLine("padint timeout pinza bordo stivale");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
+                    {
+                        Console.WriteLine("padint timeout pinza grande stivale");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
+                    {
+                        Console.WriteLine("padint timeout pinza centraggio 1");
+                    }
+
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
+                    {
+                        Console.WriteLine("padint timeout pinza centraggio 2");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 9))
+                    {
+                        Console.WriteLine("padint timeout contrasto");
+                    }
+                }
+
+            }
+        }
+
+        public void UpdateOPCUAM4TimeoutAlarms(ClientResult cr)
+        {
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                //todo da gestire
+            }
+            else
+            {
+                short[] arrayShort = (short[])cr.Value;
+                string alarms = ToBinary(arrayShort[1]);
+                alarms = alarms.PadLeft(16, '0');
+                int i = 0;
+
+                for (i = alarms.Length - 1; i >= 0; i--)
+                {
+                    string exe = alarms.Substring(i, 1);
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
+                    {
                         Console.WriteLine("timeout start motore");
                     }
 
@@ -962,30 +1184,157 @@ namespace GUI
                         Console.WriteLine("timeout start posizionamento motore");
                     }
 
-                    if ((Int32.Parse(exe) == 1) &(i == alarms.Length - 4))
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
                     {
                         Console.WriteLine("timeout posizionamento motore");
                     }
 
-                    if ((Int32.Parse(exe) == 1) &(i == alarms.Length - 5))
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
                     {
-                        Console.WriteLine("timeout slitta motore taglio");
+                        Console.WriteLine("timeout pinza bordo stivale");
                     }
 
-                    if ((Int32.Parse(exe) == 1) &(i == alarms.Length - 6))
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
                     {
-                        Console.WriteLine("timeout pinza taglio stivale");
+                        Console.WriteLine("timeout pinza grande stivale");
                     }
 
-                    if ((Int32.Parse(exe) == 1) &(i == alarms.Length - 7))
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
                     {
-                        Console.WriteLine("timeout pinza molle");
+                        Console.WriteLine("timeout pinza centraggio 1");
                     }
 
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
                     {
-                        Console.WriteLine("timeout pinza blocco");
+                        Console.WriteLine("timeout pinza centraggio 2");
+                    }
+                }
+
+            }
+        }
+
+        public void UpdateOPCUAM3TimeoutAlarms(ClientResult cr)
+        {
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                //todo da gestire
+            }
+            else
+            {
+                short[] arrayShort = (short[])cr.Value;
+                string alarms = ToBinary(arrayShort[1]);
+                alarms = alarms.PadLeft(16, '0');
+                int i = 0;
+
+                for (i = alarms.Length - 1; i >= 0; i--)
+                {
+                    string exe = alarms.Substring(i, 1);
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
+                    {
+                        Console.WriteLine("padext timeout start motore");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
+                    {
+                        Console.WriteLine("padext timeout homing motore");
+                    }
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
+                    {
+                        Console.WriteLine("padext timeout start posizionamento motore");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
+                    {
+                        Console.WriteLine("padext timeout posizionamento motore");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
+                    {
+                        Console.WriteLine("padext timeout pinza bordo stivale");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
+                    {
+                        Console.WriteLine("padext timeout pinza grande stivale");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
+                    {
+                        Console.WriteLine("padext timeout pinza centraggio 1");
+                    }
+
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
+                    {
+                        Console.WriteLine("padext timeout pinza centraggio 2");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 9))
+                    {
+                        Console.WriteLine("padext timeout contrasto");
+                    }
+                }
+
+            }
+        }
+
+        public void UpdateOPCUAM5TimeoutAlarms(ClientResult cr)
+        {
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                //todo da gestire
+            }
+            else
+            {
+                short[] arrayShort = (short[])cr.Value;
+                string alarms = ToBinary(arrayShort[1]);
+                alarms = alarms.PadLeft(16, '0');
+                int i = 0;
+
+                for (i = alarms.Length - 1; i >= 0; i--)
+                {
+                    string exe = alarms.Substring(i, 1);
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
+                    {
+                        Console.WriteLine("manip timeout traslatore");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
+                    {
+                        Console.WriteLine("manip timeout avanzamento pinza");
+                    }
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
+                    {
+                        Console.WriteLine("manip timeout pinza");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
+                    {
+                        Console.WriteLine("manip timeout rotazione antioraria");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
+                    {
+                        Console.WriteLine("manip timeout rotazione oraria");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
+                    {
+                        Console.WriteLine("manip timeout estensione verticale 1");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
+                    {
+                        Console.WriteLine("manip timeout estensione verticale 2");
+                    }
+
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
+                    {
+                    //    Console.WriteLine("timeout pinza centraggio 2");
                     }
                 }
 
@@ -1011,21 +1360,21 @@ namespace GUI
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
                     {
-                        Console.WriteLine("motore nastro carico in allarme");
+                        Console.WriteLine("trimmer motore nastro carico in allarme");
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
                     {
-                        Console.WriteLine("motore nastro lavoro in allarme");
+                        Console.WriteLine("trimmer motore nastro lavoro in allarme");
                     }
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
                     {
-                        Console.WriteLine("servo in allarme");
+                        Console.WriteLine("trimmer servo in allarme");
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
                     {
-                        Console.WriteLine("dispositivo fpi4C disconnesso");
+                        Console.WriteLine("trimmer dispositivo fpi4C disconnesso");
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
@@ -1047,6 +1396,250 @@ namespace GUI
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
                     {
                         Console.WriteLine("");
+                    }
+                }
+
+            }
+        }
+
+        public void UpdateOPCUAM4GeneralAlarms(ClientResult cr)
+        {
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                //todo da gestire
+            }
+            else
+            {
+                short[] arrayShort = (short[])cr.Value;
+                string alarms = ToBinary(arrayShort[1]);
+                alarms = alarms.PadLeft(16, '0');
+                int i = 0;
+
+                for (i = alarms.Length - 1; i >= 0; i--)
+                {
+                    string exe = alarms.Substring(i, 1);
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
+                    {
+                        Console.WriteLine("motore nastro lavoro in allarme");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
+                    {
+                        Console.WriteLine("motore nastro uscita in allarme");
+                    }
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
+                    {
+                        Console.WriteLine("servo in allarme");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
+                    {
+                        Console.WriteLine("HMI disconnesso");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
+                    {
+                        Console.WriteLine("air pressure missing");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
+                    {
+                        //Console.WriteLine("");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
+                    {
+                        //Console.WriteLine("");
+                    }
+
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
+                    {
+                        //Console.WriteLine("");
+                    }
+                }
+
+            }
+        }
+
+        public void UpdateOPCUAM3GeneralAlarms(ClientResult cr)
+        {
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                //todo da gestire
+            }
+            else
+            {
+                short[] arrayShort = (short[])cr.Value;
+                string alarms = ToBinary(arrayShort[1]);
+                alarms = alarms.PadLeft(16, '0');
+                int i = 0;
+
+                for (i = alarms.Length - 1; i >= 0; i--)
+                {
+                    string exe = alarms.Substring(i, 1);
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
+                    {
+                        Console.WriteLine("motore nastro lavoro in allarme");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
+                    {
+                        Console.WriteLine("motore nastro uscita in allarme");
+                    }
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
+                    {
+                        Console.WriteLine("servo in allarme");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
+                    {
+                        Console.WriteLine("FP-i4C disconnesso");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
+                    {
+                        Console.WriteLine("air pressure missing");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
+                    {
+                        Console.WriteLine("inverter aspirazione forno");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
+                    {
+                        Console.WriteLine("resistenza controllo temperatura in allarme");
+                    }
+
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
+                    {
+                        Console.WriteLine("allarme padprint");
+                    }
+                }
+
+            }
+        }
+
+        public void UpdateOPCUAM2GeneralAlarms(ClientResult cr)
+        {
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                //todo da gestire
+            }
+            else
+            {
+                short[] arrayShort = (short[])cr.Value;
+                string alarms = ToBinary(arrayShort[1]);
+                alarms = alarms.PadLeft(16, '0');
+                int i = 0;
+
+                for (i = alarms.Length - 1; i >= 0; i--)
+                {
+                    string exe = alarms.Substring(i, 1);
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
+                    {
+                        Console.WriteLine("padint motore nastro lavoro in allarme");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
+                    {
+                        Console.WriteLine("padint motore nastro uscita in allarme");
+                    }
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
+                    {
+                        Console.WriteLine("padint servo in allarme");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
+                    {
+                        Console.WriteLine("padint FP-i4C disconnesso");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
+                    {
+                        Console.WriteLine("padint air pressure missing");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
+                    {
+                        Console.WriteLine("padint allarme padprint");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
+                    {
+                        
+                    }
+
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
+                    {
+                        
+                    }
+                }
+
+            }
+        }
+
+        public void UpdateOPCUAM5GeneralAlarms(ClientResult cr)
+        {
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                //todo da gestire
+            }
+            else
+            {
+                short[] arrayShort = (short[])cr.Value;
+                string alarms = ToBinary(arrayShort[1]);
+                alarms = alarms.PadLeft(16, '0');
+                int i = 0;
+
+                for (i = alarms.Length - 1; i >= 0; i--)
+                {
+                    string exe = alarms.Substring(i, 1);
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
+                    {
+                        Console.WriteLine("manip motore nastro traslazione in allarme");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
+                    {
+                        Console.WriteLine("manip motore nastro uscita uscita 1 in allarme");
+                    }
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
+                    {
+                        Console.WriteLine("manip motore nastro uscita 2 in allarme");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
+                    {
+                        Console.WriteLine("manip motore nastro uscita 3 in allarme");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
+                    {
+                        Console.WriteLine("manip dispositivo opc disconnesso");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
+                    {
+                        Console.WriteLine("manip air pressure missing");
+                    }
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
+                    {
+                        //Console.WriteLine("");
+                    }
+
+
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
+                    {
+                        //Console.WriteLine("");
                     }
                 }
 
@@ -1412,7 +2005,7 @@ namespace GUI
             }
         }
 
-        public async void OPCUAM2TeachPckSend(short pointID, short[] pointQuote, short[] pointSpeed, bool[] pointReg)
+        public async void OPCUAM2TeachPckSend(short pointID, float[] pointQuote, short[] pointSpeed, bool[] pointReg)
         {
             if (ccService != null)
             {
@@ -1455,7 +2048,7 @@ namespace GUI
             }
         }
 
-        public async void OPCUAM3TeachPckSend(short pointID, short[] pointQuote, short[] pointSpeed, bool[] pointReg)
+        public async void OPCUAM3TeachPckSend(short pointID, float[] pointQuote, short[] pointSpeed, bool[] pointReg)
         {
             List<string> keys = new List<string>();
             keys.Add("pcM3TeachPointID");
@@ -1482,7 +2075,7 @@ namespace GUI
             }
         }
 
-        public async void OPCUAM2TestPckSend(short[] pointQuote, short[] pointSpeed)
+        public async void OPCUAM2TestPckSend(float[] pointQuote, short[] pointSpeed)
         {
             List<string> keys = new List<string>();
             keys.Add("pcM2TestSpeed");
@@ -1528,7 +2121,7 @@ namespace GUI
             }
         }
 
-        public async void OPCUAM3TestPckSend(short[] pointQuote, short[] pointSpeed)
+        public async void OPCUAM3TestPckSend(float[] pointQuote, short[] pointSpeed)
         {
             List<string> keys = new List<string>();
             keys.Add("pcM3TestSpeed");

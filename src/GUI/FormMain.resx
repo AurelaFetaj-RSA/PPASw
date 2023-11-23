@@ -301,6 +301,491 @@
   <data name="&gt;&gt;tabPageHelp.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="lbButtonM5StartStopOutBelt3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>620, 225</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 56</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt3.TabIndex" type="System.Int32, mscorlib">
+    <value>140</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt3.Name" xml:space="preserve">
+    <value>lbButtonM5StartStopOutBelt3</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt3.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt3.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>619, 159</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 56</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt2.TabIndex" type="System.Int32, mscorlib">
+    <value>139</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt2.Name" xml:space="preserve">
+    <value>lbButtonM5StartStopOutBelt2</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt2.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt2.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>619, 92</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 56</value>
+  </data>
+  <data name="lbButtonM5StartStopOutBelt1.TabIndex" type="System.Int32, mscorlib">
+    <value>138</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt1.Name" xml:space="preserve">
+    <value>lbButtonM5StartStopOutBelt1</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt1.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt1.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopOutBelt1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="lbButtonM5StartStopTranslBelt.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 39.75pt, style=Bold</value>
+  </data>
+  <data name="lbButtonM5StartStopTranslBelt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>619, 19</value>
+  </data>
+  <data name="lbButtonM5StartStopTranslBelt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 56</value>
+  </data>
+  <data name="lbButtonM5StartStopTranslBelt.TabIndex" type="System.Int32, mscorlib">
+    <value>137</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopTranslBelt.Name" xml:space="preserve">
+    <value>lbButtonM5StartStopTranslBelt</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopTranslBelt.Type" xml:space="preserve">
+    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopTranslBelt.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;lbButtonM5StartStopTranslBelt.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonM5V2ExtBwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5V2ExtBwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>576, 300</value>
+  </data>
+  <data name="buttonM5V2ExtBwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5V2ExtBwd.TabIndex" type="System.Int32, mscorlib">
+    <value>136</value>
+  </data>
+  <data name="buttonM5V2ExtBwd.Text" xml:space="preserve">
+    <value>ext. 2 vertical down</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V2ExtBwd.Name" xml:space="preserve">
+    <value>buttonM5V2ExtBwd</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V2ExtBwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V2ExtBwd.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V2ExtBwd.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="buttonM5V2ExtFwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5V2ExtFwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>386, 300</value>
+  </data>
+  <data name="buttonM5V2ExtFwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5V2ExtFwd.TabIndex" type="System.Int32, mscorlib">
+    <value>135</value>
+  </data>
+  <data name="buttonM5V2ExtFwd.Text" xml:space="preserve">
+    <value>ext. 2 vertical up</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V2ExtFwd.Name" xml:space="preserve">
+    <value>buttonM5V2ExtFwd</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V2ExtFwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V2ExtFwd.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V2ExtFwd.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="buttonM5V1ExtBwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5V1ExtBwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 300</value>
+  </data>
+  <data name="buttonM5V1ExtBwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5V1ExtBwd.TabIndex" type="System.Int32, mscorlib">
+    <value>134</value>
+  </data>
+  <data name="buttonM5V1ExtBwd.Text" xml:space="preserve">
+    <value>ext. 1 vertical down</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V1ExtBwd.Name" xml:space="preserve">
+    <value>buttonM5V1ExtBwd</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V1ExtBwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V1ExtBwd.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V1ExtBwd.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="buttonM5V1ExtFwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5V1ExtFwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 300</value>
+  </data>
+  <data name="buttonM5V1ExtFwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5V1ExtFwd.TabIndex" type="System.Int32, mscorlib">
+    <value>133</value>
+  </data>
+  <data name="buttonM5V1ExtFwd.Text" xml:space="preserve">
+    <value>ext. 1 vertical up</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V1ExtFwd.Name" xml:space="preserve">
+    <value>buttonM5V1ExtFwd</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V1ExtFwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V1ExtFwd.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5V1ExtFwd.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="buttonM5NoRotation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5NoRotation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>386, 234</value>
+  </data>
+  <data name="buttonM5NoRotation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5NoRotation.TabIndex" type="System.Int32, mscorlib">
+    <value>132</value>
+  </data>
+  <data name="buttonM5NoRotation.Text" xml:space="preserve">
+    <value>no rotation</value>
+  </data>
+  <data name="&gt;&gt;buttonM5NoRotation.Name" xml:space="preserve">
+    <value>buttonM5NoRotation</value>
+  </data>
+  <data name="&gt;&gt;buttonM5NoRotation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5NoRotation.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5NoRotation.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="buttonM5CCWRotation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5CCWRotation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 230</value>
+  </data>
+  <data name="buttonM5CCWRotation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5CCWRotation.TabIndex" type="System.Int32, mscorlib">
+    <value>131</value>
+  </data>
+  <data name="buttonM5CCWRotation.Text" xml:space="preserve">
+    <value>CCW rotation</value>
+  </data>
+  <data name="&gt;&gt;buttonM5CCWRotation.Name" xml:space="preserve">
+    <value>buttonM5CCWRotation</value>
+  </data>
+  <data name="&gt;&gt;buttonM5CCWRotation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5CCWRotation.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5CCWRotation.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="buttonM5CWRotation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5CWRotation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 230</value>
+  </data>
+  <data name="buttonM5CWRotation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5CWRotation.TabIndex" type="System.Int32, mscorlib">
+    <value>130</value>
+  </data>
+  <data name="buttonM5CWRotation.Text" xml:space="preserve">
+    <value>CW rotation</value>
+  </data>
+  <data name="&gt;&gt;buttonM5CWRotation.Name" xml:space="preserve">
+    <value>buttonM5CWRotation</value>
+  </data>
+  <data name="&gt;&gt;buttonM5CWRotation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5CWRotation.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5CWRotation.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="buttonM5ClampClosing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5ClampClosing.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 162</value>
+  </data>
+  <data name="buttonM5ClampClosing.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5ClampClosing.TabIndex" type="System.Int32, mscorlib">
+    <value>129</value>
+  </data>
+  <data name="buttonM5ClampClosing.Text" xml:space="preserve">
+    <value>clamp closing</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampClosing.Name" xml:space="preserve">
+    <value>buttonM5ClampClosing</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampClosing.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampClosing.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampClosing.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="buttonM5ClampOpening.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5ClampOpening.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 162</value>
+  </data>
+  <data name="buttonM5ClampOpening.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5ClampOpening.TabIndex" type="System.Int32, mscorlib">
+    <value>128</value>
+  </data>
+  <data name="buttonM5ClampOpening.Text" xml:space="preserve">
+    <value>clamp opening</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampOpening.Name" xml:space="preserve">
+    <value>buttonM5ClampOpening</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampOpening.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampOpening.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampOpening.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="buttonM5ClampBwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5ClampBwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 89</value>
+  </data>
+  <data name="buttonM5ClampBwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5ClampBwd.TabIndex" type="System.Int32, mscorlib">
+    <value>127</value>
+  </data>
+  <data name="buttonM5ClampBwd.Text" xml:space="preserve">
+    <value>clamp backward</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampBwd.Name" xml:space="preserve">
+    <value>buttonM5ClampBwd</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampBwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampBwd.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampBwd.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="buttonM5ClampFwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5ClampFwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 89</value>
+  </data>
+  <data name="buttonM5ClampFwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5ClampFwd.TabIndex" type="System.Int32, mscorlib">
+    <value>126</value>
+  </data>
+  <data name="buttonM5ClampFwd.Text" xml:space="preserve">
+    <value>clamp forward</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampFwd.Name" xml:space="preserve">
+    <value>buttonM5ClampFwd</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampFwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampFwd.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5ClampFwd.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="buttonM5TranslatorBwd.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM5TranslatorBwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5TranslatorBwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 19</value>
+  </data>
+  <data name="buttonM5TranslatorBwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5TranslatorBwd.TabIndex" type="System.Int32, mscorlib">
+    <value>125</value>
+  </data>
+  <data name="buttonM5TranslatorBwd.Text" xml:space="preserve">
+    <value>translator backward</value>
+  </data>
+  <data name="&gt;&gt;buttonM5TranslatorBwd.Name" xml:space="preserve">
+    <value>buttonM5TranslatorBwd</value>
+  </data>
+  <data name="&gt;&gt;buttonM5TranslatorBwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5TranslatorBwd.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5TranslatorBwd.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="buttonM5TranslatorFwd.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Verdana, 9.75pt</value>
+  </data>
+  <data name="buttonM5TranslatorFwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="buttonM5TranslatorFwd.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 19</value>
+  </data>
+  <data name="buttonM5TranslatorFwd.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 53</value>
+  </data>
+  <data name="buttonM5TranslatorFwd.TabIndex" type="System.Int32, mscorlib">
+    <value>124</value>
+  </data>
+  <data name="buttonM5TranslatorFwd.Text" xml:space="preserve">
+    <value>translator forward</value>
+  </data>
+  <data name="&gt;&gt;buttonM5TranslatorFwd.Name" xml:space="preserve">
+    <value>buttonM5TranslatorFwd</value>
+  </data>
+  <data name="&gt;&gt;buttonM5TranslatorFwd.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonM5TranslatorFwd.Parent" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;buttonM5TranslatorFwd.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="tabPageT5M5_1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 3</value>
+  </data>
+  <data name="tabPageT5M5_1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>806, 634</value>
+  </data>
+  <data name="tabPageT5M5_1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPageT5M5_1.Text" xml:space="preserve">
+    <value>manual</value>
+  </data>
+  <data name="tabPageT5M5_1.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQDJwtUEAAAAA
+        /brLQQs=
+</value>
+  </data>
+  <data name="&gt;&gt;tabPageT5M5_1.Name" xml:space="preserve">
+    <value>tabPageT5M5_1</value>
+  </data>
+  <data name="&gt;&gt;tabPageT5M5_1.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabPageT5M5_1.Parent" xml:space="preserve">
+    <value>tabControlT5</value>
+  </data>
+  <data name="&gt;&gt;tabPageT5M5_1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="lbLed1020M5.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1195,7 +1680,7 @@
     <value>tabControlT5</value>
   </data>
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
     <value>90, 3</value>
@@ -1227,7 +1712,7 @@
     <value>tabControlT5</value>
   </data>
   <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
     <value>90, 3</value>
@@ -1259,491 +1744,6 @@
     <value>tabControlT5</value>
   </data>
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbButtonM5StartStopOutBelt3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 39.75pt, style=Bold</value>
-  </data>
-  <data name="lbButtonM5StartStopOutBelt3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>620, 225</value>
-  </data>
-  <data name="lbButtonM5StartStopOutBelt3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 56</value>
-  </data>
-  <data name="lbButtonM5StartStopOutBelt3.TabIndex" type="System.Int32, mscorlib">
-    <value>140</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM5StartStopOutBelt3.Name" xml:space="preserve">
-    <value>lbButtonM5StartStopOutBelt3</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM5StartStopOutBelt3.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM5StartStopOutBelt3.Parent" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM5StartStopOutBelt3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="lbButtonM5StartStopOutBelt2.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 39.75pt, style=Bold</value>
-  </data>
-  <data name="lbButtonM5StartStopOutBelt2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 159</value>
-  </data>
-  <data name="lbButtonM5StartStopOutBelt2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 56</value>
-  </data>
-  <data name="lbButtonM5StartStopOutBelt2.TabIndex" type="System.Int32, mscorlib">
-    <value>139</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM5StartStopOutBelt2.Name" xml:space="preserve">
-    <value>lbButtonM5StartStopOutBelt2</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM5StartStopOutBelt2.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM5StartStopOutBelt2.Parent" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM5StartStopOutBelt2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lbButtonM5StartStopOutBelt1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 39.75pt, style=Bold</value>
-  </data>
-  <data name="lbButtonM5StartStopOutBelt1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 92</value>
-  </data>
-  <data name="lbButtonM5StartStopOutBelt1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 56</value>
-  </data>
-  <data name="lbButtonM5StartStopOutBelt1.TabIndex" type="System.Int32, mscorlib">
-    <value>138</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM5StartStopOutBelt1.Name" xml:space="preserve">
-    <value>lbButtonM5StartStopOutBelt1</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM5StartStopOutBelt1.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM5StartStopOutBelt1.Parent" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM5StartStopOutBelt1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="lbButtonM5StartStopTranslBelt.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 39.75pt, style=Bold</value>
-  </data>
-  <data name="lbButtonM5StartStopTranslBelt.Location" type="System.Drawing.Point, System.Drawing">
-    <value>619, 19</value>
-  </data>
-  <data name="lbButtonM5StartStopTranslBelt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 56</value>
-  </data>
-  <data name="lbButtonM5StartStopTranslBelt.TabIndex" type="System.Int32, mscorlib">
-    <value>137</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM5StartStopTranslBelt.Name" xml:space="preserve">
-    <value>lbButtonM5StartStopTranslBelt</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM5StartStopTranslBelt.Type" xml:space="preserve">
-    <value>LBSoft.IndustrialCtrls.Buttons.LBButton, LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM5StartStopTranslBelt.Parent" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;lbButtonM5StartStopTranslBelt.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="buttonM5V2ExtBwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM5V2ExtBwd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>576, 300</value>
-  </data>
-  <data name="buttonM5V2ExtBwd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="buttonM5V2ExtBwd.TabIndex" type="System.Int32, mscorlib">
-    <value>136</value>
-  </data>
-  <data name="buttonM5V2ExtBwd.Text" xml:space="preserve">
-    <value>ext. 2 vertical down</value>
-  </data>
-  <data name="&gt;&gt;buttonM5V2ExtBwd.Name" xml:space="preserve">
-    <value>buttonM5V2ExtBwd</value>
-  </data>
-  <data name="&gt;&gt;buttonM5V2ExtBwd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM5V2ExtBwd.Parent" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM5V2ExtBwd.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="buttonM5V2ExtFwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM5V2ExtFwd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>386, 300</value>
-  </data>
-  <data name="buttonM5V2ExtFwd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="buttonM5V2ExtFwd.TabIndex" type="System.Int32, mscorlib">
-    <value>135</value>
-  </data>
-  <data name="buttonM5V2ExtFwd.Text" xml:space="preserve">
-    <value>ext. 2 vertical up</value>
-  </data>
-  <data name="&gt;&gt;buttonM5V2ExtFwd.Name" xml:space="preserve">
-    <value>buttonM5V2ExtFwd</value>
-  </data>
-  <data name="&gt;&gt;buttonM5V2ExtFwd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM5V2ExtFwd.Parent" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM5V2ExtFwd.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="buttonM5V1ExtBwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM5V1ExtBwd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>198, 300</value>
-  </data>
-  <data name="buttonM5V1ExtBwd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="buttonM5V1ExtBwd.TabIndex" type="System.Int32, mscorlib">
-    <value>134</value>
-  </data>
-  <data name="buttonM5V1ExtBwd.Text" xml:space="preserve">
-    <value>ext. 1 vertical down</value>
-  </data>
-  <data name="&gt;&gt;buttonM5V1ExtBwd.Name" xml:space="preserve">
-    <value>buttonM5V1ExtBwd</value>
-  </data>
-  <data name="&gt;&gt;buttonM5V1ExtBwd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM5V1ExtBwd.Parent" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM5V1ExtBwd.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="buttonM5V1ExtFwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM5V1ExtFwd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 300</value>
-  </data>
-  <data name="buttonM5V1ExtFwd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="buttonM5V1ExtFwd.TabIndex" type="System.Int32, mscorlib">
-    <value>133</value>
-  </data>
-  <data name="buttonM5V1ExtFwd.Text" xml:space="preserve">
-    <value>ext. 1 vertical up</value>
-  </data>
-  <data name="&gt;&gt;buttonM5V1ExtFwd.Name" xml:space="preserve">
-    <value>buttonM5V1ExtFwd</value>
-  </data>
-  <data name="&gt;&gt;buttonM5V1ExtFwd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM5V1ExtFwd.Parent" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM5V1ExtFwd.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="buttonM5NoRotation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM5NoRotation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>386, 234</value>
-  </data>
-  <data name="buttonM5NoRotation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="buttonM5NoRotation.TabIndex" type="System.Int32, mscorlib">
-    <value>132</value>
-  </data>
-  <data name="buttonM5NoRotation.Text" xml:space="preserve">
-    <value>no rotation</value>
-  </data>
-  <data name="&gt;&gt;buttonM5NoRotation.Name" xml:space="preserve">
-    <value>buttonM5NoRotation</value>
-  </data>
-  <data name="&gt;&gt;buttonM5NoRotation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM5NoRotation.Parent" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM5NoRotation.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="buttonM5CCWRotation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM5CCWRotation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>199, 230</value>
-  </data>
-  <data name="buttonM5CCWRotation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="buttonM5CCWRotation.TabIndex" type="System.Int32, mscorlib">
-    <value>131</value>
-  </data>
-  <data name="buttonM5CCWRotation.Text" xml:space="preserve">
-    <value>CCW rotation</value>
-  </data>
-  <data name="&gt;&gt;buttonM5CCWRotation.Name" xml:space="preserve">
-    <value>buttonM5CCWRotation</value>
-  </data>
-  <data name="&gt;&gt;buttonM5CCWRotation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM5CCWRotation.Parent" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM5CCWRotation.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="buttonM5CWRotation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM5CWRotation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 230</value>
-  </data>
-  <data name="buttonM5CWRotation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="buttonM5CWRotation.TabIndex" type="System.Int32, mscorlib">
-    <value>130</value>
-  </data>
-  <data name="buttonM5CWRotation.Text" xml:space="preserve">
-    <value>CW rotation</value>
-  </data>
-  <data name="&gt;&gt;buttonM5CWRotation.Name" xml:space="preserve">
-    <value>buttonM5CWRotation</value>
-  </data>
-  <data name="&gt;&gt;buttonM5CWRotation.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM5CWRotation.Parent" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM5CWRotation.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="buttonM5ClampClosing.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM5ClampClosing.Location" type="System.Drawing.Point, System.Drawing">
-    <value>199, 162</value>
-  </data>
-  <data name="buttonM5ClampClosing.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="buttonM5ClampClosing.TabIndex" type="System.Int32, mscorlib">
-    <value>129</value>
-  </data>
-  <data name="buttonM5ClampClosing.Text" xml:space="preserve">
-    <value>clamp closing</value>
-  </data>
-  <data name="&gt;&gt;buttonM5ClampClosing.Name" xml:space="preserve">
-    <value>buttonM5ClampClosing</value>
-  </data>
-  <data name="&gt;&gt;buttonM5ClampClosing.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM5ClampClosing.Parent" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM5ClampClosing.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="buttonM5ClampOpening.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM5ClampOpening.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 162</value>
-  </data>
-  <data name="buttonM5ClampOpening.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="buttonM5ClampOpening.TabIndex" type="System.Int32, mscorlib">
-    <value>128</value>
-  </data>
-  <data name="buttonM5ClampOpening.Text" xml:space="preserve">
-    <value>clamp opening</value>
-  </data>
-  <data name="&gt;&gt;buttonM5ClampOpening.Name" xml:space="preserve">
-    <value>buttonM5ClampOpening</value>
-  </data>
-  <data name="&gt;&gt;buttonM5ClampOpening.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM5ClampOpening.Parent" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM5ClampOpening.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="buttonM5ClampBwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM5ClampBwd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>199, 89</value>
-  </data>
-  <data name="buttonM5ClampBwd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="buttonM5ClampBwd.TabIndex" type="System.Int32, mscorlib">
-    <value>127</value>
-  </data>
-  <data name="buttonM5ClampBwd.Text" xml:space="preserve">
-    <value>clamp backward</value>
-  </data>
-  <data name="&gt;&gt;buttonM5ClampBwd.Name" xml:space="preserve">
-    <value>buttonM5ClampBwd</value>
-  </data>
-  <data name="&gt;&gt;buttonM5ClampBwd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM5ClampBwd.Parent" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM5ClampBwd.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="buttonM5ClampFwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM5ClampFwd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 89</value>
-  </data>
-  <data name="buttonM5ClampFwd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="buttonM5ClampFwd.TabIndex" type="System.Int32, mscorlib">
-    <value>126</value>
-  </data>
-  <data name="buttonM5ClampFwd.Text" xml:space="preserve">
-    <value>clamp forward</value>
-  </data>
-  <data name="&gt;&gt;buttonM5ClampFwd.Name" xml:space="preserve">
-    <value>buttonM5ClampFwd</value>
-  </data>
-  <data name="&gt;&gt;buttonM5ClampFwd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM5ClampFwd.Parent" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM5ClampFwd.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="buttonM5TranslatorBwd.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="buttonM5TranslatorBwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM5TranslatorBwd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>199, 19</value>
-  </data>
-  <data name="buttonM5TranslatorBwd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="buttonM5TranslatorBwd.TabIndex" type="System.Int32, mscorlib">
-    <value>125</value>
-  </data>
-  <data name="buttonM5TranslatorBwd.Text" xml:space="preserve">
-    <value>translator backward</value>
-  </data>
-  <data name="&gt;&gt;buttonM5TranslatorBwd.Name" xml:space="preserve">
-    <value>buttonM5TranslatorBwd</value>
-  </data>
-  <data name="&gt;&gt;buttonM5TranslatorBwd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM5TranslatorBwd.Parent" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM5TranslatorBwd.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="buttonM5TranslatorFwd.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 9.75pt</value>
-  </data>
-  <data name="buttonM5TranslatorFwd.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="buttonM5TranslatorFwd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 19</value>
-  </data>
-  <data name="buttonM5TranslatorFwd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>161, 53</value>
-  </data>
-  <data name="buttonM5TranslatorFwd.TabIndex" type="System.Int32, mscorlib">
-    <value>124</value>
-  </data>
-  <data name="buttonM5TranslatorFwd.Text" xml:space="preserve">
-    <value>translator forward</value>
-  </data>
-  <data name="&gt;&gt;buttonM5TranslatorFwd.Name" xml:space="preserve">
-    <value>buttonM5TranslatorFwd</value>
-  </data>
-  <data name="&gt;&gt;buttonM5TranslatorFwd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;buttonM5TranslatorFwd.Parent" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;buttonM5TranslatorFwd.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="tabPageT5M5_1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 3</value>
-  </data>
-  <data name="tabPageT5M5_1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>806, 634</value>
-  </data>
-  <data name="tabPageT5M5_1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tabPageT5M5_1.Text" xml:space="preserve">
-    <value>manual</value>
-  </data>
-  <data name="tabPageT5M5_1.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
-        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQDJwtUEAAAAA
-        /brLQQs=
-</value>
-  </data>
-  <data name="&gt;&gt;tabPageT5M5_1.Name" xml:space="preserve">
-    <value>tabPageT5M5_1</value>
-  </data>
-  <data name="&gt;&gt;tabPageT5M5_1.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
-  </data>
-  <data name="&gt;&gt;tabPageT5M5_1.Parent" xml:space="preserve">
-    <value>tabControlT5</value>
-  </data>
-  <data name="&gt;&gt;tabPageT5M5_1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="tabControlT5.Location" type="System.Drawing.Point, System.Drawing">
@@ -11977,7 +11977,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACW
-        JQAAAk1TRnQBSQFMAgEBBAEAAdABAAHQAQABYAEAAWABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        JQAAAk1TRnQBSQFMAgEBBAEAAdgBAAHYAQABYAEAAWABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAEBAgABwAMAAQEBAAEIBgABIAEBFwABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHA
         AdwBwAEAAfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANC
         AQADOQEAAYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/
@@ -12652,7 +12652,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAs
-        DgAAAk1TRnQBSQFMAgEBAwEAAcABAAHAAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DgAAAk1TRnQBSQFMAgEBAwEAAcgBAAHIAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAMAASADAAEBAQABCAYAARAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -14995,7 +14995,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAs
-        YwAAAk1TRnQBSQFMAgEBBAEAAfABAAHwAQABUAEAAVABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        YwAAAk1TRnQBSQFMAgEBBAEAAfgBAAH4AQABUAEAAVABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAEBAgABoAMAAQEBAAEIBgAByBgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
         AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
         AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
@@ -15429,7 +15429,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        EQAAAk1TRnQBSQFMAgEBBQEAAdABAAHQAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        EQAAAk1TRnQBSQFMAgEBBQEAAdgBAAHYAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAMAAUADAAEBAQABCAYAASAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA

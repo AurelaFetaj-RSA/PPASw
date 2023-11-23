@@ -1503,10 +1503,10 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
 
-                int p1 = Convert.ToInt32(dataGridViewM3TeachPoints[1, 0].Value);
-                int p2 = Convert.ToInt32(dataGridViewM3TeachPoints[1, 1].Value);
-                int p3 = Convert.ToInt32(dataGridViewM3TeachPoints[1, 2].Value);
-                int p4 = Convert.ToInt32(dataGridViewM3TeachPoints[1, 3].Value);
+                float p1 = float.Parse(dataGridViewM3TeachPoints[1, 0].Value.ToString());
+                float p2 = float.Parse(dataGridViewM3TeachPoints[1, 1].Value.ToString());
+                float p3 = float.Parse(dataGridViewM3TeachPoints[1, 2].Value.ToString());
+                float p4 = float.Parse(dataGridViewM3TeachPoints[1, 3].Value.ToString());
                 int s1 = Convert.ToInt32(dataGridViewM3TeachPoints[2, 0].Value);
                 int s2 = Convert.ToInt32(dataGridViewM3TeachPoints[2, 1].Value);
                 int s3 = Convert.ToInt32(dataGridViewM3TeachPoints[2, 2].Value);

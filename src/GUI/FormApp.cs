@@ -674,6 +674,137 @@ namespace GUI
             }
         }
 
+        private async void comboBoxM4PrgName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //get model name
+            string prgName = comboBoxM4PrgName.Text;
+            string modelName = prgName.Substring(2, 4);
+
+            //check model name
+            if (modelName == "")
+            {
+                //program name with incorrect format
+                //todo add message to the operator
+                return;
+            }
+
+            //get data from DB
+            MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+            if ((recs.Error == 0) & (recs.Result.Count != 0))
+            {
+                //send recipe
+                string keyValue = "pcM4Param1";
+                var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m4_param1.ToString()));
+                labelM4Param1Value.Text = recs.Result[0].m4_param1.ToString();
+
+                string keyToSend = "pcM4ProgramName";
+
+                var readResult = await ccService.Send(keyToSend, "");
+                if (readResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+
+                keyToSend = "pcM4ProgramName";
+
+                readResult = await ccService.Send(keyToSend, comboBoxM4PrgName.Text);
+                if (readResult.OpcResult)
+                {
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padLaser, "program sent succesfully");
+                }
+                else
+                {
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padLaser, "error sending " + readResult.NodeString);
+                }
+            }
+            else
+            {
+                //db error manage
+            }
+        }
+
+        private async void comboBoxM2PrgName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //get model name
+            string prgName = comboBoxM2PrgName.Text;
+            string modelName = prgName.Substring(2, 4);
+
+            //check model name
+            if (modelName == "")
+            {
+                //program name with incorrect format
+                //todo add message to the operator
+                return;
+            }
+
+            //get data from DB
+            MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+            if ((recs.Error == 0) & (recs.Result.Count != 0))
+            {
+
+
+                //todo: send recipe (todo: waiting mysql integration)
+                string keyValue = "pcM2Param1";
+                var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m2_param1.ToString()));
+                if (sendResult.OpcResult)
+                {
+                    labelM2Param1Value.Text = recs.Result[0].m2_param1.ToString();
+                }
+                else
+                {
+                    //todo manage log/user error
+                }
+
+                //send quote, speed
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                {
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                    ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                    objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + comboBoxM2PrgName.Text + config.Extensions[0]);
+                    if (objPoints != null)
+                    {
+                        List<string> keys = new List<string>()
+                    {
+                        "pcM2AutoQuote",
+                        "pcM2AutoSpeed"
+                    };
+
+                        List<object> values = new List<object>()
+                    {
+                        new float[] {0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
+                        new short[] {0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                    };
+
+                        var sendResults = await ccService.Send(keys, values);
+                        bool allsent = true;
+                        foreach (var result in sendResults)
+                        {
+                            if (result.Value.OpcResult)
+                            {
+                            }
+                            else
+                            {
+                                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintInt, "error sending " + result.Value.NodeString);
+                            }
+                            allsent = allsent & result.Value.OpcResult;
+                        }
+                        if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padprintInt, "program sent succesfully");
+                    }
+                }
+                else
+                {
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintInt, "verify program file");
+                }
+            }
+        }
         private void dataGridViewM2TeachPoints_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
 
@@ -745,14 +876,14 @@ namespace GUI
         private void M3TestSendProgram()
         {
             int i = 0;
-            short[] quote = new short[5];
+            float[] quote = new float[5];
             short[] speed = new short[5];
 
             try
             {
                 for (i = 0; i <= dataGridViewM2TestPoints.RowCount - 1; i++)
                 {
-                    quote[i + 1] = short.Parse(dataGridViewM3TestPoints[1, i].Value.ToString());
+                    quote[i + 1] = float.Parse(dataGridViewM3TestPoints[1, i].Value.ToString());
                     speed[i + 1] = short.Parse(dataGridViewM3TestPoints[2, i].Value.ToString());
                 }
 
@@ -767,14 +898,14 @@ namespace GUI
         private void M2TestSendProgram()
         {
             int i = 0;
-            short[] quote = new short[5];
+            float[] quote = new float[5];
             short[] speed = new short[5];
 
             try
             {
                 for (i = 0; i <= dataGridViewM2TestPoints.RowCount - 1; i++)
                 {
-                    quote[i + 1] = short.Parse(dataGridViewM2TestPoints[1, i].Value.ToString());
+                    quote[i + 1] = float.Parse(dataGridViewM2TestPoints[1, i].Value.ToString());
                     speed[i + 1] = short.Parse(dataGridViewM2TestPoints[2, i].Value.ToString());
                 }
 
@@ -887,8 +1018,21 @@ namespace GUI
             //send quote/speed
             M3TestSendProgram();
 
+
             //send start command
-            string keyToSend = "pcM3StartTest";
+            string keyToSend = "pcM3TestType";
+
+            if (radioButtonFootOrderOpt1Test.Checked)
+            {
+                var sendResult1 = await ccService.Send(keyToSend, 1);
+            }
+            else
+            {
+                var sendResult1 = await ccService.Send(keyToSend, 2);
+            }
+
+            //send start command
+            keyToSend = "pcM3StartTest";
             var sendResult = await ccService.Send(keyToSend, true);
             if (sendResult.OpcResult)
             {
@@ -954,7 +1098,80 @@ namespace GUI
             }
         }
 
-        private void buttonMUpdateRecipe_Click(object sender, EventArgs e)
+        private async void radioButtonFootOrderOpt1Test_CheckedChanged(object sender, EventArgs e)
+        {
+            
+                           //send start command
+            string keyToSend = "pcM3TestType";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else xDialog.MsgBox.Show("offline", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+        }
+
+        private async void radioButtonFootOrderOpt2Test_CheckedChanged(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM3TestType";
+
+            if (radioButtonFootOrderOpt2Test.Checked)
+            {
+                var sendResult = await ccService.Send(keyToSend, 1);
+            }
+            else
+            {
+                var sendResult = await ccService.Send(keyToSend, 2);
+            }
+        }
+
+        private async void button1_Click_1(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM1ResetCycle";
+            var sendResult = await ccService.Send(keyToSend, 0);
+            keyToSend = "pcM2ResetCycle";
+            sendResult = await ccService.Send(keyToSend, 0);
+            keyToSend = "pcM3ResetCycle";
+            sendResult = await ccService.Send(keyToSend, 0);
+            keyToSend = "pcM4ResetCycle";
+            sendResult = await ccService.Send(keyToSend, 0);
+            keyToSend = "pcM5ResetCycle";
+            sendResult = await ccService.Send(keyToSend, 0);
+            keyToSend = "pcM6ResetCycle";
+            sendResult = await ccService.Send(keyToSend, 0);
+        }
+
+        private void checkBoxM5ExitBelt2_CheckStateChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonM2SmallClampOpening_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonM2SmallClampClosing_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonM5TranslatorFwd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonM5TranslatorBwd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numericUpDownM3ManualSpeed_ValueChanged(object sender, EventArgs e)
         {
 
         }

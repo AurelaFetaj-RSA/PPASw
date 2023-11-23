@@ -84,14 +84,14 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
 
-                int p1 = Convert.ToInt32(dataGridViewM2TeachPoints[1, 0].Value);
-                int p2 = Convert.ToInt32(dataGridViewM2TeachPoints[1, 1].Value);
-                int p3 = Convert.ToInt32(dataGridViewM2TeachPoints[1, 2].Value);
-                int p4 = Convert.ToInt32(dataGridViewM2TeachPoints[1, 3].Value);
-                int s1 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 0].Value);
-                int s2 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 1].Value);
-                int s3 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 2].Value);
-                int s4 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 3].Value);
+                float p1 = float.Parse(dataGridViewM3TeachPoints[1, 0].Value.ToString());
+                float p2 = float.Parse(dataGridViewM3TeachPoints[1, 1].Value.ToString());
+                float p3 = float.Parse(dataGridViewM3TeachPoints[1, 2].Value.ToString());
+                float p4 = float.Parse(dataGridViewM3TeachPoints[1, 3].Value.ToString());
+                int s1 = Convert.ToInt32(dataGridViewM3TeachPoints[2, 0].Value);
+                int s2 = Convert.ToInt32(dataGridViewM3TeachPoints[2, 1].Value);
+                int s3 = Convert.ToInt32(dataGridViewM3TeachPoints[2, 2].Value);
+                int s4 = Convert.ToInt32(dataGridViewM3TeachPoints[2, 3].Value);
                 ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM3TeachProgramList.Text);
                 prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
                 prgObj.Save(comboBoxM3TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[2], true);
@@ -111,7 +111,7 @@ namespace GUI
         private void dataGridViewM3TeachPoints_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = 0;
-            short[] quote = new short[5];
+            float[] quote = new float[5];
             short[] speed = new short[5];
             bool[] start = new bool[5] { false, false, false, false, false };
 
@@ -123,7 +123,7 @@ namespace GUI
                 short idPoint = (short)(currentRow + 1);
                 for (i = 0; i <= dataGridViewM3TeachPoints.RowCount - 1; i++)
                 {
-                    quote[i + 1] = short.Parse(dataGridViewM3TeachPoints[1, i].Value.ToString());
+                    quote[i + 1] = float.Parse(dataGridViewM3TeachPoints[1, i].Value.ToString());
                     speed[i + 1] = short.Parse(dataGridViewM3TeachPoints[2, i].Value.ToString());
                 }
 
@@ -137,7 +137,7 @@ namespace GUI
                 if ((e.ColumnIndex == 3) & currentRow >= 0)
                 {
                     //register current axis value
-                    dataGridViewM3TeachPoints[1, currentRow].Value = Convert.ToInt32((labelM3TeachAxisQuoteValue.Text));
+                    dataGridViewM3TeachPoints[1, currentRow].Value = float.Parse((labelM3TeachAxisQuoteValue.Text));
                     //register current speed value
                     dataGridViewM3TeachPoints[2, currentRow].Value = Convert.ToInt32((numericUpDownM3JogSpeed.Value));
                 }
@@ -161,7 +161,7 @@ namespace GUI
             {
                 string keyToSend = "pcM3JogSpeed";
 
-                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM2JogSpeed.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM3JogSpeed.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -182,13 +182,13 @@ namespace GUI
                 if (e.State == LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Pressed)
                 {
                     //send quote
-                    keyToSend = "pcM2JogDown";
+                    keyToSend = "pcM3JogDown";
                     var readResult1 = await ccService.Send(keyToSend, false);
                     if (readResult1.OpcResult)
                     {
                     }
 
-                    keyToSend = "pcM2JogUp";
+                    keyToSend = "pcM3JogUp";
                     var readResult2 = await ccService.Send(keyToSend, true);
                     if (readResult2.OpcResult)
                     {
@@ -196,13 +196,13 @@ namespace GUI
                 }
                 else
                 {
-                    keyToSend = "pcM2JogDown";
+                    keyToSend = "pcM3JogDown";
                     var readResult1 = await ccService.Send(keyToSend, false);
                     if (readResult1.OpcResult)
                     {
                     }
 
-                    keyToSend = "pcM2JogUp";
+                    keyToSend = "pcM3JogUp";
                     var readResult2 = await ccService.Send(keyToSend, false);
                     if (readResult2.OpcResult)
                     {
@@ -256,7 +256,7 @@ namespace GUI
 
                 //quote 
                 keyToSend = "pcM3ManualQuote";
-                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM3ManualQuote.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM3ManualQuote.Value.ToString()));
                 if (sendResult.OpcResult)
                 {
 
@@ -299,7 +299,7 @@ namespace GUI
             {
                 string keyToSend = "pcM3ManualQuote";
 
-                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM3ManualQuote.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM3ManualQuote.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -358,17 +358,17 @@ namespace GUI
                 bool chkValue = false;
 
                 keyToSend = "pcM3StartStopExitBelt";
-                chkValue = (checkBoxM2WorkingBelt.CheckState == CheckState.Checked) ? true : false;
+                chkValue = (checkBoxM3ExitBelt.CheckState == CheckState.Checked) ? true : false;
 
                 var sendResult = await ccService.Send(keyToSend, chkValue);
 
                 if (sendResult.OpcResult)
                 {
-                    checkBoxM3WorkingBelt.ImageIndex = (chkValue) ? 0 : 1;
+                    checkBoxM3ExitBelt.ImageIndex = (chkValue) ? 0 : 1;
                 }
                 else
                 {
-                    checkBoxM3WorkingBelt.ImageIndex = 2;
+                    checkBoxM3ExitBelt.ImageIndex = 2;
                 }
             }
             else
@@ -387,7 +387,7 @@ namespace GUI
                 bool chkValue = false;
 
                 keyToSend = "pcM3StartStopWorkingBelt";
-                chkValue = (checkBoxM2WorkingBelt.CheckState == CheckState.Checked) ? true : false;
+                chkValue = (checkBoxM3WorkingBelt.CheckState == CheckState.Checked) ? true : false;
 
                 var sendResult = await ccService.Send(keyToSend, chkValue);
 
@@ -596,7 +596,7 @@ namespace GUI
         private void dataGridViewM3TestPoints_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = 0;
-            short[] quote = new short[5];
+            float[] quote = new float[5];
             short[] speed = new short[5];
 
             try
@@ -740,6 +740,8 @@ namespace GUI
             }
         }
 
+      
+
         private void buttonM3TestSaveProgram_Click(object sender, EventArgs e)
         {
             var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
@@ -748,10 +750,10 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
 
-                int p1 = Convert.ToInt32(dataGridViewM3TestPoints[1, 0].Value);
-                int p2 = Convert.ToInt32(dataGridViewM3TestPoints[1, 1].Value);
-                int p3 = Convert.ToInt32(dataGridViewM3TestPoints[1, 2].Value);
-                int p4 = Convert.ToInt32(dataGridViewM3TestPoints[1, 3].Value);
+                float p1 = float.Parse(dataGridViewM3TestPoints[1, 0].Value.ToString());
+                float p2 = float.Parse(dataGridViewM3TestPoints[1, 1].Value.ToString());
+                float p3 = float.Parse(dataGridViewM3TestPoints[1, 2].Value.ToString());
+                float p4 = float.Parse(dataGridViewM3TestPoints[1, 3].Value.ToString());
                 int s1 = Convert.ToInt32(dataGridViewM3TestPoints[2, 0].Value);
                 int s2 = Convert.ToInt32(dataGridViewM3TestPoints[2, 1].Value);
                 int s3 = Convert.ToInt32(dataGridViewM3TestPoints[2, 2].Value);

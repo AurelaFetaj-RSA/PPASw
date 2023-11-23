@@ -85,10 +85,10 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
 
-                int p1 = Convert.ToInt32(dataGridViewM2TeachPoints[1, 0].Value);
-                int p2 = Convert.ToInt32(dataGridViewM2TeachPoints[1, 1].Value);
-                int p3 = Convert.ToInt32(dataGridViewM2TeachPoints[1, 2].Value);
-                int p4 = Convert.ToInt32(dataGridViewM2TeachPoints[1, 3].Value);
+                float p1 = float.Parse(dataGridViewM2TeachPoints[1, 0].Value.ToString());
+                float p2 = float.Parse(dataGridViewM2TeachPoints[1, 1].Value.ToString());
+                float p3 = float.Parse(dataGridViewM2TeachPoints[1, 2].Value.ToString());
+                float p4 = float.Parse(dataGridViewM2TeachPoints[1, 3].Value.ToString());
                 int s1 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 0].Value);
                 int s2 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 1].Value);
                 int s3 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 2].Value);
@@ -112,7 +112,7 @@ namespace GUI
         private void dataGridViewM2TeachPoints_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = 0;
-            short[] quote = new short[5];
+            float[] quote = new float[5];
             short[] speed = new short[5];
             bool[] start = new bool[5] { false, false, false, false, false };
 
@@ -124,7 +124,7 @@ namespace GUI
                 short idPoint = (short)(currentRow + 1);
                 for (i = 0; i <= dataGridViewM2TeachPoints.RowCount - 1; i++)
                 {
-                    quote[i + 1] = short.Parse(dataGridViewM2TeachPoints[1, i].Value.ToString());
+                    quote[i + 1] = float.Parse(dataGridViewM2TeachPoints[1, i].Value.ToString());
                     speed[i + 1] = short.Parse(dataGridViewM2TeachPoints[2, i].Value.ToString());
                 }
 
@@ -138,7 +138,7 @@ namespace GUI
                 if ((e.ColumnIndex == 3) & currentRow >= 0)
                 {
                     //register current axis value
-                    dataGridViewM2TeachPoints[1, currentRow].Value = Convert.ToInt32((labelM2TeachAxisQuoteValue.Text));
+                    dataGridViewM2TeachPoints[1, currentRow].Value = float.Parse((labelM2TeachAxisQuoteValue.Text));
                     //register current speed value
                     dataGridViewM2TeachPoints[2, currentRow].Value = Convert.ToInt32((numericUpDownM2JogSpeed.Value));
                 }
@@ -456,7 +456,7 @@ namespace GUI
             {
                 string keyToSend = "pcM2ManualQuote";
 
-                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM2ManualQuote.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM2ManualQuote.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -617,7 +617,7 @@ namespace GUI
         private void dataGridViewM2TestPoints_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = 0;
-            short[] quote = new short[5];
+            float[] quote = new float[5];
             short[] speed = new short[5];
 
             try
@@ -628,7 +628,7 @@ namespace GUI
                 short idPoint = (short)(currentRow + 1);
                 for (i = 0; i <= dataGridViewM2TestPoints.RowCount - 1; i++)
                 {
-                    quote[i + 1] = short.Parse(dataGridViewM2TestPoints[1, i].Value.ToString());
+                    quote[i + 1] = float.Parse(dataGridViewM2TestPoints[1, i].Value.ToString());
                     speed[i + 1] = short.Parse(dataGridViewM2TestPoints[2, i].Value.ToString());
                 }
 

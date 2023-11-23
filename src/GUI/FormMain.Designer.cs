@@ -53,10 +53,10 @@ namespace GUI
             LidorSystems.IntegralUI.Containers.Style.TabStripStyle tabStripStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabStripStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolTipStyle toolTipStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolTipStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle3 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle4 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle5 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle6 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle3 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle11 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle11 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle12 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -717,10 +717,10 @@ namespace GUI
             // 
             // tabControlT5
             // 
+            this.tabControlT5.Controls.Add(this.tabPageT5M5_1);
             this.tabControlT5.Controls.Add(this.tabPage1);
             this.tabControlT5.Controls.Add(this.tabPage3);
             this.tabControlT5.Controls.Add(this.tabPage2);
-            this.tabControlT5.Controls.Add(this.tabPageT5M5_1);
             this.tabControlT5.Cursor = System.Windows.Forms.Cursors.Default;
             controlFormatStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlT5.FormatStyle = controlFormatStyle1;
@@ -734,7 +734,7 @@ namespace GUI
             this.tabPage2,
             this.tabPage3});
             this.tabControlT5.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlT5.SelectedPage = this.tabPage1;
+            this.tabControlT5.SelectedPage = this.tabPageT5M5_1;
             this.tabControlT5.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabControlT5.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Left;
             tabStripStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
@@ -779,8 +779,8 @@ namespace GUI
             this.tabPage1.Controls.Add(this.lbLed1003M5);
             this.tabPage1.Controls.Add(this.lbLed1004M5);
             this.tabPage1.Controls.Add(this.lbLed1001M5);
-            tabPageFormatStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.FormatStyle = tabPageFormatStyle3;
+            tabPageFormatStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.FormatStyle = tabPageFormatStyle4;
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.ParentPage = null;
@@ -1269,8 +1269,8 @@ namespace GUI
             // 
             // tabPage3
             // 
-            tabPageFormatStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage3.FormatStyle = tabPageFormatStyle4;
+            tabPageFormatStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage3.FormatStyle = tabPageFormatStyle5;
             resources.ApplyResources(this.tabPage3, "tabPage3");
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.ParentPage = null;
@@ -1279,8 +1279,8 @@ namespace GUI
             // 
             // tabPage2
             // 
-            tabPageFormatStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.FormatStyle = tabPageFormatStyle5;
+            tabPageFormatStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage2.FormatStyle = tabPageFormatStyle6;
             resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.ParentPage = null;
@@ -1306,8 +1306,8 @@ namespace GUI
             this.tabPageT5M5_1.Controls.Add(this.buttonM5ClampFwd);
             this.tabPageT5M5_1.Controls.Add(this.buttonM5TranslatorBwd);
             this.tabPageT5M5_1.Controls.Add(this.buttonM5TranslatorFwd);
-            tabPageFormatStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT5M5_1.FormatStyle = tabPageFormatStyle6;
+            tabPageFormatStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT5M5_1.FormatStyle = tabPageFormatStyle3;
             resources.ApplyResources(this.tabPageT5M5_1, "tabPageT5M5_1");
             this.tabPageT5M5_1.Name = "tabPageT5M5_1";
             this.tabPageT5M5_1.ParentPage = null;
