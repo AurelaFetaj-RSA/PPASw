@@ -1141,39 +1141,302 @@ namespace GUI
             sendResult = await ccService.Send(keyToSend, 0);
         }
 
-        private void checkBoxM5ExitBelt2_CheckStateChanged(object sender, EventArgs e)
+        public async void RestartRequestFromM1()
         {
+            //send auto info
+            //program quote, speed, recipe parameters
+            //get model name
 
+            string prgName = "PRMILE-CCC-0000";// comboBoxM2PrgName.Text;
+            string modelName = prgName.Substring(2, 4);
+
+            //check model name
+            if (modelName == "")
+            {
+                //program name with incorrect format
+                //todo add message to the operator
+                return;
+            }
+
+            //get data from DB
+            MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+            if ((recs.Error == 0) & (recs.Result.Count != 0))
+            {
+                string keyValue = "pcM1Param1";
+                var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m1_param1.ToString()));
+                WriteOnLabelAsync(labelM1Param1Value, recs.Result[0].m1_param1.ToString());
+
+
+                //send quote, speed
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                {
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                    ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                    objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + prgName + config.Extensions[0]);
+                    if (objPoints != null)
+                    {
+                        List<string> keys = new List<string>()
+                    {
+                        "pcM1AutoQuote",
+                        "pcM1AutoSpeed"
+                    };
+
+                        List<object> values = new List<object>()
+                    {
+                        new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
+                        new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                    };
+
+                        var sendResults = await ccService.Send(keys, values);
+                        bool allsent = true;
+                        foreach (var result in sendResults)
+                        {
+                            if (result.Value.OpcResult)
+                            {
+                            }
+                            else
+                            {
+                                //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
+                            }
+                            allsent = allsent & result.Value.OpcResult;
+                        }
+                        //if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.trimmer, "program sent succesfully");
+
+                        string key = "pc_timer_stop_stivale";
+                        var sendResultsTimer = await ccService.Send("pcM1AutoTimer", 1.6);
+                        if (sendResultsTimer.OpcResult)
+                        {
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                }
+                else
+                {
+                   // AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "verify program file");
+                }
+            }
+
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM1Inclusion";
+                chkValue = (checkBoxM1Inclusion.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM1Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM1Inclusion.ImageIndex = 2;
+                  //  AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
+                }
+            }
+            else
+            {
+               // AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+            }
+
+            //sharpening data
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM1SharpeningInclusion";
+                chkValue = (checkBoxM1SharpeningInclusion.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM1SharpeningInclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM1SharpeningInclusion.ImageIndex = 2;
+                 //   AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
+                }
+            }
+            else
+            {
+              //  AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+            }
+
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1SharpeningCycleNumber";
+
+                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1SharpeningTime.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
         }
 
-        private void buttonM2SmallClampOpening_Click(object sender, EventArgs e)
+        public async void RestartRequestFromM2()
         {
+            //send auto info
+            //program quote, speed, recipe parameters
+            //get model name
 
-        }
+            string prgName = "PRMILE-CCC-0000";// comboBoxM2PrgName.Text;
+            string modelName = prgName.Substring(2, 4);
 
-        private void buttonM2SmallClampClosing_Click(object sender, EventArgs e)
-        {
+            //check model name
+            if (modelName == "")
+            {
+                //program name with incorrect format
+                //todo add message to the operator
+                return;
+            }
 
-        }
+            //get data from DB
+            MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
 
-        private void buttonM5TranslatorFwd_Click(object sender, EventArgs e)
-        {
+            if ((recs.Error == 0) & (recs.Result.Count != 0))
+            {
+                string keyValue = "pcM1Param1";
+                var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m1_param1.ToString()));
+                WriteOnLabelAsync(labelM1Param1Value, recs.Result[0].m1_param1.ToString());
 
-        }
 
-        private void buttonM5TranslatorBwd_Click(object sender, EventArgs e)
-        {
+                //send quote, speed
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
-        }
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                {
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                    ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                    objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + prgName + config.Extensions[0]);
+                    if (objPoints != null)
+                    {
+                        List<string> keys = new List<string>()
+                    {
+                        "pcM1AutoQuote",
+                        "pcM1AutoSpeed"
+                    };
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
+                        List<object> values = new List<object>()
+                    {
+                        new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
+                        new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                    };
 
-        }
+                        var sendResults = await ccService.Send(keys, values);
+                        bool allsent = true;
+                        foreach (var result in sendResults)
+                        {
+                            if (result.Value.OpcResult)
+                            {
+                            }
+                            else
+                            {
+                                //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
+                            }
+                            allsent = allsent & result.Value.OpcResult;
+                        }
+                        //if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.trimmer, "program sent succesfully");
 
-        private void numericUpDownM3ManualSpeed_ValueChanged(object sender, EventArgs e)
-        {
+                        string key = "pc_timer_stop_stivale";
+                        var sendResultsTimer = await ccService.Send("pcM1AutoTimer", 1.6);
+                        if (sendResultsTimer.OpcResult)
+                        {
+                        }
+                        else
+                        {
 
+                        }
+                    }
+                }
+                else
+                {
+                    // AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "verify program file");
+                }
+            }
+
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM1Inclusion";
+                chkValue = (checkBoxM1Inclusion.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM1Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM1Inclusion.ImageIndex = 2;
+                    //  AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
+                }
+            }
+            else
+            {
+                // AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+            }
+
+            //sharpening data
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM1SharpeningInclusion";
+                chkValue = (checkBoxM1SharpeningInclusion.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM1SharpeningInclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM1SharpeningInclusion.ImageIndex = 2;
+                    //   AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
+                }
+            }
+            else
+            {
+                //  AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+            }
+
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1SharpeningCycleNumber";
+
+                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1SharpeningTime.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
         }
     }    
 }

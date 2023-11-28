@@ -84,8 +84,9 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM1ExitBeltState", $"ns=2;s=Tags.Rifilatrice/pc_fase_ciclo_nastro_uscita", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM1WorkingBeltState", $"ns=2;s=Tags.Rifilatrice/pc_fase_ciclo_nastro_lavoro", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM1ResetCycle", $"ns=2;s=Tags.Rifilatrice/pc_reset_numero_cicli", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1RestartPlc", $"ns=2;s=Tags.Rifilatrice/pc_riavvio_plc", typeof(bool)));
             #endregion
-
+            
             #region(* M2 OPCUA variables *)
             ClientDataConfig.Add(new OpcObjectData("pcM2JogDown", $"ns=2;s=Tags.Pad_print_interna/pc_jog_basso", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2JogUp", $"ns=2;s=Tags.Pad_print_interna/pc_jog_alto", typeof(bool)));
@@ -216,6 +217,8 @@ namespace GUI
             //reset
             ClientDataConfig.Add(new OpcObjectData("pcM3Reset", $"ns=2;s=Tags.Pad_print_esterna/pc_reset_generale", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM3ResetCycle", $"ns=2;s=Tags.Pad_print_esterna/pc_reset_numero_cicli", typeof(bool)));
+           
+
             #endregion
 
             #region(* M4 OPCUA variables *)
@@ -301,6 +304,14 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM6StartStop", $"ns=2;s=Tags.Rifilatrice/pc_start_stop", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM6Status", $"ns=2;s=Tags.Rifilatrice/pc_stato_macchina", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM6ResetCycle", $"ns=2;s=Tags.Rifilatrice/pc_numero_cicli", typeof(bool)));
+
+            //ovens
+            ClientDataConfig.Add(new OpcObjectData("pcM6LFLampsON", $"ns=2;s=Tags.Pad_print_esterna/pc_accendi_lampade_forno_SX", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM6LFLampsOFF", $"ns=2;s=Tags.Pad_print_esterna/pc_spegni_lampade_forno_SX", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM6RGampsON", $"ns=2;s=Tags.Pad_print_esterna/pc_accendi_lampade_forno_DX", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM6RGLampsOFF", $"ns=2;s=Tags.Pad_print_esterna/pc_spegni_lampade_forno_DX", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM6StartStopSuction", $"ns=2;s=Tags.Pad_print_esterna/pc_start_stop_aspirazioni_forno", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM6ONPercentage", $"ns=2;s=Tags.Pad_print_esterna/pc_percentuale_accensione_lampade", typeof(short)));
             #endregion
             return this;
         }

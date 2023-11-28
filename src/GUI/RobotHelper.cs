@@ -526,6 +526,30 @@ namespace GUI
                     #region (* GUI *)
                     GUIWithOPCUAClientConnected();
                     #endregion
+
+                    keys = new List<string>()
+                    {
+                        "pcM1RestartPlc",
+                        "pcM2RestartPlc",
+                        "pcM3RestartPlc",
+                        "pcM4RestartPlc",
+                        "pcM5RestartPlc"
+                    };
+
+
+                    var readRes = await ccService.Read(keys);
+
+                    if (bool.Parse(readRes["pcM1RestartPlc"].Value.ToString()))
+                    {
+                        var readRes2 = await ccService.Send("pcM1RestartPlc", false);
+
+                        RestartRequestFromM1();
+                    }
+                    else
+                    {
+
+                    }
+
                 }
                 else
                 {
@@ -2146,6 +2170,7 @@ namespace GUI
         #endregion
 
         #endregion
+
 
     }
 }
