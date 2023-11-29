@@ -106,5 +106,17 @@ namespace GUI.Properties {
                 this["ImagesFilepath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool OpcSimulation {
+            get {
+                return ((bool)(this["OpcSimulation"]));
+            }
+            set {
+                this["OpcSimulation"] = value;
+            }
+        }
     }
 }

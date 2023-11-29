@@ -18,55 +18,85 @@ namespace GUI
 {
     public partial class FormApp : Form
     {
-        private void toolStripComboBoxT1_1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-        private void toolStripComboBoxT1_2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
         private async void buttonM1TeachLoadProgram_Click(object sender, EventArgs e)
         {
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            if (comboBoxM1TeachProgramList.Text == "") return;
 
-            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            try
             {
-                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM1TeachProgramList.Text + config.Extensions[0]);
-                if (objPoints != null)
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
                 {
-                    dataGridViewM1TeachPoints[1, 0].Value = objPoints.Points[0].Q1;
-                    dataGridViewM1TeachPoints[1, 1].Value = objPoints.Points[0].Q2;
-                    dataGridViewM1TeachPoints[1, 2].Value = objPoints.Points[0].Q3;
-                    dataGridViewM1TeachPoints[1, 3].Value = objPoints.Points[0].Q4;
-                    dataGridViewM1TeachPoints[2, 0].Value = objPoints.Points[0].V1;
-                    dataGridViewM1TeachPoints[2, 1].Value = objPoints.Points[0].V2;
-                    dataGridViewM1TeachPoints[2, 2].Value = objPoints.Points[0].V3;
-                    dataGridViewM1TeachPoints[2, 3].Value = objPoints.Points[0].V4;
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                    ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                    objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM1TeachProgramList.Text + config.Extensions[0]);
+                    if (objPoints != null)
+                    {
+                        dataGridViewM1TeachPoints[1, 0].Value = objPoints.Points[0].Q1;
+                        dataGridViewM1TeachPoints[1, 1].Value = objPoints.Points[0].Q2;
+                        dataGridViewM1TeachPoints[1, 2].Value = objPoints.Points[0].Q3;
+                        dataGridViewM1TeachPoints[1, 3].Value = objPoints.Points[0].Q4;
+                        dataGridViewM1TeachPoints[2, 0].Value = objPoints.Points[0].V1;
+                        dataGridViewM1TeachPoints[2, 1].Value = objPoints.Points[0].V2;
+                        dataGridViewM1TeachPoints[2, 2].Value = objPoints.Points[0].V3;
+                        dataGridViewM1TeachPoints[2, 3].Value = objPoints.Points[0].V4;
+                        //program succesfully loaded
+                        xDialog.MsgBox.Show("program " + comboBoxM1TeachProgramList.Text + " succesfully loaded", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+
+                    }
+                    else
+                    {
+                        //parsing failed
+                        xDialog.MsgBox.Show("program " + comboBoxM1TeachProgramList.Text + " not loaded", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+                    }
                 }
+                else
+                {
+                    //parsing failed
+                    xDialog.MsgBox.Show("program " + comboBoxM1TeachProgramList.Text + " not loaded", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+                }
+            }
+            catch(Exception ex)
+            {
+                
             }
         }
 
         private async void buttonM1TeachSaveProgram_Click(object sender, EventArgs e)
         {
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            if (comboBoxM1TeachProgramList.Text == "") return;
 
-            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            try
             {
-                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
-                float p1 = float.Parse(dataGridViewM1TeachPoints[1, 0].Value.ToString());
-                float p2 = float.Parse(dataGridViewM1TeachPoints[1, 1].Value.ToString());
-                float p3 = float.Parse(dataGridViewM1TeachPoints[1, 2].Value.ToString());
-                float p4 =  float.Parse(dataGridViewM1TeachPoints[1, 3].Value.ToString());
-                int s1 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 0].Value);
-                int s2 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 1].Value);
-                int s3 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 2].Value);
-                int s4 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 3].Value);
-                ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM1TeachProgramList.Text);
-                prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
-                prgObj.Save(comboBoxM1TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[0], true);
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                {
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+
+                    float p1 = float.Parse(dataGridViewM1TeachPoints[1, 0].Value.ToString());
+                    float p2 = float.Parse(dataGridViewM1TeachPoints[1, 1].Value.ToString());
+                    float p3 = float.Parse(dataGridViewM1TeachPoints[1, 2].Value.ToString());
+                    float p4 = float.Parse(dataGridViewM1TeachPoints[1, 3].Value.ToString());
+                    int s1 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 0].Value);
+                    int s2 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 1].Value);
+                    int s3 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 2].Value);
+                    int s4 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 3].Value);
+                    ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM1TeachProgramList.Text);
+                    prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
+                    prgObj.Save(comboBoxM1TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[0], true);
+                    //program succesfully saved
+                    xDialog.MsgBox.Show("program " + comboBoxM1TeachProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+                }
+                else
+                {
+                    //todo log
+                }
+            }
+            catch(Exception ex)
+            {
+                //todo log
             }
         }
 
@@ -470,7 +500,6 @@ namespace GUI
             }
         }
 
-
         private async void buttonM1PosV1Up_Click(object sender, EventArgs e)
         {
             if (ccService.ClientIsConnected)
@@ -762,7 +791,7 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                comboBoxM1TestProgramList.Text = "PRMILE-CCC-0000";
+                
                 objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM1TestProgramList.Text + config.Extensions[0]);
                 if (objPoints != null)
                 {
@@ -780,7 +809,7 @@ namespace GUI
             }
         }
 
-        private async void buttonM1TestSaveProgram_Click(object sender, EventArgs e)
+        private void buttonM1TestSaveProgram_Click(object sender, EventArgs e)
         {
             var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
@@ -788,10 +817,10 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
 
-                int p1 = Convert.ToInt32(dataGridViewM1TestPoints[1, 0].Value);
-                int p2 = Convert.ToInt32(dataGridViewM1TestPoints[1, 1].Value);
-                int p3 = Convert.ToInt32(dataGridViewM1TestPoints[1, 2].Value);
-                int p4 = Convert.ToInt32(dataGridViewM1TestPoints[1, 3].Value);
+                float p1 = Convert.ToInt32(dataGridViewM1TestPoints[1, 0].Value);
+                float p2 = Convert.ToInt32(dataGridViewM1TestPoints[1, 1].Value);
+                float p3 = Convert.ToInt32(dataGridViewM1TestPoints[1, 2].Value);
+                float p4 = Convert.ToInt32(dataGridViewM1TestPoints[1, 3].Value);
                 int s1 = Convert.ToInt32(dataGridViewM1TestPoints[2, 0].Value);
                 int s2 = Convert.ToInt32(dataGridViewM1TestPoints[2, 1].Value);
                 int s3 = Convert.ToInt32(dataGridViewM1TestPoints[2, 2].Value);
@@ -886,9 +915,54 @@ namespace GUI
             }
         }
 
+        private void dataGridViewM1TeachPoints_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if ((e.ColumnIndex == 3) && (e.RowIndex >= 0))
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                System.Drawing.Image img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\register.png");
+                var w = 32;// img.Width;
+                var h = 32;// img.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
 
+                e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
 
+            if ((e.ColumnIndex == 4) && (e.RowIndex >= 0))
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                System.Drawing.Image img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\startquote.png");
+                var w = 32;// img.Width;
+                var h = 32;// img.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
 
+                e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
 
+            if ((e.ColumnIndex == 5) && (e.RowIndex >= 0))
+            {
+                System.Drawing.Image img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\preached.png");
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                if (dataGridViewM2TeachPoints.Rows[e.RowIndex].Cells[e.ColumnIndex].ToolTipText == "reached")
+                {
+                    img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\preached.png");
+                }
+                else
+                {
+                    img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\pnotreached.png");
+                }
+                var w = 24;// img.Width;
+                var h = 24;// img.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -786,6 +786,70 @@
   <data name="&gt;&gt;tabPageT5M5_1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 3</value>
+  </data>
+  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>806, 634</value>
+  </data>
+  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Alarms</value>
+  </data>
+  <data name="tabPage3.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQAauLEMAAAAA
+        /brLQQs=
+</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
+    <value>tabPage3</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
+    <value>tabControlT5</value>
+  </data>
+  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 3</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>806, 634</value>
+  </data>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>output</value>
+  </data>
+  <data name="tabPage2.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
+        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
+        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQAxc9UIAAAAA
+        /brLQQs=
+</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tabControlT5</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="lbLed1020M5.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1680,70 +1744,6 @@
     <value>tabControlT5</value>
   </data>
   <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tabPage3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 3</value>
-  </data>
-  <data name="tabPage3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>806, 634</value>
-  </data>
-  <data name="tabPage3.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="tabPage3.Text" xml:space="preserve">
-    <value>Alarms</value>
-  </data>
-  <data name="tabPage3.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
-        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQAauLEMAAAAA
-        /brLQQs=
-</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Name" xml:space="preserve">
-    <value>tabPage3</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.Parent" xml:space="preserve">
-    <value>tabControlT5</value>
-  </data>
-  <data name="&gt;&gt;tabPage3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>90, 3</value>
-  </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>806, 634</value>
-  </data>
-  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>output</value>
-  </data>
-  <data name="tabPage2.TextBounds" mimetype="application/x-microsoft.net.object.binary.base64">
-    <value>
-        AAEAAAD/////AQAAAAAAAAAMAgAAAFFTeXN0ZW0uRHJhd2luZywgVmVyc2lvbj00LjAuMC4wLCBDdWx0
-        dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWIwM2Y1ZjdmMTFkNTBhM2EFAQAAABlTeXN0ZW0uRHJh
-        d2luZy5SZWN0YW5nbGVGBAAAAAF4AXkFd2lkdGgGaGVpZ2h0AAAAAAsLCwsCAAAAAACgQAxc9UIAAAAA
-        /brLQQs=
-</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
-    <value>LidorSystems.IntegralUI.Containers.TabPage, LidorSystems.IntegralUI.Containers.TabControl, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8975f44e9d648cc</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
-    <value>tabControlT5</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <data name="tabControlT5.Location" type="System.Drawing.Point, System.Drawing">
@@ -11977,7 +11977,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACW
-        JQAAAk1TRnQBSQFMAgEBBAEAAdgBAAHYAQABYAEAAWABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        JQAAAk1TRnQBSQFMAgEBBAEAAegBAAHoAQABYAEAAWABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAEBAgABwAMAAQEBAAEIBgABIAEBFwABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHA
         AdwBwAEAAfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANC
         AQADOQEAAYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/
@@ -12652,7 +12652,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAs
-        DgAAAk1TRnQBSQFMAgEBAwEAAcgBAAHIAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DgAAAk1TRnQBSQFMAgEBAwEAAdgBAAHYAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAMAASADAAEBAQABCAYAARAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -14995,7 +14995,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAs
-        YwAAAk1TRnQBSQFMAgEBBAEAAfgBAAH4AQABUAEAAVABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        YwAAAk1TRnQBSQFMAgEBBAEAAQgBAQEIAQEBUAEAAVABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAEBAgABoAMAAQEBAAEIBgAByBgAAYACAAGAAwACgAEAAYADAAGAAQABgAEAAoACAAPAAQABwAHc
         AcABAAHwAcoBpgEAATMFAAEzAQABMwEAATMBAAIzAgADFgEAAxwBAAMiAQADKQEAA1UBAANNAQADQgEA
         AzkBAAGAAXwB/wEAAlAB/wEAAZMBAAHWAQAB/wHsAcwBAAHGAdYB7wEAAdYC5wEAAZABqQGtAgAB/wEz
@@ -15429,7 +15429,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAM
-        EQAAAk1TRnQBSQFMAgEBBQEAAdgBAAHYAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        EQAAAk1TRnQBSQFMAgEBBQEAAegBAAHoAQABIAEAASABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABgAMAAUADAAEBAQABCAYAASAYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA

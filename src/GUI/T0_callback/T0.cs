@@ -19,7 +19,8 @@ namespace GUI
 {
     public partial class FormApp : Form
     {
-      
+
+        #region( * program change in automatic *)      
         private async void comboBoxM1PrgName_SelectedIndexChanged(object sender, EventArgs e)
         {
             //send recipe (todo: waiting mysql)
@@ -80,9 +81,9 @@ namespace GUI
                 AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "verify program file");
             }
         }
-     
-    
-      
+
+        #endregion
+
         private async void checkBoxM1Inclusion_CheckStateChanged(object sender, EventArgs e)
         {
             if (ccService.ClientIsConnected)
@@ -358,8 +359,8 @@ namespace GUI
             myPen.Width = 10;
 
             int lineHeight = 80;
-            int groupboxXShift = groupBoxKeepAliveFromPlc.Location.X;
-            int groupboxYShift = groupBoxKeepAliveFromPlc.Location.Y;
+            int groupboxXShift = 400;// groupBoxKeepAliveFromPlc.Location.X;
+            int groupboxYShift = 400;// groupBoxKeepAliveFromPlc.Location.Y;
             g.DrawLine(myPen, pictureBoxM1PLCNode.Location.X + pictureBoxM1PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM1PLCNode.Location.Y - pictureBoxM1PLCNode.Height + groupboxYShift, pictureBoxM1PLCNode.Location.X + pictureBoxM1PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM1PLCNode.Location.Y - pictureBoxM1PLCNode.Height + lineHeight + groupboxYShift);
             g.DrawLine(myPen, pictureBoxM2PLCNode.Location.X + pictureBoxM2PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM2PLCNode.Location.Y - pictureBoxM2PLCNode.Height + groupboxYShift, pictureBoxM2PLCNode.Location.X + pictureBoxM2PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM2PLCNode.Location.Y - pictureBoxM2PLCNode.Height + lineHeight + groupboxYShift);
             g.DrawLine(myPen, pictureBoxM3PLCNode.Location.X + pictureBoxM3PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM3PLCNode.Location.Y - pictureBoxM3PLCNode.Height + groupboxYShift, pictureBoxM3PLCNode.Location.X + pictureBoxM3PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM3PLCNode.Location.Y - pictureBoxM3PLCNode.Height + lineHeight + groupboxYShift);

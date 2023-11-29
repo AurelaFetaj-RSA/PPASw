@@ -130,7 +130,7 @@ namespace GUI
                 StandardProgramParser standardParser = new StandardProgramParser();
                 progRS.SetProgramParser(standardParser);
                 //await progRS.LoadProgramAsync<PointAxis>();
-
+                
             }
 
             listFound = myCore.FindPerType(typeof(MySQLService));
@@ -938,11 +938,6 @@ namespace GUI
 
             }
         }
-
-     
-
-
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (_configForm == null)
@@ -950,6 +945,33 @@ namespace GUI
 
             _configForm.Show();
             _configForm.Activate();
+        }
+
+        private async void buttonM3StartTest_Click(object sender, EventArgs e)
+        {
+            //send quote/speed
+            M3TestSendProgram();
+
+            //send start command
+            string keyToSend = "pcM3TestType";
+
+            if (radioButtonFootOrderOpt1Test.Checked)
+            {
+                var sendResult1 = await ccService.Send(keyToSend, 1);
+            }
+            else
+            {
+                var sendResult1 = await ccService.Send(keyToSend, 2);
+            }
+
+            //send start command
+            keyToSend = "pcM3StartTest";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
+
+            }
+            else xDialog.MsgBox.Show("offline", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
         }
 
         private void buttonMRecipiesShowAll_Click(object sender, EventArgs e)
@@ -985,15 +1007,12 @@ namespace GUI
                     dataGridViewMEditRecipe.Columns[8].Width = 140;
                     dataGridViewMEditRecipe.Columns[9].HeaderText = "line bottom";
                     dataGridViewMEditRecipe.Columns[9].Width = 140;
-
-
                 }
             }
         }
 
-        private void toolStripMenuItemT0Keyboard_Click(object sender, EventArgs e)
+        private void toolStripMenuItemT1_1Keyboard_Click(object sender, EventArgs e)
         {
-
             Process foo = new Process();
 
             foo.StartInfo.FileName = @AppDomain.CurrentDomain.BaseDirectory + "Oskeyboard.exe";
@@ -1013,36 +1032,90 @@ namespace GUI
             }
         }
 
-        private async void buttonM3StartTest_Click(object sender, EventArgs e)
+        private void toolStripMenuItemT1_2Keyboard_Click(object sender, EventArgs e)
         {
-            //send quote/speed
-            M3TestSendProgram();
+            Process foo = new Process();
 
+            foo.StartInfo.FileName = @AppDomain.CurrentDomain.BaseDirectory + "Oskeyboard.exe";
 
-            //send start command
-            string keyToSend = "pcM3TestType";
+            bool isRunning = false; //TODO: Check to see if process foo.exe is already running
+            var processExists = Process.GetProcesses().Any(p => p.ProcessName.Contains("Oskeyboard"));
 
-            if (radioButtonFootOrderOpt1Test.Checked)
+            if (processExists)
             {
-                var sendResult1 = await ccService.Send(keyToSend, 1);
+                //TODO: Switch to foo.exe process
+                foo.CloseMainWindow();
+                foo.Start();
             }
             else
             {
-                var sendResult1 = await ccService.Send(keyToSend, 2);
+                foo.Start();
             }
-
-            //send start command
-            keyToSend = "pcM3StartTest";
-            var sendResult = await ccService.Send(keyToSend, true);
-            if (sendResult.OpcResult)
-            {
-
-            }
-            else xDialog.MsgBox.Show("offline", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
-
         }
 
-        private async void toolStripComboBoxT0_SelectedIndexChanged(object sender, EventArgs e)
+        private void toolStripMenuItemT0Keyboard_Click(object sender, EventArgs e)
+        {
+            Process foo = new Process();
+
+            foo.StartInfo.FileName = @AppDomain.CurrentDomain.BaseDirectory + "Oskeyboard.exe";
+
+            bool isRunning = false; //TODO: Check to see if process foo.exe is already running
+            var processExists = Process.GetProcesses().Any(p => p.ProcessName.Contains("Oskeyboard"));
+
+            if (processExists)
+            {
+                //TODO: Switch to foo.exe process
+                foo.CloseMainWindow();
+                foo.Start();
+            }
+            else
+            {
+                foo.Start();
+            }
+        }
+
+        private void toolStripComboBoxT1_1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (toolStripComboBoxT1_1.Text == "") return;
+
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                List<IObjProgram> pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, toolStripComboBoxT1_1.Text);
+
+                comboBoxM1TeachProgramList.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM1TeachProgramList.Items.Add(prgName.ProgramName);
+                }
+            }
+        }
+
+        private void toolStripComboBoxT1_2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (toolStripComboBoxT1_2.Text == "") return;
+
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                List<IObjProgram> pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, toolStripComboBoxT1_2.Text);
+
+                comboBoxM1TestProgramList.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM1TestProgramList.Items.Add(prgName.ProgramName);
+                }
+            }
+        }
+
+
+        private void toolStripComboBoxT0_SelectedIndexChanged(object sender, EventArgs e)
         {
             var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
             List<IObjProgram> pList = new List<IObjProgram>();
@@ -1100,8 +1173,7 @@ namespace GUI
 
         private async void radioButtonFootOrderOpt1Test_CheckedChanged(object sender, EventArgs e)
         {
-            
-                           //send start command
+            //send start command
             string keyToSend = "pcM3TestType";
             var sendResult = await ccService.Send(keyToSend, true);
             if (sendResult.OpcResult)
@@ -1312,9 +1384,9 @@ namespace GUI
 
             if ((recs.Error == 0) & (recs.Result.Count != 0))
             {
-                string keyValue = "pcM1Param1";
-                var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m1_param1.ToString()));
-                WriteOnLabelAsync(labelM1Param1Value, recs.Result[0].m1_param1.ToString());
+                string keyValue = "pcM2Param1";
+                var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m2_param1.ToString()));
+                WriteOnLabelAsync(labelM2Param1Value, recs.Result[0].m1_param1.ToString());
 
 
                 //send quote, speed
@@ -1355,7 +1427,7 @@ namespace GUI
                         //if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.trimmer, "program sent succesfully");
 
                         string key = "pc_timer_stop_stivale";
-                        var sendResultsTimer = await ccService.Send("pcM1AutoTimer", 1.6);
+                        var sendResultsTimer = await ccService.Send("pcM2AutoTimer", 1.6);
                         if (sendResultsTimer.OpcResult)
                         {
                         }
@@ -1376,18 +1448,18 @@ namespace GUI
                 string keyToSend = null;
                 bool chkValue = false;
 
-                keyToSend = "pcM1Inclusion";
+                keyToSend = "pcM2Inclusion";
                 chkValue = (checkBoxM1Inclusion.CheckState == CheckState.Checked) ? true : false;
 
                 var sendResult = await ccService.Send(keyToSend, chkValue);
 
                 if (sendResult.OpcResult)
                 {
-                    checkBoxM1Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                    checkBoxM2Inclusion.ImageIndex = (chkValue) ? 0 : 1;
                 }
                 else
                 {
-                    checkBoxM1Inclusion.ImageIndex = 2;
+                    checkBoxM2Inclusion.ImageIndex = 2;
                     //  AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
                 }
             }
@@ -1438,5 +1510,7 @@ namespace GUI
                 }
             }
         }
+
+      
     }    
 }

@@ -53,10 +53,10 @@ namespace GUI
             LidorSystems.IntegralUI.Containers.Style.TabStripStyle tabStripStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabStripStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolTipStyle toolTipStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolTipStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle3 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle4 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle5 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle6 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle3 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle11 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle11 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle12 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -140,6 +140,26 @@ namespace GUI
             this.buttonConfigParser = new System.Windows.Forms.Button();
             this.tabPageSettings = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControlT5 = new LidorSystems.IntegralUI.Containers.TabControl();
+            this.tabPageT5M5_1 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.lbButtonM5StartStopOutBelt3 = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.lbButtonM5StartStopOutBelt2 = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.lbButtonM5StartStopOutBelt1 = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.lbButtonM5StartStopTranslBelt = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.buttonM5V2ExtBwd = new System.Windows.Forms.Button();
+            this.buttonM5V2ExtFwd = new System.Windows.Forms.Button();
+            this.buttonM5V1ExtBwd = new System.Windows.Forms.Button();
+            this.buttonM5V1ExtFwd = new System.Windows.Forms.Button();
+            this.buttonM5NoRotation = new System.Windows.Forms.Button();
+            this.buttonM5CCWRotation = new System.Windows.Forms.Button();
+            this.buttonM5CWRotation = new System.Windows.Forms.Button();
+            this.buttonM5ClampClosing = new System.Windows.Forms.Button();
+            this.buttonM5ClampOpening = new System.Windows.Forms.Button();
+            this.buttonM5ClampBwd = new System.Windows.Forms.Button();
+            this.buttonM5ClampFwd = new System.Windows.Forms.Button();
+            this.buttonM5TranslatorBwd = new System.Windows.Forms.Button();
+            this.buttonM5TranslatorFwd = new System.Windows.Forms.Button();
+            this.tabPage3 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.tabPage2 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPage1 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.lbLed1020M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed1019M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -173,26 +193,6 @@ namespace GUI
             this.lbLed1003M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed1004M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed1001M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.tabPage3 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.tabPage2 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.tabPageT5M5_1 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.lbButtonM5StartStopOutBelt3 = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.lbButtonM5StartStopOutBelt2 = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.lbButtonM5StartStopOutBelt1 = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.lbButtonM5StartStopTranslBelt = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.buttonM5V2ExtBwd = new System.Windows.Forms.Button();
-            this.buttonM5V2ExtFwd = new System.Windows.Forms.Button();
-            this.buttonM5V1ExtBwd = new System.Windows.Forms.Button();
-            this.buttonM5V1ExtFwd = new System.Windows.Forms.Button();
-            this.buttonM5NoRotation = new System.Windows.Forms.Button();
-            this.buttonM5CCWRotation = new System.Windows.Forms.Button();
-            this.buttonM5CWRotation = new System.Windows.Forms.Button();
-            this.buttonM5ClampClosing = new System.Windows.Forms.Button();
-            this.buttonM5ClampOpening = new System.Windows.Forms.Button();
-            this.buttonM5ClampBwd = new System.Windows.Forms.Button();
-            this.buttonM5ClampFwd = new System.Windows.Forms.Button();
-            this.buttonM5TranslatorBwd = new System.Windows.Forms.Button();
-            this.buttonM5TranslatorFwd = new System.Windows.Forms.Button();
             this.TabPageDiagnostic = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabControl1 = new LidorSystems.IntegralUI.Containers.TabControl();
             this.tabPage7 = new LidorSystems.IntegralUI.Containers.TabPage();
@@ -522,8 +522,8 @@ namespace GUI
             this.tabPageSettings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT5)).BeginInit();
             this.tabControlT5.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.tabPageT5M5_1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.TabPageDiagnostic.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -718,9 +718,9 @@ namespace GUI
             // tabControlT5
             // 
             this.tabControlT5.Controls.Add(this.tabPageT5M5_1);
-            this.tabControlT5.Controls.Add(this.tabPage1);
             this.tabControlT5.Controls.Add(this.tabPage3);
             this.tabControlT5.Controls.Add(this.tabPage2);
+            this.tabControlT5.Controls.Add(this.tabPage1);
             this.tabControlT5.Cursor = System.Windows.Forms.Cursors.Default;
             controlFormatStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlT5.FormatStyle = controlFormatStyle1;
@@ -744,6 +744,212 @@ namespace GUI
             this.tabControlT5.ToolItemFormatStyle = toolItemFormatStyle1;
             toolTipStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControlT5.ToolTipStyle = toolTipStyle1;
+            // 
+            // tabPageT5M5_1
+            // 
+            this.tabPageT5M5_1.Controls.Add(this.lbButtonM5StartStopOutBelt3);
+            this.tabPageT5M5_1.Controls.Add(this.lbButtonM5StartStopOutBelt2);
+            this.tabPageT5M5_1.Controls.Add(this.lbButtonM5StartStopOutBelt1);
+            this.tabPageT5M5_1.Controls.Add(this.lbButtonM5StartStopTranslBelt);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5V2ExtBwd);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5V2ExtFwd);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5V1ExtBwd);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5V1ExtFwd);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5NoRotation);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5CCWRotation);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5CWRotation);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5ClampClosing);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5ClampOpening);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5ClampBwd);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5ClampFwd);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5TranslatorBwd);
+            this.tabPageT5M5_1.Controls.Add(this.buttonM5TranslatorFwd);
+            tabPageFormatStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPageT5M5_1.FormatStyle = tabPageFormatStyle3;
+            resources.ApplyResources(this.tabPageT5M5_1, "tabPageT5M5_1");
+            this.tabPageT5M5_1.Name = "tabPageT5M5_1";
+            this.tabPageT5M5_1.ParentPage = null;
+            this.tabPageT5M5_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT5M5_1.TextBounds")));
+            this.tabPageT5M5_1.TextSize = new System.Drawing.SizeF(79.02131F, 25.4663F);
+            // 
+            // lbButtonM5StartStopOutBelt3
+            // 
+            this.lbButtonM5StartStopOutBelt3.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM5StartStopOutBelt3.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM5StartStopOutBelt3, "lbButtonM5StartStopOutBelt3");
+            this.lbButtonM5StartStopOutBelt3.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM5StartStopOutBelt3.Label = "start/stop output belt 3";
+            this.lbButtonM5StartStopOutBelt3.Name = "lbButtonM5StartStopOutBelt3";
+            this.lbButtonM5StartStopOutBelt3.Renderer = null;
+            this.lbButtonM5StartStopOutBelt3.RepeatInterval = 100;
+            this.lbButtonM5StartStopOutBelt3.RepeatState = false;
+            this.lbButtonM5StartStopOutBelt3.StartRepeatInterval = 500;
+            this.lbButtonM5StartStopOutBelt3.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM5StartStopOutBelt3.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM5StartStopOutBelt3.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM5StartStopOutBelt3_ButtonChangeState);
+            this.lbButtonM5StartStopOutBelt3.Click += new System.EventHandler(this.lbButtonM5StartStopOutBelt3_Click);
+            // 
+            // lbButtonM5StartStopOutBelt2
+            // 
+            this.lbButtonM5StartStopOutBelt2.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM5StartStopOutBelt2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM5StartStopOutBelt2, "lbButtonM5StartStopOutBelt2");
+            this.lbButtonM5StartStopOutBelt2.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM5StartStopOutBelt2.Label = "start/stop output belt 2";
+            this.lbButtonM5StartStopOutBelt2.Name = "lbButtonM5StartStopOutBelt2";
+            this.lbButtonM5StartStopOutBelt2.Renderer = null;
+            this.lbButtonM5StartStopOutBelt2.RepeatInterval = 100;
+            this.lbButtonM5StartStopOutBelt2.RepeatState = false;
+            this.lbButtonM5StartStopOutBelt2.StartRepeatInterval = 500;
+            this.lbButtonM5StartStopOutBelt2.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM5StartStopOutBelt2.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM5StartStopOutBelt2.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM5StartStopOutBelt2_ButtonChangeState);
+            this.lbButtonM5StartStopOutBelt2.Click += new System.EventHandler(this.lbButtonM5StartStopOutBelt2_Click);
+            // 
+            // lbButtonM5StartStopOutBelt1
+            // 
+            this.lbButtonM5StartStopOutBelt1.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM5StartStopOutBelt1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM5StartStopOutBelt1, "lbButtonM5StartStopOutBelt1");
+            this.lbButtonM5StartStopOutBelt1.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM5StartStopOutBelt1.Label = "start/stop output belt 1";
+            this.lbButtonM5StartStopOutBelt1.Name = "lbButtonM5StartStopOutBelt1";
+            this.lbButtonM5StartStopOutBelt1.Renderer = null;
+            this.lbButtonM5StartStopOutBelt1.RepeatInterval = 100;
+            this.lbButtonM5StartStopOutBelt1.RepeatState = false;
+            this.lbButtonM5StartStopOutBelt1.StartRepeatInterval = 500;
+            this.lbButtonM5StartStopOutBelt1.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM5StartStopOutBelt1.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM5StartStopOutBelt1.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM5StartStopOutBelt1_ButtonChangeState);
+            this.lbButtonM5StartStopOutBelt1.Click += new System.EventHandler(this.lbButtonM5StartStopOutBelt1_Click);
+            // 
+            // lbButtonM5StartStopTranslBelt
+            // 
+            this.lbButtonM5StartStopTranslBelt.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM5StartStopTranslBelt.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            resources.ApplyResources(this.lbButtonM5StartStopTranslBelt, "lbButtonM5StartStopTranslBelt");
+            this.lbButtonM5StartStopTranslBelt.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM5StartStopTranslBelt.Label = "start/stop translation belt";
+            this.lbButtonM5StartStopTranslBelt.Name = "lbButtonM5StartStopTranslBelt";
+            this.lbButtonM5StartStopTranslBelt.Renderer = null;
+            this.lbButtonM5StartStopTranslBelt.RepeatInterval = 100;
+            this.lbButtonM5StartStopTranslBelt.RepeatState = false;
+            this.lbButtonM5StartStopTranslBelt.StartRepeatInterval = 500;
+            this.lbButtonM5StartStopTranslBelt.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM5StartStopTranslBelt.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM5StartStopTranslBelt.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM5StartStopTranslBelt_ButtonChangeState);
+            this.lbButtonM5StartStopTranslBelt.Click += new System.EventHandler(this.lbButtonM5StartStopTranslBelt_Click);
+            // 
+            // buttonM5V2ExtBwd
+            // 
+            resources.ApplyResources(this.buttonM5V2ExtBwd, "buttonM5V2ExtBwd");
+            this.buttonM5V2ExtBwd.Name = "buttonM5V2ExtBwd";
+            this.buttonM5V2ExtBwd.UseVisualStyleBackColor = true;
+            this.buttonM5V2ExtBwd.Click += new System.EventHandler(this.buttonM5V2ExtBwd_Click);
+            // 
+            // buttonM5V2ExtFwd
+            // 
+            resources.ApplyResources(this.buttonM5V2ExtFwd, "buttonM5V2ExtFwd");
+            this.buttonM5V2ExtFwd.Name = "buttonM5V2ExtFwd";
+            this.buttonM5V2ExtFwd.UseVisualStyleBackColor = true;
+            this.buttonM5V2ExtFwd.Click += new System.EventHandler(this.buttonM5V2ExtFwd_Click);
+            // 
+            // buttonM5V1ExtBwd
+            // 
+            resources.ApplyResources(this.buttonM5V1ExtBwd, "buttonM5V1ExtBwd");
+            this.buttonM5V1ExtBwd.Name = "buttonM5V1ExtBwd";
+            this.buttonM5V1ExtBwd.UseVisualStyleBackColor = true;
+            this.buttonM5V1ExtBwd.Click += new System.EventHandler(this.buttonM5V1ExtBwd_Click);
+            // 
+            // buttonM5V1ExtFwd
+            // 
+            resources.ApplyResources(this.buttonM5V1ExtFwd, "buttonM5V1ExtFwd");
+            this.buttonM5V1ExtFwd.Name = "buttonM5V1ExtFwd";
+            this.buttonM5V1ExtFwd.UseVisualStyleBackColor = true;
+            this.buttonM5V1ExtFwd.Click += new System.EventHandler(this.buttonM5V1ExtFwd_Click);
+            // 
+            // buttonM5NoRotation
+            // 
+            resources.ApplyResources(this.buttonM5NoRotation, "buttonM5NoRotation");
+            this.buttonM5NoRotation.Name = "buttonM5NoRotation";
+            this.buttonM5NoRotation.UseVisualStyleBackColor = true;
+            this.buttonM5NoRotation.Click += new System.EventHandler(this.buttonM5NoRotation_Click);
+            // 
+            // buttonM5CCWRotation
+            // 
+            resources.ApplyResources(this.buttonM5CCWRotation, "buttonM5CCWRotation");
+            this.buttonM5CCWRotation.Name = "buttonM5CCWRotation";
+            this.buttonM5CCWRotation.UseVisualStyleBackColor = true;
+            this.buttonM5CCWRotation.Click += new System.EventHandler(this.buttonM5CCWRotation_Click);
+            // 
+            // buttonM5CWRotation
+            // 
+            resources.ApplyResources(this.buttonM5CWRotation, "buttonM5CWRotation");
+            this.buttonM5CWRotation.Name = "buttonM5CWRotation";
+            this.buttonM5CWRotation.UseVisualStyleBackColor = true;
+            this.buttonM5CWRotation.Click += new System.EventHandler(this.buttonM5CWRotation_Click);
+            // 
+            // buttonM5ClampClosing
+            // 
+            resources.ApplyResources(this.buttonM5ClampClosing, "buttonM5ClampClosing");
+            this.buttonM5ClampClosing.Name = "buttonM5ClampClosing";
+            this.buttonM5ClampClosing.UseVisualStyleBackColor = true;
+            this.buttonM5ClampClosing.Click += new System.EventHandler(this.buttonM5ClampClosing_Click);
+            // 
+            // buttonM5ClampOpening
+            // 
+            resources.ApplyResources(this.buttonM5ClampOpening, "buttonM5ClampOpening");
+            this.buttonM5ClampOpening.Name = "buttonM5ClampOpening";
+            this.buttonM5ClampOpening.UseVisualStyleBackColor = true;
+            this.buttonM5ClampOpening.Click += new System.EventHandler(this.buttonM5ClampOpening_Click);
+            // 
+            // buttonM5ClampBwd
+            // 
+            resources.ApplyResources(this.buttonM5ClampBwd, "buttonM5ClampBwd");
+            this.buttonM5ClampBwd.Name = "buttonM5ClampBwd";
+            this.buttonM5ClampBwd.UseVisualStyleBackColor = true;
+            this.buttonM5ClampBwd.Click += new System.EventHandler(this.buttonM5ClampBwd_Click);
+            // 
+            // buttonM5ClampFwd
+            // 
+            resources.ApplyResources(this.buttonM5ClampFwd, "buttonM5ClampFwd");
+            this.buttonM5ClampFwd.Name = "buttonM5ClampFwd";
+            this.buttonM5ClampFwd.UseVisualStyleBackColor = true;
+            this.buttonM5ClampFwd.Click += new System.EventHandler(this.buttonM5ClampFwd_Click);
+            // 
+            // buttonM5TranslatorBwd
+            // 
+            resources.ApplyResources(this.buttonM5TranslatorBwd, "buttonM5TranslatorBwd");
+            this.buttonM5TranslatorBwd.Name = "buttonM5TranslatorBwd";
+            this.buttonM5TranslatorBwd.UseVisualStyleBackColor = true;
+            this.buttonM5TranslatorBwd.Click += new System.EventHandler(this.buttonM5TranslatorBwd_Click);
+            // 
+            // buttonM5TranslatorFwd
+            // 
+            resources.ApplyResources(this.buttonM5TranslatorFwd, "buttonM5TranslatorFwd");
+            this.buttonM5TranslatorFwd.Name = "buttonM5TranslatorFwd";
+            this.buttonM5TranslatorFwd.UseVisualStyleBackColor = true;
+            this.buttonM5TranslatorFwd.Click += new System.EventHandler(this.buttonM5TranslatorFwd_Click);
+            // 
+            // tabPage3
+            // 
+            tabPageFormatStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage3.FormatStyle = tabPageFormatStyle4;
+            resources.ApplyResources(this.tabPage3, "tabPage3");
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.ParentPage = null;
+            this.tabPage3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage3.TextBounds")));
+            this.tabPage3.TextSize = new System.Drawing.SizeF(74.41975F, 25.4663F);
+            // 
+            // tabPage2
+            // 
+            tabPageFormatStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage2.FormatStyle = tabPageFormatStyle5;
+            resources.ApplyResources(this.tabPage2, "tabPage2");
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.ParentPage = null;
+            this.tabPage2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage2.TextBounds")));
+            this.tabPage2.TextSize = new System.Drawing.SizeF(70.5882F, 25.4663F);
             // 
             // tabPage1
             // 
@@ -779,8 +985,8 @@ namespace GUI
             this.tabPage1.Controls.Add(this.lbLed1003M5);
             this.tabPage1.Controls.Add(this.lbLed1004M5);
             this.tabPage1.Controls.Add(this.lbLed1001M5);
-            tabPageFormatStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.FormatStyle = tabPageFormatStyle4;
+            tabPageFormatStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.FormatStyle = tabPageFormatStyle6;
             resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.ParentPage = null;
@@ -1266,212 +1472,6 @@ namespace GUI
             this.lbLed1001M5.Renderer = null;
             this.lbLed1001M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
             this.lbLed1001M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            // 
-            // tabPage3
-            // 
-            tabPageFormatStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage3.FormatStyle = tabPageFormatStyle5;
-            resources.ApplyResources(this.tabPage3, "tabPage3");
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.ParentPage = null;
-            this.tabPage3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage3.TextBounds")));
-            this.tabPage3.TextSize = new System.Drawing.SizeF(74.41975F, 25.4663F);
-            // 
-            // tabPage2
-            // 
-            tabPageFormatStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage2.FormatStyle = tabPageFormatStyle6;
-            resources.ApplyResources(this.tabPage2, "tabPage2");
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.ParentPage = null;
-            this.tabPage2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage2.TextBounds")));
-            this.tabPage2.TextSize = new System.Drawing.SizeF(70.5882F, 25.4663F);
-            // 
-            // tabPageT5M5_1
-            // 
-            this.tabPageT5M5_1.Controls.Add(this.lbButtonM5StartStopOutBelt3);
-            this.tabPageT5M5_1.Controls.Add(this.lbButtonM5StartStopOutBelt2);
-            this.tabPageT5M5_1.Controls.Add(this.lbButtonM5StartStopOutBelt1);
-            this.tabPageT5M5_1.Controls.Add(this.lbButtonM5StartStopTranslBelt);
-            this.tabPageT5M5_1.Controls.Add(this.buttonM5V2ExtBwd);
-            this.tabPageT5M5_1.Controls.Add(this.buttonM5V2ExtFwd);
-            this.tabPageT5M5_1.Controls.Add(this.buttonM5V1ExtBwd);
-            this.tabPageT5M5_1.Controls.Add(this.buttonM5V1ExtFwd);
-            this.tabPageT5M5_1.Controls.Add(this.buttonM5NoRotation);
-            this.tabPageT5M5_1.Controls.Add(this.buttonM5CCWRotation);
-            this.tabPageT5M5_1.Controls.Add(this.buttonM5CWRotation);
-            this.tabPageT5M5_1.Controls.Add(this.buttonM5ClampClosing);
-            this.tabPageT5M5_1.Controls.Add(this.buttonM5ClampOpening);
-            this.tabPageT5M5_1.Controls.Add(this.buttonM5ClampBwd);
-            this.tabPageT5M5_1.Controls.Add(this.buttonM5ClampFwd);
-            this.tabPageT5M5_1.Controls.Add(this.buttonM5TranslatorBwd);
-            this.tabPageT5M5_1.Controls.Add(this.buttonM5TranslatorFwd);
-            tabPageFormatStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPageT5M5_1.FormatStyle = tabPageFormatStyle3;
-            resources.ApplyResources(this.tabPageT5M5_1, "tabPageT5M5_1");
-            this.tabPageT5M5_1.Name = "tabPageT5M5_1";
-            this.tabPageT5M5_1.ParentPage = null;
-            this.tabPageT5M5_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT5M5_1.TextBounds")));
-            this.tabPageT5M5_1.TextSize = new System.Drawing.SizeF(79.02131F, 25.4663F);
-            // 
-            // lbButtonM5StartStopOutBelt3
-            // 
-            this.lbButtonM5StartStopOutBelt3.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonM5StartStopOutBelt3.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            resources.ApplyResources(this.lbButtonM5StartStopOutBelt3, "lbButtonM5StartStopOutBelt3");
-            this.lbButtonM5StartStopOutBelt3.ForeColor = System.Drawing.Color.White;
-            this.lbButtonM5StartStopOutBelt3.Label = "start/stop output belt 3";
-            this.lbButtonM5StartStopOutBelt3.Name = "lbButtonM5StartStopOutBelt3";
-            this.lbButtonM5StartStopOutBelt3.Renderer = null;
-            this.lbButtonM5StartStopOutBelt3.RepeatInterval = 100;
-            this.lbButtonM5StartStopOutBelt3.RepeatState = false;
-            this.lbButtonM5StartStopOutBelt3.StartRepeatInterval = 500;
-            this.lbButtonM5StartStopOutBelt3.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonM5StartStopOutBelt3.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            this.lbButtonM5StartStopOutBelt3.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM5StartStopOutBelt3_ButtonChangeState);
-            this.lbButtonM5StartStopOutBelt3.Click += new System.EventHandler(this.lbButtonM5StartStopOutBelt3_Click);
-            // 
-            // lbButtonM5StartStopOutBelt2
-            // 
-            this.lbButtonM5StartStopOutBelt2.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonM5StartStopOutBelt2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            resources.ApplyResources(this.lbButtonM5StartStopOutBelt2, "lbButtonM5StartStopOutBelt2");
-            this.lbButtonM5StartStopOutBelt2.ForeColor = System.Drawing.Color.White;
-            this.lbButtonM5StartStopOutBelt2.Label = "start/stop output belt 2";
-            this.lbButtonM5StartStopOutBelt2.Name = "lbButtonM5StartStopOutBelt2";
-            this.lbButtonM5StartStopOutBelt2.Renderer = null;
-            this.lbButtonM5StartStopOutBelt2.RepeatInterval = 100;
-            this.lbButtonM5StartStopOutBelt2.RepeatState = false;
-            this.lbButtonM5StartStopOutBelt2.StartRepeatInterval = 500;
-            this.lbButtonM5StartStopOutBelt2.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonM5StartStopOutBelt2.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            this.lbButtonM5StartStopOutBelt2.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM5StartStopOutBelt2_ButtonChangeState);
-            this.lbButtonM5StartStopOutBelt2.Click += new System.EventHandler(this.lbButtonM5StartStopOutBelt2_Click);
-            // 
-            // lbButtonM5StartStopOutBelt1
-            // 
-            this.lbButtonM5StartStopOutBelt1.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonM5StartStopOutBelt1.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            resources.ApplyResources(this.lbButtonM5StartStopOutBelt1, "lbButtonM5StartStopOutBelt1");
-            this.lbButtonM5StartStopOutBelt1.ForeColor = System.Drawing.Color.White;
-            this.lbButtonM5StartStopOutBelt1.Label = "start/stop output belt 1";
-            this.lbButtonM5StartStopOutBelt1.Name = "lbButtonM5StartStopOutBelt1";
-            this.lbButtonM5StartStopOutBelt1.Renderer = null;
-            this.lbButtonM5StartStopOutBelt1.RepeatInterval = 100;
-            this.lbButtonM5StartStopOutBelt1.RepeatState = false;
-            this.lbButtonM5StartStopOutBelt1.StartRepeatInterval = 500;
-            this.lbButtonM5StartStopOutBelt1.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonM5StartStopOutBelt1.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            this.lbButtonM5StartStopOutBelt1.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM5StartStopOutBelt1_ButtonChangeState);
-            this.lbButtonM5StartStopOutBelt1.Click += new System.EventHandler(this.lbButtonM5StartStopOutBelt1_Click);
-            // 
-            // lbButtonM5StartStopTranslBelt
-            // 
-            this.lbButtonM5StartStopTranslBelt.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonM5StartStopTranslBelt.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
-            resources.ApplyResources(this.lbButtonM5StartStopTranslBelt, "lbButtonM5StartStopTranslBelt");
-            this.lbButtonM5StartStopTranslBelt.ForeColor = System.Drawing.Color.White;
-            this.lbButtonM5StartStopTranslBelt.Label = "start/stop translation belt";
-            this.lbButtonM5StartStopTranslBelt.Name = "lbButtonM5StartStopTranslBelt";
-            this.lbButtonM5StartStopTranslBelt.Renderer = null;
-            this.lbButtonM5StartStopTranslBelt.RepeatInterval = 100;
-            this.lbButtonM5StartStopTranslBelt.RepeatState = false;
-            this.lbButtonM5StartStopTranslBelt.StartRepeatInterval = 500;
-            this.lbButtonM5StartStopTranslBelt.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonM5StartStopTranslBelt.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            this.lbButtonM5StartStopTranslBelt.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM5StartStopTranslBelt_ButtonChangeState);
-            this.lbButtonM5StartStopTranslBelt.Click += new System.EventHandler(this.lbButtonM5StartStopTranslBelt_Click);
-            // 
-            // buttonM5V2ExtBwd
-            // 
-            resources.ApplyResources(this.buttonM5V2ExtBwd, "buttonM5V2ExtBwd");
-            this.buttonM5V2ExtBwd.Name = "buttonM5V2ExtBwd";
-            this.buttonM5V2ExtBwd.UseVisualStyleBackColor = true;
-            this.buttonM5V2ExtBwd.Click += new System.EventHandler(this.buttonM5V2ExtBwd_Click);
-            // 
-            // buttonM5V2ExtFwd
-            // 
-            resources.ApplyResources(this.buttonM5V2ExtFwd, "buttonM5V2ExtFwd");
-            this.buttonM5V2ExtFwd.Name = "buttonM5V2ExtFwd";
-            this.buttonM5V2ExtFwd.UseVisualStyleBackColor = true;
-            this.buttonM5V2ExtFwd.Click += new System.EventHandler(this.buttonM5V2ExtFwd_Click);
-            // 
-            // buttonM5V1ExtBwd
-            // 
-            resources.ApplyResources(this.buttonM5V1ExtBwd, "buttonM5V1ExtBwd");
-            this.buttonM5V1ExtBwd.Name = "buttonM5V1ExtBwd";
-            this.buttonM5V1ExtBwd.UseVisualStyleBackColor = true;
-            this.buttonM5V1ExtBwd.Click += new System.EventHandler(this.buttonM5V1ExtBwd_Click);
-            // 
-            // buttonM5V1ExtFwd
-            // 
-            resources.ApplyResources(this.buttonM5V1ExtFwd, "buttonM5V1ExtFwd");
-            this.buttonM5V1ExtFwd.Name = "buttonM5V1ExtFwd";
-            this.buttonM5V1ExtFwd.UseVisualStyleBackColor = true;
-            this.buttonM5V1ExtFwd.Click += new System.EventHandler(this.buttonM5V1ExtFwd_Click);
-            // 
-            // buttonM5NoRotation
-            // 
-            resources.ApplyResources(this.buttonM5NoRotation, "buttonM5NoRotation");
-            this.buttonM5NoRotation.Name = "buttonM5NoRotation";
-            this.buttonM5NoRotation.UseVisualStyleBackColor = true;
-            this.buttonM5NoRotation.Click += new System.EventHandler(this.buttonM5NoRotation_Click);
-            // 
-            // buttonM5CCWRotation
-            // 
-            resources.ApplyResources(this.buttonM5CCWRotation, "buttonM5CCWRotation");
-            this.buttonM5CCWRotation.Name = "buttonM5CCWRotation";
-            this.buttonM5CCWRotation.UseVisualStyleBackColor = true;
-            this.buttonM5CCWRotation.Click += new System.EventHandler(this.buttonM5CCWRotation_Click);
-            // 
-            // buttonM5CWRotation
-            // 
-            resources.ApplyResources(this.buttonM5CWRotation, "buttonM5CWRotation");
-            this.buttonM5CWRotation.Name = "buttonM5CWRotation";
-            this.buttonM5CWRotation.UseVisualStyleBackColor = true;
-            this.buttonM5CWRotation.Click += new System.EventHandler(this.buttonM5CWRotation_Click);
-            // 
-            // buttonM5ClampClosing
-            // 
-            resources.ApplyResources(this.buttonM5ClampClosing, "buttonM5ClampClosing");
-            this.buttonM5ClampClosing.Name = "buttonM5ClampClosing";
-            this.buttonM5ClampClosing.UseVisualStyleBackColor = true;
-            this.buttonM5ClampClosing.Click += new System.EventHandler(this.buttonM5ClampClosing_Click);
-            // 
-            // buttonM5ClampOpening
-            // 
-            resources.ApplyResources(this.buttonM5ClampOpening, "buttonM5ClampOpening");
-            this.buttonM5ClampOpening.Name = "buttonM5ClampOpening";
-            this.buttonM5ClampOpening.UseVisualStyleBackColor = true;
-            this.buttonM5ClampOpening.Click += new System.EventHandler(this.buttonM5ClampOpening_Click);
-            // 
-            // buttonM5ClampBwd
-            // 
-            resources.ApplyResources(this.buttonM5ClampBwd, "buttonM5ClampBwd");
-            this.buttonM5ClampBwd.Name = "buttonM5ClampBwd";
-            this.buttonM5ClampBwd.UseVisualStyleBackColor = true;
-            this.buttonM5ClampBwd.Click += new System.EventHandler(this.buttonM5ClampBwd_Click);
-            // 
-            // buttonM5ClampFwd
-            // 
-            resources.ApplyResources(this.buttonM5ClampFwd, "buttonM5ClampFwd");
-            this.buttonM5ClampFwd.Name = "buttonM5ClampFwd";
-            this.buttonM5ClampFwd.UseVisualStyleBackColor = true;
-            this.buttonM5ClampFwd.Click += new System.EventHandler(this.buttonM5ClampFwd_Click);
-            // 
-            // buttonM5TranslatorBwd
-            // 
-            resources.ApplyResources(this.buttonM5TranslatorBwd, "buttonM5TranslatorBwd");
-            this.buttonM5TranslatorBwd.Name = "buttonM5TranslatorBwd";
-            this.buttonM5TranslatorBwd.UseVisualStyleBackColor = true;
-            this.buttonM5TranslatorBwd.Click += new System.EventHandler(this.buttonM5TranslatorBwd_Click);
-            // 
-            // buttonM5TranslatorFwd
-            // 
-            resources.ApplyResources(this.buttonM5TranslatorFwd, "buttonM5TranslatorFwd");
-            this.buttonM5TranslatorFwd.Name = "buttonM5TranslatorFwd";
-            this.buttonM5TranslatorFwd.UseVisualStyleBackColor = true;
-            this.buttonM5TranslatorFwd.Click += new System.EventHandler(this.buttonM5TranslatorFwd_Click);
             // 
             // TabPageDiagnostic
             // 
@@ -5456,8 +5456,8 @@ namespace GUI
             this.tabPageSettings.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControlT5)).EndInit();
             this.tabControlT5.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             this.tabPageT5M5_1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.TabPageDiagnostic.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControl1)).EndInit();
             this.tabControl1.ResumeLayout(false);

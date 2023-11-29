@@ -867,7 +867,14 @@
             this.contextMenuStripT1_1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemT1_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT1_1 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripMenuItemT1_1Keyboard = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonM1BlockOpening = new System.Windows.Forms.Button();
+            this.buttonM1CutOpening = new System.Windows.Forms.Button();
+            this.buttonM1BlockClosing = new System.Windows.Forms.Button();
+            this.buttonM1CutClosing = new System.Windows.Forms.Button();
+            this.buttonM1SpringsOpening = new System.Windows.Forms.Button();
             this.checkBoxM1LoadingBelt = new System.Windows.Forms.CheckBox();
+            this.buttonM1SpringsClosing = new System.Windows.Forms.Button();
             this.groupBoxM1Varius = new System.Windows.Forms.GroupBox();
             this.buttonM1PosV2Down = new System.Windows.Forms.Button();
             this.imageListVAxes = new System.Windows.Forms.ImageList(this.components);
@@ -882,22 +889,9 @@
             this.checkBoxM1CuttingMotor = new System.Windows.Forms.CheckBox();
             this.buttonM1CutSlideForward = new System.Windows.Forms.Button();
             this.buttonM1CutSlideBackward = new System.Windows.Forms.Button();
-            this.groupBoxM1Block = new System.Windows.Forms.GroupBox();
-            this.buttonM1BlockOpening = new System.Windows.Forms.Button();
-            this.buttonM1BlockClosing = new System.Windows.Forms.Button();
-            this.lbLed16 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.groupBoxM1Cut = new System.Windows.Forms.GroupBox();
-            this.buttonM1CutOpening = new System.Windows.Forms.Button();
-            this.buttonM1CutClosing = new System.Windows.Forms.Button();
-            this.lbLed15 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonM1SpringsOpening = new System.Windows.Forms.Button();
-            this.buttonM1SpringsClosing = new System.Windows.Forms.Button();
-            this.lbLed14 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.groupBoxM1Servo = new System.Windows.Forms.GroupBox();
             this.buttonM1ResetServo = new System.Windows.Forms.Button();
             this.lbLed13 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.checkBoxM1ExitBelt = new System.Windows.Forms.CheckBox();
             this.checkBoxM1WorkingBelt = new System.Windows.Forms.CheckBox();
             this.groupBoxM1Homing = new System.Windows.Forms.GroupBox();
@@ -935,6 +929,7 @@
             this.contextMenuStripT1_2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemT1_2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT1_2 = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripMenuItemT1_2Keyboard = new System.Windows.Forms.ToolStripMenuItem();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.labelM1Timeout = new System.Windows.Forms.Label();
             this.buttonM1StartTest = new System.Windows.Forms.Button();
@@ -1135,9 +1130,6 @@
             this.contextMenuStripT1_1.SuspendLayout();
             this.groupBoxM1Varius.SuspendLayout();
             this.groupBoxM1CutSlide.SuspendLayout();
-            this.groupBoxM1Block.SuspendLayout();
-            this.groupBoxM1Cut.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBoxM1Servo.SuspendLayout();
             this.groupBoxM1Homing.SuspendLayout();
             this.groupBoxM1StartQuote.SuspendLayout();
@@ -9208,7 +9200,7 @@
             tabPageFormatStyle21.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle21.Padding = new System.Windows.Forms.Padding(5);
             this.tabPageT0_1.FormatStyle = tabPageFormatStyle21;
-            this.tabPageT0_1.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT0_1.Location = new System.Drawing.Point(0, 0);
             this.tabPageT0_1.Name = "tabPageT0_1";
             tabPageColorStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle42.BackFadeColor = System.Drawing.Color.Transparent;
@@ -9225,14 +9217,14 @@
             tabPageColorStyle52.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle52.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT0_1.SelectedStyle = tabPageColorStyle52;
-            this.tabPageT0_1.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT0_1.Size = new System.Drawing.Size(0, 0);
             this.tabPageT0_1.StyleFromParent = false;
             this.tabPageT0_1.TabIndex = 1;
             this.tabPageT0_1.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabPageT0_1.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Bottom;
             this.tabPageT0_1.Text = "automatic";
             this.tabPageT0_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_1.TextBounds")));
-            this.tabPageT0_1.TextSize = new System.Drawing.SizeF(87.68488F, 21.44531F);
+            this.tabPageT0_1.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT0_1.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT0
@@ -9323,7 +9315,7 @@
             this.dataGridViewMessages.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewMessages.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridViewMessages.EnableHeadersVisualStyles = false;
-            this.dataGridViewMessages.Location = new System.Drawing.Point(0, 563);
+            this.dataGridViewMessages.Location = new System.Drawing.Point(0, -153);
             this.dataGridViewMessages.MultiSelect = false;
             this.dataGridViewMessages.Name = "dataGridViewMessages";
             this.dataGridViewMessages.ReadOnly = true;
@@ -9346,7 +9338,7 @@
             this.dataGridViewMessages.RowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridViewMessages.RowTemplate.Height = 24;
             this.dataGridViewMessages.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridViewMessages.Size = new System.Drawing.Size(914, 100);
+            this.dataGridViewMessages.Size = new System.Drawing.Size(0, 100);
             this.dataGridViewMessages.TabIndex = 141;
             // 
             // datetime
@@ -9388,9 +9380,9 @@
             // 
             this.statusStripSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(190)))), ((int)(((byte)(186)))));
             this.statusStripSeparator.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusStripSeparator.Location = new System.Drawing.Point(0, 663);
+            this.statusStripSeparator.Location = new System.Drawing.Point(0, -53);
             this.statusStripSeparator.Name = "statusStripSeparator";
-            this.statusStripSeparator.Size = new System.Drawing.Size(914, 22);
+            this.statusStripSeparator.Size = new System.Drawing.Size(0, 22);
             this.statusStripSeparator.SizingGrip = false;
             this.statusStripSeparator.TabIndex = 140;
             // 
@@ -9403,9 +9395,9 @@
             this.toolStripStatusLabelSN,
             this.toolStripStatusLabelDateTime,
             this.toolStripStatusLabelSystem});
-            this.statusStripT0.Location = new System.Drawing.Point(0, 685);
+            this.statusStripT0.Location = new System.Drawing.Point(0, -31);
             this.statusStripT0.Name = "statusStripT0";
-            this.statusStripT0.Size = new System.Drawing.Size(914, 31);
+            this.statusStripT0.Size = new System.Drawing.Size(0, 31);
             this.statusStripT0.SizingGrip = false;
             this.statusStripT0.TabIndex = 139;
             // 
@@ -9414,7 +9406,7 @@
             this.toolStripStatusLabelSN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.toolStripStatusLabelSN.Name = "toolStripStatusLabelSN";
             this.toolStripStatusLabelSN.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.toolStripStatusLabelSN.Size = new System.Drawing.Size(51, 26);
+            this.toolStripStatusLabelSN.Size = new System.Drawing.Size(51, 16);
             this.toolStripStatusLabelSN.Text = "S/N";
             // 
             // toolStripStatusLabelDateTime
@@ -9432,7 +9424,7 @@
             // 
             this.toolStripStatusLabelSystem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.toolStripStatusLabelSystem.Name = "toolStripStatusLabelSystem";
-            this.toolStripStatusLabelSystem.Size = new System.Drawing.Size(99, 26);
+            this.toolStripStatusLabelSystem.Size = new System.Drawing.Size(99, 16);
             this.toolStripStatusLabelSystem.Text = "system offline";
             // 
             // checkBoxPause
@@ -10729,7 +10721,7 @@
             tabPageFormatStyle23.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle23.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT0_2.FormatStyle = tabPageFormatStyle23;
-            this.tabPageT0_2.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT0_2.Location = new System.Drawing.Point(0, 0);
             this.tabPageT0_2.Name = "tabPageT0_2";
             tabPageColorStyle45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle45.BackFadeColor = System.Drawing.Color.Transparent;
@@ -10749,13 +10741,13 @@
             tabPageColorStyle48.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle48.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT0_2.SelectedStyle = tabPageColorStyle48;
-            this.tabPageT0_2.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT0_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT0_2.StyleFromParent = false;
             this.tabPageT0_2.TabIndex = 2;
             this.tabPageT0_2.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Left;
             this.tabPageT0_2.Text = "recipies";
             this.tabPageT0_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2.TextBounds")));
-            this.tabPageT0_2.TextSize = new System.Drawing.SizeF(68.48957F, 21.44531F);
+            this.tabPageT0_2.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT0_2.UseParentTabStripPlacement = false;
             // 
             // textBoxManageD4Param4
@@ -11777,7 +11769,7 @@
             tabPageFormatStyle26.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle26.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT0_3.FormatStyle = tabPageFormatStyle26;
-            this.tabPageT0_3.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT0_3.Location = new System.Drawing.Point(0, 0);
             this.tabPageT0_3.Name = "tabPageT0_3";
             tabPageColorStyle49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle49.BackFadeColor = System.Drawing.Color.Transparent;
@@ -11794,14 +11786,14 @@
             tabPageColorStyle50.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle50.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT0_3.SelectedStyle = tabPageColorStyle50;
-            this.tabPageT0_3.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT0_3.Size = new System.Drawing.Size(0, 0);
             this.tabPageT0_3.StyleFromParent = false;
             this.tabPageT0_3.TabIndex = 3;
             this.tabPageT0_3.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabPageT0_3.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Bottom;
             this.tabPageT0_3.Text = "nodes";
             this.tabPageT0_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_3.TextBounds")));
-            this.tabPageT0_3.TextSize = new System.Drawing.SizeF(54.43489F, 21.44531F);
+            this.tabPageT0_3.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT0_3.UseParentTabStripPlacement = false;
             this.tabPageT0_3.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageT0_3_Paint);
             // 
@@ -12154,14 +12146,14 @@
             this.tabPage2.Controls.Add(this.label5);
             tabPageFormatStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.FormatStyle = tabPageFormatStyle27;
-            this.tabPage2.Location = new System.Drawing.Point(96, 36);
+            this.tabPage2.Location = new System.Drawing.Point(0, 0);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.ParentPage = this.tabPageT0;
-            this.tabPage2.Size = new System.Drawing.Size(914, 716);
+            this.tabPage2.Size = new System.Drawing.Size(0, 0);
             this.tabPage2.TabIndex = 27;
             this.tabPage2.Text = "diagnostics";
             this.tabPage2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage2.TextBounds")));
-            this.tabPage2.TextSize = new System.Drawing.SizeF(97.48957F, 21.44531F);
+            this.tabPage2.TextSize = new System.Drawing.SizeF(0F, 0F);
             // 
             // labelM5ExitBelt3State
             // 
@@ -12562,14 +12554,16 @@
             // tabPageT1_1
             // 
             this.tabPageT1_1.ContextMenuStrip = this.contextMenuStripT1_1;
+            this.tabPageT1_1.Controls.Add(this.buttonM1BlockOpening);
+            this.tabPageT1_1.Controls.Add(this.buttonM1CutOpening);
+            this.tabPageT1_1.Controls.Add(this.buttonM1BlockClosing);
+            this.tabPageT1_1.Controls.Add(this.buttonM1CutClosing);
+            this.tabPageT1_1.Controls.Add(this.buttonM1SpringsOpening);
             this.tabPageT1_1.Controls.Add(this.checkBoxM1LoadingBelt);
+            this.tabPageT1_1.Controls.Add(this.buttonM1SpringsClosing);
             this.tabPageT1_1.Controls.Add(this.groupBoxM1Varius);
             this.tabPageT1_1.Controls.Add(this.groupBoxM1CutSlide);
-            this.tabPageT1_1.Controls.Add(this.groupBoxM1Block);
-            this.tabPageT1_1.Controls.Add(this.groupBoxM1Cut);
-            this.tabPageT1_1.Controls.Add(this.groupBox1);
             this.tabPageT1_1.Controls.Add(this.groupBoxM1Servo);
-            this.tabPageT1_1.Controls.Add(this.textBox2);
             this.tabPageT1_1.Controls.Add(this.checkBoxM1ExitBelt);
             this.tabPageT1_1.Controls.Add(this.checkBoxM1WorkingBelt);
             this.tabPageT1_1.Controls.Add(this.groupBoxM1Homing);
@@ -12584,7 +12578,7 @@
             tabPageFormatStyle28.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle28.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT1_1.FormatStyle = tabPageFormatStyle28;
-            this.tabPageT1_1.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT1_1.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1_1.Name = "tabPageT1_1";
             tabPageColorStyle53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle53.BackFadeColor = System.Drawing.Color.Transparent;
@@ -12601,12 +12595,12 @@
             tabPageColorStyle63.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle63.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_1.SelectedStyle = tabPageColorStyle63;
-            this.tabPageT1_1.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT1_1.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1_1.StyleFromParent = false;
             this.tabPageT1_1.TabIndex = 5;
             this.tabPageT1_1.Text = "teach";
             this.tabPageT1_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_1.TextBounds")));
-            this.tabPageT1_1.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT1_1.TextSize = new System.Drawing.SizeF(50.55989F, 21.44531F);
             this.tabPageT1_1.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT1_1
@@ -12614,9 +12608,10 @@
             this.contextMenuStripT1_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.contextMenuStripT1_1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contextMenuStripT1_1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemT1_1});
+            this.toolStripMenuItemT1_1,
+            this.toolStripMenuItemT1_1Keyboard});
             this.contextMenuStripT1_1.Name = "contextMenuStrip1";
-            this.contextMenuStripT1_1.Size = new System.Drawing.Size(177, 26);
+            this.contextMenuStripT1_1.Size = new System.Drawing.Size(177, 48);
             this.contextMenuStripT1_1.Text = "recipe name";
             // 
             // toolStripMenuItemT1_1
@@ -12636,6 +12631,74 @@
             this.toolStripComboBoxT1_1.IntegralHeight = false;
             this.toolStripComboBoxT1_1.Name = "toolStripComboBoxT1_1";
             this.toolStripComboBoxT1_1.Size = new System.Drawing.Size(120, 26);
+            this.toolStripComboBoxT1_1.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBoxT1_1_SelectedIndexChanged);
+            // 
+            // toolStripMenuItemT1_1Keyboard
+            // 
+            this.toolStripMenuItemT1_1Keyboard.Name = "toolStripMenuItemT1_1Keyboard";
+            this.toolStripMenuItemT1_1Keyboard.Size = new System.Drawing.Size(176, 22);
+            this.toolStripMenuItemT1_1Keyboard.Text = "keyboard";
+            this.toolStripMenuItemT1_1Keyboard.Click += new System.EventHandler(this.toolStripMenuItemT1_1Keyboard_Click);
+            // 
+            // buttonM1BlockOpening
+            // 
+            this.buttonM1BlockOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1BlockOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1BlockOpening.Location = new System.Drawing.Point(430, 335);
+            this.buttonM1BlockOpening.Name = "buttonM1BlockOpening";
+            this.buttonM1BlockOpening.Size = new System.Drawing.Size(160, 48);
+            this.buttonM1BlockOpening.TabIndex = 143;
+            this.buttonM1BlockOpening.Text = "block clamp opening";
+            this.buttonM1BlockOpening.UseVisualStyleBackColor = true;
+            this.buttonM1BlockOpening.Click += new System.EventHandler(this.buttonM1BlockOpening_Click);
+            // 
+            // buttonM1CutOpening
+            // 
+            this.buttonM1CutOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1CutOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1CutOpening.Location = new System.Drawing.Point(220, 335);
+            this.buttonM1CutOpening.Name = "buttonM1CutOpening";
+            this.buttonM1CutOpening.Size = new System.Drawing.Size(160, 48);
+            this.buttonM1CutOpening.TabIndex = 143;
+            this.buttonM1CutOpening.Text = "cut clamp opening";
+            this.buttonM1CutOpening.UseVisualStyleBackColor = true;
+            this.buttonM1CutOpening.Click += new System.EventHandler(this.buttonM1CutOpening_Click);
+            // 
+            // buttonM1BlockClosing
+            // 
+            this.buttonM1BlockClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1BlockClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1BlockClosing.Location = new System.Drawing.Point(430, 400);
+            this.buttonM1BlockClosing.Name = "buttonM1BlockClosing";
+            this.buttonM1BlockClosing.Size = new System.Drawing.Size(160, 48);
+            this.buttonM1BlockClosing.TabIndex = 144;
+            this.buttonM1BlockClosing.Text = "block clamp closing";
+            this.buttonM1BlockClosing.UseVisualStyleBackColor = true;
+            this.buttonM1BlockClosing.Click += new System.EventHandler(this.buttonM1BlockClosing_Click);
+            // 
+            // buttonM1CutClosing
+            // 
+            this.buttonM1CutClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1CutClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1CutClosing.Location = new System.Drawing.Point(220, 400);
+            this.buttonM1CutClosing.Name = "buttonM1CutClosing";
+            this.buttonM1CutClosing.Size = new System.Drawing.Size(160, 48);
+            this.buttonM1CutClosing.TabIndex = 144;
+            this.buttonM1CutClosing.Text = "cut clamp closing";
+            this.buttonM1CutClosing.UseVisualStyleBackColor = true;
+            this.buttonM1CutClosing.Click += new System.EventHandler(this.buttonM1CutClosing_Click);
+            // 
+            // buttonM1SpringsOpening
+            // 
+            this.buttonM1SpringsOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1SpringsOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1SpringsOpening.Location = new System.Drawing.Point(10, 335);
+            this.buttonM1SpringsOpening.Name = "buttonM1SpringsOpening";
+            this.buttonM1SpringsOpening.Size = new System.Drawing.Size(160, 48);
+            this.buttonM1SpringsOpening.TabIndex = 141;
+            this.buttonM1SpringsOpening.Text = "springs clamp opening";
+            this.buttonM1SpringsOpening.UseVisualStyleBackColor = true;
+            this.buttonM1SpringsOpening.Click += new System.EventHandler(this.buttonM1SpringsOpening_Click);
             // 
             // checkBoxM1LoadingBelt
             // 
@@ -12655,6 +12718,18 @@
             this.checkBoxM1LoadingBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.checkBoxM1LoadingBelt.UseVisualStyleBackColor = true;
             this.checkBoxM1LoadingBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM1LoadingBelt_CheckStateChanged);
+            // 
+            // buttonM1SpringsClosing
+            // 
+            this.buttonM1SpringsClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1SpringsClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1SpringsClosing.Location = new System.Drawing.Point(10, 400);
+            this.buttonM1SpringsClosing.Name = "buttonM1SpringsClosing";
+            this.buttonM1SpringsClosing.Size = new System.Drawing.Size(160, 48);
+            this.buttonM1SpringsClosing.TabIndex = 142;
+            this.buttonM1SpringsClosing.Text = "springs clamp closing";
+            this.buttonM1SpringsClosing.UseVisualStyleBackColor = true;
+            this.buttonM1SpringsClosing.Click += new System.EventHandler(this.buttonM1SpringsClosing_Click);
             // 
             // groupBoxM1Varius
             // 
@@ -12876,174 +12951,6 @@
             this.buttonM1CutSlideBackward.UseVisualStyleBackColor = true;
             this.buttonM1CutSlideBackward.Click += new System.EventHandler(this.buttonM1CutSlideBackward_Click);
             // 
-            // groupBoxM1Block
-            // 
-            this.groupBoxM1Block.Controls.Add(this.buttonM1BlockOpening);
-            this.groupBoxM1Block.Controls.Add(this.buttonM1BlockClosing);
-            this.groupBoxM1Block.Controls.Add(this.lbLed16);
-            this.groupBoxM1Block.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxM1Block.Location = new System.Drawing.Point(400, 370);
-            this.groupBoxM1Block.Name = "groupBoxM1Block";
-            this.groupBoxM1Block.Size = new System.Drawing.Size(190, 120);
-            this.groupBoxM1Block.TabIndex = 301;
-            this.groupBoxM1Block.TabStop = false;
-            this.groupBoxM1Block.Text = "block clamp";
-            // 
-            // buttonM1BlockOpening
-            // 
-            this.buttonM1BlockOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1BlockOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1BlockOpening.Location = new System.Drawing.Point(10, 20);
-            this.buttonM1BlockOpening.Name = "buttonM1BlockOpening";
-            this.buttonM1BlockOpening.Size = new System.Drawing.Size(80, 48);
-            this.buttonM1BlockOpening.TabIndex = 143;
-            this.buttonM1BlockOpening.Text = "opening";
-            this.buttonM1BlockOpening.UseVisualStyleBackColor = true;
-            this.buttonM1BlockOpening.Click += new System.EventHandler(this.buttonM1BlockOpening_Click);
-            // 
-            // buttonM1BlockClosing
-            // 
-            this.buttonM1BlockClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1BlockClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1BlockClosing.Location = new System.Drawing.Point(100, 18);
-            this.buttonM1BlockClosing.Name = "buttonM1BlockClosing";
-            this.buttonM1BlockClosing.Size = new System.Drawing.Size(80, 48);
-            this.buttonM1BlockClosing.TabIndex = 144;
-            this.buttonM1BlockClosing.Text = "closing";
-            this.buttonM1BlockClosing.UseVisualStyleBackColor = true;
-            this.buttonM1BlockClosing.Click += new System.EventHandler(this.buttonM1BlockClosing_Click);
-            // 
-            // lbLed16
-            // 
-            this.lbLed16.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed16.BlinkInterval = 500;
-            this.lbLed16.Enabled = false;
-            this.lbLed16.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.lbLed16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed16.Label = "block closed";
-            this.lbLed16.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed16.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed16.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed16.Location = new System.Drawing.Point(20, 80);
-            this.lbLed16.Name = "lbLed16";
-            this.lbLed16.Renderer = null;
-            this.lbLed16.Size = new System.Drawing.Size(120, 24);
-            this.lbLed16.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed16.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            this.lbLed16.TabIndex = 263;
-            // 
-            // groupBoxM1Cut
-            // 
-            this.groupBoxM1Cut.Controls.Add(this.buttonM1CutOpening);
-            this.groupBoxM1Cut.Controls.Add(this.buttonM1CutClosing);
-            this.groupBoxM1Cut.Controls.Add(this.lbLed15);
-            this.groupBoxM1Cut.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxM1Cut.Location = new System.Drawing.Point(205, 370);
-            this.groupBoxM1Cut.Name = "groupBoxM1Cut";
-            this.groupBoxM1Cut.Size = new System.Drawing.Size(190, 120);
-            this.groupBoxM1Cut.TabIndex = 300;
-            this.groupBoxM1Cut.TabStop = false;
-            this.groupBoxM1Cut.Text = "cut clamp";
-            // 
-            // buttonM1CutOpening
-            // 
-            this.buttonM1CutOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1CutOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1CutOpening.Location = new System.Drawing.Point(10, 20);
-            this.buttonM1CutOpening.Name = "buttonM1CutOpening";
-            this.buttonM1CutOpening.Size = new System.Drawing.Size(80, 48);
-            this.buttonM1CutOpening.TabIndex = 143;
-            this.buttonM1CutOpening.Text = "opening";
-            this.buttonM1CutOpening.UseVisualStyleBackColor = true;
-            this.buttonM1CutOpening.Click += new System.EventHandler(this.buttonM1CutOpening_Click);
-            // 
-            // buttonM1CutClosing
-            // 
-            this.buttonM1CutClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1CutClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1CutClosing.Location = new System.Drawing.Point(100, 20);
-            this.buttonM1CutClosing.Name = "buttonM1CutClosing";
-            this.buttonM1CutClosing.Size = new System.Drawing.Size(80, 48);
-            this.buttonM1CutClosing.TabIndex = 144;
-            this.buttonM1CutClosing.Text = "closing";
-            this.buttonM1CutClosing.UseVisualStyleBackColor = true;
-            this.buttonM1CutClosing.Click += new System.EventHandler(this.buttonM1CutClosing_Click);
-            // 
-            // lbLed15
-            // 
-            this.lbLed15.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed15.BlinkInterval = 500;
-            this.lbLed15.Enabled = false;
-            this.lbLed15.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.lbLed15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed15.Label = "cut closed";
-            this.lbLed15.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed15.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed15.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed15.Location = new System.Drawing.Point(20, 80);
-            this.lbLed15.Name = "lbLed15";
-            this.lbLed15.Renderer = null;
-            this.lbLed15.Size = new System.Drawing.Size(120, 24);
-            this.lbLed15.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed15.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            this.lbLed15.TabIndex = 263;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.buttonM1SpringsOpening);
-            this.groupBox1.Controls.Add(this.buttonM1SpringsClosing);
-            this.groupBox1.Controls.Add(this.lbLed14);
-            this.groupBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(10, 370);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(190, 120);
-            this.groupBox1.TabIndex = 299;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "springs clamp";
-            // 
-            // buttonM1SpringsOpening
-            // 
-            this.buttonM1SpringsOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1SpringsOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1SpringsOpening.Location = new System.Drawing.Point(10, 20);
-            this.buttonM1SpringsOpening.Name = "buttonM1SpringsOpening";
-            this.buttonM1SpringsOpening.Size = new System.Drawing.Size(80, 48);
-            this.buttonM1SpringsOpening.TabIndex = 141;
-            this.buttonM1SpringsOpening.Text = "opening";
-            this.buttonM1SpringsOpening.UseVisualStyleBackColor = true;
-            this.buttonM1SpringsOpening.Click += new System.EventHandler(this.buttonM1SpringsOpening_Click);
-            // 
-            // buttonM1SpringsClosing
-            // 
-            this.buttonM1SpringsClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1SpringsClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1SpringsClosing.Location = new System.Drawing.Point(100, 20);
-            this.buttonM1SpringsClosing.Name = "buttonM1SpringsClosing";
-            this.buttonM1SpringsClosing.Size = new System.Drawing.Size(80, 48);
-            this.buttonM1SpringsClosing.TabIndex = 142;
-            this.buttonM1SpringsClosing.Text = "closing";
-            this.buttonM1SpringsClosing.UseVisualStyleBackColor = true;
-            this.buttonM1SpringsClosing.Click += new System.EventHandler(this.buttonM1SpringsClosing_Click);
-            // 
-            // lbLed14
-            // 
-            this.lbLed14.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed14.BlinkInterval = 500;
-            this.lbLed14.Enabled = false;
-            this.lbLed14.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.lbLed14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed14.Label = "springs closed";
-            this.lbLed14.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed14.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed14.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed14.Location = new System.Drawing.Point(20, 80);
-            this.lbLed14.Name = "lbLed14";
-            this.lbLed14.Renderer = null;
-            this.lbLed14.Size = new System.Drawing.Size(120, 24);
-            this.lbLed14.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed14.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            this.lbLed14.TabIndex = 264;
-            // 
             // groupBoxM1Servo
             // 
             this.groupBoxM1Servo.Controls.Add(this.buttonM1ResetServo);
@@ -13086,18 +12993,6 @@
             this.lbLed13.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
             this.lbLed13.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
             this.lbLed13.TabIndex = 288;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(190)))), ((int)(((byte)(186)))));
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(133)))), ((int)(((byte)(46)))));
-            this.textBox2.Location = new System.Drawing.Point(10, 340);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(580, 27);
-            this.textBox2.TabIndex = 297;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // checkBoxM1ExitBelt
             // 
@@ -13461,6 +13356,7 @@
             this.dataGridViewM1TeachPoints.Size = new System.Drawing.Size(580, 220);
             this.dataGridViewM1TeachPoints.TabIndex = 144;
             this.dataGridViewM1TeachPoints.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM1TeachPoints_CellContentClick);
+            this.dataGridViewM1TeachPoints.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridViewM1TeachPoints_CellPainting);
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -13639,7 +13535,7 @@
             tabPageFormatStyle30.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle30.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT1_2.FormatStyle = tabPageFormatStyle30;
-            this.tabPageT1_2.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT1_2.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1_2.Name = "tabPageT1_2";
             tabPageColorStyle56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle56.BackFadeColor = System.Drawing.Color.Transparent;
@@ -13656,12 +13552,12 @@
             tabPageColorStyle57.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle57.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_2.SelectedStyle = tabPageColorStyle57;
-            this.tabPageT1_2.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT1_2.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1_2.StyleFromParent = false;
             this.tabPageT1_2.TabIndex = 8;
             this.tabPageT1_2.Text = "test";
             this.tabPageT1_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_2.TextBounds")));
-            this.tabPageT1_2.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT1_2.TextSize = new System.Drawing.SizeF(36.72395F, 21.44531F);
             this.tabPageT1_2.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT1_2
@@ -13669,9 +13565,10 @@
             this.contextMenuStripT1_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.contextMenuStripT1_2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contextMenuStripT1_2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemT1_2});
+            this.toolStripMenuItemT1_2,
+            this.toolStripMenuItemT1_2Keyboard});
             this.contextMenuStripT1_2.Name = "contextMenuStrip1";
-            this.contextMenuStripT1_2.Size = new System.Drawing.Size(177, 26);
+            this.contextMenuStripT1_2.Size = new System.Drawing.Size(177, 48);
             this.contextMenuStripT1_2.Text = "recipe name";
             // 
             // toolStripMenuItemT1_2
@@ -13691,6 +13588,14 @@
             this.toolStripComboBoxT1_2.IntegralHeight = false;
             this.toolStripComboBoxT1_2.Name = "toolStripComboBoxT1_2";
             this.toolStripComboBoxT1_2.Size = new System.Drawing.Size(120, 26);
+            this.toolStripComboBoxT1_2.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBoxT1_2_SelectedIndexChanged);
+            // 
+            // toolStripMenuItemT1_2Keyboard
+            // 
+            this.toolStripMenuItemT1_2Keyboard.Name = "toolStripMenuItemT1_2Keyboard";
+            this.toolStripMenuItemT1_2Keyboard.Size = new System.Drawing.Size(176, 22);
+            this.toolStripMenuItemT1_2Keyboard.Text = "keyboard";
+            this.toolStripMenuItemT1_2Keyboard.Click += new System.EventHandler(this.toolStripMenuItemT1_2Keyboard_Click);
             // 
             // numericUpDown1
             // 
@@ -13915,7 +13820,7 @@
             tabPageFormatStyle31.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle31.Padding = new System.Windows.Forms.Padding(17, 5, 17, 5);
             this.tabPageT1_3.FormatStyle = tabPageFormatStyle31;
-            this.tabPageT1_3.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT1_3.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1_3.Name = "tabPageT1_3";
             tabPageColorStyle58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle58.BackFadeColor = System.Drawing.Color.Transparent;
@@ -13932,12 +13837,12 @@
             tabPageColorStyle59.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle59.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_3.SelectedStyle = tabPageColorStyle59;
-            this.tabPageT1_3.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT1_3.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1_3.StyleFromParent = false;
             this.tabPageT1_3.TabIndex = 6;
             this.tabPageT1_3.Text = "input";
             this.tabPageT1_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_3.TextBounds")));
-            this.tabPageT1_3.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT1_3.TextSize = new System.Drawing.SizeF(47.47395F, 21.44531F);
             // 
             // lbLed1040M1
             // 
@@ -14923,7 +14828,7 @@
             tabPageFormatStyle32.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle32.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.tabPageT1_4.FormatStyle = tabPageFormatStyle32;
-            this.tabPageT1_4.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT1_4.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1_4.Name = "tabPageT1_4";
             tabPageColorStyle60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle60.BackFadeColor = System.Drawing.Color.Transparent;
@@ -14940,12 +14845,12 @@
             tabPageColorStyle61.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle61.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_4.SelectedStyle = tabPageColorStyle61;
-            this.tabPageT1_4.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT1_4.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1_4.StyleFromParent = false;
             this.tabPageT1_4.TabIndex = 7;
             this.tabPageT1_4.Text = "output";
             this.tabPageT1_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_4.TextBounds")));
-            this.tabPageT1_4.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT1_4.TextSize = new System.Drawing.SizeF(59.4427F, 21.44531F);
             // 
             // lbLed2040M1
             // 
@@ -15865,7 +15770,7 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageT0_1);
+            this.tabControlMain.Controls.Add(this.tabPageT1_1);
             this.tabControlMain.Controls.Add(this.tabPageT7);
             this.tabControlMain.Controls.Add(this.tabPageT6);
             this.tabControlMain.Controls.Add(this.tabPageT5);
@@ -15874,12 +15779,12 @@
             this.tabControlMain.Controls.Add(this.tabPageT2);
             this.tabControlMain.Controls.Add(this.tabPageT1);
             this.tabControlMain.Controls.Add(this.tabPageT0);
+            this.tabControlMain.Controls.Add(this.tabPageT0_1);
             this.tabControlMain.Controls.Add(this.tabPageT0_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_3);
             this.tabControlMain.Controls.Add(this.tabPage2);
-            this.tabControlMain.Controls.Add(this.tabPageT1_1);
             this.tabControlMain.Controls.Add(this.tabPageT1_2);
             this.tabControlMain.Controls.Add(this.tabPageT1_3);
             this.tabControlMain.Controls.Add(this.tabPageT1_4);
@@ -15933,7 +15838,7 @@
             this.tabPageT6,
             this.tabPageT7});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageT0_1;
+            this.tabControlMain.SelectedPage = this.tabPageT1_1;
             tabPageColorStyle65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle65.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle65.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
@@ -16123,9 +16028,6 @@
             this.groupBoxM1Varius.ResumeLayout(false);
             this.groupBoxM1CutSlide.ResumeLayout(false);
             this.groupBoxM1CutSlide.PerformLayout();
-            this.groupBoxM1Block.ResumeLayout(false);
-            this.groupBoxM1Cut.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
             this.groupBoxM1Servo.ResumeLayout(false);
             this.groupBoxM1Homing.ResumeLayout(false);
             this.groupBoxM1Homing.PerformLayout();
@@ -16603,7 +16505,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDownM1ManualSpeed;
         private System.Windows.Forms.CheckBox checkBoxM1ExitBelt;
         private System.Windows.Forms.CheckBox checkBoxM1WorkingBelt;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.GroupBox groupBoxM1Servo;
         private System.Windows.Forms.Button buttonM1ResetServo;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed13;
@@ -16616,21 +16517,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.ComboBox comboBoxM1TestProgramList;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button buttonM1SpringsOpening;
         private System.Windows.Forms.Button buttonM1SpringsClosing;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed14;
-        private System.Windows.Forms.GroupBox groupBoxM1Cut;
         private System.Windows.Forms.Button buttonM1CutOpening;
         private System.Windows.Forms.Button buttonM1CutClosing;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed15;
         private System.Windows.Forms.GroupBox groupBoxM1CutSlide;
         private System.Windows.Forms.Button buttonM1CutSlideForward;
         private System.Windows.Forms.Button buttonM1CutSlideBackward;
-        private System.Windows.Forms.GroupBox groupBoxM1Block;
         private System.Windows.Forms.Button buttonM1BlockOpening;
         private System.Windows.Forms.Button buttonM1BlockClosing;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed16;
         private System.Windows.Forms.GroupBox groupBoxM1Varius;
         private System.Windows.Forms.Button buttonM1Sharpening;
         private System.Windows.Forms.CheckBox checkBoxM1CuttingSuction;
@@ -17023,5 +16918,7 @@
         private LidorSystems.IntegralUI.Containers.TabPage tabPage4;
         private System.Windows.Forms.Label labelM5OnPercentage;
         private System.Windows.Forms.NumericUpDown numericUpDownM6OnPercentage;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT1_1Keyboard;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT1_2Keyboard;
     }
 }

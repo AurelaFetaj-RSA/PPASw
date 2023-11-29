@@ -23,5 +23,8 @@
     <Setting Name="ImagesFilepath" Type="System.String" Scope="User">
       <Value Profile="(Default)">C:\RSA\github_repositories\PPASw\src\GUI\images</Value>
     </Setting>
+    <Setting Name="OpcSimulation" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
