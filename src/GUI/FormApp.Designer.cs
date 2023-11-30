@@ -924,7 +924,7 @@
             this.toolStripMenuItemT1_2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT1_2 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripMenuItemT1_2Keyboard = new System.Windows.Forms.ToolStripMenuItem();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownM1BootDelayTest = new System.Windows.Forms.NumericUpDown();
             this.labelM1Timeout = new System.Windows.Forms.Label();
             this.buttonM1StartTest = new System.Windows.Forms.Button();
             this.buttonM1TestSaveProgram = new System.Windows.Forms.Button();
@@ -1037,6 +1037,8 @@
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
             this.imageListMainControl = new System.Windows.Forms.ImageList(this.components);
             this.imageListNodes = new System.Windows.Forms.ImageList(this.components);
+            this.numericUpDownM1TimerBootTeach = new System.Windows.Forms.NumericUpDown();
+            this.labelM1TeachBootDelay = new System.Windows.Forms.Label();
             this.tabPageT3_1.SuspendLayout();
             this.contextMenuStripT3_1.SuspendLayout();
             this.groupBoxM2Print.SuspendLayout();
@@ -1128,12 +1130,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM1TeachPoints)).BeginInit();
             this.tabPageT1_2.SuspendLayout();
             this.contextMenuStripT1_2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1BootDelayTest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM1TestPoints)).BeginInit();
             this.tabPageT1_3.SuspendLayout();
             this.tabPageT1_4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).BeginInit();
             this.tabControlMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1TimerBootTeach)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPageT3_1
@@ -9394,7 +9397,7 @@
             this.toolStripStatusLabelSN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.toolStripStatusLabelSN.Name = "toolStripStatusLabelSN";
             this.toolStripStatusLabelSN.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.toolStripStatusLabelSN.Size = new System.Drawing.Size(51, 16);
+            this.toolStripStatusLabelSN.Size = new System.Drawing.Size(51, 26);
             this.toolStripStatusLabelSN.Text = "S/N";
             // 
             // toolStripStatusLabelDateTime
@@ -9412,7 +9415,7 @@
             // 
             this.toolStripStatusLabelSystem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.toolStripStatusLabelSystem.Name = "toolStripStatusLabelSystem";
-            this.toolStripStatusLabelSystem.Size = new System.Drawing.Size(99, 16);
+            this.toolStripStatusLabelSystem.Size = new System.Drawing.Size(99, 26);
             this.toolStripStatusLabelSystem.Text = "system offline";
             // 
             // checkBoxPause
@@ -12159,7 +12162,7 @@
             this.labelM5ExitBelt2State.AutoSize = true;
             this.labelM5ExitBelt2State.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelM5ExitBelt2State.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM5ExitBelt2State.Location = new System.Drawing.Point(542, 187);
+            this.labelM5ExitBelt2State.Location = new System.Drawing.Point(539, 187);
             this.labelM5ExitBelt2State.Name = "labelM5ExitBelt2State";
             this.labelM5ExitBelt2State.Size = new System.Drawing.Size(15, 16);
             this.labelM5ExitBelt2State.TabIndex = 181;
@@ -12170,7 +12173,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label15.Location = new System.Drawing.Point(327, 229);
+            this.label15.Location = new System.Drawing.Point(322, 229);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(191, 16);
             this.label15.TabIndex = 180;
@@ -12181,7 +12184,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label13.Location = new System.Drawing.Point(327, 187);
+            this.label13.Location = new System.Drawing.Point(322, 187);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(191, 16);
             this.label13.TabIndex = 179;
@@ -12192,7 +12195,7 @@
             this.labelM5ExitBelt1State.AutoSize = true;
             this.labelM5ExitBelt1State.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelM5ExitBelt1State.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM5ExitBelt1State.Location = new System.Drawing.Point(538, 145);
+            this.labelM5ExitBelt1State.Location = new System.Drawing.Point(539, 145);
             this.labelM5ExitBelt1State.Name = "labelM5ExitBelt1State";
             this.labelM5ExitBelt1State.Size = new System.Drawing.Size(15, 16);
             this.labelM5ExitBelt1State.TabIndex = 178;
@@ -12203,7 +12206,7 @@
             this.labelM5TranslatorBeltState.AutoSize = true;
             this.labelM5TranslatorBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelM5TranslatorBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM5TranslatorBeltState.Location = new System.Drawing.Point(542, 90);
+            this.labelM5TranslatorBeltState.Location = new System.Drawing.Point(539, 90);
             this.labelM5TranslatorBeltState.Name = "labelM5TranslatorBeltState";
             this.labelM5TranslatorBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM5TranslatorBeltState.TabIndex = 177;
@@ -12214,7 +12217,7 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label23.Location = new System.Drawing.Point(325, 146);
+            this.label23.Location = new System.Drawing.Point(322, 146);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(191, 16);
             this.label23.TabIndex = 176;
@@ -12225,7 +12228,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label25.Location = new System.Drawing.Point(325, 90);
+            this.label25.Location = new System.Drawing.Point(322, 90);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(186, 16);
             this.label25.TabIndex = 175;
@@ -12236,7 +12239,7 @@
             this.labelM5State.AutoSize = true;
             this.labelM5State.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelM5State.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM5State.Location = new System.Drawing.Point(539, 45);
+            this.labelM5State.Location = new System.Drawing.Point(539, 35);
             this.labelM5State.Name = "labelM5State";
             this.labelM5State.Size = new System.Drawing.Size(15, 16);
             this.labelM5State.TabIndex = 174;
@@ -12247,7 +12250,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label27.Location = new System.Drawing.Point(322, 42);
+            this.label27.Location = new System.Drawing.Point(322, 38);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(159, 16);
             this.label27.TabIndex = 173;
@@ -12258,7 +12261,7 @@
             this.labelM2ExitBeltState.AutoSize = true;
             this.labelM2ExitBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelM2ExitBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM2ExitBeltState.Location = new System.Drawing.Point(691, 382);
+            this.labelM2ExitBeltState.Location = new System.Drawing.Point(539, 382);
             this.labelM2ExitBeltState.Name = "labelM2ExitBeltState";
             this.labelM2ExitBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM2ExitBeltState.TabIndex = 172;
@@ -12269,7 +12272,7 @@
             this.labelM2WorkingBeltState.AutoSize = true;
             this.labelM2WorkingBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelM2WorkingBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM2WorkingBeltState.Location = new System.Drawing.Point(695, 327);
+            this.labelM2WorkingBeltState.Location = new System.Drawing.Point(539, 327);
             this.labelM2WorkingBeltState.Name = "labelM2WorkingBeltState";
             this.labelM2WorkingBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM2WorkingBeltState.TabIndex = 171;
@@ -12280,7 +12283,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label20.Location = new System.Drawing.Point(478, 383);
+            this.label20.Location = new System.Drawing.Point(322, 383);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(178, 16);
             this.label20.TabIndex = 170;
@@ -12291,7 +12294,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label22.Location = new System.Drawing.Point(478, 327);
+            this.label22.Location = new System.Drawing.Point(322, 327);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(178, 16);
             this.label22.TabIndex = 169;
@@ -12302,7 +12305,7 @@
             this.labelM2State.AutoSize = true;
             this.labelM2State.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelM2State.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM2State.Location = new System.Drawing.Point(692, 282);
+            this.labelM2State.Location = new System.Drawing.Point(539, 282);
             this.labelM2State.Name = "labelM2State";
             this.labelM2State.Size = new System.Drawing.Size(15, 16);
             this.labelM2State.TabIndex = 168;
@@ -12313,7 +12316,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label24.Location = new System.Drawing.Point(475, 279);
+            this.label24.Location = new System.Drawing.Point(322, 279);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(116, 16);
             this.label24.TabIndex = 167;
@@ -12324,7 +12327,7 @@
             this.labelM3ExitBeltState.AutoSize = true;
             this.labelM3ExitBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelM3ExitBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM3ExitBeltState.Location = new System.Drawing.Point(854, 135);
+            this.labelM3ExitBeltState.Location = new System.Drawing.Point(855, 145);
             this.labelM3ExitBeltState.Name = "labelM3ExitBeltState";
             this.labelM3ExitBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM3ExitBeltState.TabIndex = 166;
@@ -12335,7 +12338,7 @@
             this.labelM3WorkingBeltState.AutoSize = true;
             this.labelM3WorkingBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelM3WorkingBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM3WorkingBeltState.Location = new System.Drawing.Point(858, 80);
+            this.labelM3WorkingBeltState.Location = new System.Drawing.Point(855, 90);
             this.labelM3WorkingBeltState.Name = "labelM3WorkingBeltState";
             this.labelM3WorkingBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM3WorkingBeltState.TabIndex = 165;
@@ -12346,7 +12349,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label18.Location = new System.Drawing.Point(641, 136);
+            this.label18.Location = new System.Drawing.Point(641, 146);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(178, 16);
             this.label18.TabIndex = 164;
@@ -12357,7 +12360,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label19.Location = new System.Drawing.Point(641, 80);
+            this.label19.Location = new System.Drawing.Point(641, 90);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(178, 16);
             this.label19.TabIndex = 163;
@@ -12379,7 +12382,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label21.Location = new System.Drawing.Point(638, 32);
+            this.label21.Location = new System.Drawing.Point(638, 38);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(120, 16);
             this.label21.TabIndex = 161;
@@ -12456,7 +12459,7 @@
             this.labelM1ExitBeltState.AutoSize = true;
             this.labelM1ExitBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelM1ExitBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM1ExitBeltState.Location = new System.Drawing.Point(247, 214);
+            this.labelM1ExitBeltState.Location = new System.Drawing.Point(247, 187);
             this.labelM1ExitBeltState.Name = "labelM1ExitBeltState";
             this.labelM1ExitBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM1ExitBeltState.TabIndex = 154;
@@ -12467,7 +12470,7 @@
             this.labelM1WorkingBeltState.AutoSize = true;
             this.labelM1WorkingBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelM1WorkingBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM1WorkingBeltState.Location = new System.Drawing.Point(247, 159);
+            this.labelM1WorkingBeltState.Location = new System.Drawing.Point(247, 145);
             this.labelM1WorkingBeltState.Name = "labelM1WorkingBeltState";
             this.labelM1WorkingBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM1WorkingBeltState.TabIndex = 153;
@@ -12478,7 +12481,7 @@
             this.labelM1LoadingBeltState.AutoSize = true;
             this.labelM1LoadingBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelM1LoadingBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM1LoadingBeltState.Location = new System.Drawing.Point(247, 116);
+            this.labelM1LoadingBeltState.Location = new System.Drawing.Point(247, 90);
             this.labelM1LoadingBeltState.Name = "labelM1LoadingBeltState";
             this.labelM1LoadingBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM1LoadingBeltState.TabIndex = 152;
@@ -12500,7 +12503,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label11.Location = new System.Drawing.Point(17, 215);
+            this.label11.Location = new System.Drawing.Point(17, 187);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(178, 16);
             this.label11.TabIndex = 150;
@@ -12511,7 +12514,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label9.Location = new System.Drawing.Point(17, 159);
+            this.label9.Location = new System.Drawing.Point(17, 146);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(178, 16);
             this.label9.TabIndex = 148;
@@ -12522,7 +12525,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(17, 112);
+            this.label8.Location = new System.Drawing.Point(17, 90);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(178, 16);
             this.label8.TabIndex = 146;
@@ -12542,6 +12545,8 @@
             // tabPageT1_1
             // 
             this.tabPageT1_1.ContextMenuStrip = this.contextMenuStripT1_1;
+            this.tabPageT1_1.Controls.Add(this.numericUpDownM1TimerBootTeach);
+            this.tabPageT1_1.Controls.Add(this.labelM1TeachBootDelay);
             this.tabPageT1_1.Controls.Add(this.labelM1JogSpeed);
             this.tabPageT1_1.Controls.Add(this.labelM1StartQuote);
             this.tabPageT1_1.Controls.Add(this.lbButtonM1JogUp);
@@ -13005,7 +13010,7 @@
             // 
             this.buttonM1BlockOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1BlockOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1BlockOpening.Location = new System.Drawing.Point(430, 335);
+            this.buttonM1BlockOpening.Location = new System.Drawing.Point(430, 372);
             this.buttonM1BlockOpening.Name = "buttonM1BlockOpening";
             this.buttonM1BlockOpening.Size = new System.Drawing.Size(160, 48);
             this.buttonM1BlockOpening.TabIndex = 143;
@@ -13068,7 +13073,7 @@
             // 
             this.buttonM1CutOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1CutOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1CutOpening.Location = new System.Drawing.Point(220, 335);
+            this.buttonM1CutOpening.Location = new System.Drawing.Point(220, 372);
             this.buttonM1CutOpening.Name = "buttonM1CutOpening";
             this.buttonM1CutOpening.Size = new System.Drawing.Size(160, 48);
             this.buttonM1CutOpening.TabIndex = 143;
@@ -13100,7 +13105,7 @@
             // 
             this.buttonM1BlockClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1BlockClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1BlockClosing.Location = new System.Drawing.Point(430, 400);
+            this.buttonM1BlockClosing.Location = new System.Drawing.Point(430, 437);
             this.buttonM1BlockClosing.Name = "buttonM1BlockClosing";
             this.buttonM1BlockClosing.Size = new System.Drawing.Size(160, 48);
             this.buttonM1BlockClosing.TabIndex = 144;
@@ -13127,7 +13132,7 @@
             // 
             this.buttonM1CutClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1CutClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1CutClosing.Location = new System.Drawing.Point(220, 400);
+            this.buttonM1CutClosing.Location = new System.Drawing.Point(220, 437);
             this.buttonM1CutClosing.Name = "buttonM1CutClosing";
             this.buttonM1CutClosing.Size = new System.Drawing.Size(160, 48);
             this.buttonM1CutClosing.TabIndex = 144;
@@ -13154,7 +13159,7 @@
             // 
             this.buttonM1SpringsOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1SpringsOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1SpringsOpening.Location = new System.Drawing.Point(10, 335);
+            this.buttonM1SpringsOpening.Location = new System.Drawing.Point(10, 372);
             this.buttonM1SpringsOpening.Name = "buttonM1SpringsOpening";
             this.buttonM1SpringsOpening.Size = new System.Drawing.Size(160, 48);
             this.buttonM1SpringsOpening.TabIndex = 141;
@@ -13185,7 +13190,7 @@
             // 
             this.buttonM1SpringsClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1SpringsClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1SpringsClosing.Location = new System.Drawing.Point(10, 400);
+            this.buttonM1SpringsClosing.Location = new System.Drawing.Point(10, 437);
             this.buttonM1SpringsClosing.Name = "buttonM1SpringsClosing";
             this.buttonM1SpringsClosing.Size = new System.Drawing.Size(160, 48);
             this.buttonM1SpringsClosing.TabIndex = 142;
@@ -13447,7 +13452,7 @@
             // tabPageT1_2
             // 
             this.tabPageT1_2.ContextMenuStrip = this.contextMenuStripT1_2;
-            this.tabPageT1_2.Controls.Add(this.numericUpDown1);
+            this.tabPageT1_2.Controls.Add(this.numericUpDownM1BootDelayTest);
             this.tabPageT1_2.Controls.Add(this.labelM1Timeout);
             this.tabPageT1_2.Controls.Add(this.buttonM1StartTest);
             this.tabPageT1_2.Controls.Add(this.buttonM1TestSaveProgram);
@@ -13519,24 +13524,25 @@
             this.toolStripMenuItemT1_2Keyboard.Text = "keyboard";
             this.toolStripMenuItemT1_2Keyboard.Click += new System.EventHandler(this.toolStripMenuItemT1_2Keyboard_Click);
             // 
-            // numericUpDown1
+            // numericUpDownM1BootDelayTest
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Increment = new decimal(new int[] {
+            this.numericUpDownM1BootDelayTest.DecimalPlaces = 1;
+            this.numericUpDownM1BootDelayTest.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownM1BootDelayTest.Increment = new decimal(new int[] {
             1,
             0,
             0,
             65536});
-            this.numericUpDown1.Location = new System.Drawing.Point(200, 350);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numericUpDownM1BootDelayTest.Location = new System.Drawing.Point(200, 350);
+            this.numericUpDownM1BootDelayTest.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(60, 33);
-            this.numericUpDown1.TabIndex = 136;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numericUpDownM1BootDelayTest.Name = "numericUpDownM1BootDelayTest";
+            this.numericUpDownM1BootDelayTest.Size = new System.Drawing.Size(80, 33);
+            this.numericUpDownM1BootDelayTest.TabIndex = 136;
+            this.numericUpDownM1BootDelayTest.Value = new decimal(new int[] {
             10,
             0,
             0,
@@ -15693,27 +15699,27 @@
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
             this.tabControlMain.Controls.Add(this.tabPageT1_2);
+            this.tabControlMain.Controls.Add(this.tabPageT1_1);
+            this.tabControlMain.Controls.Add(this.tabPageT1);
+            this.tabControlMain.Controls.Add(this.tabPageT3_1);
+            this.tabControlMain.Controls.Add(this.tabPageT3);
+            this.tabControlMain.Controls.Add(this.tabPage2);
+            this.tabControlMain.Controls.Add(this.tabPageT0_1);
+            this.tabControlMain.Controls.Add(this.tabPageT0);
+            this.tabControlMain.Controls.Add(this.tabPageT1_4);
+            this.tabControlMain.Controls.Add(this.tabPageT1_3);
             this.tabControlMain.Controls.Add(this.tabPageT7);
             this.tabControlMain.Controls.Add(this.tabPageT6);
             this.tabControlMain.Controls.Add(this.tabPageT5);
             this.tabControlMain.Controls.Add(this.tabPageT4);
-            this.tabControlMain.Controls.Add(this.tabPageT3);
             this.tabControlMain.Controls.Add(this.tabPageT2);
-            this.tabControlMain.Controls.Add(this.tabPageT1);
-            this.tabControlMain.Controls.Add(this.tabPageT0);
-            this.tabControlMain.Controls.Add(this.tabPageT0_1);
             this.tabControlMain.Controls.Add(this.tabPageT0_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_3);
-            this.tabControlMain.Controls.Add(this.tabPage2);
-            this.tabControlMain.Controls.Add(this.tabPageT1_1);
-            this.tabControlMain.Controls.Add(this.tabPageT1_3);
-            this.tabControlMain.Controls.Add(this.tabPageT1_4);
             this.tabControlMain.Controls.Add(this.tabPage1);
             this.tabControlMain.Controls.Add(this.tabPage3);
             this.tabControlMain.Controls.Add(this.tabPage4);
-            this.tabControlMain.Controls.Add(this.tabPageT3_1);
             this.tabControlMain.Controls.Add(this.tabPageT3_2);
             this.tabControlMain.Controls.Add(this.tabPageT3_3);
             this.tabControlMain.Controls.Add(this.tabPageT3_4);
@@ -15819,6 +15825,42 @@
             this.imageListNodes.Images.SetKeyName(1, "plc_off.png");
             this.imageListNodes.Images.SetKeyName(2, "iot_on.png");
             this.imageListNodes.Images.SetKeyName(3, "iot_off.png");
+            // 
+            // numericUpDownM1TimerBootTeach
+            // 
+            this.numericUpDownM1TimerBootTeach.DecimalPlaces = 1;
+            this.numericUpDownM1TimerBootTeach.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownM1TimerBootTeach.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownM1TimerBootTeach.Location = new System.Drawing.Point(140, 330);
+            this.numericUpDownM1TimerBootTeach.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numericUpDownM1TimerBootTeach.Name = "numericUpDownM1TimerBootTeach";
+            this.numericUpDownM1TimerBootTeach.Size = new System.Drawing.Size(80, 33);
+            this.numericUpDownM1TimerBootTeach.TabIndex = 290;
+            this.numericUpDownM1TimerBootTeach.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // labelM1TeachBootDelay
+            // 
+            this.labelM1TeachBootDelay.AutoSize = true;
+            this.labelM1TeachBootDelay.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM1TeachBootDelay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM1TeachBootDelay.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM1TeachBootDelay.Location = new System.Drawing.Point(10, 340);
+            this.labelM1TeachBootDelay.Name = "labelM1TeachBootDelay";
+            this.labelM1TeachBootDelay.Size = new System.Drawing.Size(117, 16);
+            this.labelM1TeachBootDelay.TabIndex = 289;
+            this.labelM1TeachBootDelay.Text = "boot delay (sec)";
             // 
             // FormApp
             // 
@@ -15954,12 +15996,13 @@
             this.tabPageT1_2.ResumeLayout(false);
             this.tabPageT1_2.PerformLayout();
             this.contextMenuStripT1_2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1BootDelayTest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM1TestPoints)).EndInit();
             this.tabPageT1_3.ResumeLayout(false);
             this.tabPageT1_4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).EndInit();
             this.tabControlMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1TimerBootTeach)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -16456,7 +16499,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownM1BootDelayTest;
         private System.Windows.Forms.Label labelM1Timeout;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed1020M1;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed1039M1;
@@ -16826,5 +16869,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewButtonColumn reached;
+        private System.Windows.Forms.NumericUpDown numericUpDownM1TimerBootTeach;
+        private System.Windows.Forms.Label labelM1TeachBootDelay;
     }
 }

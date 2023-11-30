@@ -41,9 +41,9 @@ namespace GUI
                         dataGridViewM1TeachPoints[2, 1].Value = objPoints.Points[0].V2;
                         dataGridViewM1TeachPoints[2, 2].Value = objPoints.Points[0].V3;
                         dataGridViewM1TeachPoints[2, 3].Value = objPoints.Points[0].V4;
+                        numericUpDownM1TimerBootTeach.Value = Convert.ToDecimal(objPoints.Points[0].CustomFloatParam.ToString());
                         //program succesfully loaded
                         xDialog.MsgBox.Show("program " + comboBoxM1TeachProgramList.Text + " succesfully loaded", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
-
                     }
                     else
                     {
@@ -84,7 +84,10 @@ namespace GUI
                     int s3 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 2].Value);
                     int s4 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 3].Value);
                     ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM1TeachProgramList.Text);
-                    prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
+                    PointAxis p = new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4);
+                    p.CustomFloatParam = (numericUpDownM1TimerBootTeach.Value.ToString());
+                    prgObj.AddPoint(p);
+
                     prgObj.Save(comboBoxM1TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[0], true);
                     //program succesfully saved
                     xDialog.MsgBox.Show("program " + comboBoxM1TeachProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
@@ -831,6 +834,7 @@ namespace GUI
                         dataGridViewM1TestPoints[2, 1].Value = objPoints.Points[0].V2;
                         dataGridViewM1TestPoints[2, 2].Value = objPoints.Points[0].V3;
                         dataGridViewM1TestPoints[2, 3].Value = objPoints.Points[0].V4;
+                        numericUpDownM1BootDelayTest.Value = Convert.ToDecimal(objPoints.Points[0].CustomFloatParam);
                         //program succesfully loaded
                         xDialog.MsgBox.Show("program " + comboBoxM1TestProgramList.Text + " succesfully loaded", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
                     }
@@ -868,7 +872,9 @@ namespace GUI
                     int s3 = Convert.ToInt32(dataGridViewM1TestPoints[2, 2].Value);
                     int s4 = Convert.ToInt32(dataGridViewM1TestPoints[2, 3].Value);
                     ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM1TestProgramList.Text);
-                    prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
+                    PointAxis p = new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4);
+                    p.CustomFloatParam = float.Parse(numericUpDownM1BootDelayTest.Value.ToString());
+                    prgObj.AddPoint(p);
                     prgObj.Save(comboBoxM1TestProgramList.Text + config.Extensions[0], config.ProgramsPath[0], true);
                     xDialog.MsgBox.Show("program " + comboBoxM1TestProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
                 }
