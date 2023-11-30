@@ -958,11 +958,11 @@ namespace GUI
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            if (_configForm == null)
-                _configForm = new ServiceSetup(myCore);
+            //if (_configForm == null)
+            //    _configForm = new ServiceSetup(myCore);
 
-            _configForm.Show();
-            _configForm.Activate();
+            //_configForm.Show();
+            //_configForm.Activate();
         }
 
         private async void buttonM3StartTest_Click(object sender, EventArgs e)

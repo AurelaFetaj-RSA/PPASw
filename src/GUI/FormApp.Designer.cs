@@ -529,27 +529,21 @@
             this.tabPageT4_4 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT5_1 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.checkBoxM6Aspiration = new System.Windows.Forms.CheckBox();
-            this.groupBoxM5RGLamps = new System.Windows.Forms.GroupBox();
             this.buttonM6RGLampsON = new System.Windows.Forms.Button();
             this.buttonM6RGLampsOFF = new System.Windows.Forms.Button();
-            this.groupBoxM5LFLamps = new System.Windows.Forms.GroupBox();
             this.buttonM6LFLampsON = new System.Windows.Forms.Button();
             this.buttonM6LFLampsOFF = new System.Windows.Forms.Button();
-            this.groupBoxM5Extension = new System.Windows.Forms.GroupBox();
             this.buttonM5V1ExtFwd = new System.Windows.Forms.Button();
             this.buttonM5V1ExtBwd = new System.Windows.Forms.Button();
             this.buttonM5V2ExtFwd = new System.Windows.Forms.Button();
             this.buttonM5V2ExtBwd = new System.Windows.Forms.Button();
-            this.groupBoxM5otation = new System.Windows.Forms.GroupBox();
             this.buttonM5CWRotation = new System.Windows.Forms.Button();
             this.buttonM5CCWRotation = new System.Windows.Forms.Button();
             this.buttonM5NoRotation = new System.Windows.Forms.Button();
-            this.groupBoxM5Clamp = new System.Windows.Forms.GroupBox();
             this.buttonM5ClampBwd = new System.Windows.Forms.Button();
             this.buttonM5ClampFwd = new System.Windows.Forms.Button();
             this.buttonM5ClampOpening = new System.Windows.Forms.Button();
             this.buttonM5ClampClosing = new System.Windows.Forms.Button();
-            this.groupBoxM5Translator = new System.Windows.Forms.GroupBox();
             this.buttonM5TranslatorFwd = new System.Windows.Forms.Button();
             this.buttonM5TranslatorBwd = new System.Windows.Forms.Button();
             this.checkBoxM5ExitBelt2 = new System.Windows.Forms.CheckBox();
@@ -618,7 +612,6 @@
             this.tabPage3 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPage4 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT6 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
             this.tabPageT7 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT0_1 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.contextMenuStripT0 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -1081,15 +1074,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM3TestPoints)).BeginInit();
             this.tabPageT4_3.SuspendLayout();
             this.tabPageT5_1.SuspendLayout();
-            this.groupBoxM5RGLamps.SuspendLayout();
-            this.groupBoxM5LFLamps.SuspendLayout();
-            this.groupBoxM5Extension.SuspendLayout();
-            this.groupBoxM5otation.SuspendLayout();
-            this.groupBoxM5Clamp.SuspendLayout();
-            this.groupBoxM5Translator.SuspendLayout();
             this.tabPageT5_2.SuspendLayout();
             this.tabPageT2.SuspendLayout();
-            this.tabPageT6.SuspendLayout();
             this.tabPageT0_1.SuspendLayout();
             this.contextMenuStripT0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMessages)).BeginInit();
@@ -7444,13 +7430,24 @@
             // 
             // tabPageT5_1
             // 
+            this.tabPageT5_1.Controls.Add(this.buttonM6LFLampsON);
+            this.tabPageT5_1.Controls.Add(this.buttonM6RGLampsON);
+            this.tabPageT5_1.Controls.Add(this.buttonM6LFLampsOFF);
+            this.tabPageT5_1.Controls.Add(this.buttonM5V1ExtFwd);
+            this.tabPageT5_1.Controls.Add(this.buttonM6RGLampsOFF);
+            this.tabPageT5_1.Controls.Add(this.buttonM5CWRotation);
+            this.tabPageT5_1.Controls.Add(this.buttonM5V1ExtBwd);
+            this.tabPageT5_1.Controls.Add(this.buttonM5ClampBwd);
+            this.tabPageT5_1.Controls.Add(this.buttonM5V2ExtFwd);
+            this.tabPageT5_1.Controls.Add(this.buttonM5V2ExtBwd);
+            this.tabPageT5_1.Controls.Add(this.buttonM5CCWRotation);
+            this.tabPageT5_1.Controls.Add(this.buttonM5ClampFwd);
+            this.tabPageT5_1.Controls.Add(this.buttonM5NoRotation);
+            this.tabPageT5_1.Controls.Add(this.buttonM5TranslatorBwd);
+            this.tabPageT5_1.Controls.Add(this.buttonM5ClampOpening);
+            this.tabPageT5_1.Controls.Add(this.buttonM5TranslatorFwd);
+            this.tabPageT5_1.Controls.Add(this.buttonM5ClampClosing);
             this.tabPageT5_1.Controls.Add(this.checkBoxM6Aspiration);
-            this.tabPageT5_1.Controls.Add(this.groupBoxM5RGLamps);
-            this.tabPageT5_1.Controls.Add(this.groupBoxM5LFLamps);
-            this.tabPageT5_1.Controls.Add(this.groupBoxM5Extension);
-            this.tabPageT5_1.Controls.Add(this.groupBoxM5otation);
-            this.tabPageT5_1.Controls.Add(this.groupBoxM5Clamp);
-            this.tabPageT5_1.Controls.Add(this.groupBoxM5Translator);
             this.tabPageT5_1.Controls.Add(this.checkBoxM5ExitBelt2);
             this.tabPageT5_1.Controls.Add(this.checkBoxM5TranslationBelt);
             this.tabPageT5_1.Controls.Add(this.checkBoxM5ExitBelt1);
@@ -7460,7 +7457,7 @@
             tabPageFormatStyle11.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle11.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.tabPageT5_1.FormatStyle = tabPageFormatStyle11;
-            this.tabPageT5_1.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT5_1.Location = new System.Drawing.Point(96, 36);
             this.tabPageT5_1.Name = "tabPageT5_1";
             tabPageColorStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle23.BackFadeColor = System.Drawing.Color.Transparent;
@@ -7477,12 +7474,12 @@
             tabPageColorStyle32.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle32.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT5_1.SelectedStyle = tabPageColorStyle32;
-            this.tabPageT5_1.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT5_1.Size = new System.Drawing.Size(914, 716);
             this.tabPageT5_1.StyleFromParent = false;
             this.tabPageT5_1.TabIndex = 19;
             this.tabPageT5_1.Text = "manual";
             this.tabPageT5_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT5_1.TextBounds")));
-            this.tabPageT5_1.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT5_1.TextSize = new System.Drawing.SizeF(66.54426F, 21.44531F);
             this.tabPageT5_1.UseParentTabStripPlacement = false;
             // 
             // checkBoxM6Aspiration
@@ -7495,7 +7492,7 @@
             this.checkBoxM6Aspiration.ImageIndex = 3;
             this.checkBoxM6Aspiration.ImageList = this.imageListBelt;
             this.checkBoxM6Aspiration.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM6Aspiration.Location = new System.Drawing.Point(735, 420);
+            this.checkBoxM6Aspiration.Location = new System.Drawing.Point(618, 479);
             this.checkBoxM6Aspiration.Name = "checkBoxM6Aspiration";
             this.checkBoxM6Aspiration.Size = new System.Drawing.Size(70, 90);
             this.checkBoxM6Aspiration.TabIndex = 298;
@@ -7504,28 +7501,16 @@
             this.checkBoxM6Aspiration.UseVisualStyleBackColor = true;
             this.checkBoxM6Aspiration.CheckStateChanged += new System.EventHandler(this.checkBoxM6Aspiration_CheckStateChanged);
             // 
-            // groupBoxM5RGLamps
-            // 
-            this.groupBoxM5RGLamps.Controls.Add(this.buttonM6RGLampsON);
-            this.groupBoxM5RGLamps.Controls.Add(this.buttonM6RGLampsOFF);
-            this.groupBoxM5RGLamps.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxM5RGLamps.Location = new System.Drawing.Point(360, 420);
-            this.groupBoxM5RGLamps.Name = "groupBoxM5RGLamps";
-            this.groupBoxM5RGLamps.Size = new System.Drawing.Size(320, 120);
-            this.groupBoxM5RGLamps.TabIndex = 296;
-            this.groupBoxM5RGLamps.TabStop = false;
-            this.groupBoxM5RGLamps.Text = "RG  lamps";
-            // 
             // buttonM6RGLampsON
             // 
             this.buttonM6RGLampsON.AccessibleName = "G";
             this.buttonM6RGLampsON.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM6RGLampsON.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM6RGLampsON.Location = new System.Drawing.Point(20, 20);
+            this.buttonM6RGLampsON.Location = new System.Drawing.Point(290, 500);
             this.buttonM6RGLampsON.Name = "buttonM6RGLampsON";
-            this.buttonM6RGLampsON.Size = new System.Drawing.Size(80, 48);
+            this.buttonM6RGLampsON.Size = new System.Drawing.Size(120, 48);
             this.buttonM6RGLampsON.TabIndex = 143;
-            this.buttonM6RGLampsON.Text = "on";
+            this.buttonM6RGLampsON.Text = "RG lamps on";
             this.buttonM6RGLampsON.UseVisualStyleBackColor = true;
             this.buttonM6RGLampsON.Click += new System.EventHandler(this.buttonM6RGLampsON_Click);
             // 
@@ -7533,35 +7518,23 @@
             // 
             this.buttonM6RGLampsOFF.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM6RGLampsOFF.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM6RGLampsOFF.Location = new System.Drawing.Point(220, 20);
+            this.buttonM6RGLampsOFF.Location = new System.Drawing.Point(430, 500);
             this.buttonM6RGLampsOFF.Name = "buttonM6RGLampsOFF";
-            this.buttonM6RGLampsOFF.Size = new System.Drawing.Size(80, 48);
+            this.buttonM6RGLampsOFF.Size = new System.Drawing.Size(120, 48);
             this.buttonM6RGLampsOFF.TabIndex = 144;
-            this.buttonM6RGLampsOFF.Text = "off";
+            this.buttonM6RGLampsOFF.Text = "RG lamps off";
             this.buttonM6RGLampsOFF.UseVisualStyleBackColor = true;
             this.buttonM6RGLampsOFF.Click += new System.EventHandler(this.buttonM6RGLampsOFF_Click);
-            // 
-            // groupBoxM5LFLamps
-            // 
-            this.groupBoxM5LFLamps.Controls.Add(this.buttonM6LFLampsON);
-            this.groupBoxM5LFLamps.Controls.Add(this.buttonM6LFLampsOFF);
-            this.groupBoxM5LFLamps.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxM5LFLamps.Location = new System.Drawing.Point(10, 420);
-            this.groupBoxM5LFLamps.Name = "groupBoxM5LFLamps";
-            this.groupBoxM5LFLamps.Size = new System.Drawing.Size(320, 120);
-            this.groupBoxM5LFLamps.TabIndex = 295;
-            this.groupBoxM5LFLamps.TabStop = false;
-            this.groupBoxM5LFLamps.Text = "LF lamps";
             // 
             // buttonM6LFLampsON
             // 
             this.buttonM6LFLampsON.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM6LFLampsON.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM6LFLampsON.Location = new System.Drawing.Point(20, 20);
+            this.buttonM6LFLampsON.Location = new System.Drawing.Point(10, 500);
             this.buttonM6LFLampsON.Name = "buttonM6LFLampsON";
-            this.buttonM6LFLampsON.Size = new System.Drawing.Size(80, 48);
+            this.buttonM6LFLampsON.Size = new System.Drawing.Size(120, 48);
             this.buttonM6LFLampsON.TabIndex = 143;
-            this.buttonM6LFLampsON.Text = "on";
+            this.buttonM6LFLampsON.Text = "LF lamps on";
             this.buttonM6LFLampsON.UseVisualStyleBackColor = true;
             this.buttonM6LFLampsON.Click += new System.EventHandler(this.buttonM6LFLampsON_Click);
             // 
@@ -7569,34 +7542,21 @@
             // 
             this.buttonM6LFLampsOFF.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM6LFLampsOFF.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM6LFLampsOFF.Location = new System.Drawing.Point(220, 20);
+            this.buttonM6LFLampsOFF.Location = new System.Drawing.Point(150, 500);
             this.buttonM6LFLampsOFF.Name = "buttonM6LFLampsOFF";
-            this.buttonM6LFLampsOFF.Size = new System.Drawing.Size(80, 48);
+            this.buttonM6LFLampsOFF.Size = new System.Drawing.Size(120, 48);
             this.buttonM6LFLampsOFF.TabIndex = 144;
-            this.buttonM6LFLampsOFF.Text = "off";
+            this.buttonM6LFLampsOFF.Text = "LF lamps off";
             this.buttonM6LFLampsOFF.UseVisualStyleBackColor = true;
             this.buttonM6LFLampsOFF.Click += new System.EventHandler(this.buttonM6LFLampsOFF_Click);
             // 
-            // groupBoxM5Extension
-            // 
-            this.groupBoxM5Extension.Controls.Add(this.buttonM5V1ExtFwd);
-            this.groupBoxM5Extension.Controls.Add(this.buttonM5V1ExtBwd);
-            this.groupBoxM5Extension.Controls.Add(this.buttonM5V2ExtFwd);
-            this.groupBoxM5Extension.Controls.Add(this.buttonM5V2ExtBwd);
-            this.groupBoxM5Extension.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxM5Extension.Location = new System.Drawing.Point(360, 150);
-            this.groupBoxM5Extension.Name = "groupBoxM5Extension";
-            this.groupBoxM5Extension.Size = new System.Drawing.Size(420, 120);
-            this.groupBoxM5Extension.TabIndex = 294;
-            this.groupBoxM5Extension.TabStop = false;
-            this.groupBoxM5Extension.Text = "extension";
-            // 
             // buttonM5V1ExtFwd
             // 
+            this.buttonM5V1ExtFwd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM5V1ExtFwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5V1ExtFwd.Location = new System.Drawing.Point(20, 20);
+            this.buttonM5V1ExtFwd.Location = new System.Drawing.Point(10, 190);
             this.buttonM5V1ExtFwd.Name = "buttonM5V1ExtFwd";
-            this.buttonM5V1ExtFwd.Size = new System.Drawing.Size(80, 48);
+            this.buttonM5V1ExtFwd.Size = new System.Drawing.Size(120, 48);
             this.buttonM5V1ExtFwd.TabIndex = 150;
             this.buttonM5V1ExtFwd.Text = "1 vertical up";
             this.buttonM5V1ExtFwd.UseVisualStyleBackColor = true;
@@ -7604,10 +7564,11 @@
             // 
             // buttonM5V1ExtBwd
             // 
+            this.buttonM5V1ExtBwd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM5V1ExtBwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5V1ExtBwd.Location = new System.Drawing.Point(120, 20);
+            this.buttonM5V1ExtBwd.Location = new System.Drawing.Point(150, 190);
             this.buttonM5V1ExtBwd.Name = "buttonM5V1ExtBwd";
-            this.buttonM5V1ExtBwd.Size = new System.Drawing.Size(80, 48);
+            this.buttonM5V1ExtBwd.Size = new System.Drawing.Size(120, 48);
             this.buttonM5V1ExtBwd.TabIndex = 151;
             this.buttonM5V1ExtBwd.Text = "1 vertical down";
             this.buttonM5V1ExtBwd.UseVisualStyleBackColor = true;
@@ -7615,10 +7576,11 @@
             // 
             // buttonM5V2ExtFwd
             // 
+            this.buttonM5V2ExtFwd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM5V2ExtFwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5V2ExtFwd.Location = new System.Drawing.Point(220, 20);
+            this.buttonM5V2ExtFwd.Location = new System.Drawing.Point(290, 190);
             this.buttonM5V2ExtFwd.Name = "buttonM5V2ExtFwd";
-            this.buttonM5V2ExtFwd.Size = new System.Drawing.Size(80, 48);
+            this.buttonM5V2ExtFwd.Size = new System.Drawing.Size(120, 48);
             this.buttonM5V2ExtFwd.TabIndex = 152;
             this.buttonM5V2ExtFwd.Text = "2 vertical up";
             this.buttonM5V2ExtFwd.UseVisualStyleBackColor = true;
@@ -7626,34 +7588,23 @@
             // 
             // buttonM5V2ExtBwd
             // 
+            this.buttonM5V2ExtBwd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM5V2ExtBwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5V2ExtBwd.Location = new System.Drawing.Point(320, 20);
+            this.buttonM5V2ExtBwd.Location = new System.Drawing.Point(430, 190);
             this.buttonM5V2ExtBwd.Name = "buttonM5V2ExtBwd";
-            this.buttonM5V2ExtBwd.Size = new System.Drawing.Size(80, 48);
+            this.buttonM5V2ExtBwd.Size = new System.Drawing.Size(120, 48);
             this.buttonM5V2ExtBwd.TabIndex = 153;
             this.buttonM5V2ExtBwd.Text = "2 vertical down";
             this.buttonM5V2ExtBwd.UseVisualStyleBackColor = true;
             this.buttonM5V2ExtBwd.Click += new System.EventHandler(this.buttonM5V2ExtBwd_Click);
             // 
-            // groupBoxM5otation
-            // 
-            this.groupBoxM5otation.Controls.Add(this.buttonM5CWRotation);
-            this.groupBoxM5otation.Controls.Add(this.buttonM5CCWRotation);
-            this.groupBoxM5otation.Controls.Add(this.buttonM5NoRotation);
-            this.groupBoxM5otation.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxM5otation.Location = new System.Drawing.Point(10, 150);
-            this.groupBoxM5otation.Name = "groupBoxM5otation";
-            this.groupBoxM5otation.Size = new System.Drawing.Size(320, 120);
-            this.groupBoxM5otation.TabIndex = 293;
-            this.groupBoxM5otation.TabStop = false;
-            this.groupBoxM5otation.Text = "rotation";
-            // 
             // buttonM5CWRotation
             // 
+            this.buttonM5CWRotation.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM5CWRotation.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5CWRotation.Location = new System.Drawing.Point(20, 20);
+            this.buttonM5CWRotation.Location = new System.Drawing.Point(10, 100);
             this.buttonM5CWRotation.Name = "buttonM5CWRotation";
-            this.buttonM5CWRotation.Size = new System.Drawing.Size(80, 48);
+            this.buttonM5CWRotation.Size = new System.Drawing.Size(120, 48);
             this.buttonM5CWRotation.TabIndex = 147;
             this.buttonM5CWRotation.Text = "CW rotation";
             this.buttonM5CWRotation.UseVisualStyleBackColor = true;
@@ -7661,10 +7612,11 @@
             // 
             // buttonM5CCWRotation
             // 
+            this.buttonM5CCWRotation.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM5CCWRotation.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5CCWRotation.Location = new System.Drawing.Point(120, 20);
+            this.buttonM5CCWRotation.Location = new System.Drawing.Point(150, 100);
             this.buttonM5CCWRotation.Name = "buttonM5CCWRotation";
-            this.buttonM5CCWRotation.Size = new System.Drawing.Size(80, 48);
+            this.buttonM5CCWRotation.Size = new System.Drawing.Size(120, 48);
             this.buttonM5CCWRotation.TabIndex = 148;
             this.buttonM5CCWRotation.Text = "CCW rotation";
             this.buttonM5CCWRotation.UseVisualStyleBackColor = true;
@@ -7672,105 +7624,84 @@
             // 
             // buttonM5NoRotation
             // 
+            this.buttonM5NoRotation.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM5NoRotation.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5NoRotation.Location = new System.Drawing.Point(220, 20);
+            this.buttonM5NoRotation.Location = new System.Drawing.Point(290, 100);
             this.buttonM5NoRotation.Name = "buttonM5NoRotation";
-            this.buttonM5NoRotation.Size = new System.Drawing.Size(80, 48);
+            this.buttonM5NoRotation.Size = new System.Drawing.Size(120, 48);
             this.buttonM5NoRotation.TabIndex = 149;
             this.buttonM5NoRotation.Text = "no rotation";
             this.buttonM5NoRotation.UseVisualStyleBackColor = true;
             this.buttonM5NoRotation.Click += new System.EventHandler(this.buttonM5NoRotation_Click);
             // 
-            // groupBoxM5Clamp
-            // 
-            this.groupBoxM5Clamp.Controls.Add(this.buttonM5ClampBwd);
-            this.groupBoxM5Clamp.Controls.Add(this.buttonM5ClampFwd);
-            this.groupBoxM5Clamp.Controls.Add(this.buttonM5ClampOpening);
-            this.groupBoxM5Clamp.Controls.Add(this.buttonM5ClampClosing);
-            this.groupBoxM5Clamp.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxM5Clamp.Location = new System.Drawing.Point(360, 10);
-            this.groupBoxM5Clamp.Name = "groupBoxM5Clamp";
-            this.groupBoxM5Clamp.Size = new System.Drawing.Size(420, 120);
-            this.groupBoxM5Clamp.TabIndex = 292;
-            this.groupBoxM5Clamp.TabStop = false;
-            this.groupBoxM5Clamp.Text = "clamp";
-            // 
             // buttonM5ClampBwd
             // 
+            this.buttonM5ClampBwd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM5ClampBwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5ClampBwd.Location = new System.Drawing.Point(120, 20);
+            this.buttonM5ClampBwd.Location = new System.Drawing.Point(430, 10);
             this.buttonM5ClampBwd.Name = "buttonM5ClampBwd";
-            this.buttonM5ClampBwd.Size = new System.Drawing.Size(80, 48);
+            this.buttonM5ClampBwd.Size = new System.Drawing.Size(120, 48);
             this.buttonM5ClampBwd.TabIndex = 144;
-            this.buttonM5ClampBwd.Text = "backward";
+            this.buttonM5ClampBwd.Text = "clamp backward";
             this.buttonM5ClampBwd.UseVisualStyleBackColor = true;
             this.buttonM5ClampBwd.Click += new System.EventHandler(this.buttonM5ClampBwd_Click);
             // 
             // buttonM5ClampFwd
             // 
+            this.buttonM5ClampFwd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM5ClampFwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5ClampFwd.Location = new System.Drawing.Point(20, 20);
+            this.buttonM5ClampFwd.Location = new System.Drawing.Point(290, 10);
             this.buttonM5ClampFwd.Name = "buttonM5ClampFwd";
-            this.buttonM5ClampFwd.Size = new System.Drawing.Size(80, 48);
+            this.buttonM5ClampFwd.Size = new System.Drawing.Size(120, 48);
             this.buttonM5ClampFwd.TabIndex = 143;
-            this.buttonM5ClampFwd.Text = "forward";
+            this.buttonM5ClampFwd.Text = "clamp forward";
             this.buttonM5ClampFwd.UseVisualStyleBackColor = true;
             this.buttonM5ClampFwd.Click += new System.EventHandler(this.buttonM5ClampFwd_Click);
             // 
             // buttonM5ClampOpening
             // 
+            this.buttonM5ClampOpening.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM5ClampOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5ClampOpening.Location = new System.Drawing.Point(220, 20);
+            this.buttonM5ClampOpening.Location = new System.Drawing.Point(570, 10);
             this.buttonM5ClampOpening.Name = "buttonM5ClampOpening";
-            this.buttonM5ClampOpening.Size = new System.Drawing.Size(80, 48);
+            this.buttonM5ClampOpening.Size = new System.Drawing.Size(120, 48);
             this.buttonM5ClampOpening.TabIndex = 145;
-            this.buttonM5ClampOpening.Text = "opening";
+            this.buttonM5ClampOpening.Text = "clamp opening";
             this.buttonM5ClampOpening.UseVisualStyleBackColor = true;
             this.buttonM5ClampOpening.Click += new System.EventHandler(this.buttonM5ClampOpening_Click);
             // 
             // buttonM5ClampClosing
             // 
+            this.buttonM5ClampClosing.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM5ClampClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5ClampClosing.Location = new System.Drawing.Point(320, 20);
+            this.buttonM5ClampClosing.Location = new System.Drawing.Point(710, 10);
             this.buttonM5ClampClosing.Name = "buttonM5ClampClosing";
-            this.buttonM5ClampClosing.Size = new System.Drawing.Size(80, 48);
+            this.buttonM5ClampClosing.Size = new System.Drawing.Size(120, 48);
             this.buttonM5ClampClosing.TabIndex = 146;
-            this.buttonM5ClampClosing.Text = "closing";
+            this.buttonM5ClampClosing.Text = "clamp closing";
             this.buttonM5ClampClosing.UseVisualStyleBackColor = true;
             this.buttonM5ClampClosing.Click += new System.EventHandler(this.buttonM5ClampClosing_Click);
             // 
-            // groupBoxM5Translator
-            // 
-            this.groupBoxM5Translator.Controls.Add(this.buttonM5TranslatorFwd);
-            this.groupBoxM5Translator.Controls.Add(this.buttonM5TranslatorBwd);
-            this.groupBoxM5Translator.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxM5Translator.Location = new System.Drawing.Point(10, 10);
-            this.groupBoxM5Translator.Name = "groupBoxM5Translator";
-            this.groupBoxM5Translator.Size = new System.Drawing.Size(320, 120);
-            this.groupBoxM5Translator.TabIndex = 291;
-            this.groupBoxM5Translator.TabStop = false;
-            this.groupBoxM5Translator.Text = "translator";
-            // 
             // buttonM5TranslatorFwd
             // 
-            this.buttonM5TranslatorFwd.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM5TranslatorFwd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM5TranslatorFwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5TranslatorFwd.Location = new System.Drawing.Point(20, 20);
+            this.buttonM5TranslatorFwd.Location = new System.Drawing.Point(10, 10);
             this.buttonM5TranslatorFwd.Name = "buttonM5TranslatorFwd";
-            this.buttonM5TranslatorFwd.Size = new System.Drawing.Size(80, 48);
+            this.buttonM5TranslatorFwd.Size = new System.Drawing.Size(120, 48);
             this.buttonM5TranslatorFwd.TabIndex = 141;
-            this.buttonM5TranslatorFwd.Text = "forward";
+            this.buttonM5TranslatorFwd.Text = "translator forward";
             this.buttonM5TranslatorFwd.UseVisualStyleBackColor = true;
             // 
             // buttonM5TranslatorBwd
             // 
-            this.buttonM5TranslatorBwd.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM5TranslatorBwd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM5TranslatorBwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5TranslatorBwd.Location = new System.Drawing.Point(220, 20);
+            this.buttonM5TranslatorBwd.Location = new System.Drawing.Point(150, 10);
             this.buttonM5TranslatorBwd.Name = "buttonM5TranslatorBwd";
-            this.buttonM5TranslatorBwd.Size = new System.Drawing.Size(80, 48);
+            this.buttonM5TranslatorBwd.Size = new System.Drawing.Size(120, 48);
             this.buttonM5TranslatorBwd.TabIndex = 142;
-            this.buttonM5TranslatorBwd.Text = "backward";
+            this.buttonM5TranslatorBwd.Text = "translator backward";
             this.buttonM5TranslatorBwd.UseVisualStyleBackColor = true;
             // 
             // checkBoxM5ExitBelt2
@@ -7979,7 +7910,7 @@
             tabPageFormatStyle13.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle13.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
             this.tabPageT5_2.FormatStyle = tabPageFormatStyle13;
-            this.tabPageT5_2.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT5_2.Location = new System.Drawing.Point(96, 36);
             this.tabPageT5_2.Name = "tabPageT5_2";
             tabPageColorStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle27.BackFadeColor = System.Drawing.Color.Transparent;
@@ -7996,12 +7927,12 @@
             tabPageColorStyle28.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle28.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT5_2.SelectedStyle = tabPageColorStyle28;
-            this.tabPageT5_2.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT5_2.Size = new System.Drawing.Size(914, 716);
             this.tabPageT5_2.StyleFromParent = false;
             this.tabPageT5_2.TabIndex = 20;
             this.tabPageT5_2.Text = "input";
             this.tabPageT5_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT5_2.TextBounds")));
-            this.tabPageT5_2.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT5_2.TextSize = new System.Drawing.SizeF(47.47395F, 21.44531F);
             this.tabPageT5_2.UseParentTabStripPlacement = false;
             // 
             // lbLed60
@@ -8921,7 +8852,7 @@
             tabPageFormatStyle14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle14.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT5_3.FormatStyle = tabPageFormatStyle14;
-            this.tabPageT5_3.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT5_3.Location = new System.Drawing.Point(96, 36);
             this.tabPageT5_3.Name = "tabPageT5_3";
             tabPageColorStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle29.BackFadeColor = System.Drawing.Color.Transparent;
@@ -8938,12 +8869,12 @@
             tabPageColorStyle30.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle30.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT5_3.SelectedStyle = tabPageColorStyle30;
-            this.tabPageT5_3.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT5_3.Size = new System.Drawing.Size(914, 716);
             this.tabPageT5_3.StyleFromParent = false;
             this.tabPageT5_3.TabIndex = 21;
             this.tabPageT5_3.Text = "output";
             this.tabPageT5_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT5_3.TextBounds")));
-            this.tabPageT5_3.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT5_3.TextSize = new System.Drawing.SizeF(59.4427F, 21.44531F);
             this.tabPageT5_3.UseParentTabStripPlacement = false;
             // 
             // tabPage1
@@ -9084,7 +9015,6 @@
             // 
             // tabPageT6
             // 
-            this.tabPageT6.Controls.Add(this.button2);
             tabPageFormatStyle19.BorderCornerRadius = 2;
             tabPageFormatStyle19.ContentSpacing = 0;
             tabPageFormatStyle19.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -9121,16 +9051,6 @@
             this.tabPageT6.Text = "page";
             this.tabPageT6.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT6.TextBounds")));
             this.tabPageT6.TextSize = new System.Drawing.SizeF(37.03645F, 17.42431F);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(213, 202);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 90);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // tabPageT7
             // 
@@ -12592,7 +12512,7 @@
             tabPageFormatStyle28.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle28.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT1_1.FormatStyle = tabPageFormatStyle28;
-            this.tabPageT1_1.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT1_1.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_1.Name = "tabPageT1_1";
             tabPageColorStyle53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle53.BackFadeColor = System.Drawing.Color.Transparent;
@@ -12609,12 +12529,12 @@
             tabPageColorStyle63.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle63.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_1.SelectedStyle = tabPageColorStyle63;
-            this.tabPageT1_1.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT1_1.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_1.StyleFromParent = false;
             this.tabPageT1_1.TabIndex = 5;
             this.tabPageT1_1.Text = "teach";
             this.tabPageT1_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_1.TextBounds")));
-            this.tabPageT1_1.TextSize = new System.Drawing.SizeF(50.55989F, 21.44531F);
+            this.tabPageT1_1.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT1_1.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT1_1
@@ -13498,7 +13418,7 @@
             tabPageFormatStyle30.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle30.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT1_2.FormatStyle = tabPageFormatStyle30;
-            this.tabPageT1_2.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT1_2.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_2.Name = "tabPageT1_2";
             tabPageColorStyle56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle56.BackFadeColor = System.Drawing.Color.Transparent;
@@ -13515,12 +13435,12 @@
             tabPageColorStyle57.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle57.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_2.SelectedStyle = tabPageColorStyle57;
-            this.tabPageT1_2.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT1_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_2.StyleFromParent = false;
             this.tabPageT1_2.TabIndex = 8;
             this.tabPageT1_2.Text = "test";
             this.tabPageT1_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_2.TextBounds")));
-            this.tabPageT1_2.TextSize = new System.Drawing.SizeF(36.72395F, 21.44531F);
+            this.tabPageT1_2.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT1_2.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT1_2
@@ -13784,7 +13704,7 @@
             tabPageFormatStyle31.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle31.Padding = new System.Windows.Forms.Padding(17, 5, 17, 5);
             this.tabPageT1_3.FormatStyle = tabPageFormatStyle31;
-            this.tabPageT1_3.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT1_3.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_3.Name = "tabPageT1_3";
             tabPageColorStyle58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle58.BackFadeColor = System.Drawing.Color.Transparent;
@@ -13801,12 +13721,12 @@
             tabPageColorStyle59.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle59.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_3.SelectedStyle = tabPageColorStyle59;
-            this.tabPageT1_3.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT1_3.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_3.StyleFromParent = false;
             this.tabPageT1_3.TabIndex = 6;
             this.tabPageT1_3.Text = "input";
             this.tabPageT1_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_3.TextBounds")));
-            this.tabPageT1_3.TextSize = new System.Drawing.SizeF(47.47395F, 21.44531F);
+            this.tabPageT1_3.TextSize = new System.Drawing.SizeF(0F, 0F);
             // 
             // lbLed1040M1
             // 
@@ -14792,7 +14712,7 @@
             tabPageFormatStyle32.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle32.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.tabPageT1_4.FormatStyle = tabPageFormatStyle32;
-            this.tabPageT1_4.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT1_4.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_4.Name = "tabPageT1_4";
             tabPageColorStyle60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle60.BackFadeColor = System.Drawing.Color.Transparent;
@@ -14809,12 +14729,12 @@
             tabPageColorStyle61.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle61.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_4.SelectedStyle = tabPageColorStyle61;
-            this.tabPageT1_4.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT1_4.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_4.StyleFromParent = false;
             this.tabPageT1_4.TabIndex = 7;
             this.tabPageT1_4.Text = "output";
             this.tabPageT1_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_4.TextBounds")));
-            this.tabPageT1_4.TextSize = new System.Drawing.SizeF(59.4427F, 21.44531F);
+            this.tabPageT1_4.TextSize = new System.Drawing.SizeF(0F, 0F);
             // 
             // lbLed2040M1
             // 
@@ -15734,28 +15654,30 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageT1_2);
+            this.tabControlMain.Controls.Add(this.tabPageT5_1);
+            this.tabControlMain.Controls.Add(this.tabPageT5);
             this.tabControlMain.Controls.Add(this.tabPageT1_1);
             this.tabControlMain.Controls.Add(this.tabPageT1);
-            this.tabControlMain.Controls.Add(this.tabPageT3_1);
-            this.tabControlMain.Controls.Add(this.tabPageT3);
-            this.tabControlMain.Controls.Add(this.tabPageT0_3);
-            this.tabControlMain.Controls.Add(this.tabPageT0_1);
-            this.tabControlMain.Controls.Add(this.tabPageT0);
-            this.tabControlMain.Controls.Add(this.tabPageT1_4);
-            this.tabControlMain.Controls.Add(this.tabPageT1_3);
-            this.tabControlMain.Controls.Add(this.tabPageT7);
-            this.tabControlMain.Controls.Add(this.tabPageT6);
-            this.tabControlMain.Controls.Add(this.tabPageT5);
+            this.tabControlMain.Controls.Add(this.tabPageT5_2);
             this.tabControlMain.Controls.Add(this.tabPageT4);
+            this.tabControlMain.Controls.Add(this.tabPageT3);
             this.tabControlMain.Controls.Add(this.tabPageT2);
+            this.tabControlMain.Controls.Add(this.tabPageT0);
+            this.tabControlMain.Controls.Add(this.tabPageT6);
+            this.tabControlMain.Controls.Add(this.tabPageT7);
+            this.tabControlMain.Controls.Add(this.tabPageT0_1);
             this.tabControlMain.Controls.Add(this.tabPageT0_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
+            this.tabControlMain.Controls.Add(this.tabPageT0_3);
             this.tabControlMain.Controls.Add(this.tabPage2);
+            this.tabControlMain.Controls.Add(this.tabPageT1_2);
+            this.tabControlMain.Controls.Add(this.tabPageT1_3);
+            this.tabControlMain.Controls.Add(this.tabPageT1_4);
             this.tabControlMain.Controls.Add(this.tabPage1);
             this.tabControlMain.Controls.Add(this.tabPage3);
             this.tabControlMain.Controls.Add(this.tabPage4);
+            this.tabControlMain.Controls.Add(this.tabPageT3_1);
             this.tabControlMain.Controls.Add(this.tabPageT3_2);
             this.tabControlMain.Controls.Add(this.tabPageT3_3);
             this.tabControlMain.Controls.Add(this.tabPageT3_4);
@@ -15763,8 +15685,6 @@
             this.tabControlMain.Controls.Add(this.tabPageT4_2);
             this.tabControlMain.Controls.Add(this.tabPageT4_3);
             this.tabControlMain.Controls.Add(this.tabPageT4_4);
-            this.tabControlMain.Controls.Add(this.tabPageT5_1);
-            this.tabControlMain.Controls.Add(this.tabPageT5_2);
             this.tabControlMain.Controls.Add(this.tabPageT5_3);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Top;
@@ -15802,7 +15722,7 @@
             this.tabPageT6,
             this.tabPageT7});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageT1_2;
+            this.tabControlMain.SelectedPage = this.tabPageT5_1;
             tabPageColorStyle65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle65.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle65.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
@@ -15925,16 +15845,9 @@
             this.tabPageT4_3.ResumeLayout(false);
             this.tabPageT5_1.ResumeLayout(false);
             this.tabPageT5_1.PerformLayout();
-            this.groupBoxM5RGLamps.ResumeLayout(false);
-            this.groupBoxM5LFLamps.ResumeLayout(false);
-            this.groupBoxM5Extension.ResumeLayout(false);
-            this.groupBoxM5otation.ResumeLayout(false);
-            this.groupBoxM5Clamp.ResumeLayout(false);
-            this.groupBoxM5Translator.ResumeLayout(false);
             this.tabPageT5_2.ResumeLayout(false);
             this.tabPageT2.ResumeLayout(false);
             this.tabPageT2.PerformLayout();
-            this.tabPageT6.ResumeLayout(false);
             this.tabPageT0_1.ResumeLayout(false);
             this.tabPageT0_1.PerformLayout();
             this.contextMenuStripT0.ResumeLayout(false);
@@ -16425,7 +16338,6 @@
         private System.Windows.Forms.Button buttonM3RotationCCW;
         private System.Windows.Forms.ImageList imageListRotation;
         private System.Windows.Forms.Button buttonM3RotationCW;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button buttonMRecipiesShowAll;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT0Keyboard;
         private System.Windows.Forms.ComboBox comboBoxM1TeachProgramList;
@@ -16842,17 +16754,11 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label labelM5State;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.GroupBox groupBoxM5Translator;
         private System.Windows.Forms.CheckBox checkBoxM6Aspiration;
-        private System.Windows.Forms.GroupBox groupBoxM5RGLamps;
         private System.Windows.Forms.Button buttonM6RGLampsON;
         private System.Windows.Forms.Button buttonM6RGLampsOFF;
-        private System.Windows.Forms.GroupBox groupBoxM5LFLamps;
         private System.Windows.Forms.Button buttonM6LFLampsON;
         private System.Windows.Forms.Button buttonM6LFLampsOFF;
-        private System.Windows.Forms.GroupBox groupBoxM5Extension;
-        private System.Windows.Forms.GroupBox groupBoxM5otation;
-        private System.Windows.Forms.GroupBox groupBoxM5Clamp;
         private LidorSystems.IntegralUI.Containers.TabPage tabPage3;
         private LidorSystems.IntegralUI.Containers.TabPage tabPage4;
         private System.Windows.Forms.Label labelM5OnPercentage;
