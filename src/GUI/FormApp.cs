@@ -341,13 +341,31 @@ namespace GUI
                 LidorSystems.IntegralUI.Containers.TabPage parentPage = this.tabControlMain.SelectedPage;
 
                 if (parentPage.Pages.Count != 0) nextPage = parentPage.Pages[0];
-                if (nextPage != null) this.tabControlMain.SelectedPage = nextPage;
+                if (nextPage != null)
+                {
+
+                    this.tabControlMain.SelectedPage = nextPage;
+                }
 
                 if (nextPage != null)
                 {
                     if (tabControlMain.SelectedPage.Index == 0)
                     {
                         tabControlMain.SelectedPage.ContextMenuStrip.Show();
+                    }
+                    nextPage.ResumeLayout();
+                }
+                parentPage.SuspendLayout();
+                
+                if (parentPage.Index == 7)
+                {
+                    //ask user to close application
+                    DialogResult res = xDialog.MsgBox.Show("Are you sure you want to exit from application?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
+                    if (res == DialogResult.OK)
+                    {
+                        //exit from application
+                        myCore?.StopAllService();
+                        System.Windows.Forms.Application.Exit();
                     }
                 }
             }

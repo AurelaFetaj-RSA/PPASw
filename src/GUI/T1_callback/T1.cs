@@ -85,7 +85,7 @@ namespace GUI
                     int s4 = Convert.ToInt32(dataGridViewM1TeachPoints[2, 3].Value);
                     ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM1TeachProgramList.Text);
                     PointAxis p = new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4);
-                    p.CustomFloatParam = (numericUpDownM1TimerBootTeach.Value.ToString());
+                    p.CustomFloatParam = float.Parse((numericUpDownM1TimerBootTeach.Value.ToString()));
                     prgObj.AddPoint(p);
 
                     prgObj.Save(comboBoxM1TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[0], true);

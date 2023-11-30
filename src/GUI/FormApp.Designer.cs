@@ -868,6 +868,8 @@
             this.toolStripMenuItemT1_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT1_1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripMenuItemT1_1Keyboard = new System.Windows.Forms.ToolStripMenuItem();
+            this.numericUpDownM1TimerBootTeach = new System.Windows.Forms.NumericUpDown();
+            this.labelM1TeachBootDelay = new System.Windows.Forms.Label();
             this.labelM1JogSpeed = new System.Windows.Forms.Label();
             this.labelM1StartQuote = new System.Windows.Forms.Label();
             this.lbButtonM1JogUp = new LBSoft.IndustrialCtrls.Buttons.LBButton();
@@ -1037,8 +1039,6 @@
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
             this.imageListMainControl = new System.Windows.Forms.ImageList(this.components);
             this.imageListNodes = new System.Windows.Forms.ImageList(this.components);
-            this.numericUpDownM1TimerBootTeach = new System.Windows.Forms.NumericUpDown();
-            this.labelM1TeachBootDelay = new System.Windows.Forms.Label();
             this.tabPageT3_1.SuspendLayout();
             this.contextMenuStripT3_1.SuspendLayout();
             this.groupBoxM2Print.SuspendLayout();
@@ -1124,6 +1124,7 @@
             this.tabPage2.SuspendLayout();
             this.tabPageT1_1.SuspendLayout();
             this.contextMenuStripT1_1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1TimerBootTeach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1JogSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1ManualQuote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1ManualSpeed)).BeginInit();
@@ -1136,7 +1137,6 @@
             this.tabPageT1_4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).BeginInit();
             this.tabControlMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1TimerBootTeach)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPageT3_1
@@ -12654,6 +12654,42 @@
             this.toolStripMenuItemT1_1Keyboard.Text = "keyboard";
             this.toolStripMenuItemT1_1Keyboard.Click += new System.EventHandler(this.toolStripMenuItemT1_1Keyboard_Click);
             // 
+            // numericUpDownM1TimerBootTeach
+            // 
+            this.numericUpDownM1TimerBootTeach.DecimalPlaces = 1;
+            this.numericUpDownM1TimerBootTeach.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownM1TimerBootTeach.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownM1TimerBootTeach.Location = new System.Drawing.Point(140, 330);
+            this.numericUpDownM1TimerBootTeach.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numericUpDownM1TimerBootTeach.Name = "numericUpDownM1TimerBootTeach";
+            this.numericUpDownM1TimerBootTeach.Size = new System.Drawing.Size(80, 33);
+            this.numericUpDownM1TimerBootTeach.TabIndex = 290;
+            this.numericUpDownM1TimerBootTeach.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // labelM1TeachBootDelay
+            // 
+            this.labelM1TeachBootDelay.AutoSize = true;
+            this.labelM1TeachBootDelay.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM1TeachBootDelay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM1TeachBootDelay.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM1TeachBootDelay.Location = new System.Drawing.Point(10, 340);
+            this.labelM1TeachBootDelay.Name = "labelM1TeachBootDelay";
+            this.labelM1TeachBootDelay.Size = new System.Drawing.Size(117, 16);
+            this.labelM1TeachBootDelay.TabIndex = 289;
+            this.labelM1TeachBootDelay.Text = "boot delay (sec)";
+            // 
             // labelM1JogSpeed
             // 
             this.labelM1JogSpeed.AutoSize = true;
@@ -13533,7 +13569,7 @@
             0,
             0,
             65536});
-            this.numericUpDownM1BootDelayTest.Location = new System.Drawing.Point(200, 350);
+            this.numericUpDownM1BootDelayTest.Location = new System.Drawing.Point(160, 350);
             this.numericUpDownM1BootDelayTest.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -13554,7 +13590,7 @@
             this.labelM1Timeout.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM1Timeout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM1Timeout.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1Timeout.Location = new System.Drawing.Point(27, 355);
+            this.labelM1Timeout.Location = new System.Drawing.Point(10, 355);
             this.labelM1Timeout.Name = "labelM1Timeout";
             this.labelM1Timeout.Size = new System.Drawing.Size(117, 16);
             this.labelM1Timeout.TabIndex = 135;
@@ -13578,9 +13614,9 @@
             this.buttonM1TestSaveProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM1TestSaveProgram.Image")));
             this.buttonM1TestSaveProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonM1TestSaveProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1TestSaveProgram.Location = new System.Drawing.Point(390, 10);
+            this.buttonM1TestSaveProgram.Location = new System.Drawing.Point(380, 10);
             this.buttonM1TestSaveProgram.Name = "buttonM1TestSaveProgram";
-            this.buttonM1TestSaveProgram.Size = new System.Drawing.Size(161, 53);
+            this.buttonM1TestSaveProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM1TestSaveProgram.TabIndex = 127;
             this.buttonM1TestSaveProgram.Text = "save program";
             this.buttonM1TestSaveProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -13596,7 +13632,7 @@
             this.buttonM1TestLoadProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.buttonM1TestLoadProgram.Location = new System.Drawing.Point(220, 10);
             this.buttonM1TestLoadProgram.Name = "buttonM1TestLoadProgram";
-            this.buttonM1TestLoadProgram.Size = new System.Drawing.Size(160, 53);
+            this.buttonM1TestLoadProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM1TestLoadProgram.TabIndex = 126;
             this.buttonM1TestLoadProgram.Text = "load program";
             this.buttonM1TestLoadProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -15703,7 +15739,7 @@
             this.tabControlMain.Controls.Add(this.tabPageT1);
             this.tabControlMain.Controls.Add(this.tabPageT3_1);
             this.tabControlMain.Controls.Add(this.tabPageT3);
-            this.tabControlMain.Controls.Add(this.tabPage2);
+            this.tabControlMain.Controls.Add(this.tabPageT0_3);
             this.tabControlMain.Controls.Add(this.tabPageT0_1);
             this.tabControlMain.Controls.Add(this.tabPageT0);
             this.tabControlMain.Controls.Add(this.tabPageT1_4);
@@ -15716,7 +15752,7 @@
             this.tabControlMain.Controls.Add(this.tabPageT0_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
-            this.tabControlMain.Controls.Add(this.tabPageT0_3);
+            this.tabControlMain.Controls.Add(this.tabPage2);
             this.tabControlMain.Controls.Add(this.tabPage1);
             this.tabControlMain.Controls.Add(this.tabPage3);
             this.tabControlMain.Controls.Add(this.tabPage4);
@@ -15825,42 +15861,6 @@
             this.imageListNodes.Images.SetKeyName(1, "plc_off.png");
             this.imageListNodes.Images.SetKeyName(2, "iot_on.png");
             this.imageListNodes.Images.SetKeyName(3, "iot_off.png");
-            // 
-            // numericUpDownM1TimerBootTeach
-            // 
-            this.numericUpDownM1TimerBootTeach.DecimalPlaces = 1;
-            this.numericUpDownM1TimerBootTeach.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownM1TimerBootTeach.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownM1TimerBootTeach.Location = new System.Drawing.Point(140, 330);
-            this.numericUpDownM1TimerBootTeach.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numericUpDownM1TimerBootTeach.Name = "numericUpDownM1TimerBootTeach";
-            this.numericUpDownM1TimerBootTeach.Size = new System.Drawing.Size(80, 33);
-            this.numericUpDownM1TimerBootTeach.TabIndex = 290;
-            this.numericUpDownM1TimerBootTeach.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // labelM1TeachBootDelay
-            // 
-            this.labelM1TeachBootDelay.AutoSize = true;
-            this.labelM1TeachBootDelay.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.labelM1TeachBootDelay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM1TeachBootDelay.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1TeachBootDelay.Location = new System.Drawing.Point(10, 340);
-            this.labelM1TeachBootDelay.Name = "labelM1TeachBootDelay";
-            this.labelM1TeachBootDelay.Size = new System.Drawing.Size(117, 16);
-            this.labelM1TeachBootDelay.TabIndex = 289;
-            this.labelM1TeachBootDelay.Text = "boot delay (sec)";
             // 
             // FormApp
             // 
@@ -15989,6 +15989,7 @@
             this.tabPageT1_1.ResumeLayout(false);
             this.tabPageT1_1.PerformLayout();
             this.contextMenuStripT1_1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1TimerBootTeach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1JogSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1ManualQuote)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1ManualSpeed)).EndInit();
@@ -16002,7 +16003,6 @@
             this.tabPageT1_4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).EndInit();
             this.tabControlMain.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1TimerBootTeach)).EndInit();
             this.ResumeLayout(false);
 
         }
