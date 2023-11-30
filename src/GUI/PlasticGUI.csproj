@@ -72,7 +72,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>app_logo.ico</ApplicationIcon>
+    <ApplicationIcon>app_logo_rev2.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="LBIndustrialCtrls, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -224,6 +224,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app_logo.ico" />
+    <Content Include="app_logo_rev2.ico" />
     <Content Include="images\back_bar.png" />
     <Content Include="images\back_tbar.png" />
     <Content Include="images\back_toolbar.png" />

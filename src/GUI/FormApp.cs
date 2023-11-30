@@ -361,7 +361,7 @@ namespace GUI
                 {
                     //ask user to close application
                     DialogResult res = xDialog.MsgBox.Show("Are you sure you want to exit from application?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
-                    if (res == DialogResult.OK)
+                    if (res == DialogResult.Yes)
                     {
                         //exit from application
                         myCore?.StopAllService();
@@ -1033,10 +1033,10 @@ namespace GUI
         {
             Process foo = new Process();
 
-            foo.StartInfo.FileName = @AppDomain.CurrentDomain.BaseDirectory + "Oskeyboard.exe";
+            foo.StartInfo.FileName = @AppDomain.CurrentDomain.BaseDirectory + "RSAKeyboard.exe";// "Oskeyboard.exe";
 
             bool isRunning = false; //TODO: Check to see if process foo.exe is already running
-            var processExists = Process.GetProcesses().Any(p => p.ProcessName.Contains("Oskeyboard"));
+            var processExists = Process.GetProcesses().Any(p => p.ProcessName.Contains("RSAKeyboard.exe"));
 
             if (processExists)
             {
