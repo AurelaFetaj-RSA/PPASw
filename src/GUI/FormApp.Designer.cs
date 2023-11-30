@@ -4320,16 +4320,18 @@
             // 
             // buttonM3RotationCCW
             // 
+            this.buttonM3RotationCCW.BackColor = System.Drawing.SystemColors.Control;
             this.buttonM3RotationCCW.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3RotationCCW.ImageIndex = 1;
             this.buttonM3RotationCCW.ImageList = this.imageListRotation;
             this.buttonM3RotationCCW.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3RotationCCW.Location = new System.Drawing.Point(495, 538);
+            this.buttonM3RotationCCW.Location = new System.Drawing.Point(310, 608);
             this.buttonM3RotationCCW.Name = "buttonM3RotationCCW";
-            this.buttonM3RotationCCW.Size = new System.Drawing.Size(48, 48);
+            this.buttonM3RotationCCW.Size = new System.Drawing.Size(70, 90);
             this.buttonM3RotationCCW.TabIndex = 152;
-            this.buttonM3RotationCCW.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonM3RotationCCW.UseVisualStyleBackColor = true;
+            this.buttonM3RotationCCW.Text = "CCW rotation";
+            this.buttonM3RotationCCW.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.buttonM3RotationCCW.UseVisualStyleBackColor = false;
             this.buttonM3RotationCCW.Click += new System.EventHandler(this.buttonM3RotationCCW_Click);
             // 
             // imageListRotation
@@ -4341,141 +4343,153 @@
             // 
             // buttonM3RotationCW
             // 
+            this.buttonM3RotationCW.BackColor = System.Drawing.SystemColors.Control;
             this.buttonM3RotationCW.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3RotationCW.ImageIndex = 0;
             this.buttonM3RotationCW.ImageList = this.imageListRotation;
             this.buttonM3RotationCW.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3RotationCW.Location = new System.Drawing.Point(440, 538);
+            this.buttonM3RotationCW.Location = new System.Drawing.Point(220, 608);
             this.buttonM3RotationCW.Name = "buttonM3RotationCW";
-            this.buttonM3RotationCW.Size = new System.Drawing.Size(48, 48);
+            this.buttonM3RotationCW.Size = new System.Drawing.Size(70, 90);
             this.buttonM3RotationCW.TabIndex = 151;
-            this.buttonM3RotationCW.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonM3RotationCW.UseVisualStyleBackColor = true;
+            this.buttonM3RotationCW.Text = "CW rotation";
+            this.buttonM3RotationCW.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.buttonM3RotationCW.UseVisualStyleBackColor = false;
             this.buttonM3RotationCW.Click += new System.EventHandler(this.buttonM3RotationCW_Click);
             // 
             // buttonM3ContrastOpening
             // 
+            this.buttonM3ContrastOpening.BackColor = System.Drawing.SystemColors.Control;
             this.buttonM3ContrastOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3ContrastOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3ContrastOpening.Location = new System.Drawing.Point(326, 437);
+            this.buttonM3ContrastOpening.Location = new System.Drawing.Point(10, 510);
             this.buttonM3ContrastOpening.Name = "buttonM3ContrastOpening";
-            this.buttonM3ContrastOpening.Size = new System.Drawing.Size(80, 48);
+            this.buttonM3ContrastOpening.Size = new System.Drawing.Size(160, 48);
             this.buttonM3ContrastOpening.TabIndex = 147;
             this.buttonM3ContrastOpening.Text = "contrast opening";
-            this.buttonM3ContrastOpening.UseVisualStyleBackColor = true;
+            this.buttonM3ContrastOpening.UseVisualStyleBackColor = false;
             this.buttonM3ContrastOpening.Click += new System.EventHandler(this.buttonM3ContrastOpening_Click);
             // 
             // buttonM3ContrastClosing
             // 
+            this.buttonM3ContrastClosing.BackColor = System.Drawing.SystemColors.Control;
             this.buttonM3ContrastClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3ContrastClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3ContrastClosing.Location = new System.Drawing.Point(460, 437);
+            this.buttonM3ContrastClosing.Location = new System.Drawing.Point(10, 580);
             this.buttonM3ContrastClosing.Name = "buttonM3ContrastClosing";
-            this.buttonM3ContrastClosing.Size = new System.Drawing.Size(80, 48);
+            this.buttonM3ContrastClosing.Size = new System.Drawing.Size(160, 48);
             this.buttonM3ContrastClosing.TabIndex = 148;
             this.buttonM3ContrastClosing.Text = "constrast closing";
-            this.buttonM3ContrastClosing.UseVisualStyleBackColor = true;
+            this.buttonM3ContrastClosing.UseVisualStyleBackColor = false;
             this.buttonM3ContrastClosing.Click += new System.EventHandler(this.buttonM3ContrastClosing_Click);
             // 
             // buttonM3CenteringClampsOpening
             // 
+            this.buttonM3CenteringClampsOpening.BackColor = System.Drawing.SystemColors.Control;
             this.buttonM3CenteringClampsOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3CenteringClampsOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3CenteringClampsOpening.Location = new System.Drawing.Point(14, 433);
+            this.buttonM3CenteringClampsOpening.Location = new System.Drawing.Point(430, 370);
             this.buttonM3CenteringClampsOpening.Name = "buttonM3CenteringClampsOpening";
-            this.buttonM3CenteringClampsOpening.Size = new System.Drawing.Size(80, 48);
+            this.buttonM3CenteringClampsOpening.Size = new System.Drawing.Size(160, 48);
             this.buttonM3CenteringClampsOpening.TabIndex = 145;
-            this.buttonM3CenteringClampsOpening.Text = "centering clamp opening";
-            this.buttonM3CenteringClampsOpening.UseVisualStyleBackColor = true;
+            this.buttonM3CenteringClampsOpening.Text = "center clamp opening";
+            this.buttonM3CenteringClampsOpening.UseVisualStyleBackColor = false;
             this.buttonM3CenteringClampsOpening.Click += new System.EventHandler(this.buttonM3CenteringClampsOpening_Click);
             // 
             // buttonM3CenteringClampsClosing
             // 
+            this.buttonM3CenteringClampsClosing.BackColor = System.Drawing.SystemColors.Control;
             this.buttonM3CenteringClampsClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3CenteringClampsClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3CenteringClampsClosing.Location = new System.Drawing.Point(174, 433);
+            this.buttonM3CenteringClampsClosing.Location = new System.Drawing.Point(430, 440);
             this.buttonM3CenteringClampsClosing.Name = "buttonM3CenteringClampsClosing";
-            this.buttonM3CenteringClampsClosing.Size = new System.Drawing.Size(80, 48);
+            this.buttonM3CenteringClampsClosing.Size = new System.Drawing.Size(160, 48);
             this.buttonM3CenteringClampsClosing.TabIndex = 146;
-            this.buttonM3CenteringClampsClosing.Text = "centering clamp closing";
-            this.buttonM3CenteringClampsClosing.UseVisualStyleBackColor = true;
+            this.buttonM3CenteringClampsClosing.Text = "center clamp closing";
+            this.buttonM3CenteringClampsClosing.UseVisualStyleBackColor = false;
             this.buttonM3CenteringClampsClosing.Click += new System.EventHandler(this.buttonM3CenteringClampsClosing_Click);
             // 
             // buttonM3BigClampOpening
             // 
+            this.buttonM3BigClampOpening.BackColor = System.Drawing.SystemColors.Control;
             this.buttonM3BigClampOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3BigClampOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3BigClampOpening.Location = new System.Drawing.Point(324, 337);
+            this.buttonM3BigClampOpening.Location = new System.Drawing.Point(220, 370);
             this.buttonM3BigClampOpening.Name = "buttonM3BigClampOpening";
-            this.buttonM3BigClampOpening.Size = new System.Drawing.Size(80, 48);
+            this.buttonM3BigClampOpening.Size = new System.Drawing.Size(160, 48);
             this.buttonM3BigClampOpening.TabIndex = 143;
             this.buttonM3BigClampOpening.Text = "big clamp opening";
-            this.buttonM3BigClampOpening.UseVisualStyleBackColor = true;
+            this.buttonM3BigClampOpening.UseVisualStyleBackColor = false;
             this.buttonM3BigClampOpening.Click += new System.EventHandler(this.buttonM3BigClampOpening_Click);
             // 
             // buttonM3BigClampClosing
             // 
+            this.buttonM3BigClampClosing.BackColor = System.Drawing.SystemColors.Control;
             this.buttonM3BigClampClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3BigClampClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3BigClampClosing.Location = new System.Drawing.Point(458, 337);
+            this.buttonM3BigClampClosing.Location = new System.Drawing.Point(220, 440);
             this.buttonM3BigClampClosing.Name = "buttonM3BigClampClosing";
-            this.buttonM3BigClampClosing.Size = new System.Drawing.Size(80, 48);
+            this.buttonM3BigClampClosing.Size = new System.Drawing.Size(160, 48);
             this.buttonM3BigClampClosing.TabIndex = 144;
             this.buttonM3BigClampClosing.Text = "big clamp closing";
-            this.buttonM3BigClampClosing.UseVisualStyleBackColor = true;
+            this.buttonM3BigClampClosing.UseVisualStyleBackColor = false;
             this.buttonM3BigClampClosing.Click += new System.EventHandler(this.buttonM3BigClampClosing_Click);
             // 
             // buttonM3SmallClampOpening
             // 
+            this.buttonM3SmallClampOpening.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM3SmallClampOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3SmallClampOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3SmallClampOpening.Location = new System.Drawing.Point(14, 334);
+            this.buttonM3SmallClampOpening.Location = new System.Drawing.Point(10, 370);
             this.buttonM3SmallClampOpening.Name = "buttonM3SmallClampOpening";
-            this.buttonM3SmallClampOpening.Size = new System.Drawing.Size(80, 48);
+            this.buttonM3SmallClampOpening.Size = new System.Drawing.Size(160, 48);
             this.buttonM3SmallClampOpening.TabIndex = 141;
             this.buttonM3SmallClampOpening.Text = "small clamp opening";
-            this.buttonM3SmallClampOpening.UseVisualStyleBackColor = true;
+            this.buttonM3SmallClampOpening.UseVisualStyleBackColor = false;
             this.buttonM3SmallClampOpening.Click += new System.EventHandler(this.buttonM3SmallClampOpening_Click);
             // 
             // buttonM3SmallClampClosing
             // 
+            this.buttonM3SmallClampClosing.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM3SmallClampClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3SmallClampClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3SmallClampClosing.Location = new System.Drawing.Point(174, 334);
+            this.buttonM3SmallClampClosing.Location = new System.Drawing.Point(10, 440);
             this.buttonM3SmallClampClosing.Name = "buttonM3SmallClampClosing";
-            this.buttonM3SmallClampClosing.Size = new System.Drawing.Size(80, 48);
+            this.buttonM3SmallClampClosing.Size = new System.Drawing.Size(160, 48);
             this.buttonM3SmallClampClosing.TabIndex = 142;
             this.buttonM3SmallClampClosing.Text = "small clamp closing";
-            this.buttonM3SmallClampClosing.UseVisualStyleBackColor = true;
+            this.buttonM3SmallClampClosing.UseVisualStyleBackColor = false;
             this.buttonM3SmallClampClosing.Click += new System.EventHandler(this.buttonM3SmallClampClosing_Click);
             // 
             // buttonM3PrintCycle
             // 
+            this.buttonM3PrintCycle.BackColor = System.Drawing.SystemColors.Control;
             this.buttonM3PrintCycle.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3PrintCycle.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3PrintCycle.Location = new System.Drawing.Point(39, 524);
+            this.buttonM3PrintCycle.Location = new System.Drawing.Point(10, 650);
             this.buttonM3PrintCycle.Name = "buttonM3PrintCycle";
-            this.buttonM3PrintCycle.Size = new System.Drawing.Size(80, 48);
+            this.buttonM3PrintCycle.Size = new System.Drawing.Size(160, 48);
             this.buttonM3PrintCycle.TabIndex = 150;
             this.buttonM3PrintCycle.Text = "print cycle";
-            this.buttonM3PrintCycle.UseVisualStyleBackColor = true;
+            this.buttonM3PrintCycle.UseVisualStyleBackColor = false;
             this.buttonM3PrintCycle.Click += new System.EventHandler(this.buttonM3PrintCycle_Click);
             // 
             // buttonM3ResetServo
             // 
+            this.buttonM3ResetServo.BackColor = System.Drawing.SystemColors.Control;
             this.buttonM3ResetServo.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3ResetServo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3ResetServo.Location = new System.Drawing.Point(640, 635);
+            this.buttonM3ResetServo.Location = new System.Drawing.Point(605, 640);
             this.buttonM3ResetServo.Name = "buttonM3ResetServo";
-            this.buttonM3ResetServo.Size = new System.Drawing.Size(90, 48);
+            this.buttonM3ResetServo.Size = new System.Drawing.Size(130, 48);
             this.buttonM3ResetServo.TabIndex = 149;
-            this.buttonM3ResetServo.Text = "reset alarm";
-            this.buttonM3ResetServo.UseVisualStyleBackColor = true;
+            this.buttonM3ResetServo.Text = "reset servo alarm";
+            this.buttonM3ResetServo.UseVisualStyleBackColor = false;
             this.buttonM3ResetServo.Click += new System.EventHandler(this.buttonM3ResetServo_Click);
             // 
             // lbLed11
             // 
-            this.lbLed11.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed11.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed11.BlinkInterval = 500;
             this.lbLed11.Enabled = false;
             this.lbLed11.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -4484,7 +4498,7 @@
             this.lbLed11.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed11.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed11.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed11.Location = new System.Drawing.Point(735, 645);
+            this.lbLed11.Location = new System.Drawing.Point(739, 650);
             this.lbLed11.Name = "lbLed11";
             this.lbLed11.Renderer = null;
             this.lbLed11.Size = new System.Drawing.Size(100, 24);
@@ -4496,43 +4510,46 @@
             // 
             this.checkBoxM3ExitBelt.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBoxM3ExitBelt.AutoSize = true;
+            this.checkBoxM3ExitBelt.BackColor = System.Drawing.SystemColors.Control;
             this.checkBoxM3ExitBelt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkBoxM3ExitBelt.FlatAppearance.BorderSize = 5;
             this.checkBoxM3ExitBelt.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxM3ExitBelt.ImageIndex = 3;
             this.checkBoxM3ExitBelt.ImageList = this.imageListBelt;
             this.checkBoxM3ExitBelt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM3ExitBelt.Location = new System.Drawing.Point(173, 530);
+            this.checkBoxM3ExitBelt.Location = new System.Drawing.Point(520, 608);
             this.checkBoxM3ExitBelt.Name = "checkBoxM3ExitBelt";
-            this.checkBoxM3ExitBelt.Size = new System.Drawing.Size(105, 70);
+            this.checkBoxM3ExitBelt.Size = new System.Drawing.Size(70, 90);
             this.checkBoxM3ExitBelt.TabIndex = 270;
             this.checkBoxM3ExitBelt.Text = "exit";
-            this.checkBoxM3ExitBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.checkBoxM3ExitBelt.UseVisualStyleBackColor = true;
+            this.checkBoxM3ExitBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBoxM3ExitBelt.UseVisualStyleBackColor = false;
             this.checkBoxM3ExitBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM3ExitBelt_CheckStateChanged);
             // 
             // checkBoxM3WorkingBelt
             // 
             this.checkBoxM3WorkingBelt.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBoxM3WorkingBelt.AutoSize = true;
+            this.checkBoxM3WorkingBelt.BackColor = System.Drawing.SystemColors.Control;
             this.checkBoxM3WorkingBelt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkBoxM3WorkingBelt.FlatAppearance.BorderSize = 5;
             this.checkBoxM3WorkingBelt.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxM3WorkingBelt.ImageIndex = 1;
             this.checkBoxM3WorkingBelt.ImageList = this.imageListBelt;
             this.checkBoxM3WorkingBelt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM3WorkingBelt.Location = new System.Drawing.Point(303, 530);
+            this.checkBoxM3WorkingBelt.Location = new System.Drawing.Point(430, 608);
             this.checkBoxM3WorkingBelt.Name = "checkBoxM3WorkingBelt";
-            this.checkBoxM3WorkingBelt.Size = new System.Drawing.Size(131, 70);
+            this.checkBoxM3WorkingBelt.Size = new System.Drawing.Size(70, 90);
             this.checkBoxM3WorkingBelt.TabIndex = 269;
             this.checkBoxM3WorkingBelt.Text = "working";
-            this.checkBoxM3WorkingBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.checkBoxM3WorkingBelt.UseVisualStyleBackColor = true;
+            this.checkBoxM3WorkingBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBoxM3WorkingBelt.UseVisualStyleBackColor = false;
             this.checkBoxM3WorkingBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM3WorkingBelt_CheckStateChanged);
             // 
             // labelM3HomingDone
             // 
             this.labelM3HomingDone.AutoSize = true;
+            this.labelM3HomingDone.BackColor = System.Drawing.SystemColors.Control;
             this.labelM3HomingDone.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM3HomingDone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM3HomingDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -4548,7 +4565,7 @@
             this.buttonM3HomingDone.FlatAppearance.BorderSize = 10;
             this.buttonM3HomingDone.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3HomingDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3HomingDone.Location = new System.Drawing.Point(626, 566);
+            this.buttonM3HomingDone.Location = new System.Drawing.Point(605, 566);
             this.buttonM3HomingDone.Name = "buttonM3HomingDone";
             this.buttonM3HomingDone.Size = new System.Drawing.Size(24, 24);
             this.buttonM3HomingDone.TabIndex = 133;
@@ -4558,34 +4575,37 @@
             // 
             // buttonM3Home
             // 
+            this.buttonM3Home.BackColor = System.Drawing.SystemColors.Control;
             this.buttonM3Home.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3Home.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3Home.Location = new System.Drawing.Point(626, 503);
+            this.buttonM3Home.Location = new System.Drawing.Point(605, 503);
             this.buttonM3Home.Name = "buttonM3Home";
             this.buttonM3Home.Size = new System.Drawing.Size(100, 48);
             this.buttonM3Home.TabIndex = 8;
             this.buttonM3Home.Text = "go home";
-            this.buttonM3Home.UseVisualStyleBackColor = true;
+            this.buttonM3Home.UseVisualStyleBackColor = false;
             this.buttonM3Home.Click += new System.EventHandler(this.buttonM3Home_Click);
             // 
             // buttonM3ResetHome
             // 
+            this.buttonM3ResetHome.BackColor = System.Drawing.SystemColors.Control;
             this.buttonM3ResetHome.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3ResetHome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3ResetHome.Location = new System.Drawing.Point(746, 503);
+            this.buttonM3ResetHome.Location = new System.Drawing.Point(739, 503);
             this.buttonM3ResetHome.Name = "buttonM3ResetHome";
             this.buttonM3ResetHome.Size = new System.Drawing.Size(100, 48);
             this.buttonM3ResetHome.TabIndex = 9;
             this.buttonM3ResetHome.Text = "reset home";
-            this.buttonM3ResetHome.UseVisualStyleBackColor = true;
+            this.buttonM3ResetHome.UseVisualStyleBackColor = false;
             this.buttonM3ResetHome.Click += new System.EventHandler(this.buttonM3ResetHome_Click);
             // 
             // labelM3StartQuote
             // 
             this.labelM3StartQuote.AutoSize = true;
+            this.labelM3StartQuote.BackColor = System.Drawing.SystemColors.Control;
             this.labelM3StartQuote.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM3StartQuote.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM3StartQuote.Location = new System.Drawing.Point(623, 340);
+            this.labelM3StartQuote.Location = new System.Drawing.Point(605, 350);
             this.labelM3StartQuote.Name = "labelM3StartQuote";
             this.labelM3StartQuote.Size = new System.Drawing.Size(79, 16);
             this.labelM3StartQuote.TabIndex = 105;
@@ -4594,9 +4614,10 @@
             // labelM3StartSpeed
             // 
             this.labelM3StartSpeed.AutoSize = true;
+            this.labelM3StartSpeed.BackColor = System.Drawing.SystemColors.Control;
             this.labelM3StartSpeed.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM3StartSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM3StartSpeed.Location = new System.Drawing.Point(764, 340);
+            this.labelM3StartSpeed.Location = new System.Drawing.Point(749, 350);
             this.labelM3StartSpeed.Name = "labelM3StartSpeed";
             this.labelM3StartSpeed.Size = new System.Drawing.Size(71, 16);
             this.labelM3StartSpeed.TabIndex = 104;
@@ -4604,14 +4625,15 @@
             // 
             // buttonM3StartQuote
             // 
+            this.buttonM3StartQuote.BackColor = System.Drawing.SystemColors.Control;
             this.buttonM3StartQuote.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3StartQuote.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3StartQuote.Location = new System.Drawing.Point(624, 410);
+            this.buttonM3StartQuote.Location = new System.Drawing.Point(605, 437);
             this.buttonM3StartQuote.Name = "buttonM3StartQuote";
-            this.buttonM3StartQuote.Size = new System.Drawing.Size(220, 48);
+            this.buttonM3StartQuote.Size = new System.Drawing.Size(234, 48);
             this.buttonM3StartQuote.TabIndex = 80;
             this.buttonM3StartQuote.Text = "start quote";
-            this.buttonM3StartQuote.UseVisualStyleBackColor = true;
+            this.buttonM3StartQuote.UseVisualStyleBackColor = false;
             this.buttonM3StartQuote.Click += new System.EventHandler(this.buttonM3StartQuote_Click);
             // 
             // numericUpDownM3ManualQuote
@@ -4623,7 +4645,7 @@
             0,
             0,
             65536});
-            this.numericUpDownM3ManualQuote.Location = new System.Drawing.Point(624, 360);
+            this.numericUpDownM3ManualQuote.Location = new System.Drawing.Point(605, 375);
             this.numericUpDownM3ManualQuote.Minimum = new decimal(new int[] {
             300,
             0,
@@ -4647,7 +4669,7 @@
             0,
             0,
             0});
-            this.numericUpDownM3ManualSpeed.Location = new System.Drawing.Point(764, 360);
+            this.numericUpDownM3ManualSpeed.Location = new System.Drawing.Point(749, 374);
             this.numericUpDownM3ManualSpeed.Minimum = new decimal(new int[] {
             10,
             0,
@@ -4665,6 +4687,7 @@
             // labelM3TeachJogSpeed
             // 
             this.labelM3TeachJogSpeed.AutoSize = true;
+            this.labelM3TeachJogSpeed.BackColor = System.Drawing.SystemColors.Control;
             this.labelM3TeachJogSpeed.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM3TeachJogSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM3TeachJogSpeed.Location = new System.Drawing.Point(778, 109);
@@ -4682,7 +4705,7 @@
             this.lbButtonM3JogUp.Font = new System.Drawing.Font("Verdana", 39.75F, System.Drawing.FontStyle.Bold);
             this.lbButtonM3JogUp.ForeColor = System.Drawing.Color.White;
             this.lbButtonM3JogUp.Label = "jog up";
-            this.lbButtonM3JogUp.Location = new System.Drawing.Point(623, 109);
+            this.lbButtonM3JogUp.Location = new System.Drawing.Point(605, 115);
             this.lbButtonM3JogUp.Name = "lbButtonM3JogUp";
             this.lbButtonM3JogUp.Renderer = null;
             this.lbButtonM3JogUp.RepeatInterval = 100;
@@ -4703,7 +4726,7 @@
             this.lbButtonM3JogDown.Font = new System.Drawing.Font("Verdana", 39.75F, System.Drawing.FontStyle.Bold);
             this.lbButtonM3JogDown.ForeColor = System.Drawing.Color.White;
             this.lbButtonM3JogDown.Label = "jog down";
-            this.lbButtonM3JogDown.Location = new System.Drawing.Point(623, 234);
+            this.lbButtonM3JogDown.Location = new System.Drawing.Point(605, 215);
             this.lbButtonM3JogDown.Name = "lbButtonM3JogDown";
             this.lbButtonM3JogDown.Renderer = null;
             this.lbButtonM3JogDown.RepeatInterval = 100;
@@ -4742,6 +4765,7 @@
             // labelM3TeachAxisQuoteName
             // 
             this.labelM3TeachAxisQuoteName.AutoSize = true;
+            this.labelM3TeachAxisQuoteName.BackColor = System.Drawing.SystemColors.Control;
             this.labelM3TeachAxisQuoteName.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM3TeachAxisQuoteName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM3TeachAxisQuoteName.Location = new System.Drawing.Point(778, 194);
@@ -4753,6 +4777,7 @@
             // labelM3TeachAxisQuoteValue
             // 
             this.labelM3TeachAxisQuoteValue.AutoSize = true;
+            this.labelM3TeachAxisQuoteValue.BackColor = System.Drawing.SystemColors.Control;
             this.labelM3TeachAxisQuoteValue.Font = new System.Drawing.Font("Verdana", 14.25F);
             this.labelM3TeachAxisQuoteValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM3TeachAxisQuoteValue.Location = new System.Drawing.Point(778, 224);
@@ -4763,6 +4788,7 @@
             // 
             // buttonM3TeachDeleteProgram
             // 
+            this.buttonM3TeachDeleteProgram.BackColor = System.Drawing.SystemColors.Control;
             this.buttonM3TeachDeleteProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM3TeachDeleteProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM3TeachDeleteProgram.Image")));
             this.buttonM3TeachDeleteProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -4774,7 +4800,7 @@
             this.buttonM3TeachDeleteProgram.Text = "delete program";
             this.buttonM3TeachDeleteProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM3TeachDeleteProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM3TeachDeleteProgram.UseVisualStyleBackColor = true;
+            this.buttonM3TeachDeleteProgram.UseVisualStyleBackColor = false;
             this.buttonM3TeachDeleteProgram.Click += new System.EventHandler(this.buttonM3TeachDeleteProgram_Click);
             // 
             // comboBoxM3TeachProgramList
@@ -4788,6 +4814,7 @@
             // 
             // buttonM3TeachNewProgram
             // 
+            this.buttonM3TeachNewProgram.BackColor = System.Drawing.SystemColors.Control;
             this.buttonM3TeachNewProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM3TeachNewProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM3TeachNewProgram.Image")));
             this.buttonM3TeachNewProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -4799,11 +4826,12 @@
             this.buttonM3TeachNewProgram.Text = "new program";
             this.buttonM3TeachNewProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM3TeachNewProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM3TeachNewProgram.UseVisualStyleBackColor = true;
+            this.buttonM3TeachNewProgram.UseVisualStyleBackColor = false;
             this.buttonM3TeachNewProgram.Click += new System.EventHandler(this.buttonM3TeachNewProgram_Click);
             // 
             // buttonM3TeachSaveProgram
             // 
+            this.buttonM3TeachSaveProgram.BackColor = System.Drawing.SystemColors.Control;
             this.buttonM3TeachSaveProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM3TeachSaveProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM3TeachSaveProgram.Image")));
             this.buttonM3TeachSaveProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -4815,11 +4843,12 @@
             this.buttonM3TeachSaveProgram.Text = "save program";
             this.buttonM3TeachSaveProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM3TeachSaveProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM3TeachSaveProgram.UseVisualStyleBackColor = true;
+            this.buttonM3TeachSaveProgram.UseVisualStyleBackColor = false;
             this.buttonM3TeachSaveProgram.Click += new System.EventHandler(this.buttonM3TeachSaveProgram_Click);
             // 
             // buttonM3TeachLoadProgram
             // 
+            this.buttonM3TeachLoadProgram.BackColor = System.Drawing.SystemColors.Control;
             this.buttonM3TeachLoadProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM3TeachLoadProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM3TeachLoadProgram.Image")));
             this.buttonM3TeachLoadProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -4831,7 +4860,7 @@
             this.buttonM3TeachLoadProgram.Text = "load program";
             this.buttonM3TeachLoadProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM3TeachLoadProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM3TeachLoadProgram.UseVisualStyleBackColor = true;
+            this.buttonM3TeachLoadProgram.UseVisualStyleBackColor = false;
             this.buttonM3TeachLoadProgram.Click += new System.EventHandler(this.buttonM3TeachLoadProgram_Click);
             // 
             // dataGridViewM3TeachPoints
@@ -12366,7 +12395,7 @@
             this.labelM1JogSpeed.AutoSize = true;
             this.labelM1JogSpeed.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM1JogSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1JogSpeed.Location = new System.Drawing.Point(759, 115);
+            this.labelM1JogSpeed.Location = new System.Drawing.Point(760, 115);
             this.labelM1JogSpeed.Name = "labelM1JogSpeed";
             this.labelM1JogSpeed.Size = new System.Drawing.Size(71, 16);
             this.labelM1JogSpeed.TabIndex = 103;
@@ -12445,7 +12474,7 @@
             0,
             0,
             0});
-            this.numericUpDownM1JogSpeed.Location = new System.Drawing.Point(759, 135);
+            this.numericUpDownM1JogSpeed.Location = new System.Drawing.Point(760, 135);
             this.numericUpDownM1JogSpeed.Minimum = new decimal(new int[] {
             10,
             0,
@@ -12477,7 +12506,7 @@
             this.labelM1TeachAxisQuoteName.AutoSize = true;
             this.labelM1TeachAxisQuoteName.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM1TeachAxisQuoteName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1TeachAxisQuoteName.Location = new System.Drawing.Point(759, 200);
+            this.labelM1TeachAxisQuoteName.Location = new System.Drawing.Point(760, 200);
             this.labelM1TeachAxisQuoteName.Name = "labelM1TeachAxisQuoteName";
             this.labelM1TeachAxisQuoteName.Size = new System.Drawing.Size(84, 16);
             this.labelM1TeachAxisQuoteName.TabIndex = 102;
@@ -12502,7 +12531,7 @@
             this.labelM1TeachAxisQuoteValue.AutoSize = true;
             this.labelM1TeachAxisQuoteValue.Font = new System.Drawing.Font("Verdana", 14.25F);
             this.labelM1TeachAxisQuoteValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1TeachAxisQuoteValue.Location = new System.Drawing.Point(759, 230);
+            this.labelM1TeachAxisQuoteValue.Location = new System.Drawing.Point(760, 230);
             this.labelM1TeachAxisQuoteValue.Name = "labelM1TeachAxisQuoteValue";
             this.labelM1TeachAxisQuoteValue.Size = new System.Drawing.Size(58, 23);
             this.labelM1TeachAxisQuoteValue.TabIndex = 103;
@@ -12556,7 +12585,7 @@
             this.lbLed13.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed13.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed13.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed13.Location = new System.Drawing.Point(720, 651);
+            this.lbLed13.Location = new System.Drawing.Point(720, 650);
             this.lbLed13.Name = "lbLed13";
             this.lbLed13.Renderer = null;
             this.lbLed13.Size = new System.Drawing.Size(130, 24);
@@ -12596,7 +12625,7 @@
             this.buttonM1ResetServo.Name = "buttonM1ResetServo";
             this.buttonM1ResetServo.Size = new System.Drawing.Size(100, 48);
             this.buttonM1ResetServo.TabIndex = 149;
-            this.buttonM1ResetServo.Text = "reset alarm";
+            this.buttonM1ResetServo.Text = "reset servo alarm";
             this.buttonM1ResetServo.UseVisualStyleBackColor = true;
             this.buttonM1ResetServo.Click += new System.EventHandler(this.buttonM1ResetServo_Click);
             // 
@@ -15406,12 +15435,12 @@
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
             this.tabControlMain.Controls.Add(this.tabPageT4_1);
-            this.tabControlMain.Controls.Add(this.tabPageT4_2);
             this.tabControlMain.Controls.Add(this.tabPageT4);
-            this.tabControlMain.Controls.Add(this.tabPageT5_1);
-            this.tabControlMain.Controls.Add(this.tabPageT5);
             this.tabControlMain.Controls.Add(this.tabPageT1_1);
             this.tabControlMain.Controls.Add(this.tabPageT1);
+            this.tabControlMain.Controls.Add(this.tabPageT5);
+            this.tabControlMain.Controls.Add(this.tabPageT5_1);
+            this.tabControlMain.Controls.Add(this.tabPageT4_2);
             this.tabControlMain.Controls.Add(this.tabPageT5_2);
             this.tabControlMain.Controls.Add(this.tabPageT3);
             this.tabControlMain.Controls.Add(this.tabPageT2);
