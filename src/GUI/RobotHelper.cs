@@ -330,8 +330,9 @@ namespace GUI
 
                     readResult = await ccService.Read(keys);
                     WriteAsyncDataGridViewPointReached(readResult["pcM1PointReached"], dataGridViewM1TeachPoints);
+                    //force repaint
+                    dataGridViewM1TeachPoints.Invalidate(false);
 
-                    readResult = await ccService.Read(keys);
                     WriteAsyncDataGridViewPointReached(readResult["pcM2PointReached"], dataGridViewM2TeachPoints);
                     //force repaint
                     dataGridViewM2TeachPoints.Invalidate(false);
@@ -339,6 +340,18 @@ namespace GUI
                     WriteAsyncDataGridViewPointReached(readResult["pcM3PointReached"], dataGridViewM3TeachPoints);
                     //force repaint
                     dataGridViewM3TeachPoints.Invalidate(false);
+
+                    WriteAsyncDataGridViewPointReached(readResult["pcM1PointReached"], dataGridViewM1TestPoints);
+                    //force repaint
+                    dataGridViewM1TestPoints.Invalidate(false);
+
+                    WriteAsyncDataGridViewPointReached(readResult["pcM2PointReached"], dataGridViewM2TestPoints);
+                    //force repaint
+                    dataGridViewM2TestPoints.Invalidate(false);
+
+                    WriteAsyncDataGridViewPointReached(readResult["pcM3PointReached"], dataGridViewM3TestPoints);
+                    //force repaint
+                    dataGridViewM3TestPoints.Invalidate(false);
                     #endregion
 
                     //manipulator digital input
@@ -356,7 +369,7 @@ namespace GUI
                     //}
                     //catch (Exception Ex)
                     //{
-                    
+
                     //}
 
                     //M1 input/output
@@ -2004,13 +2017,15 @@ namespace GUI
         #region (* send M1 teaching package *)
         public async void OPCUAM1TeachPckSend(short pointID, float[] pointQuote, short[] pointSpeed, bool[] pointReg)
         {
-            List<string> keys = new List<string>();
-            keys.Add("pcM1TeachPointID");
-            keys.Add("pcM1TeachQuote");
-            keys.Add("pcM1TeachSpeed");            
-            keys.Add("pcM1TeachPointReg");
-            
-            List<object> obj = new List<object>()
+            if (ccService.ClientIsConnected)
+            {
+                List<string> keys = new List<string>();
+                keys.Add("pcM1TeachPointID");
+                keys.Add("pcM1TeachQuote");
+                keys.Add("pcM1TeachSpeed");
+                keys.Add("pcM1TeachPointReg");
+
+                List<object> obj = new List<object>()
             {
                 pointID,
                 pointQuote,
@@ -2018,20 +2033,21 @@ namespace GUI
                 pointReg
             };
 
-            Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
-            try
-            {
-                sendResult = await ccService.Send(keys, obj);
-            }
-            catch(Exception ex)
-            {
+                Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
+                try
+                {
+                    sendResult = await ccService.Send(keys, obj);
+                }
+                catch (Exception ex)
+                {
 
+                }
             }
         }
 
         public async void OPCUAM2TeachPckSend(short pointID, float[] pointQuote, short[] pointSpeed, bool[] pointReg)
         {
-            if (ccService != null)
+            if (ccService.ClientIsConnected)
             {
                 List<string> keys = new List<string>();
                 keys.Add("pcM2TeachPointID");
@@ -2074,13 +2090,15 @@ namespace GUI
 
         public async void OPCUAM3TeachPckSend(short pointID, float[] pointQuote, short[] pointSpeed, bool[] pointReg)
         {
-            List<string> keys = new List<string>();
-            keys.Add("pcM3TeachPointID");
-            keys.Add("pcM3TeachSpeed");
-            keys.Add("pcM3TeachQuote");
-            keys.Add("pcM3TeachPointReg");
+            if (ccService.ClientIsConnected)
+            {
+                List<string> keys = new List<string>();
+                keys.Add("pcM3TeachPointID");
+                keys.Add("pcM3TeachSpeed");
+                keys.Add("pcM3TeachQuote");
+                keys.Add("pcM3TeachPointReg");
 
-            List<object> obj = new List<object>()
+                List<object> obj = new List<object>()
             {
                 pointID,
                 pointSpeed,
@@ -2088,83 +2106,93 @@ namespace GUI
                 pointReg
             };
 
-            Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
-            try
-            {
-                sendResult = await ccService.Send(keys, obj);
-            }
-            catch (Exception ex)
-            {
+                Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
+                try
+                {
+                    sendResult = await ccService.Send(keys, obj);
+                }
+                catch (Exception ex)
+                {
 
+                }
             }
         }
 
         public async void OPCUAM2TestPckSend(float[] pointQuote, short[] pointSpeed)
         {
-            List<string> keys = new List<string>();
-            keys.Add("pcM2TestSpeed");
-            keys.Add("pcM2TestQuote");
+            if (ccService.ClientIsConnected)
+            {
+                List<string> keys = new List<string>();
+                keys.Add("pcM2TestSpeed");
+                keys.Add("pcM2TestQuote");
 
-            List<object> obj = new List<object>()
+                List<object> obj = new List<object>()
             {
                 pointSpeed,
                 pointQuote
             };
 
-            Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
-            try
-            {
-                sendResult = await ccService.Send(keys, obj);
-            }
-            catch (Exception ex)
-            {
+                Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
+                try
+                {
+                    sendResult = await ccService.Send(keys, obj);
+                }
+                catch (Exception ex)
+                {
 
+                }
             }
         }
 
         public async void OPCUAM1TestPckSend(float[] pointQuote, short[] pointSpeed)
         {
-            List<string> keys = new List<string>();
-            keys.Add("pcM1TestSpeed");
-            keys.Add("pcM1TestQuote");
+            if (ccService.ClientIsConnected)
+            {
+                List<string> keys = new List<string>();
+                keys.Add("pcM1TestSpeed");
+                keys.Add("pcM1TestQuote");
 
-            List<object> obj = new List<object>()
+                List<object> obj = new List<object>()
             {
                 pointSpeed,
                 pointQuote
             };
 
-            Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
-            try
-            {
-                sendResult = await ccService.Send(keys, obj);
-            }
-            catch (Exception ex)
-            {
+                Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
+                try
+                {
+                    sendResult = await ccService.Send(keys, obj);
+                }
+                catch (Exception ex)
+                {
 
+                }
             }
         }
 
         public async void OPCUAM3TestPckSend(float[] pointQuote, short[] pointSpeed)
         {
-            List<string> keys = new List<string>();
-            keys.Add("pcM3TestSpeed");
-            keys.Add("pcM3TestQuote");
+            if (ccService.ClientIsConnected)
+            {
+                List<string> keys = new List<string>();
+                keys.Add("pcM3TestSpeed");
+                keys.Add("pcM3TestQuote");
 
-            List<object> obj = new List<object>()
+                List<object> obj = new List<object>()
             {
                 pointSpeed,
                 pointQuote
             };
 
-            Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
-            try
-            {
-                sendResult = await ccService.Send(keys, obj);
-            }
-            catch (Exception ex)
-            {
+                Dictionary<string, ClientResult> sendResult = new Dictionary<string, ClientResult>();
+                try
+                {
+                    sendResult = await ccService.Send(keys, obj);
+                }
+                catch (Exception ex)
+                {
 
+                }
             }
         }
         #endregion

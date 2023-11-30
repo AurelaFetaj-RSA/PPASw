@@ -868,50 +868,44 @@
             this.toolStripMenuItemT1_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT1_1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripMenuItemT1_1Keyboard = new System.Windows.Forms.ToolStripMenuItem();
-            this.buttonM1BlockOpening = new System.Windows.Forms.Button();
-            this.buttonM1CutOpening = new System.Windows.Forms.Button();
-            this.buttonM1BlockClosing = new System.Windows.Forms.Button();
-            this.buttonM1CutClosing = new System.Windows.Forms.Button();
-            this.buttonM1SpringsOpening = new System.Windows.Forms.Button();
-            this.checkBoxM1LoadingBelt = new System.Windows.Forms.CheckBox();
-            this.buttonM1SpringsClosing = new System.Windows.Forms.Button();
-            this.groupBoxM1Varius = new System.Windows.Forms.GroupBox();
+            this.labelM1JogSpeed = new System.Windows.Forms.Label();
+            this.labelM1StartQuote = new System.Windows.Forms.Label();
+            this.lbButtonM1JogUp = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.lbButtonM1JogDown = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.labelM1HomingDone = new System.Windows.Forms.Label();
+            this.numericUpDownM1JogSpeed = new System.Windows.Forms.NumericUpDown();
+            this.labelM1StartSpeed = new System.Windows.Forms.Label();
+            this.labelM1TeachAxisQuoteName = new System.Windows.Forms.Label();
+            this.buttonM1HomingDone = new System.Windows.Forms.Button();
+            this.labelM1TeachAxisQuoteValue = new System.Windows.Forms.Label();
+            this.buttonM1StartQuote = new System.Windows.Forms.Button();
+            this.numericUpDownM1ManualQuote = new System.Windows.Forms.NumericUpDown();
+            this.lbLed13 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.numericUpDownM1ManualSpeed = new System.Windows.Forms.NumericUpDown();
+            this.buttonM1ResetServo = new System.Windows.Forms.Button();
+            this.buttonM1Home = new System.Windows.Forms.Button();
+            this.buttonM1ResetHome = new System.Windows.Forms.Button();
             this.buttonM1PosV2Down = new System.Windows.Forms.Button();
             this.imageListVAxes = new System.Windows.Forms.ImageList(this.components);
             this.buttonM1PosV2Up = new System.Windows.Forms.Button();
-            this.buttonM1PosV1Down = new System.Windows.Forms.Button();
-            this.buttonM1PosV1Up = new System.Windows.Forms.Button();
-            this.groupBoxM1CutSlide = new System.Windows.Forms.GroupBox();
             this.checkBoxM1CuttingSuction = new System.Windows.Forms.CheckBox();
             this.imageListCut = new System.Windows.Forms.ImageList(this.components);
+            this.buttonM1PosV1Down = new System.Windows.Forms.Button();
+            this.buttonM1BlockOpening = new System.Windows.Forms.Button();
+            this.buttonM1PosV1Up = new System.Windows.Forms.Button();
             this.buttonM1Sharpening = new System.Windows.Forms.Button();
             this.checkBoxM1CuttingDrainBlow = new System.Windows.Forms.CheckBox();
+            this.buttonM1CutOpening = new System.Windows.Forms.Button();
             this.checkBoxM1CuttingMotor = new System.Windows.Forms.CheckBox();
+            this.buttonM1BlockClosing = new System.Windows.Forms.Button();
             this.buttonM1CutSlideForward = new System.Windows.Forms.Button();
+            this.buttonM1CutClosing = new System.Windows.Forms.Button();
             this.buttonM1CutSlideBackward = new System.Windows.Forms.Button();
-            this.groupBoxM1Servo = new System.Windows.Forms.GroupBox();
-            this.buttonM1ResetServo = new System.Windows.Forms.Button();
-            this.lbLed13 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.buttonM1SpringsOpening = new System.Windows.Forms.Button();
+            this.checkBoxM1LoadingBelt = new System.Windows.Forms.CheckBox();
+            this.buttonM1SpringsClosing = new System.Windows.Forms.Button();
             this.checkBoxM1ExitBelt = new System.Windows.Forms.CheckBox();
             this.checkBoxM1WorkingBelt = new System.Windows.Forms.CheckBox();
-            this.groupBoxM1Homing = new System.Windows.Forms.GroupBox();
-            this.labelM1HomingDone = new System.Windows.Forms.Label();
-            this.buttonM1HomingDone = new System.Windows.Forms.Button();
-            this.buttonM1Home = new System.Windows.Forms.Button();
-            this.buttonM1ResetHome = new System.Windows.Forms.Button();
-            this.groupBoxM1StartQuote = new System.Windows.Forms.GroupBox();
-            this.labelM1StartQuote = new System.Windows.Forms.Label();
-            this.labelM1StartSpeed = new System.Windows.Forms.Label();
-            this.buttonM1StartQuote = new System.Windows.Forms.Button();
-            this.numericUpDownM1ManualQuote = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownM1ManualSpeed = new System.Windows.Forms.NumericUpDown();
-            this.groupBoxM1Jog = new System.Windows.Forms.GroupBox();
-            this.labelM1JogSpeed = new System.Windows.Forms.Label();
-            this.lbButtonM1JogUp = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.lbButtonM1JogDown = new LBSoft.IndustrialCtrls.Buttons.LBButton();
-            this.numericUpDownM1JogSpeed = new System.Windows.Forms.NumericUpDown();
-            this.labelM1TeachAxisQuoteName = new System.Windows.Forms.Label();
-            this.labelM1TeachAxisQuoteValue = new System.Windows.Forms.Label();
             this.dataGridViewM1TeachPoints = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -939,7 +933,7 @@
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.reached = new System.Windows.Forms.DataGridViewButtonColumn();
             this.comboBoxM1TestProgramList = new System.Windows.Forms.ComboBox();
             this.tabPageT1_3 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.lbLed1040M1 = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -1128,15 +1122,9 @@
             this.tabPage2.SuspendLayout();
             this.tabPageT1_1.SuspendLayout();
             this.contextMenuStripT1_1.SuspendLayout();
-            this.groupBoxM1Varius.SuspendLayout();
-            this.groupBoxM1CutSlide.SuspendLayout();
-            this.groupBoxM1Servo.SuspendLayout();
-            this.groupBoxM1Homing.SuspendLayout();
-            this.groupBoxM1StartQuote.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1JogSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1ManualQuote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1ManualSpeed)).BeginInit();
-            this.groupBoxM1Jog.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1JogSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM1TeachPoints)).BeginInit();
             this.tabPageT1_2.SuspendLayout();
             this.contextMenuStripT1_2.SuspendLayout();
@@ -12554,21 +12542,42 @@
             // tabPageT1_1
             // 
             this.tabPageT1_1.ContextMenuStrip = this.contextMenuStripT1_1;
+            this.tabPageT1_1.Controls.Add(this.labelM1JogSpeed);
+            this.tabPageT1_1.Controls.Add(this.labelM1StartQuote);
+            this.tabPageT1_1.Controls.Add(this.lbButtonM1JogUp);
+            this.tabPageT1_1.Controls.Add(this.lbButtonM1JogDown);
+            this.tabPageT1_1.Controls.Add(this.labelM1HomingDone);
+            this.tabPageT1_1.Controls.Add(this.numericUpDownM1JogSpeed);
+            this.tabPageT1_1.Controls.Add(this.labelM1StartSpeed);
+            this.tabPageT1_1.Controls.Add(this.labelM1TeachAxisQuoteName);
+            this.tabPageT1_1.Controls.Add(this.buttonM1HomingDone);
+            this.tabPageT1_1.Controls.Add(this.labelM1TeachAxisQuoteValue);
+            this.tabPageT1_1.Controls.Add(this.buttonM1StartQuote);
+            this.tabPageT1_1.Controls.Add(this.numericUpDownM1ManualQuote);
+            this.tabPageT1_1.Controls.Add(this.lbLed13);
+            this.tabPageT1_1.Controls.Add(this.numericUpDownM1ManualSpeed);
+            this.tabPageT1_1.Controls.Add(this.buttonM1ResetServo);
+            this.tabPageT1_1.Controls.Add(this.buttonM1Home);
+            this.tabPageT1_1.Controls.Add(this.buttonM1ResetHome);
+            this.tabPageT1_1.Controls.Add(this.buttonM1PosV2Down);
+            this.tabPageT1_1.Controls.Add(this.buttonM1PosV2Up);
+            this.tabPageT1_1.Controls.Add(this.checkBoxM1CuttingSuction);
+            this.tabPageT1_1.Controls.Add(this.buttonM1PosV1Down);
             this.tabPageT1_1.Controls.Add(this.buttonM1BlockOpening);
+            this.tabPageT1_1.Controls.Add(this.buttonM1PosV1Up);
+            this.tabPageT1_1.Controls.Add(this.buttonM1Sharpening);
+            this.tabPageT1_1.Controls.Add(this.checkBoxM1CuttingDrainBlow);
             this.tabPageT1_1.Controls.Add(this.buttonM1CutOpening);
+            this.tabPageT1_1.Controls.Add(this.checkBoxM1CuttingMotor);
             this.tabPageT1_1.Controls.Add(this.buttonM1BlockClosing);
+            this.tabPageT1_1.Controls.Add(this.buttonM1CutSlideForward);
             this.tabPageT1_1.Controls.Add(this.buttonM1CutClosing);
+            this.tabPageT1_1.Controls.Add(this.buttonM1CutSlideBackward);
             this.tabPageT1_1.Controls.Add(this.buttonM1SpringsOpening);
             this.tabPageT1_1.Controls.Add(this.checkBoxM1LoadingBelt);
             this.tabPageT1_1.Controls.Add(this.buttonM1SpringsClosing);
-            this.tabPageT1_1.Controls.Add(this.groupBoxM1Varius);
-            this.tabPageT1_1.Controls.Add(this.groupBoxM1CutSlide);
-            this.tabPageT1_1.Controls.Add(this.groupBoxM1Servo);
             this.tabPageT1_1.Controls.Add(this.checkBoxM1ExitBelt);
             this.tabPageT1_1.Controls.Add(this.checkBoxM1WorkingBelt);
-            this.tabPageT1_1.Controls.Add(this.groupBoxM1Homing);
-            this.tabPageT1_1.Controls.Add(this.groupBoxM1StartQuote);
-            this.tabPageT1_1.Controls.Add(this.groupBoxM1Jog);
             this.tabPageT1_1.Controls.Add(this.dataGridViewM1TeachPoints);
             this.tabPageT1_1.Controls.Add(this.buttonM1TeachDeleteProgram);
             this.tabPageT1_1.Controls.Add(this.buttonM1TeachNewProgram);
@@ -12640,6 +12649,358 @@
             this.toolStripMenuItemT1_1Keyboard.Text = "keyboard";
             this.toolStripMenuItemT1_1Keyboard.Click += new System.EventHandler(this.toolStripMenuItemT1_1Keyboard_Click);
             // 
+            // labelM1JogSpeed
+            // 
+            this.labelM1JogSpeed.AutoSize = true;
+            this.labelM1JogSpeed.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM1JogSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM1JogSpeed.Location = new System.Drawing.Point(759, 115);
+            this.labelM1JogSpeed.Name = "labelM1JogSpeed";
+            this.labelM1JogSpeed.Size = new System.Drawing.Size(71, 16);
+            this.labelM1JogSpeed.TabIndex = 103;
+            this.labelM1JogSpeed.Text = "speed(%)";
+            // 
+            // labelM1StartQuote
+            // 
+            this.labelM1StartQuote.AutoSize = true;
+            this.labelM1StartQuote.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM1StartQuote.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM1StartQuote.Location = new System.Drawing.Point(605, 318);
+            this.labelM1StartQuote.Name = "labelM1StartQuote";
+            this.labelM1StartQuote.Size = new System.Drawing.Size(79, 16);
+            this.labelM1StartQuote.TabIndex = 105;
+            this.labelM1StartQuote.Text = "quote(mm)";
+            // 
+            // lbButtonM1JogUp
+            // 
+            this.lbButtonM1JogUp.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM1JogUp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lbButtonM1JogUp.BackgroundImage")));
+            this.lbButtonM1JogUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.lbButtonM1JogUp.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbButtonM1JogUp.Font = new System.Drawing.Font("Verdana", 39.75F, System.Drawing.FontStyle.Bold);
+            this.lbButtonM1JogUp.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM1JogUp.Label = "up";
+            this.lbButtonM1JogUp.Location = new System.Drawing.Point(605, 115);
+            this.lbButtonM1JogUp.Name = "lbButtonM1JogUp";
+            this.lbButtonM1JogUp.Renderer = null;
+            this.lbButtonM1JogUp.RepeatInterval = 100;
+            this.lbButtonM1JogUp.RepeatState = false;
+            this.lbButtonM1JogUp.Size = new System.Drawing.Size(140, 68);
+            this.lbButtonM1JogUp.StartRepeatInterval = 500;
+            this.lbButtonM1JogUp.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM1JogUp.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM1JogUp.TabIndex = 78;
+            this.lbButtonM1JogUp.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM1JogUp_ButtonChangeState);
+            // 
+            // lbButtonM1JogDown
+            // 
+            this.lbButtonM1JogDown.BackColor = System.Drawing.Color.Transparent;
+            this.lbButtonM1JogDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lbButtonM1JogDown.BackgroundImage")));
+            this.lbButtonM1JogDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.lbButtonM1JogDown.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbButtonM1JogDown.Font = new System.Drawing.Font("Verdana", 39.75F, System.Drawing.FontStyle.Bold);
+            this.lbButtonM1JogDown.ForeColor = System.Drawing.Color.White;
+            this.lbButtonM1JogDown.Label = "down";
+            this.lbButtonM1JogDown.Location = new System.Drawing.Point(605, 240);
+            this.lbButtonM1JogDown.Name = "lbButtonM1JogDown";
+            this.lbButtonM1JogDown.Renderer = null;
+            this.lbButtonM1JogDown.RepeatInterval = 100;
+            this.lbButtonM1JogDown.RepeatState = false;
+            this.lbButtonM1JogDown.Size = new System.Drawing.Size(140, 68);
+            this.lbButtonM1JogDown.StartRepeatInterval = 500;
+            this.lbButtonM1JogDown.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
+            this.lbButtonM1JogDown.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
+            this.lbButtonM1JogDown.TabIndex = 79;
+            this.lbButtonM1JogDown.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM1JogDown_ButtonChangeState);
+            // 
+            // labelM1HomingDone
+            // 
+            this.labelM1HomingDone.AutoSize = true;
+            this.labelM1HomingDone.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM1HomingDone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM1HomingDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM1HomingDone.Location = new System.Drawing.Point(632, 574);
+            this.labelM1HomingDone.Name = "labelM1HomingDone";
+            this.labelM1HomingDone.Size = new System.Drawing.Size(117, 16);
+            this.labelM1HomingDone.TabIndex = 134;
+            this.labelM1HomingDone.Text = "homing not done";
+            // 
+            // numericUpDownM1JogSpeed
+            // 
+            this.numericUpDownM1JogSpeed.Font = new System.Drawing.Font("Verdana", 21.75F);
+            this.numericUpDownM1JogSpeed.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownM1JogSpeed.Location = new System.Drawing.Point(759, 135);
+            this.numericUpDownM1JogSpeed.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownM1JogSpeed.Name = "numericUpDownM1JogSpeed";
+            this.numericUpDownM1JogSpeed.Size = new System.Drawing.Size(80, 43);
+            this.numericUpDownM1JogSpeed.TabIndex = 98;
+            this.numericUpDownM1JogSpeed.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericUpDownM1JogSpeed.ValueChanged += new System.EventHandler(this.numericUpDownM1JogSpeed_ValueChanged);
+            // 
+            // labelM1StartSpeed
+            // 
+            this.labelM1StartSpeed.AutoSize = true;
+            this.labelM1StartSpeed.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM1StartSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM1StartSpeed.Location = new System.Drawing.Point(759, 318);
+            this.labelM1StartSpeed.Name = "labelM1StartSpeed";
+            this.labelM1StartSpeed.Size = new System.Drawing.Size(71, 16);
+            this.labelM1StartSpeed.TabIndex = 104;
+            this.labelM1StartSpeed.Text = "speed(%)";
+            // 
+            // labelM1TeachAxisQuoteName
+            // 
+            this.labelM1TeachAxisQuoteName.AutoSize = true;
+            this.labelM1TeachAxisQuoteName.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM1TeachAxisQuoteName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM1TeachAxisQuoteName.Location = new System.Drawing.Point(759, 200);
+            this.labelM1TeachAxisQuoteName.Name = "labelM1TeachAxisQuoteName";
+            this.labelM1TeachAxisQuoteName.Size = new System.Drawing.Size(84, 16);
+            this.labelM1TeachAxisQuoteName.TabIndex = 102;
+            this.labelM1TeachAxisQuoteName.Text = "quote (mm)";
+            // 
+            // buttonM1HomingDone
+            // 
+            this.buttonM1HomingDone.Enabled = false;
+            this.buttonM1HomingDone.FlatAppearance.BorderSize = 10;
+            this.buttonM1HomingDone.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1HomingDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1HomingDone.Location = new System.Drawing.Point(605, 566);
+            this.buttonM1HomingDone.Name = "buttonM1HomingDone";
+            this.buttonM1HomingDone.Size = new System.Drawing.Size(24, 24);
+            this.buttonM1HomingDone.TabIndex = 133;
+            this.buttonM1HomingDone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonM1HomingDone.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonM1HomingDone.UseVisualStyleBackColor = true;
+            // 
+            // labelM1TeachAxisQuoteValue
+            // 
+            this.labelM1TeachAxisQuoteValue.AutoSize = true;
+            this.labelM1TeachAxisQuoteValue.Font = new System.Drawing.Font("Verdana", 14.25F);
+            this.labelM1TeachAxisQuoteValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM1TeachAxisQuoteValue.Location = new System.Drawing.Point(759, 230);
+            this.labelM1TeachAxisQuoteValue.Name = "labelM1TeachAxisQuoteValue";
+            this.labelM1TeachAxisQuoteValue.Size = new System.Drawing.Size(58, 23);
+            this.labelM1TeachAxisQuoteValue.TabIndex = 103;
+            this.labelM1TeachAxisQuoteValue.Text = "9999";
+            // 
+            // buttonM1StartQuote
+            // 
+            this.buttonM1StartQuote.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1StartQuote.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1StartQuote.Location = new System.Drawing.Point(605, 400);
+            this.buttonM1StartQuote.Name = "buttonM1StartQuote";
+            this.buttonM1StartQuote.Size = new System.Drawing.Size(234, 48);
+            this.buttonM1StartQuote.TabIndex = 80;
+            this.buttonM1StartQuote.Text = "start quote";
+            this.buttonM1StartQuote.UseVisualStyleBackColor = true;
+            this.buttonM1StartQuote.Click += new System.EventHandler(this.buttonM1StartQuote_Click);
+            // 
+            // numericUpDownM1ManualQuote
+            // 
+            this.numericUpDownM1ManualQuote.DecimalPlaces = 1;
+            this.numericUpDownM1ManualQuote.Font = new System.Drawing.Font("Verdana", 21.75F);
+            this.numericUpDownM1ManualQuote.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownM1ManualQuote.Location = new System.Drawing.Point(605, 335);
+            this.numericUpDownM1ManualQuote.Minimum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownM1ManualQuote.Name = "numericUpDownM1ManualQuote";
+            this.numericUpDownM1ManualQuote.Size = new System.Drawing.Size(100, 43);
+            this.numericUpDownM1ManualQuote.TabIndex = 82;
+            this.numericUpDownM1ManualQuote.Value = new decimal(new int[] {
+            105,
+            0,
+            0,
+            65536});
+            this.numericUpDownM1ManualQuote.ValueChanged += new System.EventHandler(this.numericUpDownM1ManualQuote_ValueChanged);
+            // 
+            // lbLed13
+            // 
+            this.lbLed13.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed13.BlinkInterval = 500;
+            this.lbLed13.Enabled = false;
+            this.lbLed13.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed13.Label = "X9 - servo ready";
+            this.lbLed13.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed13.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed13.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed13.Location = new System.Drawing.Point(720, 651);
+            this.lbLed13.Name = "lbLed13";
+            this.lbLed13.Renderer = null;
+            this.lbLed13.Size = new System.Drawing.Size(130, 24);
+            this.lbLed13.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed13.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed13.TabIndex = 288;
+            // 
+            // numericUpDownM1ManualSpeed
+            // 
+            this.numericUpDownM1ManualSpeed.Font = new System.Drawing.Font("Verdana", 21.75F);
+            this.numericUpDownM1ManualSpeed.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownM1ManualSpeed.Location = new System.Drawing.Point(759, 335);
+            this.numericUpDownM1ManualSpeed.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownM1ManualSpeed.Name = "numericUpDownM1ManualSpeed";
+            this.numericUpDownM1ManualSpeed.Size = new System.Drawing.Size(80, 43);
+            this.numericUpDownM1ManualSpeed.TabIndex = 83;
+            this.numericUpDownM1ManualSpeed.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownM1ManualSpeed.ValueChanged += new System.EventHandler(this.numericUpDownM1ManualSpeed_ValueChanged);
+            // 
+            // buttonM1ResetServo
+            // 
+            this.buttonM1ResetServo.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1ResetServo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1ResetServo.Location = new System.Drawing.Point(605, 640);
+            this.buttonM1ResetServo.Name = "buttonM1ResetServo";
+            this.buttonM1ResetServo.Size = new System.Drawing.Size(100, 48);
+            this.buttonM1ResetServo.TabIndex = 149;
+            this.buttonM1ResetServo.Text = "reset alarm";
+            this.buttonM1ResetServo.UseVisualStyleBackColor = true;
+            this.buttonM1ResetServo.Click += new System.EventHandler(this.buttonM1ResetServo_Click);
+            // 
+            // buttonM1Home
+            // 
+            this.buttonM1Home.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1Home.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1Home.Location = new System.Drawing.Point(605, 500);
+            this.buttonM1Home.Name = "buttonM1Home";
+            this.buttonM1Home.Size = new System.Drawing.Size(100, 48);
+            this.buttonM1Home.TabIndex = 8;
+            this.buttonM1Home.Text = "go home";
+            this.buttonM1Home.UseVisualStyleBackColor = true;
+            this.buttonM1Home.Click += new System.EventHandler(this.buttonM1Home_Click);
+            // 
+            // buttonM1ResetHome
+            // 
+            this.buttonM1ResetHome.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1ResetHome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1ResetHome.Location = new System.Drawing.Point(739, 500);
+            this.buttonM1ResetHome.Name = "buttonM1ResetHome";
+            this.buttonM1ResetHome.Size = new System.Drawing.Size(100, 48);
+            this.buttonM1ResetHome.TabIndex = 9;
+            this.buttonM1ResetHome.Text = "reset home";
+            this.buttonM1ResetHome.UseVisualStyleBackColor = true;
+            this.buttonM1ResetHome.Click += new System.EventHandler(this.buttonM1ResetHome_Click);
+            // 
+            // buttonM1PosV2Down
+            // 
+            this.buttonM1PosV2Down.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1PosV2Down.ImageIndex = 1;
+            this.buttonM1PosV2Down.ImageList = this.imageListVAxes;
+            this.buttonM1PosV2Down.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1PosV2Down.Location = new System.Drawing.Point(225, 640);
+            this.buttonM1PosV2Down.Name = "buttonM1PosV2Down";
+            this.buttonM1PosV2Down.Size = new System.Drawing.Size(65, 48);
+            this.buttonM1PosV2Down.TabIndex = 147;
+            this.buttonM1PosV2Down.Text = "V2";
+            this.buttonM1PosV2Down.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonM1PosV2Down.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonM1PosV2Down.UseVisualStyleBackColor = true;
+            this.buttonM1PosV2Down.Click += new System.EventHandler(this.buttonM1PosV2Down_Click);
+            // 
+            // imageListVAxes
+            // 
+            this.imageListVAxes.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListVAxes.ImageStream")));
+            this.imageListVAxes.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListVAxes.Images.SetKeyName(0, "v1up.png");
+            this.imageListVAxes.Images.SetKeyName(1, "v1down.png");
+            // 
+            // buttonM1PosV2Up
+            // 
+            this.buttonM1PosV2Up.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1PosV2Up.ImageIndex = 0;
+            this.buttonM1PosV2Up.ImageList = this.imageListVAxes;
+            this.buttonM1PosV2Up.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1PosV2Up.Location = new System.Drawing.Point(155, 640);
+            this.buttonM1PosV2Up.Name = "buttonM1PosV2Up";
+            this.buttonM1PosV2Up.Size = new System.Drawing.Size(65, 48);
+            this.buttonM1PosV2Up.TabIndex = 146;
+            this.buttonM1PosV2Up.Text = "V2";
+            this.buttonM1PosV2Up.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonM1PosV2Up.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonM1PosV2Up.UseVisualStyleBackColor = true;
+            this.buttonM1PosV2Up.Click += new System.EventHandler(this.buttonM1PosV2Up_Click);
+            // 
+            // checkBoxM1CuttingSuction
+            // 
+            this.checkBoxM1CuttingSuction.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxM1CuttingSuction.AutoSize = true;
+            this.checkBoxM1CuttingSuction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxM1CuttingSuction.FlatAppearance.BorderSize = 5;
+            this.checkBoxM1CuttingSuction.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxM1CuttingSuction.ImageIndex = 7;
+            this.checkBoxM1CuttingSuction.ImageList = this.imageListCut;
+            this.checkBoxM1CuttingSuction.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxM1CuttingSuction.Location = new System.Drawing.Point(405, 500);
+            this.checkBoxM1CuttingSuction.Name = "checkBoxM1CuttingSuction";
+            this.checkBoxM1CuttingSuction.Size = new System.Drawing.Size(70, 90);
+            this.checkBoxM1CuttingSuction.TabIndex = 275;
+            this.checkBoxM1CuttingSuction.Text = "suction";
+            this.checkBoxM1CuttingSuction.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxM1CuttingSuction.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBoxM1CuttingSuction.UseVisualStyleBackColor = true;
+            this.checkBoxM1CuttingSuction.CheckStateChanged += new System.EventHandler(this.checkBoxM1CuttingSuction_CheckStateChanged);
+            // 
+            // imageListCut
+            // 
+            this.imageListCut.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListCut.ImageStream")));
+            this.imageListCut.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListCut.Images.SetKeyName(0, "cut_motor_on.png");
+            this.imageListCut.Images.SetKeyName(1, "cut_motor_off.png");
+            this.imageListCut.Images.SetKeyName(2, "cut_slide_backward.png");
+            this.imageListCut.Images.SetKeyName(3, "cut_slide_forward.png");
+            this.imageListCut.Images.SetKeyName(4, "wind_on.png");
+            this.imageListCut.Images.SetKeyName(5, "wind_off.png");
+            this.imageListCut.Images.SetKeyName(6, "suction_on.png");
+            this.imageListCut.Images.SetKeyName(7, "suction_off.png");
+            this.imageListCut.Images.SetKeyName(8, "sharpening.png");
+            // 
+            // buttonM1PosV1Down
+            // 
+            this.buttonM1PosV1Down.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1PosV1Down.ImageIndex = 1;
+            this.buttonM1PosV1Down.ImageList = this.imageListVAxes;
+            this.buttonM1PosV1Down.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1PosV1Down.Location = new System.Drawing.Point(85, 640);
+            this.buttonM1PosV1Down.Name = "buttonM1PosV1Down";
+            this.buttonM1PosV1Down.Size = new System.Drawing.Size(65, 48);
+            this.buttonM1PosV1Down.TabIndex = 145;
+            this.buttonM1PosV1Down.Text = "V1";
+            this.buttonM1PosV1Down.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonM1PosV1Down.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonM1PosV1Down.UseVisualStyleBackColor = true;
+            this.buttonM1PosV1Down.Click += new System.EventHandler(this.buttonM1PosV1Down_Click);
+            // 
             // buttonM1BlockOpening
             // 
             this.buttonM1BlockOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
@@ -12651,6 +13012,57 @@
             this.buttonM1BlockOpening.Text = "block clamp opening";
             this.buttonM1BlockOpening.UseVisualStyleBackColor = true;
             this.buttonM1BlockOpening.Click += new System.EventHandler(this.buttonM1BlockOpening_Click);
+            // 
+            // buttonM1PosV1Up
+            // 
+            this.buttonM1PosV1Up.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1PosV1Up.ImageIndex = 0;
+            this.buttonM1PosV1Up.ImageList = this.imageListVAxes;
+            this.buttonM1PosV1Up.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1PosV1Up.Location = new System.Drawing.Point(10, 640);
+            this.buttonM1PosV1Up.Name = "buttonM1PosV1Up";
+            this.buttonM1PosV1Up.Size = new System.Drawing.Size(65, 48);
+            this.buttonM1PosV1Up.TabIndex = 144;
+            this.buttonM1PosV1Up.Text = "V1";
+            this.buttonM1PosV1Up.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonM1PosV1Up.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonM1PosV1Up.UseVisualStyleBackColor = true;
+            this.buttonM1PosV1Up.Click += new System.EventHandler(this.buttonM1PosV1Up_Click);
+            // 
+            // buttonM1Sharpening
+            // 
+            this.buttonM1Sharpening.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1Sharpening.ImageIndex = 8;
+            this.buttonM1Sharpening.ImageList = this.imageListCut;
+            this.buttonM1Sharpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1Sharpening.Location = new System.Drawing.Point(485, 500);
+            this.buttonM1Sharpening.Name = "buttonM1Sharpening";
+            this.buttonM1Sharpening.Size = new System.Drawing.Size(90, 90);
+            this.buttonM1Sharpening.TabIndex = 151;
+            this.buttonM1Sharpening.Text = "sharpening";
+            this.buttonM1Sharpening.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.buttonM1Sharpening.UseVisualStyleBackColor = true;
+            this.buttonM1Sharpening.Click += new System.EventHandler(this.buttonM1Sharpening_Click);
+            // 
+            // checkBoxM1CuttingDrainBlow
+            // 
+            this.checkBoxM1CuttingDrainBlow.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxM1CuttingDrainBlow.AutoSize = true;
+            this.checkBoxM1CuttingDrainBlow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxM1CuttingDrainBlow.FlatAppearance.BorderSize = 5;
+            this.checkBoxM1CuttingDrainBlow.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxM1CuttingDrainBlow.ImageIndex = 5;
+            this.checkBoxM1CuttingDrainBlow.ImageList = this.imageListCut;
+            this.checkBoxM1CuttingDrainBlow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxM1CuttingDrainBlow.Location = new System.Drawing.Point(310, 500);
+            this.checkBoxM1CuttingDrainBlow.Name = "checkBoxM1CuttingDrainBlow";
+            this.checkBoxM1CuttingDrainBlow.Size = new System.Drawing.Size(84, 90);
+            this.checkBoxM1CuttingDrainBlow.TabIndex = 274;
+            this.checkBoxM1CuttingDrainBlow.Text = "drain blow";
+            this.checkBoxM1CuttingDrainBlow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxM1CuttingDrainBlow.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBoxM1CuttingDrainBlow.UseVisualStyleBackColor = true;
+            this.checkBoxM1CuttingDrainBlow.CheckStateChanged += new System.EventHandler(this.checkBoxM1CuttingDrainBlow_CheckStateChanged);
             // 
             // buttonM1CutOpening
             // 
@@ -12664,6 +13076,26 @@
             this.buttonM1CutOpening.UseVisualStyleBackColor = true;
             this.buttonM1CutOpening.Click += new System.EventHandler(this.buttonM1CutOpening_Click);
             // 
+            // checkBoxM1CuttingMotor
+            // 
+            this.checkBoxM1CuttingMotor.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxM1CuttingMotor.AutoSize = true;
+            this.checkBoxM1CuttingMotor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxM1CuttingMotor.FlatAppearance.BorderSize = 5;
+            this.checkBoxM1CuttingMotor.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxM1CuttingMotor.ImageIndex = 1;
+            this.checkBoxM1CuttingMotor.ImageList = this.imageListCut;
+            this.checkBoxM1CuttingMotor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxM1CuttingMotor.Location = new System.Drawing.Point(230, 500);
+            this.checkBoxM1CuttingMotor.Name = "checkBoxM1CuttingMotor";
+            this.checkBoxM1CuttingMotor.Size = new System.Drawing.Size(70, 90);
+            this.checkBoxM1CuttingMotor.TabIndex = 273;
+            this.checkBoxM1CuttingMotor.Text = "motor";
+            this.checkBoxM1CuttingMotor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.checkBoxM1CuttingMotor.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBoxM1CuttingMotor.UseVisualStyleBackColor = true;
+            this.checkBoxM1CuttingMotor.CheckStateChanged += new System.EventHandler(this.checkBoxM1CuttingMotor_CheckStateChanged);
+            // 
             // buttonM1BlockClosing
             // 
             this.buttonM1BlockClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
@@ -12676,6 +13108,21 @@
             this.buttonM1BlockClosing.UseVisualStyleBackColor = true;
             this.buttonM1BlockClosing.Click += new System.EventHandler(this.buttonM1BlockClosing_Click);
             // 
+            // buttonM1CutSlideForward
+            // 
+            this.buttonM1CutSlideForward.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1CutSlideForward.ImageKey = "cut_slide_forward.png";
+            this.buttonM1CutSlideForward.ImageList = this.imageListCut;
+            this.buttonM1CutSlideForward.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1CutSlideForward.Location = new System.Drawing.Point(120, 500);
+            this.buttonM1CutSlideForward.Name = "buttonM1CutSlideForward";
+            this.buttonM1CutSlideForward.Size = new System.Drawing.Size(100, 90);
+            this.buttonM1CutSlideForward.TabIndex = 143;
+            this.buttonM1CutSlideForward.Text = "slide fwd";
+            this.buttonM1CutSlideForward.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.buttonM1CutSlideForward.UseVisualStyleBackColor = true;
+            this.buttonM1CutSlideForward.Click += new System.EventHandler(this.buttonM1CutSlideForward_Click);
+            // 
             // buttonM1CutClosing
             // 
             this.buttonM1CutClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
@@ -12687,6 +13134,21 @@
             this.buttonM1CutClosing.Text = "cut clamp closing";
             this.buttonM1CutClosing.UseVisualStyleBackColor = true;
             this.buttonM1CutClosing.Click += new System.EventHandler(this.buttonM1CutClosing_Click);
+            // 
+            // buttonM1CutSlideBackward
+            // 
+            this.buttonM1CutSlideBackward.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1CutSlideBackward.ImageIndex = 2;
+            this.buttonM1CutSlideBackward.ImageList = this.imageListCut;
+            this.buttonM1CutSlideBackward.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1CutSlideBackward.Location = new System.Drawing.Point(10, 500);
+            this.buttonM1CutSlideBackward.Name = "buttonM1CutSlideBackward";
+            this.buttonM1CutSlideBackward.Size = new System.Drawing.Size(100, 90);
+            this.buttonM1CutSlideBackward.TabIndex = 144;
+            this.buttonM1CutSlideBackward.Text = "slide bwd";
+            this.buttonM1CutSlideBackward.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.buttonM1CutSlideBackward.UseVisualStyleBackColor = true;
+            this.buttonM1CutSlideBackward.Click += new System.EventHandler(this.buttonM1CutSlideBackward_Click);
             // 
             // buttonM1SpringsOpening
             // 
@@ -12731,269 +13193,6 @@
             this.buttonM1SpringsClosing.UseVisualStyleBackColor = true;
             this.buttonM1SpringsClosing.Click += new System.EventHandler(this.buttonM1SpringsClosing_Click);
             // 
-            // groupBoxM1Varius
-            // 
-            this.groupBoxM1Varius.Controls.Add(this.buttonM1PosV2Down);
-            this.groupBoxM1Varius.Controls.Add(this.buttonM1PosV2Up);
-            this.groupBoxM1Varius.Controls.Add(this.buttonM1PosV1Down);
-            this.groupBoxM1Varius.Controls.Add(this.buttonM1PosV1Up);
-            this.groupBoxM1Varius.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxM1Varius.Location = new System.Drawing.Point(10, 625);
-            this.groupBoxM1Varius.Name = "groupBoxM1Varius";
-            this.groupBoxM1Varius.Size = new System.Drawing.Size(295, 80);
-            this.groupBoxM1Varius.TabIndex = 305;
-            this.groupBoxM1Varius.TabStop = false;
-            this.groupBoxM1Varius.Text = "pneumatic commands";
-            // 
-            // buttonM1PosV2Down
-            // 
-            this.buttonM1PosV2Down.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1PosV2Down.ImageIndex = 1;
-            this.buttonM1PosV2Down.ImageList = this.imageListVAxes;
-            this.buttonM1PosV2Down.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1PosV2Down.Location = new System.Drawing.Point(220, 20);
-            this.buttonM1PosV2Down.Name = "buttonM1PosV2Down";
-            this.buttonM1PosV2Down.Size = new System.Drawing.Size(64, 48);
-            this.buttonM1PosV2Down.TabIndex = 147;
-            this.buttonM1PosV2Down.Text = "V2";
-            this.buttonM1PosV2Down.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonM1PosV2Down.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM1PosV2Down.UseVisualStyleBackColor = true;
-            this.buttonM1PosV2Down.Click += new System.EventHandler(this.buttonM1PosV2Down_Click);
-            // 
-            // imageListVAxes
-            // 
-            this.imageListVAxes.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListVAxes.ImageStream")));
-            this.imageListVAxes.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListVAxes.Images.SetKeyName(0, "v1up.png");
-            this.imageListVAxes.Images.SetKeyName(1, "v1down.png");
-            // 
-            // buttonM1PosV2Up
-            // 
-            this.buttonM1PosV2Up.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1PosV2Up.ImageIndex = 0;
-            this.buttonM1PosV2Up.ImageList = this.imageListVAxes;
-            this.buttonM1PosV2Up.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1PosV2Up.Location = new System.Drawing.Point(150, 20);
-            this.buttonM1PosV2Up.Name = "buttonM1PosV2Up";
-            this.buttonM1PosV2Up.Size = new System.Drawing.Size(64, 48);
-            this.buttonM1PosV2Up.TabIndex = 146;
-            this.buttonM1PosV2Up.Text = "V2";
-            this.buttonM1PosV2Up.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonM1PosV2Up.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM1PosV2Up.UseVisualStyleBackColor = true;
-            this.buttonM1PosV2Up.Click += new System.EventHandler(this.buttonM1PosV2Up_Click);
-            // 
-            // buttonM1PosV1Down
-            // 
-            this.buttonM1PosV1Down.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1PosV1Down.ImageIndex = 1;
-            this.buttonM1PosV1Down.ImageList = this.imageListVAxes;
-            this.buttonM1PosV1Down.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1PosV1Down.Location = new System.Drawing.Point(80, 20);
-            this.buttonM1PosV1Down.Name = "buttonM1PosV1Down";
-            this.buttonM1PosV1Down.Size = new System.Drawing.Size(64, 48);
-            this.buttonM1PosV1Down.TabIndex = 145;
-            this.buttonM1PosV1Down.Text = "V1";
-            this.buttonM1PosV1Down.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonM1PosV1Down.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM1PosV1Down.UseVisualStyleBackColor = true;
-            this.buttonM1PosV1Down.Click += new System.EventHandler(this.buttonM1PosV1Down_Click);
-            // 
-            // buttonM1PosV1Up
-            // 
-            this.buttonM1PosV1Up.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1PosV1Up.ImageIndex = 0;
-            this.buttonM1PosV1Up.ImageList = this.imageListVAxes;
-            this.buttonM1PosV1Up.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1PosV1Up.Location = new System.Drawing.Point(10, 20);
-            this.buttonM1PosV1Up.Name = "buttonM1PosV1Up";
-            this.buttonM1PosV1Up.Size = new System.Drawing.Size(64, 48);
-            this.buttonM1PosV1Up.TabIndex = 144;
-            this.buttonM1PosV1Up.Text = "V1";
-            this.buttonM1PosV1Up.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonM1PosV1Up.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM1PosV1Up.UseVisualStyleBackColor = true;
-            this.buttonM1PosV1Up.Click += new System.EventHandler(this.buttonM1PosV1Up_Click);
-            // 
-            // groupBoxM1CutSlide
-            // 
-            this.groupBoxM1CutSlide.Controls.Add(this.checkBoxM1CuttingSuction);
-            this.groupBoxM1CutSlide.Controls.Add(this.buttonM1Sharpening);
-            this.groupBoxM1CutSlide.Controls.Add(this.checkBoxM1CuttingDrainBlow);
-            this.groupBoxM1CutSlide.Controls.Add(this.checkBoxM1CuttingMotor);
-            this.groupBoxM1CutSlide.Controls.Add(this.buttonM1CutSlideForward);
-            this.groupBoxM1CutSlide.Controls.Add(this.buttonM1CutSlideBackward);
-            this.groupBoxM1CutSlide.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxM1CutSlide.Location = new System.Drawing.Point(10, 500);
-            this.groupBoxM1CutSlide.Name = "groupBoxM1CutSlide";
-            this.groupBoxM1CutSlide.Size = new System.Drawing.Size(580, 120);
-            this.groupBoxM1CutSlide.TabIndex = 302;
-            this.groupBoxM1CutSlide.TabStop = false;
-            this.groupBoxM1CutSlide.Text = "cut commands";
-            // 
-            // checkBoxM1CuttingSuction
-            // 
-            this.checkBoxM1CuttingSuction.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBoxM1CuttingSuction.AutoSize = true;
-            this.checkBoxM1CuttingSuction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkBoxM1CuttingSuction.FlatAppearance.BorderSize = 5;
-            this.checkBoxM1CuttingSuction.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxM1CuttingSuction.ImageIndex = 7;
-            this.checkBoxM1CuttingSuction.ImageList = this.imageListCut;
-            this.checkBoxM1CuttingSuction.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM1CuttingSuction.Location = new System.Drawing.Point(405, 20);
-            this.checkBoxM1CuttingSuction.Name = "checkBoxM1CuttingSuction";
-            this.checkBoxM1CuttingSuction.Size = new System.Drawing.Size(70, 90);
-            this.checkBoxM1CuttingSuction.TabIndex = 275;
-            this.checkBoxM1CuttingSuction.Text = "suction";
-            this.checkBoxM1CuttingSuction.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBoxM1CuttingSuction.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBoxM1CuttingSuction.UseVisualStyleBackColor = true;
-            this.checkBoxM1CuttingSuction.CheckStateChanged += new System.EventHandler(this.checkBoxM1CuttingSuction_CheckStateChanged);
-            // 
-            // imageListCut
-            // 
-            this.imageListCut.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListCut.ImageStream")));
-            this.imageListCut.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListCut.Images.SetKeyName(0, "cut_motor_on.png");
-            this.imageListCut.Images.SetKeyName(1, "cut_motor_off.png");
-            this.imageListCut.Images.SetKeyName(2, "cut_slide_backward.png");
-            this.imageListCut.Images.SetKeyName(3, "cut_slide_forward.png");
-            this.imageListCut.Images.SetKeyName(4, "wind_on.png");
-            this.imageListCut.Images.SetKeyName(5, "wind_off.png");
-            this.imageListCut.Images.SetKeyName(6, "suction_on.png");
-            this.imageListCut.Images.SetKeyName(7, "suction_off.png");
-            this.imageListCut.Images.SetKeyName(8, "sharpening.png");
-            // 
-            // buttonM1Sharpening
-            // 
-            this.buttonM1Sharpening.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1Sharpening.ImageIndex = 8;
-            this.buttonM1Sharpening.ImageList = this.imageListCut;
-            this.buttonM1Sharpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1Sharpening.Location = new System.Drawing.Point(482, 23);
-            this.buttonM1Sharpening.Name = "buttonM1Sharpening";
-            this.buttonM1Sharpening.Size = new System.Drawing.Size(90, 90);
-            this.buttonM1Sharpening.TabIndex = 151;
-            this.buttonM1Sharpening.Text = "sharpening";
-            this.buttonM1Sharpening.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.buttonM1Sharpening.UseVisualStyleBackColor = true;
-            this.buttonM1Sharpening.Click += new System.EventHandler(this.buttonM1Sharpening_Click);
-            // 
-            // checkBoxM1CuttingDrainBlow
-            // 
-            this.checkBoxM1CuttingDrainBlow.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBoxM1CuttingDrainBlow.AutoSize = true;
-            this.checkBoxM1CuttingDrainBlow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkBoxM1CuttingDrainBlow.FlatAppearance.BorderSize = 5;
-            this.checkBoxM1CuttingDrainBlow.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxM1CuttingDrainBlow.ImageIndex = 5;
-            this.checkBoxM1CuttingDrainBlow.ImageList = this.imageListCut;
-            this.checkBoxM1CuttingDrainBlow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM1CuttingDrainBlow.Location = new System.Drawing.Point(310, 20);
-            this.checkBoxM1CuttingDrainBlow.Name = "checkBoxM1CuttingDrainBlow";
-            this.checkBoxM1CuttingDrainBlow.Size = new System.Drawing.Size(84, 90);
-            this.checkBoxM1CuttingDrainBlow.TabIndex = 274;
-            this.checkBoxM1CuttingDrainBlow.Text = "drain blow";
-            this.checkBoxM1CuttingDrainBlow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBoxM1CuttingDrainBlow.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBoxM1CuttingDrainBlow.UseVisualStyleBackColor = true;
-            this.checkBoxM1CuttingDrainBlow.CheckStateChanged += new System.EventHandler(this.checkBoxM1CuttingDrainBlow_CheckStateChanged);
-            // 
-            // checkBoxM1CuttingMotor
-            // 
-            this.checkBoxM1CuttingMotor.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBoxM1CuttingMotor.AutoSize = true;
-            this.checkBoxM1CuttingMotor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkBoxM1CuttingMotor.FlatAppearance.BorderSize = 5;
-            this.checkBoxM1CuttingMotor.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxM1CuttingMotor.ImageIndex = 1;
-            this.checkBoxM1CuttingMotor.ImageList = this.imageListCut;
-            this.checkBoxM1CuttingMotor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM1CuttingMotor.Location = new System.Drawing.Point(230, 20);
-            this.checkBoxM1CuttingMotor.Name = "checkBoxM1CuttingMotor";
-            this.checkBoxM1CuttingMotor.Size = new System.Drawing.Size(70, 90);
-            this.checkBoxM1CuttingMotor.TabIndex = 273;
-            this.checkBoxM1CuttingMotor.Text = "motor";
-            this.checkBoxM1CuttingMotor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBoxM1CuttingMotor.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBoxM1CuttingMotor.UseVisualStyleBackColor = true;
-            this.checkBoxM1CuttingMotor.CheckStateChanged += new System.EventHandler(this.checkBoxM1CuttingMotor_CheckStateChanged);
-            // 
-            // buttonM1CutSlideForward
-            // 
-            this.buttonM1CutSlideForward.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1CutSlideForward.ImageKey = "cut_slide_forward.png";
-            this.buttonM1CutSlideForward.ImageList = this.imageListCut;
-            this.buttonM1CutSlideForward.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1CutSlideForward.Location = new System.Drawing.Point(120, 20);
-            this.buttonM1CutSlideForward.Name = "buttonM1CutSlideForward";
-            this.buttonM1CutSlideForward.Size = new System.Drawing.Size(100, 90);
-            this.buttonM1CutSlideForward.TabIndex = 143;
-            this.buttonM1CutSlideForward.Text = "slide fwd";
-            this.buttonM1CutSlideForward.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.buttonM1CutSlideForward.UseVisualStyleBackColor = true;
-            this.buttonM1CutSlideForward.Click += new System.EventHandler(this.buttonM1CutSlideForward_Click);
-            // 
-            // buttonM1CutSlideBackward
-            // 
-            this.buttonM1CutSlideBackward.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1CutSlideBackward.ImageIndex = 2;
-            this.buttonM1CutSlideBackward.ImageList = this.imageListCut;
-            this.buttonM1CutSlideBackward.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1CutSlideBackward.Location = new System.Drawing.Point(10, 20);
-            this.buttonM1CutSlideBackward.Name = "buttonM1CutSlideBackward";
-            this.buttonM1CutSlideBackward.Size = new System.Drawing.Size(100, 90);
-            this.buttonM1CutSlideBackward.TabIndex = 144;
-            this.buttonM1CutSlideBackward.Text = "slide bwd";
-            this.buttonM1CutSlideBackward.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.buttonM1CutSlideBackward.UseVisualStyleBackColor = true;
-            this.buttonM1CutSlideBackward.Click += new System.EventHandler(this.buttonM1CutSlideBackward_Click);
-            // 
-            // groupBoxM1Servo
-            // 
-            this.groupBoxM1Servo.Controls.Add(this.buttonM1ResetServo);
-            this.groupBoxM1Servo.Controls.Add(this.lbLed13);
-            this.groupBoxM1Servo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxM1Servo.Location = new System.Drawing.Point(595, 625);
-            this.groupBoxM1Servo.Name = "groupBoxM1Servo";
-            this.groupBoxM1Servo.Size = new System.Drawing.Size(260, 80);
-            this.groupBoxM1Servo.TabIndex = 298;
-            this.groupBoxM1Servo.TabStop = false;
-            this.groupBoxM1Servo.Text = "servo";
-            // 
-            // buttonM1ResetServo
-            // 
-            this.buttonM1ResetServo.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1ResetServo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1ResetServo.Location = new System.Drawing.Point(20, 20);
-            this.buttonM1ResetServo.Name = "buttonM1ResetServo";
-            this.buttonM1ResetServo.Size = new System.Drawing.Size(100, 48);
-            this.buttonM1ResetServo.TabIndex = 149;
-            this.buttonM1ResetServo.Text = "reset alarm";
-            this.buttonM1ResetServo.UseVisualStyleBackColor = true;
-            this.buttonM1ResetServo.Click += new System.EventHandler(this.buttonM1ResetServo_Click);
-            // 
-            // lbLed13
-            // 
-            this.lbLed13.BackColor = System.Drawing.Color.Transparent;
-            this.lbLed13.BlinkInterval = 500;
-            this.lbLed13.Enabled = false;
-            this.lbLed13.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.lbLed13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed13.Label = "X9 - servo ready";
-            this.lbLed13.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed13.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed13.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed13.Location = new System.Drawing.Point(125, 35);
-            this.lbLed13.Name = "lbLed13";
-            this.lbLed13.Renderer = null;
-            this.lbLed13.Size = new System.Drawing.Size(130, 24);
-            this.lbLed13.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed13.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            this.lbLed13.TabIndex = 288;
-            // 
             // checkBoxM1ExitBelt
             // 
             this.checkBoxM1ExitBelt.Appearance = System.Windows.Forms.Appearance.Button;
@@ -13031,283 +13230,6 @@
             this.checkBoxM1WorkingBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.checkBoxM1WorkingBelt.UseVisualStyleBackColor = true;
             this.checkBoxM1WorkingBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM1WorkingBelt_CheckStateChanged);
-            // 
-            // groupBoxM1Homing
-            // 
-            this.groupBoxM1Homing.Controls.Add(this.labelM1HomingDone);
-            this.groupBoxM1Homing.Controls.Add(this.buttonM1HomingDone);
-            this.groupBoxM1Homing.Controls.Add(this.buttonM1Home);
-            this.groupBoxM1Homing.Controls.Add(this.buttonM1ResetHome);
-            this.groupBoxM1Homing.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.groupBoxM1Homing.Location = new System.Drawing.Point(595, 500);
-            this.groupBoxM1Homing.Name = "groupBoxM1Homing";
-            this.groupBoxM1Homing.Size = new System.Drawing.Size(260, 120);
-            this.groupBoxM1Homing.TabIndex = 147;
-            this.groupBoxM1Homing.TabStop = false;
-            this.groupBoxM1Homing.Text = "vertical axis home";
-            // 
-            // labelM1HomingDone
-            // 
-            this.labelM1HomingDone.AutoSize = true;
-            this.labelM1HomingDone.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.labelM1HomingDone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM1HomingDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1HomingDone.Location = new System.Drawing.Point(50, 88);
-            this.labelM1HomingDone.Name = "labelM1HomingDone";
-            this.labelM1HomingDone.Size = new System.Drawing.Size(117, 16);
-            this.labelM1HomingDone.TabIndex = 134;
-            this.labelM1HomingDone.Text = "homing not done";
-            // 
-            // buttonM1HomingDone
-            // 
-            this.buttonM1HomingDone.Enabled = false;
-            this.buttonM1HomingDone.FlatAppearance.BorderSize = 10;
-            this.buttonM1HomingDone.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1HomingDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1HomingDone.Location = new System.Drawing.Point(20, 83);
-            this.buttonM1HomingDone.Name = "buttonM1HomingDone";
-            this.buttonM1HomingDone.Size = new System.Drawing.Size(24, 24);
-            this.buttonM1HomingDone.TabIndex = 133;
-            this.buttonM1HomingDone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonM1HomingDone.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonM1HomingDone.UseVisualStyleBackColor = true;
-            // 
-            // buttonM1Home
-            // 
-            this.buttonM1Home.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1Home.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1Home.Location = new System.Drawing.Point(20, 20);
-            this.buttonM1Home.Name = "buttonM1Home";
-            this.buttonM1Home.Size = new System.Drawing.Size(100, 48);
-            this.buttonM1Home.TabIndex = 8;
-            this.buttonM1Home.Text = "go home";
-            this.buttonM1Home.UseVisualStyleBackColor = true;
-            this.buttonM1Home.Click += new System.EventHandler(this.buttonM1Home_Click);
-            // 
-            // buttonM1ResetHome
-            // 
-            this.buttonM1ResetHome.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1ResetHome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1ResetHome.Location = new System.Drawing.Point(140, 20);
-            this.buttonM1ResetHome.Name = "buttonM1ResetHome";
-            this.buttonM1ResetHome.Size = new System.Drawing.Size(100, 48);
-            this.buttonM1ResetHome.TabIndex = 9;
-            this.buttonM1ResetHome.Text = "reset home";
-            this.buttonM1ResetHome.UseVisualStyleBackColor = true;
-            this.buttonM1ResetHome.Click += new System.EventHandler(this.buttonM1ResetHome_Click);
-            // 
-            // groupBoxM1StartQuote
-            // 
-            this.groupBoxM1StartQuote.Controls.Add(this.labelM1StartQuote);
-            this.groupBoxM1StartQuote.Controls.Add(this.labelM1StartSpeed);
-            this.groupBoxM1StartQuote.Controls.Add(this.buttonM1StartQuote);
-            this.groupBoxM1StartQuote.Controls.Add(this.numericUpDownM1ManualQuote);
-            this.groupBoxM1StartQuote.Controls.Add(this.numericUpDownM1ManualSpeed);
-            this.groupBoxM1StartQuote.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.groupBoxM1StartQuote.Location = new System.Drawing.Point(595, 335);
-            this.groupBoxM1StartQuote.Name = "groupBoxM1StartQuote";
-            this.groupBoxM1StartQuote.Size = new System.Drawing.Size(260, 155);
-            this.groupBoxM1StartQuote.TabIndex = 146;
-            this.groupBoxM1StartQuote.TabStop = false;
-            this.groupBoxM1StartQuote.Text = "vertical axis start quote";
-            // 
-            // labelM1StartQuote
-            // 
-            this.labelM1StartQuote.AutoSize = true;
-            this.labelM1StartQuote.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.labelM1StartQuote.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1StartQuote.Location = new System.Drawing.Point(20, 20);
-            this.labelM1StartQuote.Name = "labelM1StartQuote";
-            this.labelM1StartQuote.Size = new System.Drawing.Size(79, 16);
-            this.labelM1StartQuote.TabIndex = 105;
-            this.labelM1StartQuote.Text = "quote(mm)";
-            // 
-            // labelM1StartSpeed
-            // 
-            this.labelM1StartSpeed.AutoSize = true;
-            this.labelM1StartSpeed.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.labelM1StartSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1StartSpeed.Location = new System.Drawing.Point(160, 20);
-            this.labelM1StartSpeed.Name = "labelM1StartSpeed";
-            this.labelM1StartSpeed.Size = new System.Drawing.Size(71, 16);
-            this.labelM1StartSpeed.TabIndex = 104;
-            this.labelM1StartSpeed.Text = "speed(%)";
-            // 
-            // buttonM1StartQuote
-            // 
-            this.buttonM1StartQuote.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM1StartQuote.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1StartQuote.Location = new System.Drawing.Point(20, 90);
-            this.buttonM1StartQuote.Name = "buttonM1StartQuote";
-            this.buttonM1StartQuote.Size = new System.Drawing.Size(220, 48);
-            this.buttonM1StartQuote.TabIndex = 80;
-            this.buttonM1StartQuote.Text = "start quote";
-            this.buttonM1StartQuote.UseVisualStyleBackColor = true;
-            this.buttonM1StartQuote.Click += new System.EventHandler(this.buttonM1StartQuote_Click);
-            // 
-            // numericUpDownM1ManualQuote
-            // 
-            this.numericUpDownM1ManualQuote.DecimalPlaces = 1;
-            this.numericUpDownM1ManualQuote.Font = new System.Drawing.Font("Verdana", 21.75F);
-            this.numericUpDownM1ManualQuote.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownM1ManualQuote.Location = new System.Drawing.Point(20, 40);
-            this.numericUpDownM1ManualQuote.Minimum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownM1ManualQuote.Name = "numericUpDownM1ManualQuote";
-            this.numericUpDownM1ManualQuote.Size = new System.Drawing.Size(100, 43);
-            this.numericUpDownM1ManualQuote.TabIndex = 82;
-            this.numericUpDownM1ManualQuote.Value = new decimal(new int[] {
-            105,
-            0,
-            0,
-            65536});
-            this.numericUpDownM1ManualQuote.ValueChanged += new System.EventHandler(this.numericUpDownM1ManualQuote_ValueChanged);
-            // 
-            // numericUpDownM1ManualSpeed
-            // 
-            this.numericUpDownM1ManualSpeed.Font = new System.Drawing.Font("Verdana", 21.75F);
-            this.numericUpDownM1ManualSpeed.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDownM1ManualSpeed.Location = new System.Drawing.Point(160, 40);
-            this.numericUpDownM1ManualSpeed.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownM1ManualSpeed.Name = "numericUpDownM1ManualSpeed";
-            this.numericUpDownM1ManualSpeed.Size = new System.Drawing.Size(80, 43);
-            this.numericUpDownM1ManualSpeed.TabIndex = 83;
-            this.numericUpDownM1ManualSpeed.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownM1ManualSpeed.ValueChanged += new System.EventHandler(this.numericUpDownM1ManualSpeed_ValueChanged);
-            // 
-            // groupBoxM1Jog
-            // 
-            this.groupBoxM1Jog.Controls.Add(this.labelM1JogSpeed);
-            this.groupBoxM1Jog.Controls.Add(this.lbButtonM1JogUp);
-            this.groupBoxM1Jog.Controls.Add(this.lbButtonM1JogDown);
-            this.groupBoxM1Jog.Controls.Add(this.numericUpDownM1JogSpeed);
-            this.groupBoxM1Jog.Controls.Add(this.labelM1TeachAxisQuoteName);
-            this.groupBoxM1Jog.Controls.Add(this.labelM1TeachAxisQuoteValue);
-            this.groupBoxM1Jog.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.groupBoxM1Jog.Location = new System.Drawing.Point(595, 100);
-            this.groupBoxM1Jog.Name = "groupBoxM1Jog";
-            this.groupBoxM1Jog.Size = new System.Drawing.Size(260, 225);
-            this.groupBoxM1Jog.TabIndex = 145;
-            this.groupBoxM1Jog.TabStop = false;
-            this.groupBoxM1Jog.Text = "vertical axis jog";
-            // 
-            // labelM1JogSpeed
-            // 
-            this.labelM1JogSpeed.AutoSize = true;
-            this.labelM1JogSpeed.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.labelM1JogSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1JogSpeed.Location = new System.Drawing.Point(160, 20);
-            this.labelM1JogSpeed.Name = "labelM1JogSpeed";
-            this.labelM1JogSpeed.Size = new System.Drawing.Size(71, 16);
-            this.labelM1JogSpeed.TabIndex = 103;
-            this.labelM1JogSpeed.Text = "speed(%)";
-            // 
-            // lbButtonM1JogUp
-            // 
-            this.lbButtonM1JogUp.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonM1JogUp.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lbButtonM1JogUp.BackgroundImage")));
-            this.lbButtonM1JogUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.lbButtonM1JogUp.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbButtonM1JogUp.Font = new System.Drawing.Font("Verdana", 39.75F, System.Drawing.FontStyle.Bold);
-            this.lbButtonM1JogUp.ForeColor = System.Drawing.Color.White;
-            this.lbButtonM1JogUp.Label = "up";
-            this.lbButtonM1JogUp.Location = new System.Drawing.Point(5, 20);
-            this.lbButtonM1JogUp.Name = "lbButtonM1JogUp";
-            this.lbButtonM1JogUp.Renderer = null;
-            this.lbButtonM1JogUp.RepeatInterval = 100;
-            this.lbButtonM1JogUp.RepeatState = false;
-            this.lbButtonM1JogUp.Size = new System.Drawing.Size(140, 68);
-            this.lbButtonM1JogUp.StartRepeatInterval = 500;
-            this.lbButtonM1JogUp.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonM1JogUp.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            this.lbButtonM1JogUp.TabIndex = 78;
-            this.lbButtonM1JogUp.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM1JogUp_ButtonChangeState);
-            // 
-            // lbButtonM1JogDown
-            // 
-            this.lbButtonM1JogDown.BackColor = System.Drawing.Color.Transparent;
-            this.lbButtonM1JogDown.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lbButtonM1JogDown.BackgroundImage")));
-            this.lbButtonM1JogDown.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.lbButtonM1JogDown.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbButtonM1JogDown.Font = new System.Drawing.Font("Verdana", 39.75F, System.Drawing.FontStyle.Bold);
-            this.lbButtonM1JogDown.ForeColor = System.Drawing.Color.White;
-            this.lbButtonM1JogDown.Label = "down";
-            this.lbButtonM1JogDown.Location = new System.Drawing.Point(5, 145);
-            this.lbButtonM1JogDown.Name = "lbButtonM1JogDown";
-            this.lbButtonM1JogDown.Renderer = null;
-            this.lbButtonM1JogDown.RepeatInterval = 100;
-            this.lbButtonM1JogDown.RepeatState = false;
-            this.lbButtonM1JogDown.Size = new System.Drawing.Size(140, 68);
-            this.lbButtonM1JogDown.StartRepeatInterval = 500;
-            this.lbButtonM1JogDown.State = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonState.Normal;
-            this.lbButtonM1JogDown.Style = LBSoft.IndustrialCtrls.Buttons.LBButton.ButtonStyle.Rectangular;
-            this.lbButtonM1JogDown.TabIndex = 79;
-            this.lbButtonM1JogDown.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM1JogDown_ButtonChangeState);
-            // 
-            // numericUpDownM1JogSpeed
-            // 
-            this.numericUpDownM1JogSpeed.Font = new System.Drawing.Font("Verdana", 21.75F);
-            this.numericUpDownM1JogSpeed.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDownM1JogSpeed.Location = new System.Drawing.Point(160, 40);
-            this.numericUpDownM1JogSpeed.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownM1JogSpeed.Name = "numericUpDownM1JogSpeed";
-            this.numericUpDownM1JogSpeed.Size = new System.Drawing.Size(80, 43);
-            this.numericUpDownM1JogSpeed.TabIndex = 98;
-            this.numericUpDownM1JogSpeed.Value = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.numericUpDownM1JogSpeed.ValueChanged += new System.EventHandler(this.numericUpDownM1JogSpeed_ValueChanged);
-            // 
-            // labelM1TeachAxisQuoteName
-            // 
-            this.labelM1TeachAxisQuoteName.AutoSize = true;
-            this.labelM1TeachAxisQuoteName.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.labelM1TeachAxisQuoteName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1TeachAxisQuoteName.Location = new System.Drawing.Point(160, 105);
-            this.labelM1TeachAxisQuoteName.Name = "labelM1TeachAxisQuoteName";
-            this.labelM1TeachAxisQuoteName.Size = new System.Drawing.Size(84, 16);
-            this.labelM1TeachAxisQuoteName.TabIndex = 102;
-            this.labelM1TeachAxisQuoteName.Text = "quote (mm)";
-            // 
-            // labelM1TeachAxisQuoteValue
-            // 
-            this.labelM1TeachAxisQuoteValue.AutoSize = true;
-            this.labelM1TeachAxisQuoteValue.Font = new System.Drawing.Font("Verdana", 14.25F);
-            this.labelM1TeachAxisQuoteValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1TeachAxisQuoteValue.Location = new System.Drawing.Point(160, 135);
-            this.labelM1TeachAxisQuoteValue.Name = "labelM1TeachAxisQuoteValue";
-            this.labelM1TeachAxisQuoteValue.Size = new System.Drawing.Size(58, 23);
-            this.labelM1TeachAxisQuoteValue.TabIndex = 103;
-            this.labelM1TeachAxisQuoteValue.Text = "9999";
             // 
             // dataGridViewM1TeachPoints
             // 
@@ -13650,7 +13572,7 @@
             this.buttonM1TestSaveProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM1TestSaveProgram.Image")));
             this.buttonM1TestSaveProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonM1TestSaveProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1TestSaveProgram.Location = new System.Drawing.Point(390, 25);
+            this.buttonM1TestSaveProgram.Location = new System.Drawing.Point(390, 10);
             this.buttonM1TestSaveProgram.Name = "buttonM1TestSaveProgram";
             this.buttonM1TestSaveProgram.Size = new System.Drawing.Size(161, 53);
             this.buttonM1TestSaveProgram.TabIndex = 127;
@@ -13666,7 +13588,7 @@
             this.buttonM1TestLoadProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM1TestLoadProgram.Image")));
             this.buttonM1TestLoadProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonM1TestLoadProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1TestLoadProgram.Location = new System.Drawing.Point(220, 25);
+            this.buttonM1TestLoadProgram.Location = new System.Drawing.Point(220, 10);
             this.buttonM1TestLoadProgram.Name = "buttonM1TestLoadProgram";
             this.buttonM1TestLoadProgram.Size = new System.Drawing.Size(160, 53);
             this.buttonM1TestLoadProgram.TabIndex = 126;
@@ -13692,7 +13614,7 @@
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn15,
-            this.dataGridViewImageColumn1});
+            this.reached});
             dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -13702,7 +13624,7 @@
             dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewM1TestPoints.DefaultCellStyle = dataGridViewCellStyle36;
             this.dataGridViewM1TestPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridViewM1TestPoints.Location = new System.Drawing.Point(28, 115);
+            this.dataGridViewM1TestPoints.Location = new System.Drawing.Point(10, 115);
             this.dataGridViewM1TestPoints.Name = "dataGridViewM1TestPoints";
             dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
@@ -13720,10 +13642,11 @@
             this.dataGridViewM1TestPoints.Size = new System.Drawing.Size(380, 220);
             this.dataGridViewM1TestPoints.TabIndex = 125;
             this.dataGridViewM1TestPoints.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewM1TestPoints_CellContentClick);
+            this.dataGridViewM1TestPoints.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridViewM1TestPoints_CellPainting);
             // 
             // dataGridViewTextBoxColumn13
             // 
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             dataGridViewCellStyle35.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle35;
             this.dataGridViewTextBoxColumn13.Frozen = true;
@@ -13748,20 +13671,19 @@
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             this.dataGridViewTextBoxColumn15.Width = 130;
             // 
-            // dataGridViewImageColumn1
+            // reached
             // 
-            this.dataGridViewImageColumn1.HeaderText = "reached";
-            this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Width = 56;
+            this.reached.HeaderText = "reached";
+            this.reached.Name = "reached";
+            this.reached.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.reached.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.reached.Width = 56;
             // 
             // comboBoxM1TestProgramList
             // 
             this.comboBoxM1TestProgramList.Font = new System.Drawing.Font("Verdana", 12F);
             this.comboBoxM1TestProgramList.FormattingEnabled = true;
-            this.comboBoxM1TestProgramList.Location = new System.Drawing.Point(25, 25);
+            this.comboBoxM1TestProgramList.Location = new System.Drawing.Point(10, 10);
             this.comboBoxM1TestProgramList.Name = "comboBoxM1TestProgramList";
             this.comboBoxM1TestProgramList.Size = new System.Drawing.Size(180, 26);
             this.comboBoxM1TestProgramList.TabIndex = 124;
@@ -15770,7 +15692,7 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageT1_1);
+            this.tabControlMain.Controls.Add(this.tabPageT1_2);
             this.tabControlMain.Controls.Add(this.tabPageT7);
             this.tabControlMain.Controls.Add(this.tabPageT6);
             this.tabControlMain.Controls.Add(this.tabPageT5);
@@ -15785,7 +15707,7 @@
             this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_3);
             this.tabControlMain.Controls.Add(this.tabPage2);
-            this.tabControlMain.Controls.Add(this.tabPageT1_2);
+            this.tabControlMain.Controls.Add(this.tabPageT1_1);
             this.tabControlMain.Controls.Add(this.tabPageT1_3);
             this.tabControlMain.Controls.Add(this.tabPageT1_4);
             this.tabControlMain.Controls.Add(this.tabPage1);
@@ -15838,7 +15760,7 @@
             this.tabPageT6,
             this.tabPageT7});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageT1_1;
+            this.tabControlMain.SelectedPage = this.tabPageT1_2;
             tabPageColorStyle65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle65.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle65.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
@@ -16025,19 +15947,9 @@
             this.tabPageT1_1.ResumeLayout(false);
             this.tabPageT1_1.PerformLayout();
             this.contextMenuStripT1_1.ResumeLayout(false);
-            this.groupBoxM1Varius.ResumeLayout(false);
-            this.groupBoxM1CutSlide.ResumeLayout(false);
-            this.groupBoxM1CutSlide.PerformLayout();
-            this.groupBoxM1Servo.ResumeLayout(false);
-            this.groupBoxM1Homing.ResumeLayout(false);
-            this.groupBoxM1Homing.PerformLayout();
-            this.groupBoxM1StartQuote.ResumeLayout(false);
-            this.groupBoxM1StartQuote.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1JogSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1ManualQuote)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1ManualSpeed)).EndInit();
-            this.groupBoxM1Jog.ResumeLayout(false);
-            this.groupBoxM1Jog.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1JogSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM1TeachPoints)).EndInit();
             this.tabPageT1_2.ResumeLayout(false);
             this.tabPageT1_2.PerformLayout();
@@ -16485,19 +16397,16 @@
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn3;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn4;
         private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn5;
-        private System.Windows.Forms.GroupBox groupBoxM1Jog;
         private System.Windows.Forms.Label labelM1JogSpeed;
         private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM1JogUp;
         private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM1JogDown;
         private System.Windows.Forms.NumericUpDown numericUpDownM1JogSpeed;
         private System.Windows.Forms.Label labelM1TeachAxisQuoteName;
         private System.Windows.Forms.Label labelM1TeachAxisQuoteValue;
-        private System.Windows.Forms.GroupBox groupBoxM1Homing;
         private System.Windows.Forms.Label labelM1HomingDone;
         private System.Windows.Forms.Button buttonM1HomingDone;
         private System.Windows.Forms.Button buttonM1Home;
         private System.Windows.Forms.Button buttonM1ResetHome;
-        private System.Windows.Forms.GroupBox groupBoxM1StartQuote;
         private System.Windows.Forms.Label labelM1StartQuote;
         private System.Windows.Forms.Label labelM1StartSpeed;
         private System.Windows.Forms.Button buttonM1StartQuote;
@@ -16505,32 +16414,19 @@
         private System.Windows.Forms.NumericUpDown numericUpDownM1ManualSpeed;
         private System.Windows.Forms.CheckBox checkBoxM1ExitBelt;
         private System.Windows.Forms.CheckBox checkBoxM1WorkingBelt;
-        private System.Windows.Forms.GroupBox groupBoxM1Servo;
         private System.Windows.Forms.Button buttonM1ResetServo;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed13;
         private System.Windows.Forms.Button buttonM1StartTest;
         private System.Windows.Forms.Button buttonM1TestSaveProgram;
         private System.Windows.Forms.Button buttonM1TestLoadProgram;
         private System.Windows.Forms.DataGridView dataGridViewM1TestPoints;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.ComboBox comboBoxM1TestProgramList;
         private System.Windows.Forms.Button buttonM1SpringsOpening;
         private System.Windows.Forms.Button buttonM1SpringsClosing;
         private System.Windows.Forms.Button buttonM1CutOpening;
         private System.Windows.Forms.Button buttonM1CutClosing;
-        private System.Windows.Forms.GroupBox groupBoxM1CutSlide;
-        private System.Windows.Forms.Button buttonM1CutSlideForward;
-        private System.Windows.Forms.Button buttonM1CutSlideBackward;
         private System.Windows.Forms.Button buttonM1BlockOpening;
         private System.Windows.Forms.Button buttonM1BlockClosing;
-        private System.Windows.Forms.GroupBox groupBoxM1Varius;
-        private System.Windows.Forms.Button buttonM1Sharpening;
-        private System.Windows.Forms.CheckBox checkBoxM1CuttingSuction;
-        private System.Windows.Forms.CheckBox checkBoxM1CuttingDrainBlow;
-        private System.Windows.Forms.CheckBox checkBoxM1CuttingMotor;
         private System.Windows.Forms.Button buttonM1PosV2Down;
         private System.Windows.Forms.Button buttonM1PosV2Up;
         private System.Windows.Forms.Button buttonM1PosV1Down;
@@ -16920,5 +16816,15 @@
         private System.Windows.Forms.NumericUpDown numericUpDownM6OnPercentage;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT1_1Keyboard;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT1_2Keyboard;
+        private System.Windows.Forms.CheckBox checkBoxM1CuttingSuction;
+        private System.Windows.Forms.Button buttonM1Sharpening;
+        private System.Windows.Forms.CheckBox checkBoxM1CuttingDrainBlow;
+        private System.Windows.Forms.CheckBox checkBoxM1CuttingMotor;
+        private System.Windows.Forms.Button buttonM1CutSlideForward;
+        private System.Windows.Forms.Button buttonM1CutSlideBackward;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewButtonColumn reached;
     }
 }
