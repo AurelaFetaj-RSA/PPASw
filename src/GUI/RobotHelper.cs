@@ -311,10 +311,10 @@ namespace GUI
                     };
 
                     readResult = await ccService.Read(keys);
-                    WriteOnLabelAsync(readResult["pcM1CurrentAxisQuote"], labelM1TeachAxisQuoteValue);
-                    WriteOnLabelAsync(readResult["pcM2CurrentAxisQuote"], labelM2TeachAxisQuoteValue);
-                    WriteOnLabelAsync(readResult["pcM3CurrentAxisQuote"], labelM3TeachAxisQuoteValue);
-                    WriteOnLabelAsync(readResult["pcM4CurrentAxisQuote"], labelM4TeachAxisQuoteValue);
+                    WriteOnFloatLabelAsync(readResult["pcM1CurrentAxisQuote"], labelM1TeachAxisQuoteValue);
+                    WriteOnFloatLabelAsync(readResult["pcM2CurrentAxisQuote"], labelM2TeachAxisQuoteValue);
+                    WriteOnFloatLabelAsync(readResult["pcM3CurrentAxisQuote"], labelM3TeachAxisQuoteValue);
+                    WriteOnFloatLabelAsync(readResult["pcM4CurrentAxisQuote"], labelM4TeachAxisQuoteValue);
                     #endregion
 
                     #region(* machine point reached - teach*)
@@ -737,6 +737,28 @@ namespace GUI
             else
             {
                 textToAppend = cr.Value.ToString();
+            }
+            if (lbl.InvokeRequired)
+            {
+                lbl.Invoke((MethodInvoker)delegate
+                {
+                    lbl.Text = textToAppend;
+                });
+            }
+        }
+
+        public void WriteOnFloatLabelAsync(ClientResult cr, Label lbl)
+        {
+            string textToAppend = "";
+
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                textToAppend = "offline";
+            }
+            else
+            {
+                
+                textToAppend = string.Format("0:0.0##", "-1.2387564");// cr.Value.ToString());
             }
             if (lbl.InvokeRequired)
             {

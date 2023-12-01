@@ -217,8 +217,11 @@ namespace GUI
             //reset
             ClientDataConfig.Add(new OpcObjectData("pcM3Reset", $"ns=2;s=Tags.Pad_print_esterna/pc_reset_generale", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM3ResetCycle", $"ns=2;s=Tags.Pad_print_esterna/pc_reset_numero_cicli", typeof(bool)));
-           
-
+            ClientDataConfig.Add(new OpcObjectData("pcM3NormTransvFwd", $"ns=2;s=Tags.Pad_print_esterna/pc_normalizzazione_trasversale_avanti", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM3NormTransvBwd", $"ns=2;s=Tags.Pad_print_esterna/pc_normalizzazione_trasversale_indietro", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM3NormHoriFwd", $"ns=2;s=Tags.Pad_print_esterna/pc_normalizzazione_orizzontale_avanti", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM3NormHoriBwd", $"ns=2;s=Tags.Pad_print_esterna/pc_normalizzazione_orizzontale_indietro", typeof(bool)));
+            
             #endregion
 
             #region(* M4 OPCUA variables *)

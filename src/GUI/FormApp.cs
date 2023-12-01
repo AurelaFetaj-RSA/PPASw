@@ -1033,10 +1033,10 @@ namespace GUI
         {
             Process foo = new Process();
 
-            foo.StartInfo.FileName = @AppDomain.CurrentDomain.BaseDirectory + "RSAKeyboard.exe";// "Oskeyboard.exe";
-
+            foo.StartInfo.FileName = @AppDomain.CurrentDomain.BaseDirectory + "Oskeyboard.exe";// "Oskeyboard.exe";system offline
+            //foo.StartInfo.Arguments = " 100 500 1 ";
             bool isRunning = false; //TODO: Check to see if process foo.exe is already running
-            var processExists = Process.GetProcesses().Any(p => p.ProcessName.Contains("RSAKeyboard.exe"));
+            var processExists = Process.GetProcesses().Any(p => p.ProcessName.Contains("Oskeyboard.exe"));
 
             if (processExists)
             {
@@ -1528,7 +1528,5 @@ namespace GUI
                 }
             }
         }
-
-
     }    
 }

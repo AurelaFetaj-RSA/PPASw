@@ -354,37 +354,41 @@
             this.contextMenuStripT4_1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemT4_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT4_1 = new System.Windows.Forms.ToolStripComboBox();
-            this.buttonM3RotationCCW = new System.Windows.Forms.Button();
-            this.imageListRotation = new System.Windows.Forms.ImageList(this.components);
-            this.buttonM3RotationCW = new System.Windows.Forms.Button();
-            this.buttonM3ContrastOpening = new System.Windows.Forms.Button();
-            this.buttonM3ContrastClosing = new System.Windows.Forms.Button();
-            this.buttonM3CenteringClampsOpening = new System.Windows.Forms.Button();
-            this.buttonM3CenteringClampsClosing = new System.Windows.Forms.Button();
-            this.buttonM3BigClampOpening = new System.Windows.Forms.Button();
-            this.buttonM3BigClampClosing = new System.Windows.Forms.Button();
-            this.buttonM3SmallClampOpening = new System.Windows.Forms.Button();
-            this.buttonM3SmallClampClosing = new System.Windows.Forms.Button();
-            this.buttonM3PrintCycle = new System.Windows.Forms.Button();
-            this.buttonM3ResetServo = new System.Windows.Forms.Button();
-            this.lbLed11 = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.checkBoxM3ExitBelt = new System.Windows.Forms.CheckBox();
-            this.checkBoxM3WorkingBelt = new System.Windows.Forms.CheckBox();
-            this.labelM3HomingDone = new System.Windows.Forms.Label();
-            this.buttonM3HomingDone = new System.Windows.Forms.Button();
-            this.buttonM3Home = new System.Windows.Forms.Button();
-            this.buttonM3ResetHome = new System.Windows.Forms.Button();
-            this.labelM3StartQuote = new System.Windows.Forms.Label();
-            this.labelM3StartSpeed = new System.Windows.Forms.Label();
-            this.buttonM3StartQuote = new System.Windows.Forms.Button();
-            this.numericUpDownM3ManualQuote = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownM3ManualSpeed = new System.Windows.Forms.NumericUpDown();
+            this.buttonM3NormHoriFwd = new System.Windows.Forms.Button();
+            this.buttonM3NormHoriBwd = new System.Windows.Forms.Button();
+            this.buttonM3NormTransvFwd = new System.Windows.Forms.Button();
+            this.buttonM3NormTransvBwd = new System.Windows.Forms.Button();
             this.labelM3TeachJogSpeed = new System.Windows.Forms.Label();
+            this.labelM3StartQuote = new System.Windows.Forms.Label();
             this.lbButtonM3JogUp = new LBSoft.IndustrialCtrls.Buttons.LBButton();
+            this.labelM3HomingDone = new System.Windows.Forms.Label();
             this.lbButtonM3JogDown = new LBSoft.IndustrialCtrls.Buttons.LBButton();
             this.numericUpDownM3JogSpeed = new System.Windows.Forms.NumericUpDown();
+            this.labelM3StartSpeed = new System.Windows.Forms.Label();
             this.labelM3TeachAxisQuoteName = new System.Windows.Forms.Label();
+            this.buttonM3ResetServo = new System.Windows.Forms.Button();
             this.labelM3TeachAxisQuoteValue = new System.Windows.Forms.Label();
+            this.buttonM3StartQuote = new System.Windows.Forms.Button();
+            this.buttonM3HomingDone = new System.Windows.Forms.Button();
+            this.numericUpDownM3ManualQuote = new System.Windows.Forms.NumericUpDown();
+            this.buttonM3RotationCCW = new System.Windows.Forms.Button();
+            this.imageListRotation = new System.Windows.Forms.ImageList(this.components);
+            this.numericUpDownM3ManualSpeed = new System.Windows.Forms.NumericUpDown();
+            this.buttonM3Home = new System.Windows.Forms.Button();
+            this.lbLed11 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.buttonM3ResetHome = new System.Windows.Forms.Button();
+            this.buttonM3RotationCW = new System.Windows.Forms.Button();
+            this.buttonM3PrintCycle = new System.Windows.Forms.Button();
+            this.buttonM3ContrastOpening = new System.Windows.Forms.Button();
+            this.buttonM3CenteringClampsOpening = new System.Windows.Forms.Button();
+            this.buttonM3ContrastClosing = new System.Windows.Forms.Button();
+            this.buttonM3BigClampOpening = new System.Windows.Forms.Button();
+            this.buttonM3CenteringClampsClosing = new System.Windows.Forms.Button();
+            this.buttonM3SmallClampOpening = new System.Windows.Forms.Button();
+            this.buttonM3BigClampClosing = new System.Windows.Forms.Button();
+            this.buttonM3SmallClampClosing = new System.Windows.Forms.Button();
+            this.checkBoxM3ExitBelt = new System.Windows.Forms.CheckBox();
+            this.checkBoxM3WorkingBelt = new System.Windows.Forms.CheckBox();
             this.buttonM3TeachDeleteProgram = new System.Windows.Forms.Button();
             this.comboBoxM3TeachProgramList = new System.Windows.Forms.ComboBox();
             this.buttonM3TeachNewProgram = new System.Windows.Forms.Button();
@@ -512,24 +516,24 @@
             this.lbLed59 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.tabPageT4_4 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT5_1 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.checkBoxM6Aspiration = new System.Windows.Forms.CheckBox();
-            this.buttonM6RGLampsON = new System.Windows.Forms.Button();
-            this.buttonM6RGLampsOFF = new System.Windows.Forms.Button();
             this.buttonM6LFLampsON = new System.Windows.Forms.Button();
+            this.buttonM6RGLampsON = new System.Windows.Forms.Button();
             this.buttonM6LFLampsOFF = new System.Windows.Forms.Button();
             this.buttonM5V1ExtFwd = new System.Windows.Forms.Button();
+            this.buttonM6RGLampsOFF = new System.Windows.Forms.Button();
+            this.buttonM5CWRotation = new System.Windows.Forms.Button();
             this.buttonM5V1ExtBwd = new System.Windows.Forms.Button();
+            this.buttonM5ClampBwd = new System.Windows.Forms.Button();
             this.buttonM5V2ExtFwd = new System.Windows.Forms.Button();
             this.buttonM5V2ExtBwd = new System.Windows.Forms.Button();
-            this.buttonM5CWRotation = new System.Windows.Forms.Button();
             this.buttonM5CCWRotation = new System.Windows.Forms.Button();
-            this.buttonM5NoRotation = new System.Windows.Forms.Button();
-            this.buttonM5ClampBwd = new System.Windows.Forms.Button();
             this.buttonM5ClampFwd = new System.Windows.Forms.Button();
-            this.buttonM5ClampOpening = new System.Windows.Forms.Button();
-            this.buttonM5ClampClosing = new System.Windows.Forms.Button();
-            this.buttonM5TranslatorFwd = new System.Windows.Forms.Button();
+            this.buttonM5NoRotation = new System.Windows.Forms.Button();
             this.buttonM5TranslatorBwd = new System.Windows.Forms.Button();
+            this.buttonM5ClampOpening = new System.Windows.Forms.Button();
+            this.buttonM5TranslatorFwd = new System.Windows.Forms.Button();
+            this.buttonM5ClampClosing = new System.Windows.Forms.Button();
+            this.checkBoxM6Aspiration = new System.Windows.Forms.CheckBox();
             this.checkBoxM5ExitBelt2 = new System.Windows.Forms.CheckBox();
             this.checkBoxM5TranslationBelt = new System.Windows.Forms.CheckBox();
             this.checkBoxM5ExitBelt1 = new System.Windows.Forms.CheckBox();
@@ -1038,9 +1042,9 @@
             this.tabPageT3_4.SuspendLayout();
             this.tabPageT4_1.SuspendLayout();
             this.contextMenuStripT4_1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3JogSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3ManualQuote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3ManualSpeed)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3JogSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM3TeachPoints)).BeginInit();
             this.tabPageT4.SuspendLayout();
             this.tabPageT4_2.SuspendLayout();
@@ -1668,8 +1672,13 @@
             0,
             65536});
             this.numericUpDownM2ManualQuote.Location = new System.Drawing.Point(20, 40);
+            this.numericUpDownM2ManualQuote.Maximum = new decimal(new int[] {
+            330,
+            0,
+            0,
+            0});
             this.numericUpDownM2ManualQuote.Minimum = new decimal(new int[] {
-            300,
+            100,
             0,
             0,
             -2147483648});
@@ -4226,6 +4235,10 @@
             // tabPageT4_1
             // 
             this.tabPageT4_1.ContextMenuStrip = this.contextMenuStripT4_1;
+            this.tabPageT4_1.Controls.Add(this.buttonM3NormHoriFwd);
+            this.tabPageT4_1.Controls.Add(this.buttonM3NormHoriBwd);
+            this.tabPageT4_1.Controls.Add(this.buttonM3NormTransvFwd);
+            this.tabPageT4_1.Controls.Add(this.buttonM3NormTransvBwd);
             this.tabPageT4_1.Controls.Add(this.labelM3TeachJogSpeed);
             this.tabPageT4_1.Controls.Add(this.labelM3StartQuote);
             this.tabPageT4_1.Controls.Add(this.lbButtonM3JogUp);
@@ -4265,7 +4278,7 @@
             tabPageFormatStyle6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle6.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT4_1.FormatStyle = tabPageFormatStyle6;
-            this.tabPageT4_1.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT4_1.Location = new System.Drawing.Point(0, 0);
             this.tabPageT4_1.Name = "tabPageT4_1";
             tabPageColorStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle12.BackFadeColor = System.Drawing.Color.Transparent;
@@ -4282,12 +4295,12 @@
             tabPageColorStyle22.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle22.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT4_1.SelectedStyle = tabPageColorStyle22;
-            this.tabPageT4_1.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT4_1.Size = new System.Drawing.Size(0, 0);
             this.tabPageT4_1.StyleFromParent = false;
             this.tabPageT4_1.TabIndex = 14;
             this.tabPageT4_1.Text = "teach";
             this.tabPageT4_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_1.TextBounds")));
-            this.tabPageT4_1.TextSize = new System.Drawing.SizeF(50.55989F, 21.44531F);
+            this.tabPageT4_1.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT4_1.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT4_1
@@ -4318,286 +4331,69 @@
             this.toolStripComboBoxT4_1.Name = "toolStripComboBoxT4_1";
             this.toolStripComboBoxT4_1.Size = new System.Drawing.Size(120, 26);
             // 
-            // buttonM3RotationCCW
+            // buttonM3NormHoriFwd
             // 
-            this.buttonM3RotationCCW.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonM3RotationCCW.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM3RotationCCW.ImageIndex = 1;
-            this.buttonM3RotationCCW.ImageList = this.imageListRotation;
-            this.buttonM3RotationCCW.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3RotationCCW.Location = new System.Drawing.Point(310, 608);
-            this.buttonM3RotationCCW.Name = "buttonM3RotationCCW";
-            this.buttonM3RotationCCW.Size = new System.Drawing.Size(70, 90);
-            this.buttonM3RotationCCW.TabIndex = 152;
-            this.buttonM3RotationCCW.Text = "CCW rotation";
-            this.buttonM3RotationCCW.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.buttonM3RotationCCW.UseVisualStyleBackColor = false;
-            this.buttonM3RotationCCW.Click += new System.EventHandler(this.buttonM3RotationCCW_Click);
+            this.buttonM3NormHoriFwd.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3NormHoriFwd.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3NormHoriFwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3NormHoriFwd.Location = new System.Drawing.Point(430, 476);
+            this.buttonM3NormHoriFwd.Name = "buttonM3NormHoriFwd";
+            this.buttonM3NormHoriFwd.Size = new System.Drawing.Size(160, 48);
+            this.buttonM3NormHoriFwd.TabIndex = 291;
+            this.buttonM3NormHoriFwd.Text = "norm hori fwd";
+            this.buttonM3NormHoriFwd.UseVisualStyleBackColor = false;
+            this.buttonM3NormHoriFwd.Click += new System.EventHandler(this.buttonM3NormHoriFwd_Click);
             // 
-            // imageListRotation
+            // buttonM3NormHoriBwd
             // 
-            this.imageListRotation.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListRotation.ImageStream")));
-            this.imageListRotation.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListRotation.Images.SetKeyName(0, "clockwise.png");
-            this.imageListRotation.Images.SetKeyName(1, "counterclockwise.png");
+            this.buttonM3NormHoriBwd.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3NormHoriBwd.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3NormHoriBwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3NormHoriBwd.Location = new System.Drawing.Point(430, 546);
+            this.buttonM3NormHoriBwd.Name = "buttonM3NormHoriBwd";
+            this.buttonM3NormHoriBwd.Size = new System.Drawing.Size(160, 48);
+            this.buttonM3NormHoriBwd.TabIndex = 292;
+            this.buttonM3NormHoriBwd.Text = "norm hori bwd";
+            this.buttonM3NormHoriBwd.UseVisualStyleBackColor = false;
+            this.buttonM3NormHoriBwd.Click += new System.EventHandler(this.buttonM3NormHoriBwd_Click);
             // 
-            // buttonM3RotationCW
+            // buttonM3NormTransvFwd
             // 
-            this.buttonM3RotationCW.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonM3RotationCW.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM3RotationCW.ImageIndex = 0;
-            this.buttonM3RotationCW.ImageList = this.imageListRotation;
-            this.buttonM3RotationCW.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3RotationCW.Location = new System.Drawing.Point(220, 608);
-            this.buttonM3RotationCW.Name = "buttonM3RotationCW";
-            this.buttonM3RotationCW.Size = new System.Drawing.Size(70, 90);
-            this.buttonM3RotationCW.TabIndex = 151;
-            this.buttonM3RotationCW.Text = "CW rotation";
-            this.buttonM3RotationCW.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.buttonM3RotationCW.UseVisualStyleBackColor = false;
-            this.buttonM3RotationCW.Click += new System.EventHandler(this.buttonM3RotationCW_Click);
+            this.buttonM3NormTransvFwd.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3NormTransvFwd.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3NormTransvFwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3NormTransvFwd.Location = new System.Drawing.Point(220, 476);
+            this.buttonM3NormTransvFwd.Name = "buttonM3NormTransvFwd";
+            this.buttonM3NormTransvFwd.Size = new System.Drawing.Size(160, 48);
+            this.buttonM3NormTransvFwd.TabIndex = 289;
+            this.buttonM3NormTransvFwd.Text = "norm transv fwd";
+            this.buttonM3NormTransvFwd.UseVisualStyleBackColor = false;
+            this.buttonM3NormTransvFwd.Click += new System.EventHandler(this.buttonM3NormTransvFwd_Click);
             // 
-            // buttonM3ContrastOpening
+            // buttonM3NormTransvBwd
             // 
-            this.buttonM3ContrastOpening.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonM3ContrastOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM3ContrastOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3ContrastOpening.Location = new System.Drawing.Point(10, 510);
-            this.buttonM3ContrastOpening.Name = "buttonM3ContrastOpening";
-            this.buttonM3ContrastOpening.Size = new System.Drawing.Size(160, 48);
-            this.buttonM3ContrastOpening.TabIndex = 147;
-            this.buttonM3ContrastOpening.Text = "contrast opening";
-            this.buttonM3ContrastOpening.UseVisualStyleBackColor = false;
-            this.buttonM3ContrastOpening.Click += new System.EventHandler(this.buttonM3ContrastOpening_Click);
+            this.buttonM3NormTransvBwd.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3NormTransvBwd.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3NormTransvBwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3NormTransvBwd.Location = new System.Drawing.Point(220, 546);
+            this.buttonM3NormTransvBwd.Name = "buttonM3NormTransvBwd";
+            this.buttonM3NormTransvBwd.Size = new System.Drawing.Size(160, 48);
+            this.buttonM3NormTransvBwd.TabIndex = 290;
+            this.buttonM3NormTransvBwd.Text = "norm transv bwd";
+            this.buttonM3NormTransvBwd.UseVisualStyleBackColor = false;
+            this.buttonM3NormTransvBwd.Click += new System.EventHandler(this.buttonM3NormTransvBwd_Click);
             // 
-            // buttonM3ContrastClosing
+            // labelM3TeachJogSpeed
             // 
-            this.buttonM3ContrastClosing.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonM3ContrastClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM3ContrastClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3ContrastClosing.Location = new System.Drawing.Point(10, 580);
-            this.buttonM3ContrastClosing.Name = "buttonM3ContrastClosing";
-            this.buttonM3ContrastClosing.Size = new System.Drawing.Size(160, 48);
-            this.buttonM3ContrastClosing.TabIndex = 148;
-            this.buttonM3ContrastClosing.Text = "constrast closing";
-            this.buttonM3ContrastClosing.UseVisualStyleBackColor = false;
-            this.buttonM3ContrastClosing.Click += new System.EventHandler(this.buttonM3ContrastClosing_Click);
-            // 
-            // buttonM3CenteringClampsOpening
-            // 
-            this.buttonM3CenteringClampsOpening.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonM3CenteringClampsOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM3CenteringClampsOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3CenteringClampsOpening.Location = new System.Drawing.Point(430, 370);
-            this.buttonM3CenteringClampsOpening.Name = "buttonM3CenteringClampsOpening";
-            this.buttonM3CenteringClampsOpening.Size = new System.Drawing.Size(160, 48);
-            this.buttonM3CenteringClampsOpening.TabIndex = 145;
-            this.buttonM3CenteringClampsOpening.Text = "center clamp opening";
-            this.buttonM3CenteringClampsOpening.UseVisualStyleBackColor = false;
-            this.buttonM3CenteringClampsOpening.Click += new System.EventHandler(this.buttonM3CenteringClampsOpening_Click);
-            // 
-            // buttonM3CenteringClampsClosing
-            // 
-            this.buttonM3CenteringClampsClosing.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonM3CenteringClampsClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM3CenteringClampsClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3CenteringClampsClosing.Location = new System.Drawing.Point(430, 440);
-            this.buttonM3CenteringClampsClosing.Name = "buttonM3CenteringClampsClosing";
-            this.buttonM3CenteringClampsClosing.Size = new System.Drawing.Size(160, 48);
-            this.buttonM3CenteringClampsClosing.TabIndex = 146;
-            this.buttonM3CenteringClampsClosing.Text = "center clamp closing";
-            this.buttonM3CenteringClampsClosing.UseVisualStyleBackColor = false;
-            this.buttonM3CenteringClampsClosing.Click += new System.EventHandler(this.buttonM3CenteringClampsClosing_Click);
-            // 
-            // buttonM3BigClampOpening
-            // 
-            this.buttonM3BigClampOpening.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonM3BigClampOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM3BigClampOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3BigClampOpening.Location = new System.Drawing.Point(220, 370);
-            this.buttonM3BigClampOpening.Name = "buttonM3BigClampOpening";
-            this.buttonM3BigClampOpening.Size = new System.Drawing.Size(160, 48);
-            this.buttonM3BigClampOpening.TabIndex = 143;
-            this.buttonM3BigClampOpening.Text = "big clamp opening";
-            this.buttonM3BigClampOpening.UseVisualStyleBackColor = false;
-            this.buttonM3BigClampOpening.Click += new System.EventHandler(this.buttonM3BigClampOpening_Click);
-            // 
-            // buttonM3BigClampClosing
-            // 
-            this.buttonM3BigClampClosing.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonM3BigClampClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM3BigClampClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3BigClampClosing.Location = new System.Drawing.Point(220, 440);
-            this.buttonM3BigClampClosing.Name = "buttonM3BigClampClosing";
-            this.buttonM3BigClampClosing.Size = new System.Drawing.Size(160, 48);
-            this.buttonM3BigClampClosing.TabIndex = 144;
-            this.buttonM3BigClampClosing.Text = "big clamp closing";
-            this.buttonM3BigClampClosing.UseVisualStyleBackColor = false;
-            this.buttonM3BigClampClosing.Click += new System.EventHandler(this.buttonM3BigClampClosing_Click);
-            // 
-            // buttonM3SmallClampOpening
-            // 
-            this.buttonM3SmallClampOpening.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonM3SmallClampOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM3SmallClampOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3SmallClampOpening.Location = new System.Drawing.Point(10, 370);
-            this.buttonM3SmallClampOpening.Name = "buttonM3SmallClampOpening";
-            this.buttonM3SmallClampOpening.Size = new System.Drawing.Size(160, 48);
-            this.buttonM3SmallClampOpening.TabIndex = 141;
-            this.buttonM3SmallClampOpening.Text = "small clamp opening";
-            this.buttonM3SmallClampOpening.UseVisualStyleBackColor = false;
-            this.buttonM3SmallClampOpening.Click += new System.EventHandler(this.buttonM3SmallClampOpening_Click);
-            // 
-            // buttonM3SmallClampClosing
-            // 
-            this.buttonM3SmallClampClosing.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonM3SmallClampClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM3SmallClampClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3SmallClampClosing.Location = new System.Drawing.Point(10, 440);
-            this.buttonM3SmallClampClosing.Name = "buttonM3SmallClampClosing";
-            this.buttonM3SmallClampClosing.Size = new System.Drawing.Size(160, 48);
-            this.buttonM3SmallClampClosing.TabIndex = 142;
-            this.buttonM3SmallClampClosing.Text = "small clamp closing";
-            this.buttonM3SmallClampClosing.UseVisualStyleBackColor = false;
-            this.buttonM3SmallClampClosing.Click += new System.EventHandler(this.buttonM3SmallClampClosing_Click);
-            // 
-            // buttonM3PrintCycle
-            // 
-            this.buttonM3PrintCycle.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonM3PrintCycle.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM3PrintCycle.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3PrintCycle.Location = new System.Drawing.Point(10, 650);
-            this.buttonM3PrintCycle.Name = "buttonM3PrintCycle";
-            this.buttonM3PrintCycle.Size = new System.Drawing.Size(160, 48);
-            this.buttonM3PrintCycle.TabIndex = 150;
-            this.buttonM3PrintCycle.Text = "print cycle";
-            this.buttonM3PrintCycle.UseVisualStyleBackColor = false;
-            this.buttonM3PrintCycle.Click += new System.EventHandler(this.buttonM3PrintCycle_Click);
-            // 
-            // buttonM3ResetServo
-            // 
-            this.buttonM3ResetServo.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonM3ResetServo.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM3ResetServo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3ResetServo.Location = new System.Drawing.Point(605, 640);
-            this.buttonM3ResetServo.Name = "buttonM3ResetServo";
-            this.buttonM3ResetServo.Size = new System.Drawing.Size(130, 48);
-            this.buttonM3ResetServo.TabIndex = 149;
-            this.buttonM3ResetServo.Text = "reset servo alarm";
-            this.buttonM3ResetServo.UseVisualStyleBackColor = false;
-            this.buttonM3ResetServo.Click += new System.EventHandler(this.buttonM3ResetServo_Click);
-            // 
-            // lbLed11
-            // 
-            this.lbLed11.BackColor = System.Drawing.SystemColors.Control;
-            this.lbLed11.BlinkInterval = 500;
-            this.lbLed11.Enabled = false;
-            this.lbLed11.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.lbLed11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed11.Label = "servo ready";
-            this.lbLed11.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed11.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed11.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed11.Location = new System.Drawing.Point(739, 650);
-            this.lbLed11.Name = "lbLed11";
-            this.lbLed11.Renderer = null;
-            this.lbLed11.Size = new System.Drawing.Size(100, 24);
-            this.lbLed11.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed11.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            this.lbLed11.TabIndex = 288;
-            // 
-            // checkBoxM3ExitBelt
-            // 
-            this.checkBoxM3ExitBelt.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBoxM3ExitBelt.AutoSize = true;
-            this.checkBoxM3ExitBelt.BackColor = System.Drawing.SystemColors.Control;
-            this.checkBoxM3ExitBelt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkBoxM3ExitBelt.FlatAppearance.BorderSize = 5;
-            this.checkBoxM3ExitBelt.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxM3ExitBelt.ImageIndex = 3;
-            this.checkBoxM3ExitBelt.ImageList = this.imageListBelt;
-            this.checkBoxM3ExitBelt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM3ExitBelt.Location = new System.Drawing.Point(520, 608);
-            this.checkBoxM3ExitBelt.Name = "checkBoxM3ExitBelt";
-            this.checkBoxM3ExitBelt.Size = new System.Drawing.Size(70, 90);
-            this.checkBoxM3ExitBelt.TabIndex = 270;
-            this.checkBoxM3ExitBelt.Text = "exit";
-            this.checkBoxM3ExitBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBoxM3ExitBelt.UseVisualStyleBackColor = false;
-            this.checkBoxM3ExitBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM3ExitBelt_CheckStateChanged);
-            // 
-            // checkBoxM3WorkingBelt
-            // 
-            this.checkBoxM3WorkingBelt.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBoxM3WorkingBelt.AutoSize = true;
-            this.checkBoxM3WorkingBelt.BackColor = System.Drawing.SystemColors.Control;
-            this.checkBoxM3WorkingBelt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkBoxM3WorkingBelt.FlatAppearance.BorderSize = 5;
-            this.checkBoxM3WorkingBelt.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxM3WorkingBelt.ImageIndex = 1;
-            this.checkBoxM3WorkingBelt.ImageList = this.imageListBelt;
-            this.checkBoxM3WorkingBelt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM3WorkingBelt.Location = new System.Drawing.Point(430, 608);
-            this.checkBoxM3WorkingBelt.Name = "checkBoxM3WorkingBelt";
-            this.checkBoxM3WorkingBelt.Size = new System.Drawing.Size(70, 90);
-            this.checkBoxM3WorkingBelt.TabIndex = 269;
-            this.checkBoxM3WorkingBelt.Text = "working";
-            this.checkBoxM3WorkingBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBoxM3WorkingBelt.UseVisualStyleBackColor = false;
-            this.checkBoxM3WorkingBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM3WorkingBelt_CheckStateChanged);
-            // 
-            // labelM3HomingDone
-            // 
-            this.labelM3HomingDone.AutoSize = true;
-            this.labelM3HomingDone.BackColor = System.Drawing.SystemColors.Control;
-            this.labelM3HomingDone.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.labelM3HomingDone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.labelM3HomingDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM3HomingDone.Location = new System.Drawing.Point(656, 571);
-            this.labelM3HomingDone.Name = "labelM3HomingDone";
-            this.labelM3HomingDone.Size = new System.Drawing.Size(117, 16);
-            this.labelM3HomingDone.TabIndex = 134;
-            this.labelM3HomingDone.Text = "homing not done";
-            // 
-            // buttonM3HomingDone
-            // 
-            this.buttonM3HomingDone.Enabled = false;
-            this.buttonM3HomingDone.FlatAppearance.BorderSize = 10;
-            this.buttonM3HomingDone.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM3HomingDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3HomingDone.Location = new System.Drawing.Point(605, 566);
-            this.buttonM3HomingDone.Name = "buttonM3HomingDone";
-            this.buttonM3HomingDone.Size = new System.Drawing.Size(24, 24);
-            this.buttonM3HomingDone.TabIndex = 133;
-            this.buttonM3HomingDone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.buttonM3HomingDone.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.buttonM3HomingDone.UseVisualStyleBackColor = true;
-            // 
-            // buttonM3Home
-            // 
-            this.buttonM3Home.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonM3Home.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM3Home.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3Home.Location = new System.Drawing.Point(605, 503);
-            this.buttonM3Home.Name = "buttonM3Home";
-            this.buttonM3Home.Size = new System.Drawing.Size(100, 48);
-            this.buttonM3Home.TabIndex = 8;
-            this.buttonM3Home.Text = "go home";
-            this.buttonM3Home.UseVisualStyleBackColor = false;
-            this.buttonM3Home.Click += new System.EventHandler(this.buttonM3Home_Click);
-            // 
-            // buttonM3ResetHome
-            // 
-            this.buttonM3ResetHome.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonM3ResetHome.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM3ResetHome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3ResetHome.Location = new System.Drawing.Point(739, 503);
-            this.buttonM3ResetHome.Name = "buttonM3ResetHome";
-            this.buttonM3ResetHome.Size = new System.Drawing.Size(100, 48);
-            this.buttonM3ResetHome.TabIndex = 9;
-            this.buttonM3ResetHome.Text = "reset home";
-            this.buttonM3ResetHome.UseVisualStyleBackColor = false;
-            this.buttonM3ResetHome.Click += new System.EventHandler(this.buttonM3ResetHome_Click);
+            this.labelM3TeachJogSpeed.AutoSize = true;
+            this.labelM3TeachJogSpeed.BackColor = System.Drawing.SystemColors.Control;
+            this.labelM3TeachJogSpeed.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM3TeachJogSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM3TeachJogSpeed.Location = new System.Drawing.Point(775, 115);
+            this.labelM3TeachJogSpeed.Name = "labelM3TeachJogSpeed";
+            this.labelM3TeachJogSpeed.Size = new System.Drawing.Size(71, 16);
+            this.labelM3TeachJogSpeed.TabIndex = 103;
+            this.labelM3TeachJogSpeed.Text = "speed(%)";
             // 
             // labelM3StartQuote
             // 
@@ -4610,91 +4406,6 @@
             this.labelM3StartQuote.Size = new System.Drawing.Size(79, 16);
             this.labelM3StartQuote.TabIndex = 105;
             this.labelM3StartQuote.Text = "quote(mm)";
-            // 
-            // labelM3StartSpeed
-            // 
-            this.labelM3StartSpeed.AutoSize = true;
-            this.labelM3StartSpeed.BackColor = System.Drawing.SystemColors.Control;
-            this.labelM3StartSpeed.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.labelM3StartSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM3StartSpeed.Location = new System.Drawing.Point(749, 350);
-            this.labelM3StartSpeed.Name = "labelM3StartSpeed";
-            this.labelM3StartSpeed.Size = new System.Drawing.Size(71, 16);
-            this.labelM3StartSpeed.TabIndex = 104;
-            this.labelM3StartSpeed.Text = "speed(%)";
-            // 
-            // buttonM3StartQuote
-            // 
-            this.buttonM3StartQuote.BackColor = System.Drawing.SystemColors.Control;
-            this.buttonM3StartQuote.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM3StartQuote.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3StartQuote.Location = new System.Drawing.Point(605, 437);
-            this.buttonM3StartQuote.Name = "buttonM3StartQuote";
-            this.buttonM3StartQuote.Size = new System.Drawing.Size(234, 48);
-            this.buttonM3StartQuote.TabIndex = 80;
-            this.buttonM3StartQuote.Text = "start quote";
-            this.buttonM3StartQuote.UseVisualStyleBackColor = false;
-            this.buttonM3StartQuote.Click += new System.EventHandler(this.buttonM3StartQuote_Click);
-            // 
-            // numericUpDownM3ManualQuote
-            // 
-            this.numericUpDownM3ManualQuote.DecimalPlaces = 1;
-            this.numericUpDownM3ManualQuote.Font = new System.Drawing.Font("Verdana", 21.75F);
-            this.numericUpDownM3ManualQuote.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDownM3ManualQuote.Location = new System.Drawing.Point(605, 375);
-            this.numericUpDownM3ManualQuote.Minimum = new decimal(new int[] {
-            300,
-            0,
-            0,
-            -2147483648});
-            this.numericUpDownM3ManualQuote.Name = "numericUpDownM3ManualQuote";
-            this.numericUpDownM3ManualQuote.Size = new System.Drawing.Size(100, 43);
-            this.numericUpDownM3ManualQuote.TabIndex = 82;
-            this.numericUpDownM3ManualQuote.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownM3ManualQuote.ValueChanged += new System.EventHandler(this.numericUpDownM3ManualQuote_ValueChanged);
-            // 
-            // numericUpDownM3ManualSpeed
-            // 
-            this.numericUpDownM3ManualSpeed.Font = new System.Drawing.Font("Verdana", 21.75F);
-            this.numericUpDownM3ManualSpeed.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDownM3ManualSpeed.Location = new System.Drawing.Point(749, 374);
-            this.numericUpDownM3ManualSpeed.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.numericUpDownM3ManualSpeed.Name = "numericUpDownM3ManualSpeed";
-            this.numericUpDownM3ManualSpeed.Size = new System.Drawing.Size(80, 43);
-            this.numericUpDownM3ManualSpeed.TabIndex = 83;
-            this.numericUpDownM3ManualSpeed.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // labelM3TeachJogSpeed
-            // 
-            this.labelM3TeachJogSpeed.AutoSize = true;
-            this.labelM3TeachJogSpeed.BackColor = System.Drawing.SystemColors.Control;
-            this.labelM3TeachJogSpeed.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.labelM3TeachJogSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM3TeachJogSpeed.Location = new System.Drawing.Point(778, 109);
-            this.labelM3TeachJogSpeed.Name = "labelM3TeachJogSpeed";
-            this.labelM3TeachJogSpeed.Size = new System.Drawing.Size(71, 16);
-            this.labelM3TeachJogSpeed.TabIndex = 103;
-            this.labelM3TeachJogSpeed.Text = "speed(%)";
             // 
             // lbButtonM3JogUp
             // 
@@ -4717,6 +4428,19 @@
             this.lbButtonM3JogUp.TabIndex = 78;
             this.lbButtonM3JogUp.ButtonChangeState += new LBSoft.IndustrialCtrls.Buttons.ButtonChangeState(this.lbButtonM3JogUp_ButtonChangeState);
             // 
+            // labelM3HomingDone
+            // 
+            this.labelM3HomingDone.AutoSize = true;
+            this.labelM3HomingDone.BackColor = System.Drawing.SystemColors.Control;
+            this.labelM3HomingDone.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM3HomingDone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM3HomingDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM3HomingDone.Location = new System.Drawing.Point(656, 584);
+            this.labelM3HomingDone.Name = "labelM3HomingDone";
+            this.labelM3HomingDone.Size = new System.Drawing.Size(117, 16);
+            this.labelM3HomingDone.TabIndex = 134;
+            this.labelM3HomingDone.Text = "homing not done";
+            // 
             // lbButtonM3JogDown
             // 
             this.lbButtonM3JogDown.BackColor = System.Drawing.Color.Transparent;
@@ -4726,7 +4450,7 @@
             this.lbButtonM3JogDown.Font = new System.Drawing.Font("Verdana", 39.75F, System.Drawing.FontStyle.Bold);
             this.lbButtonM3JogDown.ForeColor = System.Drawing.Color.White;
             this.lbButtonM3JogDown.Label = "jog down";
-            this.lbButtonM3JogDown.Location = new System.Drawing.Point(605, 215);
+            this.lbButtonM3JogDown.Location = new System.Drawing.Point(605, 235);
             this.lbButtonM3JogDown.Name = "lbButtonM3JogDown";
             this.lbButtonM3JogDown.Renderer = null;
             this.lbButtonM3JogDown.RepeatInterval = 100;
@@ -4746,14 +4470,14 @@
             0,
             0,
             0});
-            this.numericUpDownM3JogSpeed.Location = new System.Drawing.Point(778, 129);
+            this.numericUpDownM3JogSpeed.Location = new System.Drawing.Point(775, 140);
             this.numericUpDownM3JogSpeed.Minimum = new decimal(new int[] {
             10,
             0,
             0,
             0});
             this.numericUpDownM3JogSpeed.Name = "numericUpDownM3JogSpeed";
-            this.numericUpDownM3JogSpeed.Size = new System.Drawing.Size(93, 43);
+            this.numericUpDownM3JogSpeed.Size = new System.Drawing.Size(80, 43);
             this.numericUpDownM3JogSpeed.TabIndex = 98;
             this.numericUpDownM3JogSpeed.Value = new decimal(new int[] {
             10,
@@ -4762,17 +4486,42 @@
             0});
             this.numericUpDownM3JogSpeed.ValueChanged += new System.EventHandler(this.numericUpDownM3JogSpeed_ValueChanged);
             // 
+            // labelM3StartSpeed
+            // 
+            this.labelM3StartSpeed.AutoSize = true;
+            this.labelM3StartSpeed.BackColor = System.Drawing.SystemColors.Control;
+            this.labelM3StartSpeed.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM3StartSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM3StartSpeed.Location = new System.Drawing.Point(775, 350);
+            this.labelM3StartSpeed.Name = "labelM3StartSpeed";
+            this.labelM3StartSpeed.Size = new System.Drawing.Size(71, 16);
+            this.labelM3StartSpeed.TabIndex = 104;
+            this.labelM3StartSpeed.Text = "speed(%)";
+            // 
             // labelM3TeachAxisQuoteName
             // 
             this.labelM3TeachAxisQuoteName.AutoSize = true;
             this.labelM3TeachAxisQuoteName.BackColor = System.Drawing.SystemColors.Control;
             this.labelM3TeachAxisQuoteName.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM3TeachAxisQuoteName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM3TeachAxisQuoteName.Location = new System.Drawing.Point(778, 194);
+            this.labelM3TeachAxisQuoteName.Location = new System.Drawing.Point(775, 235);
             this.labelM3TeachAxisQuoteName.Name = "labelM3TeachAxisQuoteName";
             this.labelM3TeachAxisQuoteName.Size = new System.Drawing.Size(84, 16);
             this.labelM3TeachAxisQuoteName.TabIndex = 102;
             this.labelM3TeachAxisQuoteName.Text = "quote (mm)";
+            // 
+            // buttonM3ResetServo
+            // 
+            this.buttonM3ResetServo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3ResetServo.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3ResetServo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3ResetServo.Location = new System.Drawing.Point(605, 640);
+            this.buttonM3ResetServo.Name = "buttonM3ResetServo";
+            this.buttonM3ResetServo.Size = new System.Drawing.Size(130, 48);
+            this.buttonM3ResetServo.TabIndex = 149;
+            this.buttonM3ResetServo.Text = "reset servo alarm";
+            this.buttonM3ResetServo.UseVisualStyleBackColor = false;
+            this.buttonM3ResetServo.Click += new System.EventHandler(this.buttonM3ResetServo_Click);
             // 
             // labelM3TeachAxisQuoteValue
             // 
@@ -4780,15 +4529,336 @@
             this.labelM3TeachAxisQuoteValue.BackColor = System.Drawing.SystemColors.Control;
             this.labelM3TeachAxisQuoteValue.Font = new System.Drawing.Font("Verdana", 14.25F);
             this.labelM3TeachAxisQuoteValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM3TeachAxisQuoteValue.Location = new System.Drawing.Point(778, 224);
+            this.labelM3TeachAxisQuoteValue.Location = new System.Drawing.Point(775, 260);
             this.labelM3TeachAxisQuoteValue.Name = "labelM3TeachAxisQuoteValue";
             this.labelM3TeachAxisQuoteValue.Size = new System.Drawing.Size(58, 23);
             this.labelM3TeachAxisQuoteValue.TabIndex = 103;
             this.labelM3TeachAxisQuoteValue.Text = "9999";
             // 
+            // buttonM3StartQuote
+            // 
+            this.buttonM3StartQuote.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3StartQuote.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3StartQuote.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3StartQuote.Location = new System.Drawing.Point(605, 440);
+            this.buttonM3StartQuote.Name = "buttonM3StartQuote";
+            this.buttonM3StartQuote.Size = new System.Drawing.Size(250, 48);
+            this.buttonM3StartQuote.TabIndex = 80;
+            this.buttonM3StartQuote.Text = "start quote";
+            this.buttonM3StartQuote.UseVisualStyleBackColor = false;
+            this.buttonM3StartQuote.Click += new System.EventHandler(this.buttonM3StartQuote_Click);
+            // 
+            // buttonM3HomingDone
+            // 
+            this.buttonM3HomingDone.Enabled = false;
+            this.buttonM3HomingDone.FlatAppearance.BorderSize = 10;
+            this.buttonM3HomingDone.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3HomingDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3HomingDone.Location = new System.Drawing.Point(605, 579);
+            this.buttonM3HomingDone.Name = "buttonM3HomingDone";
+            this.buttonM3HomingDone.Size = new System.Drawing.Size(24, 24);
+            this.buttonM3HomingDone.TabIndex = 133;
+            this.buttonM3HomingDone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonM3HomingDone.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.buttonM3HomingDone.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDownM3ManualQuote
+            // 
+            this.numericUpDownM3ManualQuote.DecimalPlaces = 1;
+            this.numericUpDownM3ManualQuote.Font = new System.Drawing.Font("Verdana", 21.75F);
+            this.numericUpDownM3ManualQuote.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownM3ManualQuote.Location = new System.Drawing.Point(605, 375);
+            this.numericUpDownM3ManualQuote.Maximum = new decimal(new int[] {
+            400,
+            0,
+            0,
+            0});
+            this.numericUpDownM3ManualQuote.Minimum = new decimal(new int[] {
+            170,
+            0,
+            0,
+            -2147483648});
+            this.numericUpDownM3ManualQuote.Name = "numericUpDownM3ManualQuote";
+            this.numericUpDownM3ManualQuote.Size = new System.Drawing.Size(100, 43);
+            this.numericUpDownM3ManualQuote.TabIndex = 82;
+            this.numericUpDownM3ManualQuote.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownM3ManualQuote.ValueChanged += new System.EventHandler(this.numericUpDownM3ManualQuote_ValueChanged);
+            // 
+            // buttonM3RotationCCW
+            // 
+            this.buttonM3RotationCCW.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3RotationCCW.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3RotationCCW.ImageIndex = 1;
+            this.buttonM3RotationCCW.ImageList = this.imageListRotation;
+            this.buttonM3RotationCCW.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3RotationCCW.Location = new System.Drawing.Point(310, 608);
+            this.buttonM3RotationCCW.Name = "buttonM3RotationCCW";
+            this.buttonM3RotationCCW.Size = new System.Drawing.Size(70, 90);
+            this.buttonM3RotationCCW.TabIndex = 152;
+            this.buttonM3RotationCCW.Text = "CCW";
+            this.buttonM3RotationCCW.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.buttonM3RotationCCW.UseVisualStyleBackColor = false;
+            this.buttonM3RotationCCW.Click += new System.EventHandler(this.buttonM3RotationCCW_Click);
+            // 
+            // imageListRotation
+            // 
+            this.imageListRotation.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListRotation.ImageStream")));
+            this.imageListRotation.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListRotation.Images.SetKeyName(0, "clockwise.png");
+            this.imageListRotation.Images.SetKeyName(1, "counterclockwise.png");
+            // 
+            // numericUpDownM3ManualSpeed
+            // 
+            this.numericUpDownM3ManualSpeed.Font = new System.Drawing.Font("Verdana", 21.75F);
+            this.numericUpDownM3ManualSpeed.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDownM3ManualSpeed.Location = new System.Drawing.Point(775, 374);
+            this.numericUpDownM3ManualSpeed.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDownM3ManualSpeed.Name = "numericUpDownM3ManualSpeed";
+            this.numericUpDownM3ManualSpeed.Size = new System.Drawing.Size(80, 43);
+            this.numericUpDownM3ManualSpeed.TabIndex = 83;
+            this.numericUpDownM3ManualSpeed.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // buttonM3Home
+            // 
+            this.buttonM3Home.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3Home.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3Home.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3Home.Location = new System.Drawing.Point(605, 516);
+            this.buttonM3Home.Name = "buttonM3Home";
+            this.buttonM3Home.Size = new System.Drawing.Size(100, 48);
+            this.buttonM3Home.TabIndex = 8;
+            this.buttonM3Home.Text = "go home";
+            this.buttonM3Home.UseVisualStyleBackColor = false;
+            this.buttonM3Home.Click += new System.EventHandler(this.buttonM3Home_Click);
+            // 
+            // lbLed11
+            // 
+            this.lbLed11.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed11.BlinkInterval = 500;
+            this.lbLed11.Enabled = false;
+            this.lbLed11.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed11.Label = "servo ready";
+            this.lbLed11.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed11.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed11.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed11.Location = new System.Drawing.Point(755, 650);
+            this.lbLed11.Name = "lbLed11";
+            this.lbLed11.Renderer = null;
+            this.lbLed11.Size = new System.Drawing.Size(100, 24);
+            this.lbLed11.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed11.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed11.TabIndex = 288;
+            // 
+            // buttonM3ResetHome
+            // 
+            this.buttonM3ResetHome.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3ResetHome.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3ResetHome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3ResetHome.Location = new System.Drawing.Point(755, 516);
+            this.buttonM3ResetHome.Name = "buttonM3ResetHome";
+            this.buttonM3ResetHome.Size = new System.Drawing.Size(100, 48);
+            this.buttonM3ResetHome.TabIndex = 9;
+            this.buttonM3ResetHome.Text = "reset home";
+            this.buttonM3ResetHome.UseVisualStyleBackColor = false;
+            this.buttonM3ResetHome.Click += new System.EventHandler(this.buttonM3ResetHome_Click);
+            // 
+            // buttonM3RotationCW
+            // 
+            this.buttonM3RotationCW.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3RotationCW.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3RotationCW.ImageIndex = 0;
+            this.buttonM3RotationCW.ImageList = this.imageListRotation;
+            this.buttonM3RotationCW.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3RotationCW.Location = new System.Drawing.Point(220, 608);
+            this.buttonM3RotationCW.Name = "buttonM3RotationCW";
+            this.buttonM3RotationCW.Size = new System.Drawing.Size(70, 90);
+            this.buttonM3RotationCW.TabIndex = 151;
+            this.buttonM3RotationCW.Text = "CW";
+            this.buttonM3RotationCW.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.buttonM3RotationCW.UseVisualStyleBackColor = false;
+            this.buttonM3RotationCW.Click += new System.EventHandler(this.buttonM3RotationCW_Click);
+            // 
+            // buttonM3PrintCycle
+            // 
+            this.buttonM3PrintCycle.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3PrintCycle.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3PrintCycle.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3PrintCycle.Location = new System.Drawing.Point(10, 650);
+            this.buttonM3PrintCycle.Name = "buttonM3PrintCycle";
+            this.buttonM3PrintCycle.Size = new System.Drawing.Size(160, 48);
+            this.buttonM3PrintCycle.TabIndex = 150;
+            this.buttonM3PrintCycle.Text = "print cycle";
+            this.buttonM3PrintCycle.UseVisualStyleBackColor = false;
+            this.buttonM3PrintCycle.Click += new System.EventHandler(this.buttonM3PrintCycle_Click);
+            // 
+            // buttonM3ContrastOpening
+            // 
+            this.buttonM3ContrastOpening.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3ContrastOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3ContrastOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3ContrastOpening.Location = new System.Drawing.Point(10, 476);
+            this.buttonM3ContrastOpening.Name = "buttonM3ContrastOpening";
+            this.buttonM3ContrastOpening.Size = new System.Drawing.Size(160, 48);
+            this.buttonM3ContrastOpening.TabIndex = 147;
+            this.buttonM3ContrastOpening.Text = "contrast opening";
+            this.buttonM3ContrastOpening.UseVisualStyleBackColor = false;
+            this.buttonM3ContrastOpening.Click += new System.EventHandler(this.buttonM3ContrastOpening_Click);
+            // 
+            // buttonM3CenteringClampsOpening
+            // 
+            this.buttonM3CenteringClampsOpening.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3CenteringClampsOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3CenteringClampsOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3CenteringClampsOpening.Location = new System.Drawing.Point(430, 336);
+            this.buttonM3CenteringClampsOpening.Name = "buttonM3CenteringClampsOpening";
+            this.buttonM3CenteringClampsOpening.Size = new System.Drawing.Size(160, 48);
+            this.buttonM3CenteringClampsOpening.TabIndex = 145;
+            this.buttonM3CenteringClampsOpening.Text = "center clamp opening";
+            this.buttonM3CenteringClampsOpening.UseVisualStyleBackColor = false;
+            this.buttonM3CenteringClampsOpening.Click += new System.EventHandler(this.buttonM3CenteringClampsOpening_Click);
+            // 
+            // buttonM3ContrastClosing
+            // 
+            this.buttonM3ContrastClosing.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3ContrastClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3ContrastClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3ContrastClosing.Location = new System.Drawing.Point(10, 546);
+            this.buttonM3ContrastClosing.Name = "buttonM3ContrastClosing";
+            this.buttonM3ContrastClosing.Size = new System.Drawing.Size(160, 48);
+            this.buttonM3ContrastClosing.TabIndex = 148;
+            this.buttonM3ContrastClosing.Text = "constrast closing";
+            this.buttonM3ContrastClosing.UseVisualStyleBackColor = false;
+            this.buttonM3ContrastClosing.Click += new System.EventHandler(this.buttonM3ContrastClosing_Click);
+            // 
+            // buttonM3BigClampOpening
+            // 
+            this.buttonM3BigClampOpening.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3BigClampOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3BigClampOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3BigClampOpening.Location = new System.Drawing.Point(220, 336);
+            this.buttonM3BigClampOpening.Name = "buttonM3BigClampOpening";
+            this.buttonM3BigClampOpening.Size = new System.Drawing.Size(160, 48);
+            this.buttonM3BigClampOpening.TabIndex = 143;
+            this.buttonM3BigClampOpening.Text = "big clamp opening";
+            this.buttonM3BigClampOpening.UseVisualStyleBackColor = false;
+            this.buttonM3BigClampOpening.Click += new System.EventHandler(this.buttonM3BigClampOpening_Click);
+            // 
+            // buttonM3CenteringClampsClosing
+            // 
+            this.buttonM3CenteringClampsClosing.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3CenteringClampsClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3CenteringClampsClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3CenteringClampsClosing.Location = new System.Drawing.Point(430, 406);
+            this.buttonM3CenteringClampsClosing.Name = "buttonM3CenteringClampsClosing";
+            this.buttonM3CenteringClampsClosing.Size = new System.Drawing.Size(160, 48);
+            this.buttonM3CenteringClampsClosing.TabIndex = 146;
+            this.buttonM3CenteringClampsClosing.Text = "center clamp closing";
+            this.buttonM3CenteringClampsClosing.UseVisualStyleBackColor = false;
+            this.buttonM3CenteringClampsClosing.Click += new System.EventHandler(this.buttonM3CenteringClampsClosing_Click);
+            // 
+            // buttonM3SmallClampOpening
+            // 
+            this.buttonM3SmallClampOpening.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3SmallClampOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3SmallClampOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3SmallClampOpening.Location = new System.Drawing.Point(10, 336);
+            this.buttonM3SmallClampOpening.Name = "buttonM3SmallClampOpening";
+            this.buttonM3SmallClampOpening.Size = new System.Drawing.Size(160, 48);
+            this.buttonM3SmallClampOpening.TabIndex = 141;
+            this.buttonM3SmallClampOpening.Text = "small clamp opening";
+            this.buttonM3SmallClampOpening.UseVisualStyleBackColor = false;
+            this.buttonM3SmallClampOpening.Click += new System.EventHandler(this.buttonM3SmallClampOpening_Click);
+            // 
+            // buttonM3BigClampClosing
+            // 
+            this.buttonM3BigClampClosing.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3BigClampClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3BigClampClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3BigClampClosing.Location = new System.Drawing.Point(220, 406);
+            this.buttonM3BigClampClosing.Name = "buttonM3BigClampClosing";
+            this.buttonM3BigClampClosing.Size = new System.Drawing.Size(160, 48);
+            this.buttonM3BigClampClosing.TabIndex = 144;
+            this.buttonM3BigClampClosing.Text = "big clamp closing";
+            this.buttonM3BigClampClosing.UseVisualStyleBackColor = false;
+            this.buttonM3BigClampClosing.Click += new System.EventHandler(this.buttonM3BigClampClosing_Click);
+            // 
+            // buttonM3SmallClampClosing
+            // 
+            this.buttonM3SmallClampClosing.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3SmallClampClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3SmallClampClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3SmallClampClosing.Location = new System.Drawing.Point(10, 406);
+            this.buttonM3SmallClampClosing.Name = "buttonM3SmallClampClosing";
+            this.buttonM3SmallClampClosing.Size = new System.Drawing.Size(160, 48);
+            this.buttonM3SmallClampClosing.TabIndex = 142;
+            this.buttonM3SmallClampClosing.Text = "small clamp closing";
+            this.buttonM3SmallClampClosing.UseVisualStyleBackColor = false;
+            this.buttonM3SmallClampClosing.Click += new System.EventHandler(this.buttonM3SmallClampClosing_Click);
+            // 
+            // checkBoxM3ExitBelt
+            // 
+            this.checkBoxM3ExitBelt.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxM3ExitBelt.AutoSize = true;
+            this.checkBoxM3ExitBelt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBoxM3ExitBelt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxM3ExitBelt.FlatAppearance.BorderSize = 5;
+            this.checkBoxM3ExitBelt.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxM3ExitBelt.ImageIndex = 3;
+            this.checkBoxM3ExitBelt.ImageList = this.imageListBelt;
+            this.checkBoxM3ExitBelt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxM3ExitBelt.Location = new System.Drawing.Point(520, 608);
+            this.checkBoxM3ExitBelt.Name = "checkBoxM3ExitBelt";
+            this.checkBoxM3ExitBelt.Size = new System.Drawing.Size(70, 90);
+            this.checkBoxM3ExitBelt.TabIndex = 270;
+            this.checkBoxM3ExitBelt.Text = "exit";
+            this.checkBoxM3ExitBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBoxM3ExitBelt.UseVisualStyleBackColor = false;
+            this.checkBoxM3ExitBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM3ExitBelt_CheckStateChanged);
+            // 
+            // checkBoxM3WorkingBelt
+            // 
+            this.checkBoxM3WorkingBelt.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxM3WorkingBelt.AutoSize = true;
+            this.checkBoxM3WorkingBelt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBoxM3WorkingBelt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxM3WorkingBelt.FlatAppearance.BorderSize = 5;
+            this.checkBoxM3WorkingBelt.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxM3WorkingBelt.ImageIndex = 1;
+            this.checkBoxM3WorkingBelt.ImageList = this.imageListBelt;
+            this.checkBoxM3WorkingBelt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxM3WorkingBelt.Location = new System.Drawing.Point(430, 608);
+            this.checkBoxM3WorkingBelt.Name = "checkBoxM3WorkingBelt";
+            this.checkBoxM3WorkingBelt.Size = new System.Drawing.Size(70, 90);
+            this.checkBoxM3WorkingBelt.TabIndex = 269;
+            this.checkBoxM3WorkingBelt.Text = "working";
+            this.checkBoxM3WorkingBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBoxM3WorkingBelt.UseVisualStyleBackColor = false;
+            this.checkBoxM3WorkingBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM3WorkingBelt_CheckStateChanged);
+            // 
             // buttonM3TeachDeleteProgram
             // 
-            this.buttonM3TeachDeleteProgram.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonM3TeachDeleteProgram.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM3TeachDeleteProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM3TeachDeleteProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM3TeachDeleteProgram.Image")));
             this.buttonM3TeachDeleteProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -4805,16 +4875,16 @@
             // 
             // comboBoxM3TeachProgramList
             // 
-            this.comboBoxM3TeachProgramList.Font = new System.Drawing.Font("Verdana", 12F);
+            this.comboBoxM3TeachProgramList.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxM3TeachProgramList.FormattingEnabled = true;
             this.comboBoxM3TeachProgramList.Location = new System.Drawing.Point(10, 10);
             this.comboBoxM3TeachProgramList.Name = "comboBoxM3TeachProgramList";
-            this.comboBoxM3TeachProgramList.Size = new System.Drawing.Size(180, 26);
+            this.comboBoxM3TeachProgramList.Size = new System.Drawing.Size(220, 33);
             this.comboBoxM3TeachProgramList.TabIndex = 138;
             // 
             // buttonM3TeachNewProgram
             // 
-            this.buttonM3TeachNewProgram.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonM3TeachNewProgram.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM3TeachNewProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM3TeachNewProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM3TeachNewProgram.Image")));
             this.buttonM3TeachNewProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -4831,12 +4901,12 @@
             // 
             // buttonM3TeachSaveProgram
             // 
-            this.buttonM3TeachSaveProgram.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonM3TeachSaveProgram.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM3TeachSaveProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM3TeachSaveProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM3TeachSaveProgram.Image")));
             this.buttonM3TeachSaveProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonM3TeachSaveProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3TeachSaveProgram.Location = new System.Drawing.Point(380, 10);
+            this.buttonM3TeachSaveProgram.Location = new System.Drawing.Point(390, 10);
             this.buttonM3TeachSaveProgram.Name = "buttonM3TeachSaveProgram";
             this.buttonM3TeachSaveProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM3TeachSaveProgram.TabIndex = 136;
@@ -4848,12 +4918,12 @@
             // 
             // buttonM3TeachLoadProgram
             // 
-            this.buttonM3TeachLoadProgram.BackColor = System.Drawing.SystemColors.Control;
+            this.buttonM3TeachLoadProgram.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM3TeachLoadProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM3TeachLoadProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM3TeachLoadProgram.Image")));
             this.buttonM3TeachLoadProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonM3TeachLoadProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3TeachLoadProgram.Location = new System.Drawing.Point(220, 10);
+            this.buttonM3TeachLoadProgram.Location = new System.Drawing.Point(240, 10);
             this.buttonM3TeachLoadProgram.Name = "buttonM3TeachLoadProgram";
             this.buttonM3TeachLoadProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM3TeachLoadProgram.TabIndex = 135;
@@ -5975,7 +6045,7 @@
             tabPageFormatStyle8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle8.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT4_2.FormatStyle = tabPageFormatStyle8;
-            this.tabPageT4_2.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT4_2.Location = new System.Drawing.Point(0, 0);
             this.tabPageT4_2.Name = "tabPageT4_2";
             tabPageColorStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle15.BackFadeColor = System.Drawing.Color.Transparent;
@@ -5992,12 +6062,12 @@
             tabPageColorStyle16.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle16.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT4_2.SelectedStyle = tabPageColorStyle16;
-            this.tabPageT4_2.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT4_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT4_2.StyleFromParent = false;
             this.tabPageT4_2.TabIndex = 15;
             this.tabPageT4_2.Text = "test";
             this.tabPageT4_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_2.TextBounds")));
-            this.tabPageT4_2.TextSize = new System.Drawing.SizeF(36.72395F, 21.44531F);
+            this.tabPageT4_2.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT4_2.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT4_2
@@ -6056,46 +6126,49 @@
             // 
             // buttonM3StartTest
             // 
+            this.buttonM3StartTest.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM3StartTest.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3StartTest.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3StartTest.Location = new System.Drawing.Point(403, 100);
+            this.buttonM3StartTest.Location = new System.Drawing.Point(420, 115);
             this.buttonM3StartTest.Name = "buttonM3StartTest";
-            this.buttonM3StartTest.Size = new System.Drawing.Size(220, 64);
+            this.buttonM3StartTest.Size = new System.Drawing.Size(140, 64);
             this.buttonM3StartTest.TabIndex = 123;
             this.buttonM3StartTest.Text = "start test";
-            this.buttonM3StartTest.UseVisualStyleBackColor = true;
+            this.buttonM3StartTest.UseVisualStyleBackColor = false;
             this.buttonM3StartTest.Click += new System.EventHandler(this.buttonM3StartTest_Click);
             // 
             // buttonM3TestSaveProgram
             // 
+            this.buttonM3TestSaveProgram.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM3TestSaveProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM3TestSaveProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM3TestSaveProgram.Image")));
             this.buttonM3TestSaveProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonM3TestSaveProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3TestSaveProgram.Location = new System.Drawing.Point(373, 10);
+            this.buttonM3TestSaveProgram.Location = new System.Drawing.Point(420, 10);
             this.buttonM3TestSaveProgram.Name = "buttonM3TestSaveProgram";
-            this.buttonM3TestSaveProgram.Size = new System.Drawing.Size(161, 53);
+            this.buttonM3TestSaveProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM3TestSaveProgram.TabIndex = 122;
             this.buttonM3TestSaveProgram.Text = "save program";
             this.buttonM3TestSaveProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM3TestSaveProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM3TestSaveProgram.UseVisualStyleBackColor = true;
+            this.buttonM3TestSaveProgram.UseVisualStyleBackColor = false;
             this.buttonM3TestSaveProgram.Click += new System.EventHandler(this.buttonM3TestSaveProgram_Click);
             // 
             // buttonM3TestLoadProgram
             // 
+            this.buttonM3TestLoadProgram.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM3TestLoadProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM3TestLoadProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM3TestLoadProgram.Image")));
             this.buttonM3TestLoadProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonM3TestLoadProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3TestLoadProgram.Location = new System.Drawing.Point(203, 10);
+            this.buttonM3TestLoadProgram.Location = new System.Drawing.Point(250, 10);
             this.buttonM3TestLoadProgram.Name = "buttonM3TestLoadProgram";
-            this.buttonM3TestLoadProgram.Size = new System.Drawing.Size(160, 53);
+            this.buttonM3TestLoadProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM3TestLoadProgram.TabIndex = 121;
             this.buttonM3TestLoadProgram.Text = "load program";
             this.buttonM3TestLoadProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM3TestLoadProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM3TestLoadProgram.UseVisualStyleBackColor = true;
+            this.buttonM3TestLoadProgram.UseVisualStyleBackColor = false;
             this.buttonM3TestLoadProgram.Click += new System.EventHandler(this.buttonM3TestLoadProgram_Click);
             // 
             // dataGridViewM3TestPoints
@@ -6124,7 +6197,7 @@
             dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewM3TestPoints.DefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridViewM3TestPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridViewM3TestPoints.Location = new System.Drawing.Point(13, 100);
+            this.dataGridViewM3TestPoints.Location = new System.Drawing.Point(10, 115);
             this.dataGridViewM3TestPoints.Name = "dataGridViewM3TestPoints";
             dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
@@ -6181,12 +6254,13 @@
             // 
             // comboBoxM3TestProgramList
             // 
-            this.comboBoxM3TestProgramList.Font = new System.Drawing.Font("Verdana", 12F);
+            this.comboBoxM3TestProgramList.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxM3TestProgramList.FormattingEnabled = true;
             this.comboBoxM3TestProgramList.Location = new System.Drawing.Point(10, 10);
             this.comboBoxM3TestProgramList.Name = "comboBoxM3TestProgramList";
-            this.comboBoxM3TestProgramList.Size = new System.Drawing.Size(180, 26);
+            this.comboBoxM3TestProgramList.Size = new System.Drawing.Size(220, 33);
             this.comboBoxM3TestProgramList.TabIndex = 119;
+            this.comboBoxM3TestProgramList.Text = "PRTEST-420-DX00";
             // 
             // tabPageT4_3
             // 
@@ -6241,7 +6315,7 @@
             tabPageFormatStyle9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle9.Padding = new System.Windows.Forms.Padding(17, 5, 17, 5);
             this.tabPageT4_3.FormatStyle = tabPageFormatStyle9;
-            this.tabPageT4_3.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT4_3.Location = new System.Drawing.Point(0, 0);
             this.tabPageT4_3.Name = "tabPageT4_3";
             tabPageColorStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle17.BackFadeColor = System.Drawing.Color.Transparent;
@@ -6258,12 +6332,12 @@
             tabPageColorStyle18.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle18.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT4_3.SelectedStyle = tabPageColorStyle18;
-            this.tabPageT4_3.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT4_3.Size = new System.Drawing.Size(0, 0);
             this.tabPageT4_3.StyleFromParent = false;
             this.tabPageT4_3.TabIndex = 16;
             this.tabPageT4_3.Text = "input";
             this.tabPageT4_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_3.TextBounds")));
-            this.tabPageT4_3.TextSize = new System.Drawing.SizeF(47.47395F, 21.44531F);
+            this.tabPageT4_3.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT4_3.UseParentTabStripPlacement = false;
             // 
             // lbLed1
@@ -7183,7 +7257,7 @@
             tabPageFormatStyle10.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle10.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.tabPageT4_4.FormatStyle = tabPageFormatStyle10;
-            this.tabPageT4_4.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT4_4.Location = new System.Drawing.Point(0, 0);
             this.tabPageT4_4.Name = "tabPageT4_4";
             tabPageColorStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle19.BackFadeColor = System.Drawing.Color.Transparent;
@@ -7200,12 +7274,12 @@
             tabPageColorStyle20.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle20.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT4_4.SelectedStyle = tabPageColorStyle20;
-            this.tabPageT4_4.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT4_4.Size = new System.Drawing.Size(0, 0);
             this.tabPageT4_4.StyleFromParent = false;
             this.tabPageT4_4.TabIndex = 17;
             this.tabPageT4_4.Text = "output";
             this.tabPageT4_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_4.TextBounds")));
-            this.tabPageT4_4.TextSize = new System.Drawing.SizeF(59.4427F, 21.44531F);
+            this.tabPageT4_4.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT4_4.UseParentTabStripPlacement = false;
             // 
             // tabPageT5_1
@@ -7262,24 +7336,17 @@
             this.tabPageT5_1.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT5_1.UseParentTabStripPlacement = false;
             // 
-            // checkBoxM6Aspiration
+            // buttonM6LFLampsON
             // 
-            this.checkBoxM6Aspiration.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBoxM6Aspiration.AutoSize = true;
-            this.checkBoxM6Aspiration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkBoxM6Aspiration.FlatAppearance.BorderSize = 5;
-            this.checkBoxM6Aspiration.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxM6Aspiration.ImageIndex = 3;
-            this.checkBoxM6Aspiration.ImageList = this.imageListBelt;
-            this.checkBoxM6Aspiration.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM6Aspiration.Location = new System.Drawing.Point(618, 479);
-            this.checkBoxM6Aspiration.Name = "checkBoxM6Aspiration";
-            this.checkBoxM6Aspiration.Size = new System.Drawing.Size(70, 90);
-            this.checkBoxM6Aspiration.TabIndex = 298;
-            this.checkBoxM6Aspiration.Text = "exit 2";
-            this.checkBoxM6Aspiration.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBoxM6Aspiration.UseVisualStyleBackColor = true;
-            this.checkBoxM6Aspiration.CheckStateChanged += new System.EventHandler(this.checkBoxM6Aspiration_CheckStateChanged);
+            this.buttonM6LFLampsON.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM6LFLampsON.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM6LFLampsON.Location = new System.Drawing.Point(10, 500);
+            this.buttonM6LFLampsON.Name = "buttonM6LFLampsON";
+            this.buttonM6LFLampsON.Size = new System.Drawing.Size(120, 48);
+            this.buttonM6LFLampsON.TabIndex = 143;
+            this.buttonM6LFLampsON.Text = "LF lamps on";
+            this.buttonM6LFLampsON.UseVisualStyleBackColor = true;
+            this.buttonM6LFLampsON.Click += new System.EventHandler(this.buttonM6LFLampsON_Click);
             // 
             // buttonM6RGLampsON
             // 
@@ -7293,30 +7360,6 @@
             this.buttonM6RGLampsON.Text = "RG lamps on";
             this.buttonM6RGLampsON.UseVisualStyleBackColor = true;
             this.buttonM6RGLampsON.Click += new System.EventHandler(this.buttonM6RGLampsON_Click);
-            // 
-            // buttonM6RGLampsOFF
-            // 
-            this.buttonM6RGLampsOFF.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM6RGLampsOFF.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM6RGLampsOFF.Location = new System.Drawing.Point(430, 500);
-            this.buttonM6RGLampsOFF.Name = "buttonM6RGLampsOFF";
-            this.buttonM6RGLampsOFF.Size = new System.Drawing.Size(120, 48);
-            this.buttonM6RGLampsOFF.TabIndex = 144;
-            this.buttonM6RGLampsOFF.Text = "RG lamps off";
-            this.buttonM6RGLampsOFF.UseVisualStyleBackColor = true;
-            this.buttonM6RGLampsOFF.Click += new System.EventHandler(this.buttonM6RGLampsOFF_Click);
-            // 
-            // buttonM6LFLampsON
-            // 
-            this.buttonM6LFLampsON.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM6LFLampsON.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM6LFLampsON.Location = new System.Drawing.Point(10, 500);
-            this.buttonM6LFLampsON.Name = "buttonM6LFLampsON";
-            this.buttonM6LFLampsON.Size = new System.Drawing.Size(120, 48);
-            this.buttonM6LFLampsON.TabIndex = 143;
-            this.buttonM6LFLampsON.Text = "LF lamps on";
-            this.buttonM6LFLampsON.UseVisualStyleBackColor = true;
-            this.buttonM6LFLampsON.Click += new System.EventHandler(this.buttonM6LFLampsON_Click);
             // 
             // buttonM6LFLampsOFF
             // 
@@ -7342,6 +7385,30 @@
             this.buttonM5V1ExtFwd.UseVisualStyleBackColor = true;
             this.buttonM5V1ExtFwd.Click += new System.EventHandler(this.buttonM5V1ExtFwd_Click);
             // 
+            // buttonM6RGLampsOFF
+            // 
+            this.buttonM6RGLampsOFF.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM6RGLampsOFF.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM6RGLampsOFF.Location = new System.Drawing.Point(430, 500);
+            this.buttonM6RGLampsOFF.Name = "buttonM6RGLampsOFF";
+            this.buttonM6RGLampsOFF.Size = new System.Drawing.Size(120, 48);
+            this.buttonM6RGLampsOFF.TabIndex = 144;
+            this.buttonM6RGLampsOFF.Text = "RG lamps off";
+            this.buttonM6RGLampsOFF.UseVisualStyleBackColor = true;
+            this.buttonM6RGLampsOFF.Click += new System.EventHandler(this.buttonM6RGLampsOFF_Click);
+            // 
+            // buttonM5CWRotation
+            // 
+            this.buttonM5CWRotation.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonM5CWRotation.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM5CWRotation.Location = new System.Drawing.Point(10, 100);
+            this.buttonM5CWRotation.Name = "buttonM5CWRotation";
+            this.buttonM5CWRotation.Size = new System.Drawing.Size(120, 48);
+            this.buttonM5CWRotation.TabIndex = 147;
+            this.buttonM5CWRotation.Text = "CW rotation";
+            this.buttonM5CWRotation.UseVisualStyleBackColor = true;
+            this.buttonM5CWRotation.Click += new System.EventHandler(this.buttonM5CWRotation_Click);
+            // 
             // buttonM5V1ExtBwd
             // 
             this.buttonM5V1ExtBwd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -7353,6 +7420,18 @@
             this.buttonM5V1ExtBwd.Text = "1 vertical down";
             this.buttonM5V1ExtBwd.UseVisualStyleBackColor = true;
             this.buttonM5V1ExtBwd.Click += new System.EventHandler(this.buttonM5V1ExtBwd_Click);
+            // 
+            // buttonM5ClampBwd
+            // 
+            this.buttonM5ClampBwd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonM5ClampBwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM5ClampBwd.Location = new System.Drawing.Point(430, 10);
+            this.buttonM5ClampBwd.Name = "buttonM5ClampBwd";
+            this.buttonM5ClampBwd.Size = new System.Drawing.Size(120, 48);
+            this.buttonM5ClampBwd.TabIndex = 144;
+            this.buttonM5ClampBwd.Text = "clamp backward";
+            this.buttonM5ClampBwd.UseVisualStyleBackColor = true;
+            this.buttonM5ClampBwd.Click += new System.EventHandler(this.buttonM5ClampBwd_Click);
             // 
             // buttonM5V2ExtFwd
             // 
@@ -7378,18 +7457,6 @@
             this.buttonM5V2ExtBwd.UseVisualStyleBackColor = true;
             this.buttonM5V2ExtBwd.Click += new System.EventHandler(this.buttonM5V2ExtBwd_Click);
             // 
-            // buttonM5CWRotation
-            // 
-            this.buttonM5CWRotation.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonM5CWRotation.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5CWRotation.Location = new System.Drawing.Point(10, 100);
-            this.buttonM5CWRotation.Name = "buttonM5CWRotation";
-            this.buttonM5CWRotation.Size = new System.Drawing.Size(120, 48);
-            this.buttonM5CWRotation.TabIndex = 147;
-            this.buttonM5CWRotation.Text = "CW rotation";
-            this.buttonM5CWRotation.UseVisualStyleBackColor = true;
-            this.buttonM5CWRotation.Click += new System.EventHandler(this.buttonM5CWRotation_Click);
-            // 
             // buttonM5CCWRotation
             // 
             this.buttonM5CCWRotation.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -7401,30 +7468,6 @@
             this.buttonM5CCWRotation.Text = "CCW rotation";
             this.buttonM5CCWRotation.UseVisualStyleBackColor = true;
             this.buttonM5CCWRotation.Click += new System.EventHandler(this.buttonM5CCWRotation_Click);
-            // 
-            // buttonM5NoRotation
-            // 
-            this.buttonM5NoRotation.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonM5NoRotation.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5NoRotation.Location = new System.Drawing.Point(290, 100);
-            this.buttonM5NoRotation.Name = "buttonM5NoRotation";
-            this.buttonM5NoRotation.Size = new System.Drawing.Size(120, 48);
-            this.buttonM5NoRotation.TabIndex = 149;
-            this.buttonM5NoRotation.Text = "no rotation";
-            this.buttonM5NoRotation.UseVisualStyleBackColor = true;
-            this.buttonM5NoRotation.Click += new System.EventHandler(this.buttonM5NoRotation_Click);
-            // 
-            // buttonM5ClampBwd
-            // 
-            this.buttonM5ClampBwd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonM5ClampBwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5ClampBwd.Location = new System.Drawing.Point(430, 10);
-            this.buttonM5ClampBwd.Name = "buttonM5ClampBwd";
-            this.buttonM5ClampBwd.Size = new System.Drawing.Size(120, 48);
-            this.buttonM5ClampBwd.TabIndex = 144;
-            this.buttonM5ClampBwd.Text = "clamp backward";
-            this.buttonM5ClampBwd.UseVisualStyleBackColor = true;
-            this.buttonM5ClampBwd.Click += new System.EventHandler(this.buttonM5ClampBwd_Click);
             // 
             // buttonM5ClampFwd
             // 
@@ -7438,6 +7481,29 @@
             this.buttonM5ClampFwd.UseVisualStyleBackColor = true;
             this.buttonM5ClampFwd.Click += new System.EventHandler(this.buttonM5ClampFwd_Click);
             // 
+            // buttonM5NoRotation
+            // 
+            this.buttonM5NoRotation.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonM5NoRotation.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM5NoRotation.Location = new System.Drawing.Point(290, 100);
+            this.buttonM5NoRotation.Name = "buttonM5NoRotation";
+            this.buttonM5NoRotation.Size = new System.Drawing.Size(120, 48);
+            this.buttonM5NoRotation.TabIndex = 149;
+            this.buttonM5NoRotation.Text = "no rotation";
+            this.buttonM5NoRotation.UseVisualStyleBackColor = true;
+            this.buttonM5NoRotation.Click += new System.EventHandler(this.buttonM5NoRotation_Click);
+            // 
+            // buttonM5TranslatorBwd
+            // 
+            this.buttonM5TranslatorBwd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonM5TranslatorBwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM5TranslatorBwd.Location = new System.Drawing.Point(150, 10);
+            this.buttonM5TranslatorBwd.Name = "buttonM5TranslatorBwd";
+            this.buttonM5TranslatorBwd.Size = new System.Drawing.Size(120, 48);
+            this.buttonM5TranslatorBwd.TabIndex = 142;
+            this.buttonM5TranslatorBwd.Text = "translator backward";
+            this.buttonM5TranslatorBwd.UseVisualStyleBackColor = true;
+            // 
             // buttonM5ClampOpening
             // 
             this.buttonM5ClampOpening.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -7449,6 +7515,17 @@
             this.buttonM5ClampOpening.Text = "clamp opening";
             this.buttonM5ClampOpening.UseVisualStyleBackColor = true;
             this.buttonM5ClampOpening.Click += new System.EventHandler(this.buttonM5ClampOpening_Click);
+            // 
+            // buttonM5TranslatorFwd
+            // 
+            this.buttonM5TranslatorFwd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonM5TranslatorFwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM5TranslatorFwd.Location = new System.Drawing.Point(10, 10);
+            this.buttonM5TranslatorFwd.Name = "buttonM5TranslatorFwd";
+            this.buttonM5TranslatorFwd.Size = new System.Drawing.Size(120, 48);
+            this.buttonM5TranslatorFwd.TabIndex = 141;
+            this.buttonM5TranslatorFwd.Text = "translator forward";
+            this.buttonM5TranslatorFwd.UseVisualStyleBackColor = true;
             // 
             // buttonM5ClampClosing
             // 
@@ -7462,27 +7539,24 @@
             this.buttonM5ClampClosing.UseVisualStyleBackColor = true;
             this.buttonM5ClampClosing.Click += new System.EventHandler(this.buttonM5ClampClosing_Click);
             // 
-            // buttonM5TranslatorFwd
+            // checkBoxM6Aspiration
             // 
-            this.buttonM5TranslatorFwd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonM5TranslatorFwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5TranslatorFwd.Location = new System.Drawing.Point(10, 10);
-            this.buttonM5TranslatorFwd.Name = "buttonM5TranslatorFwd";
-            this.buttonM5TranslatorFwd.Size = new System.Drawing.Size(120, 48);
-            this.buttonM5TranslatorFwd.TabIndex = 141;
-            this.buttonM5TranslatorFwd.Text = "translator forward";
-            this.buttonM5TranslatorFwd.UseVisualStyleBackColor = true;
-            // 
-            // buttonM5TranslatorBwd
-            // 
-            this.buttonM5TranslatorBwd.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonM5TranslatorBwd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5TranslatorBwd.Location = new System.Drawing.Point(150, 10);
-            this.buttonM5TranslatorBwd.Name = "buttonM5TranslatorBwd";
-            this.buttonM5TranslatorBwd.Size = new System.Drawing.Size(120, 48);
-            this.buttonM5TranslatorBwd.TabIndex = 142;
-            this.buttonM5TranslatorBwd.Text = "translator backward";
-            this.buttonM5TranslatorBwd.UseVisualStyleBackColor = true;
+            this.checkBoxM6Aspiration.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxM6Aspiration.AutoSize = true;
+            this.checkBoxM6Aspiration.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkBoxM6Aspiration.FlatAppearance.BorderSize = 5;
+            this.checkBoxM6Aspiration.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxM6Aspiration.ImageIndex = 3;
+            this.checkBoxM6Aspiration.ImageList = this.imageListBelt;
+            this.checkBoxM6Aspiration.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxM6Aspiration.Location = new System.Drawing.Point(618, 479);
+            this.checkBoxM6Aspiration.Name = "checkBoxM6Aspiration";
+            this.checkBoxM6Aspiration.Size = new System.Drawing.Size(81, 90);
+            this.checkBoxM6Aspiration.TabIndex = 298;
+            this.checkBoxM6Aspiration.Text = "aspiration";
+            this.checkBoxM6Aspiration.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBoxM6Aspiration.UseVisualStyleBackColor = true;
+            this.checkBoxM6Aspiration.CheckStateChanged += new System.EventHandler(this.checkBoxM6Aspiration_CheckStateChanged);
             // 
             // checkBoxM5ExitBelt2
             // 
@@ -9097,7 +9171,7 @@
             this.toolStripStatusLabelSN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.toolStripStatusLabelSN.Name = "toolStripStatusLabelSN";
             this.toolStripStatusLabelSN.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.toolStripStatusLabelSN.Size = new System.Drawing.Size(51, 26);
+            this.toolStripStatusLabelSN.Size = new System.Drawing.Size(51, 16);
             this.toolStripStatusLabelSN.Text = "S/N";
             // 
             // toolStripStatusLabelDateTime
@@ -9115,7 +9189,7 @@
             // 
             this.toolStripStatusLabelSystem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.toolStripStatusLabelSystem.Name = "toolStripStatusLabelSystem";
-            this.toolStripStatusLabelSystem.Size = new System.Drawing.Size(99, 26);
+            this.toolStripStatusLabelSystem.Size = new System.Drawing.Size(99, 16);
             this.toolStripStatusLabelSystem.Text = "system offline";
             // 
             // checkBoxPause
@@ -12292,7 +12366,7 @@
             tabPageFormatStyle28.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle28.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT1_1.FormatStyle = tabPageFormatStyle28;
-            this.tabPageT1_1.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT1_1.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1_1.Name = "tabPageT1_1";
             tabPageColorStyle53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle53.BackFadeColor = System.Drawing.Color.Transparent;
@@ -12309,12 +12383,12 @@
             tabPageColorStyle63.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle63.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_1.SelectedStyle = tabPageColorStyle63;
-            this.tabPageT1_1.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT1_1.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1_1.StyleFromParent = false;
             this.tabPageT1_1.TabIndex = 5;
             this.tabPageT1_1.Text = "teach";
             this.tabPageT1_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_1.TextBounds")));
-            this.tabPageT1_1.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT1_1.TextSize = new System.Drawing.SizeF(50.55989F, 21.44531F);
             this.tabPageT1_1.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT1_1
@@ -12381,6 +12455,7 @@
             // labelM1TeachBootDelay
             // 
             this.labelM1TeachBootDelay.AutoSize = true;
+            this.labelM1TeachBootDelay.BackColor = System.Drawing.SystemColors.Control;
             this.labelM1TeachBootDelay.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM1TeachBootDelay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM1TeachBootDelay.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -12393,9 +12468,10 @@
             // labelM1JogSpeed
             // 
             this.labelM1JogSpeed.AutoSize = true;
+            this.labelM1JogSpeed.BackColor = System.Drawing.SystemColors.Control;
             this.labelM1JogSpeed.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM1JogSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1JogSpeed.Location = new System.Drawing.Point(760, 115);
+            this.labelM1JogSpeed.Location = new System.Drawing.Point(775, 115);
             this.labelM1JogSpeed.Name = "labelM1JogSpeed";
             this.labelM1JogSpeed.Size = new System.Drawing.Size(71, 16);
             this.labelM1JogSpeed.TabIndex = 103;
@@ -12404,6 +12480,7 @@
             // labelM1StartQuote
             // 
             this.labelM1StartQuote.AutoSize = true;
+            this.labelM1StartQuote.BackColor = System.Drawing.SystemColors.Control;
             this.labelM1StartQuote.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM1StartQuote.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM1StartQuote.Location = new System.Drawing.Point(605, 318);
@@ -12442,7 +12519,7 @@
             this.lbButtonM1JogDown.Font = new System.Drawing.Font("Verdana", 39.75F, System.Drawing.FontStyle.Bold);
             this.lbButtonM1JogDown.ForeColor = System.Drawing.Color.White;
             this.lbButtonM1JogDown.Label = "down";
-            this.lbButtonM1JogDown.Location = new System.Drawing.Point(605, 240);
+            this.lbButtonM1JogDown.Location = new System.Drawing.Point(605, 235);
             this.lbButtonM1JogDown.Name = "lbButtonM1JogDown";
             this.lbButtonM1JogDown.Renderer = null;
             this.lbButtonM1JogDown.RepeatInterval = 100;
@@ -12474,7 +12551,7 @@
             0,
             0,
             0});
-            this.numericUpDownM1JogSpeed.Location = new System.Drawing.Point(760, 135);
+            this.numericUpDownM1JogSpeed.Location = new System.Drawing.Point(775, 135);
             this.numericUpDownM1JogSpeed.Minimum = new decimal(new int[] {
             10,
             0,
@@ -12493,9 +12570,10 @@
             // labelM1StartSpeed
             // 
             this.labelM1StartSpeed.AutoSize = true;
+            this.labelM1StartSpeed.BackColor = System.Drawing.SystemColors.Control;
             this.labelM1StartSpeed.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM1StartSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1StartSpeed.Location = new System.Drawing.Point(759, 318);
+            this.labelM1StartSpeed.Location = new System.Drawing.Point(775, 318);
             this.labelM1StartSpeed.Name = "labelM1StartSpeed";
             this.labelM1StartSpeed.Size = new System.Drawing.Size(71, 16);
             this.labelM1StartSpeed.TabIndex = 104;
@@ -12504,9 +12582,10 @@
             // labelM1TeachAxisQuoteName
             // 
             this.labelM1TeachAxisQuoteName.AutoSize = true;
+            this.labelM1TeachAxisQuoteName.BackColor = System.Drawing.SystemColors.Control;
             this.labelM1TeachAxisQuoteName.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM1TeachAxisQuoteName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1TeachAxisQuoteName.Location = new System.Drawing.Point(760, 200);
+            this.labelM1TeachAxisQuoteName.Location = new System.Drawing.Point(775, 235);
             this.labelM1TeachAxisQuoteName.Name = "labelM1TeachAxisQuoteName";
             this.labelM1TeachAxisQuoteName.Size = new System.Drawing.Size(84, 16);
             this.labelM1TeachAxisQuoteName.TabIndex = 102;
@@ -12529,9 +12608,10 @@
             // labelM1TeachAxisQuoteValue
             // 
             this.labelM1TeachAxisQuoteValue.AutoSize = true;
+            this.labelM1TeachAxisQuoteValue.BackColor = System.Drawing.SystemColors.Control;
             this.labelM1TeachAxisQuoteValue.Font = new System.Drawing.Font("Verdana", 14.25F);
             this.labelM1TeachAxisQuoteValue.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1TeachAxisQuoteValue.Location = new System.Drawing.Point(760, 230);
+            this.labelM1TeachAxisQuoteValue.Location = new System.Drawing.Point(775, 260);
             this.labelM1TeachAxisQuoteValue.Name = "labelM1TeachAxisQuoteValue";
             this.labelM1TeachAxisQuoteValue.Size = new System.Drawing.Size(58, 23);
             this.labelM1TeachAxisQuoteValue.TabIndex = 103;
@@ -12539,14 +12619,15 @@
             // 
             // buttonM1StartQuote
             // 
+            this.buttonM1StartQuote.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1StartQuote.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1StartQuote.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.buttonM1StartQuote.Location = new System.Drawing.Point(605, 400);
             this.buttonM1StartQuote.Name = "buttonM1StartQuote";
-            this.buttonM1StartQuote.Size = new System.Drawing.Size(234, 48);
+            this.buttonM1StartQuote.Size = new System.Drawing.Size(254, 48);
             this.buttonM1StartQuote.TabIndex = 80;
             this.buttonM1StartQuote.Text = "start quote";
-            this.buttonM1StartQuote.UseVisualStyleBackColor = true;
+            this.buttonM1StartQuote.UseVisualStyleBackColor = false;
             this.buttonM1StartQuote.Click += new System.EventHandler(this.buttonM1StartQuote_Click);
             // 
             // numericUpDownM1ManualQuote
@@ -12559,8 +12640,13 @@
             0,
             65536});
             this.numericUpDownM1ManualQuote.Location = new System.Drawing.Point(605, 335);
+            this.numericUpDownM1ManualQuote.Maximum = new decimal(new int[] {
+            355,
+            0,
+            0,
+            0});
             this.numericUpDownM1ManualQuote.Minimum = new decimal(new int[] {
-            300,
+            50,
             0,
             0,
             -2147483648});
@@ -12581,14 +12667,14 @@
             this.lbLed13.Enabled = false;
             this.lbLed13.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed13.Label = "X9 - servo ready";
+            this.lbLed13.Label = "servo ready";
             this.lbLed13.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed13.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed13.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed13.Location = new System.Drawing.Point(720, 650);
+            this.lbLed13.Location = new System.Drawing.Point(749, 650);
             this.lbLed13.Name = "lbLed13";
             this.lbLed13.Renderer = null;
-            this.lbLed13.Size = new System.Drawing.Size(130, 24);
+            this.lbLed13.Size = new System.Drawing.Size(110, 24);
             this.lbLed13.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
             this.lbLed13.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
             this.lbLed13.TabIndex = 288;
@@ -12601,7 +12687,7 @@
             0,
             0,
             0});
-            this.numericUpDownM1ManualSpeed.Location = new System.Drawing.Point(759, 335);
+            this.numericUpDownM1ManualSpeed.Location = new System.Drawing.Point(775, 335);
             this.numericUpDownM1ManualSpeed.Minimum = new decimal(new int[] {
             10,
             0,
@@ -12619,18 +12705,20 @@
             // 
             // buttonM1ResetServo
             // 
+            this.buttonM1ResetServo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1ResetServo.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1ResetServo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.buttonM1ResetServo.Location = new System.Drawing.Point(605, 640);
             this.buttonM1ResetServo.Name = "buttonM1ResetServo";
-            this.buttonM1ResetServo.Size = new System.Drawing.Size(100, 48);
+            this.buttonM1ResetServo.Size = new System.Drawing.Size(130, 48);
             this.buttonM1ResetServo.TabIndex = 149;
             this.buttonM1ResetServo.Text = "reset servo alarm";
-            this.buttonM1ResetServo.UseVisualStyleBackColor = true;
+            this.buttonM1ResetServo.UseVisualStyleBackColor = false;
             this.buttonM1ResetServo.Click += new System.EventHandler(this.buttonM1ResetServo_Click);
             // 
             // buttonM1Home
             // 
+            this.buttonM1Home.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1Home.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1Home.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.buttonM1Home.Location = new System.Drawing.Point(605, 500);
@@ -12638,23 +12726,25 @@
             this.buttonM1Home.Size = new System.Drawing.Size(100, 48);
             this.buttonM1Home.TabIndex = 8;
             this.buttonM1Home.Text = "go home";
-            this.buttonM1Home.UseVisualStyleBackColor = true;
+            this.buttonM1Home.UseVisualStyleBackColor = false;
             this.buttonM1Home.Click += new System.EventHandler(this.buttonM1Home_Click);
             // 
             // buttonM1ResetHome
             // 
+            this.buttonM1ResetHome.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1ResetHome.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1ResetHome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1ResetHome.Location = new System.Drawing.Point(739, 500);
+            this.buttonM1ResetHome.Location = new System.Drawing.Point(759, 500);
             this.buttonM1ResetHome.Name = "buttonM1ResetHome";
             this.buttonM1ResetHome.Size = new System.Drawing.Size(100, 48);
             this.buttonM1ResetHome.TabIndex = 9;
             this.buttonM1ResetHome.Text = "reset home";
-            this.buttonM1ResetHome.UseVisualStyleBackColor = true;
+            this.buttonM1ResetHome.UseVisualStyleBackColor = false;
             this.buttonM1ResetHome.Click += new System.EventHandler(this.buttonM1ResetHome_Click);
             // 
             // buttonM1PosV2Down
             // 
+            this.buttonM1PosV2Down.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1PosV2Down.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1PosV2Down.ImageIndex = 1;
             this.buttonM1PosV2Down.ImageList = this.imageListVAxes;
@@ -12666,7 +12756,8 @@
             this.buttonM1PosV2Down.Text = "V2";
             this.buttonM1PosV2Down.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM1PosV2Down.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM1PosV2Down.UseVisualStyleBackColor = true;
+            this.buttonM1PosV2Down.UseVisualStyleBackColor = false;
+            this.buttonM1PosV2Down.Visible = false;
             this.buttonM1PosV2Down.Click += new System.EventHandler(this.buttonM1PosV2Down_Click);
             // 
             // imageListVAxes
@@ -12678,6 +12769,7 @@
             // 
             // buttonM1PosV2Up
             // 
+            this.buttonM1PosV2Up.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1PosV2Up.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1PosV2Up.ImageIndex = 0;
             this.buttonM1PosV2Up.ImageList = this.imageListVAxes;
@@ -12689,13 +12781,15 @@
             this.buttonM1PosV2Up.Text = "V2";
             this.buttonM1PosV2Up.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM1PosV2Up.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM1PosV2Up.UseVisualStyleBackColor = true;
+            this.buttonM1PosV2Up.UseVisualStyleBackColor = false;
+            this.buttonM1PosV2Up.Visible = false;
             this.buttonM1PosV2Up.Click += new System.EventHandler(this.buttonM1PosV2Up_Click);
             // 
             // checkBoxM1CuttingSuction
             // 
             this.checkBoxM1CuttingSuction.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBoxM1CuttingSuction.AutoSize = true;
+            this.checkBoxM1CuttingSuction.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.checkBoxM1CuttingSuction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkBoxM1CuttingSuction.FlatAppearance.BorderSize = 5;
             this.checkBoxM1CuttingSuction.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -12709,7 +12803,7 @@
             this.checkBoxM1CuttingSuction.Text = "suction";
             this.checkBoxM1CuttingSuction.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxM1CuttingSuction.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBoxM1CuttingSuction.UseVisualStyleBackColor = true;
+            this.checkBoxM1CuttingSuction.UseVisualStyleBackColor = false;
             this.checkBoxM1CuttingSuction.CheckStateChanged += new System.EventHandler(this.checkBoxM1CuttingSuction_CheckStateChanged);
             // 
             // imageListCut
@@ -12728,6 +12822,7 @@
             // 
             // buttonM1PosV1Down
             // 
+            this.buttonM1PosV1Down.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1PosV1Down.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1PosV1Down.ImageIndex = 1;
             this.buttonM1PosV1Down.ImageList = this.imageListVAxes;
@@ -12739,11 +12834,13 @@
             this.buttonM1PosV1Down.Text = "V1";
             this.buttonM1PosV1Down.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM1PosV1Down.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM1PosV1Down.UseVisualStyleBackColor = true;
+            this.buttonM1PosV1Down.UseVisualStyleBackColor = false;
+            this.buttonM1PosV1Down.Visible = false;
             this.buttonM1PosV1Down.Click += new System.EventHandler(this.buttonM1PosV1Down_Click);
             // 
             // buttonM1BlockOpening
             // 
+            this.buttonM1BlockOpening.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1BlockOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1BlockOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.buttonM1BlockOpening.Location = new System.Drawing.Point(430, 372);
@@ -12751,11 +12848,12 @@
             this.buttonM1BlockOpening.Size = new System.Drawing.Size(160, 48);
             this.buttonM1BlockOpening.TabIndex = 143;
             this.buttonM1BlockOpening.Text = "block clamp opening";
-            this.buttonM1BlockOpening.UseVisualStyleBackColor = true;
+            this.buttonM1BlockOpening.UseVisualStyleBackColor = false;
             this.buttonM1BlockOpening.Click += new System.EventHandler(this.buttonM1BlockOpening_Click);
             // 
             // buttonM1PosV1Up
             // 
+            this.buttonM1PosV1Up.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1PosV1Up.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1PosV1Up.ImageIndex = 0;
             this.buttonM1PosV1Up.ImageList = this.imageListVAxes;
@@ -12767,11 +12865,13 @@
             this.buttonM1PosV1Up.Text = "V1";
             this.buttonM1PosV1Up.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM1PosV1Up.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM1PosV1Up.UseVisualStyleBackColor = true;
+            this.buttonM1PosV1Up.UseVisualStyleBackColor = false;
+            this.buttonM1PosV1Up.Visible = false;
             this.buttonM1PosV1Up.Click += new System.EventHandler(this.buttonM1PosV1Up_Click);
             // 
             // buttonM1Sharpening
             // 
+            this.buttonM1Sharpening.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1Sharpening.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1Sharpening.ImageIndex = 8;
             this.buttonM1Sharpening.ImageList = this.imageListCut;
@@ -12782,13 +12882,15 @@
             this.buttonM1Sharpening.TabIndex = 151;
             this.buttonM1Sharpening.Text = "sharpening";
             this.buttonM1Sharpening.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.buttonM1Sharpening.UseVisualStyleBackColor = true;
+            this.buttonM1Sharpening.UseVisualStyleBackColor = false;
+            this.buttonM1Sharpening.Visible = false;
             this.buttonM1Sharpening.Click += new System.EventHandler(this.buttonM1Sharpening_Click);
             // 
             // checkBoxM1CuttingDrainBlow
             // 
             this.checkBoxM1CuttingDrainBlow.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBoxM1CuttingDrainBlow.AutoSize = true;
+            this.checkBoxM1CuttingDrainBlow.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.checkBoxM1CuttingDrainBlow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkBoxM1CuttingDrainBlow.FlatAppearance.BorderSize = 5;
             this.checkBoxM1CuttingDrainBlow.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -12802,11 +12904,12 @@
             this.checkBoxM1CuttingDrainBlow.Text = "drain blow";
             this.checkBoxM1CuttingDrainBlow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxM1CuttingDrainBlow.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBoxM1CuttingDrainBlow.UseVisualStyleBackColor = true;
+            this.checkBoxM1CuttingDrainBlow.UseVisualStyleBackColor = false;
             this.checkBoxM1CuttingDrainBlow.CheckStateChanged += new System.EventHandler(this.checkBoxM1CuttingDrainBlow_CheckStateChanged);
             // 
             // buttonM1CutOpening
             // 
+            this.buttonM1CutOpening.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1CutOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1CutOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.buttonM1CutOpening.Location = new System.Drawing.Point(220, 372);
@@ -12814,13 +12917,14 @@
             this.buttonM1CutOpening.Size = new System.Drawing.Size(160, 48);
             this.buttonM1CutOpening.TabIndex = 143;
             this.buttonM1CutOpening.Text = "cut clamp opening";
-            this.buttonM1CutOpening.UseVisualStyleBackColor = true;
+            this.buttonM1CutOpening.UseVisualStyleBackColor = false;
             this.buttonM1CutOpening.Click += new System.EventHandler(this.buttonM1CutOpening_Click);
             // 
             // checkBoxM1CuttingMotor
             // 
             this.checkBoxM1CuttingMotor.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBoxM1CuttingMotor.AutoSize = true;
+            this.checkBoxM1CuttingMotor.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.checkBoxM1CuttingMotor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkBoxM1CuttingMotor.FlatAppearance.BorderSize = 5;
             this.checkBoxM1CuttingMotor.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -12834,11 +12938,12 @@
             this.checkBoxM1CuttingMotor.Text = "motor";
             this.checkBoxM1CuttingMotor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxM1CuttingMotor.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBoxM1CuttingMotor.UseVisualStyleBackColor = true;
+            this.checkBoxM1CuttingMotor.UseVisualStyleBackColor = false;
             this.checkBoxM1CuttingMotor.CheckStateChanged += new System.EventHandler(this.checkBoxM1CuttingMotor_CheckStateChanged);
             // 
             // buttonM1BlockClosing
             // 
+            this.buttonM1BlockClosing.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1BlockClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1BlockClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.buttonM1BlockClosing.Location = new System.Drawing.Point(430, 437);
@@ -12846,11 +12951,12 @@
             this.buttonM1BlockClosing.Size = new System.Drawing.Size(160, 48);
             this.buttonM1BlockClosing.TabIndex = 144;
             this.buttonM1BlockClosing.Text = "block clamp closing";
-            this.buttonM1BlockClosing.UseVisualStyleBackColor = true;
+            this.buttonM1BlockClosing.UseVisualStyleBackColor = false;
             this.buttonM1BlockClosing.Click += new System.EventHandler(this.buttonM1BlockClosing_Click);
             // 
             // buttonM1CutSlideForward
             // 
+            this.buttonM1CutSlideForward.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1CutSlideForward.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1CutSlideForward.ImageKey = "cut_slide_forward.png";
             this.buttonM1CutSlideForward.ImageList = this.imageListCut;
@@ -12861,11 +12967,12 @@
             this.buttonM1CutSlideForward.TabIndex = 143;
             this.buttonM1CutSlideForward.Text = "slide fwd";
             this.buttonM1CutSlideForward.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.buttonM1CutSlideForward.UseVisualStyleBackColor = true;
+            this.buttonM1CutSlideForward.UseVisualStyleBackColor = false;
             this.buttonM1CutSlideForward.Click += new System.EventHandler(this.buttonM1CutSlideForward_Click);
             // 
             // buttonM1CutClosing
             // 
+            this.buttonM1CutClosing.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1CutClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1CutClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.buttonM1CutClosing.Location = new System.Drawing.Point(220, 437);
@@ -12873,11 +12980,12 @@
             this.buttonM1CutClosing.Size = new System.Drawing.Size(160, 48);
             this.buttonM1CutClosing.TabIndex = 144;
             this.buttonM1CutClosing.Text = "cut clamp closing";
-            this.buttonM1CutClosing.UseVisualStyleBackColor = true;
+            this.buttonM1CutClosing.UseVisualStyleBackColor = false;
             this.buttonM1CutClosing.Click += new System.EventHandler(this.buttonM1CutClosing_Click);
             // 
             // buttonM1CutSlideBackward
             // 
+            this.buttonM1CutSlideBackward.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1CutSlideBackward.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1CutSlideBackward.ImageIndex = 2;
             this.buttonM1CutSlideBackward.ImageList = this.imageListCut;
@@ -12888,11 +12996,12 @@
             this.buttonM1CutSlideBackward.TabIndex = 144;
             this.buttonM1CutSlideBackward.Text = "slide bwd";
             this.buttonM1CutSlideBackward.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.buttonM1CutSlideBackward.UseVisualStyleBackColor = true;
+            this.buttonM1CutSlideBackward.UseVisualStyleBackColor = false;
             this.buttonM1CutSlideBackward.Click += new System.EventHandler(this.buttonM1CutSlideBackward_Click);
             // 
             // buttonM1SpringsOpening
             // 
+            this.buttonM1SpringsOpening.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1SpringsOpening.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1SpringsOpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.buttonM1SpringsOpening.Location = new System.Drawing.Point(10, 372);
@@ -12900,13 +13009,14 @@
             this.buttonM1SpringsOpening.Size = new System.Drawing.Size(160, 48);
             this.buttonM1SpringsOpening.TabIndex = 141;
             this.buttonM1SpringsOpening.Text = "springs clamp opening";
-            this.buttonM1SpringsOpening.UseVisualStyleBackColor = true;
+            this.buttonM1SpringsOpening.UseVisualStyleBackColor = false;
             this.buttonM1SpringsOpening.Click += new System.EventHandler(this.buttonM1SpringsOpening_Click);
             // 
             // checkBoxM1LoadingBelt
             // 
             this.checkBoxM1LoadingBelt.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBoxM1LoadingBelt.AutoSize = true;
+            this.checkBoxM1LoadingBelt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.checkBoxM1LoadingBelt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkBoxM1LoadingBelt.FlatAppearance.BorderSize = 5;
             this.checkBoxM1LoadingBelt.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -12919,11 +13029,12 @@
             this.checkBoxM1LoadingBelt.TabIndex = 276;
             this.checkBoxM1LoadingBelt.Text = "loading";
             this.checkBoxM1LoadingBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBoxM1LoadingBelt.UseVisualStyleBackColor = true;
+            this.checkBoxM1LoadingBelt.UseVisualStyleBackColor = false;
             this.checkBoxM1LoadingBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM1LoadingBelt_CheckStateChanged);
             // 
             // buttonM1SpringsClosing
             // 
+            this.buttonM1SpringsClosing.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1SpringsClosing.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1SpringsClosing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.buttonM1SpringsClosing.Location = new System.Drawing.Point(10, 437);
@@ -12931,13 +13042,14 @@
             this.buttonM1SpringsClosing.Size = new System.Drawing.Size(160, 48);
             this.buttonM1SpringsClosing.TabIndex = 142;
             this.buttonM1SpringsClosing.Text = "springs clamp closing";
-            this.buttonM1SpringsClosing.UseVisualStyleBackColor = true;
+            this.buttonM1SpringsClosing.UseVisualStyleBackColor = false;
             this.buttonM1SpringsClosing.Click += new System.EventHandler(this.buttonM1SpringsClosing_Click);
             // 
             // checkBoxM1ExitBelt
             // 
             this.checkBoxM1ExitBelt.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBoxM1ExitBelt.AutoSize = true;
+            this.checkBoxM1ExitBelt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.checkBoxM1ExitBelt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkBoxM1ExitBelt.FlatAppearance.BorderSize = 5;
             this.checkBoxM1ExitBelt.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -12950,13 +13062,14 @@
             this.checkBoxM1ExitBelt.TabIndex = 272;
             this.checkBoxM1ExitBelt.Text = "exit";
             this.checkBoxM1ExitBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBoxM1ExitBelt.UseVisualStyleBackColor = true;
+            this.checkBoxM1ExitBelt.UseVisualStyleBackColor = false;
             this.checkBoxM1ExitBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM1ExitBelt_CheckStateChanged);
             // 
             // checkBoxM1WorkingBelt
             // 
             this.checkBoxM1WorkingBelt.Appearance = System.Windows.Forms.Appearance.Button;
             this.checkBoxM1WorkingBelt.AutoSize = true;
+            this.checkBoxM1WorkingBelt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.checkBoxM1WorkingBelt.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkBoxM1WorkingBelt.FlatAppearance.BorderSize = 5;
             this.checkBoxM1WorkingBelt.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -12969,7 +13082,7 @@
             this.checkBoxM1WorkingBelt.TabIndex = 271;
             this.checkBoxM1WorkingBelt.Text = "working";
             this.checkBoxM1WorkingBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBoxM1WorkingBelt.UseVisualStyleBackColor = true;
+            this.checkBoxM1WorkingBelt.UseVisualStyleBackColor = false;
             this.checkBoxM1WorkingBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM1WorkingBelt_CheckStateChanged);
             // 
             // dataGridViewM1TeachPoints
@@ -13068,6 +13181,7 @@
             // 
             // buttonM1TeachDeleteProgram
             // 
+            this.buttonM1TeachDeleteProgram.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1TeachDeleteProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM1TeachDeleteProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM1TeachDeleteProgram.Image")));
             this.buttonM1TeachDeleteProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -13079,11 +13193,12 @@
             this.buttonM1TeachDeleteProgram.Text = "delete program";
             this.buttonM1TeachDeleteProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM1TeachDeleteProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM1TeachDeleteProgram.UseVisualStyleBackColor = true;
+            this.buttonM1TeachDeleteProgram.UseVisualStyleBackColor = false;
             this.buttonM1TeachDeleteProgram.Click += new System.EventHandler(this.buttonM1TeachDeleteProgram_Click);
             // 
             // buttonM1TeachNewProgram
             // 
+            this.buttonM1TeachNewProgram.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1TeachNewProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM1TeachNewProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM1TeachNewProgram.Image")));
             this.buttonM1TeachNewProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -13095,48 +13210,50 @@
             this.buttonM1TeachNewProgram.Text = "new program";
             this.buttonM1TeachNewProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM1TeachNewProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM1TeachNewProgram.UseVisualStyleBackColor = true;
+            this.buttonM1TeachNewProgram.UseVisualStyleBackColor = false;
             this.buttonM1TeachNewProgram.Click += new System.EventHandler(this.buttonM1TeachNewProgram_Click);
             // 
             // buttonM1TeachSaveProgram
             // 
+            this.buttonM1TeachSaveProgram.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1TeachSaveProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM1TeachSaveProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM1TeachSaveProgram.Image")));
             this.buttonM1TeachSaveProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonM1TeachSaveProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1TeachSaveProgram.Location = new System.Drawing.Point(380, 10);
+            this.buttonM1TeachSaveProgram.Location = new System.Drawing.Point(390, 10);
             this.buttonM1TeachSaveProgram.Name = "buttonM1TeachSaveProgram";
             this.buttonM1TeachSaveProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM1TeachSaveProgram.TabIndex = 141;
             this.buttonM1TeachSaveProgram.Text = "save program";
             this.buttonM1TeachSaveProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM1TeachSaveProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM1TeachSaveProgram.UseVisualStyleBackColor = true;
+            this.buttonM1TeachSaveProgram.UseVisualStyleBackColor = false;
             this.buttonM1TeachSaveProgram.Click += new System.EventHandler(this.buttonM1TeachSaveProgram_Click);
             // 
             // buttonM1TeachLoadProgram
             // 
+            this.buttonM1TeachLoadProgram.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1TeachLoadProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM1TeachLoadProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM1TeachLoadProgram.Image")));
             this.buttonM1TeachLoadProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonM1TeachLoadProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1TeachLoadProgram.Location = new System.Drawing.Point(220, 10);
+            this.buttonM1TeachLoadProgram.Location = new System.Drawing.Point(240, 10);
             this.buttonM1TeachLoadProgram.Name = "buttonM1TeachLoadProgram";
             this.buttonM1TeachLoadProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM1TeachLoadProgram.TabIndex = 140;
             this.buttonM1TeachLoadProgram.Text = "load program";
             this.buttonM1TeachLoadProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM1TeachLoadProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM1TeachLoadProgram.UseVisualStyleBackColor = true;
+            this.buttonM1TeachLoadProgram.UseVisualStyleBackColor = false;
             this.buttonM1TeachLoadProgram.Click += new System.EventHandler(this.buttonM1TeachLoadProgram_Click);
             // 
             // comboBoxM1TeachProgramList
             // 
-            this.comboBoxM1TeachProgramList.Font = new System.Drawing.Font("Verdana", 12F);
+            this.comboBoxM1TeachProgramList.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxM1TeachProgramList.FormattingEnabled = true;
             this.comboBoxM1TeachProgramList.Location = new System.Drawing.Point(10, 10);
             this.comboBoxM1TeachProgramList.Name = "comboBoxM1TeachProgramList";
-            this.comboBoxM1TeachProgramList.Size = new System.Drawing.Size(180, 26);
+            this.comboBoxM1TeachProgramList.Size = new System.Drawing.Size(220, 33);
             this.comboBoxM1TeachProgramList.TabIndex = 139;
             this.comboBoxM1TeachProgramList.Text = "PRYYYY-YYY-XX00";
             // 
@@ -13198,7 +13315,7 @@
             tabPageFormatStyle30.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle30.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT1_2.FormatStyle = tabPageFormatStyle30;
-            this.tabPageT1_2.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT1_2.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1_2.Name = "tabPageT1_2";
             tabPageColorStyle56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle56.BackFadeColor = System.Drawing.Color.Transparent;
@@ -13215,12 +13332,12 @@
             tabPageColorStyle57.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle57.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_2.SelectedStyle = tabPageColorStyle57;
-            this.tabPageT1_2.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT1_2.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1_2.StyleFromParent = false;
             this.tabPageT1_2.TabIndex = 8;
             this.tabPageT1_2.Text = "test";
             this.tabPageT1_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_2.TextBounds")));
-            this.tabPageT1_2.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT1_2.TextSize = new System.Drawing.SizeF(36.72395F, 21.44531F);
             this.tabPageT1_2.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT1_2
@@ -13263,7 +13380,7 @@
             // numericUpDownM1BootDelayTest
             // 
             this.numericUpDownM1BootDelayTest.DecimalPlaces = 1;
-            this.numericUpDownM1BootDelayTest.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDownM1BootDelayTest.Font = new System.Drawing.Font("Verdana", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownM1BootDelayTest.Increment = new decimal(new int[] {
             1,
             0,
@@ -13276,7 +13393,7 @@
             0,
             0});
             this.numericUpDownM1BootDelayTest.Name = "numericUpDownM1BootDelayTest";
-            this.numericUpDownM1BootDelayTest.Size = new System.Drawing.Size(80, 33);
+            this.numericUpDownM1BootDelayTest.Size = new System.Drawing.Size(100, 43);
             this.numericUpDownM1BootDelayTest.TabIndex = 136;
             this.numericUpDownM1BootDelayTest.Value = new decimal(new int[] {
             10,
@@ -13287,6 +13404,7 @@
             // labelM1Timeout
             // 
             this.labelM1Timeout.AutoSize = true;
+            this.labelM1Timeout.BackColor = System.Drawing.SystemColors.Control;
             this.labelM1Timeout.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM1Timeout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM1Timeout.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -13298,46 +13416,49 @@
             // 
             // buttonM1StartTest
             // 
+            this.buttonM1StartTest.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1StartTest.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1StartTest.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1StartTest.Location = new System.Drawing.Point(418, 115);
+            this.buttonM1StartTest.Location = new System.Drawing.Point(420, 115);
             this.buttonM1StartTest.Name = "buttonM1StartTest";
-            this.buttonM1StartTest.Size = new System.Drawing.Size(180, 53);
+            this.buttonM1StartTest.Size = new System.Drawing.Size(140, 64);
             this.buttonM1StartTest.TabIndex = 128;
             this.buttonM1StartTest.Text = "start test";
-            this.buttonM1StartTest.UseVisualStyleBackColor = true;
+            this.buttonM1StartTest.UseVisualStyleBackColor = false;
             this.buttonM1StartTest.Click += new System.EventHandler(this.buttonM1StartTest_Click);
             // 
             // buttonM1TestSaveProgram
             // 
+            this.buttonM1TestSaveProgram.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1TestSaveProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM1TestSaveProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM1TestSaveProgram.Image")));
             this.buttonM1TestSaveProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonM1TestSaveProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1TestSaveProgram.Location = new System.Drawing.Point(380, 10);
+            this.buttonM1TestSaveProgram.Location = new System.Drawing.Point(420, 10);
             this.buttonM1TestSaveProgram.Name = "buttonM1TestSaveProgram";
             this.buttonM1TestSaveProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM1TestSaveProgram.TabIndex = 127;
             this.buttonM1TestSaveProgram.Text = "save program";
             this.buttonM1TestSaveProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM1TestSaveProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM1TestSaveProgram.UseVisualStyleBackColor = true;
+            this.buttonM1TestSaveProgram.UseVisualStyleBackColor = false;
             this.buttonM1TestSaveProgram.Click += new System.EventHandler(this.buttonM1TestSaveProgram_Click);
             // 
             // buttonM1TestLoadProgram
             // 
+            this.buttonM1TestLoadProgram.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1TestLoadProgram.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonM1TestLoadProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM1TestLoadProgram.Image")));
             this.buttonM1TestLoadProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonM1TestLoadProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1TestLoadProgram.Location = new System.Drawing.Point(220, 10);
+            this.buttonM1TestLoadProgram.Location = new System.Drawing.Point(250, 10);
             this.buttonM1TestLoadProgram.Name = "buttonM1TestLoadProgram";
             this.buttonM1TestLoadProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM1TestLoadProgram.TabIndex = 126;
             this.buttonM1TestLoadProgram.Text = "load program";
             this.buttonM1TestLoadProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM1TestLoadProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonM1TestLoadProgram.UseVisualStyleBackColor = true;
+            this.buttonM1TestLoadProgram.UseVisualStyleBackColor = false;
             this.buttonM1TestLoadProgram.Click += new System.EventHandler(this.buttonM1TestLoadProgram_Click);
             // 
             // dataGridViewM1TestPoints
@@ -13423,11 +13544,11 @@
             // 
             // comboBoxM1TestProgramList
             // 
-            this.comboBoxM1TestProgramList.Font = new System.Drawing.Font("Verdana", 12F);
+            this.comboBoxM1TestProgramList.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxM1TestProgramList.FormattingEnabled = true;
             this.comboBoxM1TestProgramList.Location = new System.Drawing.Point(10, 10);
             this.comboBoxM1TestProgramList.Name = "comboBoxM1TestProgramList";
-            this.comboBoxM1TestProgramList.Size = new System.Drawing.Size(180, 26);
+            this.comboBoxM1TestProgramList.Size = new System.Drawing.Size(220, 33);
             this.comboBoxM1TestProgramList.TabIndex = 124;
             // 
             // tabPageT1_3
@@ -13484,7 +13605,7 @@
             tabPageFormatStyle31.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle31.Padding = new System.Windows.Forms.Padding(17, 5, 17, 5);
             this.tabPageT1_3.FormatStyle = tabPageFormatStyle31;
-            this.tabPageT1_3.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT1_3.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1_3.Name = "tabPageT1_3";
             tabPageColorStyle58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle58.BackFadeColor = System.Drawing.Color.Transparent;
@@ -13501,16 +13622,16 @@
             tabPageColorStyle59.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle59.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_3.SelectedStyle = tabPageColorStyle59;
-            this.tabPageT1_3.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT1_3.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1_3.StyleFromParent = false;
             this.tabPageT1_3.TabIndex = 6;
             this.tabPageT1_3.Text = "input";
             this.tabPageT1_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_3.TextBounds")));
-            this.tabPageT1_3.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT1_3.TextSize = new System.Drawing.SizeF(47.47395F, 21.44531F);
             // 
             // lbLed1040M1
             // 
-            this.lbLed1040M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1040M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1040M1.BlinkInterval = 500;
             this.lbLed1040M1.Enabled = false;
             this.lbLed1040M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13529,7 +13650,7 @@
             // 
             // lbLed1020M1
             // 
-            this.lbLed1020M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1020M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1020M1.BlinkInterval = 500;
             this.lbLed1020M1.Enabled = false;
             this.lbLed1020M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13548,7 +13669,7 @@
             // 
             // lbLed1039M1
             // 
-            this.lbLed1039M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1039M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1039M1.BlinkInterval = 500;
             this.lbLed1039M1.Enabled = false;
             this.lbLed1039M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13567,7 +13688,7 @@
             // 
             // lbLed1019M1
             // 
-            this.lbLed1019M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1019M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1019M1.BlinkInterval = 500;
             this.lbLed1019M1.Enabled = false;
             this.lbLed1019M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13605,7 +13726,7 @@
             // 
             // lbLed1046M1
             // 
-            this.lbLed1046M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1046M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1046M1.BlinkInterval = 500;
             this.lbLed1046M1.Enabled = false;
             this.lbLed1046M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13624,7 +13745,7 @@
             // 
             // lbLed1047M1
             // 
-            this.lbLed1047M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1047M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1047M1.BlinkInterval = 500;
             this.lbLed1047M1.Enabled = false;
             this.lbLed1047M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13643,7 +13764,7 @@
             // 
             // lbLed1048M1
             // 
-            this.lbLed1048M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1048M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1048M1.BlinkInterval = 500;
             this.lbLed1048M1.Enabled = false;
             this.lbLed1048M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13662,7 +13783,7 @@
             // 
             // lbLed1045M1
             // 
-            this.lbLed1045M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1045M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1045M1.BlinkInterval = 500;
             this.lbLed1045M1.Enabled = false;
             this.lbLed1045M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13681,7 +13802,7 @@
             // 
             // lbLed1042M1
             // 
-            this.lbLed1042M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1042M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1042M1.BlinkInterval = 500;
             this.lbLed1042M1.Enabled = false;
             this.lbLed1042M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13700,7 +13821,7 @@
             // 
             // lbLed1043M1
             // 
-            this.lbLed1043M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1043M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1043M1.BlinkInterval = 500;
             this.lbLed1043M1.Enabled = false;
             this.lbLed1043M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13719,7 +13840,7 @@
             // 
             // lbLed1044M1
             // 
-            this.lbLed1044M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1044M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1044M1.BlinkInterval = 500;
             this.lbLed1044M1.Enabled = false;
             this.lbLed1044M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13738,7 +13859,7 @@
             // 
             // lbLed1041M1
             // 
-            this.lbLed1041M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1041M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1041M1.BlinkInterval = 500;
             this.lbLed1041M1.Enabled = false;
             this.lbLed1041M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13757,7 +13878,7 @@
             // 
             // lbLed1032M1
             // 
-            this.lbLed1032M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1032M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1032M1.BlinkInterval = 500;
             this.lbLed1032M1.Enabled = false;
             this.lbLed1032M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13776,7 +13897,7 @@
             // 
             // lbLed1036M1
             // 
-            this.lbLed1036M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1036M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1036M1.BlinkInterval = 500;
             this.lbLed1036M1.Enabled = false;
             this.lbLed1036M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13795,12 +13916,12 @@
             // 
             // lbLed1037M1
             // 
-            this.lbLed1037M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1037M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1037M1.BlinkInterval = 500;
             this.lbLed1037M1.Enabled = false;
             this.lbLed1037M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed1037M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed1037M1.Label = "X114 - exit belt photocell";
+            this.lbLed1037M1.Label = "X114 - spare";
             this.lbLed1037M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed1037M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed1037M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -13814,12 +13935,12 @@
             // 
             // lbLed1038M1
             // 
-            this.lbLed1038M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1038M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1038M1.BlinkInterval = 500;
             this.lbLed1038M1.Enabled = false;
             this.lbLed1038M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed1038M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed1038M1.Label = "X115 - spare";
+            this.lbLed1038M1.Label = "X115 - exit belt photocell";
             this.lbLed1038M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed1038M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed1038M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -13833,7 +13954,7 @@
             // 
             // lbLed1035M1
             // 
-            this.lbLed1035M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1035M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1035M1.BlinkInterval = 500;
             this.lbLed1035M1.Enabled = false;
             this.lbLed1035M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13852,7 +13973,7 @@
             // 
             // lbLed1034M1
             // 
-            this.lbLed1034M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1034M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1034M1.BlinkInterval = 500;
             this.lbLed1034M1.Enabled = false;
             this.lbLed1034M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13871,7 +13992,7 @@
             // 
             // lbLed1030M1
             // 
-            this.lbLed1030M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1030M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1030M1.BlinkInterval = 500;
             this.lbLed1030M1.Enabled = false;
             this.lbLed1030M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13890,7 +14011,7 @@
             // 
             // lbLed1031M1
             // 
-            this.lbLed1031M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1031M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1031M1.BlinkInterval = 500;
             this.lbLed1031M1.Enabled = false;
             this.lbLed1031M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13909,7 +14030,7 @@
             // 
             // lbLed1033M1
             // 
-            this.lbLed1033M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1033M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1033M1.BlinkInterval = 500;
             this.lbLed1033M1.Enabled = false;
             this.lbLed1033M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13928,7 +14049,7 @@
             // 
             // lbLed1029M1
             // 
-            this.lbLed1029M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1029M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1029M1.BlinkInterval = 500;
             this.lbLed1029M1.Enabled = false;
             this.lbLed1029M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13947,7 +14068,7 @@
             // 
             // lbLed1026M1
             // 
-            this.lbLed1026M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1026M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1026M1.BlinkInterval = 500;
             this.lbLed1026M1.Enabled = false;
             this.lbLed1026M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13966,7 +14087,7 @@
             // 
             // lbLed1027M1
             // 
-            this.lbLed1027M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1027M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1027M1.BlinkInterval = 500;
             this.lbLed1027M1.Enabled = false;
             this.lbLed1027M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -13985,7 +14106,7 @@
             // 
             // lbLed1028M1
             // 
-            this.lbLed1028M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1028M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1028M1.BlinkInterval = 500;
             this.lbLed1028M1.Enabled = false;
             this.lbLed1028M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14004,7 +14125,7 @@
             // 
             // lbLed1025M1
             // 
-            this.lbLed1025M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1025M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1025M1.BlinkInterval = 500;
             this.lbLed1025M1.Enabled = false;
             this.lbLed1025M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14023,7 +14144,7 @@
             // 
             // lbLed1022M1
             // 
-            this.lbLed1022M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1022M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1022M1.BlinkInterval = 500;
             this.lbLed1022M1.Enabled = false;
             this.lbLed1022M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14042,7 +14163,7 @@
             // 
             // lbLed1023M1
             // 
-            this.lbLed1023M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1023M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1023M1.BlinkInterval = 500;
             this.lbLed1023M1.Enabled = false;
             this.lbLed1023M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14061,7 +14182,7 @@
             // 
             // lbLed1024M1
             // 
-            this.lbLed1024M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1024M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1024M1.BlinkInterval = 500;
             this.lbLed1024M1.Enabled = false;
             this.lbLed1024M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14080,7 +14201,7 @@
             // 
             // lbLed1021M1
             // 
-            this.lbLed1021M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1021M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1021M1.BlinkInterval = 500;
             this.lbLed1021M1.Enabled = false;
             this.lbLed1021M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14099,7 +14220,7 @@
             // 
             // lbLed1012M1
             // 
-            this.lbLed1012M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1012M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1012M1.BlinkInterval = 500;
             this.lbLed1012M1.Enabled = false;
             this.lbLed1012M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14118,7 +14239,7 @@
             // 
             // lbLed1016M1
             // 
-            this.lbLed1016M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1016M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1016M1.BlinkInterval = 500;
             this.lbLed1016M1.Enabled = false;
             this.lbLed1016M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14137,7 +14258,7 @@
             // 
             // lbLed1017M1
             // 
-            this.lbLed1017M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1017M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1017M1.BlinkInterval = 500;
             this.lbLed1017M1.Enabled = false;
             this.lbLed1017M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14156,7 +14277,7 @@
             // 
             // lbLed1018M1
             // 
-            this.lbLed1018M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1018M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1018M1.BlinkInterval = 500;
             this.lbLed1018M1.Enabled = false;
             this.lbLed1018M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14175,7 +14296,7 @@
             // 
             // lbLed1015M1
             // 
-            this.lbLed1015M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1015M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1015M1.BlinkInterval = 500;
             this.lbLed1015M1.Enabled = false;
             this.lbLed1015M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14194,7 +14315,7 @@
             // 
             // lbLed1014M1
             // 
-            this.lbLed1014M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1014M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1014M1.BlinkInterval = 500;
             this.lbLed1014M1.Enabled = false;
             this.lbLed1014M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14213,7 +14334,7 @@
             // 
             // lbLed1010M1
             // 
-            this.lbLed1010M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1010M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1010M1.BlinkInterval = 500;
             this.lbLed1010M1.Enabled = false;
             this.lbLed1010M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14232,7 +14353,7 @@
             // 
             // lbLed1011M1
             // 
-            this.lbLed1011M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1011M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1011M1.BlinkInterval = 500;
             this.lbLed1011M1.Enabled = false;
             this.lbLed1011M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14251,7 +14372,7 @@
             // 
             // lbLed1013M1
             // 
-            this.lbLed1013M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1013M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1013M1.BlinkInterval = 500;
             this.lbLed1013M1.Enabled = false;
             this.lbLed1013M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14270,7 +14391,7 @@
             // 
             // lbLed1009M1
             // 
-            this.lbLed1009M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1009M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1009M1.BlinkInterval = 500;
             this.lbLed1009M1.Enabled = false;
             this.lbLed1009M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14289,7 +14410,7 @@
             // 
             // lbLed1006M1
             // 
-            this.lbLed1006M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1006M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1006M1.BlinkInterval = 500;
             this.lbLed1006M1.Enabled = false;
             this.lbLed1006M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14308,7 +14429,7 @@
             // 
             // lbLed1007M1
             // 
-            this.lbLed1007M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1007M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1007M1.BlinkInterval = 500;
             this.lbLed1007M1.Enabled = false;
             this.lbLed1007M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14327,7 +14448,7 @@
             // 
             // lbLed1008M1
             // 
-            this.lbLed1008M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1008M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1008M1.BlinkInterval = 500;
             this.lbLed1008M1.Enabled = false;
             this.lbLed1008M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14346,7 +14467,7 @@
             // 
             // lbLed1005M1
             // 
-            this.lbLed1005M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1005M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1005M1.BlinkInterval = 500;
             this.lbLed1005M1.Enabled = false;
             this.lbLed1005M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14365,7 +14486,7 @@
             // 
             // lbLed1002M1
             // 
-            this.lbLed1002M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1002M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1002M1.BlinkInterval = 500;
             this.lbLed1002M1.Enabled = false;
             this.lbLed1002M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14384,7 +14505,7 @@
             // 
             // lbLed1003M1
             // 
-            this.lbLed1003M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1003M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1003M1.BlinkInterval = 500;
             this.lbLed1003M1.Enabled = false;
             this.lbLed1003M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14403,7 +14524,7 @@
             // 
             // lbLed1004M1
             // 
-            this.lbLed1004M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1004M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1004M1.BlinkInterval = 500;
             this.lbLed1004M1.Enabled = false;
             this.lbLed1004M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14422,7 +14543,7 @@
             // 
             // lbLed1001M1
             // 
-            this.lbLed1001M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed1001M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed1001M1.BlinkInterval = 500;
             this.lbLed1001M1.Enabled = false;
             this.lbLed1001M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14492,7 +14613,7 @@
             tabPageFormatStyle32.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle32.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.tabPageT1_4.FormatStyle = tabPageFormatStyle32;
-            this.tabPageT1_4.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT1_4.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1_4.Name = "tabPageT1_4";
             tabPageColorStyle60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle60.BackFadeColor = System.Drawing.Color.Transparent;
@@ -14509,16 +14630,16 @@
             tabPageColorStyle61.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle61.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_4.SelectedStyle = tabPageColorStyle61;
-            this.tabPageT1_4.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT1_4.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1_4.StyleFromParent = false;
             this.tabPageT1_4.TabIndex = 7;
             this.tabPageT1_4.Text = "output";
             this.tabPageT1_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_4.TextBounds")));
-            this.tabPageT1_4.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT1_4.TextSize = new System.Drawing.SizeF(59.4427F, 21.44531F);
             // 
             // lbLed2040M1
             // 
-            this.lbLed2040M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2040M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2040M1.BlinkInterval = 500;
             this.lbLed2040M1.Enabled = false;
             this.lbLed2040M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14537,7 +14658,7 @@
             // 
             // lbLed2020M1
             // 
-            this.lbLed2020M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2020M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2020M1.BlinkInterval = 500;
             this.lbLed2020M1.Enabled = false;
             this.lbLed2020M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14556,7 +14677,7 @@
             // 
             // lbLed2039M1
             // 
-            this.lbLed2039M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2039M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2039M1.BlinkInterval = 500;
             this.lbLed2039M1.Enabled = false;
             this.lbLed2039M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14575,7 +14696,7 @@
             // 
             // lbLed2019M1
             // 
-            this.lbLed2019M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2019M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2019M1.BlinkInterval = 500;
             this.lbLed2019M1.Enabled = false;
             this.lbLed2019M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14594,12 +14715,12 @@
             // 
             // lbLed2046M1
             // 
-            this.lbLed2046M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2046M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2046M1.BlinkInterval = 500;
             this.lbLed2046M1.Enabled = false;
             this.lbLed2046M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2046M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2046M1.Label = "Y11D - spare";
+            this.lbLed2046M1.Label = "Y11D - monitor signal bit5";
             this.lbLed2046M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2046M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2046M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -14613,7 +14734,7 @@
             // 
             // lbLed2047M1
             // 
-            this.lbLed2047M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2047M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2047M1.BlinkInterval = 500;
             this.lbLed2047M1.Enabled = false;
             this.lbLed2047M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14632,7 +14753,7 @@
             // 
             // lbLed2048M1
             // 
-            this.lbLed2048M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2048M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2048M1.BlinkInterval = 500;
             this.lbLed2048M1.Enabled = false;
             this.lbLed2048M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14651,12 +14772,12 @@
             // 
             // lbLed2045M1
             // 
-            this.lbLed2045M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2045M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2045M1.BlinkInterval = 500;
             this.lbLed2045M1.Enabled = false;
             this.lbLed2045M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2045M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2045M1.Label = "Y11C - spare";
+            this.lbLed2045M1.Label = "Y11C - monitor signal bit4";
             this.lbLed2045M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2045M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2045M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -14670,12 +14791,12 @@
             // 
             // lbLed2042M1
             // 
-            this.lbLed2042M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2042M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2042M1.BlinkInterval = 500;
             this.lbLed2042M1.Enabled = false;
             this.lbLed2042M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2042M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2042M1.Label = "Y119 - spare";
+            this.lbLed2042M1.Label = "Y119 - monitor signal bit1";
             this.lbLed2042M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2042M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2042M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -14689,12 +14810,12 @@
             // 
             // lbLed2043M1
             // 
-            this.lbLed2043M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2043M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2043M1.BlinkInterval = 500;
             this.lbLed2043M1.Enabled = false;
             this.lbLed2043M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2043M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2043M1.Label = "Y11A - spare";
+            this.lbLed2043M1.Label = "Y11A - monitor signal bit2";
             this.lbLed2043M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2043M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2043M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -14708,12 +14829,12 @@
             // 
             // lbLed2044M1
             // 
-            this.lbLed2044M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2044M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2044M1.BlinkInterval = 500;
             this.lbLed2044M1.Enabled = false;
             this.lbLed2044M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2044M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2044M1.Label = "Y11B - spare";
+            this.lbLed2044M1.Label = "Y11B - monitor signal bit3";
             this.lbLed2044M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2044M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2044M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -14727,12 +14848,12 @@
             // 
             // lbLed2041M1
             // 
-            this.lbLed2041M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2041M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2041M1.BlinkInterval = 500;
             this.lbLed2041M1.Enabled = false;
             this.lbLed2041M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2041M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2041M1.Label = "Y118 - spare";
+            this.lbLed2041M1.Label = "Y118 - monitor signal bit0";
             this.lbLed2041M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2041M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2041M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -14746,7 +14867,7 @@
             // 
             // lbLed2032M1
             // 
-            this.lbLed2032M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2032M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2032M1.BlinkInterval = 500;
             this.lbLed2032M1.Enabled = false;
             this.lbLed2032M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14765,7 +14886,7 @@
             // 
             // lbLed2036M1
             // 
-            this.lbLed2036M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2036M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2036M1.BlinkInterval = 500;
             this.lbLed2036M1.Enabled = false;
             this.lbLed2036M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14784,7 +14905,7 @@
             // 
             // lbLed2037M1
             // 
-            this.lbLed2037M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2037M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2037M1.BlinkInterval = 500;
             this.lbLed2037M1.Enabled = false;
             this.lbLed2037M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14803,7 +14924,7 @@
             // 
             // lbLed2038M1
             // 
-            this.lbLed2038M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2038M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2038M1.BlinkInterval = 500;
             this.lbLed2038M1.Enabled = false;
             this.lbLed2038M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14822,7 +14943,7 @@
             // 
             // lbLed2035M1
             // 
-            this.lbLed2035M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2035M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2035M1.BlinkInterval = 500;
             this.lbLed2035M1.Enabled = false;
             this.lbLed2035M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14841,7 +14962,7 @@
             // 
             // lbLed2034M1
             // 
-            this.lbLed2034M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2034M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2034M1.BlinkInterval = 500;
             this.lbLed2034M1.Enabled = false;
             this.lbLed2034M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14860,7 +14981,7 @@
             // 
             // lbLed2030M1
             // 
-            this.lbLed2030M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2030M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2030M1.BlinkInterval = 500;
             this.lbLed2030M1.Enabled = false;
             this.lbLed2030M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14879,7 +15000,7 @@
             // 
             // lbLed2031M1
             // 
-            this.lbLed2031M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2031M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2031M1.BlinkInterval = 500;
             this.lbLed2031M1.Enabled = false;
             this.lbLed2031M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14898,7 +15019,7 @@
             // 
             // lbLed2033M1
             // 
-            this.lbLed2033M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2033M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2033M1.BlinkInterval = 500;
             this.lbLed2033M1.Enabled = false;
             this.lbLed2033M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14917,7 +15038,7 @@
             // 
             // lbLed2029M1
             // 
-            this.lbLed2029M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2029M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2029M1.BlinkInterval = 500;
             this.lbLed2029M1.Enabled = false;
             this.lbLed2029M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14936,7 +15057,7 @@
             // 
             // lbLed2026M1
             // 
-            this.lbLed2026M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2026M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2026M1.BlinkInterval = 500;
             this.lbLed2026M1.Enabled = false;
             this.lbLed2026M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14955,7 +15076,7 @@
             // 
             // lbLed2027M1
             // 
-            this.lbLed2027M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2027M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2027M1.BlinkInterval = 500;
             this.lbLed2027M1.Enabled = false;
             this.lbLed2027M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14974,7 +15095,7 @@
             // 
             // lbLed2028M1
             // 
-            this.lbLed2028M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2028M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2028M1.BlinkInterval = 500;
             this.lbLed2028M1.Enabled = false;
             this.lbLed2028M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -14993,7 +15114,7 @@
             // 
             // lbLed2025M1
             // 
-            this.lbLed2025M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2025M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2025M1.BlinkInterval = 500;
             this.lbLed2025M1.Enabled = false;
             this.lbLed2025M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15012,7 +15133,7 @@
             // 
             // lbLed2022M1
             // 
-            this.lbLed2022M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2022M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2022M1.BlinkInterval = 500;
             this.lbLed2022M1.Enabled = false;
             this.lbLed2022M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15031,7 +15152,7 @@
             // 
             // lbLed2023M1
             // 
-            this.lbLed2023M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2023M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2023M1.BlinkInterval = 500;
             this.lbLed2023M1.Enabled = false;
             this.lbLed2023M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15050,7 +15171,7 @@
             // 
             // lbLed2024M1
             // 
-            this.lbLed2024M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2024M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2024M1.BlinkInterval = 500;
             this.lbLed2024M1.Enabled = false;
             this.lbLed2024M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15069,7 +15190,7 @@
             // 
             // lbLed2021M1
             // 
-            this.lbLed2021M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2021M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2021M1.BlinkInterval = 500;
             this.lbLed2021M1.Enabled = false;
             this.lbLed2021M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15088,12 +15209,12 @@
             // 
             // lbLed2012M1
             // 
-            this.lbLed2012M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2012M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2012M1.BlinkInterval = 500;
             this.lbLed2012M1.Enabled = false;
             this.lbLed2012M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2012M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2012M1.Label = "YB - reset servo";
+            this.lbLed2012M1.Label = "YB - servo brake";
             this.lbLed2012M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2012M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2012M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -15107,7 +15228,7 @@
             // 
             // lbLed2016M1
             // 
-            this.lbLed2016M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2016M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2016M1.BlinkInterval = 500;
             this.lbLed2016M1.Enabled = false;
             this.lbLed2016M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15126,7 +15247,7 @@
             // 
             // lbLed2017M1
             // 
-            this.lbLed2017M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2017M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2017M1.BlinkInterval = 500;
             this.lbLed2017M1.Enabled = false;
             this.lbLed2017M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15145,7 +15266,7 @@
             // 
             // lbLed2018M1
             // 
-            this.lbLed2018M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2018M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2018M1.BlinkInterval = 500;
             this.lbLed2018M1.Enabled = false;
             this.lbLed2018M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15164,7 +15285,7 @@
             // 
             // lbLed2015M1
             // 
-            this.lbLed2015M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2015M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2015M1.BlinkInterval = 500;
             this.lbLed2015M1.Enabled = false;
             this.lbLed2015M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15183,7 +15304,7 @@
             // 
             // lbLed2014M1
             // 
-            this.lbLed2014M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2014M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2014M1.BlinkInterval = 500;
             this.lbLed2014M1.Enabled = false;
             this.lbLed2014M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15202,12 +15323,12 @@
             // 
             // lbLed2010M1
             // 
-            this.lbLed2010M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2010M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2010M1.BlinkInterval = 500;
             this.lbLed2010M1.Enabled = false;
             this.lbLed2010M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2010M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2010M1.Label = "Y9 - servo on";
+            this.lbLed2010M1.Label = "Y9 - servo power";
             this.lbLed2010M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2010M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2010M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -15221,12 +15342,12 @@
             // 
             // lbLed2011M1
             // 
-            this.lbLed2011M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2011M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2011M1.BlinkInterval = 500;
             this.lbLed2011M1.Enabled = false;
             this.lbLed2011M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2011M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2011M1.Label = "YA - servo brake";
+            this.lbLed2011M1.Label = "YA - servo on";
             this.lbLed2011M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2011M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2011M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -15240,12 +15361,12 @@
             // 
             // lbLed2013M1
             // 
-            this.lbLed2013M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2013M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2013M1.BlinkInterval = 500;
             this.lbLed2013M1.Enabled = false;
             this.lbLed2013M1.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed2013M1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed2013M1.Label = "YC - spare";
+            this.lbLed2013M1.Label = "YC - reset servo";
             this.lbLed2013M1.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed2013M1.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed2013M1.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -15259,7 +15380,7 @@
             // 
             // lbLed2009M1
             // 
-            this.lbLed2009M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2009M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2009M1.BlinkInterval = 500;
             this.lbLed2009M1.Enabled = false;
             this.lbLed2009M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15278,7 +15399,7 @@
             // 
             // lbLed2006M1
             // 
-            this.lbLed2006M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2006M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2006M1.BlinkInterval = 500;
             this.lbLed2006M1.Enabled = false;
             this.lbLed2006M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15297,7 +15418,7 @@
             // 
             // lbLed2007M1
             // 
-            this.lbLed2007M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2007M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2007M1.BlinkInterval = 500;
             this.lbLed2007M1.Enabled = false;
             this.lbLed2007M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15316,7 +15437,7 @@
             // 
             // lbLed2008M1
             // 
-            this.lbLed2008M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2008M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2008M1.BlinkInterval = 500;
             this.lbLed2008M1.Enabled = false;
             this.lbLed2008M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15335,7 +15456,7 @@
             // 
             // lbLed2005M1
             // 
-            this.lbLed2005M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2005M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2005M1.BlinkInterval = 500;
             this.lbLed2005M1.Enabled = false;
             this.lbLed2005M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15354,7 +15475,7 @@
             // 
             // lbLed2002M1
             // 
-            this.lbLed2002M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2002M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2002M1.BlinkInterval = 500;
             this.lbLed2002M1.Enabled = false;
             this.lbLed2002M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15373,7 +15494,7 @@
             // 
             // lbLed2003M1
             // 
-            this.lbLed2003M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2003M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2003M1.BlinkInterval = 500;
             this.lbLed2003M1.Enabled = false;
             this.lbLed2003M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15392,7 +15513,7 @@
             // 
             // lbLed2004M1
             // 
-            this.lbLed2004M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2004M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2004M1.BlinkInterval = 500;
             this.lbLed2004M1.Enabled = false;
             this.lbLed2004M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15411,7 +15532,7 @@
             // 
             // lbLed2001M1
             // 
-            this.lbLed2001M1.BackColor = System.Drawing.Color.Transparent;
+            this.lbLed2001M1.BackColor = System.Drawing.SystemColors.Control;
             this.lbLed2001M1.BlinkInterval = 500;
             this.lbLed2001M1.Enabled = false;
             this.lbLed2001M1.Font = new System.Drawing.Font("Verdana", 8.25F);
@@ -15434,28 +15555,24 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageT4_1);
-            this.tabControlMain.Controls.Add(this.tabPageT4);
-            this.tabControlMain.Controls.Add(this.tabPageT1_1);
-            this.tabControlMain.Controls.Add(this.tabPageT1);
+            this.tabControlMain.Controls.Add(this.tabPageT1_2);
+            this.tabControlMain.Controls.Add(this.tabPageT1_3);
+            this.tabControlMain.Controls.Add(this.tabPageT1_4);
+            this.tabControlMain.Controls.Add(this.tabPageT7);
+            this.tabControlMain.Controls.Add(this.tabPageT6);
             this.tabControlMain.Controls.Add(this.tabPageT5);
-            this.tabControlMain.Controls.Add(this.tabPageT5_1);
-            this.tabControlMain.Controls.Add(this.tabPageT4_2);
-            this.tabControlMain.Controls.Add(this.tabPageT5_2);
+            this.tabControlMain.Controls.Add(this.tabPageT4);
             this.tabControlMain.Controls.Add(this.tabPageT3);
             this.tabControlMain.Controls.Add(this.tabPageT2);
+            this.tabControlMain.Controls.Add(this.tabPageT1);
             this.tabControlMain.Controls.Add(this.tabPageT0);
-            this.tabControlMain.Controls.Add(this.tabPageT6);
-            this.tabControlMain.Controls.Add(this.tabPageT7);
             this.tabControlMain.Controls.Add(this.tabPageT0_1);
             this.tabControlMain.Controls.Add(this.tabPageT0_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_3);
             this.tabControlMain.Controls.Add(this.tabPage2);
-            this.tabControlMain.Controls.Add(this.tabPageT1_2);
-            this.tabControlMain.Controls.Add(this.tabPageT1_3);
-            this.tabControlMain.Controls.Add(this.tabPageT1_4);
+            this.tabControlMain.Controls.Add(this.tabPageT1_1);
             this.tabControlMain.Controls.Add(this.tabPage1);
             this.tabControlMain.Controls.Add(this.tabPage3);
             this.tabControlMain.Controls.Add(this.tabPage4);
@@ -15463,8 +15580,12 @@
             this.tabControlMain.Controls.Add(this.tabPageT3_2);
             this.tabControlMain.Controls.Add(this.tabPageT3_3);
             this.tabControlMain.Controls.Add(this.tabPageT3_4);
+            this.tabControlMain.Controls.Add(this.tabPageT4_1);
+            this.tabControlMain.Controls.Add(this.tabPageT4_2);
             this.tabControlMain.Controls.Add(this.tabPageT4_3);
             this.tabControlMain.Controls.Add(this.tabPageT4_4);
+            this.tabControlMain.Controls.Add(this.tabPageT5_1);
+            this.tabControlMain.Controls.Add(this.tabPageT5_2);
             this.tabControlMain.Controls.Add(this.tabPageT5_3);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Top;
@@ -15502,7 +15623,7 @@
             this.tabPageT6,
             this.tabPageT7});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageT4_1;
+            this.tabControlMain.SelectedPage = this.tabPageT1_2;
             tabPageColorStyle65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle65.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle65.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
@@ -15600,9 +15721,9 @@
             this.tabPageT4_1.ResumeLayout(false);
             this.tabPageT4_1.PerformLayout();
             this.contextMenuStripT4_1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3JogSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3ManualQuote)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3ManualSpeed)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3JogSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM3TeachPoints)).EndInit();
             this.tabPageT4.ResumeLayout(false);
             this.tabPageT4_2.ResumeLayout(false);
@@ -16528,5 +16649,9 @@
         private System.Windows.Forms.DataGridViewButtonColumn reached;
         private System.Windows.Forms.NumericUpDown numericUpDownM1TimerBootTeach;
         private System.Windows.Forms.Label labelM1TeachBootDelay;
+        private System.Windows.Forms.Button buttonM3NormHoriFwd;
+        private System.Windows.Forms.Button buttonM3NormHoriBwd;
+        private System.Windows.Forms.Button buttonM3NormTransvFwd;
+        private System.Windows.Forms.Button buttonM3NormTransvBwd;
     }
 }

@@ -593,6 +593,78 @@ namespace GUI
             }
         }
 
+        private async void buttonM3NormTransvFwd_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM3NormTransvFwd";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private async void buttonM3NormTransvBwd_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM3NormTransvBwd";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private async void buttonM3NormHoriFwd_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM3NormHoriFwd";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private async void buttonM3NormHoriBwd_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM3NormHoriBwd";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
         private void dataGridViewM3TestPoints_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int i = 0;
