@@ -524,6 +524,7 @@ namespace GUI
                 }
                 //refresh combobox
                 RefreshModelNameComboBox();
+                xDialog.MsgBox.Show("Recipe succesfully created", "PBoot", xDialog.MsgBox.Buttons.OK);
             }
             else
             {
@@ -1074,6 +1075,9 @@ namespace GUI
 
         private void buttonMRecipiesShowAll_Click(object sender, EventArgs e)
         {
+            
+
+
             //fill data
             string connectionString = "Data Source=localhost;database=plasticaucho;uid=USER;pwd=Robots2023!";
             string query = "Select * from models";
