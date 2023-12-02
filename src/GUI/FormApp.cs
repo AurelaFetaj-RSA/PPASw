@@ -440,20 +440,11 @@ namespace GUI
         {
             #region (* refresh combobox model name list *)
             List<string> mList = new List<string>();
-
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-            ReadProgramsConfiguration config = null;
-
-            ReadProgramsService progRS = (ReadProgramsService)dummyS[0];
-
-            if (dummyS != null && dummyS.Count > 0)
-            {
-                config = progRS.Configuration as ReadProgramsConfiguration;
-                mList = progRS.GetModel(config.ProgramsPath, config.Extensions);
-            }
             //get model name list from DB
             MySqlResult<recipies> result = await mysqlService.DBTable[0].SelectAllAsync<recipies>();
             result.Result.ForEach(x => mList.Add(x.model_name));
+            comboBoxMRecipeName.Items.Clear();
+            comboBoxT0RecipeName.Items.Clear();
             foreach (string modelName in mList)
             {
                 toolStripComboBoxT0.Items.Add(modelName);
@@ -479,6 +470,8 @@ namespace GUI
                 toolStripComboBoxT4_2.SelectedIndexChanged += toolStripComboBoxT4_2_SelectedIndexChanged;
                 comboBoxMRecipeName.Items.Add(modelName);
                 comboBoxMRecipeName.SelectedIndex = 0;
+                comboBoxT0RecipeName.Items.Add(modelName);
+                comboBoxT0RecipeName.SelectedIndex = 0;
             }
         }
         #endregion
@@ -523,9 +516,12 @@ namespace GUI
                 //send recipe update to pad laser plc
                 string keyToSend = "pcM4RecipeUpdate";
 
-                var readResult = await ccService.Send(keyToSend, 1);
-                Thread.Sleep(200);
-                readResult = await ccService.Send(keyToSend, 0);
+                if (ccService.ClientIsConnected)
+                {
+                    var readResult = await ccService.Send(keyToSend, 1);
+                    Thread.Sleep(200);
+                    readResult = await ccService.Send(keyToSend, 0);
+                }
                 //refresh combobox
                 RefreshModelNameComboBox();
             }
@@ -537,6 +533,7 @@ namespace GUI
 
         private async void comboBoxM3PrgName_st1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboBoxM3PrgName_st1.Text == "") return;
             //get model name
             string prgName = comboBoxM3PrgName_st1.Text;
             string modelName = prgName.Substring(2, 4);
@@ -616,6 +613,7 @@ namespace GUI
         }
         private async void comboBoxM3PrgName_st2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboBoxM3PrgName_st2.Text == "") return;
             //get model name
             string prgName = comboBoxM3PrgName_st2.Text;
             string modelName = prgName.Substring(2, 4);
@@ -633,7 +631,6 @@ namespace GUI
 
             if ((recs.Error == 0) & (recs.Result.Count != 0))
             {
-
                 //send recipe
                 string keyValue = "pcM3Param1";
                 var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param1.ToString()));
@@ -694,6 +691,8 @@ namespace GUI
 
         private async void comboBoxM4PrgName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboBoxM4PrgName.Text == "") return;
+
             //get model name
             string prgName = comboBoxM4PrgName.Text;
             string modelName = prgName.Substring(2, 4);
@@ -748,6 +747,8 @@ namespace GUI
 
         private async void comboBoxM2PrgName_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboBoxM2PrgName.Text == "") return;
+
             //get model name
             string prgName = comboBoxM2PrgName.Text;
             string modelName = prgName.Substring(2, 4);
@@ -765,8 +766,6 @@ namespace GUI
 
             if ((recs.Error == 0) & (recs.Result.Count != 0))
             {
-
-
                 //todo: send recipe (todo: waiting mysql integration)
                 string keyValue = "pcM2Param1";
                 var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m2_param1.ToString()));
@@ -821,6 +820,87 @@ namespace GUI
                 {
                     AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintInt, "verify program file");
                 }
+            }
+        }
+
+        private async void comboBoxM1PrgName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxM1PrgName.Text == "") return;
+
+            //get model name
+            string prgName = comboBoxM1PrgName.Text;
+            string modelName = prgName.Substring(2, 4);
+
+            //check model name
+            if (modelName == "")
+            {
+                //program name with incorrect format
+                //todo add message to the operator
+                return;
+            }
+
+            //get data from DB
+            MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+            if ((recs.Error == 0) & (recs.Result.Count != 0))
+            {
+                //send recipe (todo: waiting mysql)
+                string keyValue = "pcM1Param1";
+                var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m1_param1.ToString()));
+                labelM1Param1Value.Text = recs.Result[0].m1_param1.ToString();
+
+                //send quote, speed
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                {
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                    ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                    objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM1PrgName.Text + config.Extensions[0]);
+                    if (objPoints != null)
+                    {
+                        List<string> keys = new List<string>()
+                    {
+                        "pcM1AutoQuote",
+                        "pcM1AutoSpeed"
+                    };
+
+                        List<object> values = new List<object>()
+                    {
+                        new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
+                        new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                    };
+
+                        var sendResults = await ccService.Send(keys, values);
+                        bool allsent = true;
+                        foreach (var result in sendResults)
+                        {
+                            if (result.Value.OpcResult)
+                            {
+                            }
+                            else
+                            {
+                                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
+                            }
+                            allsent = allsent & result.Value.OpcResult;
+                        }
+                        if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.trimmer, "program sent succesfully");
+
+                        string key = "pc_timer_stop_stivale";
+                        var sendResultsTimer = await ccService.Send("pcM1AutoTimer", objPoints.Points[0].CustomFloatParam);
+                        if (sendResultsTimer.OpcResult)
+                        {
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                }
+            }
+            else
+            {
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "verify program file");
             }
         }
         private void dataGridViewM2TeachPoints_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -1525,6 +1605,226 @@ namespace GUI
                 else
                 {
 
+                }
+            }
+        }
+
+
+
+        private async void comboBoxMRecipeName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBoxMRecipeName.Text == "") return;
+            MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(comboBoxMRecipeName.Text);
+
+            if ((recs.Error == 0) & (recs.Result.Count != 0))
+            {
+                checkBoxM1RecipeModify.CheckState = ((short.Parse(recs.Result[0].m1_param1.ToString()) == 1) ? CheckState.Checked : CheckState.Unchecked);
+                checkBoxM2RecipeModify.CheckState = ((short.Parse(recs.Result[0].m2_param1.ToString()) == 1) ? CheckState.Checked : CheckState.Unchecked);
+                checkBoxM3RecipeModify.CheckState = ((short.Parse(recs.Result[0].m3_param1.ToString()) == 1) ? CheckState.Checked : CheckState.Unchecked);
+                checkBoxM4RecipeModify.CheckState = ((short.Parse(recs.Result[0].m4_param1.ToString()) == 1) ? CheckState.Checked : CheckState.Unchecked);
+                checkBoxM5RecipeModify.CheckState = ((short.Parse(recs.Result[0].m5_param1.ToString()) == 1) ? CheckState.Checked : CheckState.Unchecked);
+                checkBoxM6RecipeModify.CheckState = ((short.Parse(recs.Result[0].m6_param1.ToString()) == 1) ? CheckState.Checked : CheckState.Unchecked);
+                radioButtonM3Option1Recipe.Checked = ((short.Parse(recs.Result[0].m3_param2.ToString()) == 1) ? true : false);
+                radioButtonM3Option2Recipe.Checked = ((short.Parse(recs.Result[0].m3_param2.ToString()) == 2) ? true : false);
+                textBoxM4TopLineRecipe.Text = recs.Result[0].m4_param3.ToString();
+                textBoxM4BottomLineRecipe.Text = recs.Result[0].m4_param4.ToString();
+            }
+        }
+
+        private void buttonMUpdateRecipe_Click(object sender, EventArgs e)
+        {
+            if (comboBoxMRecipeName.Text == "") return;
+
+            //update recipe
+            DialogResult res = xDialog.MsgBox.Show("Are you sure you want to update recipe?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                if (comboBoxMRecipeName.Text == "") return;
+                object[] values = new object[]
+                        {
+                                    (checkBoxM1RecipeModify.CheckState == CheckState.Checked) ? 1 : 0,
+                                    (checkBoxM2RecipeModify.CheckState == CheckState.Checked) ? 1 : 0,
+                                    (checkBoxM3RecipeModify.CheckState == CheckState.Checked) ? 1 : 0,
+                                    (checkBoxM4RecipeModify.CheckState == CheckState.Checked) ? 1 : 0,
+                                    (checkBoxM5RecipeModify.CheckState == CheckState.Checked) ? 1 : 0,
+                                    (checkBoxM6RecipeModify.CheckState == CheckState.Checked) ? 1 : 0,
+
+            (radioButtonM3Option1Recipe.Checked == true) ? 1 : 2,
+            textBoxM4TopLineRecipe.Text,
+            textBoxM4BottomLineRecipe.Text,
+
+            };
+                string[] rParams = new string[]
+                        {
+                        "m1_param1",
+                        "m2_param1",
+                        "m3_param1",
+                        "m4_param1",
+                        "m5_param1",
+                        "m6_param1",
+                        "m3_param2",
+                        "m4_param3",
+                        "m4_param4",
+                        };
+
+                MySqlResult recs = mysqlService.DBTable[0].UpdateAutomaticPrimaryKey(comboBoxMRecipeName.Text, rParams, values);
+                if (recs.Error == 0)
+                {
+                    res = xDialog.MsgBox.Show("Recipe succesfully updated", "PBoot", xDialog.MsgBox.Buttons.OK);
+                }
+            }
+        }
+
+        private void checkBoxM1RecipeModify_CheckedChanged(object sender, EventArgs e)
+        {
+            bool chkValue = false;
+
+            chkValue = (checkBoxM1RecipeModify.CheckState == CheckState.Checked) ? true : false;
+
+            checkBoxM1RecipeModify.ImageIndex = (chkValue) ? 0 : 1;
+            labelM1ParamRecipe.Text = (chkValue) ? "on" : "off";
+        }
+
+        private void checkBoxM2RecipeModify_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool chkValue = false;
+
+            chkValue = (checkBoxM2RecipeModify.CheckState == CheckState.Checked) ? true : false;
+
+            checkBoxM2RecipeModify.ImageIndex = (chkValue) ? 0 : 1;
+            labelM2ParamRecipe.Text = (chkValue) ? "on" : "off";
+        }
+
+        private void checkBoxM3RecipeModify_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool chkValue = false;
+
+            chkValue = (checkBoxM3RecipeModify.CheckState == CheckState.Checked) ? true : false;
+
+            checkBoxM3RecipeModify.ImageIndex = (chkValue) ? 0 : 1;
+            labelM3ParamRecipe.Text = (chkValue) ? "on" : "off";
+        }
+
+        private void checkBoxM4RecipeModify_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool chkValue = false;
+
+            chkValue = (checkBoxM4RecipeModify.CheckState == CheckState.Checked) ? true : false;
+
+            checkBoxM4RecipeModify.ImageIndex = (chkValue) ? 0 : 1;
+            labelM4ParamRecipe.Text = (chkValue) ? "on" : "off";
+        }
+
+        private void checkBoxM5RecipeModify_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool chkValue = false;
+
+            chkValue = (checkBoxM5RecipeModify.CheckState == CheckState.Checked) ? true : false;
+
+            checkBoxM5RecipeModify.ImageIndex = (chkValue) ? 0 : 1;
+            labelM5ParamRecipe.Text = (chkValue) ? "on" : "off";
+        }
+
+        private void checkBoxM6RecipeModify_CheckStateChanged(object sender, EventArgs e)
+        {
+            bool chkValue = false;
+
+            chkValue = (checkBoxM6RecipeModify.CheckState == CheckState.Checked) ? true : false;
+
+            checkBoxM6RecipeModify.ImageIndex = (chkValue) ? 0 : 1;
+            labelM6ParamRecipe.Text = (chkValue) ? "on" : "off";
+        }
+
+        private async void buttonMRecipeDeleteAll_Click(object sender, EventArgs e)
+        {            
+            //update recipe
+            DialogResult res = xDialog.MsgBox.Show("Are you sure you want to DELETE all recipies?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                MySqlResult<recipies> result = await mysqlService.DBTable[0].SelectAllAsync<recipies>();
+
+                foreach (var key in result.Result)
+                {
+                    mysqlService.DBTable[0].DeleteRowPrimaryKey(key.model_name);
+                }
+                comboBoxMRecipeName.Text = "";
+                RefreshModelNameComboBox();
+                res = xDialog.MsgBox.Show("All recipies deleted", "PBoot", xDialog.MsgBox.Buttons.OK);
+            }
+        }
+
+        private async void buttonMRecipeDelete_Click(object sender, EventArgs e)
+        {
+            if (comboBoxMRecipeName.Text == "") return;
+
+            //update recipe
+            DialogResult res = xDialog.MsgBox.Show("Are you sure you want to DELETE recipe?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
+            if (res == DialogResult.Yes)
+            {               
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(comboBoxMRecipeName.Text);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {                
+                    mysqlService.DBTable[0].DeleteRowPrimaryKey(comboBoxMRecipeName.Text);
+                    comboBoxMRecipeName.Text = "";
+                }
+                RefreshModelNameComboBox();
+                res = xDialog.MsgBox.Show("Recipe succesfully deleted", "PBoot", xDialog.MsgBox.Buttons.OK);
+            }
+        }
+
+        private void comboBoxT0RecipeName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            List<IObjProgram> pList = new List<IObjProgram>();
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, toolStripComboBoxT0.Text);
+                comboBoxM1PrgName.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM1PrgName.Items.Add(prgName.ProgramName);
+                }
+
+                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, toolStripComboBoxT0.Text);
+                comboBoxM2PrgName.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM2PrgName.Items.Add(prgName.ProgramName);
+                }
+
+                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, toolStripComboBoxT0.Text);
+                comboBoxM3PrgName_st1.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM3PrgName_st1.Items.Add(prgName.ProgramName);
+                }
+
+                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, toolStripComboBoxT0.Text);
+                comboBoxM3PrgName_st2.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    comboBoxM3PrgName_st2.Items.Add(prgName.ProgramName);
+                }
+
+                //pad laser combobox
+                List<string> mList = new List<string>();
+                MySqlResult<padlaserprogram> result = mysqlService.DBTable[1].SelectAll<padlaserprogram>();
+                result.Result.ForEach(x => mList.Add(x.program_name));
+
+
+                comboBoxM4PrgName.Items.Clear();
+                foreach (string prgName in mList)
+                {
+                    //filter by model name
+                    if (prgName.Contains(toolStripComboBoxT0.Text))
+                        comboBoxM4PrgName.Items.Add(prgName);
                 }
             }
         }

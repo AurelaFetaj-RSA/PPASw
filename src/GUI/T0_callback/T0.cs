@@ -21,66 +21,7 @@ namespace GUI
     {
 
         #region( * program change in automatic *)      
-        private async void comboBoxM1PrgName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //send recipe (todo: waiting mysql)
-            string keyValue = "pcM1Param1";
-            var sendResult = await ccService.Send(keyValue, short.Parse(textBoxM1Test.Text));
-            labelM1Param1Value.Text = textBoxM1Test.Text;
-
-            //send quote, speed
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-            {
-                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM1PrgName.Text + config.Extensions[0]);
-                if (objPoints != null)
-                {
-                    List<string> keys = new List<string>()
-                    {
-                        "pcM1AutoQuote",
-                        "pcM1AutoSpeed"
-                    };
-
-                    List<object> values = new List<object>()
-                    {
-                        new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
-                        new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
-                    };
-
-                    var sendResults = await ccService.Send(keys, values);
-                    bool allsent = true;
-                    foreach (var result in sendResults)
-                    {
-                        if (result.Value.OpcResult)
-                        {
-                        }
-                        else
-                        {
-                            AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
-                        }
-                        allsent = allsent & result.Value.OpcResult;
-                    }
-                    if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.trimmer, "program sent succesfully");
-
-                    string key = "pc_timer_stop_stivale";
-                    var sendResultsTimer = await ccService.Send("pcM1AutoTimer", 1.6);
-                    if (sendResultsTimer.OpcResult)
-                    {
-                    }
-                    else
-                    {
-
-                    }
-                }
-            }
-            else
-            {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "verify program file");
-            }
-        }
+     
 
         #endregion
 
@@ -359,8 +300,8 @@ namespace GUI
             myPen.Width = 10;
 
             int lineHeight = 80;
-            int groupboxXShift = 400;// groupBoxKeepAliveFromPlc.Location.X;
-            int groupboxYShift = 400;// groupBoxKeepAliveFromPlc.Location.Y;
+            int groupboxXShift = groupBoxKeepAliveFromPlc.Location.X;
+            int groupboxYShift = groupBoxKeepAliveFromPlc.Location.Y;
             g.DrawLine(myPen, pictureBoxM1PLCNode.Location.X + pictureBoxM1PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM1PLCNode.Location.Y - pictureBoxM1PLCNode.Height + groupboxYShift, pictureBoxM1PLCNode.Location.X + pictureBoxM1PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM1PLCNode.Location.Y - pictureBoxM1PLCNode.Height + lineHeight + groupboxYShift);
             g.DrawLine(myPen, pictureBoxM2PLCNode.Location.X + pictureBoxM2PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM2PLCNode.Location.Y - pictureBoxM2PLCNode.Height + groupboxYShift, pictureBoxM2PLCNode.Location.X + pictureBoxM2PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM2PLCNode.Location.Y - pictureBoxM2PLCNode.Height + lineHeight + groupboxYShift);
             g.DrawLine(myPen, pictureBoxM3PLCNode.Location.X + pictureBoxM3PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM3PLCNode.Location.Y - pictureBoxM3PLCNode.Height + groupboxYShift, pictureBoxM3PLCNode.Location.X + pictureBoxM3PLCNode.Size.Width / 2 + groupboxXShift, pictureBoxM3PLCNode.Location.Y - pictureBoxM3PLCNode.Height + lineHeight + groupboxYShift);

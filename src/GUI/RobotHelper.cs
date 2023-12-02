@@ -329,27 +329,27 @@ namespace GUI
                     };
 
                     readResult = await ccService.Read(keys);
-                    WriteAsyncDataGridViewPointReached(readResult["pcM1PointReached"], dataGridViewM1TeachPoints);
+                    WriteAsyncDataGridViewPointReached(readResult["pcM1PointReached"], dataGridViewM1TeachPoints, 5);
                     //force repaint
                     dataGridViewM1TeachPoints.Invalidate(false);
 
-                    WriteAsyncDataGridViewPointReached(readResult["pcM2PointReached"], dataGridViewM2TeachPoints);
+                    WriteAsyncDataGridViewPointReached(readResult["pcM2PointReached"], dataGridViewM2TeachPoints, 5);
                     //force repaint
                     dataGridViewM2TeachPoints.Invalidate(false);
                     
-                    WriteAsyncDataGridViewPointReached(readResult["pcM3PointReached"], dataGridViewM3TeachPoints);
+                    WriteAsyncDataGridViewPointReached(readResult["pcM3PointReached"], dataGridViewM3TeachPoints, 5);
                     //force repaint
                     dataGridViewM3TeachPoints.Invalidate(false);
 
-                    WriteAsyncDataGridViewPointReached(readResult["pcM1PointReached"], dataGridViewM1TestPoints);
+                    WriteAsyncDataGridViewPointReached(readResult["pcM1PointReached"], dataGridViewM1TestPoints, 3);
                     //force repaint
                     dataGridViewM1TestPoints.Invalidate(false);
 
-                    WriteAsyncDataGridViewPointReached(readResult["pcM2PointReached"], dataGridViewM2TestPoints);
+                    WriteAsyncDataGridViewPointReached(readResult["pcM2PointReached"], dataGridViewM2TestPoints, 3);
                     //force repaint
                     dataGridViewM2TestPoints.Invalidate(false);
 
-                    WriteAsyncDataGridViewPointReached(readResult["pcM3PointReached"], dataGridViewM3TestPoints);
+                    WriteAsyncDataGridViewPointReached(readResult["pcM3PointReached"], dataGridViewM3TestPoints, 3);
                     //force repaint
                     dataGridViewM3TestPoints.Invalidate(false);
                     #endregion
@@ -756,9 +756,8 @@ namespace GUI
                 textToAppend = "offline";
             }
             else
-            {
-                
-                textToAppend = string.Format("0:0.0##", "-1.2387564");// cr.Value.ToString());
+            {                
+                textToAppend = string.Format("0:0.0##", cr.Value.ToString());
             }
             if (lbl.InvokeRequired)
             {
@@ -786,7 +785,7 @@ namespace GUI
             {
                 lbl.GetCurrentParent().Invoke((MethodInvoker)delegate
                 {
-                    if (value)
+                    if (!value)
                     {
                         lbl.BackColor = Color.FromArgb(107, 227, 162);
                         lbl.ForeColor = Color.FromArgb(51, 51, 51);
@@ -874,7 +873,8 @@ namespace GUI
             WriteOnLabelAsync(null, labelM2TeachAxisQuoteValue);
             WriteOnLabelAsync(null, labelM3TeachAxisQuoteValue);
             WriteOnLabelAsync(null, labelM4TeachAxisQuoteValue);
-            //WriteOnLabelAsync(null, labelM3TeachAxisQuoteValue);           
+            //WriteOnLabelAsync(null, labelM3TeachAxisQuoteValue);
+            WriteOnToolStripAsync(true, toolStripStatusLabelSystem);
         }
 
         private void UpdateOPCUAMNodeConnection(ClientResult cr, bool oldValue, ref bool lBitTimeout, ref int lBitCounter, PictureBox pict, Label lbl)
@@ -1779,7 +1779,7 @@ namespace GUI
             }
         }
 
-        public void WriteAsyncDataGridViewPointReached(ClientResult cr, DataGridView dt)
+        public void WriteAsyncDataGridViewPointReached(ClientResult cr, DataGridView dt, int dtIndex)
         {
             if ((cr == null) || (cr.OpcResult == false))
             {
@@ -1797,11 +1797,11 @@ namespace GUI
                         {
                             if (arrayBool[i])
                             {
-                                dt.Rows[i - 1].Cells[5].ToolTipText = "reached";
+                                dt.Rows[i - 1].Cells[dtIndex].ToolTipText = "reached";
                             }
                             else
                             {
-                                dt.Rows[i - 1].Cells[5].ToolTipText = "notreached";
+                                dt.Rows[i - 1].Cells[dtIndex].ToolTipText = "notreached";
                             }
                         }
                     });
