@@ -89,6 +89,12 @@ namespace GUI
                     prgObj.AddPoint(p);
 
                     prgObj.Save(comboBoxM1TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[0], true);
+
+                    //check if is in auto
+                    if (comboBoxM1TeachProgramList.Text == comboBoxM1PrgName.Text)
+                    {
+                        RestartRequestFromM1();
+                    }
                     //program succesfully saved
                     xDialog.MsgBox.Show("program " + comboBoxM1TeachProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
                 }
@@ -876,6 +882,13 @@ namespace GUI
                     p.CustomFloatParam = float.Parse(numericUpDownM1BootDelayTest.Value.ToString());
                     prgObj.AddPoint(p);
                     prgObj.Save(comboBoxM1TestProgramList.Text + config.Extensions[0], config.ProgramsPath[0], true);
+
+                    //check if is in auto
+                    if (comboBoxM1TestProgramList.Text == comboBoxM1PrgName.Text)
+                    {
+                        RestartRequestFromM1();
+                    }
+
                     xDialog.MsgBox.Show("program " + comboBoxM1TestProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
                 }
             }

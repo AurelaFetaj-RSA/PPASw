@@ -430,10 +430,22 @@ namespace GUI
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
-            SetPriorityToDataGridRow(1, Priority.normal);
-            UpdateColorToDataGridRow();
+            string keyToSend = "pcM1Reset";
+            var sendResult = await ccService.Send(keyToSend, 1);
+            keyToSend = "pcM2Reset";
+            sendResult = await ccService.Send(keyToSend, 1);
+            keyToSend = "pcM3Reset";
+            sendResult = await ccService.Send(keyToSend, 1);
+            keyToSend = "pcM4Reset";
+            sendResult = await ccService.Send(keyToSend, 1);
+            keyToSend = "pcM5Reset";
+            sendResult = await ccService.Send(keyToSend, 1);
+            keyToSend = "pcM6Reset";
+            sendResult = await ccService.Send(keyToSend, 1);
+            //SetPriorityToDataGridRow(1, Priority.normal);
+            //UpdateColorToDataGridRow();
         }
 
         private async void RefreshModelNameComboBox()
@@ -2249,6 +2261,8 @@ namespace GUI
         {
             RunKeyboard();
         }
+
+
     }    
 
         

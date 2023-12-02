@@ -95,6 +95,13 @@ namespace GUI
                 ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM3TeachProgramList.Text);
                 prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
                 prgObj.Save(comboBoxM3TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[2], true);
+                if ((comboBoxM3TeachProgramList.Text == comboBoxM3PrgName_st1.Text) || (comboBoxM3TeachProgramList.Text == comboBoxM3PrgName_st2.Text))
+                {
+                    RestartRequestFromM3();
+                }
+                //program succesfully saved
+                xDialog.MsgBox.Show("program " + comboBoxM3TeachProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+
             }
         }
 
@@ -811,7 +818,6 @@ namespace GUI
                 }
             }
         }
-
       
 
         private void buttonM3TestSaveProgram_Click(object sender, EventArgs e)
@@ -833,6 +839,13 @@ namespace GUI
                 ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM3TestProgramList.Text);
                 prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
                 prgObj.Save(comboBoxM3TestProgramList.Text + config.Extensions[0], config.ProgramsPath[2], true);
+                if ((comboBoxM3TestProgramList.Text == comboBoxM3PrgName_st1.Text) || (comboBoxM3TestProgramList.Text == comboBoxM3PrgName_st2.Text))
+                {
+                    RestartRequestFromM3();
+                }
+                //program succesfully saved
+                xDialog.MsgBox.Show("program " + comboBoxM3TestProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+
             }
         }
     }

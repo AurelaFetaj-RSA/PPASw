@@ -32,6 +32,7 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle11 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -113,7 +114,6 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle21 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle42 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle52 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -181,13 +181,15 @@
             this.contextMenuStripT3_1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemT3_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT3_1 = new System.Windows.Forms.ToolStripComboBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.imageListKey = new System.Windows.Forms.ImageList(this.components);
+            this.buttonM2ResetServo = new System.Windows.Forms.Button();
             this.comboBoxM2TeachRecipeName = new System.Windows.Forms.ComboBox();
             this.label30 = new System.Windows.Forms.Label();
             this.textBoxM2Separator = new System.Windows.Forms.TextBox();
             this.groupBoxM2Print = new System.Windows.Forms.GroupBox();
             this.buttonM2PrintCycle = new System.Windows.Forms.Button();
             this.lbLed1018M2_T = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.buttonM2ResetServo = new System.Windows.Forms.Button();
             this.groupBoxM2Constrast = new System.Windows.Forms.GroupBox();
             this.buttonM2ContrastOpening = new System.Windows.Forms.Button();
             this.buttonM2ContrastClosing = new System.Windows.Forms.Button();
@@ -242,6 +244,7 @@
             this.contextMenuStripT3_2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemT3_2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT3_2 = new System.Windows.Forms.ToolStripComboBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.buttonM2ResetTest = new System.Windows.Forms.Button();
             this.comboBoxM2TestRecipeName = new System.Windows.Forms.ComboBox();
             this.label33 = new System.Windows.Forms.Label();
@@ -357,6 +360,7 @@
             this.contextMenuStripT4_1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemT4_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT4_1 = new System.Windows.Forms.ToolStripComboBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.comboBoxM3TeachRecipeName = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
             this.buttonM3NormHoriFwd = new System.Windows.Forms.Button();
@@ -458,6 +462,7 @@
             this.contextMenuStripT4_2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemT4_2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT4_2 = new System.Windows.Forms.ToolStripComboBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.buttonM3ResetTest = new System.Windows.Forms.Button();
             this.comboBoxM3TestRecipeName = new System.Windows.Forms.ComboBox();
             this.label35 = new System.Windows.Forms.Label();
@@ -615,11 +620,11 @@
             this.toolStripComboBoxT0 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripMenuItemT0Keyboard = new System.Windows.Forms.ToolStripMenuItem();
             this.checkBoxT0Keyboard = new System.Windows.Forms.CheckBox();
-            this.imageListKey = new System.Windows.Forms.ImageList(this.components);
             this.comboBoxT0RecipeName = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonResetCycle = new System.Windows.Forms.Button();
+            this.imageListStartStop = new System.Windows.Forms.ImageList(this.components);
             this.dataGridViewMessages = new System.Windows.Forms.DataGridView();
             this.datetime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.priority = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -631,7 +636,6 @@
             this.toolStripStatusLabelDateTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelSystem = new System.Windows.Forms.ToolStripStatusLabel();
             this.checkBoxPause = new System.Windows.Forms.CheckBox();
-            this.imageListStartStop = new System.Windows.Forms.ImageList(this.components);
             this.checkBoxStartStop = new System.Windows.Forms.CheckBox();
             this.groupBoxM6 = new System.Windows.Forms.GroupBox();
             this.labelM5OnPercentage = new System.Windows.Forms.Label();
@@ -751,6 +755,8 @@
             this.labelManageD1Param1Name = new System.Windows.Forms.Label();
             this.labelManageD1Name = new System.Windows.Forms.Label();
             this.tabPageT0_2_1 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.checkBoxRecipeNewKey = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.buttonAddNewRecipe = new System.Windows.Forms.Button();
             this.textBoxM6Test = new System.Windows.Forms.TextBox();
             this.textBoxM3Test = new System.Windows.Forms.TextBox();
@@ -784,6 +790,7 @@
             this.labelRecipeNameT0_1 = new System.Windows.Forms.Label();
             this.textBoxMRecipeName = new System.Windows.Forms.TextBox();
             this.tabPageT0_2_2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.buttonMRecipeDeleteAll = new System.Windows.Forms.Button();
             this.buttonMRecipeDelete = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
@@ -876,6 +883,7 @@
             this.toolStripMenuItemT1_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT1_1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripMenuItemT1_1Keyboard = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.comboBoxM1TeachRecipeName = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.numericUpDownM1TimerBootTeach = new System.Windows.Forms.NumericUpDown();
@@ -936,6 +944,7 @@
             this.toolStripMenuItemT1_2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT1_2 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripMenuItemT1_2Keyboard = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.buttonM1ResetTest = new System.Windows.Forms.Button();
             this.comboBoxM1TestRecipeName = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -1052,15 +1061,6 @@
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
             this.imageListMainControl = new System.Windows.Forms.ImageList(this.components);
             this.imageListNodes = new System.Windows.Forms.ImageList(this.components);
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBoxRecipeNewKey = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.tabPageT3_1.SuspendLayout();
             this.contextMenuStripT3_1.SuspendLayout();
             this.groupBoxM2Print.SuspendLayout();
@@ -1224,6 +1224,42 @@
             this.toolStripComboBoxT3_1.Name = "toolStripComboBoxT3_1";
             this.toolStripComboBoxT3_1.Size = new System.Drawing.Size(120, 26);
             // 
+            // checkBox2
+            // 
+            this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox2.ImageIndex = 0;
+            this.checkBox2.ImageList = this.imageListKey;
+            this.checkBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox2.Location = new System.Drawing.Point(816, 625);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(86, 86);
+            this.checkBox2.TabIndex = 299;
+            this.checkBox2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBox2.ThreeState = true;
+            this.checkBox2.UseVisualStyleBackColor = false;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // imageListKey
+            // 
+            this.imageListKey.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListKey.ImageStream")));
+            this.imageListKey.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListKey.Images.SetKeyName(0, "keyboard.png");
+            // 
+            // buttonM2ResetServo
+            // 
+            this.buttonM2ResetServo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM2ResetServo.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM2ResetServo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM2ResetServo.Location = new System.Drawing.Point(597, 631);
+            this.buttonM2ResetServo.Name = "buttonM2ResetServo";
+            this.buttonM2ResetServo.Size = new System.Drawing.Size(90, 48);
+            this.buttonM2ResetServo.TabIndex = 149;
+            this.buttonM2ResetServo.Text = "reset alarm";
+            this.buttonM2ResetServo.UseVisualStyleBackColor = false;
+            this.buttonM2ResetServo.Click += new System.EventHandler(this.buttonM2ResetServo_Click);
+            // 
             // comboBoxM2TeachRecipeName
             // 
             this.comboBoxM2TeachRecipeName.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1301,19 +1337,6 @@
             this.lbLed1018M2_T.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
             this.lbLed1018M2_T.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
             this.lbLed1018M2_T.TabIndex = 289;
-            // 
-            // buttonM2ResetServo
-            // 
-            this.buttonM2ResetServo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.buttonM2ResetServo.Font = new System.Drawing.Font("Verdana", 9.75F);
-            this.buttonM2ResetServo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2ResetServo.Location = new System.Drawing.Point(597, 631);
-            this.buttonM2ResetServo.Name = "buttonM2ResetServo";
-            this.buttonM2ResetServo.Size = new System.Drawing.Size(90, 48);
-            this.buttonM2ResetServo.TabIndex = 149;
-            this.buttonM2ResetServo.Text = "reset alarm";
-            this.buttonM2ResetServo.UseVisualStyleBackColor = false;
-            this.buttonM2ResetServo.Click += new System.EventHandler(this.buttonM2ResetServo_Click);
             // 
             // groupBoxM2Constrast
             // 
@@ -2172,6 +2195,23 @@
             this.toolStripComboBoxT3_2.IntegralHeight = false;
             this.toolStripComboBoxT3_2.Name = "toolStripComboBoxT3_2";
             this.toolStripComboBoxT3_2.Size = new System.Drawing.Size(120, 26);
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox6.ImageIndex = 0;
+            this.checkBox6.ImageList = this.imageListKey;
+            this.checkBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox6.Location = new System.Drawing.Point(815, 610);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(86, 86);
+            this.checkBox6.TabIndex = 296;
+            this.checkBox6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBox6.ThreeState = true;
+            this.checkBox6.UseVisualStyleBackColor = false;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
             // 
             // buttonM2ResetTest
             // 
@@ -4379,7 +4419,7 @@
             tabPageFormatStyle6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle6.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT4_1.FormatStyle = tabPageFormatStyle6;
-            this.tabPageT4_1.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT4_1.Location = new System.Drawing.Point(0, 0);
             this.tabPageT4_1.Name = "tabPageT4_1";
             tabPageColorStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle12.BackFadeColor = System.Drawing.Color.Transparent;
@@ -4396,12 +4436,12 @@
             tabPageColorStyle22.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle22.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT4_1.SelectedStyle = tabPageColorStyle22;
-            this.tabPageT4_1.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT4_1.Size = new System.Drawing.Size(0, 0);
             this.tabPageT4_1.StyleFromParent = false;
             this.tabPageT4_1.TabIndex = 14;
             this.tabPageT4_1.Text = "teach";
             this.tabPageT4_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_1.TextBounds")));
-            this.tabPageT4_1.TextSize = new System.Drawing.SizeF(50.55989F, 21.44531F);
+            this.tabPageT4_1.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT4_1.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT4_1
@@ -4431,6 +4471,23 @@
             this.toolStripComboBoxT4_1.IntegralHeight = false;
             this.toolStripComboBoxT4_1.Name = "toolStripComboBoxT4_1";
             this.toolStripComboBoxT4_1.Size = new System.Drawing.Size(120, 26);
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox8.ImageIndex = 0;
+            this.checkBox8.ImageList = this.imageListKey;
+            this.checkBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox8.Location = new System.Drawing.Point(808, 612);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(86, 86);
+            this.checkBox8.TabIndex = 297;
+            this.checkBox8.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBox8.ThreeState = true;
+            this.checkBox8.UseVisualStyleBackColor = false;
+            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
             // 
             // comboBoxM3TeachRecipeName
             // 
@@ -6152,7 +6209,7 @@
             tabPageFormatStyle8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle8.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT4_2.FormatStyle = tabPageFormatStyle8;
-            this.tabPageT4_2.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT4_2.Location = new System.Drawing.Point(0, 0);
             this.tabPageT4_2.Name = "tabPageT4_2";
             tabPageColorStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle15.BackFadeColor = System.Drawing.Color.Transparent;
@@ -6169,12 +6226,12 @@
             tabPageColorStyle16.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle16.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT4_2.SelectedStyle = tabPageColorStyle16;
-            this.tabPageT4_2.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT4_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT4_2.StyleFromParent = false;
             this.tabPageT4_2.TabIndex = 15;
             this.tabPageT4_2.Text = "test";
             this.tabPageT4_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_2.TextBounds")));
-            this.tabPageT4_2.TextSize = new System.Drawing.SizeF(36.72395F, 21.44531F);
+            this.tabPageT4_2.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT4_2.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT4_2
@@ -6204,6 +6261,23 @@
             this.toolStripComboBoxT4_2.IntegralHeight = false;
             this.toolStripComboBoxT4_2.Name = "toolStripComboBoxT4_2";
             this.toolStripComboBoxT4_2.Size = new System.Drawing.Size(120, 26);
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox7.ImageIndex = 0;
+            this.checkBox7.ImageList = this.imageListKey;
+            this.checkBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox7.Location = new System.Drawing.Point(815, 610);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(86, 86);
+            this.checkBox7.TabIndex = 296;
+            this.checkBox7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBox7.ThreeState = true;
+            this.checkBox7.UseVisualStyleBackColor = false;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
             // 
             // buttonM3ResetTest
             // 
@@ -6454,7 +6528,7 @@
             tabPageFormatStyle9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle9.Padding = new System.Windows.Forms.Padding(17, 5, 17, 5);
             this.tabPageT4_3.FormatStyle = tabPageFormatStyle9;
-            this.tabPageT4_3.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT4_3.Location = new System.Drawing.Point(0, 0);
             this.tabPageT4_3.Name = "tabPageT4_3";
             tabPageColorStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle17.BackFadeColor = System.Drawing.Color.Transparent;
@@ -6471,12 +6545,12 @@
             tabPageColorStyle18.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle18.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT4_3.SelectedStyle = tabPageColorStyle18;
-            this.tabPageT4_3.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT4_3.Size = new System.Drawing.Size(0, 0);
             this.tabPageT4_3.StyleFromParent = false;
             this.tabPageT4_3.TabIndex = 16;
             this.tabPageT4_3.Text = "input";
             this.tabPageT4_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_3.TextBounds")));
-            this.tabPageT4_3.TextSize = new System.Drawing.SizeF(47.47395F, 21.44531F);
+            this.tabPageT4_3.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT4_3.UseParentTabStripPlacement = false;
             // 
             // lbLed1
@@ -7396,7 +7470,7 @@
             tabPageFormatStyle10.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle10.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.tabPageT4_4.FormatStyle = tabPageFormatStyle10;
-            this.tabPageT4_4.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT4_4.Location = new System.Drawing.Point(0, 0);
             this.tabPageT4_4.Name = "tabPageT4_4";
             tabPageColorStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle19.BackFadeColor = System.Drawing.Color.Transparent;
@@ -7413,12 +7487,12 @@
             tabPageColorStyle20.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle20.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT4_4.SelectedStyle = tabPageColorStyle20;
-            this.tabPageT4_4.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT4_4.Size = new System.Drawing.Size(0, 0);
             this.tabPageT4_4.StyleFromParent = false;
             this.tabPageT4_4.TabIndex = 17;
             this.tabPageT4_4.Text = "output";
             this.tabPageT4_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_4.TextBounds")));
-            this.tabPageT4_4.TextSize = new System.Drawing.SizeF(59.4427F, 21.44531F);
+            this.tabPageT4_4.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT4_4.UseParentTabStripPlacement = false;
             // 
             // tabPageT5_1
@@ -9139,7 +9213,7 @@
             tabPageFormatStyle21.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle21.Padding = new System.Windows.Forms.Padding(5);
             this.tabPageT0_1.FormatStyle = tabPageFormatStyle21;
-            this.tabPageT0_1.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT0_1.Location = new System.Drawing.Point(96, 36);
             this.tabPageT0_1.Name = "tabPageT0_1";
             tabPageColorStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle42.BackFadeColor = System.Drawing.Color.Transparent;
@@ -9156,14 +9230,14 @@
             tabPageColorStyle52.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle52.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT0_1.SelectedStyle = tabPageColorStyle52;
-            this.tabPageT0_1.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT0_1.Size = new System.Drawing.Size(914, 716);
             this.tabPageT0_1.StyleFromParent = false;
             this.tabPageT0_1.TabIndex = 1;
             this.tabPageT0_1.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabPageT0_1.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Bottom;
             this.tabPageT0_1.Text = "automatic";
             this.tabPageT0_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_1.TextBounds")));
-            this.tabPageT0_1.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT0_1.TextSize = new System.Drawing.SizeF(87.68488F, 21.44531F);
             this.tabPageT0_1.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT0
@@ -9219,17 +9293,11 @@
             this.checkBoxT0Keyboard.UseVisualStyleBackColor = false;
             this.checkBoxT0Keyboard.Click += new System.EventHandler(this.checkBoxT0Keyboard_Click);
             // 
-            // imageListKey
-            // 
-            this.imageListKey.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListKey.ImageStream")));
-            this.imageListKey.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListKey.Images.SetKeyName(0, "keyboard.png");
-            // 
             // comboBoxT0RecipeName
             // 
             this.comboBoxT0RecipeName.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxT0RecipeName.FormattingEnabled = true;
-            this.comboBoxT0RecipeName.Location = new System.Drawing.Point(110, 469);
+            this.comboBoxT0RecipeName.Location = new System.Drawing.Point(112, 469);
             this.comboBoxT0RecipeName.Name = "comboBoxT0RecipeName";
             this.comboBoxT0RecipeName.Size = new System.Drawing.Size(100, 33);
             this.comboBoxT0RecipeName.TabIndex = 145;
@@ -9240,7 +9308,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label26.Location = new System.Drawing.Point(10, 474);
+            this.label26.Location = new System.Drawing.Point(12, 474);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(90, 16);
             this.label26.TabIndex = 144;
@@ -9249,11 +9317,11 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(641, 406);
+            this.button1.Location = new System.Drawing.Point(15, 511);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 40);
             this.button1.TabIndex = 143;
-            this.button1.Text = "RESET CYCLE";
+            this.button1.Text = "RESET CYCLE NUMBER";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -9261,13 +9329,25 @@
             // buttonResetCycle
             // 
             this.buttonResetCycle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonResetCycle.Location = new System.Drawing.Point(13, 514);
+            this.buttonResetCycle.ImageIndex = 5;
+            this.buttonResetCycle.ImageList = this.imageListStartStop;
+            this.buttonResetCycle.Location = new System.Drawing.Point(527, 416);
             this.buttonResetCycle.Name = "buttonResetCycle";
-            this.buttonResetCycle.Size = new System.Drawing.Size(198, 40);
+            this.buttonResetCycle.Size = new System.Drawing.Size(112, 135);
             this.buttonResetCycle.TabIndex = 142;
-            this.buttonResetCycle.Text = "RESET CYCLE";
             this.buttonResetCycle.UseVisualStyleBackColor = true;
             this.buttonResetCycle.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // imageListStartStop
+            // 
+            this.imageListStartStop.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListStartStop.ImageStream")));
+            this.imageListStartStop.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListStartStop.Images.SetKeyName(0, "play (3).png");
+            this.imageListStartStop.Images.SetKeyName(1, "stop.png");
+            this.imageListStartStop.Images.SetKeyName(2, "pause_on.png");
+            this.imageListStartStop.Images.SetKeyName(3, "pause_off.png");
+            this.imageListStartStop.Images.SetKeyName(4, "indeterminate.png");
+            this.imageListStartStop.Images.SetKeyName(5, "reset.png");
             // 
             // dataGridViewMessages
             // 
@@ -9301,7 +9381,7 @@
             this.dataGridViewMessages.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewMessages.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridViewMessages.EnableHeadersVisualStyles = false;
-            this.dataGridViewMessages.Location = new System.Drawing.Point(0, -153);
+            this.dataGridViewMessages.Location = new System.Drawing.Point(0, 563);
             this.dataGridViewMessages.MultiSelect = false;
             this.dataGridViewMessages.Name = "dataGridViewMessages";
             this.dataGridViewMessages.ReadOnly = true;
@@ -9324,7 +9404,7 @@
             this.dataGridViewMessages.RowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridViewMessages.RowTemplate.Height = 24;
             this.dataGridViewMessages.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridViewMessages.Size = new System.Drawing.Size(0, 100);
+            this.dataGridViewMessages.Size = new System.Drawing.Size(914, 100);
             this.dataGridViewMessages.TabIndex = 141;
             // 
             // datetime
@@ -9366,9 +9446,9 @@
             // 
             this.statusStripSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(190)))), ((int)(((byte)(186)))));
             this.statusStripSeparator.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusStripSeparator.Location = new System.Drawing.Point(0, -53);
+            this.statusStripSeparator.Location = new System.Drawing.Point(0, 663);
             this.statusStripSeparator.Name = "statusStripSeparator";
-            this.statusStripSeparator.Size = new System.Drawing.Size(0, 22);
+            this.statusStripSeparator.Size = new System.Drawing.Size(914, 22);
             this.statusStripSeparator.SizingGrip = false;
             this.statusStripSeparator.TabIndex = 140;
             // 
@@ -9381,9 +9461,9 @@
             this.toolStripStatusLabelSN,
             this.toolStripStatusLabelDateTime,
             this.toolStripStatusLabelSystem});
-            this.statusStripT0.Location = new System.Drawing.Point(0, -31);
+            this.statusStripT0.Location = new System.Drawing.Point(0, 685);
             this.statusStripT0.Name = "statusStripT0";
-            this.statusStripT0.Size = new System.Drawing.Size(0, 31);
+            this.statusStripT0.Size = new System.Drawing.Size(914, 31);
             this.statusStripT0.SizingGrip = false;
             this.statusStripT0.TabIndex = 139;
             // 
@@ -9422,7 +9502,7 @@
             this.checkBoxPause.ImageIndex = 2;
             this.checkBoxPause.ImageList = this.imageListStartStop;
             this.checkBoxPause.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxPause.Location = new System.Drawing.Point(500, 420);
+            this.checkBoxPause.Location = new System.Drawing.Point(395, 414);
             this.checkBoxPause.Name = "checkBoxPause";
             this.checkBoxPause.Size = new System.Drawing.Size(112, 135);
             this.checkBoxPause.TabIndex = 135;
@@ -9431,16 +9511,6 @@
             this.checkBoxPause.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.checkBoxPause.UseVisualStyleBackColor = false;
             this.checkBoxPause.CheckStateChanged += new System.EventHandler(this.checkBoxPause_CheckStateChanged);
-            // 
-            // imageListStartStop
-            // 
-            this.imageListStartStop.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListStartStop.ImageStream")));
-            this.imageListStartStop.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageListStartStop.Images.SetKeyName(0, "play (3).png");
-            this.imageListStartStop.Images.SetKeyName(1, "stop.png");
-            this.imageListStartStop.Images.SetKeyName(2, "pause_on.png");
-            this.imageListStartStop.Images.SetKeyName(3, "pause_off.png");
-            this.imageListStartStop.Images.SetKeyName(4, "indeterminate.png");
             // 
             // checkBoxStartStop
             // 
@@ -9451,7 +9521,7 @@
             this.checkBoxStartStop.ImageIndex = 0;
             this.checkBoxStartStop.ImageList = this.imageListStartStop;
             this.checkBoxStartStop.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxStartStop.Location = new System.Drawing.Point(250, 420);
+            this.checkBoxStartStop.Location = new System.Drawing.Point(268, 414);
             this.checkBoxStartStop.Name = "checkBoxStartStop";
             this.checkBoxStartStop.Size = new System.Drawing.Size(110, 135);
             this.checkBoxStartStop.TabIndex = 134;
@@ -10732,7 +10802,7 @@
             tabPageFormatStyle23.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle23.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT0_2.FormatStyle = tabPageFormatStyle23;
-            this.tabPageT0_2.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT0_2.Location = new System.Drawing.Point(96, 36);
             this.tabPageT0_2.Name = "tabPageT0_2";
             tabPageColorStyle45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle45.BackFadeColor = System.Drawing.Color.Transparent;
@@ -10752,13 +10822,13 @@
             tabPageColorStyle48.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle48.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT0_2.SelectedStyle = tabPageColorStyle48;
-            this.tabPageT0_2.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT0_2.Size = new System.Drawing.Size(914, 716);
             this.tabPageT0_2.StyleFromParent = false;
             this.tabPageT0_2.TabIndex = 2;
             this.tabPageT0_2.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Left;
             this.tabPageT0_2.Text = "recipies";
             this.tabPageT0_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2.TextBounds")));
-            this.tabPageT0_2.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT0_2.TextSize = new System.Drawing.SizeF(68.48957F, 21.44531F);
             this.tabPageT0_2.UseParentTabStripPlacement = false;
             // 
             // textBoxManageD4Param4
@@ -11199,14 +11269,47 @@
             this.tabPageT0_2_1.UseParentButtons = false;
             this.tabPageT0_2_1.UseParentTabStripPlacement = false;
             // 
+            // checkBoxRecipeNewKey
+            // 
+            this.checkBoxRecipeNewKey.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxRecipeNewKey.AutoSize = true;
+            this.checkBoxRecipeNewKey.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBoxRecipeNewKey.ImageIndex = 0;
+            this.checkBoxRecipeNewKey.ImageList = this.imageListKey;
+            this.checkBoxRecipeNewKey.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxRecipeNewKey.Location = new System.Drawing.Point(720, 610);
+            this.checkBoxRecipeNewKey.Name = "checkBoxRecipeNewKey";
+            this.checkBoxRecipeNewKey.Size = new System.Drawing.Size(86, 86);
+            this.checkBoxRecipeNewKey.TabIndex = 148;
+            this.checkBoxRecipeNewKey.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBoxRecipeNewKey.ThreeState = true;
+            this.checkBoxRecipeNewKey.UseVisualStyleBackColor = false;
+            this.checkBoxRecipeNewKey.CheckedChanged += new System.EventHandler(this.checkBoxRecipeNewKey_CheckedChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox1.ImageIndex = 0;
+            this.checkBox1.ImageList = this.imageListKey;
+            this.checkBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox1.Location = new System.Drawing.Point(820, 460);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(86, 86);
+            this.checkBox1.TabIndex = 147;
+            this.checkBox1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBox1.ThreeState = true;
+            this.checkBox1.UseVisualStyleBackColor = false;
+            // 
             // buttonAddNewRecipe
             // 
             this.buttonAddNewRecipe.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonAddNewRecipe.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonAddNewRecipe.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonAddNewRecipe.Location = new System.Drawing.Point(314, 523);
+            this.buttonAddNewRecipe.Location = new System.Drawing.Point(308, 619);
             this.buttonAddNewRecipe.Name = "buttonAddNewRecipe";
-            this.buttonAddNewRecipe.Size = new System.Drawing.Size(160, 110);
+            this.buttonAddNewRecipe.Size = new System.Drawing.Size(180, 64);
             this.buttonAddNewRecipe.TabIndex = 142;
             this.buttonAddNewRecipe.Text = "CREATE RECIPE";
             this.buttonAddNewRecipe.UseVisualStyleBackColor = false;
@@ -11343,7 +11446,7 @@
             this.groupBoxRecipeM4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxRecipeM4.Location = new System.Drawing.Point(20, 300);
             this.groupBoxRecipeM4.Name = "groupBoxRecipeM4";
-            this.groupBoxRecipeM4.Size = new System.Drawing.Size(200, 200);
+            this.groupBoxRecipeM4.Size = new System.Drawing.Size(240, 200);
             this.groupBoxRecipeM4.TabIndex = 117;
             this.groupBoxRecipeM4.TabStop = false;
             this.groupBoxRecipeM4.Text = "padlaser";
@@ -11408,18 +11511,20 @@
             // textBoxLaserLine2
             // 
             this.textBoxLaserLine2.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxLaserLine2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxLaserLine2.Location = new System.Drawing.Point(15, 160);
             this.textBoxLaserLine2.Name = "textBoxLaserLine2";
-            this.textBoxLaserLine2.Size = new System.Drawing.Size(160, 23);
+            this.textBoxLaserLine2.Size = new System.Drawing.Size(220, 27);
             this.textBoxLaserLine2.TabIndex = 140;
             this.textBoxLaserLine2.Text = "YYYYYYYYYYYYYYYYYYY";
             // 
             // textBoxLaserLine1
             // 
             this.textBoxLaserLine1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBoxLaserLine1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxLaserLine1.Location = new System.Drawing.Point(15, 110);
             this.textBoxLaserLine1.Name = "textBoxLaserLine1";
-            this.textBoxLaserLine1.Size = new System.Drawing.Size(160, 23);
+            this.textBoxLaserLine1.Size = new System.Drawing.Size(220, 27);
             this.textBoxLaserLine1.TabIndex = 139;
             this.textBoxLaserLine1.Text = "XXXXXXXXXXXXXXXXXXX";
             // 
@@ -11567,7 +11672,7 @@
             this.groupBoxRecipeM1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxRecipeM1.Location = new System.Drawing.Point(20, 80);
             this.groupBoxRecipeM1.Name = "groupBoxRecipeM1";
-            this.groupBoxRecipeM1.Size = new System.Drawing.Size(200, 200);
+            this.groupBoxRecipeM1.Size = new System.Drawing.Size(240, 200);
             this.groupBoxRecipeM1.TabIndex = 114;
             this.groupBoxRecipeM1.TabStop = false;
             this.groupBoxRecipeM1.Text = "trimmer";
@@ -11691,6 +11796,23 @@
             this.tabPageT0_2_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2_2.TextBounds")));
             this.tabPageT0_2_2.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT0_2_2.UseParentTabStripPlacement = false;
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox3.ImageIndex = 0;
+            this.checkBox3.ImageList = this.imageListKey;
+            this.checkBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox3.Location = new System.Drawing.Point(720, 610);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(86, 86);
+            this.checkBox3.TabIndex = 166;
+            this.checkBox3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBox3.ThreeState = true;
+            this.checkBox3.UseVisualStyleBackColor = false;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // buttonMRecipeDeleteAll
             // 
@@ -12090,7 +12212,7 @@
             tabPageFormatStyle26.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle26.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT0_3.FormatStyle = tabPageFormatStyle26;
-            this.tabPageT0_3.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT0_3.Location = new System.Drawing.Point(96, 36);
             this.tabPageT0_3.Name = "tabPageT0_3";
             tabPageColorStyle49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle49.BackFadeColor = System.Drawing.Color.Transparent;
@@ -12107,14 +12229,14 @@
             tabPageColorStyle50.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle50.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT0_3.SelectedStyle = tabPageColorStyle50;
-            this.tabPageT0_3.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT0_3.Size = new System.Drawing.Size(914, 716);
             this.tabPageT0_3.StyleFromParent = false;
             this.tabPageT0_3.TabIndex = 3;
             this.tabPageT0_3.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabPageT0_3.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Bottom;
             this.tabPageT0_3.Text = "nodes";
             this.tabPageT0_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_3.TextBounds")));
-            this.tabPageT0_3.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT0_3.TextSize = new System.Drawing.SizeF(54.43489F, 21.44531F);
             this.tabPageT0_3.UseParentTabStripPlacement = false;
             this.tabPageT0_3.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageT0_3_Paint);
             // 
@@ -12485,14 +12607,14 @@
             this.tabPage2.Controls.Add(this.label5);
             tabPageFormatStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.FormatStyle = tabPageFormatStyle27;
-            this.tabPage2.Location = new System.Drawing.Point(0, 0);
+            this.tabPage2.Location = new System.Drawing.Point(96, 36);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.ParentPage = this.tabPageT0;
-            this.tabPage2.Size = new System.Drawing.Size(0, 0);
+            this.tabPage2.Size = new System.Drawing.Size(914, 716);
             this.tabPage2.TabIndex = 27;
             this.tabPage2.Text = "diagnostics";
             this.tabPage2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage2.TextBounds")));
-            this.tabPage2.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPage2.TextSize = new System.Drawing.SizeF(97.48957F, 21.44531F);
             // 
             // labelM5ExitBelt3State
             // 
@@ -13004,6 +13126,22 @@
             this.toolStripMenuItemT1_1Keyboard.Size = new System.Drawing.Size(176, 22);
             this.toolStripMenuItemT1_1Keyboard.Text = "keyboard";
             this.toolStripMenuItemT1_1Keyboard.Click += new System.EventHandler(this.toolStripMenuItemT1_1Keyboard_Click);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox4.ImageIndex = 0;
+            this.checkBox4.ImageList = this.imageListKey;
+            this.checkBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox4.Location = new System.Drawing.Point(815, 610);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(86, 86);
+            this.checkBox4.TabIndex = 293;
+            this.checkBox4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBox4.ThreeState = true;
+            this.checkBox4.UseVisualStyleBackColor = false;
             // 
             // comboBoxM1TeachRecipeName
             // 
@@ -13853,7 +13991,6 @@
             this.comboBoxM1TeachProgramList.Name = "comboBoxM1TeachProgramList";
             this.comboBoxM1TeachProgramList.Size = new System.Drawing.Size(220, 33);
             this.comboBoxM1TeachProgramList.TabIndex = 139;
-            this.comboBoxM1TeachProgramList.Text = "PRYYYY-YYY-XX00";
             // 
             // tabPageT1
             // 
@@ -13978,6 +14115,22 @@
             this.toolStripMenuItemT1_2Keyboard.Size = new System.Drawing.Size(176, 22);
             this.toolStripMenuItemT1_2Keyboard.Text = "keyboard";
             this.toolStripMenuItemT1_2Keyboard.Click += new System.EventHandler(this.toolStripMenuItemT1_2Keyboard_Click);
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox5.ImageIndex = 0;
+            this.checkBox5.ImageList = this.imageListKey;
+            this.checkBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox5.Location = new System.Drawing.Point(815, 610);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(86, 86);
+            this.checkBox5.TabIndex = 149;
+            this.checkBox5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBox5.ThreeState = true;
+            this.checkBox5.UseVisualStyleBackColor = false;
             // 
             // buttonM1ResetTest
             // 
@@ -16191,36 +16344,36 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageT4_2);
-            this.tabControlMain.Controls.Add(this.tabPageT4_1);
-            this.tabControlMain.Controls.Add(this.tabPageT4);
-            this.tabControlMain.Controls.Add(this.tabPageT3_2);
-            this.tabControlMain.Controls.Add(this.tabPageT3_1);
-            this.tabControlMain.Controls.Add(this.tabPageT3);
-            this.tabControlMain.Controls.Add(this.tabPageT2);
-            this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
-            this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
-            this.tabControlMain.Controls.Add(this.tabPageT0_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_1);
-            this.tabControlMain.Controls.Add(this.tabPageT0);
-            this.tabControlMain.Controls.Add(this.tabPageT1_1);
-            this.tabControlMain.Controls.Add(this.tabPageT1);
-            this.tabControlMain.Controls.Add(this.tabPageT5_1);
-            this.tabControlMain.Controls.Add(this.tabPageT5);
-            this.tabControlMain.Controls.Add(this.tabPageT1_2);
-            this.tabControlMain.Controls.Add(this.tabPageT0_3);
             this.tabControlMain.Controls.Add(this.tabPageT7);
             this.tabControlMain.Controls.Add(this.tabPageT6);
+            this.tabControlMain.Controls.Add(this.tabPageT5);
+            this.tabControlMain.Controls.Add(this.tabPageT4);
+            this.tabControlMain.Controls.Add(this.tabPageT3);
+            this.tabControlMain.Controls.Add(this.tabPageT2);
+            this.tabControlMain.Controls.Add(this.tabPageT1);
+            this.tabControlMain.Controls.Add(this.tabPageT0);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
+            this.tabControlMain.Controls.Add(this.tabPageT0_3);
             this.tabControlMain.Controls.Add(this.tabPage2);
+            this.tabControlMain.Controls.Add(this.tabPageT1_1);
+            this.tabControlMain.Controls.Add(this.tabPageT1_2);
             this.tabControlMain.Controls.Add(this.tabPageT1_3);
             this.tabControlMain.Controls.Add(this.tabPageT1_4);
             this.tabControlMain.Controls.Add(this.tabPage1);
             this.tabControlMain.Controls.Add(this.tabPage3);
             this.tabControlMain.Controls.Add(this.tabPage4);
+            this.tabControlMain.Controls.Add(this.tabPageT3_1);
+            this.tabControlMain.Controls.Add(this.tabPageT3_2);
             this.tabControlMain.Controls.Add(this.tabPageT3_3);
             this.tabControlMain.Controls.Add(this.tabPageT3_4);
+            this.tabControlMain.Controls.Add(this.tabPageT4_1);
+            this.tabControlMain.Controls.Add(this.tabPageT4_2);
             this.tabControlMain.Controls.Add(this.tabPageT4_3);
             this.tabControlMain.Controls.Add(this.tabPageT4_4);
+            this.tabControlMain.Controls.Add(this.tabPageT5_1);
             this.tabControlMain.Controls.Add(this.tabPageT5_2);
             this.tabControlMain.Controls.Add(this.tabPageT5_3);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
@@ -16259,7 +16412,7 @@
             this.tabPageT6,
             this.tabPageT7});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageT4_2;
+            this.tabControlMain.SelectedPage = this.tabPageT0_1;
             tabPageColorStyle65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle65.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle65.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
@@ -16318,156 +16471,6 @@
             this.imageListNodes.Images.SetKeyName(1, "plc_off.png");
             this.imageListNodes.Images.SetKeyName(2, "iot_on.png");
             this.imageListNodes.Images.SetKeyName(3, "iot_off.png");
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox1.ImageIndex = 0;
-            this.checkBox1.ImageList = this.imageListKey;
-            this.checkBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox1.Location = new System.Drawing.Point(820, 460);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(86, 86);
-            this.checkBox1.TabIndex = 147;
-            this.checkBox1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBox1.ThreeState = true;
-            this.checkBox1.UseVisualStyleBackColor = false;
-            // 
-            // checkBoxRecipeNewKey
-            // 
-            this.checkBoxRecipeNewKey.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBoxRecipeNewKey.AutoSize = true;
-            this.checkBoxRecipeNewKey.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBoxRecipeNewKey.ImageIndex = 0;
-            this.checkBoxRecipeNewKey.ImageList = this.imageListKey;
-            this.checkBoxRecipeNewKey.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxRecipeNewKey.Location = new System.Drawing.Point(720, 610);
-            this.checkBoxRecipeNewKey.Name = "checkBoxRecipeNewKey";
-            this.checkBoxRecipeNewKey.Size = new System.Drawing.Size(86, 86);
-            this.checkBoxRecipeNewKey.TabIndex = 148;
-            this.checkBoxRecipeNewKey.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBoxRecipeNewKey.ThreeState = true;
-            this.checkBoxRecipeNewKey.UseVisualStyleBackColor = false;
-            this.checkBoxRecipeNewKey.CheckedChanged += new System.EventHandler(this.checkBoxRecipeNewKey_CheckedChanged);
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox3.ImageIndex = 0;
-            this.checkBox3.ImageList = this.imageListKey;
-            this.checkBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox3.Location = new System.Drawing.Point(720, 610);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(86, 86);
-            this.checkBox3.TabIndex = 166;
-            this.checkBox3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBox3.ThreeState = true;
-            this.checkBox3.UseVisualStyleBackColor = false;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox4.ImageIndex = 0;
-            this.checkBox4.ImageList = this.imageListKey;
-            this.checkBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox4.Location = new System.Drawing.Point(815, 610);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(86, 86);
-            this.checkBox4.TabIndex = 293;
-            this.checkBox4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBox4.ThreeState = true;
-            this.checkBox4.UseVisualStyleBackColor = false;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox5.ImageIndex = 0;
-            this.checkBox5.ImageList = this.imageListKey;
-            this.checkBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox5.Location = new System.Drawing.Point(815, 610);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(86, 86);
-            this.checkBox5.TabIndex = 149;
-            this.checkBox5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBox5.ThreeState = true;
-            this.checkBox5.UseVisualStyleBackColor = false;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox6.ImageIndex = 0;
-            this.checkBox6.ImageList = this.imageListKey;
-            this.checkBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox6.Location = new System.Drawing.Point(815, 610);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(86, 86);
-            this.checkBox6.TabIndex = 296;
-            this.checkBox6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBox6.ThreeState = true;
-            this.checkBox6.UseVisualStyleBackColor = false;
-            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox7.ImageIndex = 0;
-            this.checkBox7.ImageList = this.imageListKey;
-            this.checkBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox7.Location = new System.Drawing.Point(815, 610);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(86, 86);
-            this.checkBox7.TabIndex = 296;
-            this.checkBox7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBox7.ThreeState = true;
-            this.checkBox7.UseVisualStyleBackColor = false;
-            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox2.ImageIndex = 0;
-            this.checkBox2.ImageList = this.imageListKey;
-            this.checkBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox2.Location = new System.Drawing.Point(816, 625);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(86, 86);
-            this.checkBox2.TabIndex = 299;
-            this.checkBox2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBox2.ThreeState = true;
-            this.checkBox2.UseVisualStyleBackColor = false;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.Appearance = System.Windows.Forms.Appearance.Button;
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.checkBox8.ImageIndex = 0;
-            this.checkBox8.ImageList = this.imageListKey;
-            this.checkBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBox8.Location = new System.Drawing.Point(808, 612);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(86, 86);
-            this.checkBox8.TabIndex = 297;
-            this.checkBox8.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.checkBox8.ThreeState = true;
-            this.checkBox8.UseVisualStyleBackColor = false;
-            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
             // 
             // FormApp
             // 

@@ -96,6 +96,14 @@ namespace GUI
                 ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM2TeachProgramList.Text);
                 prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
                 prgObj.Save(comboBoxM2TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[1], true);
+                //check if is in auto
+                if (comboBoxM2TeachProgramList.Text == comboBoxM2PrgName.Text)
+                {
+                    RestartRequestFromM2();
+                }
+                //program succesfully saved
+                xDialog.MsgBox.Show("program " + comboBoxM2TeachProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+
             }
         }
 
@@ -611,6 +619,13 @@ namespace GUI
                 ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM2TestProgramList.Text);
                 prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
                 prgObj.Save(comboBoxM2TestProgramList.Text + config.Extensions[0], config.ProgramsPath[1], true);
+                if (comboBoxM2TestProgramList.Text == comboBoxM2PrgName.Text)
+                {
+                    RestartRequestFromM2();
+                }
+                //program succesfully saved
+                xDialog.MsgBox.Show("program " + comboBoxM2TestProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+
             }
         }
 
