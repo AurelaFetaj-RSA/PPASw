@@ -32,7 +32,6 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle1 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle11 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -114,6 +113,7 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle21 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle42 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle52 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormApp));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -181,13 +181,13 @@
             this.contextMenuStripT3_1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemT3_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT3_1 = new System.Windows.Forms.ToolStripComboBox();
+            this.comboBoxM2TeachRecipeName = new System.Windows.Forms.ComboBox();
+            this.label30 = new System.Windows.Forms.Label();
             this.textBoxM2Separator = new System.Windows.Forms.TextBox();
             this.groupBoxM2Print = new System.Windows.Forms.GroupBox();
             this.buttonM2PrintCycle = new System.Windows.Forms.Button();
             this.lbLed1018M2_T = new LBSoft.IndustrialCtrls.Leds.LBLed();
-            this.groupBoxM2Servo = new System.Windows.Forms.GroupBox();
             this.buttonM2ResetServo = new System.Windows.Forms.Button();
-            this.lbLed1016M2_T = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.groupBoxM2Constrast = new System.Windows.Forms.GroupBox();
             this.buttonM2ContrastOpening = new System.Windows.Forms.Button();
             this.buttonM2ContrastClosing = new System.Windows.Forms.Button();
@@ -242,6 +242,9 @@
             this.contextMenuStripT3_2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemT3_2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT3_2 = new System.Windows.Forms.ToolStripComboBox();
+            this.buttonM2ResetTest = new System.Windows.Forms.Button();
+            this.comboBoxM2TestRecipeName = new System.Windows.Forms.ComboBox();
+            this.label33 = new System.Windows.Forms.Label();
             this.buttonM2StartTest = new System.Windows.Forms.Button();
             this.comboBoxM2TestProgramList = new System.Windows.Forms.ComboBox();
             this.buttonM2TestSaveProgram = new System.Windows.Forms.Button();
@@ -250,7 +253,7 @@
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnReached = new System.Windows.Forms.DataGridViewImageColumn();
+            this.reachedM2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageT3_3 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.lbLed1040M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed1039M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -354,6 +357,8 @@
             this.contextMenuStripT4_1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemT4_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT4_1 = new System.Windows.Forms.ToolStripComboBox();
+            this.comboBoxM3TeachRecipeName = new System.Windows.Forms.ComboBox();
+            this.label34 = new System.Windows.Forms.Label();
             this.buttonM3NormHoriFwd = new System.Windows.Forms.Button();
             this.buttonM3NormHoriBwd = new System.Windows.Forms.Button();
             this.buttonM3NormTransvFwd = new System.Windows.Forms.Button();
@@ -375,7 +380,6 @@
             this.imageListRotation = new System.Windows.Forms.ImageList(this.components);
             this.numericUpDownM3ManualSpeed = new System.Windows.Forms.NumericUpDown();
             this.buttonM3Home = new System.Windows.Forms.Button();
-            this.lbLed11 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.buttonM3ResetHome = new System.Windows.Forms.Button();
             this.buttonM3RotationCW = new System.Windows.Forms.Button();
             this.buttonM3PrintCycle = new System.Windows.Forms.Button();
@@ -454,6 +458,9 @@
             this.contextMenuStripT4_2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemT4_2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT4_2 = new System.Windows.Forms.ToolStripComboBox();
+            this.buttonM3ResetTest = new System.Windows.Forms.Button();
+            this.comboBoxM3TestRecipeName = new System.Windows.Forms.ComboBox();
+            this.label35 = new System.Windows.Forms.Label();
             this.radioButtonFootOrderOpt2Test = new System.Windows.Forms.RadioButton();
             this.radioButtonFootOrderOpt1Test = new System.Windows.Forms.RadioButton();
             this.buttonM3StartTest = new System.Windows.Forms.Button();
@@ -463,7 +470,7 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.reachedM3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.comboBoxM3TestProgramList = new System.Windows.Forms.ComboBox();
             this.tabPageT4_3 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.lbLed1 = new LBSoft.IndustrialCtrls.Leds.LBLed();
@@ -591,6 +598,7 @@
             this.lbLed1004M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed1001M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.tabPageT5_3 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabPage1 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT2 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.labelM4HomingDone = new System.Windows.Forms.Label();
@@ -606,6 +614,8 @@
             this.toolStripMenuItemT0 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT0 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripMenuItemT0Keyboard = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkBoxT0Keyboard = new System.Windows.Forms.CheckBox();
+            this.imageListKey = new System.Windows.Forms.ImageList(this.components);
             this.comboBoxT0RecipeName = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -866,6 +876,8 @@
             this.toolStripMenuItemT1_1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT1_1 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripMenuItemT1_1Keyboard = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBoxM1TeachRecipeName = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
             this.numericUpDownM1TimerBootTeach = new System.Windows.Forms.NumericUpDown();
             this.labelM1TeachBootDelay = new System.Windows.Forms.Label();
             this.labelM1JogSpeed = new System.Windows.Forms.Label();
@@ -924,6 +936,9 @@
             this.toolStripMenuItemT1_2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripComboBoxT1_2 = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripMenuItemT1_2Keyboard = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonM1ResetTest = new System.Windows.Forms.Button();
+            this.comboBoxM1TestRecipeName = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
             this.numericUpDownM1BootDelayTest = new System.Windows.Forms.NumericUpDown();
             this.labelM1Timeout = new System.Windows.Forms.Label();
             this.buttonM1StartTest = new System.Windows.Forms.Button();
@@ -1037,10 +1052,18 @@
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
             this.imageListMainControl = new System.Windows.Forms.ImageList(this.components);
             this.imageListNodes = new System.Windows.Forms.ImageList(this.components);
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBoxRecipeNewKey = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.tabPageT3_1.SuspendLayout();
             this.contextMenuStripT3_1.SuspendLayout();
             this.groupBoxM2Print.SuspendLayout();
-            this.groupBoxM2Servo.SuspendLayout();
             this.groupBoxM2Constrast.SuspendLayout();
             this.groupBoxM2CenteringClamp.SuspendLayout();
             this.groupBoxM2BigClamp.SuspendLayout();
@@ -1070,6 +1093,7 @@
             this.tabPageT4_3.SuspendLayout();
             this.tabPageT5_1.SuspendLayout();
             this.tabPageT5_2.SuspendLayout();
+            this.tabPageT5_3.SuspendLayout();
             this.tabPageT2.SuspendLayout();
             this.tabPageT0_1.SuspendLayout();
             this.contextMenuStripT0.SuspendLayout();
@@ -1123,9 +1147,12 @@
             // tabPageT3_1
             // 
             this.tabPageT3_1.ContextMenuStrip = this.contextMenuStripT3_1;
+            this.tabPageT3_1.Controls.Add(this.checkBox2);
+            this.tabPageT3_1.Controls.Add(this.buttonM2ResetServo);
+            this.tabPageT3_1.Controls.Add(this.comboBoxM2TeachRecipeName);
+            this.tabPageT3_1.Controls.Add(this.label30);
             this.tabPageT3_1.Controls.Add(this.textBoxM2Separator);
             this.tabPageT3_1.Controls.Add(this.groupBoxM2Print);
-            this.tabPageT3_1.Controls.Add(this.groupBoxM2Servo);
             this.tabPageT3_1.Controls.Add(this.groupBoxM2Constrast);
             this.tabPageT3_1.Controls.Add(this.groupBoxM2CenteringClamp);
             this.tabPageT3_1.Controls.Add(this.groupBoxM2BigClamp);
@@ -1197,6 +1224,27 @@
             this.toolStripComboBoxT3_1.Name = "toolStripComboBoxT3_1";
             this.toolStripComboBoxT3_1.Size = new System.Drawing.Size(120, 26);
             // 
+            // comboBoxM2TeachRecipeName
+            // 
+            this.comboBoxM2TeachRecipeName.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxM2TeachRecipeName.FormattingEnabled = true;
+            this.comboBoxM2TeachRecipeName.Location = new System.Drawing.Point(130, 60);
+            this.comboBoxM2TeachRecipeName.Name = "comboBoxM2TeachRecipeName";
+            this.comboBoxM2TeachRecipeName.Size = new System.Drawing.Size(100, 33);
+            this.comboBoxM2TeachRecipeName.TabIndex = 298;
+            this.comboBoxM2TeachRecipeName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM2TeachRecipeName_SelectedIndexChanged);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label30.Location = new System.Drawing.Point(10, 60);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(90, 16);
+            this.label30.TabIndex = 297;
+            this.label30.Text = "Recipe name";
+            // 
             // textBoxM2Separator
             // 
             this.textBoxM2Separator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(190)))), ((int)(((byte)(186)))));
@@ -1254,50 +1302,18 @@
             this.lbLed1018M2_T.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
             this.lbLed1018M2_T.TabIndex = 289;
             // 
-            // groupBoxM2Servo
-            // 
-            this.groupBoxM2Servo.BackColor = System.Drawing.SystemColors.Control;
-            this.groupBoxM2Servo.Controls.Add(this.buttonM2ResetServo);
-            this.groupBoxM2Servo.Controls.Add(this.lbLed1016M2_T);
-            this.groupBoxM2Servo.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxM2Servo.Location = new System.Drawing.Point(595, 625);
-            this.groupBoxM2Servo.Name = "groupBoxM2Servo";
-            this.groupBoxM2Servo.Size = new System.Drawing.Size(260, 80);
-            this.groupBoxM2Servo.TabIndex = 294;
-            this.groupBoxM2Servo.TabStop = false;
-            this.groupBoxM2Servo.Text = "servo";
-            // 
             // buttonM2ResetServo
             // 
             this.buttonM2ResetServo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM2ResetServo.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM2ResetServo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2ResetServo.Location = new System.Drawing.Point(20, 20);
+            this.buttonM2ResetServo.Location = new System.Drawing.Point(597, 631);
             this.buttonM2ResetServo.Name = "buttonM2ResetServo";
             this.buttonM2ResetServo.Size = new System.Drawing.Size(90, 48);
             this.buttonM2ResetServo.TabIndex = 149;
             this.buttonM2ResetServo.Text = "reset alarm";
             this.buttonM2ResetServo.UseVisualStyleBackColor = false;
             this.buttonM2ResetServo.Click += new System.EventHandler(this.buttonM2ResetServo_Click);
-            // 
-            // lbLed1016M2_T
-            // 
-            this.lbLed1016M2_T.BackColor = System.Drawing.SystemColors.Control;
-            this.lbLed1016M2_T.BlinkInterval = 500;
-            this.lbLed1016M2_T.Enabled = false;
-            this.lbLed1016M2_T.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.lbLed1016M2_T.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed1016M2_T.Label = "XF - servo ready";
-            this.lbLed1016M2_T.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed1016M2_T.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed1016M2_T.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed1016M2_T.Location = new System.Drawing.Point(120, 30);
-            this.lbLed1016M2_T.Name = "lbLed1016M2_T";
-            this.lbLed1016M2_T.Renderer = null;
-            this.lbLed1016M2_T.Size = new System.Drawing.Size(135, 24);
-            this.lbLed1016M2_T.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed1016M2_T.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            this.lbLed1016M2_T.TabIndex = 288;
             // 
             // groupBoxM2Constrast
             // 
@@ -1976,7 +1992,7 @@
             this.buttonM2TeachDeleteProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.buttonM2TeachDeleteProgram.Location = new System.Drawing.Point(695, 10);
             this.buttonM2TeachDeleteProgram.Name = "buttonM2TeachDeleteProgram";
-            this.buttonM2TeachDeleteProgram.Size = new System.Drawing.Size(160, 53);
+            this.buttonM2TeachDeleteProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM2TeachDeleteProgram.TabIndex = 135;
             this.buttonM2TeachDeleteProgram.Text = "delete program";
             this.buttonM2TeachDeleteProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1986,11 +2002,11 @@
             // 
             // comboBoxM2TeachProgramList
             // 
-            this.comboBoxM2TeachProgramList.Font = new System.Drawing.Font("Verdana", 12F);
+            this.comboBoxM2TeachProgramList.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxM2TeachProgramList.FormattingEnabled = true;
             this.comboBoxM2TeachProgramList.Location = new System.Drawing.Point(10, 10);
             this.comboBoxM2TeachProgramList.Name = "comboBoxM2TeachProgramList";
-            this.comboBoxM2TeachProgramList.Size = new System.Drawing.Size(180, 26);
+            this.comboBoxM2TeachProgramList.Size = new System.Drawing.Size(220, 33);
             this.comboBoxM2TeachProgramList.TabIndex = 134;
             this.comboBoxM2TeachProgramList.Text = "PRYYYY-YYY-XX00";
             // 
@@ -2018,7 +2034,7 @@
             this.buttonM2TeachSaveProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM2TeachSaveProgram.Image")));
             this.buttonM2TeachSaveProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonM2TeachSaveProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2TeachSaveProgram.Location = new System.Drawing.Point(380, 10);
+            this.buttonM2TeachSaveProgram.Location = new System.Drawing.Point(390, 10);
             this.buttonM2TeachSaveProgram.Name = "buttonM2TeachSaveProgram";
             this.buttonM2TeachSaveProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM2TeachSaveProgram.TabIndex = 132;
@@ -2035,7 +2051,7 @@
             this.buttonM2TeachLoadProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM2TeachLoadProgram.Image")));
             this.buttonM2TeachLoadProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonM2TeachLoadProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2TeachLoadProgram.Location = new System.Drawing.Point(220, 10);
+            this.buttonM2TeachLoadProgram.Location = new System.Drawing.Point(240, 10);
             this.buttonM2TeachLoadProgram.Name = "buttonM2TeachLoadProgram";
             this.buttonM2TeachLoadProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM2TeachLoadProgram.TabIndex = 131;
@@ -2092,6 +2108,10 @@
             // tabPageT3_2
             // 
             this.tabPageT3_2.ContextMenuStrip = this.contextMenuStripT3_2;
+            this.tabPageT3_2.Controls.Add(this.checkBox6);
+            this.tabPageT3_2.Controls.Add(this.buttonM2ResetTest);
+            this.tabPageT3_2.Controls.Add(this.comboBoxM2TestRecipeName);
+            this.tabPageT3_2.Controls.Add(this.label33);
             this.tabPageT3_2.Controls.Add(this.buttonM2StartTest);
             this.tabPageT3_2.Controls.Add(this.comboBoxM2TestProgramList);
             this.tabPageT3_2.Controls.Add(this.buttonM2TestSaveProgram);
@@ -2153,14 +2173,48 @@
             this.toolStripComboBoxT3_2.Name = "toolStripComboBoxT3_2";
             this.toolStripComboBoxT3_2.Size = new System.Drawing.Size(120, 26);
             // 
+            // buttonM2ResetTest
+            // 
+            this.buttonM2ResetTest.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM2ResetTest.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM2ResetTest.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM2ResetTest.Location = new System.Drawing.Point(10, 420);
+            this.buttonM2ResetTest.Name = "buttonM2ResetTest";
+            this.buttonM2ResetTest.Size = new System.Drawing.Size(120, 40);
+            this.buttonM2ResetTest.TabIndex = 295;
+            this.buttonM2ResetTest.Text = "reset";
+            this.buttonM2ResetTest.UseVisualStyleBackColor = false;
+            this.buttonM2ResetTest.Click += new System.EventHandler(this.buttonM2ResetTest_Click);
+            // 
+            // comboBoxM2TestRecipeName
+            // 
+            this.comboBoxM2TestRecipeName.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxM2TestRecipeName.FormattingEnabled = true;
+            this.comboBoxM2TestRecipeName.Location = new System.Drawing.Point(130, 60);
+            this.comboBoxM2TestRecipeName.Name = "comboBoxM2TestRecipeName";
+            this.comboBoxM2TestRecipeName.Size = new System.Drawing.Size(100, 33);
+            this.comboBoxM2TestRecipeName.TabIndex = 294;
+            this.comboBoxM2TestRecipeName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM2TestRecipeName_SelectedIndexChanged);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label33.Location = new System.Drawing.Point(10, 60);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(90, 16);
+            this.label33.TabIndex = 293;
+            this.label33.Text = "Recipe name";
+            // 
             // buttonM2StartTest
             // 
             this.buttonM2StartTest.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM2StartTest.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM2StartTest.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2StartTest.Location = new System.Drawing.Point(400, 100);
+            this.buttonM2StartTest.Location = new System.Drawing.Point(420, 115);
             this.buttonM2StartTest.Name = "buttonM2StartTest";
-            this.buttonM2StartTest.Size = new System.Drawing.Size(220, 64);
+            this.buttonM2StartTest.Size = new System.Drawing.Size(140, 64);
             this.buttonM2StartTest.TabIndex = 119;
             this.buttonM2StartTest.Text = "start test";
             this.buttonM2StartTest.UseVisualStyleBackColor = false;
@@ -2168,11 +2222,11 @@
             // 
             // comboBoxM2TestProgramList
             // 
-            this.comboBoxM2TestProgramList.Font = new System.Drawing.Font("Verdana", 12F);
+            this.comboBoxM2TestProgramList.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxM2TestProgramList.FormattingEnabled = true;
             this.comboBoxM2TestProgramList.Location = new System.Drawing.Point(10, 10);
             this.comboBoxM2TestProgramList.Name = "comboBoxM2TestProgramList";
-            this.comboBoxM2TestProgramList.Size = new System.Drawing.Size(180, 26);
+            this.comboBoxM2TestProgramList.Size = new System.Drawing.Size(220, 33);
             this.comboBoxM2TestProgramList.TabIndex = 118;
             // 
             // buttonM2TestSaveProgram
@@ -2182,9 +2236,9 @@
             this.buttonM2TestSaveProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM2TestSaveProgram.Image")));
             this.buttonM2TestSaveProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonM2TestSaveProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2TestSaveProgram.Location = new System.Drawing.Point(370, 10);
+            this.buttonM2TestSaveProgram.Location = new System.Drawing.Point(420, 10);
             this.buttonM2TestSaveProgram.Name = "buttonM2TestSaveProgram";
-            this.buttonM2TestSaveProgram.Size = new System.Drawing.Size(161, 53);
+            this.buttonM2TestSaveProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM2TestSaveProgram.TabIndex = 117;
             this.buttonM2TestSaveProgram.Text = "save program";
             this.buttonM2TestSaveProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2199,9 +2253,9 @@
             this.buttonM2TestLoadProgram.Image = ((System.Drawing.Image)(resources.GetObject("buttonM2TestLoadProgram.Image")));
             this.buttonM2TestLoadProgram.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonM2TestLoadProgram.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2TestLoadProgram.Location = new System.Drawing.Point(200, 10);
+            this.buttonM2TestLoadProgram.Location = new System.Drawing.Point(250, 10);
             this.buttonM2TestLoadProgram.Name = "buttonM2TestLoadProgram";
-            this.buttonM2TestLoadProgram.Size = new System.Drawing.Size(160, 53);
+            this.buttonM2TestLoadProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM2TestLoadProgram.TabIndex = 116;
             this.buttonM2TestLoadProgram.Text = "load program";
             this.buttonM2TestLoadProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2225,7 +2279,7 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
-            this.ColumnReached});
+            this.reachedM2});
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2235,7 +2289,7 @@
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewM2TestPoints.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewM2TestPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridViewM2TestPoints.Location = new System.Drawing.Point(10, 100);
+            this.dataGridViewM2TestPoints.Location = new System.Drawing.Point(10, 115);
             this.dataGridViewM2TestPoints.Name = "dataGridViewM2TestPoints";
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
@@ -2256,7 +2310,7 @@
             // 
             // dataGridViewTextBoxColumn4
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewTextBoxColumn4.Frozen = true;
@@ -2281,14 +2335,11 @@
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Width = 130;
             // 
-            // ColumnReached
+            // reachedM2
             // 
-            this.ColumnReached.HeaderText = "reached";
-            this.ColumnReached.Image = ((System.Drawing.Image)(resources.GetObject("ColumnReached.Image")));
-            this.ColumnReached.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.ColumnReached.Name = "ColumnReached";
-            this.ColumnReached.ReadOnly = true;
-            this.ColumnReached.Width = 56;
+            this.reachedM2.HeaderText = "reached";
+            this.reachedM2.Name = "reachedM2";
+            this.reachedM2.Width = 56;
             // 
             // tabPageT3_3
             // 
@@ -4283,6 +4334,9 @@
             // tabPageT4_1
             // 
             this.tabPageT4_1.ContextMenuStrip = this.contextMenuStripT4_1;
+            this.tabPageT4_1.Controls.Add(this.checkBox8);
+            this.tabPageT4_1.Controls.Add(this.comboBoxM3TeachRecipeName);
+            this.tabPageT4_1.Controls.Add(this.label34);
             this.tabPageT4_1.Controls.Add(this.buttonM3NormHoriFwd);
             this.tabPageT4_1.Controls.Add(this.buttonM3NormHoriBwd);
             this.tabPageT4_1.Controls.Add(this.buttonM3NormTransvFwd);
@@ -4303,7 +4357,6 @@
             this.tabPageT4_1.Controls.Add(this.buttonM3RotationCCW);
             this.tabPageT4_1.Controls.Add(this.numericUpDownM3ManualSpeed);
             this.tabPageT4_1.Controls.Add(this.buttonM3Home);
-            this.tabPageT4_1.Controls.Add(this.lbLed11);
             this.tabPageT4_1.Controls.Add(this.buttonM3ResetHome);
             this.tabPageT4_1.Controls.Add(this.buttonM3RotationCW);
             this.tabPageT4_1.Controls.Add(this.buttonM3PrintCycle);
@@ -4326,7 +4379,7 @@
             tabPageFormatStyle6.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle6.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT4_1.FormatStyle = tabPageFormatStyle6;
-            this.tabPageT4_1.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT4_1.Location = new System.Drawing.Point(96, 36);
             this.tabPageT4_1.Name = "tabPageT4_1";
             tabPageColorStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle12.BackFadeColor = System.Drawing.Color.Transparent;
@@ -4343,12 +4396,12 @@
             tabPageColorStyle22.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle22.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT4_1.SelectedStyle = tabPageColorStyle22;
-            this.tabPageT4_1.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT4_1.Size = new System.Drawing.Size(914, 716);
             this.tabPageT4_1.StyleFromParent = false;
             this.tabPageT4_1.TabIndex = 14;
             this.tabPageT4_1.Text = "teach";
             this.tabPageT4_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_1.TextBounds")));
-            this.tabPageT4_1.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT4_1.TextSize = new System.Drawing.SizeF(50.55989F, 21.44531F);
             this.tabPageT4_1.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT4_1
@@ -4378,6 +4431,27 @@
             this.toolStripComboBoxT4_1.IntegralHeight = false;
             this.toolStripComboBoxT4_1.Name = "toolStripComboBoxT4_1";
             this.toolStripComboBoxT4_1.Size = new System.Drawing.Size(120, 26);
+            // 
+            // comboBoxM3TeachRecipeName
+            // 
+            this.comboBoxM3TeachRecipeName.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxM3TeachRecipeName.FormattingEnabled = true;
+            this.comboBoxM3TeachRecipeName.Location = new System.Drawing.Point(130, 60);
+            this.comboBoxM3TeachRecipeName.Name = "comboBoxM3TeachRecipeName";
+            this.comboBoxM3TeachRecipeName.Size = new System.Drawing.Size(100, 33);
+            this.comboBoxM3TeachRecipeName.TabIndex = 294;
+            this.comboBoxM3TeachRecipeName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM3TeachRecipeName_SelectedIndexChanged);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label34.Location = new System.Drawing.Point(10, 60);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(90, 16);
+            this.label34.TabIndex = 293;
+            this.label34.Text = "Recipe name";
             // 
             // buttonM3NormHoriFwd
             // 
@@ -4698,25 +4772,6 @@
             this.buttonM3Home.Text = "go home";
             this.buttonM3Home.UseVisualStyleBackColor = false;
             this.buttonM3Home.Click += new System.EventHandler(this.buttonM3Home_Click);
-            // 
-            // lbLed11
-            // 
-            this.lbLed11.BackColor = System.Drawing.SystemColors.Control;
-            this.lbLed11.BlinkInterval = 500;
-            this.lbLed11.Enabled = false;
-            this.lbLed11.Font = new System.Drawing.Font("Verdana", 8.25F);
-            this.lbLed11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed11.Label = "servo ready";
-            this.lbLed11.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
-            this.lbLed11.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            this.lbLed11.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed11.Location = new System.Drawing.Point(755, 650);
-            this.lbLed11.Name = "lbLed11";
-            this.lbLed11.Renderer = null;
-            this.lbLed11.Size = new System.Drawing.Size(100, 24);
-            this.lbLed11.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
-            this.lbLed11.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
-            this.lbLed11.TabIndex = 288;
             // 
             // buttonM3ResetHome
             // 
@@ -6083,6 +6138,10 @@
             // tabPageT4_2
             // 
             this.tabPageT4_2.ContextMenuStrip = this.contextMenuStripT4_2;
+            this.tabPageT4_2.Controls.Add(this.checkBox7);
+            this.tabPageT4_2.Controls.Add(this.buttonM3ResetTest);
+            this.tabPageT4_2.Controls.Add(this.comboBoxM3TestRecipeName);
+            this.tabPageT4_2.Controls.Add(this.label35);
             this.tabPageT4_2.Controls.Add(this.radioButtonFootOrderOpt2Test);
             this.tabPageT4_2.Controls.Add(this.radioButtonFootOrderOpt1Test);
             this.tabPageT4_2.Controls.Add(this.buttonM3StartTest);
@@ -6093,7 +6152,7 @@
             tabPageFormatStyle8.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle8.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT4_2.FormatStyle = tabPageFormatStyle8;
-            this.tabPageT4_2.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT4_2.Location = new System.Drawing.Point(96, 36);
             this.tabPageT4_2.Name = "tabPageT4_2";
             tabPageColorStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle15.BackFadeColor = System.Drawing.Color.Transparent;
@@ -6110,12 +6169,12 @@
             tabPageColorStyle16.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle16.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT4_2.SelectedStyle = tabPageColorStyle16;
-            this.tabPageT4_2.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT4_2.Size = new System.Drawing.Size(914, 716);
             this.tabPageT4_2.StyleFromParent = false;
             this.tabPageT4_2.TabIndex = 15;
             this.tabPageT4_2.Text = "test";
             this.tabPageT4_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_2.TextBounds")));
-            this.tabPageT4_2.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT4_2.TextSize = new System.Drawing.SizeF(36.72395F, 21.44531F);
             this.tabPageT4_2.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT4_2
@@ -6145,6 +6204,40 @@
             this.toolStripComboBoxT4_2.IntegralHeight = false;
             this.toolStripComboBoxT4_2.Name = "toolStripComboBoxT4_2";
             this.toolStripComboBoxT4_2.Size = new System.Drawing.Size(120, 26);
+            // 
+            // buttonM3ResetTest
+            // 
+            this.buttonM3ResetTest.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM3ResetTest.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM3ResetTest.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM3ResetTest.Location = new System.Drawing.Point(10, 420);
+            this.buttonM3ResetTest.Name = "buttonM3ResetTest";
+            this.buttonM3ResetTest.Size = new System.Drawing.Size(120, 40);
+            this.buttonM3ResetTest.TabIndex = 295;
+            this.buttonM3ResetTest.Text = "reset";
+            this.buttonM3ResetTest.UseVisualStyleBackColor = false;
+            this.buttonM3ResetTest.Click += new System.EventHandler(this.buttonM3ResetTest_Click);
+            // 
+            // comboBoxM3TestRecipeName
+            // 
+            this.comboBoxM3TestRecipeName.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxM3TestRecipeName.FormattingEnabled = true;
+            this.comboBoxM3TestRecipeName.Location = new System.Drawing.Point(130, 60);
+            this.comboBoxM3TestRecipeName.Name = "comboBoxM3TestRecipeName";
+            this.comboBoxM3TestRecipeName.Size = new System.Drawing.Size(100, 33);
+            this.comboBoxM3TestRecipeName.TabIndex = 294;
+            this.comboBoxM3TestRecipeName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM3TestRecipeName_SelectedIndexChanged);
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label35.Location = new System.Drawing.Point(10, 60);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(90, 16);
+            this.label35.TabIndex = 293;
+            this.label35.Text = "Recipe name";
             // 
             // radioButtonFootOrderOpt2Test
             // 
@@ -6237,7 +6330,7 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
-            this.dataGridViewImageColumn2});
+            this.reachedM3});
             dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -6268,7 +6361,7 @@
             // 
             // dataGridViewTextBoxColumn7
             // 
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             dataGridViewCellStyle17.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridViewTextBoxColumn7.Frozen = true;
@@ -6293,14 +6386,11 @@
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.Width = 130;
             // 
-            // dataGridViewImageColumn2
+            // reachedM3
             // 
-            this.dataGridViewImageColumn2.HeaderText = "reached";
-            this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
-            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
-            this.dataGridViewImageColumn2.Width = 56;
+            this.reachedM3.HeaderText = "reached";
+            this.reachedM3.Name = "reachedM3";
+            this.reachedM3.Width = 56;
             // 
             // comboBoxM3TestProgramList
             // 
@@ -6310,7 +6400,6 @@
             this.comboBoxM3TestProgramList.Name = "comboBoxM3TestProgramList";
             this.comboBoxM3TestProgramList.Size = new System.Drawing.Size(220, 33);
             this.comboBoxM3TestProgramList.TabIndex = 119;
-            this.comboBoxM3TestProgramList.Text = "PRTEST-420-DX00";
             // 
             // tabPageT4_3
             // 
@@ -6365,7 +6454,7 @@
             tabPageFormatStyle9.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle9.Padding = new System.Windows.Forms.Padding(17, 5, 17, 5);
             this.tabPageT4_3.FormatStyle = tabPageFormatStyle9;
-            this.tabPageT4_3.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT4_3.Location = new System.Drawing.Point(96, 36);
             this.tabPageT4_3.Name = "tabPageT4_3";
             tabPageColorStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle17.BackFadeColor = System.Drawing.Color.Transparent;
@@ -6382,12 +6471,12 @@
             tabPageColorStyle18.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle18.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT4_3.SelectedStyle = tabPageColorStyle18;
-            this.tabPageT4_3.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT4_3.Size = new System.Drawing.Size(914, 716);
             this.tabPageT4_3.StyleFromParent = false;
             this.tabPageT4_3.TabIndex = 16;
             this.tabPageT4_3.Text = "input";
             this.tabPageT4_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_3.TextBounds")));
-            this.tabPageT4_3.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT4_3.TextSize = new System.Drawing.SizeF(47.47395F, 21.44531F);
             this.tabPageT4_3.UseParentTabStripPlacement = false;
             // 
             // lbLed1
@@ -7307,7 +7396,7 @@
             tabPageFormatStyle10.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle10.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.tabPageT4_4.FormatStyle = tabPageFormatStyle10;
-            this.tabPageT4_4.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT4_4.Location = new System.Drawing.Point(96, 36);
             this.tabPageT4_4.Name = "tabPageT4_4";
             tabPageColorStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle19.BackFadeColor = System.Drawing.Color.Transparent;
@@ -7324,12 +7413,12 @@
             tabPageColorStyle20.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle20.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT4_4.SelectedStyle = tabPageColorStyle20;
-            this.tabPageT4_4.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT4_4.Size = new System.Drawing.Size(914, 716);
             this.tabPageT4_4.StyleFromParent = false;
             this.tabPageT4_4.TabIndex = 17;
             this.tabPageT4_4.Text = "output";
             this.tabPageT4_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_4.TextBounds")));
-            this.tabPageT4_4.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT4_4.TextSize = new System.Drawing.SizeF(59.4427F, 21.44531F);
             this.tabPageT4_4.UseParentTabStripPlacement = false;
             // 
             // tabPageT5_1
@@ -8775,6 +8864,7 @@
             // 
             // tabPageT5_3
             // 
+            this.tabPageT5_3.Controls.Add(this.button2);
             tabPageFormatStyle14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle14.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT5_3.FormatStyle = tabPageFormatStyle14;
@@ -8802,6 +8892,15 @@
             this.tabPageT5_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT5_3.TextBounds")));
             this.tabPageT5_3.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT5_3.UseParentTabStripPlacement = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(208, 149);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // tabPage1
             // 
@@ -9021,6 +9120,7 @@
             // tabPageT0_1
             // 
             this.tabPageT0_1.ContextMenuStrip = this.contextMenuStripT0;
+            this.tabPageT0_1.Controls.Add(this.checkBoxT0Keyboard);
             this.tabPageT0_1.Controls.Add(this.comboBoxT0RecipeName);
             this.tabPageT0_1.Controls.Add(this.label26);
             this.tabPageT0_1.Controls.Add(this.button1);
@@ -9102,6 +9202,29 @@
             this.toolStripMenuItemT0Keyboard.Text = "keyboard";
             this.toolStripMenuItemT0Keyboard.Click += new System.EventHandler(this.toolStripMenuItemT0Keyboard_Click);
             // 
+            // checkBoxT0Keyboard
+            // 
+            this.checkBoxT0Keyboard.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxT0Keyboard.AutoSize = true;
+            this.checkBoxT0Keyboard.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBoxT0Keyboard.ImageIndex = 0;
+            this.checkBoxT0Keyboard.ImageList = this.imageListKey;
+            this.checkBoxT0Keyboard.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxT0Keyboard.Location = new System.Drawing.Point(820, 460);
+            this.checkBoxT0Keyboard.Name = "checkBoxT0Keyboard";
+            this.checkBoxT0Keyboard.Size = new System.Drawing.Size(86, 86);
+            this.checkBoxT0Keyboard.TabIndex = 146;
+            this.checkBoxT0Keyboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBoxT0Keyboard.ThreeState = true;
+            this.checkBoxT0Keyboard.UseVisualStyleBackColor = false;
+            this.checkBoxT0Keyboard.Click += new System.EventHandler(this.checkBoxT0Keyboard_Click);
+            // 
+            // imageListKey
+            // 
+            this.imageListKey.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListKey.ImageStream")));
+            this.imageListKey.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageListKey.Images.SetKeyName(0, "keyboard.png");
+            // 
             // comboBoxT0RecipeName
             // 
             this.comboBoxT0RecipeName.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -9126,7 +9249,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(686, 434);
+            this.button1.Location = new System.Drawing.Point(641, 406);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 40);
             this.button1.TabIndex = 143;
@@ -9521,7 +9644,6 @@
             this.comboBoxM6PrgName.Name = "comboBoxM6PrgName";
             this.comboBoxM6PrgName.Size = new System.Drawing.Size(184, 26);
             this.comboBoxM6PrgName.TabIndex = 13;
-            this.comboBoxM6PrgName.Text = "PRYYYY-YYY-XX00";
             this.comboBoxM6PrgName.Visible = false;
             // 
             // labelM6Param1Name
@@ -9647,7 +9769,6 @@
             this.comboBoxM5PrgName.Name = "comboBoxM5PrgName";
             this.comboBoxM5PrgName.Size = new System.Drawing.Size(184, 26);
             this.comboBoxM5PrgName.TabIndex = 13;
-            this.comboBoxM5PrgName.Text = "PRYYYY-YYY-XX00";
             this.comboBoxM5PrgName.Visible = false;
             // 
             // checkBoxM5Start
@@ -9856,7 +9977,6 @@
             this.comboBoxM3PrgName_st2.Name = "comboBoxM3PrgName_st2";
             this.comboBoxM3PrgName_st2.Size = new System.Drawing.Size(184, 26);
             this.comboBoxM3PrgName_st2.TabIndex = 127;
-            this.comboBoxM3PrgName_st2.Text = "PRYYYY-YYY-XX00";
             this.comboBoxM3PrgName_st2.SelectedIndexChanged += new System.EventHandler(this.comboBoxM3PrgName_st2_SelectedIndexChanged);
             // 
             // labelM3Param1Value
@@ -9886,7 +10006,7 @@
             this.checkBoxM3Start.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.checkBoxM3Start.ThreeState = true;
             this.checkBoxM3Start.UseVisualStyleBackColor = false;
-            this.checkBoxM3Start.CheckStateChanged += new System.EventHandler(this.checkBoxM3Start_CheckStateChanged);
+            this.checkBoxM3Start.CheckedChanged += new System.EventHandler(this.checkBoxM3Start_CheckStateChanged);
             // 
             // comboBoxM3PrgName_st1
             // 
@@ -9897,7 +10017,6 @@
             this.comboBoxM3PrgName_st1.Name = "comboBoxM3PrgName_st1";
             this.comboBoxM3PrgName_st1.Size = new System.Drawing.Size(184, 26);
             this.comboBoxM3PrgName_st1.TabIndex = 13;
-            this.comboBoxM3PrgName_st1.Text = "PRYYYY-YYY-XX00";
             this.comboBoxM3PrgName_st1.SelectedIndexChanged += new System.EventHandler(this.comboBoxM3PrgName_st1_SelectedIndexChanged);
             // 
             // checkBoxM3Inclusion
@@ -10047,7 +10166,6 @@
             this.comboBoxM2PrgName.Name = "comboBoxM2PrgName";
             this.comboBoxM2PrgName.Size = new System.Drawing.Size(184, 26);
             this.comboBoxM2PrgName.TabIndex = 13;
-            this.comboBoxM2PrgName.Text = "PRYYYY-YYY-XX00";
             this.comboBoxM2PrgName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM2PrgName_SelectedIndexChanged);
             // 
             // labelM2Param1Value
@@ -10279,7 +10397,6 @@
             this.comboBoxM4PrgName.Name = "comboBoxM4PrgName";
             this.comboBoxM4PrgName.Size = new System.Drawing.Size(184, 26);
             this.comboBoxM4PrgName.TabIndex = 13;
-            this.comboBoxM4PrgName.Text = "PRYYYY-YYY-XX00";
             this.comboBoxM4PrgName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM4PrgName_SelectedIndexChanged);
             // 
             // labelM4Param1Name
@@ -10462,7 +10579,6 @@
             this.comboBoxM1PrgName.Name = "comboBoxM1PrgName";
             this.comboBoxM1PrgName.Size = new System.Drawing.Size(184, 26);
             this.comboBoxM1PrgName.TabIndex = 13;
-            this.comboBoxM1PrgName.Text = "PRYYYY-YYY-XX00";
             this.comboBoxM1PrgName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM1PrgName_SelectedIndexChanged);
             // 
             // checkBoxM1Inclusion
@@ -11051,6 +11167,8 @@
             // 
             // tabPageT0_2_1
             // 
+            this.tabPageT0_2_1.Controls.Add(this.checkBoxRecipeNewKey);
+            this.tabPageT0_2_1.Controls.Add(this.checkBox1);
             this.tabPageT0_2_1.Controls.Add(this.buttonAddNewRecipe);
             this.tabPageT0_2_1.Controls.Add(this.textBoxM6Test);
             this.tabPageT0_2_1.Controls.Add(this.textBoxM3Test);
@@ -11530,6 +11648,7 @@
             // 
             // tabPageT0_2_2
             // 
+            this.tabPageT0_2_2.Controls.Add(this.checkBox3);
             this.tabPageT0_2_2.Controls.Add(this.buttonMRecipeDeleteAll);
             this.tabPageT0_2_2.Controls.Add(this.buttonMRecipeDelete);
             this.tabPageT0_2_2.Controls.Add(this.label36);
@@ -12774,6 +12893,9 @@
             // tabPageT1_1
             // 
             this.tabPageT1_1.ContextMenuStrip = this.contextMenuStripT1_1;
+            this.tabPageT1_1.Controls.Add(this.checkBox4);
+            this.tabPageT1_1.Controls.Add(this.comboBoxM1TeachRecipeName);
+            this.tabPageT1_1.Controls.Add(this.label28);
             this.tabPageT1_1.Controls.Add(this.numericUpDownM1TimerBootTeach);
             this.tabPageT1_1.Controls.Add(this.labelM1TeachBootDelay);
             this.tabPageT1_1.Controls.Add(this.labelM1JogSpeed);
@@ -12821,7 +12943,7 @@
             tabPageFormatStyle28.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle28.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT1_1.FormatStyle = tabPageFormatStyle28;
-            this.tabPageT1_1.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT1_1.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_1.Name = "tabPageT1_1";
             tabPageColorStyle53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle53.BackFadeColor = System.Drawing.Color.Transparent;
@@ -12838,12 +12960,12 @@
             tabPageColorStyle63.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle63.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_1.SelectedStyle = tabPageColorStyle63;
-            this.tabPageT1_1.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT1_1.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_1.StyleFromParent = false;
             this.tabPageT1_1.TabIndex = 5;
             this.tabPageT1_1.Text = "teach";
             this.tabPageT1_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_1.TextBounds")));
-            this.tabPageT1_1.TextSize = new System.Drawing.SizeF(50.55989F, 21.44531F);
+            this.tabPageT1_1.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT1_1.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT1_1
@@ -12882,6 +13004,27 @@
             this.toolStripMenuItemT1_1Keyboard.Size = new System.Drawing.Size(176, 22);
             this.toolStripMenuItemT1_1Keyboard.Text = "keyboard";
             this.toolStripMenuItemT1_1Keyboard.Click += new System.EventHandler(this.toolStripMenuItemT1_1Keyboard_Click);
+            // 
+            // comboBoxM1TeachRecipeName
+            // 
+            this.comboBoxM1TeachRecipeName.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxM1TeachRecipeName.FormattingEnabled = true;
+            this.comboBoxM1TeachRecipeName.Location = new System.Drawing.Point(130, 60);
+            this.comboBoxM1TeachRecipeName.Name = "comboBoxM1TeachRecipeName";
+            this.comboBoxM1TeachRecipeName.Size = new System.Drawing.Size(100, 33);
+            this.comboBoxM1TeachRecipeName.TabIndex = 292;
+            this.comboBoxM1TeachRecipeName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM1TeachRecipeName_SelectedIndexChanged);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label28.Location = new System.Drawing.Point(10, 60);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(90, 16);
+            this.label28.TabIndex = 291;
+            this.label28.Text = "Recipe name";
             // 
             // numericUpDownM1TimerBootTeach
             // 
@@ -12992,7 +13135,7 @@
             this.labelM1HomingDone.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM1HomingDone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM1HomingDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1HomingDone.Location = new System.Drawing.Point(632, 574);
+            this.labelM1HomingDone.Location = new System.Drawing.Point(635, 534);
             this.labelM1HomingDone.Name = "labelM1HomingDone";
             this.labelM1HomingDone.Size = new System.Drawing.Size(117, 16);
             this.labelM1HomingDone.TabIndex = 134;
@@ -13052,7 +13195,7 @@
             this.buttonM1HomingDone.FlatAppearance.BorderSize = 10;
             this.buttonM1HomingDone.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1HomingDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1HomingDone.Location = new System.Drawing.Point(605, 566);
+            this.buttonM1HomingDone.Location = new System.Drawing.Point(608, 526);
             this.buttonM1HomingDone.Name = "buttonM1HomingDone";
             this.buttonM1HomingDone.Size = new System.Drawing.Size(24, 24);
             this.buttonM1HomingDone.TabIndex = 133;
@@ -13126,7 +13269,7 @@
             this.lbLed13.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed13.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed13.LedSize = new System.Drawing.SizeF(24F, 24F);
-            this.lbLed13.Location = new System.Drawing.Point(749, 650);
+            this.lbLed13.Location = new System.Drawing.Point(608, 633);
             this.lbLed13.Name = "lbLed13";
             this.lbLed13.Renderer = null;
             this.lbLed13.Size = new System.Drawing.Size(110, 24);
@@ -13163,7 +13306,7 @@
             this.buttonM1ResetServo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1ResetServo.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1ResetServo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1ResetServo.Location = new System.Drawing.Point(605, 640);
+            this.buttonM1ResetServo.Location = new System.Drawing.Point(608, 571);
             this.buttonM1ResetServo.Name = "buttonM1ResetServo";
             this.buttonM1ResetServo.Size = new System.Drawing.Size(130, 48);
             this.buttonM1ResetServo.TabIndex = 149;
@@ -13176,7 +13319,7 @@
             this.buttonM1Home.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1Home.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1Home.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1Home.Location = new System.Drawing.Point(605, 500);
+            this.buttonM1Home.Location = new System.Drawing.Point(608, 460);
             this.buttonM1Home.Name = "buttonM1Home";
             this.buttonM1Home.Size = new System.Drawing.Size(100, 48);
             this.buttonM1Home.TabIndex = 8;
@@ -13189,7 +13332,7 @@
             this.buttonM1ResetHome.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1ResetHome.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1ResetHome.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1ResetHome.Location = new System.Drawing.Point(759, 500);
+            this.buttonM1ResetHome.Location = new System.Drawing.Point(762, 460);
             this.buttonM1ResetHome.Name = "buttonM1ResetHome";
             this.buttonM1ResetHome.Size = new System.Drawing.Size(100, 48);
             this.buttonM1ResetHome.TabIndex = 9;
@@ -13760,6 +13903,10 @@
             // tabPageT1_2
             // 
             this.tabPageT1_2.ContextMenuStrip = this.contextMenuStripT1_2;
+            this.tabPageT1_2.Controls.Add(this.checkBox5);
+            this.tabPageT1_2.Controls.Add(this.buttonM1ResetTest);
+            this.tabPageT1_2.Controls.Add(this.comboBoxM1TestRecipeName);
+            this.tabPageT1_2.Controls.Add(this.label29);
             this.tabPageT1_2.Controls.Add(this.numericUpDownM1BootDelayTest);
             this.tabPageT1_2.Controls.Add(this.labelM1Timeout);
             this.tabPageT1_2.Controls.Add(this.buttonM1StartTest);
@@ -13770,7 +13917,7 @@
             tabPageFormatStyle30.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle30.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT1_2.FormatStyle = tabPageFormatStyle30;
-            this.tabPageT1_2.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT1_2.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_2.Name = "tabPageT1_2";
             tabPageColorStyle56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle56.BackFadeColor = System.Drawing.Color.Transparent;
@@ -13787,12 +13934,12 @@
             tabPageColorStyle57.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle57.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_2.SelectedStyle = tabPageColorStyle57;
-            this.tabPageT1_2.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT1_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_2.StyleFromParent = false;
             this.tabPageT1_2.TabIndex = 8;
             this.tabPageT1_2.Text = "test";
             this.tabPageT1_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_2.TextBounds")));
-            this.tabPageT1_2.TextSize = new System.Drawing.SizeF(36.72395F, 21.44531F);
+            this.tabPageT1_2.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT1_2.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT1_2
@@ -13831,6 +13978,40 @@
             this.toolStripMenuItemT1_2Keyboard.Size = new System.Drawing.Size(176, 22);
             this.toolStripMenuItemT1_2Keyboard.Text = "keyboard";
             this.toolStripMenuItemT1_2Keyboard.Click += new System.EventHandler(this.toolStripMenuItemT1_2Keyboard_Click);
+            // 
+            // buttonM1ResetTest
+            // 
+            this.buttonM1ResetTest.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buttonM1ResetTest.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.buttonM1ResetTest.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.buttonM1ResetTest.Location = new System.Drawing.Point(10, 420);
+            this.buttonM1ResetTest.Name = "buttonM1ResetTest";
+            this.buttonM1ResetTest.Size = new System.Drawing.Size(120, 40);
+            this.buttonM1ResetTest.TabIndex = 148;
+            this.buttonM1ResetTest.Text = "reset";
+            this.buttonM1ResetTest.UseVisualStyleBackColor = false;
+            this.buttonM1ResetTest.Click += new System.EventHandler(this.buttonM1ResetTest_Click);
+            // 
+            // comboBoxM1TestRecipeName
+            // 
+            this.comboBoxM1TestRecipeName.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxM1TestRecipeName.FormattingEnabled = true;
+            this.comboBoxM1TestRecipeName.Location = new System.Drawing.Point(130, 60);
+            this.comboBoxM1TestRecipeName.Name = "comboBoxM1TestRecipeName";
+            this.comboBoxM1TestRecipeName.Size = new System.Drawing.Size(100, 33);
+            this.comboBoxM1TestRecipeName.TabIndex = 147;
+            this.comboBoxM1TestRecipeName.SelectedIndexChanged += new System.EventHandler(this.comboBoxM1TestRecipeName_SelectedIndexChanged);
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label29.Location = new System.Drawing.Point(10, 60);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(90, 16);
+            this.label29.TabIndex = 146;
+            this.label29.Text = "Recipe name";
             // 
             // numericUpDownM1BootDelayTest
             // 
@@ -14060,7 +14241,7 @@
             tabPageFormatStyle31.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle31.Padding = new System.Windows.Forms.Padding(17, 5, 17, 5);
             this.tabPageT1_3.FormatStyle = tabPageFormatStyle31;
-            this.tabPageT1_3.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT1_3.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_3.Name = "tabPageT1_3";
             tabPageColorStyle58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle58.BackFadeColor = System.Drawing.Color.Transparent;
@@ -14077,12 +14258,12 @@
             tabPageColorStyle59.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle59.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_3.SelectedStyle = tabPageColorStyle59;
-            this.tabPageT1_3.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT1_3.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_3.StyleFromParent = false;
             this.tabPageT1_3.TabIndex = 6;
             this.tabPageT1_3.Text = "input";
             this.tabPageT1_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_3.TextBounds")));
-            this.tabPageT1_3.TextSize = new System.Drawing.SizeF(47.47395F, 21.44531F);
+            this.tabPageT1_3.TextSize = new System.Drawing.SizeF(0F, 0F);
             // 
             // lbLed1040M1
             // 
@@ -15068,7 +15249,7 @@
             tabPageFormatStyle32.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle32.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.tabPageT1_4.FormatStyle = tabPageFormatStyle32;
-            this.tabPageT1_4.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT1_4.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_4.Name = "tabPageT1_4";
             tabPageColorStyle60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle60.BackFadeColor = System.Drawing.Color.Transparent;
@@ -15085,12 +15266,12 @@
             tabPageColorStyle61.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle61.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_4.SelectedStyle = tabPageColorStyle61;
-            this.tabPageT1_4.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT1_4.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_4.StyleFromParent = false;
             this.tabPageT1_4.TabIndex = 7;
             this.tabPageT1_4.Text = "output";
             this.tabPageT1_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_4.TextBounds")));
-            this.tabPageT1_4.TextSize = new System.Drawing.SizeF(59.4427F, 21.44531F);
+            this.tabPageT1_4.TextSize = new System.Drawing.SizeF(0F, 0F);
             // 
             // lbLed2040M1
             // 
@@ -16010,36 +16191,36 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageT1_1);
-            this.tabControlMain.Controls.Add(this.tabPageT1);
-            this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
-            this.tabControlMain.Controls.Add(this.tabPageT7);
-            this.tabControlMain.Controls.Add(this.tabPageT6);
-            this.tabControlMain.Controls.Add(this.tabPageT5);
+            this.tabControlMain.Controls.Add(this.tabPageT4_2);
+            this.tabControlMain.Controls.Add(this.tabPageT4_1);
             this.tabControlMain.Controls.Add(this.tabPageT4);
+            this.tabControlMain.Controls.Add(this.tabPageT3_2);
+            this.tabControlMain.Controls.Add(this.tabPageT3_1);
             this.tabControlMain.Controls.Add(this.tabPageT3);
             this.tabControlMain.Controls.Add(this.tabPageT2);
-            this.tabControlMain.Controls.Add(this.tabPageT0);
-            this.tabControlMain.Controls.Add(this.tabPageT0_1);
-            this.tabControlMain.Controls.Add(this.tabPageT0_2);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
-            this.tabControlMain.Controls.Add(this.tabPageT0_3);
-            this.tabControlMain.Controls.Add(this.tabPage2);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2);
+            this.tabControlMain.Controls.Add(this.tabPageT0_1);
+            this.tabControlMain.Controls.Add(this.tabPageT0);
+            this.tabControlMain.Controls.Add(this.tabPageT1_1);
+            this.tabControlMain.Controls.Add(this.tabPageT1);
+            this.tabControlMain.Controls.Add(this.tabPageT5_1);
+            this.tabControlMain.Controls.Add(this.tabPageT5);
             this.tabControlMain.Controls.Add(this.tabPageT1_2);
+            this.tabControlMain.Controls.Add(this.tabPageT0_3);
+            this.tabControlMain.Controls.Add(this.tabPageT7);
+            this.tabControlMain.Controls.Add(this.tabPageT6);
+            this.tabControlMain.Controls.Add(this.tabPage2);
             this.tabControlMain.Controls.Add(this.tabPageT1_3);
             this.tabControlMain.Controls.Add(this.tabPageT1_4);
             this.tabControlMain.Controls.Add(this.tabPage1);
             this.tabControlMain.Controls.Add(this.tabPage3);
             this.tabControlMain.Controls.Add(this.tabPage4);
-            this.tabControlMain.Controls.Add(this.tabPageT3_1);
-            this.tabControlMain.Controls.Add(this.tabPageT3_2);
             this.tabControlMain.Controls.Add(this.tabPageT3_3);
             this.tabControlMain.Controls.Add(this.tabPageT3_4);
-            this.tabControlMain.Controls.Add(this.tabPageT4_1);
-            this.tabControlMain.Controls.Add(this.tabPageT4_2);
             this.tabControlMain.Controls.Add(this.tabPageT4_3);
             this.tabControlMain.Controls.Add(this.tabPageT4_4);
-            this.tabControlMain.Controls.Add(this.tabPageT5_1);
             this.tabControlMain.Controls.Add(this.tabPageT5_2);
             this.tabControlMain.Controls.Add(this.tabPageT5_3);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
@@ -16078,7 +16259,7 @@
             this.tabPageT6,
             this.tabPageT7});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageT1_1;
+            this.tabControlMain.SelectedPage = this.tabPageT4_2;
             tabPageColorStyle65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle65.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle65.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
@@ -16138,6 +16319,156 @@
             this.imageListNodes.Images.SetKeyName(2, "iot_on.png");
             this.imageListNodes.Images.SetKeyName(3, "iot_off.png");
             // 
+            // checkBox1
+            // 
+            this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox1.ImageIndex = 0;
+            this.checkBox1.ImageList = this.imageListKey;
+            this.checkBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox1.Location = new System.Drawing.Point(820, 460);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(86, 86);
+            this.checkBox1.TabIndex = 147;
+            this.checkBox1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBox1.ThreeState = true;
+            this.checkBox1.UseVisualStyleBackColor = false;
+            // 
+            // checkBoxRecipeNewKey
+            // 
+            this.checkBoxRecipeNewKey.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBoxRecipeNewKey.AutoSize = true;
+            this.checkBoxRecipeNewKey.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBoxRecipeNewKey.ImageIndex = 0;
+            this.checkBoxRecipeNewKey.ImageList = this.imageListKey;
+            this.checkBoxRecipeNewKey.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBoxRecipeNewKey.Location = new System.Drawing.Point(720, 610);
+            this.checkBoxRecipeNewKey.Name = "checkBoxRecipeNewKey";
+            this.checkBoxRecipeNewKey.Size = new System.Drawing.Size(86, 86);
+            this.checkBoxRecipeNewKey.TabIndex = 148;
+            this.checkBoxRecipeNewKey.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBoxRecipeNewKey.ThreeState = true;
+            this.checkBoxRecipeNewKey.UseVisualStyleBackColor = false;
+            this.checkBoxRecipeNewKey.CheckedChanged += new System.EventHandler(this.checkBoxRecipeNewKey_CheckedChanged);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox3.ImageIndex = 0;
+            this.checkBox3.ImageList = this.imageListKey;
+            this.checkBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox3.Location = new System.Drawing.Point(720, 610);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(86, 86);
+            this.checkBox3.TabIndex = 166;
+            this.checkBox3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBox3.ThreeState = true;
+            this.checkBox3.UseVisualStyleBackColor = false;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox4.ImageIndex = 0;
+            this.checkBox4.ImageList = this.imageListKey;
+            this.checkBox4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox4.Location = new System.Drawing.Point(815, 610);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(86, 86);
+            this.checkBox4.TabIndex = 293;
+            this.checkBox4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBox4.ThreeState = true;
+            this.checkBox4.UseVisualStyleBackColor = false;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox5.ImageIndex = 0;
+            this.checkBox5.ImageList = this.imageListKey;
+            this.checkBox5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox5.Location = new System.Drawing.Point(815, 610);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(86, 86);
+            this.checkBox5.TabIndex = 149;
+            this.checkBox5.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBox5.ThreeState = true;
+            this.checkBox5.UseVisualStyleBackColor = false;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox6.ImageIndex = 0;
+            this.checkBox6.ImageList = this.imageListKey;
+            this.checkBox6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox6.Location = new System.Drawing.Point(815, 610);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(86, 86);
+            this.checkBox6.TabIndex = 296;
+            this.checkBox6.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBox6.ThreeState = true;
+            this.checkBox6.UseVisualStyleBackColor = false;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox7.ImageIndex = 0;
+            this.checkBox7.ImageList = this.imageListKey;
+            this.checkBox7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox7.Location = new System.Drawing.Point(815, 610);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(86, 86);
+            this.checkBox7.TabIndex = 296;
+            this.checkBox7.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBox7.ThreeState = true;
+            this.checkBox7.UseVisualStyleBackColor = false;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox2.ImageIndex = 0;
+            this.checkBox2.ImageList = this.imageListKey;
+            this.checkBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox2.Location = new System.Drawing.Point(816, 625);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(86, 86);
+            this.checkBox2.TabIndex = 299;
+            this.checkBox2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBox2.ThreeState = true;
+            this.checkBox2.UseVisualStyleBackColor = false;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // checkBox8
+            // 
+            this.checkBox8.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox8.AutoSize = true;
+            this.checkBox8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.checkBox8.ImageIndex = 0;
+            this.checkBox8.ImageList = this.imageListKey;
+            this.checkBox8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.checkBox8.Location = new System.Drawing.Point(808, 612);
+            this.checkBox8.Name = "checkBox8";
+            this.checkBox8.Size = new System.Drawing.Size(86, 86);
+            this.checkBox8.TabIndex = 297;
+            this.checkBox8.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.checkBox8.ThreeState = true;
+            this.checkBox8.UseVisualStyleBackColor = false;
+            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
+            // 
             // FormApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -16153,7 +16484,6 @@
             this.tabPageT3_1.PerformLayout();
             this.contextMenuStripT3_1.ResumeLayout(false);
             this.groupBoxM2Print.ResumeLayout(false);
-            this.groupBoxM2Servo.ResumeLayout(false);
             this.groupBoxM2Constrast.ResumeLayout(false);
             this.groupBoxM2CenteringClamp.ResumeLayout(false);
             this.groupBoxM2BigClamp.ResumeLayout(false);
@@ -16169,6 +16499,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2JogSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TeachPoints)).EndInit();
             this.tabPageT3_2.ResumeLayout(false);
+            this.tabPageT3_2.PerformLayout();
             this.contextMenuStripT3_2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TestPoints)).EndInit();
             this.tabPageT3_3.ResumeLayout(false);
@@ -16189,6 +16520,7 @@
             this.tabPageT5_1.ResumeLayout(false);
             this.tabPageT5_1.PerformLayout();
             this.tabPageT5_2.ResumeLayout(false);
+            this.tabPageT5_3.ResumeLayout(false);
             this.tabPageT2.ResumeLayout(false);
             this.tabPageT2.PerformLayout();
             this.tabPageT0_1.ResumeLayout(false);
@@ -16576,8 +16908,6 @@
         private System.Windows.Forms.TextBox textBoxM2Separator;
         private System.Windows.Forms.GroupBox groupBoxM2Print;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed1018M2_T;
-        private System.Windows.Forms.GroupBox groupBoxM2Servo;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed1016M2_T;
         private System.Windows.Forms.GroupBox groupBoxM2Constrast;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed1029M2_T;
         private System.Windows.Forms.GroupBox groupBoxM2CenteringClamp;
@@ -16598,10 +16928,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStripT3_2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT3_2;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBoxT3_2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewImageColumn ColumnReached;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripT4_1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT4_1;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBoxT4_1;
@@ -16619,10 +16945,6 @@
         private System.Windows.Forms.Button buttonM3TestSaveProgram;
         private System.Windows.Forms.Button buttonM3TestLoadProgram;
         private System.Windows.Forms.DataGridView dataGridViewM3TestPoints;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.Button buttonM3ContrastOpening;
         private System.Windows.Forms.Button buttonM3ContrastClosing;
         private System.Windows.Forms.Button buttonM3CenteringClampsOpening;
@@ -16633,7 +16955,6 @@
         private System.Windows.Forms.Button buttonM3SmallClampClosing;
         private System.Windows.Forms.Button buttonM3PrintCycle;
         private System.Windows.Forms.Button buttonM3ResetServo;
-        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed11;
         private System.Windows.Forms.CheckBox checkBoxM3ExitBelt;
         private System.Windows.Forms.CheckBox checkBoxM3WorkingBelt;
         private System.Windows.Forms.Label labelM3HomingDone;
@@ -17125,5 +17446,40 @@
         private System.Windows.Forms.Label labelM5ParamRecipe;
         private System.Windows.Forms.Button buttonMRecipeDeleteAll;
         private System.Windows.Forms.Button buttonMRecipeDelete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reachedM2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reachedM3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox comboBoxM2TeachRecipeName;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.ComboBox comboBoxM2TestRecipeName;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.ComboBox comboBoxM3TeachRecipeName;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.ComboBox comboBoxM3TestRecipeName;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.ComboBox comboBoxM1TeachRecipeName;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ComboBox comboBoxM1TestRecipeName;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Button buttonM1ResetTest;
+        private System.Windows.Forms.Button buttonM2ResetTest;
+        private System.Windows.Forms.Button buttonM3ResetTest;
+        private System.Windows.Forms.CheckBox checkBoxT0Keyboard;
+        private System.Windows.Forms.ImageList imageListKey;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBoxRecipeNewKey;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox8;
     }
 }

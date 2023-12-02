@@ -445,6 +445,12 @@ namespace GUI
             result.Result.ForEach(x => mList.Add(x.model_name));
             comboBoxMRecipeName.Items.Clear();
             comboBoxT0RecipeName.Items.Clear();
+            comboBoxM1TeachRecipeName.Items.Clear();
+            comboBoxM1TestRecipeName.Items.Clear();
+            comboBoxM2TeachRecipeName.Items.Clear();
+            comboBoxM2TestRecipeName.Items.Clear();
+            comboBoxM3TeachRecipeName.Items.Clear();
+            comboBoxM3TestRecipeName.Items.Clear();
             foreach (string modelName in mList)
             {
                 toolStripComboBoxT0.Items.Add(modelName);
@@ -472,6 +478,19 @@ namespace GUI
                 comboBoxMRecipeName.SelectedIndex = 0;
                 comboBoxT0RecipeName.Items.Add(modelName);
                 comboBoxT0RecipeName.SelectedIndex = 0;
+                comboBoxM1TeachRecipeName.Items.Add(modelName);
+                comboBoxM1TeachRecipeName.SelectedIndex = 0;
+                comboBoxM2TeachRecipeName.Items.Add(modelName);
+                comboBoxM2TeachRecipeName.SelectedIndex = 0;
+                comboBoxM3TeachRecipeName.Items.Add(modelName);
+                comboBoxM3TeachRecipeName.SelectedIndex = 0;
+                comboBoxM1TestRecipeName.Items.Add(modelName);
+                comboBoxM1TestRecipeName.SelectedIndex = 0;
+                comboBoxM2TestRecipeName.Items.Add(modelName);
+                comboBoxM2TestRecipeName.SelectedIndex = 0;
+                comboBoxM3TestRecipeName.Items.Add(modelName);
+                comboBoxM3TestRecipeName.SelectedIndex = 0;
+
             }
         }
         #endregion
@@ -1117,10 +1136,11 @@ namespace GUI
         {
             Process foo = new Process();
 
-            foo.StartInfo.FileName = @AppDomain.CurrentDomain.BaseDirectory + "Oskeyboard.exe";// "Oskeyboard.exe";system offline
+            foo.StartInfo.FileName = @AppDomain.CurrentDomain.BaseDirectory + "RSAKeyboard.exe.lnk";
+
             //foo.StartInfo.Arguments = " 100 500 1 ";
             bool isRunning = false; //TODO: Check to see if process foo.exe is already running
-            var processExists = Process.GetProcesses().Any(p => p.ProcessName.Contains("Oskeyboard.exe"));
+            var processExists = Process.GetProcesses().Any(p => p.ProcessName.Contains("RSAKeyboard.exe.lnk"));
 
             if (processExists)
             {
@@ -1317,87 +1337,80 @@ namespace GUI
 
         public async void RestartRequestFromM1()
         {
-            //send auto info
-            //program quote, speed, recipe parameters
-            //get model name
-
-            string prgName = "PRMILE-CCC-0000";// comboBoxM2PrgName.Text;
-            string modelName = prgName.Substring(2, 4);
-
-            //check model name
-            if (modelName == "")
+            if (comboBoxM1PrgName.Text == "" || ccService.ClientIsConnected == false)
             {
-                //program name with incorrect format
-                //todo add message to the operator
-                return;
+
             }
-
-            //get data from DB
-            MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
-
-            if ((recs.Error == 0) & (recs.Result.Count != 0))
+            else
             {
-                string keyValue = "pcM1Param1";
-                var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m1_param1.ToString()));
-                WriteOnLabelAsync(labelM1Param1Value, recs.Result[0].m1_param1.ToString());
+                string prgName = comboBoxM1PrgName.Text;
+                string modelName = prgName.Substring(2, 4);
 
-
-                //send quote, speed
-                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                //check model name
+                if (modelName == "")
                 {
-                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                    ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                    objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + prgName + config.Extensions[0]);
-                    if (objPoints != null)
-                    {
-                        List<string> keys = new List<string>()
-                    {
-                        "pcM1AutoQuote",
-                        "pcM1AutoSpeed"
-                    };
+                    //program name with incorrect format
+                    //todo add message to the operator
+                    return;
+                }
 
-                        List<object> values = new List<object>()
-                    {
-                        new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
-                        new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
-                    };
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
 
-                        var sendResults = await ccService.Send(keys, values);
-                        bool allsent = true;
-                        foreach (var result in sendResults)
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    string keyValue = "pcM1Param1";
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m1_param1.ToString()));
+
+                    WriteOnLabelAsync(labelM1Param1Value, recs.Result[0].m1_param1.ToString());
+
+                    //send quote, speed
+                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                    {
+                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                        ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                        objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + prgName + config.Extensions[0]);
+                        if (objPoints != null)
                         {
-                            if (result.Value.OpcResult)
+                            List<string> keys = new List<string>()
+                            {
+                                "pcM1AutoQuote",
+                                "pcM1AutoSpeed"
+                            };
+
+                            List<object> values = new List<object>()
+                            {
+                                new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
+                                new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                            };
+
+                            var sendResults = await ccService.Send(keys, values);
+
+                            foreach (var result in sendResults)
+                            {
+                                if (result.Value.OpcResult)
+                                {
+                                }
+                                else
+                                {
+                                    //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
+                                }
+                            }
+
+                            var sendResultsTimer = await ccService.Send("pcM1AutoTimer", objPoints.Points[0].CustomFloatParam);
+                            if (sendResultsTimer.OpcResult)
                             {
                             }
                             else
                             {
-                                //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
+
                             }
-                            allsent = allsent & result.Value.OpcResult;
-                        }
-                        //if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.trimmer, "program sent succesfully");
-
-                        string key = "pc_timer_stop_stivale";
-                        var sendResultsTimer = await ccService.Send("pcM1AutoTimer", 1.6);
-                        if (sendResultsTimer.OpcResult)
-                        {
-                        }
-                        else
-                        {
-
                         }
                     }
                 }
-                else
-                {
-                   // AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "verify program file");
-                }
-            }
 
-            if (ccService.ClientIsConnected)
-            {
                 string keyToSend = null;
                 bool chkValue = false;
 
@@ -1413,145 +1426,82 @@ namespace GUI
                 else
                 {
                     checkBoxM1Inclusion.ImageIndex = 2;
-                  //  AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
                 }
-            }
-            else
-            {
-               // AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
-            }
-
-            //sharpening data
-            if (ccService.ClientIsConnected)
-            {
-                string keyToSend = null;
-                bool chkValue = false;
-
-                keyToSend = "pcM1SharpeningInclusion";
-                chkValue = (checkBoxM1SharpeningInclusion.CheckState == CheckState.Checked) ? true : false;
-
-                var sendResult = await ccService.Send(keyToSend, chkValue);
-
-                if (sendResult.OpcResult)
-                {
-                    checkBoxM1SharpeningInclusion.ImageIndex = (chkValue) ? 0 : 1;
-                }
-                else
-                {
-                    checkBoxM1SharpeningInclusion.ImageIndex = 2;
-                 //   AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
-                }
-            }
-            else
-            {
-              //  AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
-            }
-
-            if (ccService.ClientIsConnected)
-            {
-                string keyToSend = "pcM1SharpeningCycleNumber";
-
-                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1SharpeningTime.Value.ToString()));
-
-                if (sendResult.OpcResult)
-                {
-
-                }
-                else
-                {
-
-                }
-            }
+            } 
         }
 
         public async void RestartRequestFromM2()
         {
-            //send auto info
-            //program quote, speed, recipe parameters
-            //get model name
-
-            string prgName = "PRMILE-CCC-0000";// comboBoxM2PrgName.Text;
-            string modelName = prgName.Substring(2, 4);
-
-            //check model name
-            if (modelName == "")
+            if (comboBoxM2PrgName.Text == "" || ccService.ClientIsConnected == false)
             {
-                //program name with incorrect format
-                //todo add message to the operator
-                return;
+
             }
-
-            //get data from DB
-            MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
-
-            if ((recs.Error == 0) & (recs.Result.Count != 0))
+            else
             {
-                string keyValue = "pcM2Param1";
-                var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m2_param1.ToString()));
-                WriteOnLabelAsync(labelM2Param1Value, recs.Result[0].m1_param1.ToString());
+                string prgName = comboBoxM2PrgName.Text;
+                string modelName = prgName.Substring(2, 4);
 
-
-                //send quote, speed
-                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                //check model name
+                if (modelName == "")
                 {
-                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                    ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                    objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + prgName + config.Extensions[0]);
-                    if (objPoints != null)
-                    {
-                        List<string> keys = new List<string>()
-                    {
-                        "pcM1AutoQuote",
-                        "pcM1AutoSpeed"
-                    };
+                    //program name with incorrect format
+                    //todo add message to the operator
+                    return;
+                }
 
-                        List<object> values = new List<object>()
-                    {
-                        new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
-                        new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
-                    };
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
 
-                        var sendResults = await ccService.Send(keys, values);
-                        bool allsent = true;
-                        foreach (var result in sendResults)
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    string keyValue = "pcM2Param1";
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m2_param1.ToString()));
+
+                    WriteOnLabelAsync(labelM2Param1Value, recs.Result[0].m2_param1.ToString());
+
+                    //send quote, speed
+                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                    {
+                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                        ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                        objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + prgName + config.Extensions[0]);
+                        if (objPoints != null)
                         {
-                            if (result.Value.OpcResult)
+                            List<string> keys = new List<string>()
                             {
-                            }
-                            else
+                                "pcM2AutoQuote",
+                                "pcM2AutoSpeed"
+                            };
+
+                            List<object> values = new List<object>()
                             {
-                                //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
+                                new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
+                                new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                            };
+
+                            var sendResults = await ccService.Send(keys, values);
+
+                            foreach (var result in sendResults)
+                            {
+                                if (result.Value.OpcResult)
+                                {
+                                }
+                                else
+                                {
+                                    //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
+                                }
                             }
-                            allsent = allsent & result.Value.OpcResult;
-                        }
-                        //if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.trimmer, "program sent succesfully");
-
-                        string key = "pc_timer_stop_stivale";
-                        var sendResultsTimer = await ccService.Send("pcM2AutoTimer", 1.6);
-                        if (sendResultsTimer.OpcResult)
-                        {
-                        }
-                        else
-                        {
-
                         }
                     }
                 }
-                else
-                {
-                    // AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "verify program file");
-                }
-            }
 
-            if (ccService.ClientIsConnected)
-            {
                 string keyToSend = null;
                 bool chkValue = false;
 
                 keyToSend = "pcM2Inclusion";
-                chkValue = (checkBoxM1Inclusion.CheckState == CheckState.Checked) ? true : false;
+                chkValue = (checkBoxM2Inclusion.CheckState == CheckState.Checked) ? true : false;
 
                 var sendResult = await ccService.Send(keyToSend, chkValue);
 
@@ -1562,58 +1512,331 @@ namespace GUI
                 else
                 {
                     checkBoxM2Inclusion.ImageIndex = 2;
-                    //  AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
-                }
-            }
-            else
-            {
-                // AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
-            }
-
-            //sharpening data
-            if (ccService.ClientIsConnected)
-            {
-                string keyToSend = null;
-                bool chkValue = false;
-
-                keyToSend = "pcM1SharpeningInclusion";
-                chkValue = (checkBoxM1SharpeningInclusion.CheckState == CheckState.Checked) ? true : false;
-
-                var sendResult = await ccService.Send(keyToSend, chkValue);
-
-                if (sendResult.OpcResult)
-                {
-                    checkBoxM1SharpeningInclusion.ImageIndex = (chkValue) ? 0 : 1;
-                }
-                else
-                {
-                    checkBoxM1SharpeningInclusion.ImageIndex = 2;
-                    //   AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
-                }
-            }
-            else
-            {
-                //  AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
-            }
-
-            if (ccService.ClientIsConnected)
-            {
-                string keyToSend = "pcM1SharpeningCycleNumber";
-
-                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1SharpeningTime.Value.ToString()));
-
-                if (sendResult.OpcResult)
-                {
-
-                }
-                else
-                {
-
                 }
             }
         }
 
 
+
+        public async void RestartRequestFromM3()
+        {
+            if (comboBoxM3PrgName_st1.Text == "" || ccService.ClientIsConnected == false)
+            {
+
+            }
+            else
+            {
+                string prgName = comboBoxM3PrgName_st1.Text;
+                string modelName = prgName.Substring(2, 4);
+
+                //check model name
+                if (modelName == "")
+                {
+                    //program name with incorrect format
+                    //todo add message to the operator
+                    return;
+                }
+
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    string keyValue = "pcM3Param1";
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param1.ToString()));
+
+                    WriteOnLabelAsync(labelM2Param1Value, recs.Result[0].m3_param1.ToString());
+
+                    keyValue = "pcM3Param2";
+                    sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
+
+                    WriteOnLabelAsync(labelM3Param2Value, recs.Result[0].m3_param2.ToString());
+
+                    //send quote, speed
+                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                    {
+                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                        ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                        objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + prgName + config.Extensions[0]);
+                        if (objPoints != null)
+                        {
+                            List<string> keys = new List<string>()
+                            {
+                                "pcM3AutoQuoteSt1",
+                                "pcM3AutoSpeedSt1"
+                            };
+
+                            List<object> values = new List<object>()
+                            {
+                                new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
+                                new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                            };
+
+                            var sendResults = await ccService.Send(keys, values);
+
+                            foreach (var result in sendResults)
+                            {
+                                if (result.Value.OpcResult)
+                                {
+                                }
+                                else
+                                {
+                                    //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+                if (comboBoxM3PrgName_st2.Text == "" || ccService.ClientIsConnected == false)
+                {
+
+                }
+                else
+                {
+                    string prgName = comboBoxM3PrgName_st2.Text;
+                    string modelName = prgName.Substring(2, 4);
+
+                    //check model name
+                    if (modelName == "")
+                    {
+                        //program name with incorrect format
+                        //todo add message to the operator
+                        return;
+                    }
+
+                    //get data from DB
+                    MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                    if ((recs.Error == 0) & (recs.Result.Count != 0))
+                    {
+                        //send quote, speed
+                        var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                        if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                        {
+                            ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                            ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                            objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + prgName + config.Extensions[0]);
+                            if (objPoints != null)
+                            {
+                                List<string> keys = new List<string>()
+                            {
+                                "pcM3AutoQuoteSt2",
+                                "pcM3AutoSpeedSt2"
+                            };
+
+                                List<object> values = new List<object>()
+                            {
+                                new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
+                                new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                            };
+
+                                var sendResults = await ccService.Send(keys, values);
+
+                                foreach (var result in sendResults)
+                                {
+                                    if (result.Value.OpcResult)
+                                    {
+                                    }
+                                    else
+                                    {
+                                        //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM3Inclusion";
+                chkValue = (checkBoxM3Inclusion.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM3Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM3Inclusion.ImageIndex = 2;
+                }
+            }
+        }
+
+        public async void RestartRequestFromM4()
+        {
+            if (comboBoxM4PrgName.Text == "" || ccService.ClientIsConnected == false)
+            {
+
+            }
+            else
+            {
+                string prgName = comboBoxM4PrgName.Text;
+                string modelName = prgName.Substring(2, 4);
+
+                //check model name
+                if (modelName == "")
+                {
+                    //program name with incorrect format
+                    //todo add message to the operator
+                    return;
+                }
+
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    string keyValue = "pcM4Param1";
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m4_param1.ToString()));
+
+                    WriteOnLabelAsync(labelM4Param1Value, recs.Result[0].m4_param1.ToString());
+
+                    keyValue = "pcM4ProgramName";
+
+                    var readResult = await ccService.Send(keyValue, "");
+                    if (readResult.OpcResult)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+
+                    keyValue = "pcM4ProgramName";
+                    readResult = await ccService.Send(keyValue, comboBoxM4PrgName.Text);
+                    if (readResult.OpcResult)
+                    {
+                    }
+                    else
+                    {
+                    }
+                }
+
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM4Inclusion";
+                chkValue = (checkBoxM4Inclusion.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM4Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM4Inclusion.ImageIndex = 2;
+                }
+            }
+        }
+
+        public async void RestartRequestFromM5()
+        {
+            if (ccService.ClientIsConnected == false)
+            {
+
+            }
+            else
+            {
+                string prgName = comboBoxM1PrgName.Text;
+                string modelName = prgName.Substring(2, 4);
+
+                //check model name
+                if (modelName == "")
+                {
+                    //program name with incorrect format
+                    //todo add message to the operator
+                    return;
+                }
+
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    string keyValue = "pcM5Param1";
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m5_param1.ToString()));
+
+                    WriteOnLabelAsync(labelM5Param1Value, recs.Result[0].m5_param1.ToString());
+                }
+
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM5Inclusion";
+                chkValue = (checkBoxM5Inclusion.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM5Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM5Inclusion.ImageIndex = 2;
+                }
+            }
+        }
+
+        public async void RestartRequestFromM6()
+        {
+            if (ccService.ClientIsConnected == false)
+            {
+
+            }
+            else
+            {
+                string prgName = comboBoxM1PrgName.Text;
+                string modelName = prgName.Substring(2, 4);
+
+                //check model name
+                if (modelName == "")
+                {
+                    //program name with incorrect format
+                    //todo add message to the operator
+                    return;
+                }
+
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    string keyValue = "pcM5Param1";
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m6_param1.ToString()));
+
+                    WriteOnLabelAsync(labelM6Param1Value, recs.Result[0].m6_param1.ToString());
+                }
+
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM6Inclusion";
+                chkValue = (checkBoxM6Inclusion.CheckState == CheckState.Checked) ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM6Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM6Inclusion.ImageIndex = 2;
+                }
+            }
+        }
 
         private async void comboBoxMRecipeName_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1832,5 +2055,201 @@ namespace GUI
                 }
             }
         }
+
+        private void comboBoxM1TeachRecipeName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            List<IObjProgram> pList = new List<IObjProgram>();
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, comboBoxM1TeachRecipeName.Text);
+                comboBoxM1TeachProgramList.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    //filter by model name
+                    if (prgName.ProgramName.Contains(comboBoxM1TeachRecipeName.Text))
+                        comboBoxM1TeachProgramList.Items.Add(prgName.ProgramName);
+                }
+            }
+        }
+
+        private void comboBoxM1TestRecipeName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            List<IObjProgram> pList = new List<IObjProgram>();
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, comboBoxM1TestRecipeName.Text);
+                comboBoxM1TestProgramList.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    //filter by model name
+                    if (prgName.ProgramName.Contains(comboBoxM1TestRecipeName.Text))
+                        comboBoxM1TestProgramList.Items.Add(prgName.ProgramName);
+                }
+            }
+        }
+
+        private void comboBoxM2TeachRecipeName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            List<IObjProgram> pList = new List<IObjProgram>();
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxM2TeachRecipeName.Text);
+                comboBoxM2TeachProgramList.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    //filter by model name
+                    if (prgName.ProgramName.Contains(comboBoxM2TeachRecipeName.Text))
+                        comboBoxM2TeachProgramList.Items.Add(prgName.ProgramName);
+                }
+            }
+        }
+
+        private void comboBoxM2TestRecipeName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            List<IObjProgram> pList = new List<IObjProgram>();
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxM2TestRecipeName.Text);
+                comboBoxM2TestProgramList.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    //filter by model name
+                    if (prgName.ProgramName.Contains(comboBoxM2TestRecipeName.Text))
+                        comboBoxM2TestProgramList.Items.Add(prgName.ProgramName);
+                }
+            }
+        }
+
+        private void comboBoxM3TeachRecipeName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            List<IObjProgram> pList = new List<IObjProgram>();
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxM3TeachRecipeName.Text);
+                comboBoxM3TeachProgramList.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    //filter by model name
+                    if (prgName.ProgramName.Contains(comboBoxM3TeachRecipeName.Text))
+                        comboBoxM3TeachProgramList.Items.Add(prgName.ProgramName);
+                }
+            }
+        }
+
+        private void comboBoxM3TestRecipeName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            List<IObjProgram> pList = new List<IObjProgram>();
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxM3TestRecipeName.Text);
+                comboBoxM3TestProgramList.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    //filter by model name
+                    if (prgName.ProgramName.Contains(comboBoxM3TestRecipeName.Text))
+                        comboBoxM3TestProgramList.Items.Add(prgName.ProgramName);
+                }
+            }
+        }
+
+        private async void buttonM1ResetTest_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM1Reset";
+            var sendResult = await ccService.Send(keyToSend, 1);
+        }
+
+        private async void buttonM2ResetTest_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM2Reset";
+            var sendResult = await ccService.Send(keyToSend, 1);
+        }
+
+        private async void buttonM3ResetTest_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM3Reset";
+            var sendResult = await ccService.Send(keyToSend, 1);
+        }
+
+        private void RunKeyboard()
+        {
+            Process foo = new Process();
+
+            foo.StartInfo.FileName = @AppDomain.CurrentDomain.BaseDirectory + "RSAKeyboard.exe.lnk";
+
+            //foo.StartInfo.Arguments = " 100 500 1 ";
+            bool isRunning = false; //TODO: Check to see if process foo.exe is already running
+            var processExists = Process.GetProcesses().Any(p => p.ProcessName.Contains("RSAKeyboard.exe.lnk"));
+
+            if (processExists)
+            {
+                //TODO: Switch to foo.exe process
+                foo.CloseMainWindow();
+                foo.Start();
+            }
+            else
+            {
+                foo.Start();
+            }
+        }
+        private void checkBoxT0Keyboard_Click(object sender, EventArgs e)
+        {
+            RunKeyboard();
+        }
+
+        private void checkBoxRecipeNewKey_CheckedChanged(object sender, EventArgs e)
+        {
+            RunKeyboard();
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            RunKeyboard();
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            RunKeyboard();
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            RunKeyboard();
+        }
+
+        private void checkBox8_CheckedChanged(object sender, EventArgs e)
+        {
+            RunKeyboard();
+        }
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+            RunKeyboard();
+        }
     }    
+
+        
 }

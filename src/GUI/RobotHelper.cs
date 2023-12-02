@@ -161,7 +161,7 @@ namespace GUI
         }
 
         public async Task UpdateOPCUAStatus()
-        {
+        {           
             try
             {
                 if (ccService.ClientIsConnected)
@@ -187,25 +187,25 @@ namespace GUI
                     var readResult = await ccService.Read(keys);
 
                     UpdateOPCUAMStatus(readResult["pcM1Status"], buttonM1Status, labelM1Status);
-                    ManageOPCUAMBtnStatus(readResult["pcM1Status"], checkBoxM1Start);
+                    //ManageOPCUAMBtnStatus(readResult["pcM1Status"], checkBoxM1Start);
 
                     UpdateOPCUAMStatus(readResult["pcM2Status"], buttonM2Status, labelM2Status);
-                    ManageOPCUAMBtnStatus(readResult["pcM2Status"], checkBoxM2Start);
+                    //ManageOPCUAMBtnStatus(readResult["pcM2Status"], checkBoxM2Start);
 
                     UpdateOPCUAMStatus(readResult["pcM3Status"], buttonM3Status, labelM3Status);
-                    ManageOPCUAMBtnStatus(readResult["pcM3Status"], checkBoxM3Start);
+                    //ManageOPCUAMBtnStatus(readResult["pcM3Status"], checkBoxM3Start);
 
                     UpdateOPCUAMStatus(readResult["pcM4Status"], buttonM4Status, labelM4Status);
-                    ManageOPCUAMBtnStatus(readResult["pcM4Status"], checkBoxM4Start);
+                    //ManageOPCUAMBtnStatus(readResult["pcM4Status"], checkBoxM4Start);
 
                     UpdateOPCUAMStatus(readResult["pcM5Status"], buttonM5Status, labelM5Status);
-                    ManageOPCUAMBtnStatus(readResult["pcM5Status"], checkBoxM5Start);
+                    //ManageOPCUAMBtnStatus(readResult["pcM5Status"], checkBoxM5Start);
 
                     UpdateOPCUAMStatus(readResult["pcM6Status"], buttonM6Status, labelM6Status);
-                    ManageOPCUAMBtnStatus(readResult["pcM6Status"], checkBoxM6Start);
+                    //ManageOPCUAMBtnStatus(readResult["pcM6Status"], checkBoxM6Start);
 
-                    ManageStartStatus(readResult["pcM1Status"], readResult["pcM2Status"], readResult["pcM3Status"],
-                    readResult["pcM4Status"], readResult["pcM5Status"], readResult["pcM6Status"]);
+                    //ManageStartStatus(readResult["pcM1Status"], readResult["pcM2Status"], readResult["pcM3Status"],
+                    //readResult["pcM4Status"], readResult["pcM5Status"], readResult["pcM6Status"]);
                     #endregion
 
                     #region(* machine pause status *)
@@ -353,24 +353,6 @@ namespace GUI
                     //force repaint
                     dataGridViewM3TestPoints.Invalidate(false);
                     #endregion
-
-                    //manipulator digital input
-                    //try
-                    //{
-                    //    List<string> keys = new List<string>()
-                    //    {
-                    //        "pcM5DI",
-                    //        "pcM5DO"
-                    //    };
-
-                    //    var readResult = await ccService.Read(keys);
-                    //    UpdateOPCUAM5DI(readResult["pcM5DI"]);
-
-                    //}
-                    //catch (Exception Ex)
-                    //{
-
-                    //}
 
                     //M1 input/output
                     keys = new List<string>()
@@ -540,13 +522,15 @@ namespace GUI
                     GUIWithOPCUAClientConnected();
                     #endregion
 
+                    #region (* restart from plc *)
                     keys = new List<string>()
                     {
                         "pcM1RestartPlc",
                         "pcM2RestartPlc",
                         "pcM3RestartPlc",
                         "pcM4RestartPlc",
-                        "pcM5RestartPlc"
+                        "pcM5RestartPlc",
+                        "pcM6RestartPlc"
                     };
 
 
@@ -563,6 +547,61 @@ namespace GUI
 
                     }
 
+                    if (bool.Parse(readRes["pcM2RestartPlc"].Value.ToString()))
+                    {
+                        var readRes2 = await ccService.Send("pcM2RestartPlc", false);
+
+                        RestartRequestFromM2();
+                    }
+                    else
+                    {
+
+                    }
+
+                    if (bool.Parse(readRes["pcM3RestartPlc"].Value.ToString()))
+                    {
+                        var readRes2 = await ccService.Send("pcM3RestartPlc", false);
+
+                        RestartRequestFromM3();
+                    }
+                    else
+                    {
+
+                    }
+
+                    if (bool.Parse(readRes["pcM4RestartPlc"].Value.ToString()))
+                    {
+                        var readRes2 = await ccService.Send("pcM4RestartPlc", false);
+
+                        RestartRequestFromM4();
+                    }
+                    else
+                    {
+
+                    }
+
+                    if (bool.Parse(readRes["pcM5RestartPlc"].Value.ToString()))
+                    {
+                        var readRes2 = await ccService.Send("pcM5RestartPlc", false);
+
+                        RestartRequestFromM5();
+                    }
+                    else
+                    {
+
+                    }
+
+                    if (bool.Parse(readRes["pcM6RestartPlc"].Value.ToString()))
+                    {
+                        var readRes2 = await ccService.Send("pcM6RestartPlc", false);
+
+                        RestartRequestFromM6();
+                    }
+                    else
+                    {
+
+                    }
+                    #endregion
                 }
                 else
                 {
@@ -757,7 +796,7 @@ namespace GUI
             }
             else
             {                
-                textToAppend = string.Format("0:0.0##", cr.Value.ToString());
+                textToAppend = Math.Round((float)(cr.Value), 1).ToString();
             }
             if (lbl.InvokeRequired)
             {
@@ -1746,7 +1785,7 @@ namespace GUI
                 lbLed1014M2.State = (arrayBool[14] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1015M2.State = (arrayBool[15] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1016M2.State = (arrayBool[16] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1016M2_T.State = lbLed1016M2.State;
+                //lbLed1016M2_T.State = lbLed1016M2.State;
                 lbLed1017M2.State = (arrayBool[17] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1018M2.State = (arrayBool[18] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1018M2_T.State = lbLed1018M2.State;
