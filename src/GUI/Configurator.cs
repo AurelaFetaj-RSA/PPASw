@@ -158,8 +158,8 @@ namespace GUI
 		{
 			Settings = new DataTable {TableName = "Settings"};
 
-			Settings.Columns.Add("Category", typeof(string));
-			Settings.Columns.Add("SettingKey", typeof(string));
+            Settings.Columns.Add("Category", typeof(string));
+            Settings.Columns.Add("SettingKey", typeof(string));
 			Settings.Columns.Add("SettingsValue", typeof(string));
 		}
 

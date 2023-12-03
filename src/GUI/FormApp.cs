@@ -56,8 +56,12 @@ namespace GUI
         CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
         private ReadProgramsService _readProgramService { get; set; } = null;
 
-        //create static instance of PL configurator (singleton)
+        //create static instance of gui configurator (singleton)
         public static Configurator guiConfigurator = new Configurator();
+        //create static instance of I7O configurator (singleton)
+        public static Configurator ioConfigurator = new Configurator();
+        //create static instance of I7O configurator (singleton)
+        public static Configurator alarmConfigurator = new Configurator();
 
         public enum Priority
         {
@@ -314,7 +318,9 @@ namespace GUI
 
             guiConfigurator.LoadFromFile("guiconfig.xml", Configurator.FileType.Xml);
             InitGUISettings();
-
+            ioConfigurator.LoadFromFile("ioconfig.xml", Configurator.FileType.Xml);
+            InitM1IOSettings();
+            InitM2IOSettings();
         }
         public void Start()
         {
@@ -409,7 +415,7 @@ namespace GUI
             guiConfigurator.AddValue("T1_1", "MANUALQUOTE", numericUpDownM1ManualQuote.Value.ToString(), true);
             guiConfigurator.AddValue("T1_1", "MANUALSPEED", numericUpDownM1ManualSpeed.Value.ToString(), true);
             guiConfigurator.AddValue("T1_2", "PRGNAME", comboBoxM1TestProgramList.Text, true);
-            guiConfigurator.AddValue("T1_2", "RECIPE", comboBoxM1TestRecipeName.Text, true);
+            guiConfigurator.AddValue("T1_2", "RECIPENAME", comboBoxM1TestRecipeName.Text, true);
 
             guiConfigurator.AddValue("T2_1", "PRGNAME", comboBoxM2TeachProgramList.Text, true);
             guiConfigurator.AddValue("T2_1", "RECIPENAME", comboBoxM2TeachRecipeName.Text, true);
@@ -418,7 +424,7 @@ namespace GUI
             guiConfigurator.AddValue("T2_1", "MANUALSPEED", numericUpDownM2ManualSpeed.Value.ToString(), true);
 
             guiConfigurator.AddValue("T2_2", "PRGNAME", comboBoxM2TestProgramList.Text, true);
-            guiConfigurator.AddValue("T2_2", "RECIPE", comboBoxM2TestRecipeName.Text, true);
+            guiConfigurator.AddValue("T2_2", "RECIPENAME", comboBoxM2TestRecipeName.Text, true);
 
             guiConfigurator.AddValue("T3_1", "PRGNAME", comboBoxM3TeachProgramList.Text, true);
             guiConfigurator.AddValue("T3_1", "RECIPENAME", comboBoxM3TeachRecipeName.Text, true);
@@ -427,7 +433,7 @@ namespace GUI
             guiConfigurator.AddValue("T3_1", "MANUALSPEED", numericUpDownM3ManualSpeed.Value.ToString(), true);
 
             guiConfigurator.AddValue("T3_2", "PRGNAME", comboBoxM3TestProgramList.Text, true);
-            guiConfigurator.AddValue("T3_2", "RECIPE", comboBoxM3TestRecipeName.Text, true);
+            guiConfigurator.AddValue("T3_2", "RECIPENAME", comboBoxM3TestRecipeName.Text, true);
 
             guiConfigurator.Save("guiconfig.xml", Configurator.FileType.Xml);
         }
@@ -476,7 +482,7 @@ namespace GUI
             comboBoxM1TeachProgramList.Text = guiConfigurator.GetValue("T1_1", "PRGNAME", "");
             comboBoxM1TeachRecipeName.Text = guiConfigurator.GetValue("T1_1", "RECIPENAME", "");
 
-            numericUpDownM1JogSpeed.Value = guiConfigurator.GetValue("T1_1", "JOGSPEED", "10");
+            numericUpDownM1JogSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T1_1", "JOGSPEED", "10"));
             if (ccService.ClientIsConnected)
             {
                 string keyToSend = "numericUpDownM1JogSpeed";
@@ -493,7 +499,7 @@ namespace GUI
             }
 
             
-            numericUpDownM1ManualQuote.Value = short.Parse(guiConfigurator.GetValue("T1_1", "MANUALQUOTE", "10"));
+            numericUpDownM1ManualQuote.Value = Convert.ToDecimal(guiConfigurator.GetValue("T1_1", "MANUALQUOTE", "10"));
             if (ccService.ClientIsConnected)
             {
                 string keyToSend = "pcM1ManualQuote";
@@ -508,7 +514,7 @@ namespace GUI
                 }
             }
 
-            numericUpDownM1ManualSpeed.Value = short.Parse(guiConfigurator.GetValue("T1_1", "MANUALSPEED", "10"));
+            numericUpDownM1ManualSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T1_1", "MANUALSPEED", "10"));
             if (ccService.ClientIsConnected)
             {
                 string keyToSend = "pcM1ManualSpeed";
@@ -528,12 +534,12 @@ namespace GUI
 
             comboBoxM2TeachProgramList.Text = guiConfigurator.GetValue("T2_1", "PRGNAME", "");
             comboBoxM2TeachRecipeName.Text = guiConfigurator.GetValue("T2_1", "RECIPENAME", "");
-            numericUpDownM2JogSpeed.Value = short.Parse(guiConfigurator.GetValue("T2_1", "JOGSPEED", "10"));
+            numericUpDownM2JogSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T2_1", "JOGSPEED", "10"));
             if (ccService.ClientIsConnected)
             {
                 string keyToSend = "numericUpDownM2JogSpeed";
 
-                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM2JogSpeed.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM2JogSpeed.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -544,11 +550,11 @@ namespace GUI
                 }
             }
 
-            numericUpDownM2ManualQuote.Value = short.Parse(guiConfigurator.GetValue("T2_1", "MANUALQUOTE", "10"));
+            numericUpDownM2ManualQuote.Value = Convert.ToDecimal(guiConfigurator.GetValue("T2_1", "MANUALQUOTE", "10"));
             if (ccService.ClientIsConnected)
             {
                 string keyToSend = "pcM2ManualQuote";
-                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM2ManualQuote.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM2ManualQuote.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -558,7 +564,7 @@ namespace GUI
 
                 }
             }
-            numericUpDownM2ManualSpeed.Value = short.Parse(guiConfigurator.GetValue("T2_1", "MANUALSPEED", "10"));
+            numericUpDownM2ManualSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T2_1", "MANUALSPEED", "10"));
             if (ccService.ClientIsConnected)
             {
                 string keyToSend = "pcM2ManualSpeed";
@@ -577,12 +583,12 @@ namespace GUI
 
             comboBoxM3TeachProgramList.Text = guiConfigurator.GetValue("T3_1", "PRGNAME", "");
             comboBoxM3TeachRecipeName.Text = guiConfigurator.GetValue("T3_1", "RECIPENAME", "");
-            numericUpDownM3JogSpeed.Value = short.Parse(guiConfigurator.GetValue("T3_1", "JOGSPEED", "10"));
+            numericUpDownM3JogSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T3_1", "JOGSPEED", "10"));
             if (ccService.ClientIsConnected)
             {
                 string keyToSend = "numericUpDownM3JogSpeed";
 
-                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM3JogSpeed.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3JogSpeed.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -593,11 +599,11 @@ namespace GUI
                 }
             }
 
-            numericUpDownM3ManualQuote.Value = short.Parse(guiConfigurator.GetValue("T3_1", "MANUALQUOTE", "10"));
+            numericUpDownM3ManualQuote.Value = Convert.ToDecimal(guiConfigurator.GetValue("T3_1", "MANUALQUOTE", "10"));
             if (ccService.ClientIsConnected)
             {
                 string keyToSend = "pcM3ManualQuote";
-                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM3ManualQuote.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3ManualQuote.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -607,11 +613,11 @@ namespace GUI
 
                 }
             }
-            numericUpDownM3ManualSpeed.Value = short.Parse(guiConfigurator.GetValue("T3_1", "MANUALSPEED", "10"));
+            numericUpDownM3ManualSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T3_1", "MANUALSPEED", "10"));
             if (ccService.ClientIsConnected)
             {
                 string keyToSend = "pcM3ManualSpeed";
-                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM3ManualSpeed.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3ManualSpeed.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -623,11 +629,228 @@ namespace GUI
             }
             comboBoxM3TestProgramList.Text = guiConfigurator.GetValue("T3_2", "PRGNAME", "");
             comboBoxM3TestRecipeName.Text = guiConfigurator.GetValue("T3_2", "RECIPENAME", "");
+        }
 
+        private void InitM1IOSettings()
+        {
+            //digital input
+            lbLed1001M1.Label = ioConfigurator.GetValue("M1_INPUT", "1001", "");
+            lbLed1002M1.Label = ioConfigurator.GetValue("M1_INPUT", "1002", "");
+            lbLed1003M1.Label = ioConfigurator.GetValue("M1_INPUT", "1003", "");
+            lbLed1004M1.Label = ioConfigurator.GetValue("M1_INPUT", "1004", "");
+            lbLed1005M1.Label = ioConfigurator.GetValue("M1_INPUT", "1005", "");
+            lbLed1006M1.Label = ioConfigurator.GetValue("M1_INPUT", "1006", "");
+            lbLed1007M1.Label = ioConfigurator.GetValue("M1_INPUT", "1007", "");
+            lbLed1008M1.Label = ioConfigurator.GetValue("M1_INPUT", "1008", "");
+            lbLed1009M1.Label = ioConfigurator.GetValue("M1_INPUT", "1009", "");
+            lbLed1010M1.Label = ioConfigurator.GetValue("M1_INPUT", "1010", "");
 
+            lbLed1011M1.Label = ioConfigurator.GetValue("M1_INPUT", "1011", "");
+            lbLed1012M1.Label = ioConfigurator.GetValue("M1_INPUT", "1012", "");
+            lbLed1013M1.Label = ioConfigurator.GetValue("M1_INPUT", "1013", "");
+            lbLed1014M1.Label = ioConfigurator.GetValue("M1_INPUT", "1014", "");
+            lbLed1015M1.Label = ioConfigurator.GetValue("M1_INPUT", "1015", "");
+            lbLed1016M1.Label = ioConfigurator.GetValue("M1_INPUT", "1016", "");
+            lbLed1017M1.Label = ioConfigurator.GetValue("M1_INPUT", "1017", "");
+            lbLed1018M1.Label = ioConfigurator.GetValue("M1_INPUT", "1018", "");
+            lbLed1019M1.Label = ioConfigurator.GetValue("M1_INPUT", "1019", "");
+            lbLed1020M1.Label = ioConfigurator.GetValue("M1_INPUT", "1020", "");
 
+            lbLed1021M1.Label = ioConfigurator.GetValue("M1_INPUT", "1021", "");
+            lbLed1022M1.Label = ioConfigurator.GetValue("M1_INPUT", "1022", "");
+            lbLed1023M1.Label = ioConfigurator.GetValue("M1_INPUT", "1023", "");
+            lbLed1024M1.Label = ioConfigurator.GetValue("M1_INPUT", "1024", "");
+            lbLed1025M1.Label = ioConfigurator.GetValue("M1_INPUT", "1025", "");
+            lbLed1026M1.Label = ioConfigurator.GetValue("M1_INPUT", "1026", "");
+            lbLed1027M1.Label = ioConfigurator.GetValue("M1_INPUT", "1027", "");
+            lbLed1028M1.Label = ioConfigurator.GetValue("M1_INPUT", "1028", "");
+            lbLed1029M1.Label = ioConfigurator.GetValue("M1_INPUT", "1029", "");
+            lbLed1030M1.Label = ioConfigurator.GetValue("M1_INPUT", "1030", "");
 
+            lbLed1031M1.Label = ioConfigurator.GetValue("M1_INPUT", "1031", "");
+            lbLed1032M1.Label = ioConfigurator.GetValue("M1_INPUT", "1032", "");
+            lbLed1033M1.Label = ioConfigurator.GetValue("M1_INPUT", "1033", "");
+            lbLed1034M1.Label = ioConfigurator.GetValue("M1_INPUT", "1034", "");
+            lbLed1035M1.Label = ioConfigurator.GetValue("M1_INPUT", "1035", "");
+            lbLed1036M1.Label = ioConfigurator.GetValue("M1_INPUT", "1036", "");
+            lbLed1037M1.Label = ioConfigurator.GetValue("M1_INPUT", "1037", "");
+            lbLed1038M1.Label = ioConfigurator.GetValue("M1_INPUT", "1038", "");
+            lbLed1039M1.Label = ioConfigurator.GetValue("M1_INPUT", "1039", "");
+            lbLed1040M1.Label = ioConfigurator.GetValue("M1_INPUT", "1040", "");
 
+            lbLed1041M1.Label = ioConfigurator.GetValue("M1_INPUT", "1041", "");
+            lbLed1042M1.Label = ioConfigurator.GetValue("M1_INPUT", "1042", "");
+            lbLed1043M1.Label = ioConfigurator.GetValue("M1_INPUT", "1043", "");
+            lbLed1044M1.Label = ioConfigurator.GetValue("M1_INPUT", "1044", "");
+            lbLed1045M1.Label = ioConfigurator.GetValue("M1_INPUT", "1045", "");
+            lbLed1046M1.Label = ioConfigurator.GetValue("M1_INPUT", "1046", "");
+            lbLed1047M1.Label = ioConfigurator.GetValue("M1_INPUT", "1047", "");
+            lbLed1048M1.Label = ioConfigurator.GetValue("M1_INPUT", "1048", "");
+
+            //digital output
+            lbLed2001M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2001", "");
+            lbLed2002M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2002", "");
+            lbLed2003M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2003", "");
+            lbLed2004M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2004", "");
+            lbLed2005M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2005", "");
+            lbLed2006M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2006", "");
+            lbLed2007M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2007", "");
+            lbLed2008M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2008", "");
+            lbLed2009M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2009", "");
+            lbLed2010M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2010", "");
+
+            lbLed2011M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2011", "");
+            lbLed2012M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2012", "");
+            lbLed2013M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2013", "");
+            lbLed2014M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2014", "");
+            lbLed2015M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2015", "");
+            lbLed2016M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2016", "");
+            lbLed2017M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2017", "");
+            lbLed2018M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2018", "");
+            lbLed2019M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2019", "");
+            lbLed2020M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2020", "");
+
+            lbLed2021M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2021", "");
+            lbLed2022M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2022", "");
+            lbLed2023M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2023", "");
+            lbLed2024M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2024", "");
+            lbLed2025M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2025", "");
+            lbLed2026M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2026", "");
+            lbLed2027M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2027", "");
+            lbLed2028M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2028", "");
+            lbLed2029M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2029", "");
+            lbLed2030M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2030", "");
+
+            lbLed2031M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2031", "");
+            lbLed2032M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2032", "");
+            lbLed2033M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2033", "");
+            lbLed2034M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2034", "");
+            lbLed2035M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2035", "");
+            lbLed2036M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2036", "");
+            lbLed2037M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2037", "");
+            lbLed2038M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2038", "");
+            lbLed2039M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2039", "");
+            lbLed2040M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2040", "");
+
+            lbLed2041M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2041", "");
+            lbLed2042M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2042", "");
+            lbLed2043M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2043", "");
+            lbLed2044M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2044", "");
+            lbLed2045M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2045", "");
+            lbLed2046M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2046", "");
+            lbLed2047M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2047", "");
+            lbLed2048M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2048", "");
+        }
+
+        private void InitM2IOSettings()
+        {
+            //digital input
+            lbLed1001M2.Label = ioConfigurator.GetValue("M2_INPUT", "1001", "");
+            lbLed1002M2.Label = ioConfigurator.GetValue("M2_INPUT", "1002", "");
+            lbLed1003M2.Label = ioConfigurator.GetValue("M2_INPUT", "1003", "");
+            lbLed1004M2.Label = ioConfigurator.GetValue("M2_INPUT", "1004", "");
+            lbLed1005M2.Label = ioConfigurator.GetValue("M2_INPUT", "1005", "");
+            lbLed1006M2.Label = ioConfigurator.GetValue("M2_INPUT", "1006", "");
+            lbLed1007M2.Label = ioConfigurator.GetValue("M2_INPUT", "1007", "");
+            lbLed1008M2.Label = ioConfigurator.GetValue("M2_INPUT", "1008", "");
+            lbLed1009M2.Label = ioConfigurator.GetValue("M2_INPUT", "1009", "");
+            lbLed1010M2.Label = ioConfigurator.GetValue("M2_INPUT", "1010", "");
+
+            lbLed1011M2.Label = ioConfigurator.GetValue("M2_INPUT", "1011", "");
+            lbLed1012M2.Label = ioConfigurator.GetValue("M2_INPUT", "1012", "");
+            lbLed1013M2.Label = ioConfigurator.GetValue("M2_INPUT", "1013", "");
+            lbLed1014M2.Label = ioConfigurator.GetValue("M2_INPUT", "1014", "");
+            lbLed1015M2.Label = ioConfigurator.GetValue("M2_INPUT", "1015", "");
+            lbLed1016M2.Label = ioConfigurator.GetValue("M2_INPUT", "1016", "");
+            lbLed1017M2.Label = ioConfigurator.GetValue("M2_INPUT", "1017", "");
+            lbLed1018M2.Label = ioConfigurator.GetValue("M2_INPUT", "1018", "");
+            lbLed1019M2.Label = ioConfigurator.GetValue("M2_INPUT", "1019", "");
+            lbLed1020M2.Label = ioConfigurator.GetValue("M2_INPUT", "1020", "");
+
+            lbLed1021M2.Label = ioConfigurator.GetValue("M2_INPUT", "1021", "");
+            lbLed1022M2.Label = ioConfigurator.GetValue("M2_INPUT", "1022", "");
+            lbLed1023M2.Label = ioConfigurator.GetValue("M2_INPUT", "1023", "");
+            lbLed1024M2.Label = ioConfigurator.GetValue("M2_INPUT", "1024", "");
+            lbLed1025M2.Label = ioConfigurator.GetValue("M2_INPUT", "1025", "");
+            lbLed1026M2.Label = ioConfigurator.GetValue("M2_INPUT", "1026", "");
+            lbLed1027M2.Label = ioConfigurator.GetValue("M2_INPUT", "1027", "");
+            lbLed1028M2.Label = ioConfigurator.GetValue("M2_INPUT", "1028", "");
+            lbLed1029M2.Label = ioConfigurator.GetValue("M2_INPUT", "1029", "");
+            lbLed1030M2.Label = ioConfigurator.GetValue("M2_INPUT", "1030", "");
+
+            lbLed1031M2.Label = ioConfigurator.GetValue("M2_INPUT", "1031", "");
+            lbLed1032M2.Label = ioConfigurator.GetValue("M2_INPUT", "1032", "");
+            lbLed1033M2.Label = ioConfigurator.GetValue("M2_INPUT", "1033", "");
+            lbLed1034M2.Label = ioConfigurator.GetValue("M2_INPUT", "1034", "");
+            lbLed1035M2.Label = ioConfigurator.GetValue("M2_INPUT", "1035", "");
+            lbLed1036M2.Label = ioConfigurator.GetValue("M2_INPUT", "1036", "");
+            lbLed1037M2.Label = ioConfigurator.GetValue("M2_INPUT", "1037", "");
+            lbLed1038M2.Label = ioConfigurator.GetValue("M2_INPUT", "1038", "");
+            lbLed1039M2.Label = ioConfigurator.GetValue("M2_INPUT", "1039", "");
+            lbLed1040M2.Label = ioConfigurator.GetValue("M2_INPUT", "1040", "");
+
+            lbLed1041M2.Label = ioConfigurator.GetValue("M2_INPUT", "1041", "");
+            lbLed1042M2.Label = ioConfigurator.GetValue("M2_INPUT", "1042", "");
+            lbLed1043M2.Label = ioConfigurator.GetValue("M2_INPUT", "1043", "");
+            lbLed1044M2.Label = ioConfigurator.GetValue("M2_INPUT", "1044", "");
+            lbLed1045M2.Label = ioConfigurator.GetValue("M2_INPUT", "1045", "");
+            lbLed1046M2.Label = ioConfigurator.GetValue("M2_INPUT", "1046", "");
+            lbLed1047M2.Label = ioConfigurator.GetValue("M2_INPUT", "1047", "");
+            lbLed1048M2.Label = ioConfigurator.GetValue("M2_INPUT", "1048", "");
+
+            //digital output
+            lbLed2001M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2001", "");
+            lbLed2002M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2002", "");
+            lbLed2003M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2003", "");
+            lbLed2004M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2004", "");
+            lbLed2005M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2005", "");
+            lbLed2006M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2006", "");
+            lbLed2007M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2007", "");
+            lbLed2008M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2008", "");
+            lbLed2009M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2009", "");
+            lbLed2010M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2010", "");
+
+            lbLed2011M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2011", "");
+            lbLed2012M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2012", "");
+            lbLed2013M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2013", "");
+            lbLed2014M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2014", "");
+            lbLed2015M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2015", "");
+            lbLed2016M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2016", "");
+            lbLed2017M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2017", "");
+            lbLed2018M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2018", "");
+            lbLed2019M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2019", "");
+            lbLed2020M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2020", "");
+
+            lbLed2021M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2021", "");
+            lbLed2022M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2022", "");
+            lbLed2023M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2023", "");
+            lbLed2024M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2024", "");
+            lbLed2025M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2025", "");
+            lbLed2026M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2026", "");
+            lbLed2027M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2027", "");
+            lbLed2028M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2028", "");
+            lbLed2028M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2029", "");
+            lbLed2029M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2030", "");
+
+            lbLed2030M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2031", "");
+            lbLed2031M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2032", "");
+            lbLed2032M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2033", "");
+            lbLed2033M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2034", "");
+            lbLed2034M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2035", "");
+            lbLed2035M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2036", "");
+            lbLed2036M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2037", "");
+            lbLed2038M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2038", "");
+            lbLed2039M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2039", "");
+            lbLed2040M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2040", "");
+
+            lbLed2041M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2041", "");
+            lbLed2042M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2042", "");
+            lbLed2043M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2043", "");
+            lbLed2044M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2044", "");
+            lbLed2045M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2045", "");
+            lbLed2046M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2046", "");
+            lbLed2047M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2047", "");
+            lbLed2048M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2048", "");
         }
 
         private void AddMessageToDataGridOnTop(DateTime dt, Priority pr, Machine machine, string messageText)
@@ -1361,8 +1584,8 @@ namespace GUI
 
         private void buttonMRecipiesShowAll_Click(object sender, EventArgs e)
         {
-            
 
+            return;
 
             //fill data
             string connectionString = "Data Source=localhost;database=plasticaucho;uid=USER;pwd=Robots2023!";

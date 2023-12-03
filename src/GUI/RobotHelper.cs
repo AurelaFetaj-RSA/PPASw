@@ -571,7 +571,7 @@ namespace GUI
 
                     if (bool.Parse(readRes["pcM4RestartPlc"].Value.ToString()))
                     {
-                        var readRes2 = await ccService.Send("pcM4RestartPlc", false);
+                        //var readRes2 = await ccService.Send("pcM4RestartPlc", false);
 
                         RestartRequestFromM4();
                     }
@@ -718,13 +718,17 @@ namespace GUI
         {
             short value = -1;
 
-            if ((cr == null) || (cr.OpcResult == false))
+            if (cr == null)
             {
 
             }
             else
             {
-                value = (short)cr.Value;
+                if (cr.OpcResult == false)
+                {
+                    
+                }
+                else value = (short)cr.Value;
             }
 
             if (lbl.InvokeRequired)
@@ -1880,37 +1884,44 @@ namespace GUI
         {
             short value = -1;
 
-            if ((cr == null) || (cr.OpcResult == false))
+            if (cr == null)
             {
                 btn.BackColor = Color.Black;               
             }
             else
             {
-                value = (short)cr.Value;
-
-                if (value == 0)
+                if (cr.OpcResult == false)
                 {
-                    btn.BackColor = Color.Red;
+                    btn.BackColor = Color.Black;
                 }
-
-                if (value == 1)
+                else
                 {
-                    btn.BackColor = Color.FromArgb(59, 130, 246);
-                }
+                    value = (short)cr.Value;
 
-                if (value == 2)
-                {
-                    btn.BackColor = Color.Orange;
-                }
+                    if (value == 0)
+                    {
+                        btn.BackColor = Color.Red;
+                    }
 
-                if (value == 3)
-                {
-                    btn.BackColor = Color.FromArgb(107, 227, 162);
-                }
+                    if (value == 1)
+                    {
+                        btn.BackColor = Color.FromArgb(59, 130, 246);
+                    }
 
-                if (value == 4)
-                {
-                    btn.BackColor = Color.DarkOrange;
+                    if (value == 2)
+                    {
+                        btn.BackColor = Color.Orange;
+                    }
+
+                    if (value == 3)
+                    {
+                        btn.BackColor = Color.FromArgb(107, 227, 162);
+                    }
+
+                    if (value == 4)
+                    {
+                        btn.BackColor = Color.DarkOrange;
+                    }
                 }
             }
             WriteOnLabelMStatusAsync(cr, lbl);
