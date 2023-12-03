@@ -41,6 +41,7 @@ namespace GUI
 {
     public partial class FormApp : Form
     {
+
         //core instance
         public static Core myCore;
         OpcClientService ccService = null;
@@ -54,6 +55,9 @@ namespace GUI
 
         CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
         private ReadProgramsService _readProgramService { get; set; } = null;
+
+        //create static instance of PL configurator (singleton)
+        public static Configurator guiConfigurator = new Configurator();
 
         public enum Priority
         {
@@ -306,6 +310,11 @@ namespace GUI
             checkBoxM6Inclusion.Text = "";
 
             #endregion
+
+
+            guiConfigurator.LoadFromFile("guiconfig.xml", Configurator.FileType.Xml);
+            InitGUISettings();
+
         }
         public void Start()
         {
@@ -363,6 +372,7 @@ namespace GUI
                     DialogResult res = xDialog.MsgBox.Show("Are you sure you want to exit from application?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
                     if (res == DialogResult.Yes)
                     {
+                        SaveGUISettings();
                         //exit from application
                         myCore?.StopAllService();
                         System.Windows.Forms.Application.Exit();
@@ -373,6 +383,251 @@ namespace GUI
             {
 
             }
+        }
+
+        public void SaveGUISettings()
+        {
+            //save configuration file plconfig.xml
+            guiConfigurator.AddValue("T0", "M1PRGNAME", comboBoxM1PrgName.Text, true);
+            guiConfigurator.AddValue("T0", "M2PRGNAME", comboBoxM2PrgName.Text, true);
+            guiConfigurator.AddValue("T0", "M3PRGNAME1", comboBoxM3PrgName_st1.Text, true);
+            guiConfigurator.AddValue("T0", "M3PRGNAME2", comboBoxM3PrgName_st2.Text, true);
+            guiConfigurator.AddValue("T0", "M4PRGNAME", comboBoxM4PrgName.Text, true);
+
+            guiConfigurator.AddValue("T0", "M1INC", (checkBoxM1Inclusion.CheckState == CheckState.Checked)?"1":"0", true);
+            guiConfigurator.AddValue("T0", "M2INC", (checkBoxM2Inclusion.CheckState == CheckState.Checked) ? "1" : "0", true);
+            guiConfigurator.AddValue("T0", "M3INC", (checkBoxM3Inclusion.CheckState == CheckState.Checked) ? "1" : "0", true);
+            guiConfigurator.AddValue("T0", "M4INC", (checkBoxM4Inclusion.CheckState == CheckState.Checked) ? "1" : "0", true);
+            guiConfigurator.AddValue("T0", "M5INC", (checkBoxM5Inclusion.CheckState == CheckState.Checked) ? "1" : "0", true);
+            guiConfigurator.AddValue("T0", "M6INC", (checkBoxM6Inclusion.CheckState == CheckState.Checked) ? "1" : "0", true);
+            guiConfigurator.AddValue("T0", "M6PERCENTAGE", numericUpDownM6OnPercentage.Value.ToString(), true);
+            guiConfigurator.AddValue("T0", "RECIPENAME", comboBoxT0RecipeName.Text, true);
+
+            guiConfigurator.AddValue("T1_1", "PRGNAME", comboBoxM1TeachProgramList.Text, true);
+            guiConfigurator.AddValue("T1_1", "RECIPENAME", comboBoxM1TeachRecipeName.Text, true);
+            guiConfigurator.AddValue("T1_1", "JOGSPEED", numericUpDownM1JogSpeed.Value.ToString(), true);
+            guiConfigurator.AddValue("T1_1", "MANUALQUOTE", numericUpDownM1ManualQuote.Value.ToString(), true);
+            guiConfigurator.AddValue("T1_1", "MANUALSPEED", numericUpDownM1ManualSpeed.Value.ToString(), true);
+            guiConfigurator.AddValue("T1_2", "PRGNAME", comboBoxM1TestProgramList.Text, true);
+            guiConfigurator.AddValue("T1_2", "RECIPE", comboBoxM1TestRecipeName.Text, true);
+
+            guiConfigurator.AddValue("T2_1", "PRGNAME", comboBoxM2TeachProgramList.Text, true);
+            guiConfigurator.AddValue("T2_1", "RECIPENAME", comboBoxM2TeachRecipeName.Text, true);
+            guiConfigurator.AddValue("T2_1", "JOGSPEED", numericUpDownM2JogSpeed.Value.ToString(), true);
+            guiConfigurator.AddValue("T2_1", "MANUALQUOTE", numericUpDownM2ManualQuote.Value.ToString(), true);
+            guiConfigurator.AddValue("T2_1", "MANUALSPEED", numericUpDownM2ManualSpeed.Value.ToString(), true);
+
+            guiConfigurator.AddValue("T2_2", "PRGNAME", comboBoxM2TestProgramList.Text, true);
+            guiConfigurator.AddValue("T2_2", "RECIPE", comboBoxM2TestRecipeName.Text, true);
+
+            guiConfigurator.AddValue("T3_1", "PRGNAME", comboBoxM3TeachProgramList.Text, true);
+            guiConfigurator.AddValue("T3_1", "RECIPENAME", comboBoxM3TeachRecipeName.Text, true);
+            guiConfigurator.AddValue("T3_1", "JOGSPEED", numericUpDownM3JogSpeed.Value.ToString(), true);
+            guiConfigurator.AddValue("T3_1", "MANUALQUOTE", numericUpDownM3ManualQuote.Value.ToString(), true);
+            guiConfigurator.AddValue("T3_1", "MANUALSPEED", numericUpDownM3ManualSpeed.Value.ToString(), true);
+
+            guiConfigurator.AddValue("T3_2", "PRGNAME", comboBoxM3TestProgramList.Text, true);
+            guiConfigurator.AddValue("T3_2", "RECIPE", comboBoxM3TestRecipeName.Text, true);
+
+            guiConfigurator.Save("guiconfig.xml", Configurator.FileType.Xml);
+        }
+
+        private async void InitGUISettings()
+        {
+            //save configuration file plconfig.xml
+            comboBoxM1PrgName.Text = guiConfigurator.GetValue("T0", "M1PRGNAME", "");
+            comboBoxM2PrgName.Text = guiConfigurator.GetValue("T0", "M2PRGNAME", "");
+            comboBoxM3PrgName_st1.Text = guiConfigurator.GetValue("T0", "M3PRGNAME1", "");
+            comboBoxM3PrgName_st2.Text = guiConfigurator.GetValue("T0", "M3PRGNAME2", "");
+            comboBoxM4PrgName.Text = guiConfigurator.GetValue("T0", "M4PRGNAME", "");
+            checkBoxM1Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M1INC", "") == "1")?CheckState.Checked:CheckState.Unchecked;
+            checkBoxM2Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M2INC", "") == "1") ? CheckState.Checked : CheckState.Unchecked;
+            checkBoxM3Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M3INC", "") == "1") ? CheckState.Checked : CheckState.Unchecked;
+            checkBoxM4Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M4INC", "") == "1") ? CheckState.Checked : CheckState.Unchecked;
+            checkBoxM5Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M5INC", "") == "1") ? CheckState.Checked : CheckState.Unchecked;
+            checkBoxM6Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M6INC", "") == "1") ? CheckState.Checked : CheckState.Unchecked;
+
+            RestartRequestFromM1();
+            RestartRequestFromM2();
+            RestartRequestFromM3();
+            RestartRequestFromM4();
+            RestartRequestFromM5();
+            RestartRequestFromM6();
+
+
+
+            numericUpDownM6OnPercentage.Value = short.Parse(guiConfigurator.GetValue("T0", "M6PERCENTAGE", ""));
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM6ONPercentage";
+
+                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM6OnPercentage.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+                }
+                else
+                {
+
+                }
+            }
+
+            comboBoxT0RecipeName.Text = guiConfigurator.GetValue("T0", "RECIPENAME", "");
+            comboBoxM1TeachProgramList.Text = guiConfigurator.GetValue("T1_1", "PRGNAME", "");
+            comboBoxM1TeachRecipeName.Text = guiConfigurator.GetValue("T1_1", "RECIPENAME", "");
+
+            numericUpDownM1JogSpeed.Value = guiConfigurator.GetValue("T1_1", "JOGSPEED", "10");
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "numericUpDownM1JogSpeed";
+
+                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1JogSpeed.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+                }
+                else
+                {
+
+                }
+            }
+
+            
+            numericUpDownM1ManualQuote.Value = short.Parse(guiConfigurator.GetValue("T1_1", "MANUALQUOTE", "10"));
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1ManualQuote";
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM1ManualQuote.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+                }
+                else
+                {
+
+                }
+            }
+
+            numericUpDownM1ManualSpeed.Value = short.Parse(guiConfigurator.GetValue("T1_1", "MANUALSPEED", "10"));
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1ManualSpeed";
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM1ManualSpeed.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+                }
+                else
+                {
+
+                }
+            }
+            comboBoxM1TestProgramList.Text = guiConfigurator.GetValue("T1_2", "PRGNAME", "");
+            comboBoxM1TestRecipeName.Text = guiConfigurator.GetValue("T1_2", "RECIPENAME", "");
+
+
+            comboBoxM2TeachProgramList.Text = guiConfigurator.GetValue("T2_1", "PRGNAME", "");
+            comboBoxM2TeachRecipeName.Text = guiConfigurator.GetValue("T2_1", "RECIPENAME", "");
+            numericUpDownM2JogSpeed.Value = short.Parse(guiConfigurator.GetValue("T2_1", "JOGSPEED", "10"));
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "numericUpDownM2JogSpeed";
+
+                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM2JogSpeed.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+                }
+                else
+                {
+
+                }
+            }
+
+            numericUpDownM2ManualQuote.Value = short.Parse(guiConfigurator.GetValue("T2_1", "MANUALQUOTE", "10"));
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM2ManualQuote";
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM2ManualQuote.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+                }
+                else
+                {
+
+                }
+            }
+            numericUpDownM2ManualSpeed.Value = short.Parse(guiConfigurator.GetValue("T2_1", "MANUALSPEED", "10"));
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM2ManualSpeed";
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM2ManualSpeed.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+                }
+                else
+                {
+
+                }
+            }
+            comboBoxM2TestProgramList.Text = guiConfigurator.GetValue("T2_2", "PRGNAME", "");
+            comboBoxM2TestRecipeName.Text = guiConfigurator.GetValue("T2_2", "RECIPENAME", "");
+
+            comboBoxM3TeachProgramList.Text = guiConfigurator.GetValue("T3_1", "PRGNAME", "");
+            comboBoxM3TeachRecipeName.Text = guiConfigurator.GetValue("T3_1", "RECIPENAME", "");
+            numericUpDownM3JogSpeed.Value = short.Parse(guiConfigurator.GetValue("T3_1", "JOGSPEED", "10"));
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "numericUpDownM3JogSpeed";
+
+                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM3JogSpeed.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+                }
+                else
+                {
+
+                }
+            }
+
+            numericUpDownM3ManualQuote.Value = short.Parse(guiConfigurator.GetValue("T3_1", "MANUALQUOTE", "10"));
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM3ManualQuote";
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM3ManualQuote.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+                }
+                else
+                {
+
+                }
+            }
+            numericUpDownM3ManualSpeed.Value = short.Parse(guiConfigurator.GetValue("T3_1", "MANUALSPEED", "10"));
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM3ManualSpeed";
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM3ManualSpeed.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+                }
+                else
+                {
+
+                }
+            }
+            comboBoxM3TestProgramList.Text = guiConfigurator.GetValue("T3_2", "PRGNAME", "");
+            comboBoxM3TestRecipeName.Text = guiConfigurator.GetValue("T3_2", "RECIPENAME", "");
+
+
+
+
+
         }
 
         private void AddMessageToDataGridOnTop(DateTime dt, Priority pr, Machine machine, string messageText)

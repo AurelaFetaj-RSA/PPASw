@@ -126,6 +126,7 @@
     <Compile Include="ClientTest.Designer.cs">
       <DependentUpon>ClientTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Configurator.cs" />
     <Compile Include="FormApp.cs">
       <SubType>Form</SubType>
     </Compile>
