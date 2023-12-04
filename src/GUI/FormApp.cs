@@ -61,7 +61,7 @@ namespace GUI
         //create static instance of I7O configurator (singleton)
         public static Configurator ioConfigurator = new Configurator();
         //create static instance of I7O configurator (singleton)
-        public static Configurator alarmConfigurator = new Configurator();
+        public static Configurator alarmsConfigurator = new Configurator();
 
         public static string M1PrgName = "";
         public static string M2PrgName = "";
@@ -336,6 +336,8 @@ namespace GUI
             InitM2IOSettings();
             InitM3IOSettings();
             InitM5IOSettings();
+            alarmsConfigurator.LoadFromFile("alarmsconfig.xml", Configurator.FileType.Xml);
+            InitM1AlarmsSettings();
         }
         public void Start()
         {
@@ -429,6 +431,7 @@ namespace GUI
             guiConfigurator.AddValue("T1_1", "JOGSPEED", numericUpDownM1JogSpeed.Value.ToString(), true);
             guiConfigurator.AddValue("T1_1", "MANUALQUOTE", numericUpDownM1ManualQuote.Value.ToString(), true);
             guiConfigurator.AddValue("T1_1", "MANUALSPEED", numericUpDownM1ManualSpeed.Value.ToString(), true);
+            
             guiConfigurator.AddValue("T1_2", "PRGNAME", comboBoxM1TestProgramList.Text, true);
             guiConfigurator.AddValue("T1_2", "RECIPENAME", comboBoxM1TestRecipeName.Text, true);
 
@@ -436,6 +439,7 @@ namespace GUI
             guiConfigurator.AddValue("T2_1", "RECIPENAME", comboBoxM2TeachRecipeName.Text, true);
             guiConfigurator.AddValue("T2_1", "JOGSPEED", numericUpDownM2JogSpeed.Value.ToString(), true);
             guiConfigurator.AddValue("T2_1", "MANUALQUOTE", numericUpDownM2ManualQuote.Value.ToString(), true);
+            
             guiConfigurator.AddValue("T2_1", "MANUALSPEED", numericUpDownM2ManualSpeed.Value.ToString(), true);
 
             guiConfigurator.AddValue("T2_2", "PRGNAME", comboBoxM2TestProgramList.Text, true);
@@ -446,7 +450,7 @@ namespace GUI
             guiConfigurator.AddValue("T3_1", "JOGSPEED", numericUpDownM3JogSpeed.Value.ToString(), true);
             guiConfigurator.AddValue("T3_1", "MANUALQUOTE", numericUpDownM3ManualQuote.Value.ToString(), true);
             guiConfigurator.AddValue("T3_1", "MANUALSPEED", numericUpDownM3ManualSpeed.Value.ToString(), true);
-
+            
             guiConfigurator.AddValue("T3_2", "PRGNAME", comboBoxM3TestProgramList.Text, true);
             guiConfigurator.AddValue("T3_2", "RECIPENAME", comboBoxM3TestRecipeName.Text, true);
 
@@ -598,7 +602,7 @@ namespace GUI
             numericUpDownM1JogSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T1_1", "JOGSPEED", "10"));
             if (ccService.ClientIsConnected)
             {
-                keyToSend = "numericUpDownM1JogSpeed";
+                keyToSend = "pcM1JogSpeed";
 
                 sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1JogSpeed.Value.ToString()));
 
@@ -650,7 +654,7 @@ namespace GUI
             numericUpDownM2JogSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T2_1", "JOGSPEED", "10"));
             if (ccService.ClientIsConnected)
             {
-                keyToSend = "numericUpDownM2JogSpeed";
+                keyToSend = "pcM2JogSpeed";
 
                 sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM2JogSpeed.Value.ToString()));
 
@@ -699,7 +703,7 @@ namespace GUI
             numericUpDownM3JogSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T3_1", "JOGSPEED", "10"));
             if (ccService.ClientIsConnected)
             {
-                keyToSend = "numericUpDownM3JogSpeed";
+                keyToSend = "pcM3JogSpeed";
 
                 sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3JogSpeed.Value.ToString()));
 
@@ -744,7 +748,40 @@ namespace GUI
             comboBoxM3TestRecipeName.Text = guiConfigurator.GetValue("T3_2", "RECIPENAME", "");
         }
 
-        private void InitM1IOSettings()
+        private void InitM1AlarmsSettings()
+        {
+            try
+            {
+                dataGridView1.Rows.Clear();
+                dataGridView1.Rows.Add(8);
+
+                dataGridView1.Rows[0].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A1", "");
+                dataGridView1.Rows[1].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A2", "");
+                dataGridView1.Rows[2].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A3", "");
+                dataGridView1.Rows[3].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A4", "");
+                dataGridView1.Rows[4].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A5", "");
+                dataGridView1.Rows[5].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A6", "");
+                dataGridView1.Rows[6].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A7", "");
+                dataGridView1.Rows[7].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A8", "");
+                //dataGridViewM1AlarmsTimeout.Rows[0].Cells[1]. = ;
+
+                //dataGridViewM1AlarmsTimeout.Rows[0].Cells[1].Value = "1";
+                //dataGridViewM1AlarmsTimeout.Rows[1].Cells[1].Value = "1";
+                //dataGridViewM1AlarmsTimeout.Rows[2].Cells[1].Value = "1";
+                //dataGridViewM1AlarmsTimeout.Rows[3].Cells[1].Value = "1";
+                //dataGridViewM1AlarmsTimeout.Rows[4].Cells[1].Value = "1";
+                //dataGridViewM1AlarmsTimeout.Rows[5].Cells[1].Value = "1";
+                //dataGridViewM1AlarmsTimeout.Rows[6].Cells[1].Value = "1";
+                //dataGridViewM1AlarmsTimeout.Rows[7].Cells[1].Value = "1";
+            }
+            catch(Exception Ex)
+            {
+
+            }
+
+        }
+
+            private void InitM1IOSettings()
         {
             //digital input
             lbLed1001M1.Label = ioConfigurator.GetValue("M1_INPUT", "1001", "");
@@ -2238,6 +2275,137 @@ namespace GUI
             } 
         }
 
+        public async void UpdateRecipeToM1(string modelName)
+        {
+            if (ccService.ClientIsConnected == false)
+            {
+
+            }
+            else
+            {
+                string prgName = M1PrgName;
+                if (M1PrgName == "") return;
+
+                string modelNameAuto = prgName.Substring(2, 4);
+
+                if (modelNameAuto != modelName) return;
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    string keyValue = "pcM1Param1";
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m1_param1.ToString()));
+
+                    WriteOnLabelAsync(labelM1Param1Value, recs.Result[0].m1_param1.ToString());
+                }
+            }
+        }
+
+        public async void UpdateRecipeToM2(string modelName)
+        {
+            if (ccService.ClientIsConnected == false)
+            {
+
+            }
+            else
+            {
+                string prgName = M2PrgName;
+                if (M2PrgName == "") return;
+
+                string modelNameAuto = prgName.Substring(2, 4);
+
+                if (modelNameAuto != modelName) return;
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    string keyValue = "pcM2Param1";
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m2_param1.ToString()));
+
+                    WriteOnLabelAsync(labelM2Param1Value, recs.Result[0].m2_param1.ToString());
+                }
+            }
+        }
+
+        public async void UpdateRecipeToM3(string modelName)
+        {
+            if (ccService.ClientIsConnected == false)
+            {
+
+            }
+            else
+            {
+                string prgName = M3PrgName1;
+                if (M3PrgName1 == "") return;
+
+                string modelNameAuto = prgName.Substring(2, 4);
+
+                if (modelNameAuto != modelName) return;
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    string keyValue = "pcM3Param1";
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param1.ToString()));
+
+                    WriteOnLabelAsync(labelM3Param1Value, recs.Result[0].m3_param1.ToString());
+
+                    keyValue = "pcM3Param2";
+                    sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
+
+                    WriteOnLabelAsync(labelM3Param2Value, recs.Result[0].m3_param2.ToString());
+                }
+            }
+        }
+
+        public async void UpdateRecipeToM4(string modelName)
+        {
+            if (ccService.ClientIsConnected == false)
+            {
+
+            }
+            else
+            {
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    string keyValue = "pcM4Param1";
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m4_param1.ToString()));
+
+                    WriteOnLabelAsync(labelM3Param1Value, recs.Result[0].m3_param1.ToString());
+
+                    WritePadLaserRecipe(recs.Result[0].m4_param3.ToString(), recs.Result[0].m4_param3.ToString(), Properties.Settings.Default.PadLaserFilePath);
+                }
+            }
+        }
+
+        public async void UpdateRecipeToM6(string modelName)
+        {
+            if (ccService.ClientIsConnected == false)
+            {
+
+            }
+            else
+            {
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    string keyValue = "pcM6Param1";
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m6_param1.ToString()));
+
+                    WriteOnLabelAsync(labelM6Param1Value, recs.Result[0].m6_param1.ToString());
+
+                }
+            }
+        }
+
         public async void RestartRequestFromM2()
         {
             if (M2PrgName == "" || ccService.ClientIsConnected == false)
@@ -2667,6 +2835,13 @@ namespace GUI
                     res = xDialog.MsgBox.Show("Recipe succesfully updated", "PBoot", xDialog.MsgBox.Buttons.OK);
                 }
             }
+
+            //update auto recipe
+            UpdateRecipeToM1(comboBoxMRecipeName.Text);
+            UpdateRecipeToM2(comboBoxMRecipeName.Text);
+            UpdateRecipeToM3(comboBoxMRecipeName.Text);
+            UpdateRecipeToM4(comboBoxMRecipeName.Text);
+            UpdateRecipeToM6(comboBoxMRecipeName.Text);
         }
 
         private void checkBoxM1RecipeModify_CheckedChanged(object sender, EventArgs e)
@@ -3042,6 +3217,34 @@ namespace GUI
             catch (Exception ex)  //Writing to log has failed, send message to trace in case anyone is listening.
             {
                 AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padLaser, "check il file is opened");
+            }
+        }
+
+
+
+     
+
+        private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if ((e.ColumnIndex == 1) && (e.RowIndex >= 0))
+            {
+                System.Drawing.Image img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\notinalarm.png");
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].ToolTipText == "notinalarm")
+                {
+                    img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\notinalarm.png");
+                }
+                else
+                {
+                    img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\inalarm.png");
+                }
+                var w = 24;// img.Width;
+                var h = 24;// img.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
+                e.Handled = true;
             }
         }
     }    

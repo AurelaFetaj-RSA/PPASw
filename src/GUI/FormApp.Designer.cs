@@ -137,14 +137,19 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle49 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle50 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle28 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle53 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle63 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle28 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle53 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle63 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle29 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle54 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle55 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -152,11 +157,11 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle30 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle56 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle57 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle31 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle58 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle59 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -873,6 +878,9 @@
             this.pictureBoxM2PLCNode = new System.Windows.Forms.PictureBox();
             this.pictureBoxM3PLCNode = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewButtonColumn6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.labelM5ExitBelt3State = new System.Windows.Forms.Label();
             this.labelM5ExitBelt2State = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -1158,6 +1166,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM2PLCNode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3PLCNode)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPageT1_1.SuspendLayout();
             this.contextMenuStripT1_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1TimerBootTeach)).BeginInit();
@@ -7554,7 +7563,7 @@
             tabPageFormatStyle11.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle11.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.tabPageT5_1.FormatStyle = tabPageFormatStyle11;
-            this.tabPageT5_1.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT5_1.Location = new System.Drawing.Point(0, 0);
             this.tabPageT5_1.Name = "tabPageT5_1";
             tabPageColorStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle23.BackFadeColor = System.Drawing.Color.Transparent;
@@ -7571,12 +7580,12 @@
             tabPageColorStyle32.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle32.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT5_1.SelectedStyle = tabPageColorStyle32;
-            this.tabPageT5_1.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT5_1.Size = new System.Drawing.Size(0, 0);
             this.tabPageT5_1.StyleFromParent = false;
             this.tabPageT5_1.TabIndex = 19;
             this.tabPageT5_1.Text = "manual";
             this.tabPageT5_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT5_1.TextBounds")));
-            this.tabPageT5_1.TextSize = new System.Drawing.SizeF(66.54426F, 21.44531F);
+            this.tabPageT5_1.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT5_1.UseParentTabStripPlacement = false;
             // 
             // buttonM6LFLampsON
@@ -8029,7 +8038,7 @@
             tabPageFormatStyle13.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle13.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
             this.tabPageT5_2.FormatStyle = tabPageFormatStyle13;
-            this.tabPageT5_2.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT5_2.Location = new System.Drawing.Point(0, 0);
             this.tabPageT5_2.Name = "tabPageT5_2";
             tabPageColorStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle27.BackFadeColor = System.Drawing.Color.Transparent;
@@ -8046,12 +8055,12 @@
             tabPageColorStyle28.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle28.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT5_2.SelectedStyle = tabPageColorStyle28;
-            this.tabPageT5_2.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT5_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT5_2.StyleFromParent = false;
             this.tabPageT5_2.TabIndex = 20;
             this.tabPageT5_2.Text = "input";
             this.tabPageT5_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT5_2.TextBounds")));
-            this.tabPageT5_2.TextSize = new System.Drawing.SizeF(47.47395F, 21.44531F);
+            this.tabPageT5_2.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT5_2.UseParentTabStripPlacement = false;
             // 
             // lbLed1040M5
@@ -9003,7 +9012,7 @@
             tabPageFormatStyle14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle14.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT5_3.FormatStyle = tabPageFormatStyle14;
-            this.tabPageT5_3.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT5_3.Location = new System.Drawing.Point(0, 0);
             this.tabPageT5_3.Name = "tabPageT5_3";
             tabPageColorStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle29.BackFadeColor = System.Drawing.Color.Transparent;
@@ -9020,12 +9029,12 @@
             tabPageColorStyle30.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle30.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT5_3.SelectedStyle = tabPageColorStyle30;
-            this.tabPageT5_3.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT5_3.Size = new System.Drawing.Size(0, 0);
             this.tabPageT5_3.StyleFromParent = false;
             this.tabPageT5_3.TabIndex = 21;
             this.tabPageT5_3.Text = "output";
             this.tabPageT5_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT5_3.TextBounds")));
-            this.tabPageT5_3.TextSize = new System.Drawing.SizeF(59.4427F, 21.44531F);
+            this.tabPageT5_3.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT5_3.UseParentTabStripPlacement = false;
             // 
             // lbLed2020M5
@@ -13233,6 +13242,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Controls.Add(this.labelM5ExitBelt3State);
             this.tabPage2.Controls.Add(this.labelM5ExitBelt2State);
             this.tabPage2.Controls.Add(this.label15);
@@ -13280,12 +13290,77 @@
             this.tabPage2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage2.TextBounds")));
             this.tabPage2.TextSize = new System.Drawing.SizeF(0F, 0F);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewButtonColumn6});
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle31;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dataGridView1.Location = new System.Drawing.Point(420, 290);
+            this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            this.dataGridView1.RowHeadersVisible = false;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle33;
+            this.dataGridView1.RowTemplate.Height = 48;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(380, 220);
+            this.dataGridView1.TabIndex = 183;
+            this.dataGridView1.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView1_CellPainting);
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn16.DefaultCellStyle = dataGridViewCellStyle30;
+            this.dataGridViewTextBoxColumn16.Frozen = true;
+            this.dataGridViewTextBoxColumn16.HeaderText = "point id";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
+            this.dataGridViewTextBoxColumn16.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn16.Width = 60;
+            // 
+            // dataGridViewButtonColumn6
+            // 
+            this.dataGridViewButtonColumn6.HeaderText = "reached";
+            this.dataGridViewButtonColumn6.Name = "dataGridViewButtonColumn6";
+            this.dataGridViewButtonColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewButtonColumn6.Width = 56;
+            // 
             // labelM5ExitBelt3State
             // 
             this.labelM5ExitBelt3State.AutoSize = true;
+            this.labelM5ExitBelt3State.BackColor = System.Drawing.SystemColors.Control;
             this.labelM5ExitBelt3State.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM5ExitBelt3State.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM5ExitBelt3State.Location = new System.Drawing.Point(539, 233);
+            this.labelM5ExitBelt3State.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM5ExitBelt3State.Location = new System.Drawing.Point(539, 130);
             this.labelM5ExitBelt3State.Name = "labelM5ExitBelt3State";
             this.labelM5ExitBelt3State.Size = new System.Drawing.Size(15, 16);
             this.labelM5ExitBelt3State.TabIndex = 182;
@@ -13294,9 +13369,10 @@
             // labelM5ExitBelt2State
             // 
             this.labelM5ExitBelt2State.AutoSize = true;
+            this.labelM5ExitBelt2State.BackColor = System.Drawing.SystemColors.Control;
             this.labelM5ExitBelt2State.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM5ExitBelt2State.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM5ExitBelt2State.Location = new System.Drawing.Point(539, 187);
+            this.labelM5ExitBelt2State.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM5ExitBelt2State.Location = new System.Drawing.Point(539, 100);
             this.labelM5ExitBelt2State.Name = "labelM5ExitBelt2State";
             this.labelM5ExitBelt2State.Size = new System.Drawing.Size(15, 16);
             this.labelM5ExitBelt2State.TabIndex = 181;
@@ -13305,9 +13381,10 @@
             // label15
             // 
             this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.SystemColors.Control;
             this.label15.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label15.Location = new System.Drawing.Point(322, 229);
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label15.Location = new System.Drawing.Point(322, 130);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(191, 16);
             this.label15.TabIndex = 180;
@@ -13316,9 +13393,10 @@
             // label13
             // 
             this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.SystemColors.Control;
             this.label13.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label13.Location = new System.Drawing.Point(322, 187);
+            this.label13.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label13.Location = new System.Drawing.Point(322, 100);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(191, 16);
             this.label13.TabIndex = 179;
@@ -13327,9 +13405,10 @@
             // labelM5ExitBelt1State
             // 
             this.labelM5ExitBelt1State.AutoSize = true;
+            this.labelM5ExitBelt1State.BackColor = System.Drawing.SystemColors.Control;
             this.labelM5ExitBelt1State.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM5ExitBelt1State.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM5ExitBelt1State.Location = new System.Drawing.Point(539, 145);
+            this.labelM5ExitBelt1State.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM5ExitBelt1State.Location = new System.Drawing.Point(539, 70);
             this.labelM5ExitBelt1State.Name = "labelM5ExitBelt1State";
             this.labelM5ExitBelt1State.Size = new System.Drawing.Size(15, 16);
             this.labelM5ExitBelt1State.TabIndex = 178;
@@ -13338,9 +13417,10 @@
             // labelM5TranslatorBeltState
             // 
             this.labelM5TranslatorBeltState.AutoSize = true;
+            this.labelM5TranslatorBeltState.BackColor = System.Drawing.SystemColors.Control;
             this.labelM5TranslatorBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM5TranslatorBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM5TranslatorBeltState.Location = new System.Drawing.Point(539, 90);
+            this.labelM5TranslatorBeltState.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM5TranslatorBeltState.Location = new System.Drawing.Point(539, 40);
             this.labelM5TranslatorBeltState.Name = "labelM5TranslatorBeltState";
             this.labelM5TranslatorBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM5TranslatorBeltState.TabIndex = 177;
@@ -13349,9 +13429,10 @@
             // label23
             // 
             this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.SystemColors.Control;
             this.label23.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label23.Location = new System.Drawing.Point(322, 146);
+            this.label23.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label23.Location = new System.Drawing.Point(322, 70);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(191, 16);
             this.label23.TabIndex = 176;
@@ -13360,9 +13441,10 @@
             // label25
             // 
             this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.SystemColors.Control;
             this.label25.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label25.Location = new System.Drawing.Point(322, 90);
+            this.label25.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label25.Location = new System.Drawing.Point(322, 40);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(186, 16);
             this.label25.TabIndex = 175;
@@ -13371,9 +13453,10 @@
             // labelM5State
             // 
             this.labelM5State.AutoSize = true;
+            this.labelM5State.BackColor = System.Drawing.SystemColors.Control;
             this.labelM5State.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM5State.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM5State.Location = new System.Drawing.Point(539, 35);
+            this.labelM5State.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM5State.Location = new System.Drawing.Point(539, 10);
             this.labelM5State.Name = "labelM5State";
             this.labelM5State.Size = new System.Drawing.Size(15, 16);
             this.labelM5State.TabIndex = 174;
@@ -13382,9 +13465,10 @@
             // label27
             // 
             this.label27.AutoSize = true;
+            this.label27.BackColor = System.Drawing.SystemColors.Control;
             this.label27.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label27.Location = new System.Drawing.Point(322, 38);
+            this.label27.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label27.Location = new System.Drawing.Point(322, 10);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(159, 16);
             this.label27.TabIndex = 173;
@@ -13393,9 +13477,10 @@
             // labelM2ExitBeltState
             // 
             this.labelM2ExitBeltState.AutoSize = true;
+            this.labelM2ExitBeltState.BackColor = System.Drawing.SystemColors.Control;
             this.labelM2ExitBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM2ExitBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM2ExitBeltState.Location = new System.Drawing.Point(539, 382);
+            this.labelM2ExitBeltState.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM2ExitBeltState.Location = new System.Drawing.Point(539, 240);
             this.labelM2ExitBeltState.Name = "labelM2ExitBeltState";
             this.labelM2ExitBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM2ExitBeltState.TabIndex = 172;
@@ -13404,9 +13489,10 @@
             // labelM2WorkingBeltState
             // 
             this.labelM2WorkingBeltState.AutoSize = true;
+            this.labelM2WorkingBeltState.BackColor = System.Drawing.SystemColors.Control;
             this.labelM2WorkingBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM2WorkingBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM2WorkingBeltState.Location = new System.Drawing.Point(539, 327);
+            this.labelM2WorkingBeltState.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM2WorkingBeltState.Location = new System.Drawing.Point(539, 210);
             this.labelM2WorkingBeltState.Name = "labelM2WorkingBeltState";
             this.labelM2WorkingBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM2WorkingBeltState.TabIndex = 171;
@@ -13415,9 +13501,10 @@
             // label20
             // 
             this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.SystemColors.Control;
             this.label20.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label20.Location = new System.Drawing.Point(322, 383);
+            this.label20.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label20.Location = new System.Drawing.Point(322, 240);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(178, 16);
             this.label20.TabIndex = 170;
@@ -13426,9 +13513,10 @@
             // label22
             // 
             this.label22.AutoSize = true;
+            this.label22.BackColor = System.Drawing.SystemColors.Control;
             this.label22.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label22.Location = new System.Drawing.Point(322, 327);
+            this.label22.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label22.Location = new System.Drawing.Point(322, 210);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(178, 16);
             this.label22.TabIndex = 169;
@@ -13437,9 +13525,10 @@
             // labelM2State
             // 
             this.labelM2State.AutoSize = true;
+            this.labelM2State.BackColor = System.Drawing.SystemColors.Control;
             this.labelM2State.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM2State.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM2State.Location = new System.Drawing.Point(539, 282);
+            this.labelM2State.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM2State.Location = new System.Drawing.Point(539, 180);
             this.labelM2State.Name = "labelM2State";
             this.labelM2State.Size = new System.Drawing.Size(15, 16);
             this.labelM2State.TabIndex = 168;
@@ -13448,9 +13537,10 @@
             // label24
             // 
             this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.SystemColors.Control;
             this.label24.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label24.Location = new System.Drawing.Point(322, 279);
+            this.label24.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label24.Location = new System.Drawing.Point(322, 180);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(116, 16);
             this.label24.TabIndex = 167;
@@ -13459,9 +13549,10 @@
             // labelM3ExitBeltState
             // 
             this.labelM3ExitBeltState.AutoSize = true;
+            this.labelM3ExitBeltState.BackColor = System.Drawing.SystemColors.Control;
             this.labelM3ExitBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM3ExitBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM3ExitBeltState.Location = new System.Drawing.Point(855, 145);
+            this.labelM3ExitBeltState.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM3ExitBeltState.Location = new System.Drawing.Point(855, 70);
             this.labelM3ExitBeltState.Name = "labelM3ExitBeltState";
             this.labelM3ExitBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM3ExitBeltState.TabIndex = 166;
@@ -13470,9 +13561,10 @@
             // labelM3WorkingBeltState
             // 
             this.labelM3WorkingBeltState.AutoSize = true;
+            this.labelM3WorkingBeltState.BackColor = System.Drawing.SystemColors.Control;
             this.labelM3WorkingBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM3WorkingBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM3WorkingBeltState.Location = new System.Drawing.Point(855, 90);
+            this.labelM3WorkingBeltState.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM3WorkingBeltState.Location = new System.Drawing.Point(855, 40);
             this.labelM3WorkingBeltState.Name = "labelM3WorkingBeltState";
             this.labelM3WorkingBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM3WorkingBeltState.TabIndex = 165;
@@ -13481,9 +13573,10 @@
             // label18
             // 
             this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.SystemColors.Control;
             this.label18.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label18.Location = new System.Drawing.Point(641, 146);
+            this.label18.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label18.Location = new System.Drawing.Point(641, 70);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(178, 16);
             this.label18.TabIndex = 164;
@@ -13492,9 +13585,10 @@
             // label19
             // 
             this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.SystemColors.Control;
             this.label19.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label19.Location = new System.Drawing.Point(641, 90);
+            this.label19.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label19.Location = new System.Drawing.Point(641, 40);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(178, 16);
             this.label19.TabIndex = 163;
@@ -13503,9 +13597,10 @@
             // labelM3State
             // 
             this.labelM3State.AutoSize = true;
+            this.labelM3State.BackColor = System.Drawing.SystemColors.Control;
             this.labelM3State.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM3State.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM3State.Location = new System.Drawing.Point(855, 35);
+            this.labelM3State.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM3State.Location = new System.Drawing.Point(855, 10);
             this.labelM3State.Name = "labelM3State";
             this.labelM3State.Size = new System.Drawing.Size(15, 16);
             this.labelM3State.TabIndex = 162;
@@ -13514,9 +13609,10 @@
             // label21
             // 
             this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.SystemColors.Control;
             this.label21.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label21.Location = new System.Drawing.Point(638, 38);
+            this.label21.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label21.Location = new System.Drawing.Point(638, 10);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(120, 16);
             this.label21.TabIndex = 161;
@@ -13525,9 +13621,10 @@
             // labelM4ExitBeltState
             // 
             this.labelM4ExitBeltState.AutoSize = true;
+            this.labelM4ExitBeltState.BackColor = System.Drawing.SystemColors.Control;
             this.labelM4ExitBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM4ExitBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM4ExitBeltState.Location = new System.Drawing.Point(247, 381);
+            this.labelM4ExitBeltState.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM4ExitBeltState.Location = new System.Drawing.Point(247, 240);
             this.labelM4ExitBeltState.Name = "labelM4ExitBeltState";
             this.labelM4ExitBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM4ExitBeltState.TabIndex = 160;
@@ -13536,9 +13633,10 @@
             // labelM4WorkingBeltState
             // 
             this.labelM4WorkingBeltState.AutoSize = true;
+            this.labelM4WorkingBeltState.BackColor = System.Drawing.SystemColors.Control;
             this.labelM4WorkingBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM4WorkingBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM4WorkingBeltState.Location = new System.Drawing.Point(247, 326);
+            this.labelM4WorkingBeltState.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM4WorkingBeltState.Location = new System.Drawing.Point(247, 210);
             this.labelM4WorkingBeltState.Name = "labelM4WorkingBeltState";
             this.labelM4WorkingBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM4WorkingBeltState.TabIndex = 159;
@@ -13547,9 +13645,10 @@
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.SystemColors.Control;
             this.label16.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label16.Location = new System.Drawing.Point(17, 382);
+            this.label16.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label16.Location = new System.Drawing.Point(10, 240);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(178, 16);
             this.label16.TabIndex = 158;
@@ -13558,9 +13657,10 @@
             // label17
             // 
             this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.SystemColors.Control;
             this.label17.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label17.Location = new System.Drawing.Point(17, 326);
+            this.label17.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label17.Location = new System.Drawing.Point(10, 210);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(178, 16);
             this.label17.TabIndex = 157;
@@ -13569,9 +13669,10 @@
             // labelM4State
             // 
             this.labelM4State.AutoSize = true;
+            this.labelM4State.BackColor = System.Drawing.SystemColors.Control;
             this.labelM4State.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM4State.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM4State.Location = new System.Drawing.Point(247, 281);
+            this.labelM4State.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM4State.Location = new System.Drawing.Point(247, 180);
             this.labelM4State.Name = "labelM4State";
             this.labelM4State.Size = new System.Drawing.Size(15, 16);
             this.labelM4State.TabIndex = 156;
@@ -13580,9 +13681,10 @@
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.SystemColors.Control;
             this.label14.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label14.Location = new System.Drawing.Point(17, 278);
+            this.label14.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label14.Location = new System.Drawing.Point(10, 180);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(130, 16);
             this.label14.TabIndex = 155;
@@ -13591,9 +13693,10 @@
             // labelM1ExitBeltState
             // 
             this.labelM1ExitBeltState.AutoSize = true;
+            this.labelM1ExitBeltState.BackColor = System.Drawing.SystemColors.Control;
             this.labelM1ExitBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM1ExitBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM1ExitBeltState.Location = new System.Drawing.Point(247, 187);
+            this.labelM1ExitBeltState.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM1ExitBeltState.Location = new System.Drawing.Point(247, 100);
             this.labelM1ExitBeltState.Name = "labelM1ExitBeltState";
             this.labelM1ExitBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM1ExitBeltState.TabIndex = 154;
@@ -13602,9 +13705,10 @@
             // labelM1WorkingBeltState
             // 
             this.labelM1WorkingBeltState.AutoSize = true;
+            this.labelM1WorkingBeltState.BackColor = System.Drawing.SystemColors.Control;
             this.labelM1WorkingBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM1WorkingBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM1WorkingBeltState.Location = new System.Drawing.Point(247, 145);
+            this.labelM1WorkingBeltState.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM1WorkingBeltState.Location = new System.Drawing.Point(247, 70);
             this.labelM1WorkingBeltState.Name = "labelM1WorkingBeltState";
             this.labelM1WorkingBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM1WorkingBeltState.TabIndex = 153;
@@ -13613,9 +13717,10 @@
             // labelM1LoadingBeltState
             // 
             this.labelM1LoadingBeltState.AutoSize = true;
+            this.labelM1LoadingBeltState.BackColor = System.Drawing.SystemColors.Control;
             this.labelM1LoadingBeltState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM1LoadingBeltState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM1LoadingBeltState.Location = new System.Drawing.Point(247, 90);
+            this.labelM1LoadingBeltState.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM1LoadingBeltState.Location = new System.Drawing.Point(247, 40);
             this.labelM1LoadingBeltState.Name = "labelM1LoadingBeltState";
             this.labelM1LoadingBeltState.Size = new System.Drawing.Size(15, 16);
             this.labelM1LoadingBeltState.TabIndex = 152;
@@ -13624,9 +13729,10 @@
             // labelM1TrimmerState
             // 
             this.labelM1TrimmerState.AutoSize = true;
+            this.labelM1TrimmerState.BackColor = System.Drawing.SystemColors.Control;
             this.labelM1TrimmerState.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelM1TrimmerState.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelM1TrimmerState.Location = new System.Drawing.Point(247, 35);
+            this.labelM1TrimmerState.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.labelM1TrimmerState.Location = new System.Drawing.Point(247, 10);
             this.labelM1TrimmerState.Name = "labelM1TrimmerState";
             this.labelM1TrimmerState.Size = new System.Drawing.Size(15, 16);
             this.labelM1TrimmerState.TabIndex = 151;
@@ -13635,9 +13741,10 @@
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.SystemColors.Control;
             this.label11.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label11.Location = new System.Drawing.Point(17, 187);
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label11.Location = new System.Drawing.Point(10, 100);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(178, 16);
             this.label11.TabIndex = 150;
@@ -13646,9 +13753,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.Control;
             this.label9.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label9.Location = new System.Drawing.Point(17, 146);
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label9.Location = new System.Drawing.Point(10, 70);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(178, 16);
             this.label9.TabIndex = 148;
@@ -13657,9 +13765,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.Control;
             this.label8.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label8.Location = new System.Drawing.Point(17, 90);
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label8.Location = new System.Drawing.Point(10, 40);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(178, 16);
             this.label8.TabIndex = 146;
@@ -13668,9 +13777,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.Control;
             this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(17, 38);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Location = new System.Drawing.Point(10, 10);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(132, 16);
             this.label5.TabIndex = 145;
@@ -13729,7 +13839,7 @@
             tabPageFormatStyle28.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle28.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT1_1.FormatStyle = tabPageFormatStyle28;
-            this.tabPageT1_1.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT1_1.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1_1.Name = "tabPageT1_1";
             tabPageColorStyle53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle53.BackFadeColor = System.Drawing.Color.Transparent;
@@ -13746,12 +13856,12 @@
             tabPageColorStyle63.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle63.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_1.SelectedStyle = tabPageColorStyle63;
-            this.tabPageT1_1.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT1_1.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1_1.StyleFromParent = false;
             this.tabPageT1_1.TabIndex = 5;
             this.tabPageT1_1.Text = "teach";
             this.tabPageT1_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_1.TextBounds")));
-            this.tabPageT1_1.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT1_1.TextSize = new System.Drawing.SizeF(50.55989F, 21.44531F);
             this.tabPageT1_1.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT1_1
@@ -14489,14 +14599,14 @@
             // dataGridViewM1TeachPoints
             // 
             this.dataGridViewM1TeachPoints.AllowUserToAddRows = false;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewM1TeachPoints.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewM1TeachPoints.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.dataGridViewM1TeachPoints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewM1TeachPoints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn10,
@@ -14505,29 +14615,29 @@
             this.dataGridViewButtonColumn3,
             this.dataGridViewButtonColumn4,
             this.dataGridViewButtonColumn5});
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewM1TeachPoints.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewM1TeachPoints.DefaultCellStyle = dataGridViewCellStyle36;
             this.dataGridViewM1TeachPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridViewM1TeachPoints.Location = new System.Drawing.Point(10, 100);
             this.dataGridViewM1TeachPoints.Name = "dataGridViewM1TeachPoints";
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewM1TeachPoints.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewM1TeachPoints.RowHeadersDefaultCellStyle = dataGridViewCellStyle37;
             this.dataGridViewM1TeachPoints.RowHeadersVisible = false;
             this.dataGridViewM1TeachPoints.RowHeadersWidth = 48;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewM1TeachPoints.RowsDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewM1TeachPoints.RowsDefaultCellStyle = dataGridViewCellStyle38;
             this.dataGridViewM1TeachPoints.RowTemplate.Height = 48;
             this.dataGridViewM1TeachPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridViewM1TeachPoints.Size = new System.Drawing.Size(580, 220);
@@ -14537,9 +14647,9 @@
             // 
             // dataGridViewTextBoxColumn10
             // 
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle35;
             this.dataGridViewTextBoxColumn10.Frozen = true;
             this.dataGridViewTextBoxColumn10.HeaderText = "point";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
@@ -14719,7 +14829,7 @@
             tabPageFormatStyle30.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle30.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT1_2.FormatStyle = tabPageFormatStyle30;
-            this.tabPageT1_2.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT1_2.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1_2.Name = "tabPageT1_2";
             tabPageColorStyle56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle56.BackFadeColor = System.Drawing.Color.Transparent;
@@ -14736,12 +14846,12 @@
             tabPageColorStyle57.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle57.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_2.SelectedStyle = tabPageColorStyle57;
-            this.tabPageT1_2.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT1_2.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1_2.StyleFromParent = false;
             this.tabPageT1_2.TabIndex = 8;
             this.tabPageT1_2.Text = "test";
             this.tabPageT1_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_2.TextBounds")));
-            this.tabPageT1_2.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT1_2.TextSize = new System.Drawing.SizeF(36.72395F, 21.44531F);
             this.tabPageT1_2.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT1_2
@@ -14919,42 +15029,42 @@
             // dataGridViewM1TestPoints
             // 
             this.dataGridViewM1TestPoints.AllowUserToAddRows = false;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewM1TestPoints.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewM1TestPoints.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle39;
             this.dataGridViewM1TestPoints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewM1TestPoints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn15,
             this.reached});
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewM1TestPoints.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle41.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewM1TestPoints.DefaultCellStyle = dataGridViewCellStyle41;
             this.dataGridViewM1TestPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridViewM1TestPoints.Location = new System.Drawing.Point(10, 115);
             this.dataGridViewM1TestPoints.Name = "dataGridViewM1TestPoints";
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewM1TestPoints.RowHeadersDefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewM1TestPoints.RowHeadersDefaultCellStyle = dataGridViewCellStyle42;
             this.dataGridViewM1TestPoints.RowHeadersVisible = false;
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewM1TestPoints.RowsDefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewM1TestPoints.RowsDefaultCellStyle = dataGridViewCellStyle43;
             this.dataGridViewM1TestPoints.RowTemplate.Height = 48;
             this.dataGridViewM1TestPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridViewM1TestPoints.Size = new System.Drawing.Size(380, 220);
@@ -14964,9 +15074,9 @@
             // 
             // dataGridViewTextBoxColumn13
             // 
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle40;
             this.dataGridViewTextBoxColumn13.Frozen = true;
             this.dataGridViewTextBoxColumn13.HeaderText = "point id";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
@@ -15060,7 +15170,7 @@
             tabPageFormatStyle31.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle31.Padding = new System.Windows.Forms.Padding(17, 5, 17, 5);
             this.tabPageT1_3.FormatStyle = tabPageFormatStyle31;
-            this.tabPageT1_3.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT1_3.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1_3.Name = "tabPageT1_3";
             tabPageColorStyle58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle58.BackFadeColor = System.Drawing.Color.Transparent;
@@ -15077,12 +15187,12 @@
             tabPageColorStyle59.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle59.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_3.SelectedStyle = tabPageColorStyle59;
-            this.tabPageT1_3.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT1_3.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1_3.StyleFromParent = false;
             this.tabPageT1_3.TabIndex = 6;
             this.tabPageT1_3.Text = "input";
             this.tabPageT1_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_3.TextBounds")));
-            this.tabPageT1_3.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT1_3.TextSize = new System.Drawing.SizeF(47.47395F, 21.44531F);
             // 
             // lbLed1040M1
             // 
@@ -16068,7 +16178,7 @@
             tabPageFormatStyle32.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle32.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.tabPageT1_4.FormatStyle = tabPageFormatStyle32;
-            this.tabPageT1_4.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT1_4.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1_4.Name = "tabPageT1_4";
             tabPageColorStyle60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle60.BackFadeColor = System.Drawing.Color.Transparent;
@@ -16085,12 +16195,12 @@
             tabPageColorStyle61.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle61.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_4.SelectedStyle = tabPageColorStyle61;
-            this.tabPageT1_4.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT1_4.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1_4.StyleFromParent = false;
             this.tabPageT1_4.TabIndex = 7;
             this.tabPageT1_4.Text = "output";
             this.tabPageT1_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_4.TextBounds")));
-            this.tabPageT1_4.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT1_4.TextSize = new System.Drawing.SizeF(59.4427F, 21.44531F);
             // 
             // lbLed2040M1
             // 
@@ -17010,11 +17120,10 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageT5_2);
-            this.tabControlMain.Controls.Add(this.tabPageT5);
-            this.tabControlMain.Controls.Add(this.tabPageT4_4);
+            this.tabControlMain.Controls.Add(this.tabPageT1_1);
             this.tabControlMain.Controls.Add(this.tabPageT7);
             this.tabControlMain.Controls.Add(this.tabPageT6);
+            this.tabControlMain.Controls.Add(this.tabPageT5);
             this.tabControlMain.Controls.Add(this.tabPageT4);
             this.tabControlMain.Controls.Add(this.tabPageT3);
             this.tabControlMain.Controls.Add(this.tabPageT2);
@@ -17026,7 +17135,6 @@
             this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_3);
             this.tabControlMain.Controls.Add(this.tabPage2);
-            this.tabControlMain.Controls.Add(this.tabPageT1_1);
             this.tabControlMain.Controls.Add(this.tabPageT1_2);
             this.tabControlMain.Controls.Add(this.tabPageT1_3);
             this.tabControlMain.Controls.Add(this.tabPageT1_4);
@@ -17040,7 +17148,9 @@
             this.tabControlMain.Controls.Add(this.tabPageT4_1);
             this.tabControlMain.Controls.Add(this.tabPageT4_2);
             this.tabControlMain.Controls.Add(this.tabPageT4_3);
+            this.tabControlMain.Controls.Add(this.tabPageT4_4);
             this.tabControlMain.Controls.Add(this.tabPageT5_1);
+            this.tabControlMain.Controls.Add(this.tabPageT5_2);
             this.tabControlMain.Controls.Add(this.tabPageT5_3);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Top;
@@ -17078,7 +17188,7 @@
             this.tabPageT6,
             this.tabPageT7});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageT5_2;
+            this.tabControlMain.SelectedPage = this.tabPageT1_1;
             tabPageColorStyle65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle65.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle65.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
@@ -17243,6 +17353,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3PLCNode)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPageT1_1.ResumeLayout(false);
             this.tabPageT1_1.PerformLayout();
             this.contextMenuStripT1_1.ResumeLayout(false);
@@ -18181,5 +18292,8 @@
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2003M5;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2004M5;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2001M5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn6;
     }
 }
