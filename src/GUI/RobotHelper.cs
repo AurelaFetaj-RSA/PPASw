@@ -395,6 +395,17 @@ namespace GUI
                     readResult = await ccService.Read(keys);
                     UpdateOPCUAM3DI(readResult["pcM3DI"]);
                     UpdateOPCUAM3DO(readResult["pcM3DO"]);
+
+                    keys = new List<string>()
+                    {
+                        "pcM5DI",
+                        "pcM5DO"
+                    };
+
+                    readResult = await ccService.Read(keys);
+                    UpdateOPCUAM5DI(readResult["pcM5DI"]);
+                    UpdateOPCUAM5DO(readResult["pcM5DO"]);
+
                     #endregion
 
                     #region (* M1 timeout alarms *)
@@ -1014,17 +1025,71 @@ namespace GUI
             }
         }
 
-        public void UpdateOPCUAM5DI(ClientResult diREsult)
+        public void UpdateOPCUAM5DI(ClientResult cr)
         {
-            //int i = 0;
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                //todo da gestire
+            }
+            else
+            {
+                int i = 0;
+                bool[] arrayBool = (bool[])cr.Value;
 
-            //Dictionary<int, LBSoft.IndustrialCtrls.Leds.LBLed> myDict = new Dictionary<int, LBSoft.IndustrialCtrls.Leds.LBLed>();
-            //myDict[0] = lbLedM5DI1;
+                lbLed1001M5.State = (arrayBool[1] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1002M5.State = (arrayBool[2] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1003M5.State = (arrayBool[3] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1004M5.State = (arrayBool[4] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1005M5.State = (arrayBool[5] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1006M5.State = (arrayBool[6] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1007M5.State = (arrayBool[7] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1008M5.State = (arrayBool[8] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                
+                lbLed1009M5.State = (arrayBool[9] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1010M5.State = (arrayBool[10] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1011M5.State = (arrayBool[11] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1012M5.State = (arrayBool[12] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1013M5.State = (arrayBool[13] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1014M5.State = (arrayBool[14] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1015M5.State = (arrayBool[15] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1016M5.State = (arrayBool[16] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
 
-            //foreach (var result in diREsult.Value)
-            //{
-            //    myDict[result]
-            //}
+                lbLed1017M5.State = (arrayBool[17] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1018M5.State = (arrayBool[18] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1019M5.State = (arrayBool[19] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1020M5.State = (arrayBool[20] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1021M5.State = (arrayBool[21] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1022M5.State = (arrayBool[22] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1023M5.State = (arrayBool[23] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1024M5.State = (arrayBool[24] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+
+                lbLed1025M5.State = (arrayBool[25] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1026M5.State = (arrayBool[26] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1027M5.State = (arrayBool[27] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1028M5.State = (arrayBool[28] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1029M5.State = (arrayBool[29] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1030M5.State = (arrayBool[30] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1031M5.State = (arrayBool[31] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1032M5.State = (arrayBool[32] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+
+                lbLed1033M5.State = (arrayBool[33] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1034M5.State = (arrayBool[34] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1035M5.State = (arrayBool[35] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1036M5.State = (arrayBool[36] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1037M5.State = (arrayBool[37] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1038M5.State = (arrayBool[38] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1039M5.State = (arrayBool[39] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1040M5.State = (arrayBool[40] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1041M5.State = (arrayBool[41] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1042M5.State = (arrayBool[42] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1043M5.State = (arrayBool[43] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1044M5.State = (arrayBool[44] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1045M5.State = (arrayBool[45] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1046M5.State = (arrayBool[46] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1047M5.State = (arrayBool[47] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed1048M5.State = (arrayBool[48] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+            }
+
         }
 
         public void UpdateOPCUAM1DI(ClientResult cr)
@@ -1047,7 +1112,7 @@ namespace GUI
                 lbLed1006M1.State = (arrayBool[6] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1007M1.State = (arrayBool[7] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1008M1.State = (arrayBool[8] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1008M1.Label = (arrayBool[8] == true) ? "selector in AUTO" : "selector in MANUAL";
+
                 lbLed1009M1.State = (arrayBool[9] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1010M1.State = (arrayBool[10] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed1011M1.State = (arrayBool[11] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
@@ -1116,7 +1181,7 @@ namespace GUI
                 lbLed2006M1.State = (arrayBool[6] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed2007M1.State = (arrayBool[7] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed2008M1.State = (arrayBool[8] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2008M1.Label = (arrayBool[8] == true) ? "selector in AUTO" : "selector in MANUAL";
+
                 lbLed2009M1.State = (arrayBool[9] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed2010M1.State = (arrayBool[10] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed2011M1.State = (arrayBool[11] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
@@ -1185,7 +1250,7 @@ namespace GUI
                 lbLed2006M2.State = (arrayBool[6] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed2007M2.State = (arrayBool[7] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed2008M2.State = (arrayBool[8] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2008M2.Label = (arrayBool[8] == true) ? "selector in AUTO" : "selector in MANUAL";
+
                 lbLed2009M2.State = (arrayBool[9] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed2010M2.State = (arrayBool[10] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed2011M2.State = (arrayBool[11] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
@@ -1254,7 +1319,7 @@ namespace GUI
                 lbLed2006M3.State = (arrayBool[6] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed2007M3.State = (arrayBool[7] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed2008M3.State = (arrayBool[8] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2008M3.Label = (arrayBool[8] == true) ? "selector in AUTO" : "selector in MANUAL";
+
                 lbLed2009M3.State = (arrayBool[9] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed2010M3.State = (arrayBool[10] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed2011M3.State = (arrayBool[11] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
@@ -1299,6 +1364,59 @@ namespace GUI
                 lbLed2047M3.State = (arrayBool[47] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
                 lbLed2048M3.State = (arrayBool[48] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
             }
+
+
+        }
+
+        public void UpdateOPCUAM5DO(ClientResult cr)
+        {
+
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                //todo da gestire
+            }
+            else
+            {
+                int i = 0;
+                bool[] arrayBool = (bool[])cr.Value;
+
+                lbLed2001M5.State = (arrayBool[1] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2002M5.State = (arrayBool[2] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2003M5.State = (arrayBool[3] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2004M5.State = (arrayBool[4] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2005M5.State = (arrayBool[5] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2006M5.State = (arrayBool[6] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2007M5.State = (arrayBool[7] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2008M5.State = (arrayBool[8] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+
+                lbLed2009M5.State = (arrayBool[9] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2010M5.State = (arrayBool[10] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2011M5.State = (arrayBool[11] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2012M5.State = (arrayBool[12] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2013M5.State = (arrayBool[13] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2014M5.State = (arrayBool[14] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2015M5.State = (arrayBool[15] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2016M5.State = (arrayBool[16] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+
+                lbLed2017M5.State = (arrayBool[17] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2018M5.State = (arrayBool[18] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2019M5.State = (arrayBool[19] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2020M5.State = (arrayBool[20] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2021M5.State = (arrayBool[21] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2022M5.State = (arrayBool[22] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2023M5.State = (arrayBool[23] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2024M5.State = (arrayBool[24] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+            
+                lbLed2025M5.State = (arrayBool[25] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2026M5.State = (arrayBool[26] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2027M5.State = (arrayBool[27] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2028M5.State = (arrayBool[28] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2029M5.State = (arrayBool[29] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2030M5.State = (arrayBool[30] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2031M5.State = (arrayBool[31] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                lbLed2032M5.State = (arrayBool[32] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+
+             }
 
 
         }

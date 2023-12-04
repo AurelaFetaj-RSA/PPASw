@@ -335,6 +335,7 @@ namespace GUI
             InitM1IOSettings();
             InitM2IOSettings();
             InitM3IOSettings();
+            InitM5IOSettings();
         }
         public void Start()
         {
@@ -965,6 +966,101 @@ namespace GUI
             lbLed2048M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2048", "");
         }
 
+        private void InitM5IOSettings()
+        {
+            //digital input
+            lbLed1001M5.Label = ioConfigurator.GetValue("M5_INPUT", "1001", "");
+            lbLed1002M5.Label = ioConfigurator.GetValue("M5_INPUT", "1002", "");
+            lbLed1003M5.Label = ioConfigurator.GetValue("M5_INPUT", "1003", "");
+            lbLed1004M5.Label = ioConfigurator.GetValue("M5_INPUT", "1004", "");
+            lbLed1005M5.Label = ioConfigurator.GetValue("M5_INPUT", "1005", "");
+            lbLed1006M5.Label = ioConfigurator.GetValue("M5_INPUT", "1006", "");
+            lbLed1007M5.Label = ioConfigurator.GetValue("M5_INPUT", "1007", "");
+            lbLed1008M5.Label = ioConfigurator.GetValue("M5_INPUT", "1008", "");
+            lbLed1009M5.Label = ioConfigurator.GetValue("M5_INPUT", "1009", "");
+            lbLed1010M5.Label = ioConfigurator.GetValue("M5_INPUT", "1010", "");
+
+            lbLed1011M5.Label = ioConfigurator.GetValue("M5_INPUT", "1011", "");
+            lbLed1012M5.Label = ioConfigurator.GetValue("M5_INPUT", "1012", "");
+            lbLed1013M5.Label = ioConfigurator.GetValue("M5_INPUT", "1013", "");
+            lbLed1014M5.Label = ioConfigurator.GetValue("M5_INPUT", "1014", "");
+            lbLed1015M5.Label = ioConfigurator.GetValue("M5_INPUT", "1015", "");
+            lbLed1016M5.Label = ioConfigurator.GetValue("M5_INPUT", "1016", "");
+            lbLed1017M5.Label = ioConfigurator.GetValue("M5_INPUT", "1017", "");
+            lbLed1018M5.Label = ioConfigurator.GetValue("M5_INPUT", "1018", "");
+            lbLed1019M5.Label = ioConfigurator.GetValue("M5_INPUT", "1019", "");
+            lbLed1020M5.Label = ioConfigurator.GetValue("M5_INPUT", "1020", "");
+
+            lbLed1021M5.Label = ioConfigurator.GetValue("M5_INPUT", "1021", "");
+            lbLed1022M5.Label = ioConfigurator.GetValue("M5_INPUT", "1022", "");
+            lbLed1023M5.Label = ioConfigurator.GetValue("M5_INPUT", "1023", "");
+            lbLed1024M5.Label = ioConfigurator.GetValue("M5_INPUT", "1024", "");
+            lbLed1025M5.Label = ioConfigurator.GetValue("M5_INPUT", "1025", "");
+            lbLed1026M5.Label = ioConfigurator.GetValue("M5_INPUT", "1026", "");
+            lbLed1027M5.Label = ioConfigurator.GetValue("M5_INPUT", "1027", "");
+            lbLed1028M5.Label = ioConfigurator.GetValue("M5_INPUT", "1028", "");
+            lbLed1029M5.Label = ioConfigurator.GetValue("M5_INPUT", "1029", "");
+            lbLed1030M5.Label = ioConfigurator.GetValue("M5_INPUT", "1030", "");
+
+            lbLed1031M5.Label = ioConfigurator.GetValue("M5_INPUT", "1031", "");
+            lbLed1032M5.Label = ioConfigurator.GetValue("M5_INPUT", "1032", "");
+            lbLed1033M5.Label = ioConfigurator.GetValue("M5_INPUT", "1033", "");
+            lbLed1034M5.Label = ioConfigurator.GetValue("M5_INPUT", "1034", "");
+            lbLed1035M5.Label = ioConfigurator.GetValue("M5_INPUT", "1035", "");
+            lbLed1036M5.Label = ioConfigurator.GetValue("M5_INPUT", "1036", "");
+            lbLed1037M5.Label = ioConfigurator.GetValue("M5_INPUT", "1037", "");
+            lbLed1038M5.Label = ioConfigurator.GetValue("M5_INPUT", "1038", "");
+            lbLed1039M5.Label = ioConfigurator.GetValue("M5_INPUT", "1039", "");
+            lbLed1040M5.Label = ioConfigurator.GetValue("M5_INPUT", "1040", "");
+
+            lbLed1041M5.Label = ioConfigurator.GetValue("M5_INPUT", "1041", "");
+            lbLed1042M5.Label = ioConfigurator.GetValue("M5_INPUT", "1042", "");
+            lbLed1043M5.Label = ioConfigurator.GetValue("M5_INPUT", "1043", "");
+            lbLed1044M5.Label = ioConfigurator.GetValue("M5_INPUT", "1044", "");
+            lbLed1045M5.Label = ioConfigurator.GetValue("M5_INPUT", "1045", "");
+            lbLed1046M5.Label = ioConfigurator.GetValue("M5_INPUT", "1046", "");
+            lbLed1047M5.Label = ioConfigurator.GetValue("M5_INPUT", "1047", "");
+            lbLed1048M5.Label = ioConfigurator.GetValue("M5_INPUT", "1048", "");
+
+            //digital output
+            lbLed2001M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2001", "");
+            lbLed2002M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2002", "");
+            lbLed2003M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2003", "");
+            lbLed2004M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2004", "");
+            lbLed2005M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2005", "");
+            lbLed2006M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2006", "");
+            lbLed2007M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2007", "");
+            lbLed2008M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2008", "");
+            lbLed2009M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2009", "");
+            lbLed2010M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2010", "");
+
+            lbLed2011M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2011", "");
+            lbLed2012M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2012", "");
+            lbLed2013M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2013", "");
+            lbLed2014M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2014", "");
+            lbLed2015M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2015", "");
+            lbLed2016M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2016", "");
+            lbLed2017M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2017", "");
+            lbLed2018M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2018", "");
+            lbLed2019M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2019", "");
+            lbLed2020M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2020", "");
+
+            lbLed2021M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2021", "");
+            lbLed2022M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2022", "");
+            lbLed2023M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2023", "");
+            lbLed2024M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2024", "");
+            lbLed2025M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2025", "");
+            lbLed2026M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2026", "");
+            lbLed2027M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2027", "");
+            lbLed2028M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2028", "");
+            lbLed2028M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2029", "");
+            lbLed2029M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2030", "");
+
+            lbLed2030M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2031", "");
+            lbLed2031M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2032", "");
+            lbLed2032M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2033", "");            
+        }
+
         private void InitM3IOSettings()
         {
             //digital input
@@ -1050,7 +1146,7 @@ namespace GUI
             lbLed2024M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2024", "");
             lbLed2025M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2025", "");
             lbLed2026M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2026", "");
-            lbLed2027M2.Label = ioConfigurator.GetValue("M3_OUTPUT", "2027", "");
+            lbLed2027M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2027", "");
             lbLed2028M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2028", "");
             lbLed2028M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2029", "");
             lbLed2029M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2030", "");
@@ -1476,7 +1572,7 @@ namespace GUI
                 }
 
                 //sned to padlaser
-                WritePadLaserRecipe(Properties.Settings.Default.PadLaserFilePath, recs.Result[0].m4_param3.ToString(), recs.Result[0].m4_param4.ToString());
+                WritePadLaserRecipe(recs.Result[0].m4_param3.ToString(), recs.Result[0].m4_param4.ToString(), Properties.Settings.Default.PadLaserFilePath);
             }
             else
             {
@@ -2434,7 +2530,7 @@ namespace GUI
             }
             else
             {
-                string prgName = comboBoxM1PrgName.Text;
+                string prgName = M1PrgName;
                 string modelName = prgName.Substring(2, 4);
 
                 //check model name

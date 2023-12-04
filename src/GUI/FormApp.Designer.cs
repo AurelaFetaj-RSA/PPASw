@@ -603,7 +603,38 @@
             this.lbLed1004M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.lbLed1001M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.tabPageT5_3 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lbLed2020M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2019M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2032M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2030M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2031M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2029M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2026M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2027M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2028M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2025M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2022M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2023M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2024M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2021M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2012M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2016M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2017M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2018M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2015M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2014M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2010M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2011M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2013M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2009M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2006M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2007M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2008M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2005M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2002M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2003M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2004M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
+            this.lbLed2001M5 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.tabPage1 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT2 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.labelM4HomingDone = new System.Windows.Forms.Label();
@@ -2097,7 +2128,7 @@
             tabPageColorStyle2.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT3.HoverStyle = tabPageColorStyle2;
             this.tabPageT3.ImageIndex = 6;
-            this.tabPageT3.Location = new System.Drawing.Point(198, 36);
+            this.tabPageT3.Location = new System.Drawing.Point(96, 36);
             this.tabPageT3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT3.Name = "tabPageT3";
             tabPageColorStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
@@ -2120,7 +2151,7 @@
             tabPageColorStyle10.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle10.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT3.SelectedStyle = tabPageColorStyle10;
-            this.tabPageT3.Size = new System.Drawing.Size(812, 716);
+            this.tabPageT3.Size = new System.Drawing.Size(914, 716);
             this.tabPageT3.StyleFromParent = false;
             this.tabPageT3.TabIndex = 8;
             this.tabPageT3.Text = "page";
@@ -5201,7 +5232,7 @@
             tabPageColorStyle13.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT4.HoverStyle = tabPageColorStyle13;
             this.tabPageT4.ImageIndex = 8;
-            this.tabPageT4.Location = new System.Drawing.Point(198, 36);
+            this.tabPageT4.Location = new System.Drawing.Point(96, 36);
             this.tabPageT4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT4.Name = "tabPageT4";
             tabPageColorStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
@@ -5224,7 +5255,7 @@
             tabPageColorStyle21.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle21.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT4.SelectedStyle = tabPageColorStyle21;
-            this.tabPageT4.Size = new System.Drawing.Size(812, 716);
+            this.tabPageT4.Size = new System.Drawing.Size(914, 716);
             this.tabPageT4.StyleFromParent = false;
             this.tabPageT4.TabIndex = 13;
             this.tabPageT4.Text = "page";
@@ -7523,7 +7554,7 @@
             tabPageFormatStyle11.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle11.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.tabPageT5_1.FormatStyle = tabPageFormatStyle11;
-            this.tabPageT5_1.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT5_1.Location = new System.Drawing.Point(96, 36);
             this.tabPageT5_1.Name = "tabPageT5_1";
             tabPageColorStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle23.BackFadeColor = System.Drawing.Color.Transparent;
@@ -7540,12 +7571,12 @@
             tabPageColorStyle32.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle32.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT5_1.SelectedStyle = tabPageColorStyle32;
-            this.tabPageT5_1.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT5_1.Size = new System.Drawing.Size(914, 716);
             this.tabPageT5_1.StyleFromParent = false;
             this.tabPageT5_1.TabIndex = 19;
             this.tabPageT5_1.Text = "manual";
             this.tabPageT5_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT5_1.TextBounds")));
-            this.tabPageT5_1.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT5_1.TextSize = new System.Drawing.SizeF(66.54426F, 21.44531F);
             this.tabPageT5_1.UseParentTabStripPlacement = false;
             // 
             // buttonM6LFLampsON
@@ -7916,7 +7947,7 @@
             tabPageColorStyle25.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT5.HoverStyle = tabPageColorStyle25;
             this.tabPageT5.ImageIndex = 10;
-            this.tabPageT5.Location = new System.Drawing.Point(198, 36);
+            this.tabPageT5.Location = new System.Drawing.Point(96, 36);
             this.tabPageT5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT5.Name = "tabPageT5";
             tabPageColorStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
@@ -7938,7 +7969,7 @@
             tabPageColorStyle31.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle31.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT5.SelectedStyle = tabPageColorStyle31;
-            this.tabPageT5.Size = new System.Drawing.Size(812, 716);
+            this.tabPageT5.Size = new System.Drawing.Size(914, 716);
             this.tabPageT5.StyleFromParent = false;
             this.tabPageT5.TabIndex = 18;
             this.tabPageT5.Text = "page";
@@ -7998,7 +8029,7 @@
             tabPageFormatStyle13.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle13.Padding = new System.Windows.Forms.Padding(20, 5, 20, 5);
             this.tabPageT5_2.FormatStyle = tabPageFormatStyle13;
-            this.tabPageT5_2.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT5_2.Location = new System.Drawing.Point(96, 36);
             this.tabPageT5_2.Name = "tabPageT5_2";
             tabPageColorStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle27.BackFadeColor = System.Drawing.Color.Transparent;
@@ -8015,12 +8046,12 @@
             tabPageColorStyle28.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle28.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT5_2.SelectedStyle = tabPageColorStyle28;
-            this.tabPageT5_2.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT5_2.Size = new System.Drawing.Size(914, 716);
             this.tabPageT5_2.StyleFromParent = false;
             this.tabPageT5_2.TabIndex = 20;
             this.tabPageT5_2.Text = "input";
             this.tabPageT5_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT5_2.TextBounds")));
-            this.tabPageT5_2.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT5_2.TextSize = new System.Drawing.SizeF(47.47395F, 21.44531F);
             this.tabPageT5_2.UseParentTabStripPlacement = false;
             // 
             // lbLed1040M5
@@ -8937,11 +8968,42 @@
             // 
             // tabPageT5_3
             // 
-            this.tabPageT5_3.Controls.Add(this.button2);
+            this.tabPageT5_3.Controls.Add(this.lbLed2020M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2019M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2032M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2030M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2031M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2029M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2026M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2027M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2028M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2025M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2022M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2023M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2024M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2021M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2012M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2016M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2017M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2018M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2015M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2014M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2010M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2011M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2013M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2009M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2006M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2007M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2008M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2005M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2002M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2003M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2004M5);
+            this.tabPageT5_3.Controls.Add(this.lbLed2001M5);
             tabPageFormatStyle14.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle14.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT5_3.FormatStyle = tabPageFormatStyle14;
-            this.tabPageT5_3.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT5_3.Location = new System.Drawing.Point(96, 36);
             this.tabPageT5_3.Name = "tabPageT5_3";
             tabPageColorStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle29.BackFadeColor = System.Drawing.Color.Transparent;
@@ -8958,22 +9020,621 @@
             tabPageColorStyle30.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle30.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT5_3.SelectedStyle = tabPageColorStyle30;
-            this.tabPageT5_3.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT5_3.Size = new System.Drawing.Size(914, 716);
             this.tabPageT5_3.StyleFromParent = false;
             this.tabPageT5_3.TabIndex = 21;
             this.tabPageT5_3.Text = "output";
             this.tabPageT5_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT5_3.TextBounds")));
-            this.tabPageT5_3.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT5_3.TextSize = new System.Drawing.SizeF(59.4427F, 21.44531F);
             this.tabPageT5_3.UseParentTabStripPlacement = false;
             // 
-            // button2
+            // lbLed2020M5
             // 
-            this.button2.Location = new System.Drawing.Point(208, 149);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.lbLed2020M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2020M5.BlinkInterval = 500;
+            this.lbLed2020M5.Enabled = false;
+            this.lbLed2020M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2020M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2020M5.Label = "X103 - RG springs clamp end stroke bwd";
+            this.lbLed2020M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2020M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2020M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2020M5.Location = new System.Drawing.Point(16, 583);
+            this.lbLed2020M5.Name = "lbLed2020M5";
+            this.lbLed2020M5.Renderer = null;
+            this.lbLed2020M5.Size = new System.Drawing.Size(260, 24);
+            this.lbLed2020M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2020M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2020M5.TabIndex = 434;
+            // 
+            // lbLed2019M5
+            // 
+            this.lbLed2019M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2019M5.BlinkInterval = 500;
+            this.lbLed2019M5.Enabled = false;
+            this.lbLed2019M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2019M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2019M5.Label = "X102 - LF springs clamp end stroke bwd";
+            this.lbLed2019M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2019M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2019M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2019M5.Location = new System.Drawing.Point(16, 553);
+            this.lbLed2019M5.Name = "lbLed2019M5";
+            this.lbLed2019M5.Renderer = null;
+            this.lbLed2019M5.Size = new System.Drawing.Size(260, 24);
+            this.lbLed2019M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2019M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2019M5.TabIndex = 433;
+            // 
+            // lbLed2032M5
+            // 
+            this.lbLed2032M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2032M5.BlinkInterval = 500;
+            this.lbLed2032M5.Enabled = false;
+            this.lbLed2032M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2032M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2032M5.Label = "X10F - spare";
+            this.lbLed2032M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2032M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2032M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2032M5.Location = new System.Drawing.Point(331, 343);
+            this.lbLed2032M5.Name = "lbLed2032M5";
+            this.lbLed2032M5.Renderer = null;
+            this.lbLed2032M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2032M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2032M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2032M5.TabIndex = 432;
+            // 
+            // lbLed2030M5
+            // 
+            this.lbLed2030M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2030M5.BlinkInterval = 500;
+            this.lbLed2030M5.Enabled = false;
+            this.lbLed2030M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2030M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2030M5.Label = "X10D - sharpening cylinder endstroke bwd";
+            this.lbLed2030M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2030M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2030M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2030M5.Location = new System.Drawing.Point(331, 283);
+            this.lbLed2030M5.Name = "lbLed2030M5";
+            this.lbLed2030M5.Renderer = null;
+            this.lbLed2030M5.Size = new System.Drawing.Size(270, 24);
+            this.lbLed2030M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2030M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2030M5.TabIndex = 431;
+            // 
+            // lbLed2031M5
+            // 
+            this.lbLed2031M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2031M5.BlinkInterval = 500;
+            this.lbLed2031M5.Enabled = false;
+            this.lbLed2031M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2031M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2031M5.Label = "X10E - spare";
+            this.lbLed2031M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2031M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2031M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2031M5.Location = new System.Drawing.Point(331, 313);
+            this.lbLed2031M5.Name = "lbLed2031M5";
+            this.lbLed2031M5.Renderer = null;
+            this.lbLed2031M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2031M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2031M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2031M5.TabIndex = 430;
+            // 
+            // lbLed2029M5
+            // 
+            this.lbLed2029M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2029M5.BlinkInterval = 500;
+            this.lbLed2029M5.Enabled = false;
+            this.lbLed2029M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2029M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2029M5.Label = "X10C - boot presence photocell";
+            this.lbLed2029M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2029M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2029M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2029M5.Location = new System.Drawing.Point(331, 253);
+            this.lbLed2029M5.Name = "lbLed2029M5";
+            this.lbLed2029M5.Renderer = null;
+            this.lbLed2029M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2029M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2029M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2029M5.TabIndex = 429;
+            // 
+            // lbLed2026M5
+            // 
+            this.lbLed2026M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2026M5.BlinkInterval = 500;
+            this.lbLed2026M5.Enabled = false;
+            this.lbLed2026M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2026M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2026M5.Label = "X109 - spare";
+            this.lbLed2026M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2026M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2026M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2026M5.Location = new System.Drawing.Point(331, 163);
+            this.lbLed2026M5.Name = "lbLed2026M5";
+            this.lbLed2026M5.Renderer = null;
+            this.lbLed2026M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2026M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2026M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2026M5.TabIndex = 428;
+            // 
+            // lbLed2027M5
+            // 
+            this.lbLed2027M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2027M5.BlinkInterval = 500;
+            this.lbLed2027M5.Enabled = false;
+            this.lbLed2027M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2027M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2027M5.Label = "X10A - spare";
+            this.lbLed2027M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2027M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2027M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2027M5.Location = new System.Drawing.Point(331, 193);
+            this.lbLed2027M5.Name = "lbLed2027M5";
+            this.lbLed2027M5.Renderer = null;
+            this.lbLed2027M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2027M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2027M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2027M5.TabIndex = 427;
+            // 
+            // lbLed2028M5
+            // 
+            this.lbLed2028M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2028M5.BlinkInterval = 500;
+            this.lbLed2028M5.Enabled = false;
+            this.lbLed2028M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2028M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2028M5.Label = "X10B - spare";
+            this.lbLed2028M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2028M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2028M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2028M5.Location = new System.Drawing.Point(331, 223);
+            this.lbLed2028M5.Name = "lbLed2028M5";
+            this.lbLed2028M5.Renderer = null;
+            this.lbLed2028M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2028M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2028M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2028M5.TabIndex = 426;
+            // 
+            // lbLed2025M5
+            // 
+            this.lbLed2025M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2025M5.BlinkInterval = 500;
+            this.lbLed2025M5.Enabled = false;
+            this.lbLed2025M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2025M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2025M5.Label = "X108 - spare";
+            this.lbLed2025M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2025M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2025M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2025M5.Location = new System.Drawing.Point(331, 133);
+            this.lbLed2025M5.Name = "lbLed2025M5";
+            this.lbLed2025M5.Renderer = null;
+            this.lbLed2025M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2025M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2025M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2025M5.TabIndex = 425;
+            // 
+            // lbLed2022M5
+            // 
+            this.lbLed2022M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2022M5.BlinkInterval = 500;
+            this.lbLed2022M5.Enabled = false;
+            this.lbLed2022M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2022M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2022M5.Label = "X105 - RG block clamp end stroke bwd";
+            this.lbLed2022M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2022M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2022M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2022M5.Location = new System.Drawing.Point(331, 43);
+            this.lbLed2022M5.Name = "lbLed2022M5";
+            this.lbLed2022M5.Renderer = null;
+            this.lbLed2022M5.Size = new System.Drawing.Size(260, 24);
+            this.lbLed2022M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2022M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2022M5.TabIndex = 424;
+            // 
+            // lbLed2023M5
+            // 
+            this.lbLed2023M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2023M5.BlinkInterval = 500;
+            this.lbLed2023M5.Enabled = false;
+            this.lbLed2023M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2023M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2023M5.Label = "X106 - spare";
+            this.lbLed2023M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2023M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2023M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2023M5.Location = new System.Drawing.Point(331, 73);
+            this.lbLed2023M5.Name = "lbLed2023M5";
+            this.lbLed2023M5.Renderer = null;
+            this.lbLed2023M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2023M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2023M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2023M5.TabIndex = 423;
+            // 
+            // lbLed2024M5
+            // 
+            this.lbLed2024M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2024M5.BlinkInterval = 500;
+            this.lbLed2024M5.Enabled = false;
+            this.lbLed2024M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2024M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2024M5.Label = "X107 - spare";
+            this.lbLed2024M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2024M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2024M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2024M5.Location = new System.Drawing.Point(331, 103);
+            this.lbLed2024M5.Name = "lbLed2024M5";
+            this.lbLed2024M5.Renderer = null;
+            this.lbLed2024M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2024M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2024M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2024M5.TabIndex = 422;
+            // 
+            // lbLed2021M5
+            // 
+            this.lbLed2021M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2021M5.BlinkInterval = 500;
+            this.lbLed2021M5.Enabled = false;
+            this.lbLed2021M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2021M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2021M5.Label = "X104 - LF block clamp end stroke bwd";
+            this.lbLed2021M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2021M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2021M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2021M5.Location = new System.Drawing.Point(331, 13);
+            this.lbLed2021M5.Name = "lbLed2021M5";
+            this.lbLed2021M5.Renderer = null;
+            this.lbLed2021M5.Size = new System.Drawing.Size(260, 24);
+            this.lbLed2021M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2021M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2021M5.TabIndex = 421;
+            // 
+            // lbLed2012M5
+            // 
+            this.lbLed2012M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2012M5.BlinkInterval = 500;
+            this.lbLed2012M5.Enabled = false;
+            this.lbLed2012M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2012M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2012M5.Label = "XB - spare";
+            this.lbLed2012M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2012M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2012M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2012M5.Location = new System.Drawing.Point(16, 343);
+            this.lbLed2012M5.Name = "lbLed2012M5";
+            this.lbLed2012M5.Renderer = null;
+            this.lbLed2012M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2012M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2012M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2012M5.TabIndex = 420;
+            // 
+            // lbLed2016M5
+            // 
+            this.lbLed2016M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2016M5.BlinkInterval = 500;
+            this.lbLed2016M5.Enabled = false;
+            this.lbLed2016M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2016M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2016M5.Label = "XF - spare";
+            this.lbLed2016M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2016M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2016M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2016M5.Location = new System.Drawing.Point(16, 463);
+            this.lbLed2016M5.Name = "lbLed2016M5";
+            this.lbLed2016M5.Renderer = null;
+            this.lbLed2016M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2016M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2016M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2016M5.TabIndex = 419;
+            // 
+            // lbLed2017M5
+            // 
+            this.lbLed2017M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2017M5.BlinkInterval = 500;
+            this.lbLed2017M5.Enabled = false;
+            this.lbLed2017M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2017M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2017M5.Label = "X100 - LF cut clamp end stroke bwd";
+            this.lbLed2017M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2017M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2017M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2017M5.Location = new System.Drawing.Point(16, 493);
+            this.lbLed2017M5.Name = "lbLed2017M5";
+            this.lbLed2017M5.Renderer = null;
+            this.lbLed2017M5.Size = new System.Drawing.Size(260, 24);
+            this.lbLed2017M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2017M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2017M5.TabIndex = 418;
+            // 
+            // lbLed2018M5
+            // 
+            this.lbLed2018M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2018M5.BlinkInterval = 500;
+            this.lbLed2018M5.Enabled = false;
+            this.lbLed2018M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2018M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2018M5.Label = "X101- RG cut clamp end stroke bwd";
+            this.lbLed2018M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2018M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2018M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2018M5.Location = new System.Drawing.Point(16, 523);
+            this.lbLed2018M5.Name = "lbLed2018M5";
+            this.lbLed2018M5.Renderer = null;
+            this.lbLed2018M5.Size = new System.Drawing.Size(260, 24);
+            this.lbLed2018M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2018M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2018M5.TabIndex = 417;
+            // 
+            // lbLed2015M5
+            // 
+            this.lbLed2015M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2015M5.BlinkInterval = 500;
+            this.lbLed2015M5.Enabled = false;
+            this.lbLed2015M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2015M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2015M5.Label = "XE - spare";
+            this.lbLed2015M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2015M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2015M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2015M5.Location = new System.Drawing.Point(16, 433);
+            this.lbLed2015M5.Name = "lbLed2015M5";
+            this.lbLed2015M5.Renderer = null;
+            this.lbLed2015M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2015M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2015M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2015M5.TabIndex = 416;
+            // 
+            // lbLed2014M5
+            // 
+            this.lbLed2014M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2014M5.BlinkInterval = 500;
+            this.lbLed2014M5.Enabled = false;
+            this.lbLed2014M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2014M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2014M5.Label = "XD - emergency";
+            this.lbLed2014M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2014M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2014M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2014M5.Location = new System.Drawing.Point(16, 403);
+            this.lbLed2014M5.Name = "lbLed2014M5";
+            this.lbLed2014M5.Renderer = null;
+            this.lbLed2014M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2014M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2014M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2014M5.TabIndex = 415;
+            // 
+            // lbLed2010M5
+            // 
+            this.lbLed2010M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2010M5.BlinkInterval = 500;
+            this.lbLed2010M5.Enabled = false;
+            this.lbLed2010M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2010M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2010M5.Label = "X9 - servo ready";
+            this.lbLed2010M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2010M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2010M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2010M5.Location = new System.Drawing.Point(16, 283);
+            this.lbLed2010M5.Name = "lbLed2010M5";
+            this.lbLed2010M5.Renderer = null;
+            this.lbLed2010M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2010M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2010M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2010M5.TabIndex = 414;
+            // 
+            // lbLed2011M5
+            // 
+            this.lbLed2011M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2011M5.BlinkInterval = 500;
+            this.lbLed2011M5.Enabled = false;
+            this.lbLed2011M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2011M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2011M5.Label = "XA - axis in position";
+            this.lbLed2011M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2011M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2011M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2011M5.Location = new System.Drawing.Point(16, 313);
+            this.lbLed2011M5.Name = "lbLed2011M5";
+            this.lbLed2011M5.Renderer = null;
+            this.lbLed2011M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2011M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2011M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2011M5.TabIndex = 413;
+            // 
+            // lbLed2013M5
+            // 
+            this.lbLed2013M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2013M5.BlinkInterval = 500;
+            this.lbLed2013M5.Enabled = false;
+            this.lbLed2013M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2013M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2013M5.Label = "XC - spare";
+            this.lbLed2013M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2013M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2013M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2013M5.Location = new System.Drawing.Point(16, 373);
+            this.lbLed2013M5.Name = "lbLed2013M5";
+            this.lbLed2013M5.Renderer = null;
+            this.lbLed2013M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2013M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2013M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2013M5.TabIndex = 412;
+            // 
+            // lbLed2009M5
+            // 
+            this.lbLed2009M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2009M5.BlinkInterval = 500;
+            this.lbLed2009M5.Enabled = false;
+            this.lbLed2009M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2009M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2009M5.Label = "X8 - servo alarm";
+            this.lbLed2009M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2009M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2009M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2009M5.Location = new System.Drawing.Point(16, 253);
+            this.lbLed2009M5.Name = "lbLed2009M5";
+            this.lbLed2009M5.Renderer = null;
+            this.lbLed2009M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2009M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2009M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2009M5.TabIndex = 411;
+            // 
+            // lbLed2006M5
+            // 
+            this.lbLed2006M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2006M5.BlinkInterval = 500;
+            this.lbLed2006M5.Enabled = false;
+            this.lbLed2006M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2006M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2006M5.Label = "X5 - cut slide endstroke bwd";
+            this.lbLed2006M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2006M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2006M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2006M5.Location = new System.Drawing.Point(16, 163);
+            this.lbLed2006M5.Name = "lbLed2006M5";
+            this.lbLed2006M5.Renderer = null;
+            this.lbLed2006M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2006M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2006M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2006M5.TabIndex = 410;
+            // 
+            // lbLed2007M5
+            // 
+            this.lbLed2007M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2007M5.BlinkInterval = 500;
+            this.lbLed2007M5.Enabled = false;
+            this.lbLed2007M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2007M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2007M5.Label = "X6 - cut slide endstroke fwd";
+            this.lbLed2007M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2007M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2007M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2007M5.Location = new System.Drawing.Point(16, 193);
+            this.lbLed2007M5.Name = "lbLed2007M5";
+            this.lbLed2007M5.Renderer = null;
+            this.lbLed2007M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2007M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2007M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2007M5.TabIndex = 409;
+            // 
+            // lbLed2008M5
+            // 
+            this.lbLed2008M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2008M5.BlinkInterval = 500;
+            this.lbLed2008M5.Enabled = false;
+            this.lbLed2008M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2008M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2008M5.Label = "X7 - selector in AUTO";
+            this.lbLed2008M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2008M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2008M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2008M5.Location = new System.Drawing.Point(16, 223);
+            this.lbLed2008M5.Name = "lbLed2008M5";
+            this.lbLed2008M5.Renderer = null;
+            this.lbLed2008M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2008M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2008M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2008M5.TabIndex = 408;
+            // 
+            // lbLed2005M5
+            // 
+            this.lbLed2005M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2005M5.BlinkInterval = 500;
+            this.lbLed2005M5.Enabled = false;
+            this.lbLed2005M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2005M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2005M5.Label = "X4 - high extrarun";
+            this.lbLed2005M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2005M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2005M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2005M5.Location = new System.Drawing.Point(16, 133);
+            this.lbLed2005M5.Name = "lbLed2005M5";
+            this.lbLed2005M5.Renderer = null;
+            this.lbLed2005M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2005M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2005M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2005M5.TabIndex = 407;
+            // 
+            // lbLed2002M5
+            // 
+            this.lbLed2002M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2002M5.BlinkInterval = 500;
+            this.lbLed2002M5.Enabled = false;
+            this.lbLed2002M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2002M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2002M5.Label = "X1 - spare";
+            this.lbLed2002M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2002M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2002M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2002M5.Location = new System.Drawing.Point(16, 43);
+            this.lbLed2002M5.Name = "lbLed2002M5";
+            this.lbLed2002M5.Renderer = null;
+            this.lbLed2002M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2002M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2002M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2002M5.TabIndex = 406;
+            // 
+            // lbLed2003M5
+            // 
+            this.lbLed2003M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2003M5.BlinkInterval = 500;
+            this.lbLed2003M5.Enabled = false;
+            this.lbLed2003M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2003M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2003M5.Label = "X2 - axis in home";
+            this.lbLed2003M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2003M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2003M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2003M5.Location = new System.Drawing.Point(16, 73);
+            this.lbLed2003M5.Name = "lbLed2003M5";
+            this.lbLed2003M5.Renderer = null;
+            this.lbLed2003M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2003M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2003M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2003M5.TabIndex = 405;
+            // 
+            // lbLed2004M5
+            // 
+            this.lbLed2004M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2004M5.BlinkInterval = 500;
+            this.lbLed2004M5.Enabled = false;
+            this.lbLed2004M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2004M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2004M5.Label = "X3 - high extrarun";
+            this.lbLed2004M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2004M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2004M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2004M5.Location = new System.Drawing.Point(16, 103);
+            this.lbLed2004M5.Name = "lbLed2004M5";
+            this.lbLed2004M5.Renderer = null;
+            this.lbLed2004M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2004M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2004M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2004M5.TabIndex = 404;
+            // 
+            // lbLed2001M5
+            // 
+            this.lbLed2001M5.BackColor = System.Drawing.SystemColors.Control;
+            this.lbLed2001M5.BlinkInterval = 500;
+            this.lbLed2001M5.Enabled = false;
+            this.lbLed2001M5.Font = new System.Drawing.Font("Verdana", 8.25F);
+            this.lbLed2001M5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.lbLed2001M5.Label = "X0 - spare";
+            this.lbLed2001M5.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
+            this.lbLed2001M5.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            this.lbLed2001M5.LedSize = new System.Drawing.SizeF(24F, 24F);
+            this.lbLed2001M5.Location = new System.Drawing.Point(16, 13);
+            this.lbLed2001M5.Name = "lbLed2001M5";
+            this.lbLed2001M5.Renderer = null;
+            this.lbLed2001M5.Size = new System.Drawing.Size(220, 24);
+            this.lbLed2001M5.State = LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On;
+            this.lbLed2001M5.Style = LBSoft.IndustrialCtrls.Leds.LBLed.LedStyle.Rectangular;
+            this.lbLed2001M5.TabIndex = 403;
             // 
             // tabPage1
             // 
@@ -9008,7 +9669,7 @@
             tabPageColorStyle33.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT2.HoverStyle = tabPageColorStyle33;
             this.tabPageT2.ImageIndex = 4;
-            this.tabPageT2.Location = new System.Drawing.Point(198, 36);
+            this.tabPageT2.Location = new System.Drawing.Point(96, 36);
             this.tabPageT2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT2.Name = "tabPageT2";
             tabPageColorStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
@@ -9030,7 +9691,7 @@
             tabPageColorStyle35.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle35.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT2.SelectedStyle = tabPageColorStyle35;
-            this.tabPageT2.Size = new System.Drawing.Size(812, 716);
+            this.tabPageT2.Size = new System.Drawing.Size(914, 716);
             this.tabPageT2.StyleFromParent = false;
             this.tabPageT2.TabIndex = 0;
             this.tabPageT2.Text = "page";
@@ -9125,7 +9786,7 @@
             tabPageColorStyle36.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT6.HoverStyle = tabPageColorStyle36;
             this.tabPageT6.ImageIndex = 12;
-            this.tabPageT6.Location = new System.Drawing.Point(198, 36);
+            this.tabPageT6.Location = new System.Drawing.Point(96, 36);
             this.tabPageT6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT6.Name = "tabPageT6";
             tabPageColorStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
@@ -9143,7 +9804,7 @@
             tabPageColorStyle38.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle38.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT6.SelectedStyle = tabPageColorStyle38;
-            this.tabPageT6.Size = new System.Drawing.Size(812, 716);
+            this.tabPageT6.Size = new System.Drawing.Size(914, 716);
             this.tabPageT6.StyleFromParent = false;
             this.tabPageT6.TabIndex = 22;
             this.tabPageT6.Text = "page";
@@ -9165,7 +9826,7 @@
             this.tabPageT7.HoverStyle = tabPageColorStyle39;
             this.tabPageT7.ImageIndex = 14;
             this.tabPageT7.Key = "Hide";
-            this.tabPageT7.Location = new System.Drawing.Point(198, 36);
+            this.tabPageT7.Location = new System.Drawing.Point(96, 36);
             this.tabPageT7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT7.Name = "tabPageT7";
             tabPageColorStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
@@ -9183,7 +9844,7 @@
             tabPageColorStyle41.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
             tabPageColorStyle41.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT7.SelectedStyle = tabPageColorStyle41;
-            this.tabPageT7.Size = new System.Drawing.Size(812, 716);
+            this.tabPageT7.Size = new System.Drawing.Size(914, 716);
             this.tabPageT7.StyleFromParent = false;
             this.tabPageT7.TabIndex = 23;
             this.tabPageT7.Text = "page";
@@ -9212,7 +9873,7 @@
             tabPageFormatStyle21.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle21.Padding = new System.Windows.Forms.Padding(5);
             this.tabPageT0_1.FormatStyle = tabPageFormatStyle21;
-            this.tabPageT0_1.Location = new System.Drawing.Point(198, 36);
+            this.tabPageT0_1.Location = new System.Drawing.Point(0, 0);
             this.tabPageT0_1.Name = "tabPageT0_1";
             tabPageColorStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle42.BackFadeColor = System.Drawing.Color.Transparent;
@@ -9229,14 +9890,14 @@
             tabPageColorStyle52.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle52.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT0_1.SelectedStyle = tabPageColorStyle52;
-            this.tabPageT0_1.Size = new System.Drawing.Size(812, 716);
+            this.tabPageT0_1.Size = new System.Drawing.Size(0, 0);
             this.tabPageT0_1.StyleFromParent = false;
             this.tabPageT0_1.TabIndex = 1;
             this.tabPageT0_1.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabPageT0_1.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Bottom;
             this.tabPageT0_1.Text = "automatic";
             this.tabPageT0_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_1.TextBounds")));
-            this.tabPageT0_1.TextSize = new System.Drawing.SizeF(87.68488F, 21.44531F);
+            this.tabPageT0_1.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT0_1.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT0
@@ -9381,7 +10042,7 @@
             this.dataGridViewMessages.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewMessages.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridViewMessages.EnableHeadersVisualStyles = false;
-            this.dataGridViewMessages.Location = new System.Drawing.Point(0, 563);
+            this.dataGridViewMessages.Location = new System.Drawing.Point(0, -153);
             this.dataGridViewMessages.MultiSelect = false;
             this.dataGridViewMessages.Name = "dataGridViewMessages";
             this.dataGridViewMessages.ReadOnly = true;
@@ -9404,7 +10065,7 @@
             this.dataGridViewMessages.RowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridViewMessages.RowTemplate.Height = 24;
             this.dataGridViewMessages.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridViewMessages.Size = new System.Drawing.Size(812, 100);
+            this.dataGridViewMessages.Size = new System.Drawing.Size(0, 100);
             this.dataGridViewMessages.TabIndex = 141;
             // 
             // datetime
@@ -9446,9 +10107,9 @@
             // 
             this.statusStripSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(190)))), ((int)(((byte)(186)))));
             this.statusStripSeparator.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusStripSeparator.Location = new System.Drawing.Point(0, 663);
+            this.statusStripSeparator.Location = new System.Drawing.Point(0, -53);
             this.statusStripSeparator.Name = "statusStripSeparator";
-            this.statusStripSeparator.Size = new System.Drawing.Size(812, 22);
+            this.statusStripSeparator.Size = new System.Drawing.Size(0, 22);
             this.statusStripSeparator.SizingGrip = false;
             this.statusStripSeparator.TabIndex = 140;
             // 
@@ -9461,9 +10122,9 @@
             this.toolStripStatusLabelSN,
             this.toolStripStatusLabelDateTime,
             this.toolStripStatusLabelSystem});
-            this.statusStripT0.Location = new System.Drawing.Point(0, 685);
+            this.statusStripT0.Location = new System.Drawing.Point(0, -31);
             this.statusStripT0.Name = "statusStripT0";
-            this.statusStripT0.Size = new System.Drawing.Size(812, 31);
+            this.statusStripT0.Size = new System.Drawing.Size(0, 31);
             this.statusStripT0.SizingGrip = false;
             this.statusStripT0.TabIndex = 139;
             // 
@@ -9472,7 +10133,7 @@
             this.toolStripStatusLabelSN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.toolStripStatusLabelSN.Name = "toolStripStatusLabelSN";
             this.toolStripStatusLabelSN.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.toolStripStatusLabelSN.Size = new System.Drawing.Size(51, 26);
+            this.toolStripStatusLabelSN.Size = new System.Drawing.Size(51, 16);
             this.toolStripStatusLabelSN.Text = "S/N";
             // 
             // toolStripStatusLabelDateTime
@@ -9490,7 +10151,7 @@
             // 
             this.toolStripStatusLabelSystem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.toolStripStatusLabelSystem.Name = "toolStripStatusLabelSystem";
-            this.toolStripStatusLabelSystem.Size = new System.Drawing.Size(99, 26);
+            this.toolStripStatusLabelSystem.Size = new System.Drawing.Size(99, 16);
             this.toolStripStatusLabelSystem.Text = "system offline";
             // 
             // checkBoxPause
@@ -10734,7 +11395,7 @@
             tabPageColorStyle43.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT0.HoverStyle = tabPageColorStyle43;
             this.tabPageT0.ImageIndex = 0;
-            this.tabPageT0.Location = new System.Drawing.Point(198, 36);
+            this.tabPageT0.Location = new System.Drawing.Point(96, 36);
             this.tabPageT0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT0.Name = "tabPageT0";
             tabPageColorStyle44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
@@ -10757,7 +11418,7 @@
             tabPageColorStyle51.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle51.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT0.SelectedStyle = tabPageColorStyle51;
-            this.tabPageT0.Size = new System.Drawing.Size(812, 716);
+            this.tabPageT0.Size = new System.Drawing.Size(914, 716);
             this.tabPageT0.StyleFromParent = false;
             this.tabPageT0.TabIndex = 0;
             this.tabPageT0.Text = "page";
@@ -10805,7 +11466,7 @@
             tabPageFormatStyle23.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle23.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT0_2.FormatStyle = tabPageFormatStyle23;
-            this.tabPageT0_2.Location = new System.Drawing.Point(198, 36);
+            this.tabPageT0_2.Location = new System.Drawing.Point(0, 0);
             this.tabPageT0_2.Name = "tabPageT0_2";
             tabPageColorStyle45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle45.BackFadeColor = System.Drawing.Color.Transparent;
@@ -10825,13 +11486,13 @@
             tabPageColorStyle48.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle48.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT0_2.SelectedStyle = tabPageColorStyle48;
-            this.tabPageT0_2.Size = new System.Drawing.Size(812, 716);
+            this.tabPageT0_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT0_2.StyleFromParent = false;
             this.tabPageT0_2.TabIndex = 2;
             this.tabPageT0_2.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Left;
             this.tabPageT0_2.Text = "recipies";
             this.tabPageT0_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2.TextBounds")));
-            this.tabPageT0_2.TextSize = new System.Drawing.SizeF(68.48957F, 21.44531F);
+            this.tabPageT0_2.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT0_2.UseParentTabStripPlacement = false;
             // 
             // textBoxManageD4Param4
@@ -11257,18 +11918,18 @@
             tabPageFormatStyle24.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle24.Padding = new System.Windows.Forms.Padding(22, 5, 15, 5);
             this.tabPageT0_2_1.FormatStyle = tabPageFormatStyle24;
-            this.tabPageT0_2_1.Location = new System.Drawing.Point(198, 36);
+            this.tabPageT0_2_1.Location = new System.Drawing.Point(0, 0);
             this.tabPageT0_2_1.Name = "tabPageT0_2_1";
             this.tabPageT0_2_1.ParentPage = this.tabPageT0_2;
             tabPageColorStyle46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle46.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabPageT0_2_1.SelectedStyle = tabPageColorStyle46;
-            this.tabPageT0_2_1.Size = new System.Drawing.Size(812, 716);
+            this.tabPageT0_2_1.Size = new System.Drawing.Size(0, 0);
             this.tabPageT0_2_1.StyleFromParent = false;
             this.tabPageT0_2_1.TabIndex = 25;
             this.tabPageT0_2_1.Text = "add new";
             this.tabPageT0_2_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2_1.TextBounds")));
-            this.tabPageT0_2_1.TextSize = new System.Drawing.SizeF(61.17658F, 17.42431F);
+            this.tabPageT0_2_1.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT0_2_1.UseParentButtons = false;
             this.tabPageT0_2_1.UseParentTabStripPlacement = false;
             // 
@@ -11280,7 +11941,7 @@
             this.checkBoxRecipeNewKey.ImageIndex = 0;
             this.checkBoxRecipeNewKey.ImageList = this.imageListKey;
             this.checkBoxRecipeNewKey.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxRecipeNewKey.Location = new System.Drawing.Point(720, 610);
+            this.checkBoxRecipeNewKey.Location = new System.Drawing.Point(600, 610);
             this.checkBoxRecipeNewKey.Name = "checkBoxRecipeNewKey";
             this.checkBoxRecipeNewKey.Size = new System.Drawing.Size(86, 86);
             this.checkBoxRecipeNewKey.TabIndex = 148;
@@ -11786,18 +12447,18 @@
             tabPageFormatStyle25.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle25.Padding = new System.Windows.Forms.Padding(5, 5, 10, 5);
             this.tabPageT0_2_2.FormatStyle = tabPageFormatStyle25;
-            this.tabPageT0_2_2.Location = new System.Drawing.Point(198, 36);
+            this.tabPageT0_2_2.Location = new System.Drawing.Point(0, 0);
             this.tabPageT0_2_2.Name = "tabPageT0_2_2";
             this.tabPageT0_2_2.ParentPage = this.tabPageT0_2;
             tabPageColorStyle47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle47.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabPageT0_2_2.SelectedStyle = tabPageColorStyle47;
-            this.tabPageT0_2_2.Size = new System.Drawing.Size(812, 716);
+            this.tabPageT0_2_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT0_2_2.StyleFromParent = false;
             this.tabPageT0_2_2.TabIndex = 26;
             this.tabPageT0_2_2.Text = "find/modify";
             this.tabPageT0_2_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2_2.TextBounds")));
-            this.tabPageT0_2_2.TextSize = new System.Drawing.SizeF(81.41291F, 17.42431F);
+            this.tabPageT0_2_2.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT0_2_2.UseParentTabStripPlacement = false;
             // 
             // checkBox3
@@ -12215,7 +12876,7 @@
             tabPageFormatStyle26.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle26.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT0_3.FormatStyle = tabPageFormatStyle26;
-            this.tabPageT0_3.Location = new System.Drawing.Point(198, 36);
+            this.tabPageT0_3.Location = new System.Drawing.Point(0, 0);
             this.tabPageT0_3.Name = "tabPageT0_3";
             tabPageColorStyle49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle49.BackFadeColor = System.Drawing.Color.Transparent;
@@ -12232,14 +12893,14 @@
             tabPageColorStyle50.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle50.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT0_3.SelectedStyle = tabPageColorStyle50;
-            this.tabPageT0_3.Size = new System.Drawing.Size(812, 716);
+            this.tabPageT0_3.Size = new System.Drawing.Size(0, 0);
             this.tabPageT0_3.StyleFromParent = false;
             this.tabPageT0_3.TabIndex = 3;
             this.tabPageT0_3.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabPageT0_3.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Bottom;
             this.tabPageT0_3.Text = "nodes";
             this.tabPageT0_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_3.TextBounds")));
-            this.tabPageT0_3.TextSize = new System.Drawing.SizeF(54.43489F, 21.44531F);
+            this.tabPageT0_3.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT0_3.UseParentTabStripPlacement = false;
             this.tabPageT0_3.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageT0_3_Paint);
             // 
@@ -12610,14 +13271,14 @@
             this.tabPage2.Controls.Add(this.label5);
             tabPageFormatStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.FormatStyle = tabPageFormatStyle27;
-            this.tabPage2.Location = new System.Drawing.Point(198, 36);
+            this.tabPage2.Location = new System.Drawing.Point(0, 0);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.ParentPage = this.tabPageT0;
-            this.tabPage2.Size = new System.Drawing.Size(812, 716);
+            this.tabPage2.Size = new System.Drawing.Size(0, 0);
             this.tabPage2.TabIndex = 27;
             this.tabPage2.Text = "diagnostics";
             this.tabPage2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage2.TextBounds")));
-            this.tabPage2.TextSize = new System.Drawing.SizeF(97.48957F, 21.44531F);
+            this.tabPage2.TextSize = new System.Drawing.SizeF(0F, 0F);
             // 
             // labelM5ExitBelt3State
             // 
@@ -14011,7 +14672,7 @@
             tabPageColorStyle54.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT1.HoverStyle = tabPageColorStyle54;
             this.tabPageT1.ImageIndex = 2;
-            this.tabPageT1.Location = new System.Drawing.Point(198, 36);
+            this.tabPageT1.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT1.Name = "tabPageT1";
             tabPageColorStyle55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
@@ -14034,7 +14695,7 @@
             tabPageColorStyle62.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle62.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT1.SelectedStyle = tabPageColorStyle62;
-            this.tabPageT1.Size = new System.Drawing.Size(812, 716);
+            this.tabPageT1.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1.StyleFromParent = false;
             this.tabPageT1.TabIndex = 4;
             this.tabPageT1.Text = "page";
@@ -16349,18 +17010,20 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
-            this.tabControlMain.Controls.Add(this.tabPageT0_2);
-            this.tabControlMain.Controls.Add(this.tabPageT0);
-            this.tabControlMain.Controls.Add(this.tabPageT1);
-            this.tabControlMain.Controls.Add(this.tabPageT2);
+            this.tabControlMain.Controls.Add(this.tabPageT5_2);
+            this.tabControlMain.Controls.Add(this.tabPageT5);
+            this.tabControlMain.Controls.Add(this.tabPageT4_4);
             this.tabControlMain.Controls.Add(this.tabPageT7);
             this.tabControlMain.Controls.Add(this.tabPageT6);
-            this.tabControlMain.Controls.Add(this.tabPageT5);
             this.tabControlMain.Controls.Add(this.tabPageT4);
             this.tabControlMain.Controls.Add(this.tabPageT3);
+            this.tabControlMain.Controls.Add(this.tabPageT2);
+            this.tabControlMain.Controls.Add(this.tabPageT1);
+            this.tabControlMain.Controls.Add(this.tabPageT0);
             this.tabControlMain.Controls.Add(this.tabPageT0_1);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_3);
             this.tabControlMain.Controls.Add(this.tabPage2);
             this.tabControlMain.Controls.Add(this.tabPageT1_1);
@@ -16377,9 +17040,7 @@
             this.tabControlMain.Controls.Add(this.tabPageT4_1);
             this.tabControlMain.Controls.Add(this.tabPageT4_2);
             this.tabControlMain.Controls.Add(this.tabPageT4_3);
-            this.tabControlMain.Controls.Add(this.tabPageT4_4);
             this.tabControlMain.Controls.Add(this.tabPageT5_1);
-            this.tabControlMain.Controls.Add(this.tabPageT5_2);
             this.tabControlMain.Controls.Add(this.tabPageT5_3);
             this.tabControlMain.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Top;
@@ -16417,7 +17078,7 @@
             this.tabPageT6,
             this.tabPageT7});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageT0_2_2;
+            this.tabControlMain.SelectedPage = this.tabPageT5_2;
             tabPageColorStyle65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle65.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle65.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
@@ -17414,7 +18075,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn reachedM3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox comboBoxM2TeachRecipeName;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.ComboBox comboBoxM2TestRecipeName;
@@ -17489,5 +18149,37 @@
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2003M3;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2004M3;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2001M3;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2020M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2019M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2032M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2030M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2031M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2029M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2026M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2027M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2028M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2025M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2022M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2023M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2024M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2021M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2012M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2016M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2017M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2018M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2015M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2014M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2010M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2011M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2013M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2009M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2006M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2007M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2008M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2005M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2002M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2003M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2004M5;
+        private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2001M5;
     }
 }
