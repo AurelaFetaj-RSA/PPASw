@@ -36,7 +36,7 @@ namespace GUI
                 chkValue = (checkBoxM1Inclusion.CheckState == CheckState.Checked) ? true : false;
 
                 var sendResult = await ccService.Send(keyToSend, chkValue);
-
+                M1inc = (chkValue == true) ? "1" : "0";
                 if (sendResult.OpcResult)
                 {
                     checkBoxM1Inclusion.ImageIndex = (chkValue) ? 0 : 1;
@@ -108,7 +108,7 @@ namespace GUI
 
                 keyToSend = "pcM2Inclusion";
                 chkValue = (checkBoxM2Inclusion.CheckState == CheckState.Checked) ? true : false;
-
+                M2inc = (chkValue == true) ? "1" : "0";
                 var sendResult = await ccService.Send(keyToSend, chkValue);
 
                 if (sendResult.OpcResult)
@@ -135,7 +135,7 @@ namespace GUI
 
                 keyToSend = "pcM3Inclusion";
                 chkValue = (checkBoxM3Inclusion.CheckState == CheckState.Checked) ? true : false;
-
+                M3inc = (chkValue == true) ? "1" : "0";
                 var sendResult = await ccService.Send(keyToSend, chkValue);
 
                 if (sendResult.OpcResult)
@@ -162,7 +162,7 @@ namespace GUI
 
                 keyToSend = "pcM4Inclusion";
                 chkValue = (checkBoxM4Inclusion.CheckState == CheckState.Checked) ? true : false;
-
+                M3inc = (chkValue == true) ? "1" : "0";
                 var sendResult = await ccService.Send(keyToSend, chkValue);
 
                 if (sendResult.OpcResult)
@@ -216,7 +216,7 @@ namespace GUI
 
                 keyToSend = "pcM6Inclusion";
                 chkValue = (checkBoxM6Inclusion.CheckState == CheckState.Checked) ? true : false;
-
+                M6inc = (chkValue == true) ? "1" : "0";
                 var sendResult = await ccService.Send(keyToSend, chkValue);
 
                 if (sendResult.OpcResult)

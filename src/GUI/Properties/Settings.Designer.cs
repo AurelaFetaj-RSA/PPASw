@@ -118,5 +118,17 @@ namespace GUI.Properties {
                 this["OpcSimulation"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\172.31.20.90\\PRODUCTION\\recipe_from_pc.txt")]
+        public string PadLaserFilePath {
+            get {
+                return ((string)(this["PadLaserFilePath"]));
+            }
+            set {
+                this["PadLaserFilePath"] = value;
+            }
+        }
     }
 }

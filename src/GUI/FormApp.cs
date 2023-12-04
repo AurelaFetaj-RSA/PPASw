@@ -63,6 +63,19 @@ namespace GUI
         //create static instance of I7O configurator (singleton)
         public static Configurator alarmConfigurator = new Configurator();
 
+        public static string M1PrgName = "";
+        public static string M2PrgName = "";
+        public static string M3PrgName1 = "";
+        public static string M4PrgName = "";
+        public static string M3PrgName2 = "";
+
+        public static string M1inc = "";
+        public static string M2inc = "";
+        public static string M3inc = "";
+        public static string M4inc = "";
+        public static string M5inc = "";
+        public static string M6inc = "";
+        public static bool restartApp = false;
         public enum Priority
         {
             normal = 0,
@@ -321,6 +334,7 @@ namespace GUI
             ioConfigurator.LoadFromFile("ioconfig.xml", Configurator.FileType.Xml);
             InitM1IOSettings();
             InitM2IOSettings();
+            InitM3IOSettings();
         }
         public void Start()
         {
@@ -442,17 +456,28 @@ namespace GUI
         {
             //save configuration file plconfig.xml
             comboBoxM1PrgName.Text = guiConfigurator.GetValue("T0", "M1PRGNAME", "");
+            M1PrgName = comboBoxM1PrgName.Text;
             comboBoxM2PrgName.Text = guiConfigurator.GetValue("T0", "M2PRGNAME", "");
+            M2PrgName = comboBoxM2PrgName.Text;
             comboBoxM3PrgName_st1.Text = guiConfigurator.GetValue("T0", "M3PRGNAME1", "");
+            M3PrgName1 = comboBoxM3PrgName_st1.Text;
             comboBoxM3PrgName_st2.Text = guiConfigurator.GetValue("T0", "M3PRGNAME2", "");
+            M3PrgName2 = comboBoxM3PrgName_st2.Text;
             comboBoxM4PrgName.Text = guiConfigurator.GetValue("T0", "M4PRGNAME", "");
+            M4PrgName = comboBoxM4PrgName.Text;
             checkBoxM1Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M1INC", "") == "1")?CheckState.Checked:CheckState.Unchecked;
+
             checkBoxM2Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M2INC", "") == "1") ? CheckState.Checked : CheckState.Unchecked;
             checkBoxM3Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M3INC", "") == "1") ? CheckState.Checked : CheckState.Unchecked;
             checkBoxM4Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M4INC", "") == "1") ? CheckState.Checked : CheckState.Unchecked;
             checkBoxM5Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M5INC", "") == "1") ? CheckState.Checked : CheckState.Unchecked;
             checkBoxM6Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M6INC", "") == "1") ? CheckState.Checked : CheckState.Unchecked;
-
+            M1inc = guiConfigurator.GetValue("T0", "M1INC", "");
+            M2inc = guiConfigurator.GetValue("T0", "M2INC", "");
+            M3inc = guiConfigurator.GetValue("T0", "M3INC", "");
+            M4inc = guiConfigurator.GetValue("T0", "M4INC", "");
+            M5inc = guiConfigurator.GetValue("T0", "M5INC", "");
+            M6inc = guiConfigurator.GetValue("T0", "M6INC", "");
             RestartRequestFromM1();
             RestartRequestFromM2();
             RestartRequestFromM3();
@@ -460,14 +485,101 @@ namespace GUI
             RestartRequestFromM5();
             RestartRequestFromM6();
 
+            string keyToSend = null;
+            bool chkValue = false;
+
+            keyToSend = "pcM1Inclusion";
+            chkValue = (M1inc == "1") ? true : false;
+
+            var sendResult = await ccService.Send(keyToSend, chkValue);
+
+            if (sendResult.OpcResult)
+            {
+                checkBoxM1Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+            }
+            else
+            {
+                checkBoxM1Inclusion.ImageIndex = 2;
+            }
+
+            keyToSend = "pcM2Inclusion";
+            chkValue = (M2inc == "1") ? true : false;
+
+            sendResult = await ccService.Send(keyToSend, chkValue);
+
+            if (sendResult.OpcResult)
+            {
+                checkBoxM2Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+            }
+            else
+            {
+                checkBoxM2Inclusion.ImageIndex = 2;
+            }
+
+            keyToSend = "pcM3Inclusion";
+            chkValue = (M3inc == "1") ? true : false;
+
+            sendResult = await ccService.Send(keyToSend, chkValue);
+
+            if (sendResult.OpcResult)
+            {
+                checkBoxM3Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+            }
+            else
+            {
+                checkBoxM3Inclusion.ImageIndex = 2;
+            }
 
 
+            keyToSend = "pcM4Inclusion";
+            chkValue = (M4inc == "1") ? true : false;
+
+            sendResult = await ccService.Send(keyToSend, chkValue);
+
+            if (sendResult.OpcResult)
+            {
+                checkBoxM4Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+            }
+            else
+            {
+                checkBoxM4Inclusion.ImageIndex = 2;
+            }
+
+
+            keyToSend = "pcM5Inclusion";
+            chkValue = (M5inc == "1") ? true : false;
+
+            sendResult = await ccService.Send(keyToSend, chkValue);
+
+            if (sendResult.OpcResult)
+            {
+                checkBoxM5Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+            }
+            else
+            {
+                checkBoxM5Inclusion.ImageIndex = 2;
+            }
+
+
+            keyToSend = "pcM6Inclusion";
+            chkValue = (M6inc == "1") ? true : false;
+
+            sendResult = await ccService.Send(keyToSend, chkValue);
+
+            if (sendResult.OpcResult)
+            {
+                checkBoxM6Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+            }
+            else
+            {
+                checkBoxM6Inclusion.ImageIndex = 2;
+            }
             numericUpDownM6OnPercentage.Value = short.Parse(guiConfigurator.GetValue("T0", "M6PERCENTAGE", ""));
             if (ccService.ClientIsConnected)
             {
-                string keyToSend = "pcM6ONPercentage";
+                keyToSend = "pcM6ONPercentage";
 
-                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM6OnPercentage.Value.ToString()));
+                sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM6OnPercentage.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -476,7 +588,7 @@ namespace GUI
                 {
 
                 }
-            }
+            }        
 
             comboBoxT0RecipeName.Text = guiConfigurator.GetValue("T0", "RECIPENAME", "");
             comboBoxM1TeachProgramList.Text = guiConfigurator.GetValue("T1_1", "PRGNAME", "");
@@ -485,9 +597,9 @@ namespace GUI
             numericUpDownM1JogSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T1_1", "JOGSPEED", "10"));
             if (ccService.ClientIsConnected)
             {
-                string keyToSend = "numericUpDownM1JogSpeed";
+                keyToSend = "numericUpDownM1JogSpeed";
 
-                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1JogSpeed.Value.ToString()));
+                sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1JogSpeed.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -502,8 +614,8 @@ namespace GUI
             numericUpDownM1ManualQuote.Value = Convert.ToDecimal(guiConfigurator.GetValue("T1_1", "MANUALQUOTE", "10"));
             if (ccService.ClientIsConnected)
             {
-                string keyToSend = "pcM1ManualQuote";
-                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM1ManualQuote.Value.ToString()));
+                keyToSend = "pcM1ManualQuote";
+                sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM1ManualQuote.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -517,8 +629,8 @@ namespace GUI
             numericUpDownM1ManualSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T1_1", "MANUALSPEED", "10"));
             if (ccService.ClientIsConnected)
             {
-                string keyToSend = "pcM1ManualSpeed";
-                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM1ManualSpeed.Value.ToString()));
+                keyToSend = "pcM1ManualSpeed";
+                sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM1ManualSpeed.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -537,9 +649,9 @@ namespace GUI
             numericUpDownM2JogSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T2_1", "JOGSPEED", "10"));
             if (ccService.ClientIsConnected)
             {
-                string keyToSend = "numericUpDownM2JogSpeed";
+                keyToSend = "numericUpDownM2JogSpeed";
 
-                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM2JogSpeed.Value.ToString()));
+                sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM2JogSpeed.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -553,8 +665,8 @@ namespace GUI
             numericUpDownM2ManualQuote.Value = Convert.ToDecimal(guiConfigurator.GetValue("T2_1", "MANUALQUOTE", "10"));
             if (ccService.ClientIsConnected)
             {
-                string keyToSend = "pcM2ManualQuote";
-                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM2ManualQuote.Value.ToString()));
+                keyToSend = "pcM2ManualQuote";
+                sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM2ManualQuote.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -567,8 +679,8 @@ namespace GUI
             numericUpDownM2ManualSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T2_1", "MANUALSPEED", "10"));
             if (ccService.ClientIsConnected)
             {
-                string keyToSend = "pcM2ManualSpeed";
-                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM2ManualSpeed.Value.ToString()));
+                keyToSend = "pcM2ManualSpeed";
+                sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM2ManualSpeed.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -586,9 +698,9 @@ namespace GUI
             numericUpDownM3JogSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T3_1", "JOGSPEED", "10"));
             if (ccService.ClientIsConnected)
             {
-                string keyToSend = "numericUpDownM3JogSpeed";
+                keyToSend = "numericUpDownM3JogSpeed";
 
-                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3JogSpeed.Value.ToString()));
+                sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3JogSpeed.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -602,8 +714,8 @@ namespace GUI
             numericUpDownM3ManualQuote.Value = Convert.ToDecimal(guiConfigurator.GetValue("T3_1", "MANUALQUOTE", "10"));
             if (ccService.ClientIsConnected)
             {
-                string keyToSend = "pcM3ManualQuote";
-                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3ManualQuote.Value.ToString()));
+                keyToSend = "pcM3ManualQuote";
+                sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3ManualQuote.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -616,8 +728,8 @@ namespace GUI
             numericUpDownM3ManualSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T3_1", "MANUALSPEED", "10"));
             if (ccService.ClientIsConnected)
             {
-                string keyToSend = "pcM3ManualSpeed";
-                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3ManualSpeed.Value.ToString()));
+                keyToSend = "pcM3ManualSpeed";
+                sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3ManualSpeed.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -853,6 +965,117 @@ namespace GUI
             lbLed2048M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2048", "");
         }
 
+        private void InitM3IOSettings()
+        {
+            //digital input
+            lbLed1001M3.Label = ioConfigurator.GetValue("M3_INPUT", "1001", "");
+            lbLed1002M3.Label = ioConfigurator.GetValue("M3_INPUT", "1002", "");
+            lbLed1003M3.Label = ioConfigurator.GetValue("M3_INPUT", "1003", "");
+            lbLed1004M3.Label = ioConfigurator.GetValue("M3_INPUT", "1004", "");
+            lbLed1005M3.Label = ioConfigurator.GetValue("M3_INPUT", "1005", "");
+            lbLed1006M3.Label = ioConfigurator.GetValue("M3_INPUT", "1006", "");
+            lbLed1007M3.Label = ioConfigurator.GetValue("M3_INPUT", "1007", "");
+            lbLed1008M3.Label = ioConfigurator.GetValue("M3_INPUT", "1008", "");
+            lbLed1009M3.Label = ioConfigurator.GetValue("M3_INPUT", "1009", "");
+            lbLed1010M3.Label = ioConfigurator.GetValue("M3_INPUT", "1010", "");
+
+            lbLed1011M3.Label = ioConfigurator.GetValue("M3_INPUT", "1011", "");
+            lbLed1012M3.Label = ioConfigurator.GetValue("M3_INPUT", "1012", "");
+            lbLed1013M3.Label = ioConfigurator.GetValue("M3_INPUT", "1013", "");
+            lbLed1014M3.Label = ioConfigurator.GetValue("M3_INPUT", "1014", "");
+            lbLed1015M3.Label = ioConfigurator.GetValue("M3_INPUT", "1015", "");
+            lbLed1016M3.Label = ioConfigurator.GetValue("M3_INPUT", "1016", "");
+            lbLed1017M3.Label = ioConfigurator.GetValue("M3_INPUT", "1017", "");
+            lbLed1018M3.Label = ioConfigurator.GetValue("M3_INPUT", "1018", "");
+            lbLed1019M3.Label = ioConfigurator.GetValue("M3_INPUT", "1019", "");
+            lbLed1020M3.Label = ioConfigurator.GetValue("M3_INPUT", "1020", "");
+
+            lbLed1021M3.Label = ioConfigurator.GetValue("M3_INPUT", "1021", "");
+            lbLed1022M3.Label = ioConfigurator.GetValue("M3_INPUT", "1022", "");
+            lbLed1023M3.Label = ioConfigurator.GetValue("M3_INPUT", "1023", "");
+            lbLed1024M3.Label = ioConfigurator.GetValue("M3_INPUT", "1024", "");
+            lbLed1025M3.Label = ioConfigurator.GetValue("M3_INPUT", "1025", "");
+            lbLed1026M3.Label = ioConfigurator.GetValue("M3_INPUT", "1026", "");
+            lbLed1027M3.Label = ioConfigurator.GetValue("M3_INPUT", "1027", "");
+            lbLed1028M3.Label = ioConfigurator.GetValue("M3_INPUT", "1028", "");
+            lbLed1029M3.Label = ioConfigurator.GetValue("M3_INPUT", "1029", "");
+            lbLed1030M3.Label = ioConfigurator.GetValue("M3_INPUT", "1030", "");
+
+            lbLed1031M3.Label = ioConfigurator.GetValue("M3_INPUT", "1031", "");
+            lbLed1032M3.Label = ioConfigurator.GetValue("M3_INPUT", "1032", "");
+            lbLed1033M3.Label = ioConfigurator.GetValue("M3_INPUT", "1033", "");
+            lbLed1034M3.Label = ioConfigurator.GetValue("M3_INPUT", "1034", "");
+            lbLed1035M3.Label = ioConfigurator.GetValue("M3_INPUT", "1035", "");
+            lbLed1036M3.Label = ioConfigurator.GetValue("M3_INPUT", "1036", "");
+            lbLed1037M3.Label = ioConfigurator.GetValue("M3_INPUT", "1037", "");
+            lbLed1038M3.Label = ioConfigurator.GetValue("M3_INPUT", "1038", "");
+            lbLed1039M3.Label = ioConfigurator.GetValue("M3_INPUT", "1039", "");
+            lbLed1040M3.Label = ioConfigurator.GetValue("M3_INPUT", "1040", "");
+
+            lbLed1041M3.Label = ioConfigurator.GetValue("M3_INPUT", "1041", "");
+            lbLed1042M3.Label = ioConfigurator.GetValue("M3_INPUT", "1042", "");
+            lbLed1043M3.Label = ioConfigurator.GetValue("M3_INPUT", "1043", "");
+            lbLed1044M3.Label = ioConfigurator.GetValue("M3_INPUT", "1044", "");
+            lbLed1045M3.Label = ioConfigurator.GetValue("M3_INPUT", "1045", "");
+            lbLed1046M3.Label = ioConfigurator.GetValue("M3_INPUT", "1046", "");
+            lbLed1047M3.Label = ioConfigurator.GetValue("M3_INPUT", "1047", "");
+            lbLed1048M3.Label = ioConfigurator.GetValue("M3_INPUT", "1048", "");
+
+            //digital output
+            lbLed2001M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2001", "");
+            lbLed2002M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2002", "");
+            lbLed2003M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2003", "");
+            lbLed2004M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2004", "");
+            lbLed2005M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2005", "");
+            lbLed2006M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2006", "");
+            lbLed2007M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2007", "");
+            lbLed2008M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2008", "");
+            lbLed2009M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2009", "");
+            lbLed2010M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2010", "");
+
+            lbLed2011M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2011", "");
+            lbLed2012M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2012", "");
+            lbLed2013M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2013", "");
+            lbLed2014M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2014", "");
+            lbLed2015M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2015", "");
+            lbLed2016M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2016", "");
+            lbLed2017M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2017", "");
+            lbLed2018M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2018", "");
+            lbLed2019M2.Label = ioConfigurator.GetValue("M3_OUTPUT", "2019", "");
+            lbLed2020M2.Label = ioConfigurator.GetValue("M3_OUTPUT", "2020", "");
+
+            lbLed2021M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2021", "");
+            lbLed2022M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2022", "");
+            lbLed2023M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2023", "");
+            lbLed2024M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2024", "");
+            lbLed2025M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2025", "");
+            lbLed2026M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2026", "");
+            lbLed2027M2.Label = ioConfigurator.GetValue("M3_OUTPUT", "2027", "");
+            lbLed2028M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2028", "");
+            lbLed2028M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2029", "");
+            lbLed2029M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2030", "");
+
+            lbLed2030M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2031", "");
+            lbLed2031M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2032", "");
+            lbLed2032M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2033", "");
+            lbLed2033M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2034", "");
+            lbLed2034M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2035", "");
+            lbLed2035M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2036", "");
+            lbLed2036M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2037", "");
+            lbLed2038M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2038", "");
+            lbLed2039M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2039", "");
+            lbLed2040M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2040", "");
+
+            lbLed2041M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2041", "");
+            lbLed2042M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2042", "");
+            lbLed2043M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2043", "");
+            lbLed2044M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2044", "");
+            lbLed2045M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2045", "");
+            lbLed2046M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2046", "");
+            lbLed2047M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2047", "");
+            lbLed2048M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2048", "");
+        }
+
         private void AddMessageToDataGridOnTop(DateTime dt, Priority pr, Machine machine, string messageText)
         {
             try
@@ -1046,6 +1269,7 @@ namespace GUI
             if (comboBoxM3PrgName_st1.Text == "") return;
             //get model name
             string prgName = comboBoxM3PrgName_st1.Text;
+            M3PrgName1 = comboBoxM3PrgName_st1.Text;
             string modelName = prgName.Substring(2, 4);
 
             //check model name
@@ -1126,6 +1350,7 @@ namespace GUI
             if (comboBoxM3PrgName_st2.Text == "") return;
             //get model name
             string prgName = comboBoxM3PrgName_st2.Text;
+            M3PrgName2 = comboBoxM3PrgName_st2.Text;
             string modelName = prgName.Substring(2, 4);
 
             //check model name
@@ -1205,6 +1430,7 @@ namespace GUI
 
             //get model name
             string prgName = comboBoxM4PrgName.Text;
+            M4PrgName = comboBoxM4PrgName.Text;
             string modelName = prgName.Substring(2, 4);
 
             //check model name
@@ -1248,6 +1474,9 @@ namespace GUI
                 {
                     AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padLaser, "error sending " + readResult.NodeString);
                 }
+
+                //sned to padlaser
+                WritePadLaserRecipe(Properties.Settings.Default.PadLaserFilePath, recs.Result[0].m4_param3.ToString(), recs.Result[0].m4_param4.ToString());
             }
             else
             {
@@ -1261,6 +1490,7 @@ namespace GUI
 
             //get model name
             string prgName = comboBoxM2PrgName.Text;
+            M2PrgName = comboBoxM2PrgName.Text;
             string modelName = prgName.Substring(2, 4);
 
             //check model name
@@ -1339,6 +1569,7 @@ namespace GUI
 
             //get model name
             string prgName = comboBoxM1PrgName.Text;
+            M1PrgName = comboBoxM1PrgName.Text;
             string modelName = prgName.Substring(2, 4);
 
             //check model name
@@ -1812,28 +2043,28 @@ namespace GUI
         private async void button1_Click_1(object sender, EventArgs e)
         {
             string keyToSend = "pcM1ResetCycle";
-            var sendResult = await ccService.Send(keyToSend, 0);
+            var sendResult = await ccService.Send(keyToSend, true);
             keyToSend = "pcM2ResetCycle";
-            sendResult = await ccService.Send(keyToSend, 0);
+            sendResult = await ccService.Send(keyToSend, true);
             keyToSend = "pcM3ResetCycle";
-            sendResult = await ccService.Send(keyToSend, 0);
+            sendResult = await ccService.Send(keyToSend, true);
             keyToSend = "pcM4ResetCycle";
-            sendResult = await ccService.Send(keyToSend, 0);
+            sendResult = await ccService.Send(keyToSend, true);
             keyToSend = "pcM5ResetCycle";
-            sendResult = await ccService.Send(keyToSend, 0);
-            keyToSend = "pcM6ResetCycle";
-            sendResult = await ccService.Send(keyToSend, 0);
+            sendResult = await ccService.Send(keyToSend, true);
+            //keyToSend = "pcM6ResetCycle";
+            //sendResult = await ccService.Send(keyToSend, true);
         }
 
         public async void RestartRequestFromM1()
         {
-            if (comboBoxM1PrgName.Text == "" || ccService.ClientIsConnected == false)
+            if (M1PrgName == "" || ccService.ClientIsConnected == false)
             {
 
             }
             else
             {
-                string prgName = comboBoxM1PrgName.Text;
+                string prgName = M1PrgName;
                 string modelName = prgName.Substring(2, 4);
 
                 //check model name
@@ -1905,30 +2136,21 @@ namespace GUI
                 bool chkValue = false;
 
                 keyToSend = "pcM1Inclusion";
-                chkValue = (checkBoxM1Inclusion.CheckState == CheckState.Checked) ? true : false;
+                chkValue = (M1inc == "1") ? true : false;
 
                 var sendResult = await ccService.Send(keyToSend, chkValue);
-
-                if (sendResult.OpcResult)
-                {
-                    checkBoxM1Inclusion.ImageIndex = (chkValue) ? 0 : 1;
-                }
-                else
-                {
-                    checkBoxM1Inclusion.ImageIndex = 2;
-                }
             } 
         }
 
         public async void RestartRequestFromM2()
         {
-            if (comboBoxM2PrgName.Text == "" || ccService.ClientIsConnected == false)
+            if (M2PrgName == "" || ccService.ClientIsConnected == false)
             {
 
             }
             else
             {
-                string prgName = comboBoxM2PrgName.Text;
+                string prgName = M2PrgName;
                 string modelName = prgName.Substring(2, 4);
 
                 //check model name
@@ -1991,18 +2213,9 @@ namespace GUI
                 bool chkValue = false;
 
                 keyToSend = "pcM2Inclusion";
-                chkValue = (checkBoxM2Inclusion.CheckState == CheckState.Checked) ? true : false;
+                chkValue = (M2inc == "1") ? true : false;
 
                 var sendResult = await ccService.Send(keyToSend, chkValue);
-
-                if (sendResult.OpcResult)
-                {
-                    checkBoxM2Inclusion.ImageIndex = (chkValue) ? 0 : 1;
-                }
-                else
-                {
-                    checkBoxM2Inclusion.ImageIndex = 2;
-                }
             }
         }
 
@@ -2010,13 +2223,13 @@ namespace GUI
 
         public async void RestartRequestFromM3()
         {
-            if (comboBoxM3PrgName_st1.Text == "" || ccService.ClientIsConnected == false)
+            if (M3PrgName1 == "" || ccService.ClientIsConnected == false)
             {
 
             }
             else
             {
-                string prgName = comboBoxM3PrgName_st1.Text;
+                string prgName = M3PrgName1;
                 string modelName = prgName.Substring(2, 4);
 
                 //check model name
@@ -2035,7 +2248,7 @@ namespace GUI
                     string keyValue = "pcM3Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param1.ToString()));
 
-                    WriteOnLabelAsync(labelM2Param1Value, recs.Result[0].m3_param1.ToString());
+                    WriteOnLabelAsync(labelM3Param1Value, recs.Result[0].m3_param1.ToString());
 
                     keyValue = "pcM3Param2";
                     sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
@@ -2081,13 +2294,13 @@ namespace GUI
                 }
             }
 
-                if (comboBoxM3PrgName_st2.Text == "" || ccService.ClientIsConnected == false)
+                if (M3PrgName2 == "" || ccService.ClientIsConnected == false)
                 {
 
                 }
                 else
                 {
-                    string prgName = comboBoxM3PrgName_st2.Text;
+                    string prgName = M3PrgName2;
                     string modelName = prgName.Substring(2, 4);
 
                     //check model name
@@ -2145,30 +2358,21 @@ namespace GUI
                 bool chkValue = false;
 
                 keyToSend = "pcM3Inclusion";
-                chkValue = (checkBoxM3Inclusion.CheckState == CheckState.Checked) ? true : false;
+                chkValue = (M3inc == "1") ? true : false;
 
                 var sendResult = await ccService.Send(keyToSend, chkValue);
-
-                if (sendResult.OpcResult)
-                {
-                    checkBoxM3Inclusion.ImageIndex = (chkValue) ? 0 : 1;
-                }
-                else
-                {
-                    checkBoxM3Inclusion.ImageIndex = 2;
-                }
             }
         }
 
         public async void RestartRequestFromM4()
         {
-            if (comboBoxM4PrgName.Text == "" || ccService.ClientIsConnected == false)
+            if (M4PrgName == "" || ccService.ClientIsConnected == false)
             {
 
             }
             else
             {
-                string prgName = comboBoxM4PrgName.Text;
+                string prgName = M4PrgName;
                 string modelName = prgName.Substring(2, 4);
 
                 //check model name
@@ -2202,7 +2406,7 @@ namespace GUI
                     }
 
                     keyValue = "pcM4ProgramName";
-                    readResult = await ccService.Send(keyValue, comboBoxM4PrgName.Text);
+                    readResult = await ccService.Send(keyValue, M4PrgName);
                     if (readResult.OpcResult)
                     {
                     }
@@ -2215,18 +2419,10 @@ namespace GUI
                 bool chkValue = false;
 
                 keyToSend = "pcM4Inclusion";
-                chkValue = (checkBoxM4Inclusion.CheckState == CheckState.Checked) ? true : false;
+                chkValue = (M4inc == "1") ? true : false;
 
                 var sendResult = await ccService.Send(keyToSend, chkValue);
 
-                if (sendResult.OpcResult)
-                {
-                    checkBoxM4Inclusion.ImageIndex = (chkValue) ? 0 : 1;
-                }
-                else
-                {
-                    checkBoxM4Inclusion.ImageIndex = 2;
-                }
             }
         }
 
@@ -2264,18 +2460,11 @@ namespace GUI
                 bool chkValue = false;
 
                 keyToSend = "pcM5Inclusion";
-                chkValue = (checkBoxM5Inclusion.CheckState == CheckState.Checked) ? true : false;
+                chkValue = (M5inc == "1") ? true : false;
 
                 var sendResult = await ccService.Send(keyToSend, chkValue);
 
-                if (sendResult.OpcResult)
-                {
-                    checkBoxM5Inclusion.ImageIndex = (chkValue) ? 0 : 1;
-                }
-                else
-                {
-                    checkBoxM5Inclusion.ImageIndex = 2;
-                }
+
             }
         }
 
@@ -2287,7 +2476,7 @@ namespace GUI
             }
             else
             {
-                string prgName = comboBoxM1PrgName.Text;
+                string prgName = M1PrgName;
                 string modelName = prgName.Substring(2, 4);
 
                 //check model name
@@ -2313,18 +2502,10 @@ namespace GUI
                 bool chkValue = false;
 
                 keyToSend = "pcM6Inclusion";
-                chkValue = (checkBoxM6Inclusion.CheckState == CheckState.Checked) ? true : false;
+                chkValue = (M6inc == "1") ? true : false;
 
                 var sendResult = await ccService.Send(keyToSend, chkValue);
 
-                if (sendResult.OpcResult)
-                {
-                    checkBoxM6Inclusion.ImageIndex = (chkValue) ? 0 : 1;
-                }
-                else
-                {
-                    checkBoxM6Inclusion.ImageIndex = 2;
-                }
             }
         }
 
@@ -2740,7 +2921,33 @@ namespace GUI
             RunKeyboard();
         }
 
+        private void checkBox4_Click(object sender, EventArgs e)
+        {
+            RunKeyboard();
+        }
 
+        private void checkBox5_Click(object sender, EventArgs e)
+        {
+            RunKeyboard();
+        }
+
+
+        public void WritePadLaserRecipe(string top, string bottom, string FileName)
+        {
+            try
+            {
+                using (TextWriter tw = new StreamWriter(FileName, false))
+                {
+                    tw.WriteLine(top);
+                    tw.WriteLine(bottom);
+                }                
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padLaser, "parameters succesfully sent");
+            }
+            catch (Exception ex)  //Writing to log has failed, send message to trace in case anyone is listening.
+            {
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padLaser, "check il file is opened");
+            }
+        }
     }    
 
         
