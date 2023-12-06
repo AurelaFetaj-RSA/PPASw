@@ -121,13 +121,25 @@ namespace GUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("\\\\172.31.20.90\\PRODUCTION\\recipe_from_pc.txt")]
-        public string PadLaserFilePath {
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\172.31.20.90\\PRODUCTION\\recipe_from_pc_top.txt")]
+        public string PadLaserFilePathTop {
             get {
-                return ((string)(this["PadLaserFilePath"]));
+                return ((string)(this["PadLaserFilePathTop"]));
             }
             set {
-                this["PadLaserFilePath"] = value;
+                this["PadLaserFilePathTop"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\172.31.20.90\\PRODUCTION\\recipe_from_pc_bottom.txt")]
+        public string PadLaserFilePathBottom {
+            get {
+                return ((string)(this["PadLaserFilePathBottom"]));
+            }
+            set {
+                this["PadLaserFilePathBottom"] = value;
             }
         }
     }

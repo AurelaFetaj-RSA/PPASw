@@ -85,8 +85,10 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM1WorkingBeltState", $"ns=2;s=Tags.Rifilatrice/pc_fase_ciclo_nastro_lavoro", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM1ResetCycle", $"ns=2;s=Tags.Rifilatrice/pc_reset_numero_cicli", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM1RestartPlc", $"ns=2;s=Tags.Rifilatrice/pc_riavvio_plc", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1SizeInProduction", $"ns=2;s=Tags.Rifilatrice/pc_taglia_in_uso", typeof(short)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1CycleTime", $"ns=2;s=Tags.Rifilatrice/pc_tempo_ciclo", typeof(float)));
             #endregion
-            
+
             #region(* M2 OPCUA variables *)
             ClientDataConfig.Add(new OpcObjectData("pcM2JogDown", $"ns=2;s=Tags.Pad_print_interna/pc_jog_basso", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2JogUp", $"ns=2;s=Tags.Pad_print_interna/pc_jog_alto", typeof(bool)));
@@ -223,6 +225,7 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM3NormHoriFwd", $"ns=2;s=Tags.Pad_print_esterna/pc_normalizzazione_orizzontale_avanti", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM3NormHoriBwd", $"ns=2;s=Tags.Pad_print_esterna/pc_normalizzazione_orizzontale_indietro", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM3RestartPlc", $"ns=2;s=Tags.Pad_print_esterna/pc_riavvio_plc", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM3StationRG", $"ns=2;s=Tags.Pad_print_esterna/pc_numero_stazione", typeof(bool)));
             #endregion
 
             #region(* M4 OPCUA variables *)

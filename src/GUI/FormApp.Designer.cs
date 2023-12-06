@@ -137,19 +137,14 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle49 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle50 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle27 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle28 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle53 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
+            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle63 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle28 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle53 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle63 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle29 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle54 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle55 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -157,11 +152,11 @@
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle30 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle56 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle57 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle tabPageFormatStyle31 = new LidorSystems.IntegralUI.Containers.Style.TabPageFormatStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle58 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
             LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle tabPageColorStyle59 = new LidorSystems.IntegralUI.Containers.Style.TabPageColorStyle();
@@ -687,6 +682,12 @@
             this.comboBoxM6PrgName = new System.Windows.Forms.ComboBox();
             this.labelM6Param1Name = new System.Windows.Forms.Label();
             this.groupBoxM5 = new System.Windows.Forms.GroupBox();
+            this.labelM5CycleTime2 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.labelM5CycleTime1 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.labelM5Phase = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
             this.labelM5CycleId = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.labelM5Status = new System.Windows.Forms.Label();
@@ -699,6 +700,11 @@
             this.checkBoxM5Inclusion = new System.Windows.Forms.CheckBox();
             this.labelM5Param1Name = new System.Windows.Forms.Label();
             this.groupBoxM3 = new System.Windows.Forms.GroupBox();
+            this.labelM3Phase = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.labelM63CycleTime2 = new System.Windows.Forms.Label();
+            this.labelM63CycleTime1 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
             this.labelM3Param2Value = new System.Windows.Forms.Label();
             this.labelM3Param2Name = new System.Windows.Forms.Label();
             this.labelM3CycleId = new System.Windows.Forms.Label();
@@ -714,6 +720,10 @@
             this.checkBoxM3Inclusion = new System.Windows.Forms.CheckBox();
             this.labelM3Param1Name = new System.Windows.Forms.Label();
             this.groupBoxM2 = new System.Windows.Forms.GroupBox();
+            this.labelM2Phase = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.labelM2CycleTime = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
             this.labelM2CycleId = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.labelM2Status = new System.Windows.Forms.Label();
@@ -726,6 +736,10 @@
             this.labelM2Param1Name = new System.Windows.Forms.Label();
             this.checkBoxM2Start = new System.Windows.Forms.CheckBox();
             this.groupBoxM4 = new System.Windows.Forms.GroupBox();
+            this.labelM4CycleTime = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.labelM4Phase = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
             this.labelM4CycleId = new System.Windows.Forms.Label();
             this.labelM4CycleIdr = new System.Windows.Forms.Label();
             this.labelM4Status = new System.Windows.Forms.Label();
@@ -738,6 +752,10 @@
             this.comboBoxM4PrgName = new System.Windows.Forms.ComboBox();
             this.labelM4Param1Name = new System.Windows.Forms.Label();
             this.groupBoxM1 = new System.Windows.Forms.GroupBox();
+            this.labelM1CycleTime = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.labelM1Phase = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.labelM1CycleId = new System.Windows.Forms.Label();
             this.labelM1Sharpening = new System.Windows.Forms.Label();
             this.labelM1CycleCounter = new System.Windows.Forms.Label();
@@ -804,6 +822,10 @@
             this.labelM6Param1 = new System.Windows.Forms.Label();
             this.checkBoxM6Param1 = new System.Windows.Forms.CheckBox();
             this.groupBoxRecipeM4 = new System.Windows.Forms.GroupBox();
+            this.radioButtonM4Sel2Bottom = new System.Windows.Forms.RadioButton();
+            this.radioButtonM4Sel1Bottom = new System.Windows.Forms.RadioButton();
+            this.radioButtonM4Sel2Top = new System.Windows.Forms.RadioButton();
+            this.radioButtonM4Sel1Top = new System.Windows.Forms.RadioButton();
             this.labelPadLaserLine2 = new System.Windows.Forms.Label();
             this.labelPadLaserLine1 = new System.Windows.Forms.Label();
             this.labelM4Param1 = new System.Windows.Forms.Label();
@@ -826,6 +848,10 @@
             this.labelRecipeNameT0_1 = new System.Windows.Forms.Label();
             this.textBoxMRecipeName = new System.Windows.Forms.TextBox();
             this.tabPageT0_2_2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.radioButtonMRecipeBottomSel2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonMRecipeBottomSel1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonMRecipeTopSel2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonMRecipeTopSel1 = new System.Windows.Forms.RadioButton();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.buttonMRecipeDeleteAll = new System.Windows.Forms.Button();
             this.buttonMRecipeDelete = new System.Windows.Forms.Button();
@@ -878,9 +904,6 @@
             this.pictureBoxM2PLCNode = new System.Windows.Forms.PictureBox();
             this.pictureBoxM3PLCNode = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewButtonColumn6 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.labelM5ExitBelt3State = new System.Windows.Forms.Label();
             this.labelM5ExitBelt2State = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -1166,7 +1189,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM2PLCNode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3PLCNode)).BeginInit();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPageT1_1.SuspendLayout();
             this.contextMenuStripT1_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1TimerBootTeach)).BeginInit();
@@ -2137,7 +2159,7 @@
             tabPageColorStyle2.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT3.HoverStyle = tabPageColorStyle2;
             this.tabPageT3.ImageIndex = 6;
-            this.tabPageT3.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT3.Location = new System.Drawing.Point(198, 36);
             this.tabPageT3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT3.Name = "tabPageT3";
             tabPageColorStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
@@ -2160,7 +2182,7 @@
             tabPageColorStyle10.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle10.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT3.SelectedStyle = tabPageColorStyle10;
-            this.tabPageT3.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT3.Size = new System.Drawing.Size(812, 716);
             this.tabPageT3.StyleFromParent = false;
             this.tabPageT3.TabIndex = 8;
             this.tabPageT3.Text = "page";
@@ -5241,7 +5263,7 @@
             tabPageColorStyle13.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT4.HoverStyle = tabPageColorStyle13;
             this.tabPageT4.ImageIndex = 8;
-            this.tabPageT4.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT4.Location = new System.Drawing.Point(198, 36);
             this.tabPageT4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT4.Name = "tabPageT4";
             tabPageColorStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
@@ -5264,7 +5286,7 @@
             tabPageColorStyle21.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle21.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT4.SelectedStyle = tabPageColorStyle21;
-            this.tabPageT4.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT4.Size = new System.Drawing.Size(812, 716);
             this.tabPageT4.StyleFromParent = false;
             this.tabPageT4.TabIndex = 13;
             this.tabPageT4.Text = "page";
@@ -5397,11 +5419,11 @@
             this.radioButtonFootOrderOpt2Test.AutoSize = true;
             this.radioButtonFootOrderOpt2Test.BackColor = System.Drawing.SystemColors.Control;
             this.radioButtonFootOrderOpt2Test.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonFootOrderOpt2Test.Location = new System.Drawing.Point(144, 366);
+            this.radioButtonFootOrderOpt2Test.Location = new System.Drawing.Point(212, 366);
             this.radioButtonFootOrderOpt2Test.Name = "radioButtonFootOrderOpt2Test";
-            this.radioButtonFootOrderOpt2Test.Size = new System.Drawing.Size(62, 20);
+            this.radioButtonFootOrderOpt2Test.Size = new System.Drawing.Size(126, 20);
             this.radioButtonFootOrderOpt2Test.TabIndex = 144;
-            this.radioButtonFootOrderOpt2Test.Text = "lf->rg";
+            this.radioButtonFootOrderOpt2Test.Text = "start order. left";
             this.radioButtonFootOrderOpt2Test.UseVisualStyleBackColor = false;
             this.radioButtonFootOrderOpt2Test.CheckedChanged += new System.EventHandler(this.radioButtonFootOrderOpt2Test_CheckedChanged);
             // 
@@ -5413,10 +5435,10 @@
             this.radioButtonFootOrderOpt1Test.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonFootOrderOpt1Test.Location = new System.Drawing.Point(54, 366);
             this.radioButtonFootOrderOpt1Test.Name = "radioButtonFootOrderOpt1Test";
-            this.radioButtonFootOrderOpt1Test.Size = new System.Drawing.Size(62, 20);
+            this.radioButtonFootOrderOpt1Test.Size = new System.Drawing.Size(137, 20);
             this.radioButtonFootOrderOpt1Test.TabIndex = 143;
             this.radioButtonFootOrderOpt1Test.TabStop = true;
-            this.radioButtonFootOrderOpt1Test.Text = "rg->lf";
+            this.radioButtonFootOrderOpt1Test.Text = "start order: right";
             this.radioButtonFootOrderOpt1Test.UseVisualStyleBackColor = false;
             this.radioButtonFootOrderOpt1Test.CheckedChanged += new System.EventHandler(this.radioButtonFootOrderOpt1Test_CheckedChanged);
             // 
@@ -7956,7 +7978,7 @@
             tabPageColorStyle25.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT5.HoverStyle = tabPageColorStyle25;
             this.tabPageT5.ImageIndex = 10;
-            this.tabPageT5.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT5.Location = new System.Drawing.Point(198, 36);
             this.tabPageT5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT5.Name = "tabPageT5";
             tabPageColorStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
@@ -7978,7 +8000,7 @@
             tabPageColorStyle31.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle31.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT5.SelectedStyle = tabPageColorStyle31;
-            this.tabPageT5.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT5.Size = new System.Drawing.Size(812, 716);
             this.tabPageT5.StyleFromParent = false;
             this.tabPageT5.TabIndex = 18;
             this.tabPageT5.Text = "page";
@@ -9678,7 +9700,7 @@
             tabPageColorStyle33.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT2.HoverStyle = tabPageColorStyle33;
             this.tabPageT2.ImageIndex = 4;
-            this.tabPageT2.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT2.Location = new System.Drawing.Point(198, 36);
             this.tabPageT2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT2.Name = "tabPageT2";
             tabPageColorStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
@@ -9700,7 +9722,7 @@
             tabPageColorStyle35.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle35.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT2.SelectedStyle = tabPageColorStyle35;
-            this.tabPageT2.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT2.Size = new System.Drawing.Size(812, 716);
             this.tabPageT2.StyleFromParent = false;
             this.tabPageT2.TabIndex = 0;
             this.tabPageT2.Text = "page";
@@ -9795,7 +9817,7 @@
             tabPageColorStyle36.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT6.HoverStyle = tabPageColorStyle36;
             this.tabPageT6.ImageIndex = 12;
-            this.tabPageT6.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT6.Location = new System.Drawing.Point(198, 36);
             this.tabPageT6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT6.Name = "tabPageT6";
             tabPageColorStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
@@ -9813,7 +9835,7 @@
             tabPageColorStyle38.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle38.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT6.SelectedStyle = tabPageColorStyle38;
-            this.tabPageT6.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT6.Size = new System.Drawing.Size(812, 716);
             this.tabPageT6.StyleFromParent = false;
             this.tabPageT6.TabIndex = 22;
             this.tabPageT6.Text = "page";
@@ -9835,7 +9857,7 @@
             this.tabPageT7.HoverStyle = tabPageColorStyle39;
             this.tabPageT7.ImageIndex = 14;
             this.tabPageT7.Key = "Hide";
-            this.tabPageT7.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT7.Location = new System.Drawing.Point(198, 36);
             this.tabPageT7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT7.Name = "tabPageT7";
             tabPageColorStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
@@ -9853,7 +9875,7 @@
             tabPageColorStyle41.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(222)))), ((int)(((byte)(155)))));
             tabPageColorStyle41.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT7.SelectedStyle = tabPageColorStyle41;
-            this.tabPageT7.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT7.Size = new System.Drawing.Size(812, 716);
             this.tabPageT7.StyleFromParent = false;
             this.tabPageT7.TabIndex = 23;
             this.tabPageT7.Text = "page";
@@ -9882,7 +9904,7 @@
             tabPageFormatStyle21.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle21.Padding = new System.Windows.Forms.Padding(5);
             this.tabPageT0_1.FormatStyle = tabPageFormatStyle21;
-            this.tabPageT0_1.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT0_1.Location = new System.Drawing.Point(198, 36);
             this.tabPageT0_1.Name = "tabPageT0_1";
             tabPageColorStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle42.BackFadeColor = System.Drawing.Color.Transparent;
@@ -9899,14 +9921,14 @@
             tabPageColorStyle52.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle52.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT0_1.SelectedStyle = tabPageColorStyle52;
-            this.tabPageT0_1.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT0_1.Size = new System.Drawing.Size(812, 716);
             this.tabPageT0_1.StyleFromParent = false;
             this.tabPageT0_1.TabIndex = 1;
             this.tabPageT0_1.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabPageT0_1.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Bottom;
             this.tabPageT0_1.Text = "automatic";
             this.tabPageT0_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_1.TextBounds")));
-            this.tabPageT0_1.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT0_1.TextSize = new System.Drawing.SizeF(87.68488F, 21.44531F);
             this.tabPageT0_1.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT0
@@ -10051,7 +10073,7 @@
             this.dataGridViewMessages.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewMessages.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridViewMessages.EnableHeadersVisualStyles = false;
-            this.dataGridViewMessages.Location = new System.Drawing.Point(0, -153);
+            this.dataGridViewMessages.Location = new System.Drawing.Point(0, 563);
             this.dataGridViewMessages.MultiSelect = false;
             this.dataGridViewMessages.Name = "dataGridViewMessages";
             this.dataGridViewMessages.ReadOnly = true;
@@ -10074,7 +10096,7 @@
             this.dataGridViewMessages.RowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridViewMessages.RowTemplate.Height = 24;
             this.dataGridViewMessages.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridViewMessages.Size = new System.Drawing.Size(0, 100);
+            this.dataGridViewMessages.Size = new System.Drawing.Size(812, 100);
             this.dataGridViewMessages.TabIndex = 141;
             // 
             // datetime
@@ -10116,9 +10138,9 @@
             // 
             this.statusStripSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(190)))), ((int)(((byte)(186)))));
             this.statusStripSeparator.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusStripSeparator.Location = new System.Drawing.Point(0, -53);
+            this.statusStripSeparator.Location = new System.Drawing.Point(0, 663);
             this.statusStripSeparator.Name = "statusStripSeparator";
-            this.statusStripSeparator.Size = new System.Drawing.Size(0, 22);
+            this.statusStripSeparator.Size = new System.Drawing.Size(812, 22);
             this.statusStripSeparator.SizingGrip = false;
             this.statusStripSeparator.TabIndex = 140;
             // 
@@ -10131,9 +10153,9 @@
             this.toolStripStatusLabelSN,
             this.toolStripStatusLabelDateTime,
             this.toolStripStatusLabelSystem});
-            this.statusStripT0.Location = new System.Drawing.Point(0, -31);
+            this.statusStripT0.Location = new System.Drawing.Point(0, 685);
             this.statusStripT0.Name = "statusStripT0";
-            this.statusStripT0.Size = new System.Drawing.Size(0, 31);
+            this.statusStripT0.Size = new System.Drawing.Size(812, 31);
             this.statusStripT0.SizingGrip = false;
             this.statusStripT0.TabIndex = 139;
             // 
@@ -10142,7 +10164,7 @@
             this.toolStripStatusLabelSN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.toolStripStatusLabelSN.Name = "toolStripStatusLabelSN";
             this.toolStripStatusLabelSN.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.toolStripStatusLabelSN.Size = new System.Drawing.Size(51, 16);
+            this.toolStripStatusLabelSN.Size = new System.Drawing.Size(51, 26);
             this.toolStripStatusLabelSN.Text = "S/N";
             // 
             // toolStripStatusLabelDateTime
@@ -10160,7 +10182,7 @@
             // 
             this.toolStripStatusLabelSystem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.toolStripStatusLabelSystem.Name = "toolStripStatusLabelSystem";
-            this.toolStripStatusLabelSystem.Size = new System.Drawing.Size(99, 16);
+            this.toolStripStatusLabelSystem.Size = new System.Drawing.Size(99, 26);
             this.toolStripStatusLabelSystem.Text = "system offline";
             // 
             // checkBoxPause
@@ -10218,7 +10240,7 @@
             this.groupBoxM6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxM6.Location = new System.Drawing.Point(570, 210);
             this.groupBoxM6.Name = "groupBoxM6";
-            this.groupBoxM6.Size = new System.Drawing.Size(275, 185);
+            this.groupBoxM6.Size = new System.Drawing.Size(275, 195);
             this.groupBoxM6.TabIndex = 7;
             this.groupBoxM6.TabStop = false;
             this.groupBoxM6.Text = "oven";
@@ -10264,7 +10286,7 @@
             this.labelM6Status.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM6Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM6Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM6Status.Location = new System.Drawing.Point(185, 155);
+            this.labelM6Status.Location = new System.Drawing.Point(185, 172);
             this.labelM6Status.Name = "labelM6Status";
             this.labelM6Status.Size = new System.Drawing.Size(79, 16);
             this.labelM6Status.TabIndex = 132;
@@ -10276,7 +10298,7 @@
             this.buttonM6Status.FlatAppearance.BorderSize = 10;
             this.buttonM6Status.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM6Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM6Status.Location = new System.Drawing.Point(160, 150);
+            this.buttonM6Status.Location = new System.Drawing.Point(160, 164);
             this.buttonM6Status.Name = "buttonM6Status";
             this.buttonM6Status.Size = new System.Drawing.Size(24, 24);
             this.buttonM6Status.TabIndex = 129;
@@ -10289,7 +10311,7 @@
             this.buttonM6Reset.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM6Reset.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM6Reset.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM6Reset.Location = new System.Drawing.Point(90, 138);
+            this.buttonM6Reset.Location = new System.Drawing.Point(90, 148);
             this.buttonM6Reset.Name = "buttonM6Reset";
             this.buttonM6Reset.Size = new System.Drawing.Size(64, 40);
             this.buttonM6Reset.TabIndex = 127;
@@ -10305,7 +10327,7 @@
             this.checkBoxM6Pause.ImageIndex = 3;
             this.checkBoxM6Pause.ImageList = this.imageListStart;
             this.checkBoxM6Pause.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM6Pause.Location = new System.Drawing.Point(50, 140);
+            this.checkBoxM6Pause.Location = new System.Drawing.Point(50, 150);
             this.checkBoxM6Pause.Name = "checkBoxM6Pause";
             this.checkBoxM6Pause.Size = new System.Drawing.Size(38, 38);
             this.checkBoxM6Pause.TabIndex = 126;
@@ -10322,7 +10344,7 @@
             this.checkBoxM6Start.ImageIndex = 0;
             this.checkBoxM6Start.ImageList = this.imageListStart;
             this.checkBoxM6Start.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM6Start.Location = new System.Drawing.Point(10, 140);
+            this.checkBoxM6Start.Location = new System.Drawing.Point(10, 150);
             this.checkBoxM6Start.Name = "checkBoxM6Start";
             this.checkBoxM6Start.Size = new System.Drawing.Size(38, 38);
             this.checkBoxM6Start.TabIndex = 93;
@@ -10346,7 +10368,7 @@
             this.checkBoxM6Inclusion.ImageIndex = 0;
             this.checkBoxM6Inclusion.ImageList = this.imageListMIncEsc;
             this.checkBoxM6Inclusion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM6Inclusion.Location = new System.Drawing.Point(220, 20);
+            this.checkBoxM6Inclusion.Location = new System.Drawing.Point(230, 20);
             this.checkBoxM6Inclusion.Name = "checkBoxM6Inclusion";
             this.checkBoxM6Inclusion.Size = new System.Drawing.Size(32, 32);
             this.checkBoxM6Inclusion.TabIndex = 88;
@@ -10401,6 +10423,12 @@
             // groupBoxM5
             // 
             this.groupBoxM5.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxM5.Controls.Add(this.labelM5CycleTime2);
+            this.groupBoxM5.Controls.Add(this.label45);
+            this.groupBoxM5.Controls.Add(this.labelM5CycleTime1);
+            this.groupBoxM5.Controls.Add(this.label44);
+            this.groupBoxM5.Controls.Add(this.labelM5Phase);
+            this.groupBoxM5.Controls.Add(this.label43);
             this.groupBoxM5.Controls.Add(this.labelM5CycleId);
             this.groupBoxM5.Controls.Add(this.label10);
             this.groupBoxM5.Controls.Add(this.labelM5Status);
@@ -10415,10 +10443,82 @@
             this.groupBoxM5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxM5.Location = new System.Drawing.Point(290, 210);
             this.groupBoxM5.Name = "groupBoxM5";
-            this.groupBoxM5.Size = new System.Drawing.Size(275, 185);
+            this.groupBoxM5.Size = new System.Drawing.Size(275, 195);
             this.groupBoxM5.TabIndex = 6;
             this.groupBoxM5.TabStop = false;
             this.groupBoxM5.Text = "manipulator";
+            // 
+            // labelM5CycleTime2
+            // 
+            this.labelM5CycleTime2.AutoSize = true;
+            this.labelM5CycleTime2.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM5CycleTime2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM5CycleTime2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM5CycleTime2.Location = new System.Drawing.Point(187, 41);
+            this.labelM5CycleTime2.Name = "labelM5CycleTime2";
+            this.labelM5CycleTime2.Size = new System.Drawing.Size(15, 16);
+            this.labelM5CycleTime2.TabIndex = 152;
+            this.labelM5CycleTime2.Text = "0";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label45.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label45.Location = new System.Drawing.Point(183, 21);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(30, 16);
+            this.label45.TabIndex = 151;
+            this.label45.Text = "sec";
+            // 
+            // labelM5CycleTime1
+            // 
+            this.labelM5CycleTime1.AutoSize = true;
+            this.labelM5CycleTime1.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM5CycleTime1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM5CycleTime1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM5CycleTime1.Location = new System.Drawing.Point(148, 41);
+            this.labelM5CycleTime1.Name = "labelM5CycleTime1";
+            this.labelM5CycleTime1.Size = new System.Drawing.Size(15, 16);
+            this.labelM5CycleTime1.TabIndex = 150;
+            this.labelM5CycleTime1.Text = "0";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label44.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label44.Location = new System.Drawing.Point(144, 21);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(30, 16);
+            this.label44.TabIndex = 149;
+            this.label44.Text = "sec";
+            // 
+            // labelM5Phase
+            // 
+            this.labelM5Phase.AutoSize = true;
+            this.labelM5Phase.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM5Phase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM5Phase.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM5Phase.Location = new System.Drawing.Point(148, 85);
+            this.labelM5Phase.Name = "labelM5Phase";
+            this.labelM5Phase.Size = new System.Drawing.Size(15, 16);
+            this.labelM5Phase.TabIndex = 148;
+            this.labelM5Phase.Text = "0";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label43.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label43.Location = new System.Drawing.Point(98, 85);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(46, 16);
+            this.label43.TabIndex = 147;
+            this.label43.Text = "phase";
             // 
             // labelM5CycleId
             // 
@@ -10426,7 +10526,7 @@
             this.labelM5CycleId.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM5CycleId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM5CycleId.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM5CycleId.Location = new System.Drawing.Point(237, 60);
+            this.labelM5CycleId.Location = new System.Drawing.Point(70, 85);
             this.labelM5CycleId.Name = "labelM5CycleId";
             this.labelM5CycleId.Size = new System.Drawing.Size(15, 16);
             this.labelM5CycleId.TabIndex = 140;
@@ -10438,7 +10538,7 @@
             this.label10.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(150, 60);
+            this.label10.Location = new System.Drawing.Point(10, 85);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 16);
             this.label10.TabIndex = 139;
@@ -10450,7 +10550,7 @@
             this.labelM5Status.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM5Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM5Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM5Status.Location = new System.Drawing.Point(185, 155);
+            this.labelM5Status.Location = new System.Drawing.Point(185, 172);
             this.labelM5Status.Name = "labelM5Status";
             this.labelM5Status.Size = new System.Drawing.Size(79, 16);
             this.labelM5Status.TabIndex = 132;
@@ -10462,7 +10562,7 @@
             this.buttonM5Status.FlatAppearance.BorderSize = 10;
             this.buttonM5Status.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM5Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5Status.Location = new System.Drawing.Point(160, 150);
+            this.buttonM5Status.Location = new System.Drawing.Point(160, 164);
             this.buttonM5Status.Name = "buttonM5Status";
             this.buttonM5Status.Size = new System.Drawing.Size(24, 24);
             this.buttonM5Status.TabIndex = 129;
@@ -10475,7 +10575,7 @@
             this.buttonM5Reset.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM5Reset.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM5Reset.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM5Reset.Location = new System.Drawing.Point(90, 138);
+            this.buttonM5Reset.Location = new System.Drawing.Point(90, 148);
             this.buttonM5Reset.Name = "buttonM5Reset";
             this.buttonM5Reset.Size = new System.Drawing.Size(64, 40);
             this.buttonM5Reset.TabIndex = 127;
@@ -10491,7 +10591,7 @@
             this.checkBoxM5Pause.ImageIndex = 3;
             this.checkBoxM5Pause.ImageList = this.imageListStart;
             this.checkBoxM5Pause.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM5Pause.Location = new System.Drawing.Point(50, 140);
+            this.checkBoxM5Pause.Location = new System.Drawing.Point(50, 150);
             this.checkBoxM5Pause.Name = "checkBoxM5Pause";
             this.checkBoxM5Pause.Size = new System.Drawing.Size(38, 38);
             this.checkBoxM5Pause.TabIndex = 126;
@@ -10507,7 +10607,7 @@
             this.comboBoxM5PrgName.FormattingEnabled = true;
             this.comboBoxM5PrgName.Location = new System.Drawing.Point(10, 20);
             this.comboBoxM5PrgName.Name = "comboBoxM5PrgName";
-            this.comboBoxM5PrgName.Size = new System.Drawing.Size(184, 26);
+            this.comboBoxM5PrgName.Size = new System.Drawing.Size(58, 26);
             this.comboBoxM5PrgName.TabIndex = 13;
             this.comboBoxM5PrgName.Visible = false;
             // 
@@ -10519,7 +10619,7 @@
             this.checkBoxM5Start.ImageIndex = 0;
             this.checkBoxM5Start.ImageList = this.imageListStart;
             this.checkBoxM5Start.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM5Start.Location = new System.Drawing.Point(10, 140);
+            this.checkBoxM5Start.Location = new System.Drawing.Point(10, 150);
             this.checkBoxM5Start.Name = "checkBoxM5Start";
             this.checkBoxM5Start.Size = new System.Drawing.Size(38, 38);
             this.checkBoxM5Start.TabIndex = 92;
@@ -10534,7 +10634,7 @@
             this.labelM5Param1Value.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM5Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM5Param1Value.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM5Param1Value.Location = new System.Drawing.Point(84, 94);
+            this.labelM5Param1Value.Location = new System.Drawing.Point(251, 120);
             this.labelM5Param1Value.Name = "labelM5Param1Value";
             this.labelM5Param1Value.Size = new System.Drawing.Size(15, 16);
             this.labelM5Param1Value.TabIndex = 124;
@@ -10556,7 +10656,7 @@
             this.checkBoxM5Inclusion.ImageIndex = 0;
             this.checkBoxM5Inclusion.ImageList = this.imageListMIncEsc;
             this.checkBoxM5Inclusion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM5Inclusion.Location = new System.Drawing.Point(220, 20);
+            this.checkBoxM5Inclusion.Location = new System.Drawing.Point(230, 20);
             this.checkBoxM5Inclusion.Name = "checkBoxM5Inclusion";
             this.checkBoxM5Inclusion.Size = new System.Drawing.Size(32, 32);
             this.checkBoxM5Inclusion.TabIndex = 88;
@@ -10572,7 +10672,7 @@
             this.labelM5Param1Name.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM5Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM5Param1Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM5Param1Name.Location = new System.Drawing.Point(14, 94);
+            this.labelM5Param1Name.Location = new System.Drawing.Point(181, 120);
             this.labelM5Param1Name.Name = "labelM5Param1Name";
             this.labelM5Param1Name.Size = new System.Drawing.Size(47, 16);
             this.labelM5Param1Name.TabIndex = 123;
@@ -10582,6 +10682,11 @@
             // groupBoxM3
             // 
             this.groupBoxM3.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxM3.Controls.Add(this.labelM3Phase);
+            this.groupBoxM3.Controls.Add(this.label47);
+            this.groupBoxM3.Controls.Add(this.labelM63CycleTime2);
+            this.groupBoxM3.Controls.Add(this.labelM63CycleTime1);
+            this.groupBoxM3.Controls.Add(this.label46);
             this.groupBoxM3.Controls.Add(this.labelM3Param2Value);
             this.groupBoxM3.Controls.Add(this.labelM3Param2Name);
             this.groupBoxM3.Controls.Add(this.labelM3CycleId);
@@ -10599,10 +10704,70 @@
             this.groupBoxM3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxM3.Location = new System.Drawing.Point(10, 210);
             this.groupBoxM3.Name = "groupBoxM3";
-            this.groupBoxM3.Size = new System.Drawing.Size(275, 185);
+            this.groupBoxM3.Size = new System.Drawing.Size(275, 195);
             this.groupBoxM3.TabIndex = 5;
             this.groupBoxM3.TabStop = false;
             this.groupBoxM3.Text = "padprint ext";
+            // 
+            // labelM3Phase
+            // 
+            this.labelM3Phase.AutoSize = true;
+            this.labelM3Phase.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM3Phase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM3Phase.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM3Phase.Location = new System.Drawing.Point(150, 125);
+            this.labelM3Phase.Name = "labelM3Phase";
+            this.labelM3Phase.Size = new System.Drawing.Size(15, 16);
+            this.labelM3Phase.TabIndex = 155;
+            this.labelM3Phase.Text = "0";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label47.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label47.Location = new System.Drawing.Point(100, 124);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(46, 16);
+            this.label47.TabIndex = 154;
+            this.label47.Text = "phase";
+            // 
+            // labelM63CycleTime2
+            // 
+            this.labelM63CycleTime2.AutoSize = true;
+            this.labelM63CycleTime2.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM63CycleTime2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM63CycleTime2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM63CycleTime2.Location = new System.Drawing.Point(201, 67);
+            this.labelM63CycleTime2.Name = "labelM63CycleTime2";
+            this.labelM63CycleTime2.Size = new System.Drawing.Size(15, 16);
+            this.labelM63CycleTime2.TabIndex = 153;
+            this.labelM63CycleTime2.Text = "0";
+            // 
+            // labelM63CycleTime1
+            // 
+            this.labelM63CycleTime1.AutoSize = true;
+            this.labelM63CycleTime1.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM63CycleTime1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM63CycleTime1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM63CycleTime1.Location = new System.Drawing.Point(201, 30);
+            this.labelM63CycleTime1.Name = "labelM63CycleTime1";
+            this.labelM63CycleTime1.Size = new System.Drawing.Size(15, 16);
+            this.labelM63CycleTime1.TabIndex = 152;
+            this.labelM63CycleTime1.Text = "0";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label46.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label46.Location = new System.Drawing.Point(197, 10);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(30, 16);
+            this.label46.TabIndex = 151;
+            this.label46.Text = "sec";
             // 
             // labelM3Param2Value
             // 
@@ -10610,7 +10775,7 @@
             this.labelM3Param2Value.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM3Param2Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM3Param2Value.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM3Param2Value.Location = new System.Drawing.Point(180, 100);
+            this.labelM3Param2Value.Location = new System.Drawing.Point(180, 90);
             this.labelM3Param2Value.Name = "labelM3Param2Value";
             this.labelM3Param2Value.Size = new System.Drawing.Size(15, 16);
             this.labelM3Param2Value.TabIndex = 142;
@@ -10622,7 +10787,7 @@
             this.labelM3Param2Name.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM3Param2Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM3Param2Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM3Param2Name.Location = new System.Drawing.Point(111, 100);
+            this.labelM3Param2Name.Location = new System.Drawing.Point(100, 90);
             this.labelM3Param2Name.Name = "labelM3Param2Name";
             this.labelM3Param2Name.Size = new System.Drawing.Size(34, 16);
             this.labelM3Param2Name.TabIndex = 141;
@@ -10658,7 +10823,7 @@
             this.labelM3Status.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM3Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM3Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM3Status.Location = new System.Drawing.Point(185, 155);
+            this.labelM3Status.Location = new System.Drawing.Point(185, 172);
             this.labelM3Status.Name = "labelM3Status";
             this.labelM3Status.Size = new System.Drawing.Size(79, 16);
             this.labelM3Status.TabIndex = 131;
@@ -10670,7 +10835,7 @@
             this.buttonM3Status.FlatAppearance.BorderSize = 10;
             this.buttonM3Status.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3Status.Location = new System.Drawing.Point(160, 150);
+            this.buttonM3Status.Location = new System.Drawing.Point(160, 164);
             this.buttonM3Status.Name = "buttonM3Status";
             this.buttonM3Status.Size = new System.Drawing.Size(24, 24);
             this.buttonM3Status.TabIndex = 131;
@@ -10683,7 +10848,7 @@
             this.buttonM3Reset.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM3Reset.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM3Reset.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM3Reset.Location = new System.Drawing.Point(90, 138);
+            this.buttonM3Reset.Location = new System.Drawing.Point(90, 148);
             this.buttonM3Reset.Name = "buttonM3Reset";
             this.buttonM3Reset.Size = new System.Drawing.Size(64, 40);
             this.buttonM3Reset.TabIndex = 130;
@@ -10699,7 +10864,7 @@
             this.checkBoxM3Pause.ImageIndex = 3;
             this.checkBoxM3Pause.ImageList = this.imageListStart;
             this.checkBoxM3Pause.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM3Pause.Location = new System.Drawing.Point(50, 140);
+            this.checkBoxM3Pause.Location = new System.Drawing.Point(50, 150);
             this.checkBoxM3Pause.Name = "checkBoxM3Pause";
             this.checkBoxM3Pause.Size = new System.Drawing.Size(38, 38);
             this.checkBoxM3Pause.TabIndex = 129;
@@ -10725,7 +10890,7 @@
             this.labelM3Param1Value.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM3Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM3Param1Value.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM3Param1Value.Location = new System.Drawing.Point(70, 100);
+            this.labelM3Param1Value.Location = new System.Drawing.Point(70, 90);
             this.labelM3Param1Value.Name = "labelM3Param1Value";
             this.labelM3Param1Value.Size = new System.Drawing.Size(15, 16);
             this.labelM3Param1Value.TabIndex = 124;
@@ -10739,7 +10904,7 @@
             this.checkBoxM3Start.ImageIndex = 0;
             this.checkBoxM3Start.ImageList = this.imageListStart;
             this.checkBoxM3Start.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM3Start.Location = new System.Drawing.Point(10, 140);
+            this.checkBoxM3Start.Location = new System.Drawing.Point(10, 150);
             this.checkBoxM3Start.Name = "checkBoxM3Start";
             this.checkBoxM3Start.Size = new System.Drawing.Size(38, 38);
             this.checkBoxM3Start.TabIndex = 90;
@@ -10774,7 +10939,7 @@
             this.checkBoxM3Inclusion.ImageIndex = 0;
             this.checkBoxM3Inclusion.ImageList = this.imageListMIncEsc;
             this.checkBoxM3Inclusion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM3Inclusion.Location = new System.Drawing.Point(220, 20);
+            this.checkBoxM3Inclusion.Location = new System.Drawing.Point(230, 20);
             this.checkBoxM3Inclusion.Name = "checkBoxM3Inclusion";
             this.checkBoxM3Inclusion.Size = new System.Drawing.Size(32, 32);
             this.checkBoxM3Inclusion.TabIndex = 88;
@@ -10789,7 +10954,7 @@
             this.labelM3Param1Name.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM3Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM3Param1Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM3Param1Name.Location = new System.Drawing.Point(10, 100);
+            this.labelM3Param1Name.Location = new System.Drawing.Point(10, 90);
             this.labelM3Param1Name.Name = "labelM3Param1Name";
             this.labelM3Param1Name.Size = new System.Drawing.Size(47, 16);
             this.labelM3Param1Name.TabIndex = 123;
@@ -10798,6 +10963,10 @@
             // groupBoxM2
             // 
             this.groupBoxM2.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxM2.Controls.Add(this.labelM2Phase);
+            this.groupBoxM2.Controls.Add(this.label40);
+            this.groupBoxM2.Controls.Add(this.labelM2CycleTime);
+            this.groupBoxM2.Controls.Add(this.label39);
             this.groupBoxM2.Controls.Add(this.labelM2CycleId);
             this.groupBoxM2.Controls.Add(this.label6);
             this.groupBoxM2.Controls.Add(this.labelM2Status);
@@ -10812,10 +10981,58 @@
             this.groupBoxM2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxM2.Location = new System.Drawing.Point(290, 10);
             this.groupBoxM2.Name = "groupBoxM2";
-            this.groupBoxM2.Size = new System.Drawing.Size(275, 185);
+            this.groupBoxM2.Size = new System.Drawing.Size(275, 195);
             this.groupBoxM2.TabIndex = 4;
             this.groupBoxM2.TabStop = false;
             this.groupBoxM2.Text = "padprint int";
+            // 
+            // labelM2Phase
+            // 
+            this.labelM2Phase.AutoSize = true;
+            this.labelM2Phase.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM2Phase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM2Phase.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM2Phase.Location = new System.Drawing.Point(150, 85);
+            this.labelM2Phase.Name = "labelM2Phase";
+            this.labelM2Phase.Size = new System.Drawing.Size(15, 16);
+            this.labelM2Phase.TabIndex = 146;
+            this.labelM2Phase.Text = "0";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label40.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label40.Location = new System.Drawing.Point(100, 85);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(46, 16);
+            this.label40.TabIndex = 145;
+            this.label40.Text = "phase";
+            // 
+            // labelM2CycleTime
+            // 
+            this.labelM2CycleTime.AutoSize = true;
+            this.labelM2CycleTime.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM2CycleTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM2CycleTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM2CycleTime.Location = new System.Drawing.Point(204, 28);
+            this.labelM2CycleTime.Name = "labelM2CycleTime";
+            this.labelM2CycleTime.Size = new System.Drawing.Size(15, 16);
+            this.labelM2CycleTime.TabIndex = 144;
+            this.labelM2CycleTime.Text = "0";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.label39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label39.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label39.Location = new System.Drawing.Point(200, 8);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(30, 16);
+            this.label39.TabIndex = 143;
+            this.label39.Text = "sec";
             // 
             // labelM2CycleId
             // 
@@ -10823,7 +11040,7 @@
             this.labelM2CycleId.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM2CycleId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM2CycleId.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM2CycleId.Location = new System.Drawing.Point(181, 60);
+            this.labelM2CycleId.Location = new System.Drawing.Point(70, 85);
             this.labelM2CycleId.Name = "labelM2CycleId";
             this.labelM2CycleId.Size = new System.Drawing.Size(15, 16);
             this.labelM2CycleId.TabIndex = 140;
@@ -10835,7 +11052,7 @@
             this.label6.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label6.Location = new System.Drawing.Point(114, 60);
+            this.label6.Location = new System.Drawing.Point(10, 85);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 16);
             this.label6.TabIndex = 139;
@@ -10847,7 +11064,7 @@
             this.labelM2Status.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM2Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM2Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM2Status.Location = new System.Drawing.Point(185, 155);
+            this.labelM2Status.Location = new System.Drawing.Point(185, 172);
             this.labelM2Status.Name = "labelM2Status";
             this.labelM2Status.Size = new System.Drawing.Size(79, 16);
             this.labelM2Status.TabIndex = 130;
@@ -10859,7 +11076,7 @@
             this.buttonM2Status.FlatAppearance.BorderSize = 10;
             this.buttonM2Status.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM2Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2Status.Location = new System.Drawing.Point(160, 150);
+            this.buttonM2Status.Location = new System.Drawing.Point(160, 164);
             this.buttonM2Status.Name = "buttonM2Status";
             this.buttonM2Status.Size = new System.Drawing.Size(24, 24);
             this.buttonM2Status.TabIndex = 128;
@@ -10872,7 +11089,7 @@
             this.buttonM2Reset.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM2Reset.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM2Reset.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM2Reset.Location = new System.Drawing.Point(90, 138);
+            this.buttonM2Reset.Location = new System.Drawing.Point(90, 148);
             this.buttonM2Reset.Name = "buttonM2Reset";
             this.buttonM2Reset.Size = new System.Drawing.Size(64, 40);
             this.buttonM2Reset.TabIndex = 88;
@@ -10888,7 +11105,7 @@
             this.checkBoxM2Pause.ImageIndex = 3;
             this.checkBoxM2Pause.ImageList = this.imageListStart;
             this.checkBoxM2Pause.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM2Pause.Location = new System.Drawing.Point(50, 140);
+            this.checkBoxM2Pause.Location = new System.Drawing.Point(50, 150);
             this.checkBoxM2Pause.Name = "checkBoxM2Pause";
             this.checkBoxM2Pause.Size = new System.Drawing.Size(38, 38);
             this.checkBoxM2Pause.TabIndex = 125;
@@ -10914,7 +11131,7 @@
             this.labelM2Param1Value.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM2Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM2Param1Value.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM2Param1Value.Location = new System.Drawing.Point(60, 60);
+            this.labelM2Param1Value.Location = new System.Drawing.Point(70, 50);
             this.labelM2Param1Value.Name = "labelM2Param1Value";
             this.labelM2Param1Value.Size = new System.Drawing.Size(15, 16);
             this.labelM2Param1Value.TabIndex = 124;
@@ -10935,7 +11152,7 @@
             this.checkBoxM2Inclusion.ImageIndex = 0;
             this.checkBoxM2Inclusion.ImageList = this.imageListMIncEsc;
             this.checkBoxM2Inclusion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM2Inclusion.Location = new System.Drawing.Point(220, 20);
+            this.checkBoxM2Inclusion.Location = new System.Drawing.Point(230, 20);
             this.checkBoxM2Inclusion.Name = "checkBoxM2Inclusion";
             this.checkBoxM2Inclusion.Size = new System.Drawing.Size(32, 32);
             this.checkBoxM2Inclusion.TabIndex = 32;
@@ -10950,7 +11167,7 @@
             this.labelM2Param1Name.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM2Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM2Param1Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM2Param1Name.Location = new System.Drawing.Point(10, 60);
+            this.labelM2Param1Name.Location = new System.Drawing.Point(10, 50);
             this.labelM2Param1Name.Name = "labelM2Param1Name";
             this.labelM2Param1Name.Size = new System.Drawing.Size(47, 16);
             this.labelM2Param1Name.TabIndex = 123;
@@ -10964,7 +11181,7 @@
             this.checkBoxM2Start.ImageIndex = 0;
             this.checkBoxM2Start.ImageList = this.imageListStart;
             this.checkBoxM2Start.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM2Start.Location = new System.Drawing.Point(10, 140);
+            this.checkBoxM2Start.Location = new System.Drawing.Point(10, 150);
             this.checkBoxM2Start.Name = "checkBoxM2Start";
             this.checkBoxM2Start.Size = new System.Drawing.Size(38, 38);
             this.checkBoxM2Start.TabIndex = 89;
@@ -10976,6 +11193,10 @@
             // groupBoxM4
             // 
             this.groupBoxM4.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxM4.Controls.Add(this.labelM4CycleTime);
+            this.groupBoxM4.Controls.Add(this.label42);
+            this.groupBoxM4.Controls.Add(this.labelM4Phase);
+            this.groupBoxM4.Controls.Add(this.label41);
             this.groupBoxM4.Controls.Add(this.labelM4CycleId);
             this.groupBoxM4.Controls.Add(this.labelM4CycleIdr);
             this.groupBoxM4.Controls.Add(this.labelM4Status);
@@ -10990,10 +11211,58 @@
             this.groupBoxM4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxM4.Location = new System.Drawing.Point(570, 10);
             this.groupBoxM4.Name = "groupBoxM4";
-            this.groupBoxM4.Size = new System.Drawing.Size(275, 185);
+            this.groupBoxM4.Size = new System.Drawing.Size(275, 195);
             this.groupBoxM4.TabIndex = 3;
             this.groupBoxM4.TabStop = false;
             this.groupBoxM4.Text = "padlaser";
+            // 
+            // labelM4CycleTime
+            // 
+            this.labelM4CycleTime.AutoSize = true;
+            this.labelM4CycleTime.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM4CycleTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM4CycleTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM4CycleTime.Location = new System.Drawing.Point(204, 28);
+            this.labelM4CycleTime.Name = "labelM4CycleTime";
+            this.labelM4CycleTime.Size = new System.Drawing.Size(15, 16);
+            this.labelM4CycleTime.TabIndex = 150;
+            this.labelM4CycleTime.Text = "0";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.label42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label42.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label42.Location = new System.Drawing.Point(196, 8);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(30, 16);
+            this.label42.TabIndex = 149;
+            this.label42.Text = "sec";
+            // 
+            // labelM4Phase
+            // 
+            this.labelM4Phase.AutoSize = true;
+            this.labelM4Phase.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM4Phase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM4Phase.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM4Phase.Location = new System.Drawing.Point(150, 85);
+            this.labelM4Phase.Name = "labelM4Phase";
+            this.labelM4Phase.Size = new System.Drawing.Size(15, 16);
+            this.labelM4Phase.TabIndex = 148;
+            this.labelM4Phase.Text = "0";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.label41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label41.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label41.Location = new System.Drawing.Point(100, 85);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(46, 16);
+            this.label41.TabIndex = 147;
+            this.label41.Text = "phase";
             // 
             // labelM4CycleId
             // 
@@ -11001,7 +11270,7 @@
             this.labelM4CycleId.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM4CycleId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM4CycleId.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM4CycleId.Location = new System.Drawing.Point(181, 60);
+            this.labelM4CycleId.Location = new System.Drawing.Point(80, 85);
             this.labelM4CycleId.Name = "labelM4CycleId";
             this.labelM4CycleId.Size = new System.Drawing.Size(15, 16);
             this.labelM4CycleId.TabIndex = 140;
@@ -11013,7 +11282,7 @@
             this.labelM4CycleIdr.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM4CycleIdr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM4CycleIdr.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM4CycleIdr.Location = new System.Drawing.Point(105, 60);
+            this.labelM4CycleIdr.Location = new System.Drawing.Point(10, 85);
             this.labelM4CycleIdr.Name = "labelM4CycleIdr";
             this.labelM4CycleIdr.Size = new System.Drawing.Size(60, 16);
             this.labelM4CycleIdr.TabIndex = 139;
@@ -11025,7 +11294,7 @@
             this.labelM4Status.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM4Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM4Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM4Status.Location = new System.Drawing.Point(185, 155);
+            this.labelM4Status.Location = new System.Drawing.Point(185, 172);
             this.labelM4Status.Name = "labelM4Status";
             this.labelM4Status.Size = new System.Drawing.Size(79, 16);
             this.labelM4Status.TabIndex = 132;
@@ -11037,7 +11306,7 @@
             this.buttonM4Status.FlatAppearance.BorderSize = 10;
             this.buttonM4Status.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM4Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM4Status.Location = new System.Drawing.Point(160, 150);
+            this.buttonM4Status.Location = new System.Drawing.Point(160, 164);
             this.buttonM4Status.Name = "buttonM4Status";
             this.buttonM4Status.Size = new System.Drawing.Size(24, 24);
             this.buttonM4Status.TabIndex = 129;
@@ -11050,7 +11319,7 @@
             this.buttonM4Reset.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM4Reset.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM4Reset.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM4Reset.Location = new System.Drawing.Point(90, 138);
+            this.buttonM4Reset.Location = new System.Drawing.Point(90, 148);
             this.buttonM4Reset.Name = "buttonM4Reset";
             this.buttonM4Reset.Size = new System.Drawing.Size(64, 40);
             this.buttonM4Reset.TabIndex = 127;
@@ -11066,7 +11335,7 @@
             this.checkBoxM4Pause.ImageIndex = 3;
             this.checkBoxM4Pause.ImageList = this.imageListStart;
             this.checkBoxM4Pause.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM4Pause.Location = new System.Drawing.Point(50, 140);
+            this.checkBoxM4Pause.Location = new System.Drawing.Point(50, 150);
             this.checkBoxM4Pause.Name = "checkBoxM4Pause";
             this.checkBoxM4Pause.Size = new System.Drawing.Size(38, 38);
             this.checkBoxM4Pause.TabIndex = 126;
@@ -11090,7 +11359,7 @@
             this.checkBoxM4Inclusion.ImageIndex = 0;
             this.checkBoxM4Inclusion.ImageList = this.imageListMIncEsc;
             this.checkBoxM4Inclusion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM4Inclusion.Location = new System.Drawing.Point(220, 20);
+            this.checkBoxM4Inclusion.Location = new System.Drawing.Point(230, 20);
             this.checkBoxM4Inclusion.Name = "checkBoxM4Inclusion";
             this.checkBoxM4Inclusion.Size = new System.Drawing.Size(32, 32);
             this.checkBoxM4Inclusion.TabIndex = 88;
@@ -11105,7 +11374,7 @@
             this.labelM4Param1Value.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM4Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM4Param1Value.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM4Param1Value.Location = new System.Drawing.Point(80, 60);
+            this.labelM4Param1Value.Location = new System.Drawing.Point(80, 50);
             this.labelM4Param1Value.Name = "labelM4Param1Value";
             this.labelM4Param1Value.Size = new System.Drawing.Size(15, 16);
             this.labelM4Param1Value.TabIndex = 124;
@@ -11119,7 +11388,7 @@
             this.checkBoxM4Start.ImageIndex = 0;
             this.checkBoxM4Start.ImageList = this.imageListStart;
             this.checkBoxM4Start.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM4Start.Location = new System.Drawing.Point(10, 140);
+            this.checkBoxM4Start.Location = new System.Drawing.Point(10, 150);
             this.checkBoxM4Start.Name = "checkBoxM4Start";
             this.checkBoxM4Start.Size = new System.Drawing.Size(38, 38);
             this.checkBoxM4Start.TabIndex = 91;
@@ -11145,7 +11414,7 @@
             this.labelM4Param1Name.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM4Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM4Param1Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM4Param1Name.Location = new System.Drawing.Point(10, 60);
+            this.labelM4Param1Name.Location = new System.Drawing.Point(10, 50);
             this.labelM4Param1Name.Name = "labelM4Param1Name";
             this.labelM4Param1Name.Size = new System.Drawing.Size(47, 16);
             this.labelM4Param1Name.TabIndex = 123;
@@ -11154,6 +11423,10 @@
             // groupBoxM1
             // 
             this.groupBoxM1.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxM1.Controls.Add(this.labelM1CycleTime);
+            this.groupBoxM1.Controls.Add(this.label38);
+            this.groupBoxM1.Controls.Add(this.labelM1Phase);
+            this.groupBoxM1.Controls.Add(this.label7);
             this.groupBoxM1.Controls.Add(this.labelM1CycleId);
             this.groupBoxM1.Controls.Add(this.labelM1Sharpening);
             this.groupBoxM1.Controls.Add(this.labelM1CycleCounter);
@@ -11171,10 +11444,58 @@
             this.groupBoxM1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxM1.Location = new System.Drawing.Point(10, 10);
             this.groupBoxM1.Name = "groupBoxM1";
-            this.groupBoxM1.Size = new System.Drawing.Size(275, 185);
+            this.groupBoxM1.Size = new System.Drawing.Size(275, 195);
             this.groupBoxM1.TabIndex = 1;
             this.groupBoxM1.TabStop = false;
             this.groupBoxM1.Text = "trimmer";
+            // 
+            // labelM1CycleTime
+            // 
+            this.labelM1CycleTime.AutoSize = true;
+            this.labelM1CycleTime.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM1CycleTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM1CycleTime.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM1CycleTime.Location = new System.Drawing.Point(204, 28);
+            this.labelM1CycleTime.Name = "labelM1CycleTime";
+            this.labelM1CycleTime.Size = new System.Drawing.Size(15, 16);
+            this.labelM1CycleTime.TabIndex = 142;
+            this.labelM1CycleTime.Text = "0";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label38.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label38.Location = new System.Drawing.Point(200, 8);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(30, 16);
+            this.label38.TabIndex = 141;
+            this.label38.Text = "sec";
+            // 
+            // labelM1Phase
+            // 
+            this.labelM1Phase.AutoSize = true;
+            this.labelM1Phase.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.labelM1Phase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.labelM1Phase.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelM1Phase.Location = new System.Drawing.Point(150, 85);
+            this.labelM1Phase.Name = "labelM1Phase";
+            this.labelM1Phase.Size = new System.Drawing.Size(15, 16);
+            this.labelM1Phase.TabIndex = 140;
+            this.labelM1Phase.Text = "0";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Verdana", 9.75F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label7.Location = new System.Drawing.Point(100, 85);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(46, 16);
+            this.label7.TabIndex = 139;
+            this.label7.Text = "phase";
             // 
             // labelM1CycleId
             // 
@@ -11182,7 +11503,7 @@
             this.labelM1CycleId.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM1CycleId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM1CycleId.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1CycleId.Location = new System.Drawing.Point(180, 60);
+            this.labelM1CycleId.Location = new System.Drawing.Point(70, 85);
             this.labelM1CycleId.Name = "labelM1CycleId";
             this.labelM1CycleId.Size = new System.Drawing.Size(15, 16);
             this.labelM1CycleId.TabIndex = 138;
@@ -11194,7 +11515,7 @@
             this.labelM1Sharpening.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM1Sharpening.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM1Sharpening.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1Sharpening.Location = new System.Drawing.Point(10, 100);
+            this.labelM1Sharpening.Location = new System.Drawing.Point(10, 114);
             this.labelM1Sharpening.Name = "labelM1Sharpening";
             this.labelM1Sharpening.Size = new System.Drawing.Size(78, 16);
             this.labelM1Sharpening.TabIndex = 137;
@@ -11207,7 +11528,7 @@
             this.labelM1CycleCounter.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM1CycleCounter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM1CycleCounter.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1CycleCounter.Location = new System.Drawing.Point(111, 60);
+            this.labelM1CycleCounter.Location = new System.Drawing.Point(10, 85);
             this.labelM1CycleCounter.Name = "labelM1CycleCounter";
             this.labelM1CycleCounter.Size = new System.Drawing.Size(60, 16);
             this.labelM1CycleCounter.TabIndex = 136;
@@ -11216,7 +11537,7 @@
             // numericUpDownM1SharpeningTime
             // 
             this.numericUpDownM1SharpeningTime.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownM1SharpeningTime.Location = new System.Drawing.Point(140, 90);
+            this.numericUpDownM1SharpeningTime.Location = new System.Drawing.Point(140, 110);
             this.numericUpDownM1SharpeningTime.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -11247,7 +11568,7 @@
             this.checkBoxM1SharpeningInclusion.ImageIndex = 0;
             this.checkBoxM1SharpeningInclusion.ImageList = this.imageListMIncEsc;
             this.checkBoxM1SharpeningInclusion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM1SharpeningInclusion.Location = new System.Drawing.Point(100, 90);
+            this.checkBoxM1SharpeningInclusion.Location = new System.Drawing.Point(100, 104);
             this.checkBoxM1SharpeningInclusion.Name = "checkBoxM1SharpeningInclusion";
             this.checkBoxM1SharpeningInclusion.Size = new System.Drawing.Size(32, 32);
             this.checkBoxM1SharpeningInclusion.TabIndex = 133;
@@ -11263,7 +11584,7 @@
             this.labelM1Status.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM1Status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM1Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1Status.Location = new System.Drawing.Point(185, 155);
+            this.labelM1Status.Location = new System.Drawing.Point(185, 172);
             this.labelM1Status.Name = "labelM1Status";
             this.labelM1Status.Size = new System.Drawing.Size(79, 16);
             this.labelM1Status.TabIndex = 132;
@@ -11275,7 +11596,7 @@
             this.buttonM1Status.FlatAppearance.BorderSize = 10;
             this.buttonM1Status.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1Status.Location = new System.Drawing.Point(160, 150);
+            this.buttonM1Status.Location = new System.Drawing.Point(160, 164);
             this.buttonM1Status.Name = "buttonM1Status";
             this.buttonM1Status.Size = new System.Drawing.Size(24, 24);
             this.buttonM1Status.TabIndex = 129;
@@ -11288,7 +11609,7 @@
             this.buttonM1Reset.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonM1Reset.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.buttonM1Reset.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.buttonM1Reset.Location = new System.Drawing.Point(90, 138);
+            this.buttonM1Reset.Location = new System.Drawing.Point(90, 148);
             this.buttonM1Reset.Name = "buttonM1Reset";
             this.buttonM1Reset.Size = new System.Drawing.Size(64, 40);
             this.buttonM1Reset.TabIndex = 127;
@@ -11304,7 +11625,7 @@
             this.checkBoxM1Pause.ImageIndex = 3;
             this.checkBoxM1Pause.ImageList = this.imageListStart;
             this.checkBoxM1Pause.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM1Pause.Location = new System.Drawing.Point(50, 140);
+            this.checkBoxM1Pause.Location = new System.Drawing.Point(50, 150);
             this.checkBoxM1Pause.Name = "checkBoxM1Pause";
             this.checkBoxM1Pause.Size = new System.Drawing.Size(38, 38);
             this.checkBoxM1Pause.TabIndex = 126;
@@ -11339,7 +11660,7 @@
             this.checkBoxM1Inclusion.ImageIndex = 0;
             this.checkBoxM1Inclusion.ImageList = this.imageListMIncEsc;
             this.checkBoxM1Inclusion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM1Inclusion.Location = new System.Drawing.Point(220, 20);
+            this.checkBoxM1Inclusion.Location = new System.Drawing.Point(230, 20);
             this.checkBoxM1Inclusion.Name = "checkBoxM1Inclusion";
             this.checkBoxM1Inclusion.Size = new System.Drawing.Size(32, 32);
             this.checkBoxM1Inclusion.TabIndex = 88;
@@ -11354,7 +11675,7 @@
             this.labelM1Param1Value.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM1Param1Value.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM1Param1Value.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1Param1Value.Location = new System.Drawing.Point(70, 60);
+            this.labelM1Param1Value.Location = new System.Drawing.Point(70, 50);
             this.labelM1Param1Value.Name = "labelM1Param1Value";
             this.labelM1Param1Value.Size = new System.Drawing.Size(15, 16);
             this.labelM1Param1Value.TabIndex = 124;
@@ -11366,7 +11687,7 @@
             this.labelM1Param1Name.Font = new System.Drawing.Font("Verdana", 9.75F);
             this.labelM1Param1Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.labelM1Param1Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelM1Param1Name.Location = new System.Drawing.Point(10, 60);
+            this.labelM1Param1Name.Location = new System.Drawing.Point(10, 50);
             this.labelM1Param1Name.Name = "labelM1Param1Name";
             this.labelM1Param1Name.Size = new System.Drawing.Size(47, 16);
             this.labelM1Param1Name.TabIndex = 123;
@@ -11381,7 +11702,7 @@
             this.checkBoxM1Start.ImageIndex = 0;
             this.checkBoxM1Start.ImageList = this.imageListStart;
             this.checkBoxM1Start.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.checkBoxM1Start.Location = new System.Drawing.Point(10, 140);
+            this.checkBoxM1Start.Location = new System.Drawing.Point(10, 150);
             this.checkBoxM1Start.Name = "checkBoxM1Start";
             this.checkBoxM1Start.Size = new System.Drawing.Size(38, 38);
             this.checkBoxM1Start.TabIndex = 88;
@@ -11404,7 +11725,7 @@
             tabPageColorStyle43.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT0.HoverStyle = tabPageColorStyle43;
             this.tabPageT0.ImageIndex = 0;
-            this.tabPageT0.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT0.Location = new System.Drawing.Point(198, 36);
             this.tabPageT0.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT0.Name = "tabPageT0";
             tabPageColorStyle44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
@@ -11427,7 +11748,7 @@
             tabPageColorStyle51.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle51.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT0.SelectedStyle = tabPageColorStyle51;
-            this.tabPageT0.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT0.Size = new System.Drawing.Size(812, 716);
             this.tabPageT0.StyleFromParent = false;
             this.tabPageT0.TabIndex = 0;
             this.tabPageT0.Text = "page";
@@ -11475,7 +11796,7 @@
             tabPageFormatStyle23.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle23.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT0_2.FormatStyle = tabPageFormatStyle23;
-            this.tabPageT0_2.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT0_2.Location = new System.Drawing.Point(198, 36);
             this.tabPageT0_2.Name = "tabPageT0_2";
             tabPageColorStyle45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle45.BackFadeColor = System.Drawing.Color.Transparent;
@@ -11495,13 +11816,13 @@
             tabPageColorStyle48.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle48.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT0_2.SelectedStyle = tabPageColorStyle48;
-            this.tabPageT0_2.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT0_2.Size = new System.Drawing.Size(812, 716);
             this.tabPageT0_2.StyleFromParent = false;
             this.tabPageT0_2.TabIndex = 2;
             this.tabPageT0_2.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Left;
             this.tabPageT0_2.Text = "recipies";
             this.tabPageT0_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2.TextBounds")));
-            this.tabPageT0_2.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT0_2.TextSize = new System.Drawing.SizeF(68.48957F, 21.44531F);
             this.tabPageT0_2.UseParentTabStripPlacement = false;
             // 
             // textBoxManageD4Param4
@@ -11927,18 +12248,18 @@
             tabPageFormatStyle24.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle24.Padding = new System.Windows.Forms.Padding(22, 5, 15, 5);
             this.tabPageT0_2_1.FormatStyle = tabPageFormatStyle24;
-            this.tabPageT0_2_1.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT0_2_1.Location = new System.Drawing.Point(198, 36);
             this.tabPageT0_2_1.Name = "tabPageT0_2_1";
             this.tabPageT0_2_1.ParentPage = this.tabPageT0_2;
             tabPageColorStyle46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle46.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabPageT0_2_1.SelectedStyle = tabPageColorStyle46;
-            this.tabPageT0_2_1.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT0_2_1.Size = new System.Drawing.Size(812, 716);
             this.tabPageT0_2_1.StyleFromParent = false;
             this.tabPageT0_2_1.TabIndex = 25;
             this.tabPageT0_2_1.Text = "add new";
             this.tabPageT0_2_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2_1.TextBounds")));
-            this.tabPageT0_2_1.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT0_2_1.TextSize = new System.Drawing.SizeF(61.17658F, 17.42431F);
             this.tabPageT0_2_1.UseParentButtons = false;
             this.tabPageT0_2_1.UseParentTabStripPlacement = false;
             // 
@@ -12010,7 +12331,7 @@
             this.groupBoxRecipeM5.Controls.Add(this.labelM5Param1);
             this.groupBoxRecipeM5.Controls.Add(this.checkBoxM5Param1);
             this.groupBoxRecipeM5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxRecipeM5.Location = new System.Drawing.Point(300, 300);
+            this.groupBoxRecipeM5.Location = new System.Drawing.Point(350, 300);
             this.groupBoxRecipeM5.Name = "groupBoxRecipeM5";
             this.groupBoxRecipeM5.Size = new System.Drawing.Size(200, 200);
             this.groupBoxRecipeM5.TabIndex = 119;
@@ -12110,6 +12431,10 @@
             // groupBoxRecipeM4
             // 
             this.groupBoxRecipeM4.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxRecipeM4.Controls.Add(this.radioButtonM4Sel2Bottom);
+            this.groupBoxRecipeM4.Controls.Add(this.radioButtonM4Sel1Bottom);
+            this.groupBoxRecipeM4.Controls.Add(this.radioButtonM4Sel2Top);
+            this.groupBoxRecipeM4.Controls.Add(this.radioButtonM4Sel1Top);
             this.groupBoxRecipeM4.Controls.Add(this.labelPadLaserLine2);
             this.groupBoxRecipeM4.Controls.Add(this.labelPadLaserLine1);
             this.groupBoxRecipeM4.Controls.Add(this.labelM4Param1);
@@ -12119,17 +12444,69 @@
             this.groupBoxRecipeM4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxRecipeM4.Location = new System.Drawing.Point(20, 300);
             this.groupBoxRecipeM4.Name = "groupBoxRecipeM4";
-            this.groupBoxRecipeM4.Size = new System.Drawing.Size(240, 200);
+            this.groupBoxRecipeM4.Size = new System.Drawing.Size(300, 300);
             this.groupBoxRecipeM4.TabIndex = 117;
             this.groupBoxRecipeM4.TabStop = false;
             this.groupBoxRecipeM4.Text = "padlaser";
+            // 
+            // radioButtonM4Sel2Bottom
+            // 
+            this.radioButtonM4Sel2Bottom.AutoSize = true;
+            this.radioButtonM4Sel2Bottom.BackColor = System.Drawing.SystemColors.Control;
+            this.radioButtonM4Sel2Bottom.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonM4Sel2Bottom.Location = new System.Drawing.Point(183, 181);
+            this.radioButtonM4Sel2Bottom.Name = "radioButtonM4Sel2Bottom";
+            this.radioButtonM4Sel2Bottom.Size = new System.Drawing.Size(52, 20);
+            this.radioButtonM4Sel2Bottom.TabIndex = 148;
+            this.radioButtonM4Sel2Bottom.Text = "text";
+            this.radioButtonM4Sel2Bottom.UseVisualStyleBackColor = false;
+            // 
+            // radioButtonM4Sel1Bottom
+            // 
+            this.radioButtonM4Sel1Bottom.AutoSize = true;
+            this.radioButtonM4Sel1Bottom.BackColor = System.Drawing.SystemColors.Control;
+            this.radioButtonM4Sel1Bottom.Checked = true;
+            this.radioButtonM4Sel1Bottom.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonM4Sel1Bottom.Location = new System.Drawing.Point(110, 180);
+            this.radioButtonM4Sel1Bottom.Name = "radioButtonM4Sel1Bottom";
+            this.radioButtonM4Sel1Bottom.Size = new System.Drawing.Size(55, 20);
+            this.radioButtonM4Sel1Bottom.TabIndex = 147;
+            this.radioButtonM4Sel1Bottom.TabStop = true;
+            this.radioButtonM4Sel1Bottom.Text = "date";
+            this.radioButtonM4Sel1Bottom.UseVisualStyleBackColor = false;
+            // 
+            // radioButtonM4Sel2Top
+            // 
+            this.radioButtonM4Sel2Top.AutoSize = true;
+            this.radioButtonM4Sel2Top.BackColor = System.Drawing.SystemColors.Control;
+            this.radioButtonM4Sel2Top.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonM4Sel2Top.Location = new System.Drawing.Point(183, 90);
+            this.radioButtonM4Sel2Top.Name = "radioButtonM4Sel2Top";
+            this.radioButtonM4Sel2Top.Size = new System.Drawing.Size(52, 20);
+            this.radioButtonM4Sel2Top.TabIndex = 146;
+            this.radioButtonM4Sel2Top.Text = "text";
+            this.radioButtonM4Sel2Top.UseVisualStyleBackColor = false;
+            // 
+            // radioButtonM4Sel1Top
+            // 
+            this.radioButtonM4Sel1Top.AutoSize = true;
+            this.radioButtonM4Sel1Top.BackColor = System.Drawing.SystemColors.Control;
+            this.radioButtonM4Sel1Top.Checked = true;
+            this.radioButtonM4Sel1Top.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonM4Sel1Top.Location = new System.Drawing.Point(110, 90);
+            this.radioButtonM4Sel1Top.Name = "radioButtonM4Sel1Top";
+            this.radioButtonM4Sel1Top.Size = new System.Drawing.Size(55, 20);
+            this.radioButtonM4Sel1Top.TabIndex = 145;
+            this.radioButtonM4Sel1Top.TabStop = true;
+            this.radioButtonM4Sel1Top.Text = "date";
+            this.radioButtonM4Sel1Top.UseVisualStyleBackColor = false;
             // 
             // labelPadLaserLine2
             // 
             this.labelPadLaserLine2.AutoSize = true;
             this.labelPadLaserLine2.BackColor = System.Drawing.SystemColors.Control;
             this.labelPadLaserLine2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPadLaserLine2.Location = new System.Drawing.Point(15, 140);
+            this.labelPadLaserLine2.Location = new System.Drawing.Point(15, 181);
             this.labelPadLaserLine2.Name = "labelPadLaserLine2";
             this.labelPadLaserLine2.Size = new System.Drawing.Size(81, 16);
             this.labelPadLaserLine2.TabIndex = 144;
@@ -12185,7 +12562,7 @@
             // 
             this.textBoxLaserLine2.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxLaserLine2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLaserLine2.Location = new System.Drawing.Point(15, 160);
+            this.textBoxLaserLine2.Location = new System.Drawing.Point(15, 211);
             this.textBoxLaserLine2.Name = "textBoxLaserLine2";
             this.textBoxLaserLine2.Size = new System.Drawing.Size(220, 27);
             this.textBoxLaserLine2.TabIndex = 140;
@@ -12195,7 +12572,7 @@
             // 
             this.textBoxLaserLine1.BackColor = System.Drawing.SystemColors.Control;
             this.textBoxLaserLine1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLaserLine1.Location = new System.Drawing.Point(15, 110);
+            this.textBoxLaserLine1.Location = new System.Drawing.Point(15, 125);
             this.textBoxLaserLine1.Name = "textBoxLaserLine1";
             this.textBoxLaserLine1.Size = new System.Drawing.Size(220, 27);
             this.textBoxLaserLine1.TabIndex = 139;
@@ -12224,9 +12601,9 @@
             this.labelFootOrder.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFootOrder.Location = new System.Drawing.Point(20, 140);
             this.labelFootOrder.Name = "labelFootOrder";
-            this.labelFootOrder.Size = new System.Drawing.Size(73, 16);
+            this.labelFootOrder.Size = new System.Drawing.Size(78, 16);
             this.labelFootOrder.TabIndex = 142;
-            this.labelFootOrder.Text = "foot order";
+            this.labelFootOrder.Text = "start order";
             // 
             // radioButtonFootOrderOpt2
             // 
@@ -12235,9 +12612,9 @@
             this.radioButtonFootOrderOpt2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonFootOrderOpt2.Location = new System.Drawing.Point(110, 160);
             this.radioButtonFootOrderOpt2.Name = "radioButtonFootOrderOpt2";
-            this.radioButtonFootOrderOpt2.Size = new System.Drawing.Size(62, 20);
+            this.radioButtonFootOrderOpt2.Size = new System.Drawing.Size(47, 20);
             this.radioButtonFootOrderOpt2.TabIndex = 142;
-            this.radioButtonFootOrderOpt2.Text = "lf->rg";
+            this.radioButtonFootOrderOpt2.Text = "left";
             this.radioButtonFootOrderOpt2.UseVisualStyleBackColor = false;
             // 
             // labelM3Param1
@@ -12283,10 +12660,10 @@
             this.radioButtonFootOrderOpt1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonFootOrderOpt1.Location = new System.Drawing.Point(20, 160);
             this.radioButtonFootOrderOpt1.Name = "radioButtonFootOrderOpt1";
-            this.radioButtonFootOrderOpt1.Size = new System.Drawing.Size(62, 20);
+            this.radioButtonFootOrderOpt1.Size = new System.Drawing.Size(55, 20);
             this.radioButtonFootOrderOpt1.TabIndex = 120;
             this.radioButtonFootOrderOpt1.TabStop = true;
-            this.radioButtonFootOrderOpt1.Text = "rg->lf";
+            this.radioButtonFootOrderOpt1.Text = "right";
             this.radioButtonFootOrderOpt1.UseVisualStyleBackColor = false;
             // 
             // groupBoxRecipeM2
@@ -12295,7 +12672,7 @@
             this.groupBoxRecipeM2.Controls.Add(this.labelM2Param1);
             this.groupBoxRecipeM2.Controls.Add(this.checkBoxM2Param1);
             this.groupBoxRecipeM2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxRecipeM2.Location = new System.Drawing.Point(300, 80);
+            this.groupBoxRecipeM2.Location = new System.Drawing.Point(350, 80);
             this.groupBoxRecipeM2.Name = "groupBoxRecipeM2";
             this.groupBoxRecipeM2.Size = new System.Drawing.Size(200, 200);
             this.groupBoxRecipeM2.TabIndex = 115;
@@ -12345,7 +12722,7 @@
             this.groupBoxRecipeM1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxRecipeM1.Location = new System.Drawing.Point(20, 80);
             this.groupBoxRecipeM1.Name = "groupBoxRecipeM1";
-            this.groupBoxRecipeM1.Size = new System.Drawing.Size(240, 200);
+            this.groupBoxRecipeM1.Size = new System.Drawing.Size(300, 200);
             this.groupBoxRecipeM1.TabIndex = 114;
             this.groupBoxRecipeM1.TabStop = false;
             this.groupBoxRecipeM1.Text = "trimmer";
@@ -12426,6 +12803,10 @@
             // 
             // tabPageT0_2_2
             // 
+            this.tabPageT0_2_2.Controls.Add(this.radioButtonMRecipeBottomSel2);
+            this.tabPageT0_2_2.Controls.Add(this.radioButtonMRecipeBottomSel1);
+            this.tabPageT0_2_2.Controls.Add(this.radioButtonMRecipeTopSel2);
+            this.tabPageT0_2_2.Controls.Add(this.radioButtonMRecipeTopSel1);
             this.tabPageT0_2_2.Controls.Add(this.checkBox3);
             this.tabPageT0_2_2.Controls.Add(this.buttonMRecipeDeleteAll);
             this.tabPageT0_2_2.Controls.Add(this.buttonMRecipeDelete);
@@ -12456,19 +12837,71 @@
             tabPageFormatStyle25.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle25.Padding = new System.Windows.Forms.Padding(5, 5, 10, 5);
             this.tabPageT0_2_2.FormatStyle = tabPageFormatStyle25;
-            this.tabPageT0_2_2.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT0_2_2.Location = new System.Drawing.Point(198, 36);
             this.tabPageT0_2_2.Name = "tabPageT0_2_2";
             this.tabPageT0_2_2.ParentPage = this.tabPageT0_2;
             tabPageColorStyle47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle47.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabPageT0_2_2.SelectedStyle = tabPageColorStyle47;
-            this.tabPageT0_2_2.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT0_2_2.Size = new System.Drawing.Size(812, 716);
             this.tabPageT0_2_2.StyleFromParent = false;
             this.tabPageT0_2_2.TabIndex = 26;
             this.tabPageT0_2_2.Text = "find/modify";
             this.tabPageT0_2_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2_2.TextBounds")));
-            this.tabPageT0_2_2.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT0_2_2.TextSize = new System.Drawing.SizeF(81.41291F, 17.42431F);
             this.tabPageT0_2_2.UseParentTabStripPlacement = false;
+            // 
+            // radioButtonMRecipeBottomSel2
+            // 
+            this.radioButtonMRecipeBottomSel2.AutoSize = true;
+            this.radioButtonMRecipeBottomSel2.BackColor = System.Drawing.SystemColors.Control;
+            this.radioButtonMRecipeBottomSel2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonMRecipeBottomSel2.Location = new System.Drawing.Point(384, 313);
+            this.radioButtonMRecipeBottomSel2.Name = "radioButtonMRecipeBottomSel2";
+            this.radioButtonMRecipeBottomSel2.Size = new System.Drawing.Size(52, 20);
+            this.radioButtonMRecipeBottomSel2.TabIndex = 170;
+            this.radioButtonMRecipeBottomSel2.Text = "text";
+            this.radioButtonMRecipeBottomSel2.UseVisualStyleBackColor = false;
+            // 
+            // radioButtonMRecipeBottomSel1
+            // 
+            this.radioButtonMRecipeBottomSel1.AutoSize = true;
+            this.radioButtonMRecipeBottomSel1.BackColor = System.Drawing.SystemColors.Control;
+            this.radioButtonMRecipeBottomSel1.Checked = true;
+            this.radioButtonMRecipeBottomSel1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonMRecipeBottomSel1.Location = new System.Drawing.Point(311, 313);
+            this.radioButtonMRecipeBottomSel1.Name = "radioButtonMRecipeBottomSel1";
+            this.radioButtonMRecipeBottomSel1.Size = new System.Drawing.Size(55, 20);
+            this.radioButtonMRecipeBottomSel1.TabIndex = 169;
+            this.radioButtonMRecipeBottomSel1.TabStop = true;
+            this.radioButtonMRecipeBottomSel1.Text = "date";
+            this.radioButtonMRecipeBottomSel1.UseVisualStyleBackColor = false;
+            // 
+            // radioButtonMRecipeTopSel2
+            // 
+            this.radioButtonMRecipeTopSel2.AutoSize = true;
+            this.radioButtonMRecipeTopSel2.BackColor = System.Drawing.SystemColors.Control;
+            this.radioButtonMRecipeTopSel2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonMRecipeTopSel2.Location = new System.Drawing.Point(386, 253);
+            this.radioButtonMRecipeTopSel2.Name = "radioButtonMRecipeTopSel2";
+            this.radioButtonMRecipeTopSel2.Size = new System.Drawing.Size(52, 20);
+            this.radioButtonMRecipeTopSel2.TabIndex = 168;
+            this.radioButtonMRecipeTopSel2.Text = "text";
+            this.radioButtonMRecipeTopSel2.UseVisualStyleBackColor = false;
+            // 
+            // radioButtonMRecipeTopSel1
+            // 
+            this.radioButtonMRecipeTopSel1.AutoSize = true;
+            this.radioButtonMRecipeTopSel1.BackColor = System.Drawing.SystemColors.Control;
+            this.radioButtonMRecipeTopSel1.Checked = true;
+            this.radioButtonMRecipeTopSel1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonMRecipeTopSel1.Location = new System.Drawing.Point(313, 253);
+            this.radioButtonMRecipeTopSel1.Name = "radioButtonMRecipeTopSel1";
+            this.radioButtonMRecipeTopSel1.Size = new System.Drawing.Size(55, 20);
+            this.radioButtonMRecipeTopSel1.TabIndex = 167;
+            this.radioButtonMRecipeTopSel1.TabStop = true;
+            this.radioButtonMRecipeTopSel1.Text = "date";
+            this.radioButtonMRecipeTopSel1.UseVisualStyleBackColor = false;
             // 
             // checkBox3
             // 
@@ -12516,9 +12949,9 @@
             this.label36.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.Location = new System.Drawing.Point(407, 117);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(73, 16);
+            this.label36.Size = new System.Drawing.Size(78, 16);
             this.label36.TabIndex = 163;
-            this.label36.Text = "foot order";
+            this.label36.Text = "start order";
             // 
             // radioButtonM3Option2Recipe
             // 
@@ -12527,9 +12960,9 @@
             this.radioButtonM3Option2Recipe.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonM3Option2Recipe.Location = new System.Drawing.Point(497, 137);
             this.radioButtonM3Option2Recipe.Name = "radioButtonM3Option2Recipe";
-            this.radioButtonM3Option2Recipe.Size = new System.Drawing.Size(62, 20);
+            this.radioButtonM3Option2Recipe.Size = new System.Drawing.Size(47, 20);
             this.radioButtonM3Option2Recipe.TabIndex = 162;
-            this.radioButtonM3Option2Recipe.Text = "lf->rg";
+            this.radioButtonM3Option2Recipe.Text = "left";
             this.radioButtonM3Option2Recipe.UseVisualStyleBackColor = false;
             // 
             // radioButtonM3Option1Recipe
@@ -12540,10 +12973,10 @@
             this.radioButtonM3Option1Recipe.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonM3Option1Recipe.Location = new System.Drawing.Point(407, 137);
             this.radioButtonM3Option1Recipe.Name = "radioButtonM3Option1Recipe";
-            this.radioButtonM3Option1Recipe.Size = new System.Drawing.Size(62, 20);
+            this.radioButtonM3Option1Recipe.Size = new System.Drawing.Size(55, 20);
             this.radioButtonM3Option1Recipe.TabIndex = 161;
             this.radioButtonM3Option1Recipe.TabStop = true;
-            this.radioButtonM3Option1Recipe.Text = "rg->lf";
+            this.radioButtonM3Option1Recipe.Text = "right";
             this.radioButtonM3Option1Recipe.UseVisualStyleBackColor = false;
             // 
             // checkBoxM4RecipeModify
@@ -12885,7 +13318,7 @@
             tabPageFormatStyle26.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle26.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT0_3.FormatStyle = tabPageFormatStyle26;
-            this.tabPageT0_3.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT0_3.Location = new System.Drawing.Point(198, 36);
             this.tabPageT0_3.Name = "tabPageT0_3";
             tabPageColorStyle49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle49.BackFadeColor = System.Drawing.Color.Transparent;
@@ -12902,14 +13335,14 @@
             tabPageColorStyle50.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle50.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT0_3.SelectedStyle = tabPageColorStyle50;
-            this.tabPageT0_3.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT0_3.Size = new System.Drawing.Size(812, 716);
             this.tabPageT0_3.StyleFromParent = false;
             this.tabPageT0_3.TabIndex = 3;
             this.tabPageT0_3.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabPageT0_3.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Bottom;
             this.tabPageT0_3.Text = "nodes";
             this.tabPageT0_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_3.TextBounds")));
-            this.tabPageT0_3.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT0_3.TextSize = new System.Drawing.SizeF(54.43489F, 21.44531F);
             this.tabPageT0_3.UseParentTabStripPlacement = false;
             this.tabPageT0_3.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageT0_3_Paint);
             // 
@@ -13242,7 +13675,6 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Controls.Add(this.labelM5ExitBelt3State);
             this.tabPage2.Controls.Add(this.labelM5ExitBelt2State);
             this.tabPage2.Controls.Add(this.label15);
@@ -13281,78 +13713,14 @@
             this.tabPage2.Controls.Add(this.label5);
             tabPageFormatStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.FormatStyle = tabPageFormatStyle27;
-            this.tabPage2.Location = new System.Drawing.Point(0, 0);
+            this.tabPage2.Location = new System.Drawing.Point(198, 36);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.ParentPage = this.tabPageT0;
-            this.tabPage2.Size = new System.Drawing.Size(0, 0);
+            this.tabPage2.Size = new System.Drawing.Size(812, 716);
             this.tabPage2.TabIndex = 27;
             this.tabPage2.Text = "diagnostics";
             this.tabPage2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage2.TextBounds")));
-            this.tabPage2.TextSize = new System.Drawing.SizeF(0F, 0F);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn16,
-            this.dataGridViewButtonColumn6});
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle31;
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dataGridView1.Location = new System.Drawing.Point(420, 290);
-            this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
-            this.dataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle33;
-            this.dataGridView1.RowTemplate.Height = 48;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(380, 220);
-            this.dataGridView1.TabIndex = 183;
-            this.dataGridView1.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView1_CellPainting);
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn16.DefaultCellStyle = dataGridViewCellStyle30;
-            this.dataGridViewTextBoxColumn16.Frozen = true;
-            this.dataGridViewTextBoxColumn16.HeaderText = "point id";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            this.dataGridViewTextBoxColumn16.ReadOnly = true;
-            this.dataGridViewTextBoxColumn16.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn16.Width = 60;
-            // 
-            // dataGridViewButtonColumn6
-            // 
-            this.dataGridViewButtonColumn6.HeaderText = "reached";
-            this.dataGridViewButtonColumn6.Name = "dataGridViewButtonColumn6";
-            this.dataGridViewButtonColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewButtonColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewButtonColumn6.Width = 56;
+            this.tabPage2.TextSize = new System.Drawing.SizeF(97.48957F, 21.44531F);
             // 
             // labelM5ExitBelt3State
             // 
@@ -13839,7 +14207,7 @@
             tabPageFormatStyle28.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle28.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT1_1.FormatStyle = tabPageFormatStyle28;
-            this.tabPageT1_1.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT1_1.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_1.Name = "tabPageT1_1";
             tabPageColorStyle53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle53.BackFadeColor = System.Drawing.Color.Transparent;
@@ -13856,12 +14224,12 @@
             tabPageColorStyle63.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle63.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_1.SelectedStyle = tabPageColorStyle63;
-            this.tabPageT1_1.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT1_1.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_1.StyleFromParent = false;
             this.tabPageT1_1.TabIndex = 5;
             this.tabPageT1_1.Text = "teach";
             this.tabPageT1_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_1.TextBounds")));
-            this.tabPageT1_1.TextSize = new System.Drawing.SizeF(50.55989F, 21.44531F);
+            this.tabPageT1_1.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT1_1.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT1_1
@@ -14599,14 +14967,14 @@
             // dataGridViewM1TeachPoints
             // 
             this.dataGridViewM1TeachPoints.AllowUserToAddRows = false;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewM1TeachPoints.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewM1TeachPoints.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
             this.dataGridViewM1TeachPoints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewM1TeachPoints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn10,
@@ -14615,29 +14983,29 @@
             this.dataGridViewButtonColumn3,
             this.dataGridViewButtonColumn4,
             this.dataGridViewButtonColumn5});
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewM1TeachPoints.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewM1TeachPoints.DefaultCellStyle = dataGridViewCellStyle31;
             this.dataGridViewM1TeachPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridViewM1TeachPoints.Location = new System.Drawing.Point(10, 100);
             this.dataGridViewM1TeachPoints.Name = "dataGridViewM1TeachPoints";
-            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewM1TeachPoints.RowHeadersDefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewM1TeachPoints.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
             this.dataGridViewM1TeachPoints.RowHeadersVisible = false;
             this.dataGridViewM1TeachPoints.RowHeadersWidth = 48;
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewM1TeachPoints.RowsDefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewM1TeachPoints.RowsDefaultCellStyle = dataGridViewCellStyle33;
             this.dataGridViewM1TeachPoints.RowTemplate.Height = 48;
             this.dataGridViewM1TeachPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridViewM1TeachPoints.Size = new System.Drawing.Size(580, 220);
@@ -14647,9 +15015,9 @@
             // 
             // dataGridViewTextBoxColumn10
             // 
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle30;
             this.dataGridViewTextBoxColumn10.Frozen = true;
             this.dataGridViewTextBoxColumn10.HeaderText = "point";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
@@ -14782,7 +15150,7 @@
             tabPageColorStyle54.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT1.HoverStyle = tabPageColorStyle54;
             this.tabPageT1.ImageIndex = 2;
-            this.tabPageT1.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT1.Location = new System.Drawing.Point(198, 36);
             this.tabPageT1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageT1.Name = "tabPageT1";
             tabPageColorStyle55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
@@ -14805,7 +15173,7 @@
             tabPageColorStyle62.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             tabPageColorStyle62.TextShadowColor = System.Drawing.Color.Transparent;
             this.tabPageT1.SelectedStyle = tabPageColorStyle62;
-            this.tabPageT1.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT1.Size = new System.Drawing.Size(812, 716);
             this.tabPageT1.StyleFromParent = false;
             this.tabPageT1.TabIndex = 4;
             this.tabPageT1.Text = "page";
@@ -14829,7 +15197,7 @@
             tabPageFormatStyle30.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle30.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT1_2.FormatStyle = tabPageFormatStyle30;
-            this.tabPageT1_2.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT1_2.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_2.Name = "tabPageT1_2";
             tabPageColorStyle56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle56.BackFadeColor = System.Drawing.Color.Transparent;
@@ -14846,12 +15214,12 @@
             tabPageColorStyle57.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle57.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_2.SelectedStyle = tabPageColorStyle57;
-            this.tabPageT1_2.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT1_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_2.StyleFromParent = false;
             this.tabPageT1_2.TabIndex = 8;
             this.tabPageT1_2.Text = "test";
             this.tabPageT1_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_2.TextBounds")));
-            this.tabPageT1_2.TextSize = new System.Drawing.SizeF(36.72395F, 21.44531F);
+            this.tabPageT1_2.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT1_2.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT1_2
@@ -15029,42 +15397,42 @@
             // dataGridViewM1TestPoints
             // 
             this.dataGridViewM1TestPoints.AllowUserToAddRows = false;
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewM1TestPoints.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewM1TestPoints.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.dataGridViewM1TestPoints.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewM1TestPoints.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn15,
             this.reached});
-            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle41.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewM1TestPoints.DefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewM1TestPoints.DefaultCellStyle = dataGridViewCellStyle36;
             this.dataGridViewM1TestPoints.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridViewM1TestPoints.Location = new System.Drawing.Point(10, 115);
             this.dataGridViewM1TestPoints.Name = "dataGridViewM1TestPoints";
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewM1TestPoints.RowHeadersDefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewM1TestPoints.RowHeadersDefaultCellStyle = dataGridViewCellStyle37;
             this.dataGridViewM1TestPoints.RowHeadersVisible = false;
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewM1TestPoints.RowsDefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewM1TestPoints.RowsDefaultCellStyle = dataGridViewCellStyle38;
             this.dataGridViewM1TestPoints.RowTemplate.Height = 48;
             this.dataGridViewM1TestPoints.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridViewM1TestPoints.Size = new System.Drawing.Size(380, 220);
@@ -15074,9 +15442,9 @@
             // 
             // dataGridViewTextBoxColumn13
             // 
-            dataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle35;
             this.dataGridViewTextBoxColumn13.Frozen = true;
             this.dataGridViewTextBoxColumn13.HeaderText = "point id";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
@@ -15170,7 +15538,7 @@
             tabPageFormatStyle31.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle31.Padding = new System.Windows.Forms.Padding(17, 5, 17, 5);
             this.tabPageT1_3.FormatStyle = tabPageFormatStyle31;
-            this.tabPageT1_3.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT1_3.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_3.Name = "tabPageT1_3";
             tabPageColorStyle58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle58.BackFadeColor = System.Drawing.Color.Transparent;
@@ -15187,12 +15555,12 @@
             tabPageColorStyle59.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle59.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_3.SelectedStyle = tabPageColorStyle59;
-            this.tabPageT1_3.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT1_3.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_3.StyleFromParent = false;
             this.tabPageT1_3.TabIndex = 6;
             this.tabPageT1_3.Text = "input";
             this.tabPageT1_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_3.TextBounds")));
-            this.tabPageT1_3.TextSize = new System.Drawing.SizeF(47.47395F, 21.44531F);
+            this.tabPageT1_3.TextSize = new System.Drawing.SizeF(0F, 0F);
             // 
             // lbLed1040M1
             // 
@@ -16178,7 +16546,7 @@
             tabPageFormatStyle32.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle32.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.tabPageT1_4.FormatStyle = tabPageFormatStyle32;
-            this.tabPageT1_4.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT1_4.Location = new System.Drawing.Point(0, 0);
             this.tabPageT1_4.Name = "tabPageT1_4";
             tabPageColorStyle60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle60.BackFadeColor = System.Drawing.Color.Transparent;
@@ -16195,12 +16563,12 @@
             tabPageColorStyle61.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle61.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_4.SelectedStyle = tabPageColorStyle61;
-            this.tabPageT1_4.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT1_4.Size = new System.Drawing.Size(0, 0);
             this.tabPageT1_4.StyleFromParent = false;
             this.tabPageT1_4.TabIndex = 7;
             this.tabPageT1_4.Text = "output";
             this.tabPageT1_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_4.TextBounds")));
-            this.tabPageT1_4.TextSize = new System.Drawing.SizeF(59.4427F, 21.44531F);
+            this.tabPageT1_4.TextSize = new System.Drawing.SizeF(0F, 0F);
             // 
             // lbLed2040M1
             // 
@@ -17120,7 +17488,7 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
-            this.tabControlMain.Controls.Add(this.tabPageT1_1);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
             this.tabControlMain.Controls.Add(this.tabPageT7);
             this.tabControlMain.Controls.Add(this.tabPageT6);
             this.tabControlMain.Controls.Add(this.tabPageT5);
@@ -17131,10 +17499,10 @@
             this.tabControlMain.Controls.Add(this.tabPageT0);
             this.tabControlMain.Controls.Add(this.tabPageT0_1);
             this.tabControlMain.Controls.Add(this.tabPageT0_2);
-            this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_3);
             this.tabControlMain.Controls.Add(this.tabPage2);
+            this.tabControlMain.Controls.Add(this.tabPageT1_1);
             this.tabControlMain.Controls.Add(this.tabPageT1_2);
             this.tabControlMain.Controls.Add(this.tabPageT1_3);
             this.tabControlMain.Controls.Add(this.tabPageT1_4);
@@ -17188,7 +17556,7 @@
             this.tabPageT6,
             this.tabPageT7});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageT1_1;
+            this.tabControlMain.SelectedPage = this.tabPageT0_2_1;
             tabPageColorStyle65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle65.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle65.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
@@ -17353,7 +17721,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3PLCNode)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPageT1_1.ResumeLayout(false);
             this.tabPageT1_1.PerformLayout();
             this.contextMenuStripT1_1.ResumeLayout(false);
@@ -18292,8 +18659,36 @@
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2003M5;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2004M5;
         private LBSoft.IndustrialCtrls.Leds.LBLed lbLed2001M5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn6;
+        private System.Windows.Forms.RadioButton radioButtonM4Sel2Bottom;
+        private System.Windows.Forms.RadioButton radioButtonM4Sel1Bottom;
+        private System.Windows.Forms.RadioButton radioButtonM4Sel2Top;
+        private System.Windows.Forms.RadioButton radioButtonM4Sel1Top;
+        private System.Windows.Forms.Label labelM1CycleTime;
+        private System.Windows.Forms.Label labelM1Phase;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelM2Phase;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label labelM2CycleTime;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label labelM4CycleTime;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label labelM4Phase;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label labelM5CycleTime2;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label labelM5CycleTime1;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label labelM5Phase;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label labelM3Phase;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label labelM63CycleTime2;
+        private System.Windows.Forms.Label labelM63CycleTime1;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.RadioButton radioButtonMRecipeBottomSel2;
+        private System.Windows.Forms.RadioButton radioButtonMRecipeBottomSel1;
+        private System.Windows.Forms.RadioButton radioButtonMRecipeTopSel2;
+        private System.Windows.Forms.RadioButton radioButtonMRecipeTopSel1;
     }
 }

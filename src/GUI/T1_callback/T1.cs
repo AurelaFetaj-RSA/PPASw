@@ -95,6 +95,8 @@ namespace GUI
                     {
                         RestartRequestFromM1();
                     }
+                    //update program name list in auto
+
                     //program succesfully saved
                     xDialog.MsgBox.Show("program " + comboBoxM1TeachProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
                 }

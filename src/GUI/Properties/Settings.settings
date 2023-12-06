@@ -26,8 +26,11 @@
     <Setting Name="OpcSimulation" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="PadLaserFilePath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">\\172.31.20.90\PRODUCTION\recipe_from_pc.txt</Value>
+    <Setting Name="PadLaserFilePathTop" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\172.31.20.90\PRODUCTION\recipe_from_pc_top.txt</Value>
+    </Setting>
+    <Setting Name="PadLaserFilePathBottom" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\172.31.20.90\PRODUCTION\recipe_from_pc_bottom.txt</Value>
     </Setting>
   </Settings>
 </SettingsFile>

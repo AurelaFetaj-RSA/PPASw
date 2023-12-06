@@ -462,12 +462,15 @@ namespace GUI
             //save configuration file plconfig.xml
             comboBoxM1PrgName.Text = guiConfigurator.GetValue("T0", "M1PRGNAME", "");
             M1PrgName = comboBoxM1PrgName.Text;
+            SendSizeFromM1ProgramToOpc();
+
             comboBoxM2PrgName.Text = guiConfigurator.GetValue("T0", "M2PRGNAME", "");
             M2PrgName = comboBoxM2PrgName.Text;
             comboBoxM3PrgName_st1.Text = guiConfigurator.GetValue("T0", "M3PRGNAME1", "");
             M3PrgName1 = comboBoxM3PrgName_st1.Text;
             comboBoxM3PrgName_st2.Text = guiConfigurator.GetValue("T0", "M3PRGNAME2", "");
             M3PrgName2 = comboBoxM3PrgName_st2.Text;
+            SendStationRGM3ToOpc(M3PrgName1, M3PrgName2);
             comboBoxM4PrgName.Text = guiConfigurator.GetValue("T0", "M4PRGNAME", "");
             M4PrgName = comboBoxM4PrgName.Text;
             checkBoxM1Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M1INC", "") == "1")?CheckState.Checked:CheckState.Unchecked;
@@ -491,100 +494,107 @@ namespace GUI
             RestartRequestFromM6();
 
             string keyToSend = null;
-            bool chkValue = false;
 
-            keyToSend = "pcM1Inclusion";
-            chkValue = (M1inc == "1") ? true : false;
 
-            var sendResult = await ccService.Send(keyToSend, chkValue);
-
-            if (sendResult.OpcResult)
+            if (ccService.ClientIsConnected)
             {
-                checkBoxM1Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+
+                bool chkValue = false;
+
+                keyToSend = "pcM1Inclusion";
+                chkValue = (M1inc == "1") ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM1Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM1Inclusion.ImageIndex = 2;
+                }
+
+                keyToSend = "pcM2Inclusion";
+                chkValue = (M2inc == "1") ? true : false;
+
+                sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM2Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM2Inclusion.ImageIndex = 2;
+                }
+
+                keyToSend = "pcM3Inclusion";
+                chkValue = (M3inc == "1") ? true : false;
+
+                sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM3Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM3Inclusion.ImageIndex = 2;
+                }
+
+
+                keyToSend = "pcM4Inclusion";
+                chkValue = (M4inc == "1") ? true : false;
+
+                sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM4Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM4Inclusion.ImageIndex = 2;
+                }
+
+
+                keyToSend = "pcM5Inclusion";
+                chkValue = (M5inc == "1") ? true : false;
+
+                sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM5Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM5Inclusion.ImageIndex = 2;
+                }
+
+
+                keyToSend = "pcM6Inclusion";
+                chkValue = (M6inc == "1") ? true : false;
+
+                sendResult = await ccService.Send(keyToSend, chkValue);
+
+                if (sendResult.OpcResult)
+                {
+                    checkBoxM6Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                }
+                else
+                {
+                    checkBoxM6Inclusion.ImageIndex = 2;
+                }
             }
-            else
-            {
-                checkBoxM1Inclusion.ImageIndex = 2;
-            }
 
-            keyToSend = "pcM2Inclusion";
-            chkValue = (M2inc == "1") ? true : false;
-
-            sendResult = await ccService.Send(keyToSend, chkValue);
-
-            if (sendResult.OpcResult)
-            {
-                checkBoxM2Inclusion.ImageIndex = (chkValue) ? 0 : 1;
-            }
-            else
-            {
-                checkBoxM2Inclusion.ImageIndex = 2;
-            }
-
-            keyToSend = "pcM3Inclusion";
-            chkValue = (M3inc == "1") ? true : false;
-
-            sendResult = await ccService.Send(keyToSend, chkValue);
-
-            if (sendResult.OpcResult)
-            {
-                checkBoxM3Inclusion.ImageIndex = (chkValue) ? 0 : 1;
-            }
-            else
-            {
-                checkBoxM3Inclusion.ImageIndex = 2;
-            }
-
-
-            keyToSend = "pcM4Inclusion";
-            chkValue = (M4inc == "1") ? true : false;
-
-            sendResult = await ccService.Send(keyToSend, chkValue);
-
-            if (sendResult.OpcResult)
-            {
-                checkBoxM4Inclusion.ImageIndex = (chkValue) ? 0 : 1;
-            }
-            else
-            {
-                checkBoxM4Inclusion.ImageIndex = 2;
-            }
-
-
-            keyToSend = "pcM5Inclusion";
-            chkValue = (M5inc == "1") ? true : false;
-
-            sendResult = await ccService.Send(keyToSend, chkValue);
-
-            if (sendResult.OpcResult)
-            {
-                checkBoxM5Inclusion.ImageIndex = (chkValue) ? 0 : 1;
-            }
-            else
-            {
-                checkBoxM5Inclusion.ImageIndex = 2;
-            }
-
-
-            keyToSend = "pcM6Inclusion";
-            chkValue = (M6inc == "1") ? true : false;
-
-            sendResult = await ccService.Send(keyToSend, chkValue);
-
-            if (sendResult.OpcResult)
-            {
-                checkBoxM6Inclusion.ImageIndex = (chkValue) ? 0 : 1;
-            }
-            else
-            {
-                checkBoxM6Inclusion.ImageIndex = 2;
-            }
             numericUpDownM6OnPercentage.Value = short.Parse(guiConfigurator.GetValue("T0", "M6PERCENTAGE", ""));
             if (ccService.ClientIsConnected)
             {
                 keyToSend = "pcM6ONPercentage";
 
-                sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM6OnPercentage.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM6OnPercentage.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -604,7 +614,7 @@ namespace GUI
             {
                 keyToSend = "pcM1JogSpeed";
 
-                sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1JogSpeed.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1JogSpeed.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -620,7 +630,7 @@ namespace GUI
             if (ccService.ClientIsConnected)
             {
                 keyToSend = "pcM1ManualQuote";
-                sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM1ManualQuote.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM1ManualQuote.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -635,7 +645,7 @@ namespace GUI
             if (ccService.ClientIsConnected)
             {
                 keyToSend = "pcM1ManualSpeed";
-                sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM1ManualSpeed.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM1ManualSpeed.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -656,7 +666,7 @@ namespace GUI
             {
                 keyToSend = "pcM2JogSpeed";
 
-                sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM2JogSpeed.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM2JogSpeed.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -671,7 +681,7 @@ namespace GUI
             if (ccService.ClientIsConnected)
             {
                 keyToSend = "pcM2ManualQuote";
-                sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM2ManualQuote.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM2ManualQuote.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -685,7 +695,7 @@ namespace GUI
             if (ccService.ClientIsConnected)
             {
                 keyToSend = "pcM2ManualSpeed";
-                sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM2ManualSpeed.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM2ManualSpeed.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -705,7 +715,7 @@ namespace GUI
             {
                 keyToSend = "pcM3JogSpeed";
 
-                sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3JogSpeed.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3JogSpeed.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -720,7 +730,7 @@ namespace GUI
             if (ccService.ClientIsConnected)
             {
                 keyToSend = "pcM3ManualQuote";
-                sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3ManualQuote.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3ManualQuote.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -734,7 +744,7 @@ namespace GUI
             if (ccService.ClientIsConnected)
             {
                 keyToSend = "pcM3ManualSpeed";
-                sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3ManualSpeed.Value.ToString()));
+                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3ManualSpeed.Value.ToString()));
 
                 if (sendResult.OpcResult)
                 {
@@ -746,23 +756,118 @@ namespace GUI
             }
             comboBoxM3TestProgramList.Text = guiConfigurator.GetValue("T3_2", "PRGNAME", "");
             comboBoxM3TestRecipeName.Text = guiConfigurator.GetValue("T3_2", "RECIPENAME", "");
+
+            //update pad laser file
+            M4PrgName = comboBoxM4PrgName.Text;
+            string modelName = M4PrgName.Substring(2, 4);
+
+            //check model name
+            if (modelName == "")
+            {
+                //program name with incorrect format
+                //todo add message to the operator
+                return;
+            }
+
+            //get data from DB
+            MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+            if ((recs.Error == 0) & (recs.Result.Count != 0))
+            {
+                string top = "";
+                string bottom = "";
+
+                //aggiornare controlli
+                if (recs.Result[0].m4_param2 == 0)
+                {
+                    top = recs.Result[0].m4_param3.ToString();
+                    bottom = recs.Result[0].m4_param4.ToString();
+                }
+
+                if (recs.Result[0].m4_param2 == 1)
+                {
+                    top = DateTime.Now.ToString("yyyy-MM-dd");
+                    bottom = bottom = recs.Result[0].m4_param4.ToString();
+                }
+
+                if (recs.Result[0].m4_param2 == 2)
+                {
+                    top = recs.Result[0].m4_param3.ToString();
+                    bottom = DateTime.Now.ToString("yyyy-MM-dd");
+                }
+
+                if (recs.Result[0].m4_param2 == 3)
+                {
+                    top = DateTime.Now.ToString("yyyy-MM-dd");
+                    bottom = DateTime.Now.ToString("yyyy-MM-dd");
+                }
+
+
+                WritePadLaserRecipe(top, Properties.Settings.Default.PadLaserFilePathTop);
+                WritePadLaserRecipe(bottom, Properties.Settings.Default.PadLaserFilePathBottom);
+            }
+        }
+
+        private async void SendSizeFromM1ProgramToOpc()
+        {
+            if (M1PrgName == "") return;
+
+            short size = 0;
+            size = short.Parse(M1PrgName.Substring(7, 3));
+
+            string keyToSend = "pcM1SizeInProduction";
+            var sendResult = await ccService.Send(keyToSend, size);
+
+            if (sendResult.OpcResult)
+            {
+            }
+            else
+            {
+
+            }
+        }
+
+        private async void SendStationRGM3ToOpc(string prgName1, string prgName2)
+        {
+            //send station
+            string stationIDKey = "pcM3StationRG";
+            string foot1 = "";
+            string foot2 = "";
+            foot1 = prgName1.Substring(11, 2);
+            foot2 = prgName1.Substring(11, 2);
+
+            if (foot1 != "")
+            {
+                if (string.Equals(prgName1.Substring(11, 2), "DX", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    var sendResult3 = await ccService.Send(stationIDKey, 1);
+                }
+            }
+
+            if (foot2 != "")
+            {
+                if (string.Equals(prgName2.Substring(11, 2), "DX", StringComparison.CurrentCultureIgnoreCase))
+                {
+                    var sendResult3 = await ccService.Send(stationIDKey, 2);
+                }
+            }
         }
 
         private void InitM1AlarmsSettings()
         {
             try
             {
-                dataGridView1.Rows.Clear();
-                dataGridView1.Rows.Add(8);
+                //dataGridView1.Rows.Clear();
+                //dataGridView1.Rows.Add(8);
 
-                dataGridView1.Rows[0].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A1", "");
-                dataGridView1.Rows[1].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A2", "");
-                dataGridView1.Rows[2].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A3", "");
-                dataGridView1.Rows[3].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A4", "");
-                dataGridView1.Rows[4].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A5", "");
-                dataGridView1.Rows[5].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A6", "");
-                dataGridView1.Rows[6].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A7", "");
-                dataGridView1.Rows[7].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A8", "");
+                //dataGridView1.Rows[0].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A1", "");
+                //dataGridView1.Rows[1].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A2", "");
+                //dataGridView1.Rows[2].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A3", "");
+                //dataGridView1.Rows[3].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A4", "");
+                //dataGridView1.Rows[4].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A5", "");
+                //dataGridView1.Rows[5].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A6", "");
+                //dataGridView1.Rows[6].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A7", "");
+                //dataGridView1.Rows[7].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A8", "");
                 //dataGridViewM1AlarmsTimeout.Rows[0].Cells[1]. = ;
 
                 //dataGridViewM1AlarmsTimeout.Rows[0].Cells[1].Value = "1";
@@ -1349,6 +1454,9 @@ namespace GUI
                 return;
             }
 
+            string top = GetTopFromPadLaserAddNewRecipe();
+            string bottom = GetBottomFromPadLaserAddNewRecipe();
+
             object[] value = new object[]
                    {
                     textBoxMRecipeName.Text,
@@ -1363,9 +1471,9 @@ namespace GUI
                     (radioButtonFootOrderOpt1.Checked)?1:2,
                     //M4 params
                     (checkBoxM4Param1.CheckState == CheckState.Checked)?1:0,
-                    0,
-                    textBoxLaserLine1.Text,
-                    textBoxLaserLine2.Text,
+                    GetSelOptionTopBottomAddNewRecipe(),
+                    top,
+                    bottom,
                     //M6 params
                     (checkBoxM5Param1.CheckState == CheckState.Checked)?1:0,
                     0,
@@ -1397,6 +1505,84 @@ namespace GUI
             }
         }
 
+        private string GetTopFromPadLaserAddNewRecipe()
+        {
+            string strTop = "";
+            if (radioButtonM4Sel1Top.Checked)
+            {
+                //dateontop
+                strTop = DateTime.Now.ToString("yyyy-MM-dd");
+            }
+            else strTop = textBoxLaserLine1.Text;
+
+            return strTop;
+        }
+
+        private string GetBottomFromPadLaserAddNewRecipe()
+        {
+            string strBottom = "";
+            if (radioButtonM4Sel1Bottom.Checked)
+            {
+                //dateontop
+                strBottom = DateTime.Now.ToString("yyyy-MM-dd");
+            }
+            else strBottom = textBoxLaserLine2.Text;
+
+            return strBottom;
+        }
+
+        private int GetSelOptionTopBottomAddNewRecipe()
+        {
+            int seloption = 0;
+            if ((radioButtonM4Sel1Top.Checked) & (radioButtonM4Sel1Bottom.Checked))
+            {
+                seloption = 3;
+            }
+
+            if ((radioButtonM4Sel1Top.Checked == false) & (radioButtonM4Sel1Bottom.Checked))
+            {
+                seloption = 2;
+            }
+
+            if ((radioButtonM4Sel1Top.Checked) & (radioButtonM4Sel1Bottom.Checked == false))
+            {
+                seloption = 1;
+            }
+
+            if ((radioButtonM4Sel1Top.Checked == false) & (radioButtonM4Sel1Bottom.Checked == false))
+            {
+                seloption = 0;
+            }
+
+            return seloption;
+        }
+
+        private int GetSelOptionTopBottomUpdateRecipe()
+        {
+            int seloption = 0;
+            if ((radioButtonMRecipeTopSel1.Checked) & (radioButtonMRecipeBottomSel1.Checked))
+            {
+                seloption = 3;
+            }
+
+            if ((radioButtonMRecipeTopSel1.Checked == false) & (radioButtonMRecipeBottomSel1.Checked))
+            {
+                seloption = 2;
+            }
+
+            if ((radioButtonMRecipeTopSel1.Checked) & (radioButtonMRecipeBottomSel1.Checked == false))
+            {
+                seloption = 1;
+            }
+
+            if ((radioButtonMRecipeTopSel1.Checked == false) & (radioButtonMRecipeBottomSel1.Checked == false))
+            {
+                seloption = 0;
+            }
+
+            return seloption;
+        }
+
         private async void comboBoxM3PrgName_st1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBoxM3PrgName_st1.Text == "") return;
@@ -1417,7 +1603,9 @@ namespace GUI
             MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
 
             if ((recs.Error == 0) & (recs.Result.Count != 0))
-            {                
+            {
+                SendStationRGM3ToOpc(M3PrgName1, M3PrgName2);
+
                 //send recipe
                 string keyValue = "pcM3Param1";
                 var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param1.ToString()));
@@ -1428,7 +1616,7 @@ namespace GUI
                 sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
 
                 labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
-                labelM3Param2Value.Text = recs.Result[0].m3_param2.ToString();
+                labelM3Param2Value.Text = ((recs.Result[0].m3_param2 == 1)?"start from right":"start from left");
 
                 //send quote, speed
                 var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
@@ -1499,6 +1687,9 @@ namespace GUI
 
             if ((recs.Error == 0) & (recs.Result.Count != 0))
             {
+                //send station
+                SendStationRGM3ToOpc(M3PrgName1, M3PrgName2);
+
                 //send recipe
                 string keyValue = "pcM3Param1";
                 var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param1.ToString()));
@@ -1507,7 +1698,7 @@ namespace GUI
                 sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
 
                 labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
-                labelM3Param2Value.Text = recs.Result[0].m3_param2.ToString();
+                labelM3Param2Value.Text = ((recs.Result[0].m3_param2 == 1) ? "start from right" : "start from left");
                 //send quote, speed
                 var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
@@ -1608,8 +1799,38 @@ namespace GUI
                     AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padLaser, "error sending " + readResult.NodeString);
                 }
 
+                string top = "";
+                string bottom = "";
+
+                //aggiornare controlli
+                if (recs.Result[0].m4_param2 == 0)
+                {
+                    top = recs.Result[0].m4_param3.ToString();
+                    bottom = recs.Result[0].m4_param4.ToString();
+                }
+
+                if (recs.Result[0].m4_param2 == 1)
+                {
+                    top = DateTime.Now.ToString("yyyy-MM-dd");
+                    bottom = bottom = recs.Result[0].m4_param4.ToString();
+                }
+
+                if (recs.Result[0].m4_param2 == 2)
+                {
+                    top = recs.Result[0].m4_param3.ToString();
+                    bottom = DateTime.Now.ToString("yyyy-MM-dd");
+                }
+
+                if (recs.Result[0].m4_param2 == 3)
+                {
+                    top = DateTime.Now.ToString("yyyy-MM-dd");
+                    bottom = DateTime.Now.ToString("yyyy-MM-dd");
+                }
+
+
                 //sned to padlaser
-                WritePadLaserRecipe(recs.Result[0].m4_param3.ToString(), recs.Result[0].m4_param4.ToString(), Properties.Settings.Default.PadLaserFilePath);
+                WritePadLaserRecipe(top, Properties.Settings.Default.PadLaserFilePathTop);
+                WritePadLaserRecipe(bottom, Properties.Settings.Default.PadLaserFilePathBottom);
             }
             else
             {
@@ -1712,6 +1933,8 @@ namespace GUI
                 //todo add message to the operator
                 return;
             }
+
+            SendSizeFromM1ProgramToOpc();
 
             //get data from DB
             MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
@@ -2356,7 +2579,9 @@ namespace GUI
                     keyValue = "pcM3Param2";
                     sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
 
-                    WriteOnLabelAsync(labelM3Param2Value, recs.Result[0].m3_param2.ToString());
+                    string txtFoot = ((recs.Result[0].m3_param2 == 1) ? "start from right" : "start from left");
+
+                    WriteOnLabelAsync(labelM3Param2Value, txtFoot);
                 }
             }
         }
@@ -2379,7 +2604,37 @@ namespace GUI
 
                     WriteOnLabelAsync(labelM3Param1Value, recs.Result[0].m3_param1.ToString());
 
-                    WritePadLaserRecipe(recs.Result[0].m4_param3.ToString(), recs.Result[0].m4_param3.ToString(), Properties.Settings.Default.PadLaserFilePath);
+                    string top = "";
+                    string bottom = "";
+
+                    //aggiornare controlli
+                    if (recs.Result[0].m4_param2 == 0)
+                    {
+                        top = recs.Result[0].m4_param3.ToString();
+                        bottom = recs.Result[0].m4_param4.ToString();
+                    }
+
+                    if (recs.Result[0].m4_param2 == 1)
+                    {
+                        top = DateTime.Now.ToString("yyyy-MM-dd");
+                        bottom = bottom = recs.Result[0].m4_param4.ToString(); 
+                    }
+
+                    if (recs.Result[0].m4_param2 == 2)
+                    {
+                        top = recs.Result[0].m4_param3.ToString();
+                        bottom = DateTime.Now.ToString("yyyy-MM-dd");
+                    }
+
+                    if (recs.Result[0].m4_param2 == 3)
+                    {
+                        top = DateTime.Now.ToString("yyyy-MM-dd");
+                        bottom = DateTime.Now.ToString("yyyy-MM-dd");
+                    }
+
+
+                    WritePadLaserRecipe(top, Properties.Settings.Default.PadLaserFilePathTop);
+                    WritePadLaserRecipe(bottom, Properties.Settings.Default.PadLaserFilePathBottom);
                 }
             }
         }
@@ -2517,7 +2772,11 @@ namespace GUI
                     keyValue = "pcM3Param2";
                     sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
 
-                    WriteOnLabelAsync(labelM3Param2Value, recs.Result[0].m3_param2.ToString());
+                    string txtFoot = ((recs.Result[0].m3_param2 == 1) ? "start from right" : "start from left");
+
+                    WriteOnLabelAsync(labelM3Param2Value, txtFoot);
+
+                    
 
                     //send quote, speed
                     var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
@@ -2756,7 +3015,7 @@ namespace GUI
 
                 if ((recs.Error == 0) & (recs.Result.Count != 0))
                 {
-                    string keyValue = "pcM5Param1";
+                    string keyValue = "pcM6Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m6_param1.ToString()));
 
                     WriteOnLabelAsync(labelM6Param1Value, recs.Result[0].m6_param1.ToString());
@@ -2788,6 +3047,40 @@ namespace GUI
                 checkBoxM6RecipeModify.CheckState = ((short.Parse(recs.Result[0].m6_param1.ToString()) == 1) ? CheckState.Checked : CheckState.Unchecked);
                 radioButtonM3Option1Recipe.Checked = ((short.Parse(recs.Result[0].m3_param2.ToString()) == 1) ? true : false);
                 radioButtonM3Option2Recipe.Checked = ((short.Parse(recs.Result[0].m3_param2.ToString()) == 2) ? true : false);
+
+                //aggiornare controlli
+                if (recs.Result[0].m4_param2 == 0)
+                {
+                    radioButtonMRecipeTopSel1.Checked = false;
+                    radioButtonMRecipeTopSel2.Checked = true;
+                    radioButtonMRecipeBottomSel1.Checked = false;
+                    radioButtonMRecipeBottomSel2.Checked = true;
+                }
+
+                if (recs.Result[0].m4_param2 == 1)
+                {
+                    radioButtonMRecipeTopSel1.Checked = true;
+                    radioButtonMRecipeTopSel2.Checked = false;
+                    radioButtonMRecipeBottomSel1.Checked = false;
+                    radioButtonMRecipeBottomSel2.Checked = true;
+                }
+
+                if (recs.Result[0].m4_param2 == 2)
+                {
+                    radioButtonMRecipeTopSel1.Checked = false;
+                    radioButtonMRecipeTopSel2.Checked = true;
+                    radioButtonMRecipeBottomSel1.Checked = true;
+                    radioButtonMRecipeBottomSel2.Checked = false;
+                }
+
+                if (recs.Result[0].m4_param2 == 3)
+                {
+                    radioButtonMRecipeTopSel1.Checked = true;
+                    radioButtonMRecipeTopSel2.Checked = false;
+                    radioButtonMRecipeBottomSel1.Checked = true;
+                    radioButtonMRecipeBottomSel2.Checked = false;
+                }
+
                 textBoxM4TopLineRecipe.Text = recs.Result[0].m4_param3.ToString();
                 textBoxM4BottomLineRecipe.Text = recs.Result[0].m4_param4.ToString();
             }
@@ -2801,6 +3094,8 @@ namespace GUI
             DialogResult res = xDialog.MsgBox.Show("Are you sure you want to update recipe?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
             if (res == DialogResult.Yes)
             {
+                
+
                 if (comboBoxMRecipeName.Text == "") return;
                 object[] values = new object[]
                         {
@@ -2812,6 +3107,7 @@ namespace GUI
                                     (checkBoxM6RecipeModify.CheckState == CheckState.Checked) ? 1 : 0,
 
             (radioButtonM3Option1Recipe.Checked == true) ? 1 : 2,
+            GetSelOptionTopBottomUpdateRecipe(),
             textBoxM4TopLineRecipe.Text,
             textBoxM4BottomLineRecipe.Text,
 
@@ -2825,6 +3121,7 @@ namespace GUI
                         "m5_param1",
                         "m6_param1",
                         "m3_param2",
+                        "m4_param2",
                         "m4_param3",
                         "m4_param4",
                         };
@@ -3203,16 +3500,15 @@ namespace GUI
         }
 
 
-        public void WritePadLaserRecipe(string top, string bottom, string FileName)
+        public void WritePadLaserRecipe(string strLine, string FileName)
         {
             try
             {
                 using (TextWriter tw = new StreamWriter(FileName, false))
                 {
-                    tw.WriteLine(top);
-                    tw.WriteLine(bottom);
+                    tw.WriteLine(strLine);
                 }                
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padLaser, "parameters succesfully sent");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padLaser, "parameter " + strLine + "succesfully sent");
             }
             catch (Exception ex)  //Writing to log has failed, send message to trace in case anyone is listening.
             {
@@ -3222,31 +3518,34 @@ namespace GUI
 
 
 
-     
 
-        private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if ((e.ColumnIndex == 1) && (e.RowIndex >= 0))
-            {
-                System.Drawing.Image img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\notinalarm.png");
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-                if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].ToolTipText == "notinalarm")
-                {
-                    img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\notinalarm.png");
-                }
-                else
-                {
-                    img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\inalarm.png");
-                }
-                var w = 24;// img.Width;
-                var h = 24;// img.Height;
-                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
-                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
 
-                e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
-                e.Handled = true;
-            }
-        }
+
+        //private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        //{
+        //    if ((e.ColumnIndex == 1) && (e.RowIndex >= 0))
+        //    {
+        //        System.Drawing.Image img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\notinalarm.png");
+        //        e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+        //        if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].ToolTipText == "notinalarm")
+        //        {
+        //            img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\notinalarm.png");
+        //        }
+        //        else
+        //        {
+        //            img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\inalarm.png");
+        //        }
+        //        var w = 24;// img.Width;
+        //        var h = 24;// img.Height;
+        //        var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+        //        var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+        //        e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
+        //        e.Handled = true;
+        //    }
+        //}
+
+
     }    
 
         

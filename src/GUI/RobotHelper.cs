@@ -473,9 +473,48 @@ namespace GUI
                     WriteOnLabelAsync(readResultPLC["pcM2CycleCounter"], labelM2CycleId);
                     WriteOnLabelAsync(readResultPLC["pcM3CycleCounter"], labelM3CycleId);
                     WriteOnLabelAsync(readResultPLC["pcM4CycleCounter"], labelM4CycleId);
-                    WriteOnLabelAsync(readResultPLC["pcM5CycleCounter"], labelM5CycleId);                    
+                    WriteOnLabelAsync(readResultPLC["pcM5CycleCounter"], labelM5CycleId);
 
-                    
+
+
+                    #endregion
+
+                    #region(* cycle time *)
+                    //keys = new List<string>()
+                    //{
+                    //    "pcM1CycleTime",
+                    //    "pcM2CycleTime",
+                    //    //"pcM3CycleTime",
+                    //    "pcM4CycleTime",
+                    //    //"pcM5CycleTIme"
+                    //};
+
+                    //readResultPLC = await ccService.Read(keys);
+                    //WriteOnLabelAsync(readResultPLC["pcM1CycleTime"], labelM1CycleTime);
+                    //WriteOnLabelAsync(readResultPLC["pcM2CycleTime"], labelM2CycleTime);
+
+
+
+                    #endregion
+
+                    #region(* phase *)
+                    keys = new List<string>()
+                    {
+                        "pcM1State",
+                        "pcM2State",
+                        "pcM3State",
+                        "pcM4State",
+                        "pcM5State"
+                    };
+
+                    readResultPLC = await ccService.Read(keys);
+                    WriteOnLabelAsync(readResultPLC["pcM1State"], labelM1Phase);
+                    WriteOnLabelAsync(readResultPLC["pcM2State"], labelM2Phase);
+                    WriteOnLabelAsync(readResultPLC["pcM3State"], labelM3Phase);
+                    WriteOnLabelAsync(readResultPLC["pcM4State"], labelM4Phase);
+                    WriteOnLabelAsync(readResultPLC["pcM5State"], labelM5Phase);
+
+
 
                     #endregion
 
@@ -634,16 +673,16 @@ namespace GUI
 
                         }
 
-                        if (bool.Parse(readRes["pcM6RestartPlc"].Value.ToString()))
-                        {
-                            var readRes2 = await ccService.Send("pcM6RestartPlc", false);
+                        //if (bool.Parse(readRes["pcM6RestartPlc"].Value.ToString()))
+                        //{
+                        //    var readRes2 = await ccService.Send("pcM6RestartPlc", false);
 
-                            RestartRequestFromM6();
-                        }
-                        else
-                        {
+                        //    RestartRequestFromM6();
+                        //}
+                        //else
+                        //{
 
-                        }
+                        //}
                     }
                     catch (Exception ex)
                     {
