@@ -152,6 +152,7 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM2Reset", $"ns=2;s=Tags.Pad_print_interna/pc_reset_generale", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2ResetCycle", $"ns=2;s=Tags.Pad_print_interna/pc_reset_numero_cicli", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2RestartPlc", $"ns=2;s=Tags.Pad_print_interna/pc_riavvio_plc", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM2CycleTime", $"ns=2;s=Tags.Pad_print_interna/pc_tempo_ciclo", typeof(float)));
             #endregion
 
             #region(* M3 OPCUA variables *)
@@ -226,6 +227,8 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM3NormHoriBwd", $"ns=2;s=Tags.Pad_print_esterna/pc_normalizzazione_orizzontale_indietro", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM3RestartPlc", $"ns=2;s=Tags.Pad_print_esterna/pc_riavvio_plc", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM3StationRG", $"ns=2;s=Tags.Pad_print_esterna/pc_numero_stazione", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM3CycleTimeRG", $"ns=2;s=Tags.Pad_print_esterna/pc_tempo_ciclo_destro", typeof(float)));
+            ClientDataConfig.Add(new OpcObjectData("pcM3CycleTimeLF", $"ns=2;s=Tags.Pad_print_esterna/pc_tempo_ciclo_sinistro", typeof(float)));
             #endregion
 
             #region(* M4 OPCUA variables *)
@@ -258,6 +261,7 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM4CycleCounter", $"ns=2;s=Tags.Rifilatrice/pc_pad_laser_numero_cicli", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM4ResetCycle", $"ns=2;s=Tags.Rifilatrice/pc_pad_laser_reset_numero_cicli", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM4RestartPlc", $"ns=2;s=Tags.Rifilatrice/pc_pad_laser_riavvio_plc", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM4CycleTime", $"ns=2;s=Tags.Rifilatrice/pc_pad_laser_tempo_ciclo", typeof(float)));
             #endregion
 
             #region  (* M5 OPCUA variables *)
@@ -301,6 +305,8 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM5GeneralAlarms", $"ns=2;s=Tags.Manipolatore/pc_allarmi_generali", typeof(short[])));
             ClientDataConfig.Add(new OpcObjectData("pcM5ResetCycle", $"ns=2;s=Tags.Manipolatore/pc_numero_cicli", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM5RestartPlc", $"ns=2;s=Tags.Manipolatore/pc_riavvio_plc", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5CycleTime1", $"ns=2;s=Tags.Manipolatore/pc_tempo_ciclo_primo", typeof(float)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5CycleTime2", $"ns=2;s=Tags.Manipolatore/pc_tempo_ciclo_secondo", typeof(float)));
             #endregion
 
             #region(* M6 OPCUA variables invalid*)

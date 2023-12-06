@@ -1123,6 +1123,9 @@
             this.tabControlMain = new LidorSystems.IntegralUI.Containers.TabControl();
             this.imageListMainControl = new System.Windows.Forms.ImageList(this.components);
             this.imageListNodes = new System.Windows.Forms.ImageList(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tabPageT3_1.SuspendLayout();
             this.contextMenuStripT3_1.SuspendLayout();
             this.groupBoxM2Print.SuspendLayout();
@@ -1204,6 +1207,9 @@
             this.tabPageT1_4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).BeginInit();
             this.tabControlMain.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPageT3_1
@@ -12431,10 +12437,9 @@
             // groupBoxRecipeM4
             // 
             this.groupBoxRecipeM4.BackColor = System.Drawing.SystemColors.Control;
+            this.groupBoxRecipeM4.Controls.Add(this.groupBox3);
             this.groupBoxRecipeM4.Controls.Add(this.radioButtonM4Sel2Bottom);
             this.groupBoxRecipeM4.Controls.Add(this.radioButtonM4Sel1Bottom);
-            this.groupBoxRecipeM4.Controls.Add(this.radioButtonM4Sel2Top);
-            this.groupBoxRecipeM4.Controls.Add(this.radioButtonM4Sel1Top);
             this.groupBoxRecipeM4.Controls.Add(this.labelPadLaserLine2);
             this.groupBoxRecipeM4.Controls.Add(this.labelPadLaserLine1);
             this.groupBoxRecipeM4.Controls.Add(this.labelM4Param1);
@@ -12480,7 +12485,7 @@
             this.radioButtonM4Sel2Top.AutoSize = true;
             this.radioButtonM4Sel2Top.BackColor = System.Drawing.SystemColors.Control;
             this.radioButtonM4Sel2Top.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonM4Sel2Top.Location = new System.Drawing.Point(183, 90);
+            this.radioButtonM4Sel2Top.Location = new System.Drawing.Point(86, 23);
             this.radioButtonM4Sel2Top.Name = "radioButtonM4Sel2Top";
             this.radioButtonM4Sel2Top.Size = new System.Drawing.Size(52, 20);
             this.radioButtonM4Sel2Top.TabIndex = 146;
@@ -12493,7 +12498,7 @@
             this.radioButtonM4Sel1Top.BackColor = System.Drawing.SystemColors.Control;
             this.radioButtonM4Sel1Top.Checked = true;
             this.radioButtonM4Sel1Top.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonM4Sel1Top.Location = new System.Drawing.Point(110, 90);
+            this.radioButtonM4Sel1Top.Location = new System.Drawing.Point(10, 20);
             this.radioButtonM4Sel1Top.Name = "radioButtonM4Sel1Top";
             this.radioButtonM4Sel1Top.Size = new System.Drawing.Size(55, 20);
             this.radioButtonM4Sel1Top.TabIndex = 145;
@@ -12803,10 +12808,8 @@
             // 
             // tabPageT0_2_2
             // 
-            this.tabPageT0_2_2.Controls.Add(this.radioButtonMRecipeBottomSel2);
-            this.tabPageT0_2_2.Controls.Add(this.radioButtonMRecipeBottomSel1);
-            this.tabPageT0_2_2.Controls.Add(this.radioButtonMRecipeTopSel2);
-            this.tabPageT0_2_2.Controls.Add(this.radioButtonMRecipeTopSel1);
+            this.tabPageT0_2_2.Controls.Add(this.groupBox2);
+            this.tabPageT0_2_2.Controls.Add(this.groupBox1);
             this.tabPageT0_2_2.Controls.Add(this.checkBox3);
             this.tabPageT0_2_2.Controls.Add(this.buttonMRecipeDeleteAll);
             this.tabPageT0_2_2.Controls.Add(this.buttonMRecipeDelete);
@@ -12856,7 +12859,7 @@
             this.radioButtonMRecipeBottomSel2.AutoSize = true;
             this.radioButtonMRecipeBottomSel2.BackColor = System.Drawing.SystemColors.Control;
             this.radioButtonMRecipeBottomSel2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonMRecipeBottomSel2.Location = new System.Drawing.Point(384, 313);
+            this.radioButtonMRecipeBottomSel2.Location = new System.Drawing.Point(90, 20);
             this.radioButtonMRecipeBottomSel2.Name = "radioButtonMRecipeBottomSel2";
             this.radioButtonMRecipeBottomSel2.Size = new System.Drawing.Size(52, 20);
             this.radioButtonMRecipeBottomSel2.TabIndex = 170;
@@ -12869,7 +12872,7 @@
             this.radioButtonMRecipeBottomSel1.BackColor = System.Drawing.SystemColors.Control;
             this.radioButtonMRecipeBottomSel1.Checked = true;
             this.radioButtonMRecipeBottomSel1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonMRecipeBottomSel1.Location = new System.Drawing.Point(311, 313);
+            this.radioButtonMRecipeBottomSel1.Location = new System.Drawing.Point(10, 20);
             this.radioButtonMRecipeBottomSel1.Name = "radioButtonMRecipeBottomSel1";
             this.radioButtonMRecipeBottomSel1.Size = new System.Drawing.Size(55, 20);
             this.radioButtonMRecipeBottomSel1.TabIndex = 169;
@@ -12882,7 +12885,7 @@
             this.radioButtonMRecipeTopSel2.AutoSize = true;
             this.radioButtonMRecipeTopSel2.BackColor = System.Drawing.SystemColors.Control;
             this.radioButtonMRecipeTopSel2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonMRecipeTopSel2.Location = new System.Drawing.Point(386, 253);
+            this.radioButtonMRecipeTopSel2.Location = new System.Drawing.Point(88, 20);
             this.radioButtonMRecipeTopSel2.Name = "radioButtonMRecipeTopSel2";
             this.radioButtonMRecipeTopSel2.Size = new System.Drawing.Size(52, 20);
             this.radioButtonMRecipeTopSel2.TabIndex = 168;
@@ -12895,7 +12898,7 @@
             this.radioButtonMRecipeTopSel1.BackColor = System.Drawing.SystemColors.Control;
             this.radioButtonMRecipeTopSel1.Checked = true;
             this.radioButtonMRecipeTopSel1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonMRecipeTopSel1.Location = new System.Drawing.Point(313, 253);
+            this.radioButtonMRecipeTopSel1.Location = new System.Drawing.Point(10, 20);
             this.radioButtonMRecipeTopSel1.Name = "radioButtonMRecipeTopSel1";
             this.radioButtonMRecipeTopSel1.Size = new System.Drawing.Size(55, 20);
             this.radioButtonMRecipeTopSel1.TabIndex = 167;
@@ -17489,6 +17492,7 @@
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
             this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
             this.tabControlMain.Controls.Add(this.tabPageT7);
             this.tabControlMain.Controls.Add(this.tabPageT6);
             this.tabControlMain.Controls.Add(this.tabPageT5);
@@ -17499,7 +17503,6 @@
             this.tabControlMain.Controls.Add(this.tabPageT0);
             this.tabControlMain.Controls.Add(this.tabPageT0_1);
             this.tabControlMain.Controls.Add(this.tabPageT0_2);
-            this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_3);
             this.tabControlMain.Controls.Add(this.tabPage2);
             this.tabControlMain.Controls.Add(this.tabPageT1_1);
@@ -17615,6 +17618,36 @@
             this.imageListNodes.Images.SetKeyName(1, "plc_off.png");
             this.imageListNodes.Images.SetKeyName(2, "iot_on.png");
             this.imageListNodes.Images.SetKeyName(3, "iot_off.png");
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButtonMRecipeTopSel2);
+            this.groupBox1.Controls.Add(this.radioButtonMRecipeTopSel1);
+            this.groupBox1.Location = new System.Drawing.Point(300, 230);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(160, 60);
+            this.groupBox1.TabIndex = 171;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioButtonMRecipeBottomSel2);
+            this.groupBox2.Controls.Add(this.radioButtonMRecipeBottomSel1);
+            this.groupBox2.Location = new System.Drawing.Point(300, 300);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(160, 60);
+            this.groupBox2.TabIndex = 172;
+            this.groupBox2.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.radioButtonM4Sel2Top);
+            this.groupBox3.Controls.Add(this.radioButtonM4Sel1Top);
+            this.groupBox3.Location = new System.Drawing.Point(102, 76);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(140, 51);
+            this.groupBox3.TabIndex = 149;
+            this.groupBox3.TabStop = false;
             // 
             // FormApp
             // 
@@ -17738,6 +17771,12 @@
             this.tabPageT1_4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tabControlMain)).EndInit();
             this.tabControlMain.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -18690,5 +18729,8 @@
         private System.Windows.Forms.RadioButton radioButtonMRecipeBottomSel1;
         private System.Windows.Forms.RadioButton radioButtonMRecipeTopSel2;
         private System.Windows.Forms.RadioButton radioButtonMRecipeTopSel1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
