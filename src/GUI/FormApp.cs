@@ -759,52 +759,49 @@ namespace GUI
 
             //update pad laser file
             M4PrgName = comboBoxM4PrgName.Text;
-            string modelName = M4PrgName.Substring(2, 4);
+            string modelName = "";
 
-            //check model name
-            if (modelName == "")
+            if (M4PrgName != "")
             {
-                //program name with incorrect format
-                //todo add message to the operator
-                return;
-            }
+               modelName = M4PrgName.Substring(2, 4);
 
-            //get data from DB
-            MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
 
-            if ((recs.Error == 0) & (recs.Result.Count != 0))
-            {
-                string top = "";
-                string bottom = "";
-
-                //aggiornare controlli
-                if (recs.Result[0].m4_param2 == 0)
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
                 {
-                    top = recs.Result[0].m4_param3.ToString();
-                    bottom = recs.Result[0].m4_param4.ToString();
+                    string top = "";
+                    string bottom = "";
+
+                    //aggiornare controlli
+                    if (recs.Result[0].m4_param2 == 0)
+                    {
+                        top = recs.Result[0].m4_param3.ToString();
+                        bottom = recs.Result[0].m4_param4.ToString();
+                    }
+
+                    if (recs.Result[0].m4_param2 == 1)
+                    {
+                        top = DateTime.Now.ToString("yyyy-MM-dd");
+                        bottom = bottom = recs.Result[0].m4_param4.ToString();
+                    }
+
+                    if (recs.Result[0].m4_param2 == 2)
+                    {
+                        top = recs.Result[0].m4_param3.ToString();
+                        bottom = DateTime.Now.ToString("yyyy-MM-dd");
+                    }
+
+                    if (recs.Result[0].m4_param2 == 3)
+                    {
+                        top = DateTime.Now.ToString("yyyy-MM-dd");
+                        bottom = DateTime.Now.ToString("yyyy-MM-dd");
+                    }
+
+
+                    WritePadLaserRecipe(top, Properties.Settings.Default.PadLaserFilePathTop);
+                    WritePadLaserRecipe(bottom, Properties.Settings.Default.PadLaserFilePathBottom);
                 }
-
-                if (recs.Result[0].m4_param2 == 1)
-                {
-                    top = DateTime.Now.ToString("yyyy-MM-dd");
-                    bottom = bottom = recs.Result[0].m4_param4.ToString();
-                }
-
-                if (recs.Result[0].m4_param2 == 2)
-                {
-                    top = recs.Result[0].m4_param3.ToString();
-                    bottom = DateTime.Now.ToString("yyyy-MM-dd");
-                }
-
-                if (recs.Result[0].m4_param2 == 3)
-                {
-                    top = DateTime.Now.ToString("yyyy-MM-dd");
-                    bottom = DateTime.Now.ToString("yyyy-MM-dd");
-                }
-
-
-                WritePadLaserRecipe(top, Properties.Settings.Default.PadLaserFilePathTop);
-                WritePadLaserRecipe(bottom, Properties.Settings.Default.PadLaserFilePathBottom);
             }
         }
 
@@ -813,15 +810,26 @@ namespace GUI
             if (M1PrgName == "") return;
 
             short size = 0;
-            size = short.Parse(M1PrgName.Substring(7, 3));
 
-            string keyToSend = "pcM1SizeInProduction";
-            var sendResult = await ccService.Send(keyToSend, size);
-
-            if (sendResult.OpcResult)
+            try
             {
+                size = short.Parse(M1PrgName.Substring(7, 3));
+
+                if (ccService.ClientIsConnected)
+                {
+                    string keyToSend = "pcM1SizeInProduction";
+                    var sendResult = await ccService.Send(keyToSend, size);
+
+                    if (sendResult.OpcResult)
+                    {
+                    }
+                    else
+                    {
+
+                    }
+                }
             }
-            else
+            catch(Exception ex)
             {
 
             }
@@ -833,23 +841,34 @@ namespace GUI
             string stationIDKey = "pcM3StationRG";
             string foot1 = "";
             string foot2 = "";
-            foot1 = prgName1.Substring(11, 2);
-            foot2 = prgName1.Substring(11, 2);
 
-            if (foot1 != "")
+            try
             {
-                if (string.Equals(prgName1.Substring(11, 2), "DX", StringComparison.CurrentCultureIgnoreCase))
+                foot1 = prgName1.Substring(11, 2);
+                foot2 = prgName1.Substring(11, 2);
+
+                if (ccService.ClientIsConnected)
                 {
-                    var sendResult3 = await ccService.Send(stationIDKey, 1);
+                    if (foot1 != "")
+                    {
+                        if (string.Equals(prgName1.Substring(11, 2), "DX", StringComparison.CurrentCultureIgnoreCase))
+                        {
+                            var sendResult3 = await ccService.Send(stationIDKey, 1);
+                        }
+                    }
+
+                    if (foot2 != "")
+                    {
+                        if (string.Equals(prgName2.Substring(11, 2), "DX", StringComparison.CurrentCultureIgnoreCase))
+                        {
+                            var sendResult3 = await ccService.Send(stationIDKey, 2);
+                        }
+                    }
                 }
             }
-
-            if (foot2 != "")
+            catch(Exception ex)
             {
-                if (string.Equals(prgName2.Substring(11, 2), "DX", StringComparison.CurrentCultureIgnoreCase))
-                {
-                    var sendResult3 = await ccService.Send(stationIDKey, 2);
-                }
+
             }
         }
 
@@ -1612,7 +1631,7 @@ namespace GUI
 
                 //send type order: RG, LF
                 //type order 2: LF, RG
-                keyValue = "pcM3TypeOrder";
+                keyValue = "pcM3Param2";
                 sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
 
                 labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
@@ -1694,7 +1713,7 @@ namespace GUI
                 string keyValue = "pcM3Param1";
                 var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param1.ToString()));
 
-                keyValue = "pcM3TypeOrder";
+                keyValue = "pcM3Param2";
                 sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
 
                 labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
@@ -2498,6 +2517,91 @@ namespace GUI
             } 
         }
 
+        public async void RestartRequestFromM1NoAsync()
+        {
+            if (M1PrgName == "" || ccService.ClientIsConnected == false)
+            {
+
+            }
+            else
+            {
+                string prgName = M1PrgName;
+                string modelName = prgName.Substring(2, 4);
+
+                //check model name
+                if (modelName == "")
+                {
+                    //program name with incorrect format
+                    //todo add message to the operator
+                    return;
+                }
+
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    string keyValue = "pcM1Param1";
+                    var sendResult1 = ccService.Send(keyValue, short.Parse(recs.Result[0].m1_param1.ToString()));
+
+                    labelM1Param1Value.Text = recs.Result[0].m1_param1.ToString();
+                    //send quote, speed
+                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                    {
+                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                        ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                        objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + prgName + config.Extensions[0]);
+                        if (objPoints != null)
+                        {
+                            List<string> keys = new List<string>()
+                            {
+                                "pcM1AutoQuote",
+                                "pcM1AutoSpeed"
+                            };
+
+                            List<object> values = new List<object>()
+                            {
+                                new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
+                                new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                            };
+
+                            var sendResults = await ccService.Send(keys, values);
+
+                            foreach (var result in sendResults)
+                            {
+                                if (result.Value.OpcResult)
+                                {
+                                }
+                                else
+                                {
+                                    //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
+                                }
+                            }
+
+                            var sendResultsTimer = await ccService.Send("pcM1AutoTimer", objPoints.Points[0].CustomFloatParam);
+                            if (sendResultsTimer.OpcResult)
+                            {
+                            }
+                            else
+                            {
+
+                            }
+                        }
+                    }
+                }
+
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM1Inclusion";
+                chkValue = (M1inc == "1") ? true : false;
+
+                var sendResult = ccService.Send(keyToSend, chkValue);
+            }
+        }
+
         public async void UpdateRecipeToM1(string modelName)
         {
             if (ccService.ClientIsConnected == false)
@@ -2520,7 +2624,8 @@ namespace GUI
                     string keyValue = "pcM1Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m1_param1.ToString()));
 
-                    WriteOnLabelAsync(labelM1Param1Value, recs.Result[0].m1_param1.ToString());
+                    //WriteOnLabelAsync(labelM1Param1Value, recs.Result[0].m1_param1.ToString());
+                    labelM1Param1Value.Text = recs.Result[0].m1_param1.ToString();
                 }
             }
         }
@@ -2547,7 +2652,8 @@ namespace GUI
                     string keyValue = "pcM2Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m2_param1.ToString()));
 
-                    WriteOnLabelAsync(labelM2Param1Value, recs.Result[0].m2_param1.ToString());
+                    //WriteOnLabelAsync(labelM2Param1Value, recs.Result[0].m2_param1.ToString());
+                    labelM2Param1Value.Text = recs.Result[0].m2_param1.ToString();
                 }
             }
         }
@@ -2574,14 +2680,15 @@ namespace GUI
                     string keyValue = "pcM3Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param1.ToString()));
 
-                    WriteOnLabelAsync(labelM3Param1Value, recs.Result[0].m3_param1.ToString());
-
+                    //WriteOnLabelAsync(labelM3Param1Value, recs.Result[0].m3_param1.ToString());
+                    labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
                     keyValue = "pcM3Param2";
                     sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
 
                     string txtFoot = ((recs.Result[0].m3_param2 == 1) ? "start from right" : "start from left");
 
-                    WriteOnLabelAsync(labelM3Param2Value, txtFoot);
+                    //WriteOnLabelAsync(labelM3Param2Value, txtFoot);
+                    labelM3Param2Value.Text = txtFoot;
                 }
             }
         }
@@ -2602,8 +2709,8 @@ namespace GUI
                     string keyValue = "pcM4Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m4_param1.ToString()));
 
-                    WriteOnLabelAsync(labelM3Param1Value, recs.Result[0].m3_param1.ToString());
-
+                    //WriteOnLabelAsync(labelM3Param1Value, recs.Result[0].m3_param1.ToString());
+                    labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
                     string top = "";
                     string bottom = "";
 
@@ -2655,8 +2762,8 @@ namespace GUI
                     string keyValue = "pcM6Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m6_param1.ToString()));
 
-                    WriteOnLabelAsync(labelM6Param1Value, recs.Result[0].m6_param1.ToString());
-
+                    //WriteOnLabelAsync(labelM6Param1Value, recs.Result[0].m6_param1.ToString());
+                    labelM6Param1Value.Text = recs.Result[0].m6_param1.ToString();
                 }
             }
         }
@@ -2738,7 +2845,82 @@ namespace GUI
             }
         }
 
+        public async void RestartRequestFromM2NoAsync()
+        {
+            if (M2PrgName == "" || ccService.ClientIsConnected == false)
+            {
 
+            }
+            else
+            {
+                string prgName = M2PrgName;
+                string modelName = prgName.Substring(2, 4);
+
+                //check model name
+                if (modelName == "")
+                {
+                    //program name with incorrect format
+                    //todo add message to the operator
+                    return;
+                }
+
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    string keyValue = "pcM2Param1";
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m2_param1.ToString()));
+
+                    //WriteOnLabelAsync(labelM2Param1Value, recs.Result[0].m2_param1.ToString());
+                    labelM2Param1Value.Text = recs.Result[0].m2_param1.ToString();
+                    //send quote, speed
+                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                    {
+                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                        ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                        objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + prgName + config.Extensions[0]);
+                        if (objPoints != null)
+                        {
+                            List<string> keys = new List<string>()
+                            {
+                                "pcM2AutoQuote",
+                                "pcM2AutoSpeed"
+                            };
+
+                            List<object> values = new List<object>()
+                            {
+                                new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
+                                new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                            };
+
+                            var sendResults = await ccService.Send(keys, values);
+
+                            foreach (var result in sendResults)
+                            {
+                                if (result.Value.OpcResult)
+                                {
+                                }
+                                else
+                                {
+                                    //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM2Inclusion";
+                chkValue = (M2inc == "1") ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+            }
+        }
 
         public async void RestartRequestFromM3()
         {
@@ -2887,6 +3069,153 @@ namespace GUI
             }
         }
 
+        public async void RestartRequestFromM3NoAsync()
+        {
+            if (M3PrgName1 == "" || ccService.ClientIsConnected == false)
+            {
+
+            }
+            else
+            {
+                string prgName = M3PrgName1;
+                string modelName = prgName.Substring(2, 4);
+
+                //check model name
+                if (modelName == "")
+                {
+                    //program name with incorrect format
+                    //todo add message to the operator
+                    return;
+                }
+
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    string keyValue = "pcM3Param1";
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param1.ToString()));
+
+                    //WriteOnLabelAsync(labelM3Param1Value, recs.Result[0].m3_param1.ToString());
+                    labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
+                    keyValue = "pcM3Param2";
+                    sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
+
+                    string txtFoot = ((recs.Result[0].m3_param2 == 1) ? "start from right" : "start from left");
+
+                    //WriteOnLabelAsync(labelM3Param2Value, txtFoot);
+                    labelM3Param2Value.Text = txtFoot;
+
+
+                    //send quote, speed
+                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                    {
+                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                        ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                        objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + prgName + config.Extensions[0]);
+                        if (objPoints != null)
+                        {
+                            List<string> keys = new List<string>()
+                            {
+                                "pcM3AutoQuoteSt1",
+                                "pcM3AutoSpeedSt1"
+                            };
+
+                            List<object> values = new List<object>()
+                            {
+                                new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
+                                new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                            };
+
+                            var sendResults = await ccService.Send(keys, values);
+
+                            foreach (var result in sendResults)
+                            {
+                                if (result.Value.OpcResult)
+                                {
+                                }
+                                else
+                                {
+                                    //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (M3PrgName2 == "" || ccService.ClientIsConnected == false)
+            {
+
+            }
+            else
+            {
+                string prgName = M3PrgName2;
+                string modelName = prgName.Substring(2, 4);
+
+                //check model name
+                if (modelName == "")
+                {
+                    //program name with incorrect format
+                    //todo add message to the operator
+                    return;
+                }
+
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    //send quote, speed
+                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                    {
+                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                        ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                        objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + prgName + config.Extensions[0]);
+                        if (objPoints != null)
+                        {
+                            List<string> keys = new List<string>()
+                            {
+                                "pcM3AutoQuoteSt2",
+                                "pcM3AutoSpeedSt2"
+                            };
+
+                            List<object> values = new List<object>()
+                            {
+                                new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
+                                new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                            };
+
+                            var sendResults = await ccService.Send(keys, values);
+
+                            foreach (var result in sendResults)
+                            {
+                                if (result.Value.OpcResult)
+                                {
+                                }
+                                else
+                                {
+                                    //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM3Inclusion";
+                chkValue = (M3inc == "1") ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+            }
+        }
+
         public async void RestartRequestFromM4()
         {
             if (M4PrgName == "" || ccService.ClientIsConnected == false)
@@ -2916,6 +3245,68 @@ namespace GUI
 
                     WriteOnLabelAsync(labelM4Param1Value, recs.Result[0].m4_param1.ToString());
 
+                    keyValue = "pcM4ProgramName";
+
+                    var readResult = await ccService.Send(keyValue, "");
+                    if (readResult.OpcResult)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+
+                    keyValue = "pcM4ProgramName";
+                    readResult = await ccService.Send(keyValue, M4PrgName);
+                    if (readResult.OpcResult)
+                    {
+                    }
+                    else
+                    {
+                    }
+                }
+
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM4Inclusion";
+                chkValue = (M4inc == "1") ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+            }
+        }
+
+        public async void RestartRequestFromM4NoAsync()
+        {
+            if (M4PrgName == "" || ccService.ClientIsConnected == false)
+            {
+
+            }
+            else
+            {
+                string prgName = M4PrgName;
+                string modelName = prgName.Substring(2, 4);
+
+                //check model name
+                if (modelName == "")
+                {
+                    //program name with incorrect format
+                    //todo add message to the operator
+                    return;
+                }
+
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    string keyValue = "pcM4Param1";
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m4_param1.ToString()));
+
+                    //WriteOnLabelAsync(labelM4Param1Value, recs.Result[0].m4_param1.ToString());
+                    labelM4Param1Value.Text = recs.Result[0].m4_param1.ToString();
                     keyValue = "pcM4ProgramName";
 
                     var readResult = await ccService.Send(keyValue, "");
@@ -2991,6 +3382,49 @@ namespace GUI
             }
         }
 
+        public async void RestartRequestFromM5NoAsync()
+        {
+            if (ccService.ClientIsConnected == false)
+            {
+
+            }
+            else
+            {
+                string prgName = M1PrgName;
+                string modelName = prgName.Substring(2, 4);
+
+                //check model name
+                if (modelName == "")
+                {
+                    //program name with incorrect format
+                    //todo add message to the operator
+                    return;
+                }
+
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    string keyValue = "pcM5Param1";
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m5_param1.ToString()));
+
+                    //WriteOnLabelAsync(labelM5Param1Value, recs.Result[0].m5_param1.ToString());
+                    labelM5Param1Value.Text = recs.Result[0].m5_param1.ToString();
+                }
+
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM5Inclusion";
+                chkValue = (M5inc == "1") ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+
+            }
+        }
+
         public async void RestartRequestFromM6()
         {
             if (ccService.ClientIsConnected == false)
@@ -3019,6 +3453,48 @@ namespace GUI
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m6_param1.ToString()));
 
                     WriteOnLabelAsync(labelM6Param1Value, recs.Result[0].m6_param1.ToString());
+                }
+
+                string keyToSend = null;
+                bool chkValue = false;
+
+                keyToSend = "pcM6Inclusion";
+                chkValue = (M6inc == "1") ? true : false;
+
+                var sendResult = await ccService.Send(keyToSend, chkValue);
+
+            }
+        }
+
+        public async void RestartRequestFromM6NoAsync()
+        {
+            if (ccService.ClientIsConnected == false)
+            {
+
+            }
+            else
+            {
+                string prgName = M1PrgName;
+                string modelName = prgName.Substring(2, 4);
+
+                //check model name
+                if (modelName == "")
+                {
+                    //program name with incorrect format
+                    //todo add message to the operator
+                    return;
+                }
+
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    string keyValue = "pcM6Param1";
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m6_param1.ToString()));
+
+                    //WriteOnLabelAsync(labelM6Param1Value, recs.Result[0].m6_param1.ToString());
+                    labelM6Param1Value.Text = recs.Result[0].m6_param1.ToString();
                 }
 
                 string keyToSend = null;
@@ -3506,7 +3982,7 @@ namespace GUI
             {
                 using (TextWriter tw = new StreamWriter(FileName, false))
                 {
-                    tw.WriteLine(strLine);
+                    tw.Write(strLine);
                 }                
                 AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padLaser, "parameter " + strLine + "succesfully sent");
             }
@@ -3515,6 +3991,9 @@ namespace GUI
                 AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padLaser, "check il file is opened");
             }
         }
+
+
+
 
 
 

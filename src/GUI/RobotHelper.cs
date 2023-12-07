@@ -166,25 +166,27 @@ namespace GUI
             {
                 if (ccService.ClientIsConnected)
                 {
-                    if (!restartApp)
+                    try
                     {
-                        RestartRequestFromM1();
-                        RestartRequestFromM2();
-                        RestartRequestFromM3();
-                        RestartRequestFromM4();
-                        RestartRequestFromM5();
-                        RestartRequestFromM6();
-                        restartApp = true;
-                    }
-                    #region (* machine/line status *)
-                    /*machine status
-                     * = 0 -> emergency
-                     * = 1 -> manual 
-                     * = 2 -> automatic(with errors)
-                     * = 3 -> in cycle (no errors)
-                     * = 4 -> alarms
-                     */
-                    List<string> keys = new List<string>()
+                        if (!restartApp)
+                        {
+                            RestartRequestFromM1();
+                            RestartRequestFromM2();
+                            RestartRequestFromM3();
+                            RestartRequestFromM4();
+                            RestartRequestFromM5();
+                            RestartRequestFromM6();
+                            restartApp = true;
+                        }
+                        #region (* machine/line status *)
+                        /*machine status
+                         * = 0 -> emergency
+                         * = 1 -> manual 
+                         * = 2 -> automatic(with errors)
+                         * = 3 -> in cycle (no errors)
+                         * = 4 -> alarms
+                         */
+                        List<string> keys = new List<string>()
                     {
                         "pcM1Status",
                         "pcM2Status",
@@ -194,32 +196,32 @@ namespace GUI
                         "pcM6Status"
                     };
 
-                    var readResult = await ccService.Read(keys);
+                        var readResult = await ccService.Read(keys);
 
-                    UpdateOPCUAMStatus(readResult["pcM1Status"], buttonM1Status, labelM1Status);
-                    //ManageOPCUAMBtnStatus(readResult["pcM1Status"], checkBoxM1Start);
+                        UpdateOPCUAMStatus(readResult["pcM1Status"], buttonM1Status, labelM1Status);
+                        ManageOPCUAMBtnStatus(readResult["pcM1Status"], checkBoxM1Start);
 
-                    UpdateOPCUAMStatus(readResult["pcM2Status"], buttonM2Status, labelM2Status);
-                    //ManageOPCUAMBtnStatus(readResult["pcM2Status"], checkBoxM2Start);
+                        UpdateOPCUAMStatus(readResult["pcM2Status"], buttonM2Status, labelM2Status);
+                        ManageOPCUAMBtnStatus(readResult["pcM2Status"], checkBoxM2Start);
 
-                    UpdateOPCUAMStatus(readResult["pcM3Status"], buttonM3Status, labelM3Status);
-                    //ManageOPCUAMBtnStatus(readResult["pcM3Status"], checkBoxM3Start);
+                        UpdateOPCUAMStatus(readResult["pcM3Status"], buttonM3Status, labelM3Status);
+                        ManageOPCUAMBtnStatus(readResult["pcM3Status"], checkBoxM3Start);
 
-                    UpdateOPCUAMStatus(readResult["pcM4Status"], buttonM4Status, labelM4Status);
-                    //ManageOPCUAMBtnStatus(readResult["pcM4Status"], checkBoxM4Start);
+                        UpdateOPCUAMStatus(readResult["pcM4Status"], buttonM4Status, labelM4Status);
+                        ManageOPCUAMBtnStatus(readResult["pcM4Status"], checkBoxM4Start);
 
-                    UpdateOPCUAMStatus(readResult["pcM5Status"], buttonM5Status, labelM5Status);
-                    //ManageOPCUAMBtnStatus(readResult["pcM5Status"], checkBoxM5Start);
+                        UpdateOPCUAMStatus(readResult["pcM5Status"], buttonM5Status, labelM5Status);
+                        ManageOPCUAMBtnStatus(readResult["pcM5Status"], checkBoxM5Start);
 
-                    UpdateOPCUAMStatus(readResult["pcM6Status"], buttonM6Status, labelM6Status);
-                    //ManageOPCUAMBtnStatus(readResult["pcM6Status"], checkBoxM6Start);
+                        UpdateOPCUAMStatus(readResult["pcM6Status"], buttonM6Status, labelM6Status);
+                        ManageOPCUAMBtnStatus(readResult["pcM6Status"], checkBoxM6Start);
 
-                    //ManageStartStatus(readResult["pcM1Status"], readResult["pcM2Status"], readResult["pcM3Status"],
-                    //readResult["pcM4Status"], readResult["pcM5Status"], readResult["pcM6Status"]);
-                    #endregion
+                        //ManageStartStatus(readResult["pcM1Status"], readResult["pcM2Status"], readResult["pcM3Status"],
+                        //readResult["pcM4Status"], readResult["pcM5Status"], readResult["pcM6Status"]);
+                        #endregion
 
-                    #region(* machine pause status *)
-                    keys = new List<string>()
+                        #region(* machine pause status *)
+                        keys = new List<string>()
                     {
                         "pcM1Pause",
                         "pcM2Pause",
@@ -229,23 +231,23 @@ namespace GUI
                         "pcM6Pause"
                     };
 
-                    readResult = await ccService.Read(keys);
+                        readResult = await ccService.Read(keys);
 
-                    ManageOPCUAMBtnPause(readResult["pcM1Pause"], checkBoxM1Pause);
-                    ManageOPCUAMBtnPause(readResult["pcM2Pause"], checkBoxM2Pause);
-                    ManageOPCUAMBtnPause(readResult["pcM3Pause"], checkBoxM3Pause);
-                    ManageOPCUAMBtnPause(readResult["pcM4Pause"], checkBoxM4Pause);
-                    ManageOPCUAMBtnPause(readResult["pcM5Pause"], checkBoxM5Pause);
-                    ManageOPCUAMBtnPause(readResult["pcM6Pause"], checkBoxM6Pause);
+                        ManageOPCUAMBtnPause(readResult["pcM1Pause"], checkBoxM1Pause);
+                        ManageOPCUAMBtnPause(readResult["pcM2Pause"], checkBoxM2Pause);
+                        ManageOPCUAMBtnPause(readResult["pcM3Pause"], checkBoxM3Pause);
+                        ManageOPCUAMBtnPause(readResult["pcM4Pause"], checkBoxM4Pause);
+                        ManageOPCUAMBtnPause(readResult["pcM5Pause"], checkBoxM5Pause);
+                        ManageOPCUAMBtnPause(readResult["pcM6Pause"], checkBoxM6Pause);
 
-                    ManagePauseStatus(readResult["pcM1Pause"], readResult["pcM2Pause"], readResult["pcM3Pause"], readResult["pcM4Pause"],
-                        readResult["pcM5Pause"], readResult["pcM6Pause"]);
+                        ManagePauseStatus(readResult["pcM1Pause"], readResult["pcM2Pause"], readResult["pcM3Pause"], readResult["pcM4Pause"],
+                            readResult["pcM5Pause"], readResult["pcM6Pause"]);
 
-                    #endregion
+                        #endregion
 
-                    #region(* node keep alive/connection *)
-                    //keep alive to plc
-                    keys = new List<string>()
+                        #region(* node keep alive/connection *)
+                        //keep alive to plc
+                        keys = new List<string>()
                     {
                         "pcM1KeepAliveW",
                         "pcM2KeepAliveW",
@@ -254,15 +256,15 @@ namespace GUI
                         "pcM5KeepAliveW"
                     };
 
-                    readResult = await ccService.Read(keys);
-                    UpdateOPCUAMKeepAlive(readResult["pcM1KeepAliveW"], lbLedM1PCKeepAlive);
-                    UpdateOPCUAMKeepAlive(readResult["pcM2KeepAliveW"], lbLedM2PCKeepAlive);
-                    UpdateOPCUAMKeepAlive(readResult["pcM3KeepAliveW"], lbLedM3PCKeepAlive);
-                    UpdateOPCUAMKeepAlive(readResult["pcM4KeepAliveW"], lbLedM4PCKeepAlive);
-                    UpdateOPCUAMKeepAlive(readResult["pcM5KeepAliveW"], lbLedM5PCKeepAlive);
+                        readResult = await ccService.Read(keys);
+                        UpdateOPCUAMKeepAlive(readResult["pcM1KeepAliveW"], lbLedM1PCKeepAlive);
+                        UpdateOPCUAMKeepAlive(readResult["pcM2KeepAliveW"], lbLedM2PCKeepAlive);
+                        UpdateOPCUAMKeepAlive(readResult["pcM3KeepAliveW"], lbLedM3PCKeepAlive);
+                        UpdateOPCUAMKeepAlive(readResult["pcM4KeepAliveW"], lbLedM4PCKeepAlive);
+                        UpdateOPCUAMKeepAlive(readResult["pcM5KeepAliveW"], lbLedM5PCKeepAlive);
 
-                    //keep alive from plc
-                    keys = new List<string>()
+                        //keep alive from plc
+                        keys = new List<string>()
                     {
                         "pcM1KeepAliveR",
                         "pcM2KeepAliveR",
@@ -272,25 +274,25 @@ namespace GUI
                         //"pcM6KeepAliveR"
                     };
 
-                    var readResultPLC = await ccService.Read(keys);
-                    UpdateOPCUAMNodeConnection(readResultPLC["pcM1KeepAliveR"], lastLifeBit[0], ref LifeBitTimeout[0], ref LifeBitCounter[0], pictureBoxM1PLCNode, labelM1Node);
-                    UpdateOPCUAMNodeConnection(readResultPLC["pcM2KeepAliveR"], lastLifeBit[1], ref LifeBitTimeout[1], ref LifeBitCounter[1], pictureBoxM2PLCNode, labelM2Node);
-                    UpdateOPCUAMNodeConnection(readResultPLC["pcM3KeepAliveR"], lastLifeBit[2], ref LifeBitTimeout[2], ref LifeBitCounter[2], pictureBoxM3PLCNode, labelM3Node);
-                    UpdateOPCUAMNodeConnection(readResultPLC["pcM4KeepAliveR"], lastLifeBit[3], ref LifeBitTimeout[3], ref LifeBitCounter[3], pictureBoxM4PLCNode, labelM4Node);
-                    UpdateOPCUAMNodeConnection(readResultPLC["pcM5KeepAliveR"], lastLifeBit[4], ref LifeBitTimeout[4], ref LifeBitCounter[4], pictureBoxM5PLCNode, labelM5Node);
-                    ManageLastLifeBit(readResultPLC["pcM1KeepAliveR"], ref lastLifeBit[0]);
-                    ManageLastLifeBit(readResultPLC["pcM2KeepAliveR"], ref lastLifeBit[1]);
-                    ManageLastLifeBit(readResultPLC["pcM3KeepAliveR"], ref lastLifeBit[2]);
-                    ManageLastLifeBit(readResultPLC["pcM4KeepAliveR"], ref lastLifeBit[3]);
-                    ManageLastLifeBit(readResultPLC["pcM5KeepAliveR"], ref lastLifeBit[4]);
-                    UpdateOPCUAMNodeConnection(readResultPLC["pcM1KeepAliveR"], lastLifeBit[0], ref LifeBitTimeout[0], ref LifeBitCounter[0], pictureBoxM1PLCNode, labelM1Node);
-                    //if all nodes are connected -> not in timeout
-                    //UpdateOPCUASystemConnection((LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]), buttonSystemStatus, labelSystemStatus);
-                    WriteOnToolStripAsync((LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]), toolStripStatusLabelSystem);
-                    #endregion
+                        var readResultPLC = await ccService.Read(keys);
+                        UpdateOPCUAMNodeConnection(readResultPLC["pcM1KeepAliveR"], lastLifeBit[0], ref LifeBitTimeout[0], ref LifeBitCounter[0], pictureBoxM1PLCNode, labelM1Node);
+                        UpdateOPCUAMNodeConnection(readResultPLC["pcM2KeepAliveR"], lastLifeBit[1], ref LifeBitTimeout[1], ref LifeBitCounter[1], pictureBoxM2PLCNode, labelM2Node);
+                        UpdateOPCUAMNodeConnection(readResultPLC["pcM3KeepAliveR"], lastLifeBit[2], ref LifeBitTimeout[2], ref LifeBitCounter[2], pictureBoxM3PLCNode, labelM3Node);
+                        UpdateOPCUAMNodeConnection(readResultPLC["pcM4KeepAliveR"], lastLifeBit[3], ref LifeBitTimeout[3], ref LifeBitCounter[3], pictureBoxM4PLCNode, labelM4Node);
+                        UpdateOPCUAMNodeConnection(readResultPLC["pcM5KeepAliveR"], lastLifeBit[4], ref LifeBitTimeout[4], ref LifeBitCounter[4], pictureBoxM5PLCNode, labelM5Node);
+                        ManageLastLifeBit(readResultPLC["pcM1KeepAliveR"], ref lastLifeBit[0]);
+                        ManageLastLifeBit(readResultPLC["pcM2KeepAliveR"], ref lastLifeBit[1]);
+                        ManageLastLifeBit(readResultPLC["pcM3KeepAliveR"], ref lastLifeBit[2]);
+                        ManageLastLifeBit(readResultPLC["pcM4KeepAliveR"], ref lastLifeBit[3]);
+                        ManageLastLifeBit(readResultPLC["pcM5KeepAliveR"], ref lastLifeBit[4]);
+                        UpdateOPCUAMNodeConnection(readResultPLC["pcM1KeepAliveR"], lastLifeBit[0], ref LifeBitTimeout[0], ref LifeBitCounter[0], pictureBoxM1PLCNode, labelM1Node);
+                        //if all nodes are connected -> not in timeout
+                        //UpdateOPCUASystemConnection((LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]), buttonSystemStatus, labelSystemStatus);
+                        WriteOnToolStripAsync((LifeBitTimeout[0] & LifeBitTimeout[1] & LifeBitTimeout[2] & LifeBitTimeout[3] & LifeBitTimeout[4]), toolStripStatusLabelSystem);
+                        #endregion
 
-                    #region (* machine homing done status *)
-                    keys = new List<string>()
+                        #region (* machine homing done status *)
+                        keys = new List<string>()
                     {
                         "pcM1HomingDone",
                         "pcM2HomingDone",
@@ -300,17 +302,17 @@ namespace GUI
                         //"pcM6HomingDone"
                     };
 
-                    readResult = await ccService.Read(keys);
-                    UpdateOPCUAMHomingDone(readResult["pcM1HomingDone"], buttonM1HomingDone, labelM1HomingDone);
-                    UpdateOPCUAMHomingDone(readResult["pcM2HomingDone"], buttonM2HomingDone, labelM2HomingDone);
-                    UpdateOPCUAMHomingDone(readResult["pcM3HomingDone"], buttonM3HomingDone, labelM3HomingDone);
-                    UpdateOPCUAMHomingDone(readResult["pcM4HomingDone"], buttonM4HomingDone, labelM4HomingDone);
-                    //UpdateOPCUAMHomingDone(readResult["pcM5HomingDone"], buttonM5HomingDone, labelM5HomingDone);
-                    //UpdateOPCUAMHomingDone(readResult["pcM6HomingDone"], buttonM6HomingDone, labelM6HomingDone);
-                    #endregion
+                        readResult = await ccService.Read(keys);
+                        UpdateOPCUAMHomingDone(readResult["pcM1HomingDone"], buttonM1HomingDone, labelM1HomingDone);
+                        UpdateOPCUAMHomingDone(readResult["pcM2HomingDone"], buttonM2HomingDone, labelM2HomingDone);
+                        UpdateOPCUAMHomingDone(readResult["pcM3HomingDone"], buttonM3HomingDone, labelM3HomingDone);
+                        UpdateOPCUAMHomingDone(readResult["pcM4HomingDone"], buttonM4HomingDone, labelM4HomingDone);
+                        //UpdateOPCUAMHomingDone(readResult["pcM5HomingDone"], buttonM5HomingDone, labelM5HomingDone);
+                        //UpdateOPCUAMHomingDone(readResult["pcM6HomingDone"], buttonM6HomingDone, labelM6HomingDone);
+                        #endregion
 
-                    #region(* machine runtime vertical axis quote * )
-                    keys = new List<string>()
+                        #region(* machine runtime vertical axis quote * )
+                        keys = new List<string>()
                     {
                         "pcM1CurrentAxisQuote",
                         "pcM2CurrentAxisQuote",
@@ -320,15 +322,15 @@ namespace GUI
                         //"pcM6CurrentAxisQuote"
                     };
 
-                    readResult = await ccService.Read(keys);
-                    WriteOnFloatLabelAsync(readResult["pcM1CurrentAxisQuote"], labelM1TeachAxisQuoteValue);
-                    WriteOnFloatLabelAsync(readResult["pcM2CurrentAxisQuote"], labelM2TeachAxisQuoteValue);
-                    WriteOnFloatLabelAsync(readResult["pcM3CurrentAxisQuote"], labelM3TeachAxisQuoteValue);
-                    WriteOnFloatLabelAsync(readResult["pcM4CurrentAxisQuote"], labelM4TeachAxisQuoteValue);
-                    #endregion
+                        readResult = await ccService.Read(keys);
+                        WriteOnFloatLabelAsync(readResult["pcM1CurrentAxisQuote"], labelM1TeachAxisQuoteValue);
+                        WriteOnFloatLabelAsync(readResult["pcM2CurrentAxisQuote"], labelM2TeachAxisQuoteValue);
+                        WriteOnFloatLabelAsync(readResult["pcM3CurrentAxisQuote"], labelM3TeachAxisQuoteValue);
+                        WriteOnFloatLabelAsync(readResult["pcM4CurrentAxisQuote"], labelM4TeachAxisQuoteValue);
+                        #endregion
 
-                    #region(* machine point reached - teach*)
-                    keys = new List<string>()
+                        #region(* machine point reached - teach*)
+                        keys = new List<string>()
                     {
                         "pcM1PointReached",
                         "pcM2PointReached",
@@ -338,128 +340,128 @@ namespace GUI
                         //"pcM6PointReached"
                     };
 
-                    readResult = await ccService.Read(keys);
-                    WriteAsyncDataGridViewPointReached(readResult["pcM1PointReached"], dataGridViewM1TeachPoints, 5);
-                    //force repaint
-                    dataGridViewM1TeachPoints.Invalidate(false);
+                        readResult = await ccService.Read(keys);
+                        WriteAsyncDataGridViewPointReached(readResult["pcM1PointReached"], dataGridViewM1TeachPoints, 5);
+                        //force repaint
+                        dataGridViewM1TeachPoints.Invalidate(false);
 
-                    WriteAsyncDataGridViewPointReached(readResult["pcM2PointReached"], dataGridViewM2TeachPoints, 5);
-                    //force repaint
-                    dataGridViewM2TeachPoints.Invalidate(false);
-                    
-                    WriteAsyncDataGridViewPointReached(readResult["pcM3PointReached"], dataGridViewM3TeachPoints, 5);
-                    //force repaint
-                    dataGridViewM3TeachPoints.Invalidate(false);
+                        WriteAsyncDataGridViewPointReached(readResult["pcM2PointReached"], dataGridViewM2TeachPoints, 5);
+                        //force repaint
+                        dataGridViewM2TeachPoints.Invalidate(false);
 
-                    WriteAsyncDataGridViewPointReached(readResult["pcM1PointReached"], dataGridViewM1TestPoints, 3);
-                    //force repaint
-                    dataGridViewM1TestPoints.Invalidate(false);
+                        WriteAsyncDataGridViewPointReached(readResult["pcM3PointReached"], dataGridViewM3TeachPoints, 5);
+                        //force repaint
+                        dataGridViewM3TeachPoints.Invalidate(false);
 
-                    WriteAsyncDataGridViewPointReached(readResult["pcM2PointReached"], dataGridViewM2TestPoints, 3);
-                    //force repaint
-                    dataGridViewM2TestPoints.Invalidate(false);
+                        WriteAsyncDataGridViewPointReached(readResult["pcM1PointReached"], dataGridViewM1TestPoints, 3);
+                        //force repaint
+                        dataGridViewM1TestPoints.Invalidate(false);
 
-                    WriteAsyncDataGridViewPointReached(readResult["pcM3PointReached"], dataGridViewM3TestPoints, 3);
-                    //force repaint
-                    dataGridViewM3TestPoints.Invalidate(false);
-                    #endregion
+                        WriteAsyncDataGridViewPointReached(readResult["pcM2PointReached"], dataGridViewM2TestPoints, 3);
+                        //force repaint
+                        dataGridViewM2TestPoints.Invalidate(false);
 
-                    #region(+ I/O *)
-                    //M1 input/output
-                    keys = new List<string>()
+                        WriteAsyncDataGridViewPointReached(readResult["pcM3PointReached"], dataGridViewM3TestPoints, 3);
+                        //force repaint
+                        dataGridViewM3TestPoints.Invalidate(false);
+                        #endregion
+
+                        #region(+ I/O *)
+                        //M1 input/output
+                        keys = new List<string>()
                     {
                         "pcM1DI",
                         "pcM1DO"
                     };
 
-                    readResult = await ccService.Read(keys);
-                    UpdateOPCUAM1DI(readResult["pcM1DI"]);
-                    UpdateOPCUAM1DO(readResult["pcM1DO"]);
+                        readResult = await ccService.Read(keys);
+                        UpdateOPCUAM1DI(readResult["pcM1DI"]);
+                        UpdateOPCUAM1DO(readResult["pcM1DO"]);
 
-                    keys = new List<string>()
+                        keys = new List<string>()
                     {
                         "pcM2DI",
                         "pcM2DO"
                     };
 
-                    readResult = await ccService.Read(keys);
-                    UpdateOPCUAM2DI(readResult["pcM2DI"]);
-                    UpdateOPCUAM2DO(readResult["pcM2DO"]);
+                        readResult = await ccService.Read(keys);
+                        UpdateOPCUAM2DI(readResult["pcM2DI"]);
+                        UpdateOPCUAM2DO(readResult["pcM2DO"]);
 
-                    keys = new List<string>()
+                        keys = new List<string>()
                     {
                         "pcM3DI",
                         "pcM3DO"
                     };
 
-                    readResult = await ccService.Read(keys);
-                    UpdateOPCUAM3DI(readResult["pcM3DI"]);
-                    UpdateOPCUAM3DO(readResult["pcM3DO"]);
+                        readResult = await ccService.Read(keys);
+                        UpdateOPCUAM3DI(readResult["pcM3DI"]);
+                        UpdateOPCUAM3DO(readResult["pcM3DO"]);
 
-                    keys = new List<string>()
+                        keys = new List<string>()
                     {
                         "pcM5DI",
                         "pcM5DO"
                     };
 
-                    readResult = await ccService.Read(keys);
-                    UpdateOPCUAM5DI(readResult["pcM5DI"]);
-                    UpdateOPCUAM5DO(readResult["pcM5DO"]);
+                        readResult = await ccService.Read(keys);
+                        UpdateOPCUAM5DI(readResult["pcM5DI"]);
+                        UpdateOPCUAM5DO(readResult["pcM5DO"]);
 
-                    #endregion
+                        #endregion
 
-                    #region (* M1 timeout alarms *)
-                    keys = new List<string>()
+                        #region (* M1 timeout alarms *)
+                        keys = new List<string>()
                     {
                         "pcM1TimeoutAlarms",
                         "pcM1GeneralAlarms"
                     };
-                    readResult = await ccService.Read(keys);
-                    UpdateOPCUAM1TimeoutAlarms(readResult["pcM1TimeoutAlarms"]);
-                    UpdateOPCUAM1GeneralAlarms(readResult["pcM1GeneralAlarms"]);
+                        readResult = await ccService.Read(keys);
+                        UpdateOPCUAM1TimeoutAlarms(readResult["pcM1TimeoutAlarms"]);
+                        UpdateOPCUAM1GeneralAlarms(readResult["pcM1GeneralAlarms"]);
 
-                    keys = new List<string>()
+                        keys = new List<string>()
                     {
                         "pcM2TimeoutAlarms",
                         "pcM2GeneralAlarms"
                     };
-                    readResult = await ccService.Read(keys);
-                    UpdateOPCUAM2TimeoutAlarms(readResult["pcM2TimeoutAlarms"]);
-                    UpdateOPCUAM2GeneralAlarms(readResult["pcM2GeneralAlarms"]);
+                        readResult = await ccService.Read(keys);
+                        UpdateOPCUAM2TimeoutAlarms(readResult["pcM2TimeoutAlarms"]);
+                        UpdateOPCUAM2GeneralAlarms(readResult["pcM2GeneralAlarms"]);
 
-                    keys = new List<string>()
+                        keys = new List<string>()
                     {
                         "pcM4TimeoutAlarms",
                         "pcM4GeneralAlarms"
                     };
 
-                    readResult = await ccService.Read(keys);
-                    UpdateOPCUAM4TimeoutAlarms(readResult["pcM4TimeoutAlarms"]);
-                    UpdateOPCUAM4GeneralAlarms(readResult["pcM4GeneralAlarms"]);
+                        readResult = await ccService.Read(keys);
+                        UpdateOPCUAM4TimeoutAlarms(readResult["pcM4TimeoutAlarms"]);
+                        UpdateOPCUAM4GeneralAlarms(readResult["pcM4GeneralAlarms"]);
 
-                    keys = new List<string>()
+                        keys = new List<string>()
                     {
                         "pcM3TimeoutAlarms",
                         "pcM3GeneralAlarms"
                     };
 
-                    readResult = await ccService.Read(keys);
-                    UpdateOPCUAM3TimeoutAlarms(readResult["pcM3TimeoutAlarms"]);
-                    UpdateOPCUAM3GeneralAlarms(readResult["pcM3GeneralAlarms"]);
+                        readResult = await ccService.Read(keys);
+                        UpdateOPCUAM3TimeoutAlarms(readResult["pcM3TimeoutAlarms"]);
+                        UpdateOPCUAM3GeneralAlarms(readResult["pcM3GeneralAlarms"]);
 
-                    keys = new List<string>()
+                        keys = new List<string>()
                     {
                         "pcM5TimeoutAlarms",
                         "pcM5GeneralAlarms"
                     };
 
-                    readResult = await ccService.Read(keys);
-                    UpdateOPCUAM5TimeoutAlarms(readResult["pcM5TimeoutAlarms"]);
-                    UpdateOPCUAM5GeneralAlarms(readResult["pcM5GeneralAlarms"]);
-                    #endregion
+                        readResult = await ccService.Read(keys);
+                        UpdateOPCUAM5TimeoutAlarms(readResult["pcM5TimeoutAlarms"]);
+                        UpdateOPCUAM5GeneralAlarms(readResult["pcM5GeneralAlarms"]);
+                        #endregion
 
-                    #region(* cycle counter *)
-                    keys = new List<string>()
+                        #region(* cycle counter *)
+                        keys = new List<string>()
                     {
                         "pcM1CycleCounter",
                         "pcM2CycleCounter",
@@ -468,58 +470,58 @@ namespace GUI
                         "pcM5CycleCounter"
                     };
 
-                    readResultPLC = await ccService.Read(keys);
-                    WriteOnLabelAsync(readResultPLC["pcM1CycleCounter"], labelM1CycleId);
-                    WriteOnLabelAsync(readResultPLC["pcM2CycleCounter"], labelM2CycleId);
-                    WriteOnLabelAsync(readResultPLC["pcM3CycleCounter"], labelM3CycleId);
-                    WriteOnLabelAsync(readResultPLC["pcM4CycleCounter"], labelM4CycleId);
-                    WriteOnLabelAsync(readResultPLC["pcM5CycleCounter"], labelM5CycleId);
+                        readResultPLC = await ccService.Read(keys);
+                        WriteOnLabelAsync(readResultPLC["pcM1CycleCounter"], labelM1CycleId);
+                        WriteOnLabelAsync(readResultPLC["pcM2CycleCounter"], labelM2CycleId);
+                        WriteOnLabelAsync(readResultPLC["pcM3CycleCounter"], labelM3CycleId);
+                        WriteOnLabelAsync(readResultPLC["pcM4CycleCounter"], labelM4CycleId);
+                        WriteOnLabelAsync(readResultPLC["pcM5CycleCounter"], labelM5CycleId);
 
 
 
-                    #endregion
+                        #endregion
 
-                    #region(* cycle time *)
-                    //keys = new List<string>()
-                    //{
-                    //    "pcM1CycleTime",
-                    //    "pcM2CycleTime",
-                    //    //"pcM3CycleTime",
-                    //    "pcM4CycleTime",
-                    //    //"pcM5CycleTIme"
-                    //};
-
-                    //readResultPLC = await ccService.Read(keys);
-                    //WriteOnLabelAsync(readResultPLC["pcM1CycleTime"], labelM1CycleTime);
-                    //WriteOnLabelAsync(readResultPLC["pcM2CycleTime"], labelM2CycleTime);
-
-
-
-                    #endregion
-
-                    #region(* phase *)
-                    keys = new List<string>()
+                        #region(* cycle time *)
+                        keys = new List<string>()
                     {
-                        "pcM1State",
-                        "pcM2State",
-                        "pcM3State",
+                        "pcM1CycleTime",
+                        "pcM2CycleTime",
+                        //"pcM3CycleTime",
+                        "pcM4CycleTime"
+                        //"pcM5CycleTIme"
+                    };
+
+                        readResultPLC = await ccService.Read(keys);
+                        WriteOnLabelAsync(readResultPLC["pcM1CycleTime"], labelM1CycleTime);
+                        WriteOnLabelAsync(readResultPLC["pcM2CycleTime"], labelM2CycleTime);
+                        WriteOnLabelAsync(readResultPLC["pcM4CycleTime"], labelM4CycleTime);
+
+
+                        #endregion
+
+                        #region(* phase *)
+                        keys = new List<string>()
+                    {
+                        "pcM1TrimmingState",
+                        "pcM2PadPrintIntState",
+                        "pcM3PadPrintExtState",
                         "pcM4State",
                         "pcM5State"
                     };
 
-                    readResultPLC = await ccService.Read(keys);
-                    WriteOnLabelAsync(readResultPLC["pcM1State"], labelM1Phase);
-                    WriteOnLabelAsync(readResultPLC["pcM2State"], labelM2Phase);
-                    WriteOnLabelAsync(readResultPLC["pcM3State"], labelM3Phase);
-                    WriteOnLabelAsync(readResultPLC["pcM4State"], labelM4Phase);
-                    WriteOnLabelAsync(readResultPLC["pcM5State"], labelM5Phase);
+                        readResultPLC = await ccService.Read(keys);
+                        WriteOnLabelAsync(readResultPLC["pcM1TrimmingState"], labelM1Phase);
+                        WriteOnLabelAsync(readResultPLC["pcM2PadPrintIntState"], labelM2Phase);
+                        WriteOnLabelAsync(readResultPLC["pcM3PadPrintExtState"], labelM3Phase);
+                        WriteOnLabelAsync(readResultPLC["pcM4State"], labelM4Phase);
+                        WriteOnLabelAsync(readResultPLC["pcM5State"], labelM5Phase);
 
 
 
-                    #endregion
+                        #endregion
 
-                    #region(* state machine *)
-                    keys = new List<string>()
+                        #region(* state machine *)
+                        keys = new List<string>()
                     {
                         "pcM1TrimmingState",
                         "pcM1LoadingBeltState",
@@ -527,49 +529,49 @@ namespace GUI
                         "pcM1ExitBeltState"
                     };
 
-                    readResultPLC = await ccService.Read(keys);
-                    WriteOnLabelAsync(readResultPLC["pcM1TrimmingState"], labelM1TrimmerState);
-                    WriteOnLabelAsync(readResultPLC["pcM1LoadingBeltState"], labelM1LoadingBeltState);
-                    WriteOnLabelAsync(readResultPLC["pcM1WorkingBeltState"], labelM1WorkingBeltState);
-                    WriteOnLabelAsync(readResultPLC["pcM1ExitBeltState"], labelM1ExitBeltState);
+                        readResultPLC = await ccService.Read(keys);
+                        WriteOnLabelAsync(readResultPLC["pcM1TrimmingState"], labelM1TrimmerState);
+                        WriteOnLabelAsync(readResultPLC["pcM1LoadingBeltState"], labelM1LoadingBeltState);
+                        WriteOnLabelAsync(readResultPLC["pcM1WorkingBeltState"], labelM1WorkingBeltState);
+                        WriteOnLabelAsync(readResultPLC["pcM1ExitBeltState"], labelM1ExitBeltState);
 
-                    keys = new List<string>()
+                        keys = new List<string>()
                     {
-                        "pcM4State",                        
+                        "pcM4State",
                         "pcM4WorkingBeltState",
                         "pcM4ExitBeltState"
                     };
 
-                    readResultPLC = await ccService.Read(keys);
-                    WriteOnLabelAsync(readResultPLC["pcM4State"], labelM4State);                    
-                    WriteOnLabelAsync(readResultPLC["pcM4WorkingBeltState"], labelM4WorkingBeltState);
-                    WriteOnLabelAsync(readResultPLC["pcM4ExitBeltState"], labelM4ExitBeltState);
+                        readResultPLC = await ccService.Read(keys);
+                        WriteOnLabelAsync(readResultPLC["pcM4State"], labelM4State);
+                        WriteOnLabelAsync(readResultPLC["pcM4WorkingBeltState"], labelM4WorkingBeltState);
+                        WriteOnLabelAsync(readResultPLC["pcM4ExitBeltState"], labelM4ExitBeltState);
 
-                    keys = new List<string>()
+                        keys = new List<string>()
                     {
                         "pcM3PadPrintExtState",
                         "pcM3WorkingBeltState",
                         "pcM3ExitBeltState"
                     };
 
-                    readResultPLC = await ccService.Read(keys);
-                    WriteOnLabelAsync(readResultPLC["pcM3PadPrintExtState"], labelM3State);
-                    WriteOnLabelAsync(readResultPLC["pcM3WorkingBeltState"], labelM3WorkingBeltState);
-                    WriteOnLabelAsync(readResultPLC["pcM3ExitBeltState"], labelM3ExitBeltState);
+                        readResultPLC = await ccService.Read(keys);
+                        WriteOnLabelAsync(readResultPLC["pcM3PadPrintExtState"], labelM3State);
+                        WriteOnLabelAsync(readResultPLC["pcM3WorkingBeltState"], labelM3WorkingBeltState);
+                        WriteOnLabelAsync(readResultPLC["pcM3ExitBeltState"], labelM3ExitBeltState);
 
-                    keys = new List<string>()
+                        keys = new List<string>()
                     {
                         "pcM2PadPrintIntState",
                         "pcM2WorkingBeltState",
                         "pcM2ExitBeltState"
                     };
 
-                    readResultPLC = await ccService.Read(keys);
-                    WriteOnLabelAsync(readResultPLC["pcM2PadPrintIntState"], labelM2State);
-                    WriteOnLabelAsync(readResultPLC["pcM2WorkingBeltState"], labelM2WorkingBeltState);
-                    WriteOnLabelAsync(readResultPLC["pcM2ExitBeltState"], labelM2ExitBeltState);
+                        readResultPLC = await ccService.Read(keys);
+                        WriteOnLabelAsync(readResultPLC["pcM2PadPrintIntState"], labelM2State);
+                        WriteOnLabelAsync(readResultPLC["pcM2WorkingBeltState"], labelM2WorkingBeltState);
+                        WriteOnLabelAsync(readResultPLC["pcM2ExitBeltState"], labelM2ExitBeltState);
 
-                    keys = new List<string>()
+                        keys = new List<string>()
                     {
                         "pcM5State",
                         "pcM5TranslationBeltState",
@@ -578,25 +580,25 @@ namespace GUI
                         "pcM5ExitBelt3State"
                     };
 
-                    readResultPLC = await ccService.Read(keys);
-                    WriteOnLabelAsync(readResultPLC["pcM5State"], labelM5State);
-                    WriteOnLabelAsync(readResultPLC["pcM5TranslationBeltState"], labelM5TranslatorBeltState);
-                    WriteOnLabelAsync(readResultPLC["pcM5ExitBelt1State"], labelM5ExitBelt1State);
-                    WriteOnLabelAsync(readResultPLC["pcM5ExitBelt2State"], labelM5ExitBelt2State);
-                    WriteOnLabelAsync(readResultPLC["pcM5ExitBelt3State"], labelM5ExitBelt3State);
+                        readResultPLC = await ccService.Read(keys);
+                        WriteOnLabelAsync(readResultPLC["pcM5State"], labelM5State);
+                        WriteOnLabelAsync(readResultPLC["pcM5TranslationBeltState"], labelM5TranslatorBeltState);
+                        WriteOnLabelAsync(readResultPLC["pcM5ExitBelt1State"], labelM5ExitBelt1State);
+                        WriteOnLabelAsync(readResultPLC["pcM5ExitBelt2State"], labelM5ExitBelt2State);
+                        WriteOnLabelAsync(readResultPLC["pcM5ExitBelt3State"], labelM5ExitBelt3State);
 
-                    #endregion
-
-
+                        #endregion
 
 
 
-                    #region (* GUI *)
-                    GUIWithOPCUAClientConnected();
-                    #endregion
 
-                    #region (* restart from plc *)
-                    keys = new List<string>()
+
+                        #region (* GUI *)
+                        GUIWithOPCUAClientConnected();
+                        #endregion
+
+                        #region (* restart from plc *)
+                        keys = new List<string>()
                     {
                         "pcM1RestartPlc",
                         "pcM2RestartPlc",
@@ -606,89 +608,94 @@ namespace GUI
                         "pcM6RestartPlc"
                     };
 
-                    try
-                    {
-                        var readRes = await ccService.Read(keys);
-
-                        if (readRes != null)
+                        try
                         {
+                            var readRes = await ccService.Read(keys);
 
-                        }
-                        else
-                        {
-                            if (bool.Parse(readRes["pcM1RestartPlc"].Value.ToString()))
+                            if (readRes != null)
                             {
-                                var readRes2 = await ccService.Send("pcM1RestartPlc", false);
 
-                                RestartRequestFromM1();
+                            }
+                            else
+                            {
+                                if (bool.Parse(readRes["pcM1RestartPlc"].Value.ToString()))
+                                {
+                                    var readRes2 = await ccService.Send("pcM1RestartPlc", false);
+
+                                    RestartRequestFromM1();
+                                }
+                                else
+                                {
+
+                                }
+                            }
+
+
+                            if (bool.Parse(readRes["pcM2RestartPlc"].Value.ToString()))
+                            {
+                                var readRes2 = await ccService.Send("pcM2RestartPlc", false);
+
+                                RestartRequestFromM2();
                             }
                             else
                             {
 
                             }
+
+                            if (bool.Parse(readRes["pcM3RestartPlc"].Value.ToString()))
+                            {
+                                var readRes2 = await ccService.Send("pcM3RestartPlc", false);
+
+                                RestartRequestFromM3();
+                            }
+                            else
+                            {
+
+                            }
+
+                            if (bool.Parse(readRes["pcM4RestartPlc"].Value.ToString()))
+                            {
+                                //var readRes2 = await ccService.Send("pcM4RestartPlc", false);
+
+                                RestartRequestFromM4();
+                            }
+                            else
+                            {
+
+                            }
+
+                            if (bool.Parse(readRes["pcM5RestartPlc"].Value.ToString()))
+                            {
+                                var readRes2 = await ccService.Send("pcM5RestartPlc", false);
+
+                                RestartRequestFromM5();
+                            }
+                            else
+                            {
+
+                            }
+
+                            //if (bool.Parse(readRes["pcM6RestartPlc"].Value.ToString()))
+                            //{
+                            //    var readRes2 = await ccService.Send("pcM6RestartPlc", false);
+
+                            //    RestartRequestFromM6();
+                            //}
+                            //else
+                            //{
+
+                            //}
                         }
-
-
-                        if (bool.Parse(readRes["pcM2RestartPlc"].Value.ToString()))
+                        catch (Exception ex)
                         {
-                            var readRes2 = await ccService.Send("pcM2RestartPlc", false);
-
-                            RestartRequestFromM2();
-                        }
-                        else
-                        {
 
                         }
-
-                        if (bool.Parse(readRes["pcM3RestartPlc"].Value.ToString()))
-                        {
-                            var readRes2 = await ccService.Send("pcM3RestartPlc", false);
-
-                            RestartRequestFromM3();
-                        }
-                        else
-                        {
-
-                        }
-
-                        if (bool.Parse(readRes["pcM4RestartPlc"].Value.ToString()))
-                        {
-                            //var readRes2 = await ccService.Send("pcM4RestartPlc", false);
-
-                            RestartRequestFromM4();
-                        }
-                        else
-                        {
-
-                        }
-
-                        if (bool.Parse(readRes["pcM5RestartPlc"].Value.ToString()))
-                        {
-                            var readRes2 = await ccService.Send("pcM5RestartPlc", false);
-
-                            RestartRequestFromM5();
-                        }
-                        else
-                        {
-
-                        }
-
-                        //if (bool.Parse(readRes["pcM6RestartPlc"].Value.ToString()))
-                        //{
-                        //    var readRes2 = await ccService.Send("pcM6RestartPlc", false);
-
-                        //    RestartRequestFromM6();
-                        //}
-                        //else
-                        //{
-
-                        //}
+                        #endregion
                     }
-                    catch (Exception ex)
+                    catch(Exception ex)
                     {
 
                     }
-                    #endregion
                 }
                 else
                 {
@@ -753,8 +760,8 @@ namespace GUI
 
                     if (value == 4)
                     {
-                        chk.CheckState = CheckState.Unchecked;
-                        chk.Image = imageListStart.Images[0];
+                        //chk.CheckState = CheckState.Unchecked;
+                        //chk.Image = imageListStart.Images[0];
                     }
                 });
             }

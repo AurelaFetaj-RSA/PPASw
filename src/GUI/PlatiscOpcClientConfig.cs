@@ -37,7 +37,9 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM1StartStopExitBelt", $"ns=2;s=Tags.Rifilatrice/pc_start_stop_nastro_uscita", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM1StartStopLoadingBelt", $"ns=2;s=Tags.Rifilatrice/pc_start_stop_nastro_carico", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM1Sharpening", $"ns=2;s=Tags.Rifilatrice/pc_pulsante_affilatura", typeof(bool)));
-            ClientDataConfig.Add(new OpcObjectData("pcM1StartStopCuttingMotor", $"ns=2;s=Tags.Rifilatrice/pc_start_stop_motore_taglio", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1StartCuttingMotor", $"ns=2;s=Tags.Rifilatrice/pc_start_motore_taglio", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1StopCuttingMotor", $"ns=2;s=Tags.Rifilatrice/pc_stop_motore_taglio", typeof(bool)));
+
             ClientDataConfig.Add(new OpcObjectData("pcM1StartStopCuttingDrainBlow", $"ns=2;s=Tags.Rifilatrice/pc_soffio_scarico_sfrido", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM1StartStopCuttingSuction", $"ns=2;s=Tags.Rifilatrice/pc_aspirazione_taglio", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM1PosV1Up", $"ns=2;s=Tags.Rifilatrice/pc_posizione_verticale_1_su", typeof(bool)));
@@ -187,7 +189,7 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM3AutoSpeedSt1", $"ns=2;s=Tags.Pad_print_esterna/pc_velocita_stazione_1", typeof(short[])));
             ClientDataConfig.Add(new OpcObjectData("pcM3AutoQuoteSt2", $"ns=2;s=Tags.Pad_print_esterna/pc_quota_longitudinale_stazione_2", typeof(float[])));
             ClientDataConfig.Add(new OpcObjectData("pcM3AutoSpeedSt2", $"ns=2;s=Tags.Pad_print_esterna/pc_velocita_stazione_2", typeof(short[])));
-            ClientDataConfig.Add(new OpcObjectData("pcM3TypeOrder", $"ns=2;s=Tags.Pad_print_esterna/pc_piede", typeof(short)));
+            ClientDataConfig.Add(new OpcObjectData("pcM3Param2", $"ns=2;s=Tags.Pad_print_esterna/pc_piede", typeof(short)));
 
             ClientDataConfig.Add(new OpcObjectData("pcM3TestQuote", $"ns=2;s=Tags.Pad_print_esterna/pc_quota_longitudinale_in_test", typeof(float[])));
             ClientDataConfig.Add(new OpcObjectData("pcM3TestSpeed", $"ns=2;s=Tags.Pad_print_esterna/pc_velocita_in_test", typeof(short[])));
@@ -303,7 +305,7 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM5ExitBelt3State", $"ns=2;s=Tags.Manipolatore/pc_fase_ciclo_nastro_uscita_3", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM5TimeoutAlarms", $"ns=2;s=Tags.Manipolatore/pc_allarmi_timeout", typeof(short[])));
             ClientDataConfig.Add(new OpcObjectData("pcM5GeneralAlarms", $"ns=2;s=Tags.Manipolatore/pc_allarmi_generali", typeof(short[])));
-            ClientDataConfig.Add(new OpcObjectData("pcM5ResetCycle", $"ns=2;s=Tags.Manipolatore/pc_numero_cicli", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM5ResetCycle", $"ns=2;s=Tags.Manipolatore/pc_reset_numero_cicli", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM5RestartPlc", $"ns=2;s=Tags.Manipolatore/pc_riavvio_plc", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM5CycleTime1", $"ns=2;s=Tags.Manipolatore/pc_tempo_ciclo_primo", typeof(float)));
             ClientDataConfig.Add(new OpcObjectData("pcM5CycleTime2", $"ns=2;s=Tags.Manipolatore/pc_tempo_ciclo_secondo", typeof(float)));

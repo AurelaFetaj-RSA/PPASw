@@ -122,7 +122,16 @@ namespace GUI
 
             try
             {
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                {
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                    if (System.IO.File.Exists(config.ProgramsPath[0] + comboBoxM1TeachProgramList.Text + config.Extensions[0])
+                    {
+                        System.IO.File.Delete(config.ProgramsPath[0] + comboBoxM1TeachProgramList.Text + config.Extensions[0]);
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -610,28 +619,28 @@ namespace GUI
 
         private async void checkBoxM1CuttingMotor_CheckStateChanged(object sender, EventArgs e)
         {
-            if (ccService.ClientIsConnected)
-            {
-                string keyToSend = null;
-                bool chkValue = false;
+            //if (ccService.ClientIsConnected)
+            //{
+            //    string keyToSend = null;
+            //    bool chkValue = false;
 
-                keyToSend = "pcM1StartStopCuttingMotor";
-                chkValue = (checkBoxM1CuttingMotor.CheckState == CheckState.Checked) ? true : false;
+            //    keyToSend = "pcM1StartStopCuttingMotor";
+            //    chkValue = (checkBoxM1CuttingMotorOn.CheckState == CheckState.Checked) ? true : false;
 
-                var sendResult = await ccService.Send(keyToSend, chkValue);
+            //    var sendResult = await ccService.Send(keyToSend, chkValue);
 
-                if (sendResult.OpcResult)
-                {
-                    checkBoxM1CuttingMotor.ImageIndex = (chkValue) ? 0 : 1;
-                }
-                else
-                {
-                    checkBoxM1CuttingMotor.ImageIndex = 0;
-                }
-            }
-            else
-            {
-            }
+            //    if (sendResult.OpcResult)
+            //    {
+            //        checkBoxM1CuttingMotorOn.ImageIndex = (chkValue) ? 0 : 1;
+            //    }
+            //    else
+            //    {
+            //        checkBoxM1CuttingMotorOn.ImageIndex = 0;
+            //    }
+            //}
+            //else
+            //{
+            //}
         }
 
         private async void checkBoxM1CuttingDrainBlow_CheckStateChanged(object sender, EventArgs e)
@@ -680,6 +689,24 @@ namespace GUI
             {
 
             }
+        }
+
+        private async void checkBoxM1CuttingMotorOff_Click(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM1StartCuttingMotor";
+
+            var sendResult = await ccService.Send(keyToSend, true);
+        }
+
+        private async void checkBoxM1CuttingMotorOn_Click(object sender, EventArgs e)
+        {
+            string keyToSend = null;
+
+            keyToSend = "pcM1StopCuttingMotor";
+
+            var sendResult = await ccService.Send(keyToSend, true);
         }
 
         private async void checkBoxM1CuttingSuction_CheckStateChanged(object sender, EventArgs e)

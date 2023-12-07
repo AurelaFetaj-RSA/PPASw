@@ -2176,7 +2176,7 @@ namespace GUI
 
             //send type order: RG, LF
             //type order 2: LF, RG
-            keyValue = "pcM3TypeOrder";
+            keyValue = "pcM3Param2";
             sendResult = await ccService.Send(keyValue, short.Parse(textBoxTypeOrder.Text));
 
 
@@ -2213,7 +2213,7 @@ namespace GUI
             string keyValue = "pcM3Param1";
             var sendResult = await ccService.Send(keyValue, short.Parse(textBoxM3Test.Text));
             labelM3Param1Value.Text = textBoxM3Test.Text;
-            keyValue = "pcM3TypeOrder";
+            keyValue = "pcM3Param2";
             sendResult = await ccService.Send(keyValue, short.Parse(textBoxTypeOrder.Text));
             labelM3Param1Value.Text = textBoxM3Test.Text;
             //send quote, speed
