@@ -18,40 +18,7 @@ namespace GUI
 {
     public partial class FormApp : Form
     {
-        private void toolStripComboBoxT4_1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-            {
-                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                List<IObjProgram> pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, toolStripComboBoxT4_1.Text);
-
-                comboBoxM3TeachProgramList.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM3TeachProgramList.Items.Add(prgName.ProgramName);
-                }
-            }
-        }
-        private void toolStripComboBoxT4_2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-            {
-                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                List<IObjProgram> pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, toolStripComboBoxT4_2.Text);
-
-                comboBoxM3TestProgramList.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM3TestProgramList.Items.Add(prgName.ProgramName);
-                }
-            }
-        }
+      
 
         private async void buttonM3TeachLoadProgram_Click(object sender, EventArgs e)
         {
@@ -99,12 +66,32 @@ namespace GUI
                 {
                     RestartRequestFromM3();
                 }
+                RefreshM3TeachProgramList();
+
                 //program succesfully saved
                 xDialog.MsgBox.Show("program " + comboBoxM3TeachProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
 
             }
         }
+        private void RefreshM3TeachProgramList()
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            List<IObjProgram> pList = new List<IObjProgram>();
 
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxM3TeachRecipeName.Text);
+                comboBoxM3TeachProgramList.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    //filter by model name
+                    if (prgName.ProgramName.Contains(comboBoxM3TeachRecipeName.Text))
+                        comboBoxM3TeachProgramList.Items.Add(prgName.ProgramName);
+                }
+            }
+        }
         private void buttonM3TeachNewProgram_Click(object sender, EventArgs e)
         {
             ResetM3Datagrid();
@@ -112,7 +99,31 @@ namespace GUI
 
         private void buttonM3TeachDeleteProgram_Click(object sender, EventArgs e)
         {
+            if (comboBoxM3TeachProgramList.Text == "") return;
 
+            try
+            {
+                DialogResult ret = xDialog.MsgBox.Show("Are you sure you want to delete " + comboBoxM3TeachProgramList.Text + "?", "PBoot", xDialog.MsgBox.Buttons.YesNo, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+
+                if (ret == DialogResult.Yes)
+                {
+                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                    {
+                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                        if (System.IO.File.Exists(config.ProgramsPath[2] + "\\" + comboBoxM3TeachProgramList.Text + config.Extensions[0]))
+                        {
+                            System.IO.File.Delete(config.ProgramsPath[2] + "\\" + comboBoxM3TeachProgramList.Text + config.Extensions[0]);
+                        }
+                    }
+                    RefreshM3TeachProgramList();
+                }
+            }
+            catch (Exception ex)
+            {
+                //todo log
+            }
         }
 
         private void dataGridViewM3TeachPoints_CellContentClick(object sender, DataGridViewCellEventArgs e)

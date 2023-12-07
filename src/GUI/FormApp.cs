@@ -782,20 +782,20 @@ namespace GUI
 
                     if (recs.Result[0].m4_param2 == 1)
                     {
-                        top = DateTime.Now.ToString("yyyy-MM-dd");
+                        top = DateTime.Now.ToString("dd-MM-yyyy");
                         bottom = bottom = recs.Result[0].m4_param4.ToString();
                     }
 
                     if (recs.Result[0].m4_param2 == 2)
                     {
                         top = recs.Result[0].m4_param3.ToString();
-                        bottom = DateTime.Now.ToString("yyyy-MM-dd");
+                        bottom = DateTime.Now.ToString("dd-MM-yyyy");
                     }
 
                     if (recs.Result[0].m4_param2 == 3)
                     {
-                        top = DateTime.Now.ToString("yyyy-MM-dd");
-                        bottom = DateTime.Now.ToString("yyyy-MM-dd");
+                        top = DateTime.Now.ToString("dd-MM-yyyy");
+                        bottom = DateTime.Now.ToString("dd-MM-yyyy");
                     }
 
 
@@ -1422,28 +1422,7 @@ namespace GUI
             comboBoxM3TeachRecipeName.Items.Clear();
             comboBoxM3TestRecipeName.Items.Clear();
             foreach (string modelName in mList)
-            {
-                toolStripComboBoxT0.Items.Add(modelName);
-                toolStripComboBoxT0.SelectedIndex = 0;
-                toolStripComboBoxT0.SelectedIndexChanged += toolStripComboBoxT0_SelectedIndexChanged;
-                toolStripComboBoxT1_1.Items.Add(modelName);
-                toolStripComboBoxT1_1.SelectedIndex = 0;
-                toolStripComboBoxT1_1.SelectedIndexChanged += toolStripComboBoxT1_1_SelectedIndexChanged;
-                toolStripComboBoxT1_2.Items.Add(modelName);
-                toolStripComboBoxT1_2.SelectedIndex = 0;
-                toolStripComboBoxT1_2.SelectedIndexChanged += toolStripComboBoxT1_2_SelectedIndexChanged;
-                toolStripComboBoxT3_1.Items.Add(modelName);
-                toolStripComboBoxT3_1.SelectedIndex = 0;
-                toolStripComboBoxT3_1.SelectedIndexChanged += toolStripComboBoxT3_1_SelectedIndexChanged;
-                toolStripComboBoxT3_2.Items.Add(modelName);
-                toolStripComboBoxT3_2.SelectedIndex = 0;
-                toolStripComboBoxT3_2.SelectedIndexChanged += toolStripComboBoxT3_2_SelectedIndexChanged;
-                toolStripComboBoxT4_1.Items.Add(modelName);
-                toolStripComboBoxT4_1.SelectedIndex = 0;
-                toolStripComboBoxT4_1.SelectedIndexChanged += toolStripComboBoxT4_1_SelectedIndexChanged;
-                toolStripComboBoxT4_2.Items.Add(modelName);
-                toolStripComboBoxT4_2.SelectedIndex = 0;
-                toolStripComboBoxT4_2.SelectedIndexChanged += toolStripComboBoxT4_2_SelectedIndexChanged;
+            {                
                 comboBoxMRecipeName.Items.Add(modelName);
                 comboBoxMRecipeName.SelectedIndex = 0;
                 comboBoxT0RecipeName.Items.Add(modelName);
@@ -1460,7 +1439,6 @@ namespace GUI
                 comboBoxM2TestRecipeName.SelectedIndex = 0;
                 comboBoxM3TestRecipeName.Items.Add(modelName);
                 comboBoxM3TestRecipeName.SelectedIndex = 0;
-
             }
         }
         #endregion
@@ -1530,7 +1508,7 @@ namespace GUI
             if (radioButtonM4Sel1Top.Checked)
             {
                 //dateontop
-                strTop = DateTime.Now.ToString("yyyy-MM-dd");
+                strTop = DateTime.Now.ToString("dd-MM-yyyy");
             }
             else strTop = textBoxLaserLine1.Text;
 
@@ -1543,7 +1521,7 @@ namespace GUI
             if (radioButtonM4Sel1Bottom.Checked)
             {
                 //dateontop
-                strBottom = DateTime.Now.ToString("yyyy-MM-dd");
+                strBottom = DateTime.Now.ToString("dd-MM-yyyy");
             }
             else strBottom = textBoxLaserLine2.Text;
 
@@ -1830,20 +1808,20 @@ namespace GUI
 
                 if (recs.Result[0].m4_param2 == 1)
                 {
-                    top = DateTime.Now.ToString("yyyy-MM-dd");
+                    top = DateTime.Now.ToString("dd-MM-yyyy");
                     bottom = bottom = recs.Result[0].m4_param4.ToString();
                 }
 
                 if (recs.Result[0].m4_param2 == 2)
                 {
                     top = recs.Result[0].m4_param3.ToString();
-                    bottom = DateTime.Now.ToString("yyyy-MM-dd");
+                    bottom = DateTime.Now.ToString("dd-MM-yyyy");
                 }
 
                 if (recs.Result[0].m4_param2 == 3)
                 {
-                    top = DateTime.Now.ToString("yyyy-MM-dd");
-                    bottom = DateTime.Now.ToString("yyyy-MM-dd");
+                    top = DateTime.Now.ToString("dd-MM-yyyy");
+                    bottom = DateTime.Now.ToString("dd-MM-yyyy");
                 }
 
 
@@ -2228,166 +2206,9 @@ namespace GUI
             }
         }
 
-        private void toolStripMenuItemT1_1Keyboard_Click(object sender, EventArgs e)
-        {
-            Process foo = new Process();
+   
 
-            foo.StartInfo.FileName = @AppDomain.CurrentDomain.BaseDirectory + "RSAKeyboard.exe.lnk";
-
-            //foo.StartInfo.Arguments = " 100 500 1 ";
-            bool isRunning = false; //TODO: Check to see if process foo.exe is already running
-            var processExists = Process.GetProcesses().Any(p => p.ProcessName.Contains("RSAKeyboard.exe.lnk"));
-
-            if (processExists)
-            {
-                //TODO: Switch to foo.exe process
-                foo.CloseMainWindow();
-                foo.Start();
-            }
-            else
-            {
-                foo.Start();
-            }
-        }
-
-        private void toolStripMenuItemT1_2Keyboard_Click(object sender, EventArgs e)
-        {
-            Process foo = new Process();
-
-            foo.StartInfo.FileName = @AppDomain.CurrentDomain.BaseDirectory + "Oskeyboard.exe";
-
-            bool isRunning = false; //TODO: Check to see if process foo.exe is already running
-            var processExists = Process.GetProcesses().Any(p => p.ProcessName.Contains("Oskeyboard"));
-
-            if (processExists)
-            {
-                //TODO: Switch to foo.exe process
-                foo.CloseMainWindow();
-                foo.Start();
-            }
-            else
-            {
-                foo.Start();
-            }
-        }
-
-        private void toolStripMenuItemT0Keyboard_Click(object sender, EventArgs e)
-        {
-            Process foo = new Process();
-
-            foo.StartInfo.FileName = @AppDomain.CurrentDomain.BaseDirectory + "Oskeyboard.exe";
-
-            bool isRunning = false; //TODO: Check to see if process foo.exe is already running
-            var processExists = Process.GetProcesses().Any(p => p.ProcessName.Contains("Oskeyboard"));
-
-            if (processExists)
-            {
-                //TODO: Switch to foo.exe process
-                foo.CloseMainWindow();
-                foo.Start();
-            }
-            else
-            {
-                foo.Start();
-            }
-        }
-
-        private void toolStripComboBoxT1_1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (toolStripComboBoxT1_1.Text == "") return;
-
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-            {
-                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                List<IObjProgram> pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, toolStripComboBoxT1_1.Text);
-
-                comboBoxM1TeachProgramList.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM1TeachProgramList.Items.Add(prgName.ProgramName);
-                }
-            }
-        }
-
-        private void toolStripComboBoxT1_2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (toolStripComboBoxT1_2.Text == "") return;
-
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-            {
-                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                List<IObjProgram> pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, toolStripComboBoxT1_2.Text);
-
-                comboBoxM1TestProgramList.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM1TestProgramList.Items.Add(prgName.ProgramName);
-                }
-            }
-        }
-
-
-        private void toolStripComboBoxT0_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-            List<IObjProgram> pList = new List<IObjProgram>();
-
-            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-            {
-                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, toolStripComboBoxT0.Text);
-                comboBoxM1PrgName.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM1PrgName.Items.Add(prgName.ProgramName);
-                }
-
-                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, toolStripComboBoxT0.Text);
-                comboBoxM2PrgName.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM2PrgName.Items.Add(prgName.ProgramName);
-                }
-
-                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, toolStripComboBoxT0.Text);
-                comboBoxM3PrgName_st1.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM3PrgName_st1.Items.Add(prgName.ProgramName);
-                }
-
-                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, toolStripComboBoxT0.Text);
-                comboBoxM3PrgName_st2.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM3PrgName_st2.Items.Add(prgName.ProgramName);
-                }
-
-                //pad laser combobox
-                List<string> mList = new List<string>();
-                MySqlResult<padlaserprogram> result = mysqlService.DBTable[1].SelectAll<padlaserprogram>();
-                result.Result.ForEach(x => mList.Add(x.program_name));
-
-                
-                comboBoxM4PrgName.Items.Clear();
-                foreach (string prgName in mList)
-                {
-                    //filter by model name
-                    if (prgName.Contains(toolStripComboBoxT0.Text))
-                    comboBoxM4PrgName.Items.Add(prgName);
-                }
-            }
-        }
+       
 
         private async void radioButtonFootOrderOpt1Test_CheckedChanged(object sender, EventArgs e)
         {
@@ -2660,7 +2481,7 @@ namespace GUI
 
         public async void UpdateRecipeToM3(string modelName)
         {
-            if (ccService.ClientIsConnected == false)
+            if (M3PrgName1 == "" || ccService.ClientIsConnected == false)
             {
 
             }
@@ -2695,7 +2516,7 @@ namespace GUI
 
         public async void UpdateRecipeToM4(string modelName)
         {
-            if (ccService.ClientIsConnected == false)
+            if (M4PrgName == "" || ccService.ClientIsConnected == false)
             {
 
             }
@@ -2723,20 +2544,20 @@ namespace GUI
 
                     if (recs.Result[0].m4_param2 == 1)
                     {
-                        top = DateTime.Now.ToString("yyyy-MM-dd");
+                        top = DateTime.Now.ToString("dd-MM-yyyy");
                         bottom = bottom = recs.Result[0].m4_param4.ToString(); 
                     }
 
                     if (recs.Result[0].m4_param2 == 2)
                     {
                         top = recs.Result[0].m4_param3.ToString();
-                        bottom = DateTime.Now.ToString("yyyy-MM-dd");
+                        bottom = DateTime.Now.ToString("dd-MM-yyyy");
                     }
 
                     if (recs.Result[0].m4_param2 == 3)
                     {
-                        top = DateTime.Now.ToString("yyyy-MM-dd");
-                        bottom = DateTime.Now.ToString("yyyy-MM-dd");
+                        top = DateTime.Now.ToString("dd-MM-yyyy");
+                        bottom = DateTime.Now.ToString("dd-MM-yyyy");
                     }
 
 
@@ -2748,7 +2569,7 @@ namespace GUI
 
         public async void UpdateRecipeToM6(string modelName)
         {
-            if (ccService.ClientIsConnected == false)
+            if (M1PrgName == "" || ccService.ClientIsConnected == false)
             {
 
             }
@@ -3342,7 +3163,7 @@ namespace GUI
 
         public async void RestartRequestFromM5()
         {
-            if (ccService.ClientIsConnected == false)
+            if (M1PrgName == "" || ccService.ClientIsConnected == false)
             {
 
             }
@@ -3384,7 +3205,7 @@ namespace GUI
 
         public async void RestartRequestFromM5NoAsync()
         {
-            if (ccService.ClientIsConnected == false)
+            if (M1PrgName == "" || ccService.ClientIsConnected == false)
             {
 
             }
@@ -3427,7 +3248,7 @@ namespace GUI
 
         public async void RestartRequestFromM6()
         {
-            if (ccService.ClientIsConnected == false)
+            if (M1PrgName == "" || ccService.ClientIsConnected == false)
             {
 
             }
@@ -3468,7 +3289,7 @@ namespace GUI
 
         public async void RestartRequestFromM6NoAsync()
         {
-            if (ccService.ClientIsConnected == false)
+            if (M1PrgName == "" || ccService.ClientIsConnected == false)
             {
 
             }
@@ -3723,7 +3544,7 @@ namespace GUI
             if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, toolStripComboBoxT0.Text);
+                pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, comboBoxT0RecipeName.Text);
                 comboBoxM1PrgName.Items.Clear();
 
                 foreach (IObjProgram prgName in pList)
@@ -3731,7 +3552,7 @@ namespace GUI
                     comboBoxM1PrgName.Items.Add(prgName.ProgramName);
                 }
 
-                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, toolStripComboBoxT0.Text);
+                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxT0RecipeName.Text);
                 comboBoxM2PrgName.Items.Clear();
 
                 foreach (IObjProgram prgName in pList)
@@ -3739,7 +3560,7 @@ namespace GUI
                     comboBoxM2PrgName.Items.Add(prgName.ProgramName);
                 }
 
-                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, toolStripComboBoxT0.Text);
+                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxT0RecipeName.Text);
                 comboBoxM3PrgName_st1.Items.Clear();
 
                 foreach (IObjProgram prgName in pList)
@@ -3747,7 +3568,7 @@ namespace GUI
                     comboBoxM3PrgName_st1.Items.Add(prgName.ProgramName);
                 }
 
-                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, toolStripComboBoxT0.Text);
+                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxT0RecipeName.Text);
                 comboBoxM3PrgName_st2.Items.Clear();
 
                 foreach (IObjProgram prgName in pList)
@@ -3765,13 +3586,33 @@ namespace GUI
                 foreach (string prgName in mList)
                 {
                     //filter by model name
-                    if (prgName.Contains(toolStripComboBoxT0.Text))
+                    if (prgName.Contains(comboBoxT0RecipeName.Text))
                         comboBoxM4PrgName.Items.Add(prgName);
                 }
             }
         }
 
         private void comboBoxM1TeachRecipeName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            List<IObjProgram> pList = new List<IObjProgram>();
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, comboBoxM1TeachRecipeName.Text);
+                comboBoxM1TeachProgramList.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    //filter by model name
+                    if (prgName.ProgramName.Contains(comboBoxM1TeachRecipeName.Text))
+                        comboBoxM1TeachProgramList.Items.Add(prgName.ProgramName);
+                }
+            }
+        }
+
+        private void RefreshM1TeachProgramList()
         {
             var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
             List<IObjProgram> pList = new List<IObjProgram>();

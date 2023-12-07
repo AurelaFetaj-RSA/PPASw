@@ -18,41 +18,7 @@ namespace GUI
 {
     public partial class FormApp : Form
     {
-        private void toolStripComboBoxT3_1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-            {
-                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                List<IObjProgram> pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, toolStripComboBoxT3_1.Text);
-
-                comboBoxM2TeachProgramList.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM2TeachProgramList.Items.Add(prgName.ProgramName);
-                }
-            }
-        }
-
-        private void toolStripComboBoxT3_2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-            {
-                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                List<IObjProgram> pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, toolStripComboBoxT3_2.Text);
-
-                comboBoxM2TestProgramList.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM2TestProgramList.Items.Add(prgName.ProgramName);
-                }
-            }
-        }
+       
 
         private async void buttonM2TeachLoadProgram_Click(object sender, EventArgs e)
         {
@@ -101,12 +67,32 @@ namespace GUI
                 {
                     RestartRequestFromM2();
                 }
+                RefreshM2TeachProgramList();
+
                 //program succesfully saved
                 xDialog.MsgBox.Show("program " + comboBoxM2TeachProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
 
             }
         }
+        private void RefreshM2TeachProgramList()
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            List<IObjProgram> pList = new List<IObjProgram>();
 
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxM1TeachRecipeName.Text);
+                comboBoxM1TeachProgramList.Items.Clear();
+
+                foreach (IObjProgram prgName in pList)
+                {
+                    //filter by model name
+                    if (prgName.ProgramName.Contains(comboBoxM1TeachRecipeName.Text))
+                        comboBoxM1TeachProgramList.Items.Add(prgName.ProgramName);
+                }
+            }
+        }
         private void buttonM2TeachNewProgram_Click(object sender, EventArgs e)
         {
             ResetM2Datagrid();
@@ -114,7 +100,31 @@ namespace GUI
 
         private void buttonM2TeachDeleteProgram_Click(object sender, EventArgs e)
         {
+            if (comboBoxM2TeachProgramList.Text == "") return;
 
+            try
+            {
+                DialogResult ret = xDialog.MsgBox.Show("Are you sure you want to delete " + comboBoxM2TeachProgramList.Text + "?", "PBoot", xDialog.MsgBox.Buttons.YesNo, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+
+                if (ret == DialogResult.Yes)
+                {
+                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                    {
+                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                        if (System.IO.File.Exists(config.ProgramsPath[1] + "\\" + comboBoxM2TeachProgramList.Text + config.Extensions[0]))
+                        {
+                            System.IO.File.Delete(config.ProgramsPath[1] + "\\" + comboBoxM2TeachProgramList.Text + config.Extensions[0]);
+                        }
+                    }
+                    RefreshM2TeachProgramList();
+                }
+            }
+            catch (Exception ex)
+            {
+                //todo log
+            }
         }
 
         private void dataGridViewM2TeachPoints_CellContentClick(object sender, DataGridViewCellEventArgs e)

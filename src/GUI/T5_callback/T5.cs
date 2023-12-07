@@ -17,34 +17,6 @@ namespace GUI
 {
     public partial class FormApp : Form
     {
-        private async void buttonM5TranslatorFwd_Click(object sender, EventArgs e)
-        {
-            string keyToSend = "pcM5TranslatorFwd";
-            var sendResult = await ccService.Send(keyToSend, true);
-            if (sendResult.OpcResult)
-            {
-
-            }
-            else
-            {
-
-            }
-        }
-
-        private async void buttonM5TranslatorBwd_Click(object sender, EventArgs e)
-        {
-            string keyToSend = "pcM5TranslatorBwd";
-            var sendResult = await ccService.Send(keyToSend, true);
-            if (sendResult.OpcResult)
-            {
-
-            }
-            else
-            {
-
-            }
-        }
-
         private async void buttonM5ClampFwd_Click(object sender, EventArgs e)
         {
             string keyToSend = "pcM5ClampFwd";
@@ -280,33 +252,37 @@ namespace GUI
             {
 
             }
-        }    
+        }
 
-        //private async void checkBoxM5ExitBelt2_CheckStateChanged(object sender, EventArgs e)
-        //{
-        //    if (ccService.ClientIsConnected)
-        //    {
-        //        string keyToSend = null;
-        //        bool chkValue = false;
+        private async void buttonM5TranslatorFwd_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5TranslatorFwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
 
-        //        keyToSend = "pcM5StartStopExitBelt2";
-        //        chkValue = (checkBoxM5ExitBelt2.CheckState == CheckState.Checked) ? true : false;
+            }
+            else
+            {
 
-        //        var sendResult = await ccService.Send(keyToSend, chkValue);
+            }
+        }
 
-        //        if (sendResult.OpcResult)
-        //        {
-        //            checkBoxM5ExitBelt2.ImageIndex = (chkValue) ? 0 : 1;
-        //        }
-        //        else
-        //        {
-        //            checkBoxM5ExitBelt2.ImageIndex = 2;
-        //        }
-        //    }
-        //    else
-        //    {
+        private async void buttonM5TranslatorBwd_Click(object sender, EventArgs e)
+        {
+            string keyToSend = "pcM5TranslatorBwd";
+            var sendResult = await ccService.Send(keyToSend, true);
+            if (sendResult.OpcResult)
+            {
 
-        //    }
-        //}
+            }
+            else
+            {
+
+            }
+        }
+
+
+
     }
 }

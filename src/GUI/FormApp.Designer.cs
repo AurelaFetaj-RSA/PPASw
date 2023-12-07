@@ -178,9 +178,6 @@
             LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle toolItemFormatStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolItemFormatStyle();
             LidorSystems.IntegralUI.Controls.Style.ToolTipStyle toolTipStyle1 = new LidorSystems.IntegralUI.Controls.Style.ToolTipStyle();
             this.tabPageT3_1 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.contextMenuStripT3_1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItemT3_1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripComboBoxT3_1 = new System.Windows.Forms.ToolStripComboBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.imageListKey = new System.Windows.Forms.ImageList(this.components);
             this.buttonM2ResetServo = new System.Windows.Forms.Button();
@@ -241,9 +238,6 @@
             this.buttonM2TeachLoadProgram = new System.Windows.Forms.Button();
             this.tabPageT3 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT3_2 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.contextMenuStripT3_2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItemT3_2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripComboBoxT3_2 = new System.Windows.Forms.ToolStripComboBox();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.buttonM2ResetTest = new System.Windows.Forms.Button();
             this.comboBoxM2TestRecipeName = new System.Windows.Forms.ComboBox();
@@ -357,9 +351,6 @@
             this.lbLed2001M2 = new LBSoft.IndustrialCtrls.Leds.LBLed();
             this.imageListStart = new System.Windows.Forms.ImageList(this.components);
             this.tabPageT4_1 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.contextMenuStripT4_1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItemT4_1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripComboBoxT4_1 = new System.Windows.Forms.ToolStripComboBox();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.comboBoxM3TeachRecipeName = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -411,9 +402,6 @@
             this.ColumnM3PReached = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tabPageT4 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT4_2 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.contextMenuStripT4_2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItemT4_2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripComboBoxT4_2 = new System.Windows.Forms.ToolStripComboBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.buttonM3ResetTest = new System.Windows.Forms.Button();
             this.comboBoxM3TestRecipeName = new System.Windows.Forms.ComboBox();
@@ -646,10 +634,6 @@
             this.tabPageT6 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT7 = new LidorSystems.IntegralUI.Containers.TabPage();
             this.tabPageT0_1 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.contextMenuStripT0 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItemT0 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripComboBoxT0 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripMenuItemT0Keyboard = new System.Windows.Forms.ToolStripMenuItem();
             this.checkBoxT0Keyboard = new System.Windows.Forms.CheckBox();
             this.comboBoxT0RecipeName = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -850,6 +834,10 @@
             this.labelRecipeNameT0_1 = new System.Windows.Forms.Label();
             this.textBoxMRecipeName = new System.Windows.Forms.TextBox();
             this.tabPageT0_2_2 = new LidorSystems.IntegralUI.Containers.TabPage();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButtonMRecipeBottomSel2 = new System.Windows.Forms.RadioButton();
             this.radioButtonMRecipeBottomSel1 = new System.Windows.Forms.RadioButton();
@@ -945,10 +933,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPageT1_1 = new LidorSystems.IntegralUI.Containers.TabPage();
-            this.contextMenuStripT1_1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripMenuItemT1_1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripComboBoxT1_1 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripMenuItemT1_1Keyboard = new System.Windows.Forms.ToolStripMenuItem();
             this.checkBoxM1CuttingMotorOff = new System.Windows.Forms.CheckBox();
             this.imageListCut = new System.Windows.Forms.ImageList(this.components);
             this.checkBox4 = new System.Windows.Forms.CheckBox();
@@ -1129,7 +1113,6 @@
             this.imageListMainControl = new System.Windows.Forms.ImageList(this.components);
             this.imageListNodes = new System.Windows.Forms.ImageList(this.components);
             this.tabPageT3_1.SuspendLayout();
-            this.contextMenuStripT3_1.SuspendLayout();
             this.groupBoxM2Print.SuspendLayout();
             this.groupBoxM2Constrast.SuspendLayout();
             this.groupBoxM2CenteringClamp.SuspendLayout();
@@ -1143,18 +1126,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM2JogSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TeachPoints)).BeginInit();
             this.tabPageT3_2.SuspendLayout();
-            this.contextMenuStripT3_2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TestPoints)).BeginInit();
             this.tabPageT3_3.SuspendLayout();
             this.tabPageT3_4.SuspendLayout();
             this.tabPageT4_1.SuspendLayout();
-            this.contextMenuStripT4_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3JogSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3ManualQuote)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3ManualSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM3TeachPoints)).BeginInit();
             this.tabPageT4_2.SuspendLayout();
-            this.contextMenuStripT4_2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM3TestPoints)).BeginInit();
             this.tabPageT4_3.SuspendLayout();
             this.tabPageT4_4.SuspendLayout();
@@ -1163,7 +1143,6 @@
             this.tabPageT5_3.SuspendLayout();
             this.tabPageT2.SuspendLayout();
             this.tabPageT0_1.SuspendLayout();
-            this.contextMenuStripT0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMessages)).BeginInit();
             this.statusStripT0.SuspendLayout();
             this.groupBoxM6.SuspendLayout();
@@ -1199,7 +1178,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxM3PLCNode)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPageT1_1.SuspendLayout();
-            this.contextMenuStripT1_1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1TimerBootTeach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1JogSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1ManualQuote)).BeginInit();
@@ -1217,7 +1195,6 @@
             // 
             // tabPageT3_1
             // 
-            this.tabPageT3_1.ContextMenuStrip = this.contextMenuStripT3_1;
             this.tabPageT3_1.Controls.Add(this.checkBox2);
             this.tabPageT3_1.Controls.Add(this.buttonM2ResetServo);
             this.tabPageT3_1.Controls.Add(this.comboBoxM2TeachRecipeName);
@@ -1266,34 +1243,6 @@
             this.tabPageT3_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT3_1.TextBounds")));
             this.tabPageT3_1.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT3_1.UseParentTabStripPlacement = false;
-            // 
-            // contextMenuStripT3_1
-            // 
-            this.contextMenuStripT3_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.contextMenuStripT3_1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contextMenuStripT3_1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemT3_1});
-            this.contextMenuStripT3_1.Name = "contextMenuStrip1";
-            this.contextMenuStripT3_1.Size = new System.Drawing.Size(177, 26);
-            this.contextMenuStripT3_1.Text = "recipe name";
-            // 
-            // toolStripMenuItemT3_1
-            // 
-            this.toolStripMenuItemT3_1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripComboBoxT3_1});
-            this.toolStripMenuItemT3_1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripMenuItemT3_1.Name = "toolStripMenuItemT3_1";
-            this.toolStripMenuItemT3_1.Size = new System.Drawing.Size(176, 22);
-            this.toolStripMenuItemT3_1.Text = "recipe name";
-            // 
-            // toolStripComboBoxT3_1
-            // 
-            this.toolStripComboBoxT3_1.DropDownHeight = 80;
-            this.toolStripComboBoxT3_1.DropDownWidth = 80;
-            this.toolStripComboBoxT3_1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripComboBoxT3_1.IntegralHeight = false;
-            this.toolStripComboBoxT3_1.Name = "toolStripComboBoxT3_1";
-            this.toolStripComboBoxT3_1.Size = new System.Drawing.Size(120, 26);
             // 
             // checkBox2
             // 
@@ -2200,7 +2149,6 @@
             // 
             // tabPageT3_2
             // 
-            this.tabPageT3_2.ContextMenuStrip = this.contextMenuStripT3_2;
             this.tabPageT3_2.Controls.Add(this.checkBox6);
             this.tabPageT3_2.Controls.Add(this.buttonM2ResetTest);
             this.tabPageT3_2.Controls.Add(this.comboBoxM2TestRecipeName);
@@ -2237,34 +2185,6 @@
             this.tabPageT3_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT3_2.TextBounds")));
             this.tabPageT3_2.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT3_2.UseParentTabStripPlacement = false;
-            // 
-            // contextMenuStripT3_2
-            // 
-            this.contextMenuStripT3_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.contextMenuStripT3_2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contextMenuStripT3_2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemT3_2});
-            this.contextMenuStripT3_2.Name = "contextMenuStrip1";
-            this.contextMenuStripT3_2.Size = new System.Drawing.Size(177, 26);
-            this.contextMenuStripT3_2.Text = "recipe name";
-            // 
-            // toolStripMenuItemT3_2
-            // 
-            this.toolStripMenuItemT3_2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripComboBoxT3_2});
-            this.toolStripMenuItemT3_2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripMenuItemT3_2.Name = "toolStripMenuItemT3_2";
-            this.toolStripMenuItemT3_2.Size = new System.Drawing.Size(176, 22);
-            this.toolStripMenuItemT3_2.Text = "recipe name";
-            // 
-            // toolStripComboBoxT3_2
-            // 
-            this.toolStripComboBoxT3_2.DropDownHeight = 80;
-            this.toolStripComboBoxT3_2.DropDownWidth = 80;
-            this.toolStripComboBoxT3_2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripComboBoxT3_2.IntegralHeight = false;
-            this.toolStripComboBoxT3_2.Name = "toolStripComboBoxT3_2";
-            this.toolStripComboBoxT3_2.Size = new System.Drawing.Size(120, 26);
             // 
             // checkBox6
             // 
@@ -4443,7 +4363,6 @@
             // 
             // tabPageT4_1
             // 
-            this.tabPageT4_1.ContextMenuStrip = this.contextMenuStripT4_1;
             this.tabPageT4_1.Controls.Add(this.checkBox8);
             this.tabPageT4_1.Controls.Add(this.comboBoxM3TeachRecipeName);
             this.tabPageT4_1.Controls.Add(this.label34);
@@ -4513,34 +4432,6 @@
             this.tabPageT4_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_1.TextBounds")));
             this.tabPageT4_1.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT4_1.UseParentTabStripPlacement = false;
-            // 
-            // contextMenuStripT4_1
-            // 
-            this.contextMenuStripT4_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.contextMenuStripT4_1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contextMenuStripT4_1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemT4_1});
-            this.contextMenuStripT4_1.Name = "contextMenuStrip1";
-            this.contextMenuStripT4_1.Size = new System.Drawing.Size(177, 26);
-            this.contextMenuStripT4_1.Text = "recipe name";
-            // 
-            // toolStripMenuItemT4_1
-            // 
-            this.toolStripMenuItemT4_1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripComboBoxT4_1});
-            this.toolStripMenuItemT4_1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripMenuItemT4_1.Name = "toolStripMenuItemT4_1";
-            this.toolStripMenuItemT4_1.Size = new System.Drawing.Size(176, 22);
-            this.toolStripMenuItemT4_1.Text = "recipe name";
-            // 
-            // toolStripComboBoxT4_1
-            // 
-            this.toolStripComboBoxT4_1.DropDownHeight = 80;
-            this.toolStripComboBoxT4_1.DropDownWidth = 80;
-            this.toolStripComboBoxT4_1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripComboBoxT4_1.IntegralHeight = false;
-            this.toolStripComboBoxT4_1.Name = "toolStripComboBoxT4_1";
-            this.toolStripComboBoxT4_1.Size = new System.Drawing.Size(120, 26);
             // 
             // checkBox8
             // 
@@ -5304,7 +5195,6 @@
             // 
             // tabPageT4_2
             // 
-            this.tabPageT4_2.ContextMenuStrip = this.contextMenuStripT4_2;
             this.tabPageT4_2.Controls.Add(this.checkBox7);
             this.tabPageT4_2.Controls.Add(this.buttonM3ResetTest);
             this.tabPageT4_2.Controls.Add(this.comboBoxM3TestRecipeName);
@@ -5343,34 +5233,6 @@
             this.tabPageT4_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT4_2.TextBounds")));
             this.tabPageT4_2.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT4_2.UseParentTabStripPlacement = false;
-            // 
-            // contextMenuStripT4_2
-            // 
-            this.contextMenuStripT4_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.contextMenuStripT4_2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contextMenuStripT4_2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemT4_2});
-            this.contextMenuStripT4_2.Name = "contextMenuStrip1";
-            this.contextMenuStripT4_2.Size = new System.Drawing.Size(177, 26);
-            this.contextMenuStripT4_2.Text = "recipe name";
-            // 
-            // toolStripMenuItemT4_2
-            // 
-            this.toolStripMenuItemT4_2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripComboBoxT4_2});
-            this.toolStripMenuItemT4_2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripMenuItemT4_2.Name = "toolStripMenuItemT4_2";
-            this.toolStripMenuItemT4_2.Size = new System.Drawing.Size(176, 22);
-            this.toolStripMenuItemT4_2.Text = "recipe name";
-            // 
-            // toolStripComboBoxT4_2
-            // 
-            this.toolStripComboBoxT4_2.DropDownHeight = 80;
-            this.toolStripComboBoxT4_2.DropDownWidth = 80;
-            this.toolStripComboBoxT4_2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripComboBoxT4_2.IntegralHeight = false;
-            this.toolStripComboBoxT4_2.Name = "toolStripComboBoxT4_2";
-            this.toolStripComboBoxT4_2.Size = new System.Drawing.Size(120, 26);
             // 
             // checkBox7
             // 
@@ -5430,9 +5292,9 @@
             this.radioButtonFootOrderOpt2Test.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonFootOrderOpt2Test.Location = new System.Drawing.Point(212, 366);
             this.radioButtonFootOrderOpt2Test.Name = "radioButtonFootOrderOpt2Test";
-            this.radioButtonFootOrderOpt2Test.Size = new System.Drawing.Size(126, 20);
+            this.radioButtonFootOrderOpt2Test.Size = new System.Drawing.Size(47, 20);
             this.radioButtonFootOrderOpt2Test.TabIndex = 144;
-            this.radioButtonFootOrderOpt2Test.Text = "start order. left";
+            this.radioButtonFootOrderOpt2Test.Text = "left";
             this.radioButtonFootOrderOpt2Test.UseVisualStyleBackColor = false;
             this.radioButtonFootOrderOpt2Test.CheckedChanged += new System.EventHandler(this.radioButtonFootOrderOpt2Test_CheckedChanged);
             // 
@@ -5444,10 +5306,10 @@
             this.radioButtonFootOrderOpt1Test.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonFootOrderOpt1Test.Location = new System.Drawing.Point(54, 366);
             this.radioButtonFootOrderOpt1Test.Name = "radioButtonFootOrderOpt1Test";
-            this.radioButtonFootOrderOpt1Test.Size = new System.Drawing.Size(137, 20);
+            this.radioButtonFootOrderOpt1Test.Size = new System.Drawing.Size(55, 20);
             this.radioButtonFootOrderOpt1Test.TabIndex = 143;
             this.radioButtonFootOrderOpt1Test.TabStop = true;
-            this.radioButtonFootOrderOpt1Test.Text = "start order: right";
+            this.radioButtonFootOrderOpt1Test.Text = "right";
             this.radioButtonFootOrderOpt1Test.UseVisualStyleBackColor = false;
             this.radioButtonFootOrderOpt1Test.CheckedChanged += new System.EventHandler(this.radioButtonFootOrderOpt1Test_CheckedChanged);
             // 
@@ -7800,6 +7662,7 @@
             this.buttonM5TranslatorBwd.TabIndex = 142;
             this.buttonM5TranslatorBwd.Text = "translator backward";
             this.buttonM5TranslatorBwd.UseVisualStyleBackColor = false;
+            this.buttonM5TranslatorBwd.Click += new System.EventHandler(this.buttonM5TranslatorBwd_Click);
             // 
             // buttonM5ClampOpening
             // 
@@ -7825,6 +7688,7 @@
             this.buttonM5TranslatorFwd.TabIndex = 141;
             this.buttonM5TranslatorFwd.Text = "translator forward";
             this.buttonM5TranslatorFwd.UseVisualStyleBackColor = false;
+            this.buttonM5TranslatorFwd.Click += new System.EventHandler(this.buttonM5TranslatorFwd_Click);
             // 
             // buttonM5ClampClosing
             // 
@@ -9893,7 +9757,6 @@
             // 
             // tabPageT0_1
             // 
-            this.tabPageT0_1.ContextMenuStrip = this.contextMenuStripT0;
             this.tabPageT0_1.Controls.Add(this.checkBoxT0Keyboard);
             this.tabPageT0_1.Controls.Add(this.comboBoxT0RecipeName);
             this.tabPageT0_1.Controls.Add(this.label26);
@@ -9939,42 +9802,6 @@
             this.tabPageT0_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_1.TextBounds")));
             this.tabPageT0_1.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT0_1.UseParentTabStripPlacement = false;
-            // 
-            // contextMenuStripT0
-            // 
-            this.contextMenuStripT0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.contextMenuStripT0.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contextMenuStripT0.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemT0,
-            this.toolStripMenuItemT0Keyboard});
-            this.contextMenuStripT0.Name = "contextMenuStrip1";
-            this.contextMenuStripT0.Size = new System.Drawing.Size(177, 48);
-            this.contextMenuStripT0.Text = "recipe name";
-            // 
-            // toolStripMenuItemT0
-            // 
-            this.toolStripMenuItemT0.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripComboBoxT0});
-            this.toolStripMenuItemT0.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripMenuItemT0.Name = "toolStripMenuItemT0";
-            this.toolStripMenuItemT0.Size = new System.Drawing.Size(176, 22);
-            this.toolStripMenuItemT0.Text = "recipe name";
-            // 
-            // toolStripComboBoxT0
-            // 
-            this.toolStripComboBoxT0.DropDownHeight = 80;
-            this.toolStripComboBoxT0.DropDownWidth = 80;
-            this.toolStripComboBoxT0.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripComboBoxT0.IntegralHeight = false;
-            this.toolStripComboBoxT0.Name = "toolStripComboBoxT0";
-            this.toolStripComboBoxT0.Size = new System.Drawing.Size(120, 26);
-            // 
-            // toolStripMenuItemT0Keyboard
-            // 
-            this.toolStripMenuItemT0Keyboard.Name = "toolStripMenuItemT0Keyboard";
-            this.toolStripMenuItemT0Keyboard.Size = new System.Drawing.Size(176, 22);
-            this.toolStripMenuItemT0Keyboard.Text = "keyboard";
-            this.toolStripMenuItemT0Keyboard.Click += new System.EventHandler(this.toolStripMenuItemT0Keyboard_Click);
             // 
             // checkBoxT0Keyboard
             // 
@@ -10173,7 +10000,7 @@
             this.toolStripStatusLabelSN.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.toolStripStatusLabelSN.Name = "toolStripStatusLabelSN";
             this.toolStripStatusLabelSN.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.toolStripStatusLabelSN.Size = new System.Drawing.Size(51, 26);
+            this.toolStripStatusLabelSN.Size = new System.Drawing.Size(51, 16);
             this.toolStripStatusLabelSN.Text = "S/N";
             // 
             // toolStripStatusLabelDateTime
@@ -10191,7 +10018,7 @@
             // 
             this.toolStripStatusLabelSystem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
             this.toolStripStatusLabelSystem.Name = "toolStripStatusLabelSystem";
-            this.toolStripStatusLabelSystem.Size = new System.Drawing.Size(99, 26);
+            this.toolStripStatusLabelSystem.Size = new System.Drawing.Size(99, 16);
             this.toolStripStatusLabelSystem.Text = "system offline";
             // 
             // checkBoxPause
@@ -12346,6 +12173,7 @@
             this.groupBoxRecipeM5.TabIndex = 119;
             this.groupBoxRecipeM5.TabStop = false;
             this.groupBoxRecipeM5.Text = "manipulator";
+            this.groupBoxRecipeM5.Visible = false;
             // 
             // labelM5Param1
             // 
@@ -12401,6 +12229,7 @@
             this.groupBoxRecipeM6.TabIndex = 118;
             this.groupBoxRecipeM6.TabStop = false;
             this.groupBoxRecipeM6.Text = "oven";
+            this.groupBoxRecipeM6.Visible = false;
             // 
             // labelM6Param1
             // 
@@ -12830,6 +12659,10 @@
             // 
             // tabPageT0_2_2
             // 
+            this.tabPageT0_2_2.Controls.Add(this.label50);
+            this.tabPageT0_2_2.Controls.Add(this.label49);
+            this.tabPageT0_2_2.Controls.Add(this.label48);
+            this.tabPageT0_2_2.Controls.Add(this.label37);
             this.tabPageT0_2_2.Controls.Add(this.groupBox2);
             this.tabPageT0_2_2.Controls.Add(this.groupBox1);
             this.tabPageT0_2_2.Controls.Add(this.checkBox3);
@@ -12875,6 +12708,50 @@
             this.tabPageT0_2_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2_2.TextBounds")));
             this.tabPageT0_2_2.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT0_2_2.UseParentTabStripPlacement = false;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.BackColor = System.Drawing.SystemColors.Control;
+            this.label50.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(32, 151);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(67, 16);
+            this.label50.TabIndex = 176;
+            this.label50.Text = "pad laser";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.BackColor = System.Drawing.SystemColors.Control;
+            this.label49.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label49.Location = new System.Drawing.Point(411, 51);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(57, 16);
+            this.label49.TabIndex = 175;
+            this.label49.Text = "pad ext";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.BackColor = System.Drawing.SystemColors.Control;
+            this.label48.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label48.Location = new System.Drawing.Point(214, 51);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(53, 16);
+            this.label48.TabIndex = 174;
+            this.label48.Text = "pad int";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.SystemColors.Control;
+            this.label37.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(30, 50);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(56, 16);
+            this.label37.TabIndex = 173;
+            this.label37.Text = "trimmer";
             // 
             // groupBox2
             // 
@@ -13216,6 +13093,7 @@
             this.labelM6ParamRecipe.Size = new System.Drawing.Size(23, 16);
             this.labelM6ParamRecipe.TabIndex = 153;
             this.labelM6ParamRecipe.Text = "on";
+            this.labelM6ParamRecipe.Visible = false;
             // 
             // checkBoxM6RecipeModify
             // 
@@ -13239,6 +13117,7 @@
             this.checkBoxM6RecipeModify.Size = new System.Drawing.Size(82, 64);
             this.checkBoxM6RecipeModify.TabIndex = 149;
             this.checkBoxM6RecipeModify.UseVisualStyleBackColor = false;
+            this.checkBoxM6RecipeModify.Visible = false;
             this.checkBoxM6RecipeModify.CheckStateChanged += new System.EventHandler(this.checkBoxM6RecipeModify_CheckStateChanged);
             // 
             // checkBoxM5RecipeModify
@@ -13263,6 +13142,7 @@
             this.checkBoxM5RecipeModify.Size = new System.Drawing.Size(82, 64);
             this.checkBoxM5RecipeModify.TabIndex = 145;
             this.checkBoxM5RecipeModify.UseVisualStyleBackColor = false;
+            this.checkBoxM5RecipeModify.Visible = false;
             this.checkBoxM5RecipeModify.CheckStateChanged += new System.EventHandler(this.checkBoxM5RecipeModify_CheckStateChanged);
             // 
             // labelM5ParamRecipe
@@ -13275,6 +13155,7 @@
             this.labelM5ParamRecipe.Size = new System.Drawing.Size(23, 16);
             this.labelM5ParamRecipe.TabIndex = 154;
             this.labelM5ParamRecipe.Text = "on";
+            this.labelM5ParamRecipe.Visible = false;
             // 
             // buttonMUpdateRecipe
             // 
@@ -14201,7 +14082,6 @@
             // 
             // tabPageT1_1
             // 
-            this.tabPageT1_1.ContextMenuStrip = this.contextMenuStripT1_1;
             this.tabPageT1_1.Controls.Add(this.checkBoxM1CuttingMotorOff);
             this.tabPageT1_1.Controls.Add(this.checkBox4);
             this.tabPageT1_1.Controls.Add(this.comboBoxM1TeachRecipeName);
@@ -14277,43 +14157,6 @@
             this.tabPageT1_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_1.TextBounds")));
             this.tabPageT1_1.TextSize = new System.Drawing.SizeF(50.55989F, 21.44531F);
             this.tabPageT1_1.UseParentTabStripPlacement = false;
-            // 
-            // contextMenuStripT1_1
-            // 
-            this.contextMenuStripT1_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(241)))));
-            this.contextMenuStripT1_1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contextMenuStripT1_1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItemT1_1,
-            this.toolStripMenuItemT1_1Keyboard});
-            this.contextMenuStripT1_1.Name = "contextMenuStrip1";
-            this.contextMenuStripT1_1.Size = new System.Drawing.Size(177, 48);
-            this.contextMenuStripT1_1.Text = "recipe name";
-            // 
-            // toolStripMenuItemT1_1
-            // 
-            this.toolStripMenuItemT1_1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripComboBoxT1_1});
-            this.toolStripMenuItemT1_1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripMenuItemT1_1.Name = "toolStripMenuItemT1_1";
-            this.toolStripMenuItemT1_1.Size = new System.Drawing.Size(176, 22);
-            this.toolStripMenuItemT1_1.Text = "recipe name";
-            // 
-            // toolStripComboBoxT1_1
-            // 
-            this.toolStripComboBoxT1_1.DropDownHeight = 80;
-            this.toolStripComboBoxT1_1.DropDownWidth = 80;
-            this.toolStripComboBoxT1_1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripComboBoxT1_1.IntegralHeight = false;
-            this.toolStripComboBoxT1_1.Name = "toolStripComboBoxT1_1";
-            this.toolStripComboBoxT1_1.Size = new System.Drawing.Size(120, 26);
-            this.toolStripComboBoxT1_1.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBoxT1_1_SelectedIndexChanged);
-            // 
-            // toolStripMenuItemT1_1Keyboard
-            // 
-            this.toolStripMenuItemT1_1Keyboard.Name = "toolStripMenuItemT1_1Keyboard";
-            this.toolStripMenuItemT1_1Keyboard.Size = new System.Drawing.Size(176, 22);
-            this.toolStripMenuItemT1_1Keyboard.Text = "keyboard";
-            this.toolStripMenuItemT1_1Keyboard.Click += new System.EventHandler(this.toolStripMenuItemT1_1Keyboard_Click);
             // 
             // checkBoxM1CuttingMotorOff
             // 
@@ -15318,14 +15161,12 @@
             this.toolStripComboBoxT1_2.IntegralHeight = false;
             this.toolStripComboBoxT1_2.Name = "toolStripComboBoxT1_2";
             this.toolStripComboBoxT1_2.Size = new System.Drawing.Size(120, 26);
-            this.toolStripComboBoxT1_2.SelectedIndexChanged += new System.EventHandler(this.toolStripComboBoxT1_2_SelectedIndexChanged);
             // 
             // toolStripMenuItemT1_2Keyboard
             // 
             this.toolStripMenuItemT1_2Keyboard.Name = "toolStripMenuItemT1_2Keyboard";
             this.toolStripMenuItemT1_2Keyboard.Size = new System.Drawing.Size(176, 22);
             this.toolStripMenuItemT1_2Keyboard.Text = "keyboard";
-            this.toolStripMenuItemT1_2Keyboard.Click += new System.EventHandler(this.toolStripMenuItemT1_2Keyboard_Click);
             // 
             // checkBox5
             // 
@@ -17557,18 +17398,18 @@
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
             this.tabControlMain.Controls.Add(this.tabPageT1_1);
-            this.tabControlMain.Controls.Add(this.tabPageT1);
-            this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
-            this.tabControlMain.Controls.Add(this.tabPageT0_2);
-            this.tabControlMain.Controls.Add(this.tabPageT0_1);
-            this.tabControlMain.Controls.Add(this.tabPageT0);
             this.tabControlMain.Controls.Add(this.tabPageT7);
             this.tabControlMain.Controls.Add(this.tabPageT6);
             this.tabControlMain.Controls.Add(this.tabPageT5);
             this.tabControlMain.Controls.Add(this.tabPageT4);
             this.tabControlMain.Controls.Add(this.tabPageT3);
             this.tabControlMain.Controls.Add(this.tabPageT2);
+            this.tabControlMain.Controls.Add(this.tabPageT1);
+            this.tabControlMain.Controls.Add(this.tabPageT0);
+            this.tabControlMain.Controls.Add(this.tabPageT0_1);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
+            this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_3);
             this.tabControlMain.Controls.Add(this.tabPage2);
             this.tabControlMain.Controls.Add(this.tabPageT1_2);
@@ -17697,7 +17538,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tabPageT3_1.ResumeLayout(false);
             this.tabPageT3_1.PerformLayout();
-            this.contextMenuStripT3_1.ResumeLayout(false);
             this.groupBoxM2Print.ResumeLayout(false);
             this.groupBoxM2Constrast.ResumeLayout(false);
             this.groupBoxM2CenteringClamp.ResumeLayout(false);
@@ -17715,20 +17555,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TeachPoints)).EndInit();
             this.tabPageT3_2.ResumeLayout(false);
             this.tabPageT3_2.PerformLayout();
-            this.contextMenuStripT3_2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM2TestPoints)).EndInit();
             this.tabPageT3_3.ResumeLayout(false);
             this.tabPageT3_4.ResumeLayout(false);
             this.tabPageT4_1.ResumeLayout(false);
             this.tabPageT4_1.PerformLayout();
-            this.contextMenuStripT4_1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3JogSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3ManualQuote)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM3ManualSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM3TeachPoints)).EndInit();
             this.tabPageT4_2.ResumeLayout(false);
             this.tabPageT4_2.PerformLayout();
-            this.contextMenuStripT4_2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewM3TestPoints)).EndInit();
             this.tabPageT4_3.ResumeLayout(false);
             this.tabPageT4_4.ResumeLayout(false);
@@ -17740,7 +17577,6 @@
             this.tabPageT2.PerformLayout();
             this.tabPageT0_1.ResumeLayout(false);
             this.tabPageT0_1.PerformLayout();
-            this.contextMenuStripT0.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMessages)).EndInit();
             this.statusStripT0.ResumeLayout(false);
             this.statusStripT0.PerformLayout();
@@ -17799,7 +17635,6 @@
             this.tabPage2.PerformLayout();
             this.tabPageT1_1.ResumeLayout(false);
             this.tabPageT1_1.PerformLayout();
-            this.contextMenuStripT1_1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1TimerBootTeach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1JogSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownM1ManualQuote)).EndInit();
@@ -18141,25 +17976,7 @@
         private System.Windows.Forms.Button buttonM2TestSaveProgram;
         private System.Windows.Forms.Button buttonM2TestLoadProgram;
         private System.Windows.Forms.DataGridView dataGridViewM2TestPoints;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStripT0;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT0;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxT0;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStripT3_1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT3_1;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxT3_1;
         private System.Windows.Forms.Button buttonM2StartTest;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStripT3_2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT3_2;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxT3_2;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStripT4_1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT4_1;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxT4_1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStripT4_2;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT4_2;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxT4_2;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStripT1_1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT1_1;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBoxT1_1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStripT1_2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT1_2;
         private System.Windows.Forms.ToolStripComboBox toolStripComboBoxT1_2;
@@ -18205,7 +18022,6 @@
         private System.Windows.Forms.ImageList imageListRotation;
         private System.Windows.Forms.Button buttonM3RotationCW;
         private System.Windows.Forms.Button buttonMRecipiesShowAll;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT0Keyboard;
         private System.Windows.Forms.ComboBox comboBoxM1TeachProgramList;
         private System.Windows.Forms.Button buttonM1TeachDeleteProgram;
         private System.Windows.Forms.Button buttonM1TeachNewProgram;
@@ -18580,7 +18396,6 @@
         private LidorSystems.IntegralUI.Containers.TabPage tabPage4;
         private System.Windows.Forms.Label labelM5OnPercentage;
         private System.Windows.Forms.NumericUpDown numericUpDownM6OnPercentage;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT1_1Keyboard;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemT1_2Keyboard;
         private System.Windows.Forms.CheckBox checkBoxM1CuttingSuction;
         private System.Windows.Forms.Button buttonM1Sharpening;
@@ -18771,5 +18586,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.CheckBox checkBoxM1CuttingMotorOff;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label37;
     }
 }

@@ -96,7 +96,7 @@ namespace GUI
                         RestartRequestFromM1();
                     }
                     //update program name list in auto
-
+                    RefreshM1TeachProgramList();
                     //program succesfully saved
                     xDialog.MsgBox.Show("program " + comboBoxM1TeachProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
                 }
@@ -122,15 +122,22 @@ namespace GUI
 
             try
             {
-                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+                DialogResult ret = xDialog.MsgBox.Show("Are you sure you want to delete " + comboBoxM1TeachProgramList.Text + "?", "PBoot", xDialog.MsgBox.Buttons.YesNo, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
 
-                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                if (ret == DialogResult.Yes)
                 {
-                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                    if (System.IO.File.Exists(config.ProgramsPath[0] + comboBoxM1TeachProgramList.Text + config.Extensions[0])
+                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
                     {
-                        System.IO.File.Delete(config.ProgramsPath[0] + comboBoxM1TeachProgramList.Text + config.Extensions[0]);
+                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                        if (System.IO.File.Exists(config.ProgramsPath[0] + "\\" + comboBoxM1TeachProgramList.Text + config.Extensions[0]))
+                        {
+                            System.IO.File.Delete(config.ProgramsPath[0] +  "\\" + comboBoxM1TeachProgramList.Text + config.Extensions[0]);
+                            
+                        }
                     }
+                    RefreshM1TeachProgramList();
                 }
             }
             catch (Exception ex)
