@@ -856,7 +856,6 @@ namespace GUI
                 }
                 //program succesfully saved
                 xDialog.MsgBox.Show("program " + comboBoxM3TestProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
-
             }
         }
     }

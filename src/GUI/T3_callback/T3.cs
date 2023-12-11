@@ -618,10 +618,10 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
 
-                int p1 = Convert.ToInt32(dataGridViewM2TestPoints[1, 0].Value);
-                int p2 = Convert.ToInt32(dataGridViewM2TestPoints[1, 1].Value);
-                int p3 = Convert.ToInt32(dataGridViewM2TestPoints[1, 2].Value);
-                int p4 = Convert.ToInt32(dataGridViewM2TestPoints[1, 3].Value);
+                float p1 = float.Parse(dataGridViewM2TestPoints[1, 0].Value.ToString());
+                float p2 = float.Parse(dataGridViewM2TestPoints[1, 1].Value.ToString());
+                float p3 = float.Parse(dataGridViewM2TestPoints[1, 2].Value.ToString());
+                float p4 = float.Parse(dataGridViewM2TestPoints[1, 3].Value.ToString());
                 int s1 = Convert.ToInt32(dataGridViewM2TestPoints[2, 0].Value);
                 int s2 = Convert.ToInt32(dataGridViewM2TestPoints[2, 1].Value);
                 int s3 = Convert.ToInt32(dataGridViewM2TestPoints[2, 2].Value);
@@ -731,6 +731,18 @@ namespace GUI
             //send quote/speed
             M2TestSendProgram();
 
+            //check phase
+            string key = "pcM2PadPrintIntState";
+            var readResult = await ccService.Read(key);
+
+            if (readResult.OpcResult)
+            {
+                if (short.Parse(readResult.Value.ToString()) != 0)
+                {
+                    xDialog.MsgBox.Show("pad int phase not 0. Press RESET.", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Error, xDialog.MsgBox.AnimateStyle.FadeIn);
+                    return;
+                }
+            }
             //send start command
             string keyToSend = "pcM2StartTest";
             var sendResult = await ccService.Send(keyToSend, true);

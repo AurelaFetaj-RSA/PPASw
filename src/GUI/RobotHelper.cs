@@ -492,9 +492,9 @@ namespace GUI
                     };
 
                         readResultPLC = await ccService.Read(keys);
-                        WriteOnLabelAsync(readResultPLC["pcM1CycleTime"], labelM1CycleTime);
-                        WriteOnLabelAsync(readResultPLC["pcM2CycleTime"], labelM2CycleTime);
-                        WriteOnLabelAsync(readResultPLC["pcM4CycleTime"], labelM4CycleTime);
+                        WriteOnLabelAsync(readResultPLC["pcM1CycleTime"], labelM1CycleTime, 100.0f);
+                        WriteOnLabelAsync(readResultPLC["pcM2CycleTime"], labelM2CycleTime, 100.0f);
+                        WriteOnLabelAsync(readResultPLC["pcM4CycleTime"], labelM4CycleTime, 100.0f);
 
 
                         #endregion
@@ -874,6 +874,27 @@ namespace GUI
             else
             {
                 textToAppend = cr.Value.ToString();
+            }
+            if (lbl.InvokeRequired)
+            {
+                lbl.Invoke((MethodInvoker)delegate
+                {
+                    lbl.Text = textToAppend;
+                });
+            }
+        }
+
+        public void WriteOnLabelAsync(ClientResult cr, Label lbl, float divisor)
+        {
+            string textToAppend = "";
+
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                textToAppend = "offline";
+            }
+            else
+            {
+                textToAppend = (float.Parse(cr.Value.ToString()) / divisor).ToString();
             }
             if (lbl.InvokeRequired)
             {

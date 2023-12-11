@@ -58,10 +58,12 @@ namespace GUI
 
         //create static instance of gui configurator (singleton)
         public static Configurator guiConfigurator = new Configurator();
-        //create static instance of I7O configurator (singleton)
+        //create static instance of io configurator (singleton)
         public static Configurator ioConfigurator = new Configurator();
-        //create static instance of I7O configurator (singleton)
+        //create static instance of alarms configurator (singleton)
         public static Configurator alarmsConfigurator = new Configurator();
+        //create static instance of auto configurator (singleton)
+        public static Configurator autoConfigurator = new Configurator();
 
         public static string M1PrgName = "";
         public static string M2PrgName = "";
@@ -338,6 +340,8 @@ namespace GUI
             InitM5IOSettings();
             alarmsConfigurator.LoadFromFile("alarmsconfig.xml", Configurator.FileType.Xml);
             InitM1AlarmsSettings();
+            autoConfigurator.LoadFromFile("autoconfig.xml", Configurator.FileType.Xml);
+            InitAutoSettings();
         }
         public void Start()
         {
@@ -455,6 +459,17 @@ namespace GUI
             guiConfigurator.AddValue("T3_2", "RECIPENAME", comboBoxM3TestRecipeName.Text, true);
 
             guiConfigurator.Save("guiconfig.xml", Configurator.FileType.Xml);
+        }
+
+        private async void InitAutoSettings()
+        {
+            //save configuration file plconfig.xml
+            groupBoxM1.Text = autoConfigurator.GetValue("T0", "G1NAME", "");
+            groupBoxM2.Text = autoConfigurator.GetValue("T0", "G2NAME", "");
+            groupBoxM3.Text = autoConfigurator.GetValue("T0", "G3NAME", "");
+            groupBoxM4.Text = autoConfigurator.GetValue("T0", "G4NAME", "");
+            groupBoxM5.Text = autoConfigurator.GetValue("T0", "G5NAME", "");
+            groupBoxM6.Text = autoConfigurator.GetValue("T0", "G6NAME", "");
         }
 
         private async void InitGUISettings()
@@ -2154,6 +2169,19 @@ namespace GUI
             else
             {
                 var sendResult1 = await ccService.Send(keyToSend, 2);
+            }
+
+            //check phase
+            string key = "pcM2PadPrintExtState";
+            var readResult = await ccService.Read(key);
+
+            if (readResult.OpcResult)
+            {
+                if (short.Parse(readResult.Value.ToString()) != 0)
+                {
+                    xDialog.MsgBox.Show("pad ext phase not 0. Press RESET.", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Error, xDialog.MsgBox.AnimateStyle.FadeIn);
+                    return;
+                }
             }
 
             //send start command
