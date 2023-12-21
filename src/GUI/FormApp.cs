@@ -78,6 +78,9 @@ namespace GUI
         public static string M5inc = "";
         public static string M6inc = "";
         public static bool restartApp = false;
+
+        public DateTime dt = DateTime.Now;
+
         public enum Priority
         {
             normal = 0,
@@ -342,6 +345,12 @@ namespace GUI
             InitM1AlarmsSettings();
             autoConfigurator.LoadFromFile("autoconfig.xml", Configurator.FileType.Xml);
             InitAutoSettings();
+
+            DateTime value = DateTime.Now;
+
+            
+
+
         }
         public void Start()
         {
@@ -396,7 +405,7 @@ namespace GUI
                 if (parentPage.Index == 7)
                 {
                     //ask user to close application
-                    DialogResult res = xDialog.MsgBox.Show("Are you sure you want to exit from application?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
+                    DialogResult res = xDialog.MsgBox.Show("Está seguro de que desea salir de la aplicación?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
                     if (res == DialogResult.Yes)
                     {
                         SaveGUISettings();
@@ -470,6 +479,8 @@ namespace GUI
             groupBoxM4.Text = autoConfigurator.GetValue("T0", "G4NAME", "");
             groupBoxM5.Text = autoConfigurator.GetValue("T0", "G5NAME", "");
             groupBoxM6.Text = autoConfigurator.GetValue("T0", "G6NAME", "");
+            groupBoxM6.Text = autoConfigurator.GetValue("T0", "PHASE", "");
+            groupBoxM6.Text = autoConfigurator.GetValue("T0", "CYCLENUMBER", "");
         }
 
         private async void InitGUISettings()
@@ -1462,7 +1473,7 @@ namespace GUI
         {
             if (textBoxMRecipeName.Text.Length >= 0 && textBoxMRecipeName.Text.Length < 4)
             {
-                xDialog.MsgBox.Show("recipe name not valid", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+                xDialog.MsgBox.Show("Nombre de receta no válido", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
                 return;
             }
 
@@ -1509,7 +1520,7 @@ namespace GUI
                 }
                 //refresh combobox
                 RefreshModelNameComboBox();
-                xDialog.MsgBox.Show("Recipe succesfully created", "PBoot", xDialog.MsgBox.Buttons.OK);
+                xDialog.MsgBox.Show("Receta creada con éxito positivo", "PBoot", xDialog.MsgBox.Buttons.OK);
             }
             else
             {
@@ -1572,7 +1583,7 @@ namespace GUI
         private int GetSelOptionTopBottomUpdateRecipe()
         {
             int seloption = 0;
-            if ((radioButtonMRecipeTopSel1.Checked) & (radioButtonMRecipeBottomSel1.Checked))
+            if ((radioButtonMRecipeTopSel1.Checked) & (radioButtonMRecipeBottomSel2.Checked))
             {
                 seloption = 3;
             }
@@ -1628,7 +1639,7 @@ namespace GUI
                 sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
 
                 labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
-                labelM3Param2Value.Text = ((recs.Result[0].m3_param2 == 1)?"start from right":"start from left");
+                labelM3Param2Value.Text = ((recs.Result[0].m3_param2 == 1)? "start from derecha" : "start from izquierda");
 
                 //send quote, speed
                 var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
@@ -1710,7 +1721,7 @@ namespace GUI
                 sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
 
                 labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
-                labelM3Param2Value.Text = ((recs.Result[0].m3_param2 == 1) ? "start from right" : "start from left");
+                labelM3Param2Value.Text = ((recs.Result[0].m3_param2 == 1) ? "start from derecha" : "start from izquierda");
                 //send quote, speed
                 var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
@@ -2006,6 +2017,9 @@ namespace GUI
                         }
                     }
                 }
+
+                //carico il programma in TEST
+
             }
             else
             {
@@ -2179,7 +2193,7 @@ namespace GUI
             {
                 if (short.Parse(readResult.Value.ToString()) != 0)
                 {
-                    xDialog.MsgBox.Show("pad ext phase not 0. Press RESET.", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Error, xDialog.MsgBox.AnimateStyle.FadeIn);
+                    xDialog.MsgBox.Show("pad ext fase no 0. Prensa RESET.", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Error, xDialog.MsgBox.AnimateStyle.FadeIn);
                     return;
                 }
             }
@@ -2191,7 +2205,7 @@ namespace GUI
             {
 
             }
-            else xDialog.MsgBox.Show("offline", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+            else xDialog.MsgBox.Show("sin conexión", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
         }
 
         private void buttonMRecipiesShowAll_Click(object sender, EventArgs e)
@@ -2209,9 +2223,9 @@ namespace GUI
                     DataSet ds = new DataSet();
                     adapter.Fill(ds);
                     dataGridViewMEditRecipe.DataSource = ds.Tables[0];
-                    dataGridViewMEditRecipe.Columns[0].HeaderText = "recipe name";
+                    dataGridViewMEditRecipe.Columns[0].HeaderText = "receta";
                     dataGridViewMEditRecipe.Columns[0].Width = 120;
-                    dataGridViewMEditRecipe.Columns[1].HeaderText = "trimmer on/off";
+                    dataGridViewMEditRecipe.Columns[1].HeaderText = "refiladora on/off";
                     dataGridViewMEditRecipe.Columns[1].Width = 140;
                     dataGridViewMEditRecipe.Columns[2].Visible = false;
                     dataGridViewMEditRecipe.Columns[3].HeaderText = "padprint int on/off";
@@ -2234,10 +2248,6 @@ namespace GUI
             }
         }
 
-   
-
-       
-
         private async void radioButtonFootOrderOpt1Test_CheckedChanged(object sender, EventArgs e)
         {
             //send start command
@@ -2247,7 +2257,7 @@ namespace GUI
             {
 
             }
-            else xDialog.MsgBox.Show("offline", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+            else xDialog.MsgBox.Show("sin conexión", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
         }
 
         private async void radioButtonFootOrderOpt2Test_CheckedChanged(object sender, EventArgs e)
@@ -2453,7 +2463,7 @@ namespace GUI
 
         public async void UpdateRecipeToM1(string modelName)
         {
-            if (ccService.ClientIsConnected == false)
+            if (M1PrgName == "" || ccService.ClientIsConnected == false)
             {
 
             }
@@ -2481,7 +2491,7 @@ namespace GUI
 
         public async void UpdateRecipeToM2(string modelName)
         {
-            if (ccService.ClientIsConnected == false)
+            if (M2PrgName == "" || ccService.ClientIsConnected == false)
             {
 
             }
@@ -2534,7 +2544,7 @@ namespace GUI
                     keyValue = "pcM3Param2";
                     sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
 
-                    string txtFoot = ((recs.Result[0].m3_param2 == 1) ? "start from right" : "start from left");
+                    string txtFoot = ((recs.Result[0].m3_param2 == 1) ? "start from derecha" : "start from izquierda");
 
                     //WriteOnLabelAsync(labelM3Param2Value, txtFoot);
                     labelM3Param2Value.Text = txtFoot;
@@ -2550,6 +2560,14 @@ namespace GUI
             }
             else
             {
+                string prgName = M4PrgName;
+                if (M4PrgName == "") return;
+
+                string modelNameAuto = prgName.Substring(2, 4);
+
+                if (modelNameAuto != modelName) return;
+
+
                 //get data from DB
                 MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
 
@@ -2559,7 +2577,7 @@ namespace GUI
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m4_param1.ToString()));
 
                     //WriteOnLabelAsync(labelM3Param1Value, recs.Result[0].m3_param1.ToString());
-                    labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
+                    labelM4Param1Value.Text = recs.Result[0].m4_param1.ToString();
                     string top = "";
                     string bottom = "";
 
@@ -2803,7 +2821,7 @@ namespace GUI
                     keyValue = "pcM3Param2";
                     sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
 
-                    string txtFoot = ((recs.Result[0].m3_param2 == 1) ? "start from right" : "start from left");
+                    string txtFoot = ((recs.Result[0].m3_param2 == 1) ? "start from derecha" : "start from izquierda");
 
                     WriteOnLabelAsync(labelM3Param2Value, txtFoot);
 
@@ -2950,7 +2968,7 @@ namespace GUI
                     keyValue = "pcM3Param2";
                     sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
 
-                    string txtFoot = ((recs.Result[0].m3_param2 == 1) ? "start from right" : "start from left");
+                    string txtFoot = ((recs.Result[0].m3_param2 == 1) ? "start from derecha" : "start from izquierda");
 
                     //WriteOnLabelAsync(labelM3Param2Value, txtFoot);
                     labelM3Param2Value.Text = txtFoot;
@@ -3416,7 +3434,7 @@ namespace GUI
             if (comboBoxMRecipeName.Text == "") return;
 
             //update recipe
-            DialogResult res = xDialog.MsgBox.Show("Are you sure you want to update recipe?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
+            DialogResult res = xDialog.MsgBox.Show("Estás seguro de que quieres actualizar la receta?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
             if (res == DialogResult.Yes)
             {
                 
@@ -3454,7 +3472,7 @@ namespace GUI
                 MySqlResult recs = mysqlService.DBTable[0].UpdateAutomaticPrimaryKey(comboBoxMRecipeName.Text, rParams, values);
                 if (recs.Error == 0)
                 {
-                    res = xDialog.MsgBox.Show("Recipe succesfully updated", "PBoot", xDialog.MsgBox.Buttons.OK);
+                    res = xDialog.MsgBox.Show("Receta actualizada con éxito", "PBoot", xDialog.MsgBox.Buttons.OK);
                 }
             }
 

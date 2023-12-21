@@ -43,18 +43,18 @@ namespace GUI
                         dataGridViewM1TeachPoints[2, 3].Value = objPoints.Points[0].V4;
                         numericUpDownM1TimerBootTeach.Value = Convert.ToDecimal(objPoints.Points[0].CustomFloatParam.ToString());
                         //program succesfully loaded
-                        xDialog.MsgBox.Show("program " + comboBoxM1TeachProgramList.Text + " succesfully loaded", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+                        xDialog.MsgBox.Show("programa " + comboBoxM1TeachProgramList.Text + " cargado correctamente", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
                     }
                     else
                     {
                         //parsing failed
-                        xDialog.MsgBox.Show("program " + comboBoxM1TeachProgramList.Text + " not loaded", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+                        xDialog.MsgBox.Show("programa " + comboBoxM1TeachProgramList.Text + " no cargado correctamente", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
                     }
                 }
                 else
                 {
                     //parsing failed
-                    xDialog.MsgBox.Show("program " + comboBoxM1TeachProgramList.Text + " not loaded", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+                    xDialog.MsgBox.Show("programa " + comboBoxM1TeachProgramList.Text + " no cargado correctamente", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
                 }
             }
             catch(Exception ex)
@@ -98,7 +98,7 @@ namespace GUI
                     //update program name list in auto
                     RefreshM1TeachProgramList();
                     //program succesfully saved
-                    xDialog.MsgBox.Show("program " + comboBoxM1TeachProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+                    xDialog.MsgBox.Show("programa " + comboBoxM1TeachProgramList.Text + " guardado correctamente", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
                 }
                 else
                 {
@@ -122,7 +122,7 @@ namespace GUI
 
             try
             {
-                DialogResult ret = xDialog.MsgBox.Show("Are you sure you want to delete " + comboBoxM1TeachProgramList.Text + "?", "PBoot", xDialog.MsgBox.Buttons.YesNo, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+                DialogResult ret = xDialog.MsgBox.Show("Está seguro de que desea eliminar " + comboBoxM1TeachProgramList.Text + "?", "PBoot", xDialog.MsgBox.Buttons.YesNo, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
 
                 if (ret == DialogResult.Yes)
                 {
@@ -849,7 +849,7 @@ namespace GUI
                 {
                     if (short.Parse(readResult.Value.ToString()) != 0)
                     {
-                        xDialog.MsgBox.Show("trimmer phase not 0. Press RESET.", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Error, xDialog.MsgBox.AnimateStyle.FadeIn);
+                        xDialog.MsgBox.Show("Fase de la refiladora no 0. Prensa RESET.", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Error, xDialog.MsgBox.AnimateStyle.FadeIn);
                         return;
                     }
                 }
@@ -861,7 +861,7 @@ namespace GUI
                 {
 
                 }
-                else xDialog.MsgBox.Show("offline", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+                else xDialog.MsgBox.Show("sin conexión", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
             }
         }
 
@@ -891,12 +891,12 @@ namespace GUI
                         dataGridViewM1TestPoints[2, 3].Value = objPoints.Points[0].V4;
                         numericUpDownM1BootDelayTest.Value = Convert.ToDecimal(objPoints.Points[0].CustomFloatParam);
                         //program succesfully loaded
-                        xDialog.MsgBox.Show("program " + comboBoxM1TestProgramList.Text + " succesfully loaded", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+                        xDialog.MsgBox.Show("programa " + comboBoxM1TestProgramList.Text + " cargado correctamente", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
                     }
                     else
                     {
                         //program succesfully loaded
-                        xDialog.MsgBox.Show("program " + comboBoxM1TestProgramList.Text + " not loaded", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Warning, xDialog.MsgBox.AnimateStyle.FadeIn);
+                        xDialog.MsgBox.Show("programa " + comboBoxM1TestProgramList.Text + " No se ha cargado correctamente", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Warning, xDialog.MsgBox.AnimateStyle.FadeIn);
                     }
                 }
             }
@@ -905,6 +905,8 @@ namespace GUI
 
             }
         }
+
+
 
         private void buttonM1TestSaveProgram_Click(object sender, EventArgs e)
         {
@@ -938,7 +940,7 @@ namespace GUI
                         RestartRequestFromM1();
                     }
 
-                    xDialog.MsgBox.Show("program " + comboBoxM1TestProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+                    xDialog.MsgBox.Show("programa " + comboBoxM1TestProgramList.Text + " Guardado con éxito", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
                 }
             }
             catch(Exception ex)

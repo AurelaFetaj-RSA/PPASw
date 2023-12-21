@@ -70,7 +70,7 @@ namespace GUI
                 RefreshM2TeachProgramList();
 
                 //program succesfully saved
-                xDialog.MsgBox.Show("program " + comboBoxM2TeachProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+                xDialog.MsgBox.Show("programa " + comboBoxM2TeachProgramList.Text + " guardado correctamente", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
 
             }
         }
@@ -104,7 +104,7 @@ namespace GUI
 
             try
             {
-                DialogResult ret = xDialog.MsgBox.Show("Are you sure you want to delete " + comboBoxM2TeachProgramList.Text + "?", "PBoot", xDialog.MsgBox.Buttons.YesNo, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+                DialogResult ret = xDialog.MsgBox.Show("Está seguro de que desea eliminar " + comboBoxM2TeachProgramList.Text + "?", "PBoot", xDialog.MsgBox.Buttons.YesNo, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
 
                 if (ret == DialogResult.Yes)
                 {
@@ -634,7 +634,7 @@ namespace GUI
                     RestartRequestFromM2();
                 }
                 //program succesfully saved
-                xDialog.MsgBox.Show("program " + comboBoxM2TestProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+                xDialog.MsgBox.Show("programa " + comboBoxM2TestProgramList.Text + " guardado correctamente", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
 
             }
         }
@@ -739,7 +739,7 @@ namespace GUI
             {
                 if (short.Parse(readResult.Value.ToString()) != 0)
                 {
-                    xDialog.MsgBox.Show("pad int phase not 0. Press RESET.", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Error, xDialog.MsgBox.AnimateStyle.FadeIn);
+                    xDialog.MsgBox.Show("pad int fase no 0. Prensa RESET.", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Error, xDialog.MsgBox.AnimateStyle.FadeIn);
                     return;
                 }
             }
@@ -750,7 +750,7 @@ namespace GUI
             {
 
             }
-            else xDialog.MsgBox.Show("offline", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+            else xDialog.MsgBox.Show("sin conexión", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
         }
     }
 }

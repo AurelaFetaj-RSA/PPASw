@@ -161,11 +161,15 @@ namespace GUI
         }
 
         public async Task UpdateOPCUAStatus()
-        {           
-            try
+        {
+            
+
+
+                try
             {
                 if (ccService.ClientIsConnected)
                 {
+                   
                     try
                     {
                         if (!restartApp)
@@ -832,17 +836,17 @@ namespace GUI
                     lbl.Text = "";
                     if (value == -1)
                     {
-                        lbl.Text = "offline";
+                        lbl.Text = "sin conexión";
                     }
 
                     if (value == 0)
                     {
-                        lbl.Text = "emergency";
+                        lbl.Text = "emergencia";
                     }
 
                     if (value == 1)
                     {
-                        lbl.Text = "automatic";
+                        lbl.Text = "automatico";
                     }
 
                     if (value == 2)
@@ -852,12 +856,12 @@ namespace GUI
 
                     if (value == 3)
                     {
-                        lbl.Text = "in cycle";
+                        lbl.Text = "en ciclo";
                     }
 
                     if (value == 4)
                     {
-                        lbl.Text = "in alarm";
+                        lbl.Text = "en alarma";
                     }
                 });
             }
@@ -869,7 +873,7 @@ namespace GUI
 
             if ((cr == null) || (cr.OpcResult == false))
             {
-                textToAppend = "offline";
+                textToAppend = "sin conexión";
             }
             else
             {
@@ -890,7 +894,7 @@ namespace GUI
 
             if ((cr == null) || (cr.OpcResult == false))
             {
-                textToAppend = "offline";
+                textToAppend = "sin conexión";
             }
             else
             {
@@ -911,7 +915,7 @@ namespace GUI
 
             if ((cr == null) || (cr.OpcResult == false))
             {
-                textToAppend = "offline";
+                textToAppend = "sin conexión";
             }
             else
             {                
@@ -947,13 +951,13 @@ namespace GUI
                     {
                         lbl.BackColor = Color.FromArgb(107, 227, 162);
                         lbl.ForeColor = Color.FromArgb(51, 51, 51);
-                        lbl.Text = "system online";
+                        lbl.Text = "sistema conectado";
                     }
                     else
                     {
                         lbl.BackColor = Color.Red;
                         lbl.ForeColor = Color.FromArgb(241, 241, 241);
-                        lbl.Text = "system offline";
+                        lbl.Text = "sistema no conectado";
                     }
                 });
                 
@@ -1002,15 +1006,15 @@ namespace GUI
             WriteAsyncSystemPauseCheckBox(0, checkBoxPause);
 
             pictureBoxM1PLCNode.Image = imageListNodes.Images[1];
-            WriteOnLabelAsync(labelM1Node, "node offline");
+            WriteOnLabelAsync(labelM1Node, "node sin conexión");
             pictureBoxM2PLCNode.Image = imageListNodes.Images[1];
-            WriteOnLabelAsync(labelM2Node, "node offline");
+            WriteOnLabelAsync(labelM2Node, "node sin conexión");
             pictureBoxM3PLCNode.Image = imageListNodes.Images[1];
-            WriteOnLabelAsync(labelM3Node, "node offline");
+            WriteOnLabelAsync(labelM3Node, "node sin conexión");
             pictureBoxM4PLCNode.Image = imageListNodes.Images[1];
-            WriteOnLabelAsync(labelM4Node, "node offline");
+            WriteOnLabelAsync(labelM4Node, "node sin conexión");
             pictureBoxM5PLCNode.Image = imageListNodes.Images[1];
-            WriteOnLabelAsync(labelM5Node, "node offline");
+            WriteOnLabelAsync(labelM5Node, "node sin conexión");
 
             pictureBoxIOTNode.Image = imageListNodes.Images[3];
 
@@ -1059,7 +1063,7 @@ namespace GUI
                         lBitCounter = 0;
                         lBitTimeout = false;
                         pict.Image = imageListNodes.Images[0];
-                        WriteOnLabelAsync(lbl, "node online");
+                        WriteOnLabelAsync(lbl, "node conectado");
                     }
                 }
                 else
@@ -1069,12 +1073,12 @@ namespace GUI
                         lBitCounter = 0;
                         lBitTimeout = false;
                         pict.Image = imageListNodes.Images[0];
-                        WriteOnLabelAsync(lbl, "node online");
+                        WriteOnLabelAsync(lbl, "node conectado");
                     }
                     else
                     {
                         pict.Image = imageListNodes.Images[1];
-                        WriteOnLabelAsync(lbl, "node offline");
+                        WriteOnLabelAsync(lbl, "node sin conexión");
                     }
                 }
             }
@@ -2430,7 +2434,7 @@ namespace GUI
                     {
                         chk.CheckState = CheckState.Indeterminate;
                         chk.Image = imageListStartStop.Images[4];
-                        chk.Text = "OFFLINE";
+                        chk.Text = "NO CONECTADO";
                     }
 
                     if (value == 1)
@@ -2460,7 +2464,7 @@ namespace GUI
                     {
                         chk.CheckState = CheckState.Indeterminate;
                         chk.Image = imageListStartStop.Images[4];
-                        chk.Text = "OFFLINE";
+                        chk.Text = "NO CONECTADO";
                     }
 
                     if (value == 1)
@@ -2509,20 +2513,20 @@ namespace GUI
             if ((cr == null) || (cr.OpcResult == false))
             {
                 btn.BackColor = Color.Black;
-                WriteOnLabelAsync(lbl, "offline");
+                WriteOnLabelAsync(lbl, "no conectado");
             }
             else
             {
                 if (!(bool)cr.Value)
                 {
                     btn.BackColor = Color.Red;
-                    WriteOnLabelAsync(lbl, "homing not done");
+                    WriteOnLabelAsync(lbl, "home no listo");
                 }
 
                 else
                 {
                     btn.BackColor = Color.FromArgb(107, 227, 162);
-                    WriteOnLabelAsync(lbl, "homing done");
+                    WriteOnLabelAsync(lbl, "home listo");
                 }
             }
         }

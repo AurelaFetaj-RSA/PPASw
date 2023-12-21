@@ -1276,7 +1276,7 @@
             this.buttonM2ResetServo.Name = "buttonM2ResetServo";
             this.buttonM2ResetServo.Size = new System.Drawing.Size(90, 48);
             this.buttonM2ResetServo.TabIndex = 149;
-            this.buttonM2ResetServo.Text = "reset alarm";
+            this.buttonM2ResetServo.Text = "reinicio servo alarma";
             this.buttonM2ResetServo.UseVisualStyleBackColor = false;
             this.buttonM2ResetServo.Click += new System.EventHandler(this.buttonM2ResetServo_Click);
             // 
@@ -1297,9 +1297,9 @@
             this.label30.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label30.Location = new System.Drawing.Point(10, 60);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(90, 16);
+            this.label30.Size = new System.Drawing.Size(53, 16);
             this.label30.TabIndex = 297;
-            this.label30.Text = "Recipe name";
+            this.label30.Text = "Receta";
             // 
             // textBoxM2Separator
             // 
@@ -1324,7 +1324,7 @@
             this.groupBoxM2Print.Size = new System.Drawing.Size(280, 80);
             this.groupBoxM2Print.TabIndex = 295;
             this.groupBoxM2Print.TabStop = false;
-            this.groupBoxM2Print.Text = "print";
+            this.groupBoxM2Print.Text = "impresion";
             // 
             // buttonM2PrintCycle
             // 
@@ -1335,7 +1335,7 @@
             this.buttonM2PrintCycle.Name = "buttonM2PrintCycle";
             this.buttonM2PrintCycle.Size = new System.Drawing.Size(80, 48);
             this.buttonM2PrintCycle.TabIndex = 150;
-            this.buttonM2PrintCycle.Text = "cycle";
+            this.buttonM2PrintCycle.Text = "ciclo";
             this.buttonM2PrintCycle.UseVisualStyleBackColor = false;
             this.buttonM2PrintCycle.Click += new System.EventHandler(this.buttonM2PrintCycle_Click);
             // 
@@ -1346,7 +1346,7 @@
             this.lbLed1018M2_T.Enabled = false;
             this.lbLed1018M2_T.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed1018M2_T.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed1018M2_T.Label = "X101 - GTO print ended";
+            this.lbLed1018M2_T.Label = "X101 - GTO print terminado";
             this.lbLed1018M2_T.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed1018M2_T.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed1018M2_T.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -1370,7 +1370,7 @@
             this.groupBoxM2Constrast.Size = new System.Drawing.Size(280, 120);
             this.groupBoxM2Constrast.TabIndex = 293;
             this.groupBoxM2Constrast.TabStop = false;
-            this.groupBoxM2Constrast.Text = "contrast";
+            this.groupBoxM2Constrast.Text = "contraste";
             // 
             // buttonM2ContrastOpening
             // 
@@ -1381,7 +1381,7 @@
             this.buttonM2ContrastOpening.Name = "buttonM2ContrastOpening";
             this.buttonM2ContrastOpening.Size = new System.Drawing.Size(80, 48);
             this.buttonM2ContrastOpening.TabIndex = 147;
-            this.buttonM2ContrastOpening.Text = "opening";
+            this.buttonM2ContrastOpening.Text = "abierta";
             this.buttonM2ContrastOpening.UseVisualStyleBackColor = false;
             this.buttonM2ContrastOpening.Click += new System.EventHandler(this.buttonM2ContrastOpening_Click);
             // 
@@ -1394,7 +1394,7 @@
             this.buttonM2ContrastClosing.Name = "buttonM2ContrastClosing";
             this.buttonM2ContrastClosing.Size = new System.Drawing.Size(80, 48);
             this.buttonM2ContrastClosing.TabIndex = 148;
-            this.buttonM2ContrastClosing.Text = "closing";
+            this.buttonM2ContrastClosing.Text = "serrada";
             this.buttonM2ContrastClosing.UseVisualStyleBackColor = false;
             this.buttonM2ContrastClosing.Click += new System.EventHandler(this.buttonM2ContrastClosing_Click);
             // 
@@ -1440,7 +1440,7 @@
             this.buttonM2CenteringClampsOpening.Name = "buttonM2CenteringClampsOpening";
             this.buttonM2CenteringClampsOpening.Size = new System.Drawing.Size(80, 48);
             this.buttonM2CenteringClampsOpening.TabIndex = 145;
-            this.buttonM2CenteringClampsOpening.Text = "opening";
+            this.buttonM2CenteringClampsOpening.Text = "abierta";
             this.buttonM2CenteringClampsOpening.UseVisualStyleBackColor = false;
             this.buttonM2CenteringClampsOpening.Click += new System.EventHandler(this.buttonM2CenteringClampsOpening_Click);
             // 
@@ -1453,7 +1453,7 @@
             this.buttonM2CenteringClampsClosing.Name = "buttonM2CenteringClampsClosing";
             this.buttonM2CenteringClampsClosing.Size = new System.Drawing.Size(80, 48);
             this.buttonM2CenteringClampsClosing.TabIndex = 146;
-            this.buttonM2CenteringClampsClosing.Text = "closing";
+            this.buttonM2CenteringClampsClosing.Text = "serrada";
             this.buttonM2CenteringClampsClosing.UseVisualStyleBackColor = false;
             this.buttonM2CenteringClampsClosing.Click += new System.EventHandler(this.buttonM2CenteringClampsClosing_Click);
             // 
@@ -1488,7 +1488,7 @@
             this.groupBoxM2BigClamp.Size = new System.Drawing.Size(280, 120);
             this.groupBoxM2BigClamp.TabIndex = 291;
             this.groupBoxM2BigClamp.TabStop = false;
-            this.groupBoxM2BigClamp.Text = "big clamp";
+            this.groupBoxM2BigClamp.Text = "abrazadera grande";
             // 
             // buttonM2BigClampOpening
             // 
@@ -1499,7 +1499,7 @@
             this.buttonM2BigClampOpening.Name = "buttonM2BigClampOpening";
             this.buttonM2BigClampOpening.Size = new System.Drawing.Size(80, 48);
             this.buttonM2BigClampOpening.TabIndex = 143;
-            this.buttonM2BigClampOpening.Text = "opening";
+            this.buttonM2BigClampOpening.Text = "abierta";
             this.buttonM2BigClampOpening.UseVisualStyleBackColor = false;
             this.buttonM2BigClampOpening.Click += new System.EventHandler(this.buttonM2BigClampOpening_Click);
             // 
@@ -1512,7 +1512,7 @@
             this.buttonM2BigClampClosing.Name = "buttonM2BigClampClosing";
             this.buttonM2BigClampClosing.Size = new System.Drawing.Size(80, 48);
             this.buttonM2BigClampClosing.TabIndex = 144;
-            this.buttonM2BigClampClosing.Text = "closing";
+            this.buttonM2BigClampClosing.Text = "serrada";
             this.buttonM2BigClampClosing.UseVisualStyleBackColor = false;
             this.buttonM2BigClampClosing.Click += new System.EventHandler(this.buttonM2BigClampClosing_Click);
             // 
@@ -1547,7 +1547,7 @@
             this.groupBoxM2SmallClamp.Size = new System.Drawing.Size(280, 120);
             this.groupBoxM2SmallClamp.TabIndex = 290;
             this.groupBoxM2SmallClamp.TabStop = false;
-            this.groupBoxM2SmallClamp.Text = "small clamp";
+            this.groupBoxM2SmallClamp.Text = "abrazadera pequena";
             // 
             // buttonM2SmallClampOpening
             // 
@@ -1558,7 +1558,7 @@
             this.buttonM2SmallClampOpening.Name = "buttonM2SmallClampOpening";
             this.buttonM2SmallClampOpening.Size = new System.Drawing.Size(80, 48);
             this.buttonM2SmallClampOpening.TabIndex = 141;
-            this.buttonM2SmallClampOpening.Text = "opening";
+            this.buttonM2SmallClampOpening.Text = "abierta";
             this.buttonM2SmallClampOpening.UseVisualStyleBackColor = false;
             this.buttonM2SmallClampOpening.Click += new System.EventHandler(this.buttonM2SmallClampOpening_Click);
             // 
@@ -1571,7 +1571,7 @@
             this.buttonM2SmallClampClosing.Name = "buttonM2SmallClampClosing";
             this.buttonM2SmallClampClosing.Size = new System.Drawing.Size(80, 48);
             this.buttonM2SmallClampClosing.TabIndex = 142;
-            this.buttonM2SmallClampClosing.Text = "closing";
+            this.buttonM2SmallClampClosing.Text = "serrada";
             this.buttonM2SmallClampClosing.UseVisualStyleBackColor = false;
             this.buttonM2SmallClampClosing.Click += new System.EventHandler(this.buttonM2SmallClampClosing_Click);
             // 
@@ -1607,9 +1607,9 @@
             this.checkBoxM2ExitBelt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.checkBoxM2ExitBelt.Location = new System.Drawing.Point(305, 635);
             this.checkBoxM2ExitBelt.Name = "checkBoxM2ExitBelt";
-            this.checkBoxM2ExitBelt.Size = new System.Drawing.Size(105, 70);
+            this.checkBoxM2ExitBelt.Size = new System.Drawing.Size(118, 70);
             this.checkBoxM2ExitBelt.TabIndex = 266;
-            this.checkBoxM2ExitBelt.Text = "exit";
+            this.checkBoxM2ExitBelt.Text = "salida";
             this.checkBoxM2ExitBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkBoxM2ExitBelt.UseVisualStyleBackColor = false;
             this.checkBoxM2ExitBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM2ExitBelt_CheckStateChanged);
@@ -1636,9 +1636,9 @@
             this.checkBoxM2WorkingBelt.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.checkBoxM2WorkingBelt.Location = new System.Drawing.Point(454, 635);
             this.checkBoxM2WorkingBelt.Name = "checkBoxM2WorkingBelt";
-            this.checkBoxM2WorkingBelt.Size = new System.Drawing.Size(131, 70);
+            this.checkBoxM2WorkingBelt.Size = new System.Drawing.Size(128, 70);
             this.checkBoxM2WorkingBelt.TabIndex = 265;
-            this.checkBoxM2WorkingBelt.Text = "working";
+            this.checkBoxM2WorkingBelt.Text = "trabajo";
             this.checkBoxM2WorkingBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.checkBoxM2WorkingBelt.UseVisualStyleBackColor = false;
             this.checkBoxM2WorkingBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM2WorkingBelt_CheckStateChanged);
@@ -1656,7 +1656,6 @@
             this.groupBoxM2Homing.Size = new System.Drawing.Size(260, 120);
             this.groupBoxM2Homing.TabIndex = 140;
             this.groupBoxM2Homing.TabStop = false;
-            this.groupBoxM2Homing.Text = "vertical axis home";
             // 
             // labelM2HomingDone
             // 
@@ -1666,9 +1665,9 @@
             this.labelM2HomingDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM2HomingDone.Location = new System.Drawing.Point(50, 88);
             this.labelM2HomingDone.Name = "labelM2HomingDone";
-            this.labelM2HomingDone.Size = new System.Drawing.Size(117, 16);
+            this.labelM2HomingDone.Size = new System.Drawing.Size(95, 16);
             this.labelM2HomingDone.TabIndex = 134;
-            this.labelM2HomingDone.Text = "homing not done";
+            this.labelM2HomingDone.Text = "home no lista";
             // 
             // buttonM2HomingDone
             // 
@@ -1693,7 +1692,7 @@
             this.buttonM2Home.Name = "buttonM2Home";
             this.buttonM2Home.Size = new System.Drawing.Size(100, 48);
             this.buttonM2Home.TabIndex = 8;
-            this.buttonM2Home.Text = "go home";
+            this.buttonM2Home.Text = "home";
             this.buttonM2Home.UseVisualStyleBackColor = false;
             this.buttonM2Home.Click += new System.EventHandler(this.buttonM2Home_Click);
             // 
@@ -1706,7 +1705,7 @@
             this.buttonM2ResetHome.Name = "buttonM2ResetHome";
             this.buttonM2ResetHome.Size = new System.Drawing.Size(100, 48);
             this.buttonM2ResetHome.TabIndex = 9;
-            this.buttonM2ResetHome.Text = "reset home";
+            this.buttonM2ResetHome.Text = "reinicio home";
             this.buttonM2ResetHome.UseVisualStyleBackColor = false;
             this.buttonM2ResetHome.Click += new System.EventHandler(this.buttonM2ResetHome_Click);
             // 
@@ -1724,7 +1723,6 @@
             this.groupBoxM2StartQuote.Size = new System.Drawing.Size(260, 155);
             this.groupBoxM2StartQuote.TabIndex = 139;
             this.groupBoxM2StartQuote.TabStop = false;
-            this.groupBoxM2StartQuote.Text = "vertical axis start quote";
             // 
             // labelM2StartQuote
             // 
@@ -1735,7 +1733,7 @@
             this.labelM2StartQuote.Name = "labelM2StartQuote";
             this.labelM2StartQuote.Size = new System.Drawing.Size(79, 16);
             this.labelM2StartQuote.TabIndex = 105;
-            this.labelM2StartQuote.Text = "quote(mm)";
+            this.labelM2StartQuote.Text = "cuota(mm)";
             // 
             // labelM2StartSpeed
             // 
@@ -1744,9 +1742,9 @@
             this.labelM2StartSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM2StartSpeed.Location = new System.Drawing.Point(160, 20);
             this.labelM2StartSpeed.Name = "labelM2StartSpeed";
-            this.labelM2StartSpeed.Size = new System.Drawing.Size(71, 16);
+            this.labelM2StartSpeed.Size = new System.Drawing.Size(94, 16);
             this.labelM2StartSpeed.TabIndex = 104;
-            this.labelM2StartSpeed.Text = "speed(%)";
+            this.labelM2StartSpeed.Text = "velocidad(%)";
             // 
             // buttonM2StartQuote
             // 
@@ -1757,7 +1755,7 @@
             this.buttonM2StartQuote.Name = "buttonM2StartQuote";
             this.buttonM2StartQuote.Size = new System.Drawing.Size(220, 48);
             this.buttonM2StartQuote.TabIndex = 80;
-            this.buttonM2StartQuote.Text = "start quote";
+            this.buttonM2StartQuote.Text = "start cuota";
             this.buttonM2StartQuote.UseVisualStyleBackColor = false;
             this.buttonM2StartQuote.Click += new System.EventHandler(this.buttonM2StartQuote_Click);
             // 
@@ -1830,7 +1828,6 @@
             this.groupBoxM2Jog.Size = new System.Drawing.Size(260, 225);
             this.groupBoxM2Jog.TabIndex = 138;
             this.groupBoxM2Jog.TabStop = false;
-            this.groupBoxM2Jog.Text = "vertical axis jog";
             // 
             // labelM2JogSpeed
             // 
@@ -1839,9 +1836,9 @@
             this.labelM2JogSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM2JogSpeed.Location = new System.Drawing.Point(160, 20);
             this.labelM2JogSpeed.Name = "labelM2JogSpeed";
-            this.labelM2JogSpeed.Size = new System.Drawing.Size(71, 16);
+            this.labelM2JogSpeed.Size = new System.Drawing.Size(94, 16);
             this.labelM2JogSpeed.TabIndex = 103;
-            this.labelM2JogSpeed.Text = "speed(%)";
+            this.labelM2JogSpeed.Text = "velocidad(%)";
             // 
             // lbButtonM2JogUp
             // 
@@ -1918,7 +1915,7 @@
             this.labelM2TeachAxisQuoteName.Name = "labelM2TeachAxisQuoteName";
             this.labelM2TeachAxisQuoteName.Size = new System.Drawing.Size(84, 16);
             this.labelM2TeachAxisQuoteName.TabIndex = 102;
-            this.labelM2TeachAxisQuoteName.Text = "quote (mm)";
+            this.labelM2TeachAxisQuoteName.Text = "cuota (mm)";
             // 
             // labelM2TeachAxisQuoteValue
             // 
@@ -1987,7 +1984,7 @@
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ColumnM2PointID.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColumnM2PointID.Frozen = true;
-            this.ColumnM2PointID.HeaderText = "point";
+            this.ColumnM2PointID.HeaderText = "punto";
             this.ColumnM2PointID.Name = "ColumnM2PointID";
             this.ColumnM2PointID.ReadOnly = true;
             this.ColumnM2PointID.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -1997,30 +1994,30 @@
             // ColumnMeQuote
             // 
             this.ColumnMeQuote.Frozen = true;
-            this.ColumnMeQuote.HeaderText = "quote (mm)";
+            this.ColumnMeQuote.HeaderText = "cuota (mm)";
             this.ColumnMeQuote.Name = "ColumnMeQuote";
             this.ColumnMeQuote.Width = 130;
             // 
             // ColumnM2Speed
             // 
             this.ColumnM2Speed.Frozen = true;
-            this.ColumnM2Speed.HeaderText = "speed (%)";
+            this.ColumnM2Speed.HeaderText = "velocidad (%)";
             this.ColumnM2Speed.Name = "ColumnM2Speed";
             this.ColumnM2Speed.Width = 130;
             // 
             // ColumnM2Register
             // 
-            this.ColumnM2Register.HeaderText = "register";
+            this.ColumnM2Register.HeaderText = "registra";
             this.ColumnM2Register.Name = "ColumnM2Register";
             // 
             // ColumnM2StartQuote
             // 
-            this.ColumnM2StartQuote.HeaderText = "start";
+            this.ColumnM2StartQuote.HeaderText = "inicio";
             this.ColumnM2StartQuote.Name = "ColumnM2StartQuote";
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "reached";
+            this.Column1.HeaderText = "llegado";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -2037,7 +2034,7 @@
             this.buttonM2TeachDeleteProgram.Name = "buttonM2TeachDeleteProgram";
             this.buttonM2TeachDeleteProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM2TeachDeleteProgram.TabIndex = 135;
-            this.buttonM2TeachDeleteProgram.Text = "delete program";
+            this.buttonM2TeachDeleteProgram.Text = "eliminar el programa";
             this.buttonM2TeachDeleteProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM2TeachDeleteProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM2TeachDeleteProgram.UseVisualStyleBackColor = false;
@@ -2063,7 +2060,7 @@
             this.buttonM2TeachNewProgram.Name = "buttonM2TeachNewProgram";
             this.buttonM2TeachNewProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM2TeachNewProgram.TabIndex = 133;
-            this.buttonM2TeachNewProgram.Text = "new program";
+            this.buttonM2TeachNewProgram.Text = "programa nuevo";
             this.buttonM2TeachNewProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM2TeachNewProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM2TeachNewProgram.UseVisualStyleBackColor = false;
@@ -2080,7 +2077,7 @@
             this.buttonM2TeachSaveProgram.Name = "buttonM2TeachSaveProgram";
             this.buttonM2TeachSaveProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM2TeachSaveProgram.TabIndex = 132;
-            this.buttonM2TeachSaveProgram.Text = "save program";
+            this.buttonM2TeachSaveProgram.Text = "guarde el programa";
             this.buttonM2TeachSaveProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM2TeachSaveProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM2TeachSaveProgram.UseVisualStyleBackColor = false;
@@ -2097,7 +2094,7 @@
             this.buttonM2TeachLoadProgram.Name = "buttonM2TeachLoadProgram";
             this.buttonM2TeachLoadProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM2TeachLoadProgram.TabIndex = 131;
-            this.buttonM2TeachLoadProgram.Text = "load program";
+            this.buttonM2TeachLoadProgram.Text = "cargar el programa";
             this.buttonM2TeachLoadProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM2TeachLoadProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM2TeachLoadProgram.UseVisualStyleBackColor = false;
@@ -2212,7 +2209,7 @@
             this.buttonM2ResetTest.Name = "buttonM2ResetTest";
             this.buttonM2ResetTest.Size = new System.Drawing.Size(120, 40);
             this.buttonM2ResetTest.TabIndex = 295;
-            this.buttonM2ResetTest.Text = "reset";
+            this.buttonM2ResetTest.Text = "reinicio del ciclo";
             this.buttonM2ResetTest.UseVisualStyleBackColor = false;
             this.buttonM2ResetTest.Click += new System.EventHandler(this.buttonM2ResetTest_Click);
             // 
@@ -2233,9 +2230,9 @@
             this.label33.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label33.Location = new System.Drawing.Point(10, 60);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(90, 16);
+            this.label33.Size = new System.Drawing.Size(53, 16);
             this.label33.TabIndex = 293;
-            this.label33.Text = "Recipe name";
+            this.label33.Text = "Receta";
             // 
             // buttonM2StartTest
             // 
@@ -2246,7 +2243,7 @@
             this.buttonM2StartTest.Name = "buttonM2StartTest";
             this.buttonM2StartTest.Size = new System.Drawing.Size(140, 64);
             this.buttonM2StartTest.TabIndex = 119;
-            this.buttonM2StartTest.Text = "start test";
+            this.buttonM2StartTest.Text = "iniciar prueba";
             this.buttonM2StartTest.UseVisualStyleBackColor = false;
             this.buttonM2StartTest.Click += new System.EventHandler(this.buttonM2StartTest_Click);
             // 
@@ -2270,7 +2267,7 @@
             this.buttonM2TestSaveProgram.Name = "buttonM2TestSaveProgram";
             this.buttonM2TestSaveProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM2TestSaveProgram.TabIndex = 117;
-            this.buttonM2TestSaveProgram.Text = "save program";
+            this.buttonM2TestSaveProgram.Text = "guarde el programa";
             this.buttonM2TestSaveProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM2TestSaveProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM2TestSaveProgram.UseVisualStyleBackColor = false;
@@ -2287,7 +2284,7 @@
             this.buttonM2TestLoadProgram.Name = "buttonM2TestLoadProgram";
             this.buttonM2TestLoadProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM2TestLoadProgram.TabIndex = 116;
-            this.buttonM2TestLoadProgram.Text = "load program";
+            this.buttonM2TestLoadProgram.Text = "cargar el programa";
             this.buttonM2TestLoadProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM2TestLoadProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM2TestLoadProgram.UseVisualStyleBackColor = false;
@@ -2344,7 +2341,7 @@
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewTextBoxColumn4.Frozen = true;
-            this.dataGridViewTextBoxColumn4.HeaderText = "point id";
+            this.dataGridViewTextBoxColumn4.HeaderText = "punto";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -2354,20 +2351,20 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.Frozen = true;
-            this.dataGridViewTextBoxColumn5.HeaderText = "quote (mm)";
+            this.dataGridViewTextBoxColumn5.HeaderText = "cuota (mm)";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.Width = 130;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.Frozen = true;
-            this.dataGridViewTextBoxColumn6.HeaderText = "speed (%)";
+            this.dataGridViewTextBoxColumn6.HeaderText = "velocidad (%)";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Width = 130;
             // 
             // reachedM2
             // 
-            this.reachedM2.HeaderText = "reached";
+            this.reachedM2.HeaderText = "llegado";
             this.reachedM2.Name = "reachedM2";
             this.reachedM2.Width = 56;
             // 
@@ -4467,9 +4464,9 @@
             this.label34.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label34.Location = new System.Drawing.Point(10, 60);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(90, 16);
+            this.label34.Size = new System.Drawing.Size(53, 16);
             this.label34.TabIndex = 293;
-            this.label34.Text = "Recipe name";
+            this.label34.Text = "Receta";
             // 
             // buttonM3NormHoriFwd
             // 
@@ -4480,7 +4477,7 @@
             this.buttonM3NormHoriFwd.Name = "buttonM3NormHoriFwd";
             this.buttonM3NormHoriFwd.Size = new System.Drawing.Size(160, 48);
             this.buttonM3NormHoriFwd.TabIndex = 291;
-            this.buttonM3NormHoriFwd.Text = "norm hori fwd";
+            this.buttonM3NormHoriFwd.Text = "norm hori adelante";
             this.buttonM3NormHoriFwd.UseVisualStyleBackColor = false;
             this.buttonM3NormHoriFwd.Click += new System.EventHandler(this.buttonM3NormHoriFwd_Click);
             // 
@@ -4493,7 +4490,7 @@
             this.buttonM3NormHoriBwd.Name = "buttonM3NormHoriBwd";
             this.buttonM3NormHoriBwd.Size = new System.Drawing.Size(160, 48);
             this.buttonM3NormHoriBwd.TabIndex = 292;
-            this.buttonM3NormHoriBwd.Text = "norm hori bwd";
+            this.buttonM3NormHoriBwd.Text = "norm hori atras";
             this.buttonM3NormHoriBwd.UseVisualStyleBackColor = false;
             this.buttonM3NormHoriBwd.Click += new System.EventHandler(this.buttonM3NormHoriBwd_Click);
             // 
@@ -4506,7 +4503,7 @@
             this.buttonM3NormTransvFwd.Name = "buttonM3NormTransvFwd";
             this.buttonM3NormTransvFwd.Size = new System.Drawing.Size(160, 48);
             this.buttonM3NormTransvFwd.TabIndex = 289;
-            this.buttonM3NormTransvFwd.Text = "norm transv fwd";
+            this.buttonM3NormTransvFwd.Text = "norm transv adelante";
             this.buttonM3NormTransvFwd.UseVisualStyleBackColor = false;
             this.buttonM3NormTransvFwd.Click += new System.EventHandler(this.buttonM3NormTransvFwd_Click);
             // 
@@ -4519,7 +4516,7 @@
             this.buttonM3NormTransvBwd.Name = "buttonM3NormTransvBwd";
             this.buttonM3NormTransvBwd.Size = new System.Drawing.Size(160, 48);
             this.buttonM3NormTransvBwd.TabIndex = 290;
-            this.buttonM3NormTransvBwd.Text = "norm transv bwd";
+            this.buttonM3NormTransvBwd.Text = "norm transv atras";
             this.buttonM3NormTransvBwd.UseVisualStyleBackColor = false;
             this.buttonM3NormTransvBwd.Click += new System.EventHandler(this.buttonM3NormTransvBwd_Click);
             // 
@@ -4531,9 +4528,9 @@
             this.labelM3TeachJogSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM3TeachJogSpeed.Location = new System.Drawing.Point(775, 115);
             this.labelM3TeachJogSpeed.Name = "labelM3TeachJogSpeed";
-            this.labelM3TeachJogSpeed.Size = new System.Drawing.Size(71, 16);
+            this.labelM3TeachJogSpeed.Size = new System.Drawing.Size(94, 16);
             this.labelM3TeachJogSpeed.TabIndex = 103;
-            this.labelM3TeachJogSpeed.Text = "speed(%)";
+            this.labelM3TeachJogSpeed.Text = "velocidad(%)";
             // 
             // labelM3StartQuote
             // 
@@ -4545,7 +4542,7 @@
             this.labelM3StartQuote.Name = "labelM3StartQuote";
             this.labelM3StartQuote.Size = new System.Drawing.Size(79, 16);
             this.labelM3StartQuote.TabIndex = 105;
-            this.labelM3StartQuote.Text = "quote(mm)";
+            this.labelM3StartQuote.Text = "cuota(mm)";
             // 
             // lbButtonM3JogUp
             // 
@@ -4577,9 +4574,9 @@
             this.labelM3HomingDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM3HomingDone.Location = new System.Drawing.Point(656, 584);
             this.labelM3HomingDone.Name = "labelM3HomingDone";
-            this.labelM3HomingDone.Size = new System.Drawing.Size(117, 16);
+            this.labelM3HomingDone.Size = new System.Drawing.Size(95, 16);
             this.labelM3HomingDone.TabIndex = 134;
-            this.labelM3HomingDone.Text = "homing not done";
+            this.labelM3HomingDone.Text = "home no lista";
             // 
             // lbButtonM3JogDown
             // 
@@ -4634,9 +4631,9 @@
             this.labelM3StartSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM3StartSpeed.Location = new System.Drawing.Point(775, 350);
             this.labelM3StartSpeed.Name = "labelM3StartSpeed";
-            this.labelM3StartSpeed.Size = new System.Drawing.Size(71, 16);
+            this.labelM3StartSpeed.Size = new System.Drawing.Size(94, 16);
             this.labelM3StartSpeed.TabIndex = 104;
-            this.labelM3StartSpeed.Text = "speed(%)";
+            this.labelM3StartSpeed.Text = "velocidad(%)";
             // 
             // labelM3TeachAxisQuoteName
             // 
@@ -4648,7 +4645,7 @@
             this.labelM3TeachAxisQuoteName.Name = "labelM3TeachAxisQuoteName";
             this.labelM3TeachAxisQuoteName.Size = new System.Drawing.Size(84, 16);
             this.labelM3TeachAxisQuoteName.TabIndex = 102;
-            this.labelM3TeachAxisQuoteName.Text = "quote (mm)";
+            this.labelM3TeachAxisQuoteName.Text = "cuota (mm)";
             // 
             // buttonM3ResetServo
             // 
@@ -4659,7 +4656,7 @@
             this.buttonM3ResetServo.Name = "buttonM3ResetServo";
             this.buttonM3ResetServo.Size = new System.Drawing.Size(130, 48);
             this.buttonM3ResetServo.TabIndex = 149;
-            this.buttonM3ResetServo.Text = "reset servo alarm";
+            this.buttonM3ResetServo.Text = "reinicio servo alarma";
             this.buttonM3ResetServo.UseVisualStyleBackColor = false;
             this.buttonM3ResetServo.Click += new System.EventHandler(this.buttonM3ResetServo_Click);
             // 
@@ -4684,7 +4681,7 @@
             this.buttonM3StartQuote.Name = "buttonM3StartQuote";
             this.buttonM3StartQuote.Size = new System.Drawing.Size(250, 48);
             this.buttonM3StartQuote.TabIndex = 80;
-            this.buttonM3StartQuote.Text = "start quote";
+            this.buttonM3StartQuote.Text = "start cuota";
             this.buttonM3StartQuote.UseVisualStyleBackColor = false;
             this.buttonM3StartQuote.Click += new System.EventHandler(this.buttonM3StartQuote_Click);
             // 
@@ -4743,7 +4740,7 @@
             this.buttonM3RotationCCW.Name = "buttonM3RotationCCW";
             this.buttonM3RotationCCW.Size = new System.Drawing.Size(70, 90);
             this.buttonM3RotationCCW.TabIndex = 152;
-            this.buttonM3RotationCCW.Text = "CCW";
+            this.buttonM3RotationCCW.Text = "antihorario";
             this.buttonM3RotationCCW.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.buttonM3RotationCCW.UseVisualStyleBackColor = false;
             this.buttonM3RotationCCW.Click += new System.EventHandler(this.buttonM3RotationCCW_Click);
@@ -4787,7 +4784,7 @@
             this.buttonM3Home.Name = "buttonM3Home";
             this.buttonM3Home.Size = new System.Drawing.Size(100, 48);
             this.buttonM3Home.TabIndex = 8;
-            this.buttonM3Home.Text = "go home";
+            this.buttonM3Home.Text = "home";
             this.buttonM3Home.UseVisualStyleBackColor = false;
             this.buttonM3Home.Click += new System.EventHandler(this.buttonM3Home_Click);
             // 
@@ -4800,7 +4797,7 @@
             this.buttonM3ResetHome.Name = "buttonM3ResetHome";
             this.buttonM3ResetHome.Size = new System.Drawing.Size(100, 48);
             this.buttonM3ResetHome.TabIndex = 9;
-            this.buttonM3ResetHome.Text = "reset home";
+            this.buttonM3ResetHome.Text = "reinicio home";
             this.buttonM3ResetHome.UseVisualStyleBackColor = false;
             this.buttonM3ResetHome.Click += new System.EventHandler(this.buttonM3ResetHome_Click);
             // 
@@ -4815,7 +4812,7 @@
             this.buttonM3RotationCW.Name = "buttonM3RotationCW";
             this.buttonM3RotationCW.Size = new System.Drawing.Size(70, 90);
             this.buttonM3RotationCW.TabIndex = 151;
-            this.buttonM3RotationCW.Text = "CW";
+            this.buttonM3RotationCW.Text = "horario";
             this.buttonM3RotationCW.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.buttonM3RotationCW.UseVisualStyleBackColor = false;
             this.buttonM3RotationCW.Click += new System.EventHandler(this.buttonM3RotationCW_Click);
@@ -4829,7 +4826,7 @@
             this.buttonM3PrintCycle.Name = "buttonM3PrintCycle";
             this.buttonM3PrintCycle.Size = new System.Drawing.Size(160, 48);
             this.buttonM3PrintCycle.TabIndex = 150;
-            this.buttonM3PrintCycle.Text = "print cycle";
+            this.buttonM3PrintCycle.Text = "impresion";
             this.buttonM3PrintCycle.UseVisualStyleBackColor = false;
             this.buttonM3PrintCycle.Click += new System.EventHandler(this.buttonM3PrintCycle_Click);
             // 
@@ -4842,7 +4839,7 @@
             this.buttonM3ContrastOpening.Name = "buttonM3ContrastOpening";
             this.buttonM3ContrastOpening.Size = new System.Drawing.Size(160, 48);
             this.buttonM3ContrastOpening.TabIndex = 147;
-            this.buttonM3ContrastOpening.Text = "contrast opening";
+            this.buttonM3ContrastOpening.Text = "contraste abierto";
             this.buttonM3ContrastOpening.UseVisualStyleBackColor = false;
             this.buttonM3ContrastOpening.Click += new System.EventHandler(this.buttonM3ContrastOpening_Click);
             // 
@@ -4855,7 +4852,7 @@
             this.buttonM3CenteringClampsOpening.Name = "buttonM3CenteringClampsOpening";
             this.buttonM3CenteringClampsOpening.Size = new System.Drawing.Size(160, 48);
             this.buttonM3CenteringClampsOpening.TabIndex = 145;
-            this.buttonM3CenteringClampsOpening.Text = "center clamp opening";
+            this.buttonM3CenteringClampsOpening.Text = "abrazadera centrado abierta";
             this.buttonM3CenteringClampsOpening.UseVisualStyleBackColor = false;
             this.buttonM3CenteringClampsOpening.Click += new System.EventHandler(this.buttonM3CenteringClampsOpening_Click);
             // 
@@ -4868,7 +4865,7 @@
             this.buttonM3ContrastClosing.Name = "buttonM3ContrastClosing";
             this.buttonM3ContrastClosing.Size = new System.Drawing.Size(160, 48);
             this.buttonM3ContrastClosing.TabIndex = 148;
-            this.buttonM3ContrastClosing.Text = "constrast closing";
+            this.buttonM3ContrastClosing.Text = "constraste serrado";
             this.buttonM3ContrastClosing.UseVisualStyleBackColor = false;
             this.buttonM3ContrastClosing.Click += new System.EventHandler(this.buttonM3ContrastClosing_Click);
             // 
@@ -4881,7 +4878,7 @@
             this.buttonM3BigClampOpening.Name = "buttonM3BigClampOpening";
             this.buttonM3BigClampOpening.Size = new System.Drawing.Size(160, 48);
             this.buttonM3BigClampOpening.TabIndex = 143;
-            this.buttonM3BigClampOpening.Text = "big clamp opening";
+            this.buttonM3BigClampOpening.Text = "abrazadera grande abierta";
             this.buttonM3BigClampOpening.UseVisualStyleBackColor = false;
             this.buttonM3BigClampOpening.Click += new System.EventHandler(this.buttonM3BigClampOpening_Click);
             // 
@@ -4894,7 +4891,7 @@
             this.buttonM3CenteringClampsClosing.Name = "buttonM3CenteringClampsClosing";
             this.buttonM3CenteringClampsClosing.Size = new System.Drawing.Size(160, 48);
             this.buttonM3CenteringClampsClosing.TabIndex = 146;
-            this.buttonM3CenteringClampsClosing.Text = "center clamp closing";
+            this.buttonM3CenteringClampsClosing.Text = "abrazadera centrado serrada";
             this.buttonM3CenteringClampsClosing.UseVisualStyleBackColor = false;
             this.buttonM3CenteringClampsClosing.Click += new System.EventHandler(this.buttonM3CenteringClampsClosing_Click);
             // 
@@ -4907,7 +4904,7 @@
             this.buttonM3SmallClampOpening.Name = "buttonM3SmallClampOpening";
             this.buttonM3SmallClampOpening.Size = new System.Drawing.Size(160, 48);
             this.buttonM3SmallClampOpening.TabIndex = 141;
-            this.buttonM3SmallClampOpening.Text = "small clamp opening";
+            this.buttonM3SmallClampOpening.Text = "abrazadera pequena abierta";
             this.buttonM3SmallClampOpening.UseVisualStyleBackColor = false;
             this.buttonM3SmallClampOpening.Click += new System.EventHandler(this.buttonM3SmallClampOpening_Click);
             // 
@@ -4920,7 +4917,7 @@
             this.buttonM3BigClampClosing.Name = "buttonM3BigClampClosing";
             this.buttonM3BigClampClosing.Size = new System.Drawing.Size(160, 48);
             this.buttonM3BigClampClosing.TabIndex = 144;
-            this.buttonM3BigClampClosing.Text = "big clamp closing";
+            this.buttonM3BigClampClosing.Text = "abrazadera grande serrada";
             this.buttonM3BigClampClosing.UseVisualStyleBackColor = false;
             this.buttonM3BigClampClosing.Click += new System.EventHandler(this.buttonM3BigClampClosing_Click);
             // 
@@ -4933,7 +4930,7 @@
             this.buttonM3SmallClampClosing.Name = "buttonM3SmallClampClosing";
             this.buttonM3SmallClampClosing.Size = new System.Drawing.Size(160, 48);
             this.buttonM3SmallClampClosing.TabIndex = 142;
-            this.buttonM3SmallClampClosing.Text = "small clamp closing";
+            this.buttonM3SmallClampClosing.Text = "abrazadera pequena serrada";
             this.buttonM3SmallClampClosing.UseVisualStyleBackColor = false;
             this.buttonM3SmallClampClosing.Click += new System.EventHandler(this.buttonM3SmallClampClosing_Click);
             // 
@@ -4952,7 +4949,7 @@
             this.checkBoxM3ExitBelt.Name = "checkBoxM3ExitBelt";
             this.checkBoxM3ExitBelt.Size = new System.Drawing.Size(70, 90);
             this.checkBoxM3ExitBelt.TabIndex = 270;
-            this.checkBoxM3ExitBelt.Text = "exit";
+            this.checkBoxM3ExitBelt.Text = "salida";
             this.checkBoxM3ExitBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.checkBoxM3ExitBelt.UseVisualStyleBackColor = false;
             this.checkBoxM3ExitBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM3ExitBelt_CheckStateChanged);
@@ -4972,7 +4969,7 @@
             this.checkBoxM3WorkingBelt.Name = "checkBoxM3WorkingBelt";
             this.checkBoxM3WorkingBelt.Size = new System.Drawing.Size(70, 90);
             this.checkBoxM3WorkingBelt.TabIndex = 269;
-            this.checkBoxM3WorkingBelt.Text = "working";
+            this.checkBoxM3WorkingBelt.Text = "trabajo";
             this.checkBoxM3WorkingBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.checkBoxM3WorkingBelt.UseVisualStyleBackColor = false;
             this.checkBoxM3WorkingBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM3WorkingBelt_CheckStateChanged);
@@ -4988,7 +4985,7 @@
             this.buttonM3TeachDeleteProgram.Name = "buttonM3TeachDeleteProgram";
             this.buttonM3TeachDeleteProgram.Size = new System.Drawing.Size(160, 53);
             this.buttonM3TeachDeleteProgram.TabIndex = 139;
-            this.buttonM3TeachDeleteProgram.Text = "delete program";
+            this.buttonM3TeachDeleteProgram.Text = "eliminar el programa";
             this.buttonM3TeachDeleteProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM3TeachDeleteProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM3TeachDeleteProgram.UseVisualStyleBackColor = false;
@@ -5014,7 +5011,7 @@
             this.buttonM3TeachNewProgram.Name = "buttonM3TeachNewProgram";
             this.buttonM3TeachNewProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM3TeachNewProgram.TabIndex = 137;
-            this.buttonM3TeachNewProgram.Text = "new program";
+            this.buttonM3TeachNewProgram.Text = "programa nuevo";
             this.buttonM3TeachNewProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM3TeachNewProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM3TeachNewProgram.UseVisualStyleBackColor = false;
@@ -5031,7 +5028,7 @@
             this.buttonM3TeachSaveProgram.Name = "buttonM3TeachSaveProgram";
             this.buttonM3TeachSaveProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM3TeachSaveProgram.TabIndex = 136;
-            this.buttonM3TeachSaveProgram.Text = "save program";
+            this.buttonM3TeachSaveProgram.Text = "guarde el programa";
             this.buttonM3TeachSaveProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM3TeachSaveProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM3TeachSaveProgram.UseVisualStyleBackColor = false;
@@ -5048,7 +5045,7 @@
             this.buttonM3TeachLoadProgram.Name = "buttonM3TeachLoadProgram";
             this.buttonM3TeachLoadProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM3TeachLoadProgram.TabIndex = 135;
-            this.buttonM3TeachLoadProgram.Text = "load program";
+            this.buttonM3TeachLoadProgram.Text = "cargar el programa";
             this.buttonM3TeachLoadProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM3TeachLoadProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM3TeachLoadProgram.UseVisualStyleBackColor = false;
@@ -5110,7 +5107,7 @@
             dataGridViewCellStyle12.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewTextBoxColumn1.Frozen = true;
-            this.dataGridViewTextBoxColumn1.HeaderText = "point";
+            this.dataGridViewTextBoxColumn1.HeaderText = "punto";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -5120,30 +5117,30 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.Frozen = true;
-            this.dataGridViewTextBoxColumn2.HeaderText = "quote (mm)";
+            this.dataGridViewTextBoxColumn2.HeaderText = "cuota (mm)";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 130;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.Frozen = true;
-            this.dataGridViewTextBoxColumn3.HeaderText = "speed (%)";
+            this.dataGridViewTextBoxColumn3.HeaderText = "velocidad (%)";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.Width = 130;
             // 
             // dataGridViewButtonColumn1
             // 
-            this.dataGridViewButtonColumn1.HeaderText = "register";
+            this.dataGridViewButtonColumn1.HeaderText = "registra";
             this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
             // 
             // dataGridViewButtonColumn2
             // 
-            this.dataGridViewButtonColumn2.HeaderText = "start";
+            this.dataGridViewButtonColumn2.HeaderText = "inicio";
             this.dataGridViewButtonColumn2.Name = "dataGridViewButtonColumn2";
             // 
             // ColumnM3PReached
             // 
-            this.ColumnM3PReached.HeaderText = "reached";
+            this.ColumnM3PReached.HeaderText = "llegado";
             this.ColumnM3PReached.Name = "ColumnM3PReached";
             this.ColumnM3PReached.ReadOnly = true;
             this.ColumnM3PReached.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -5260,7 +5257,7 @@
             this.buttonM3ResetTest.Name = "buttonM3ResetTest";
             this.buttonM3ResetTest.Size = new System.Drawing.Size(120, 40);
             this.buttonM3ResetTest.TabIndex = 295;
-            this.buttonM3ResetTest.Text = "reset";
+            this.buttonM3ResetTest.Text = "reinicio del ciclo";
             this.buttonM3ResetTest.UseVisualStyleBackColor = false;
             this.buttonM3ResetTest.Click += new System.EventHandler(this.buttonM3ResetTest_Click);
             // 
@@ -5281,9 +5278,9 @@
             this.label35.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label35.Location = new System.Drawing.Point(10, 60);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(90, 16);
+            this.label35.Size = new System.Drawing.Size(53, 16);
             this.label35.TabIndex = 293;
-            this.label35.Text = "Recipe name";
+            this.label35.Text = "Receta";
             // 
             // radioButtonFootOrderOpt2Test
             // 
@@ -5292,9 +5289,9 @@
             this.radioButtonFootOrderOpt2Test.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonFootOrderOpt2Test.Location = new System.Drawing.Point(212, 366);
             this.radioButtonFootOrderOpt2Test.Name = "radioButtonFootOrderOpt2Test";
-            this.radioButtonFootOrderOpt2Test.Size = new System.Drawing.Size(47, 20);
+            this.radioButtonFootOrderOpt2Test.Size = new System.Drawing.Size(83, 20);
             this.radioButtonFootOrderOpt2Test.TabIndex = 144;
-            this.radioButtonFootOrderOpt2Test.Text = "left";
+            this.radioButtonFootOrderOpt2Test.Text = "izquierda";
             this.radioButtonFootOrderOpt2Test.UseVisualStyleBackColor = false;
             this.radioButtonFootOrderOpt2Test.CheckedChanged += new System.EventHandler(this.radioButtonFootOrderOpt2Test_CheckedChanged);
             // 
@@ -5306,10 +5303,10 @@
             this.radioButtonFootOrderOpt1Test.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonFootOrderOpt1Test.Location = new System.Drawing.Point(54, 366);
             this.radioButtonFootOrderOpt1Test.Name = "radioButtonFootOrderOpt1Test";
-            this.radioButtonFootOrderOpt1Test.Size = new System.Drawing.Size(55, 20);
+            this.radioButtonFootOrderOpt1Test.Size = new System.Drawing.Size(78, 20);
             this.radioButtonFootOrderOpt1Test.TabIndex = 143;
             this.radioButtonFootOrderOpt1Test.TabStop = true;
-            this.radioButtonFootOrderOpt1Test.Text = "right";
+            this.radioButtonFootOrderOpt1Test.Text = "derecha";
             this.radioButtonFootOrderOpt1Test.UseVisualStyleBackColor = false;
             this.radioButtonFootOrderOpt1Test.CheckedChanged += new System.EventHandler(this.radioButtonFootOrderOpt1Test_CheckedChanged);
             // 
@@ -5322,7 +5319,7 @@
             this.buttonM3StartTest.Name = "buttonM3StartTest";
             this.buttonM3StartTest.Size = new System.Drawing.Size(140, 64);
             this.buttonM3StartTest.TabIndex = 123;
-            this.buttonM3StartTest.Text = "start test";
+            this.buttonM3StartTest.Text = "iniciar prueba";
             this.buttonM3StartTest.UseVisualStyleBackColor = false;
             this.buttonM3StartTest.Click += new System.EventHandler(this.buttonM3StartTest_Click);
             // 
@@ -5337,7 +5334,7 @@
             this.buttonM3TestSaveProgram.Name = "buttonM3TestSaveProgram";
             this.buttonM3TestSaveProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM3TestSaveProgram.TabIndex = 122;
-            this.buttonM3TestSaveProgram.Text = "save program";
+            this.buttonM3TestSaveProgram.Text = "guarde el programa";
             this.buttonM3TestSaveProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM3TestSaveProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM3TestSaveProgram.UseVisualStyleBackColor = false;
@@ -5354,7 +5351,7 @@
             this.buttonM3TestLoadProgram.Name = "buttonM3TestLoadProgram";
             this.buttonM3TestLoadProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM3TestLoadProgram.TabIndex = 121;
-            this.buttonM3TestLoadProgram.Text = "load program";
+            this.buttonM3TestLoadProgram.Text = "cargar el programa";
             this.buttonM3TestLoadProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM3TestLoadProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM3TestLoadProgram.UseVisualStyleBackColor = false;
@@ -5411,7 +5408,7 @@
             dataGridViewCellStyle17.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridViewTextBoxColumn7.Frozen = true;
-            this.dataGridViewTextBoxColumn7.HeaderText = "point id";
+            this.dataGridViewTextBoxColumn7.HeaderText = "punto";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -5421,20 +5418,20 @@
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.Frozen = true;
-            this.dataGridViewTextBoxColumn8.HeaderText = "quote (mm)";
+            this.dataGridViewTextBoxColumn8.HeaderText = "cuota (mm)";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.Width = 130;
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.Frozen = true;
-            this.dataGridViewTextBoxColumn9.HeaderText = "speed (%)";
+            this.dataGridViewTextBoxColumn9.HeaderText = "velocidad (%)";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             this.dataGridViewTextBoxColumn9.Width = 130;
             // 
             // reachedM3
             // 
-            this.reachedM3.HeaderText = "reached";
+            this.reachedM3.HeaderText = "llegado";
             this.reachedM3.Name = "reachedM3";
             this.reachedM3.Width = 56;
             // 
@@ -7530,7 +7527,7 @@
             this.buttonM5V1ExtFwd.Name = "buttonM5V1ExtFwd";
             this.buttonM5V1ExtFwd.Size = new System.Drawing.Size(120, 48);
             this.buttonM5V1ExtFwd.TabIndex = 150;
-            this.buttonM5V1ExtFwd.Text = "1 vertical up";
+            this.buttonM5V1ExtFwd.Text = "1 vertical arriba";
             this.buttonM5V1ExtFwd.UseVisualStyleBackColor = false;
             this.buttonM5V1ExtFwd.Click += new System.EventHandler(this.buttonM5V1ExtFwd_Click);
             // 
@@ -7556,7 +7553,7 @@
             this.buttonM5CWRotation.Name = "buttonM5CWRotation";
             this.buttonM5CWRotation.Size = new System.Drawing.Size(120, 48);
             this.buttonM5CWRotation.TabIndex = 147;
-            this.buttonM5CWRotation.Text = "CW rotation";
+            this.buttonM5CWRotation.Text = "rotacion horaria";
             this.buttonM5CWRotation.UseVisualStyleBackColor = false;
             this.buttonM5CWRotation.Click += new System.EventHandler(this.buttonM5CWRotation_Click);
             // 
@@ -7569,7 +7566,7 @@
             this.buttonM5V1ExtBwd.Name = "buttonM5V1ExtBwd";
             this.buttonM5V1ExtBwd.Size = new System.Drawing.Size(120, 48);
             this.buttonM5V1ExtBwd.TabIndex = 151;
-            this.buttonM5V1ExtBwd.Text = "1 vertical down";
+            this.buttonM5V1ExtBwd.Text = "1 vertical abajo";
             this.buttonM5V1ExtBwd.UseVisualStyleBackColor = false;
             this.buttonM5V1ExtBwd.Click += new System.EventHandler(this.buttonM5V1ExtBwd_Click);
             // 
@@ -7582,7 +7579,7 @@
             this.buttonM5ClampBwd.Name = "buttonM5ClampBwd";
             this.buttonM5ClampBwd.Size = new System.Drawing.Size(120, 48);
             this.buttonM5ClampBwd.TabIndex = 144;
-            this.buttonM5ClampBwd.Text = "clamp backward";
+            this.buttonM5ClampBwd.Text = "abrazadera atras";
             this.buttonM5ClampBwd.UseVisualStyleBackColor = false;
             this.buttonM5ClampBwd.Click += new System.EventHandler(this.buttonM5ClampBwd_Click);
             // 
@@ -7595,7 +7592,7 @@
             this.buttonM5V2ExtFwd.Name = "buttonM5V2ExtFwd";
             this.buttonM5V2ExtFwd.Size = new System.Drawing.Size(120, 48);
             this.buttonM5V2ExtFwd.TabIndex = 152;
-            this.buttonM5V2ExtFwd.Text = "2 vertical up";
+            this.buttonM5V2ExtFwd.Text = "2 vertical arriba";
             this.buttonM5V2ExtFwd.UseVisualStyleBackColor = false;
             this.buttonM5V2ExtFwd.Click += new System.EventHandler(this.buttonM5V2ExtFwd_Click);
             // 
@@ -7608,7 +7605,7 @@
             this.buttonM5V2ExtBwd.Name = "buttonM5V2ExtBwd";
             this.buttonM5V2ExtBwd.Size = new System.Drawing.Size(120, 48);
             this.buttonM5V2ExtBwd.TabIndex = 153;
-            this.buttonM5V2ExtBwd.Text = "2 vertical down";
+            this.buttonM5V2ExtBwd.Text = "2 vertical abajo";
             this.buttonM5V2ExtBwd.UseVisualStyleBackColor = false;
             this.buttonM5V2ExtBwd.Click += new System.EventHandler(this.buttonM5V2ExtBwd_Click);
             // 
@@ -7621,7 +7618,7 @@
             this.buttonM5CCWRotation.Name = "buttonM5CCWRotation";
             this.buttonM5CCWRotation.Size = new System.Drawing.Size(120, 48);
             this.buttonM5CCWRotation.TabIndex = 148;
-            this.buttonM5CCWRotation.Text = "CCW rotation";
+            this.buttonM5CCWRotation.Text = "rotacion antihoraria";
             this.buttonM5CCWRotation.UseVisualStyleBackColor = false;
             this.buttonM5CCWRotation.Click += new System.EventHandler(this.buttonM5CCWRotation_Click);
             // 
@@ -7634,7 +7631,7 @@
             this.buttonM5ClampFwd.Name = "buttonM5ClampFwd";
             this.buttonM5ClampFwd.Size = new System.Drawing.Size(120, 48);
             this.buttonM5ClampFwd.TabIndex = 143;
-            this.buttonM5ClampFwd.Text = "clamp forward";
+            this.buttonM5ClampFwd.Text = "abrazadera adelante forward";
             this.buttonM5ClampFwd.UseVisualStyleBackColor = false;
             this.buttonM5ClampFwd.Click += new System.EventHandler(this.buttonM5ClampFwd_Click);
             // 
@@ -7647,7 +7644,7 @@
             this.buttonM5NoRotation.Name = "buttonM5NoRotation";
             this.buttonM5NoRotation.Size = new System.Drawing.Size(120, 48);
             this.buttonM5NoRotation.TabIndex = 149;
-            this.buttonM5NoRotation.Text = "no rotation";
+            this.buttonM5NoRotation.Text = "sin rotacion";
             this.buttonM5NoRotation.UseVisualStyleBackColor = false;
             this.buttonM5NoRotation.Click += new System.EventHandler(this.buttonM5NoRotation_Click);
             // 
@@ -7660,7 +7657,7 @@
             this.buttonM5TranslatorBwd.Name = "buttonM5TranslatorBwd";
             this.buttonM5TranslatorBwd.Size = new System.Drawing.Size(120, 48);
             this.buttonM5TranslatorBwd.TabIndex = 142;
-            this.buttonM5TranslatorBwd.Text = "translator backward";
+            this.buttonM5TranslatorBwd.Text = "traduccion atras";
             this.buttonM5TranslatorBwd.UseVisualStyleBackColor = false;
             this.buttonM5TranslatorBwd.Click += new System.EventHandler(this.buttonM5TranslatorBwd_Click);
             // 
@@ -7673,7 +7670,7 @@
             this.buttonM5ClampOpening.Name = "buttonM5ClampOpening";
             this.buttonM5ClampOpening.Size = new System.Drawing.Size(120, 48);
             this.buttonM5ClampOpening.TabIndex = 145;
-            this.buttonM5ClampOpening.Text = "clamp opening";
+            this.buttonM5ClampOpening.Text = "abrazadera abierta";
             this.buttonM5ClampOpening.UseVisualStyleBackColor = false;
             this.buttonM5ClampOpening.Click += new System.EventHandler(this.buttonM5ClampOpening_Click);
             // 
@@ -7686,7 +7683,7 @@
             this.buttonM5TranslatorFwd.Name = "buttonM5TranslatorFwd";
             this.buttonM5TranslatorFwd.Size = new System.Drawing.Size(120, 48);
             this.buttonM5TranslatorFwd.TabIndex = 141;
-            this.buttonM5TranslatorFwd.Text = "translator forward";
+            this.buttonM5TranslatorFwd.Text = "traduccion adelante";
             this.buttonM5TranslatorFwd.UseVisualStyleBackColor = false;
             this.buttonM5TranslatorFwd.Click += new System.EventHandler(this.buttonM5TranslatorFwd_Click);
             // 
@@ -7699,7 +7696,7 @@
             this.buttonM5ClampClosing.Name = "buttonM5ClampClosing";
             this.buttonM5ClampClosing.Size = new System.Drawing.Size(120, 48);
             this.buttonM5ClampClosing.TabIndex = 146;
-            this.buttonM5ClampClosing.Text = "clamp closing";
+            this.buttonM5ClampClosing.Text = "abrazadera cerrada";
             this.buttonM5ClampClosing.UseVisualStyleBackColor = false;
             this.buttonM5ClampClosing.Click += new System.EventHandler(this.buttonM5ClampClosing_Click);
             // 
@@ -7738,7 +7735,7 @@
             this.checkBoxM5ExitBelt2.Name = "checkBoxM5ExitBelt2";
             this.checkBoxM5ExitBelt2.Size = new System.Drawing.Size(70, 90);
             this.checkBoxM5ExitBelt2.TabIndex = 280;
-            this.checkBoxM5ExitBelt2.Text = "exit 2";
+            this.checkBoxM5ExitBelt2.Text = "salida 2";
             this.checkBoxM5ExitBelt2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.checkBoxM5ExitBelt2.UseVisualStyleBackColor = false;
             // 
@@ -7757,7 +7754,7 @@
             this.checkBoxM5TranslationBelt.Name = "checkBoxM5TranslationBelt";
             this.checkBoxM5TranslationBelt.Size = new System.Drawing.Size(87, 90);
             this.checkBoxM5TranslationBelt.TabIndex = 279;
-            this.checkBoxM5TranslationBelt.Text = "translation";
+            this.checkBoxM5TranslationBelt.Text = "traduccion";
             this.checkBoxM5TranslationBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.checkBoxM5TranslationBelt.UseVisualStyleBackColor = false;
             this.checkBoxM5TranslationBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM5TranslationBelt_CheckStateChanged);
@@ -7777,7 +7774,7 @@
             this.checkBoxM5ExitBelt1.Name = "checkBoxM5ExitBelt1";
             this.checkBoxM5ExitBelt1.Size = new System.Drawing.Size(70, 90);
             this.checkBoxM5ExitBelt1.TabIndex = 278;
-            this.checkBoxM5ExitBelt1.Text = "exit 1";
+            this.checkBoxM5ExitBelt1.Text = "salida 1";
             this.checkBoxM5ExitBelt1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.checkBoxM5ExitBelt1.UseVisualStyleBackColor = false;
             this.checkBoxM5ExitBelt1.CheckStateChanged += new System.EventHandler(this.checkBoxM5ExitBelt1_CheckStateChanged);
@@ -7797,7 +7794,7 @@
             this.checkBoxM5ExitBelt3.Name = "checkBoxM5ExitBelt3";
             this.checkBoxM5ExitBelt3.Size = new System.Drawing.Size(70, 90);
             this.checkBoxM5ExitBelt3.TabIndex = 277;
-            this.checkBoxM5ExitBelt3.Text = "exit 3";
+            this.checkBoxM5ExitBelt3.Text = "salida 3";
             this.checkBoxM5ExitBelt3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.checkBoxM5ExitBelt3.UseVisualStyleBackColor = false;
             this.checkBoxM5ExitBelt3.CheckStateChanged += new System.EventHandler(this.checkBoxM5ExitBelt3_CheckStateChanged);
@@ -9776,7 +9773,7 @@
             tabPageFormatStyle21.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle21.Padding = new System.Windows.Forms.Padding(5);
             this.tabPageT0_1.FormatStyle = tabPageFormatStyle21;
-            this.tabPageT0_1.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT0_1.Location = new System.Drawing.Point(0, 0);
             this.tabPageT0_1.Name = "tabPageT0_1";
             tabPageColorStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle42.BackFadeColor = System.Drawing.Color.Transparent;
@@ -9793,14 +9790,14 @@
             tabPageColorStyle52.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle52.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT0_1.SelectedStyle = tabPageColorStyle52;
-            this.tabPageT0_1.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT0_1.Size = new System.Drawing.Size(0, 0);
             this.tabPageT0_1.StyleFromParent = false;
             this.tabPageT0_1.TabIndex = 1;
             this.tabPageT0_1.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabPageT0_1.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Bottom;
             this.tabPageT0_1.Text = "automatic";
             this.tabPageT0_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_1.TextBounds")));
-            this.tabPageT0_1.TextSize = new System.Drawing.SizeF(87.68488F, 21.44531F);
+            this.tabPageT0_1.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT0_1.UseParentTabStripPlacement = false;
             // 
             // checkBoxT0Keyboard
@@ -9837,9 +9834,9 @@
             this.label26.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label26.Location = new System.Drawing.Point(12, 474);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(90, 16);
+            this.label26.Size = new System.Drawing.Size(53, 16);
             this.label26.TabIndex = 144;
-            this.label26.Text = "Recipe name";
+            this.label26.Text = "Receta";
             // 
             // button1
             // 
@@ -9849,7 +9846,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 40);
             this.button1.TabIndex = 143;
-            this.button1.Text = "RESET CYCLE NUMBER";
+            this.button1.Text = "RESET NUMERO CYCLOS";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -9909,7 +9906,7 @@
             this.dataGridViewMessages.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewMessages.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dataGridViewMessages.EnableHeadersVisualStyles = false;
-            this.dataGridViewMessages.Location = new System.Drawing.Point(0, 563);
+            this.dataGridViewMessages.Location = new System.Drawing.Point(0, -153);
             this.dataGridViewMessages.MultiSelect = false;
             this.dataGridViewMessages.Name = "dataGridViewMessages";
             this.dataGridViewMessages.ReadOnly = true;
@@ -9932,7 +9929,7 @@
             this.dataGridViewMessages.RowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridViewMessages.RowTemplate.Height = 24;
             this.dataGridViewMessages.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridViewMessages.Size = new System.Drawing.Size(914, 100);
+            this.dataGridViewMessages.Size = new System.Drawing.Size(0, 100);
             this.dataGridViewMessages.TabIndex = 141;
             // 
             // datetime
@@ -9974,9 +9971,9 @@
             // 
             this.statusStripSeparator.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(190)))), ((int)(((byte)(186)))));
             this.statusStripSeparator.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusStripSeparator.Location = new System.Drawing.Point(0, 663);
+            this.statusStripSeparator.Location = new System.Drawing.Point(0, -53);
             this.statusStripSeparator.Name = "statusStripSeparator";
-            this.statusStripSeparator.Size = new System.Drawing.Size(914, 22);
+            this.statusStripSeparator.Size = new System.Drawing.Size(0, 22);
             this.statusStripSeparator.SizingGrip = false;
             this.statusStripSeparator.TabIndex = 140;
             // 
@@ -9989,9 +9986,9 @@
             this.toolStripStatusLabelSN,
             this.toolStripStatusLabelDateTime,
             this.toolStripStatusLabelSystem});
-            this.statusStripT0.Location = new System.Drawing.Point(0, 685);
+            this.statusStripT0.Location = new System.Drawing.Point(0, -31);
             this.statusStripT0.Name = "statusStripT0";
-            this.statusStripT0.Size = new System.Drawing.Size(914, 31);
+            this.statusStripT0.Size = new System.Drawing.Size(0, 31);
             this.statusStripT0.SizingGrip = false;
             this.statusStripT0.TabIndex = 139;
             // 
@@ -10124,9 +10121,9 @@
             this.labelM6Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM6Status.Location = new System.Drawing.Point(185, 172);
             this.labelM6Status.Name = "labelM6Status";
-            this.labelM6Status.Size = new System.Drawing.Size(79, 16);
+            this.labelM6Status.Size = new System.Drawing.Size(82, 16);
             this.labelM6Status.TabIndex = 132;
-            this.labelM6Status.Text = "emergency";
+            this.labelM6Status.Text = "emergencia";
             // 
             // buttonM6Status
             // 
@@ -10283,7 +10280,7 @@
             this.groupBoxM5.Size = new System.Drawing.Size(275, 195);
             this.groupBoxM5.TabIndex = 6;
             this.groupBoxM5.TabStop = false;
-            this.groupBoxM5.Text = "manipulator";
+            this.groupBoxM5.Text = "manipulador";
             // 
             // labelM5CycleTime2
             // 
@@ -10353,9 +10350,9 @@
             this.label43.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label43.Location = new System.Drawing.Point(98, 85);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(46, 16);
+            this.label43.Size = new System.Drawing.Size(35, 16);
             this.label43.TabIndex = 147;
-            this.label43.Text = "phase";
+            this.label43.Text = "fase";
             // 
             // labelM5CycleId
             // 
@@ -10377,9 +10374,9 @@
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label10.Location = new System.Drawing.Point(10, 85);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 16);
+            this.label10.Size = new System.Drawing.Size(44, 16);
             this.label10.TabIndex = 139;
-            this.label10.Text = "cycle n.";
+            this.label10.Text = "ciclos";
             // 
             // labelM5Status
             // 
@@ -10389,9 +10386,9 @@
             this.labelM5Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM5Status.Location = new System.Drawing.Point(185, 172);
             this.labelM5Status.Name = "labelM5Status";
-            this.labelM5Status.Size = new System.Drawing.Size(79, 16);
+            this.labelM5Status.Size = new System.Drawing.Size(82, 16);
             this.labelM5Status.TabIndex = 132;
-            this.labelM5Status.Text = "emergency";
+            this.labelM5Status.Text = "emergencia";
             // 
             // buttonM5Status
             // 
@@ -10626,9 +10623,9 @@
             this.labelM3Param2Name.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM3Param2Name.Location = new System.Drawing.Point(100, 90);
             this.labelM3Param2Name.Name = "labelM3Param2Name";
-            this.labelM3Param2Name.Size = new System.Drawing.Size(34, 16);
+            this.labelM3Param2Name.Size = new System.Drawing.Size(40, 16);
             this.labelM3Param2Name.TabIndex = 141;
-            this.labelM3Param2Name.Text = "foot";
+            this.labelM3Param2Name.Text = "inicio";
             // 
             // labelM3CycleId
             // 
@@ -10650,9 +10647,9 @@
             this.label12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label12.Location = new System.Drawing.Point(10, 124);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 16);
+            this.label12.Size = new System.Drawing.Size(44, 16);
             this.label12.TabIndex = 139;
-            this.label12.Text = "cycle n.";
+            this.label12.Text = "ciclos";
             // 
             // labelM3Status
             // 
@@ -10662,9 +10659,9 @@
             this.labelM3Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM3Status.Location = new System.Drawing.Point(185, 172);
             this.labelM3Status.Name = "labelM3Status";
-            this.labelM3Status.Size = new System.Drawing.Size(79, 16);
+            this.labelM3Status.Size = new System.Drawing.Size(82, 16);
             this.labelM3Status.TabIndex = 131;
-            this.labelM3Status.Text = "emergency";
+            this.labelM3Status.Text = "emergencia";
             // 
             // buttonM3Status
             // 
@@ -10843,9 +10840,9 @@
             this.label40.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label40.Location = new System.Drawing.Point(100, 85);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(46, 16);
+            this.label40.Size = new System.Drawing.Size(35, 16);
             this.label40.TabIndex = 145;
-            this.label40.Text = "phase";
+            this.label40.Text = "fase";
             // 
             // labelM2CycleTime
             // 
@@ -10891,9 +10888,9 @@
             this.label6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label6.Location = new System.Drawing.Point(10, 85);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 16);
+            this.label6.Size = new System.Drawing.Size(44, 16);
             this.label6.TabIndex = 139;
-            this.label6.Text = "cycle n.";
+            this.label6.Text = "ciclos";
             // 
             // labelM2Status
             // 
@@ -10903,9 +10900,9 @@
             this.labelM2Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM2Status.Location = new System.Drawing.Point(185, 172);
             this.labelM2Status.Name = "labelM2Status";
-            this.labelM2Status.Size = new System.Drawing.Size(79, 16);
+            this.labelM2Status.Size = new System.Drawing.Size(82, 16);
             this.labelM2Status.TabIndex = 130;
-            this.labelM2Status.Text = "emergency";
+            this.labelM2Status.Text = "emergencia";
             // 
             // buttonM2Status
             // 
@@ -11097,9 +11094,9 @@
             this.label41.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label41.Location = new System.Drawing.Point(100, 85);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(46, 16);
+            this.label41.Size = new System.Drawing.Size(35, 16);
             this.label41.TabIndex = 147;
-            this.label41.Text = "phase";
+            this.label41.Text = "fase";
             // 
             // labelM4CycleId
             // 
@@ -11121,9 +11118,9 @@
             this.labelM4CycleIdr.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM4CycleIdr.Location = new System.Drawing.Point(10, 85);
             this.labelM4CycleIdr.Name = "labelM4CycleIdr";
-            this.labelM4CycleIdr.Size = new System.Drawing.Size(60, 16);
+            this.labelM4CycleIdr.Size = new System.Drawing.Size(44, 16);
             this.labelM4CycleIdr.TabIndex = 139;
-            this.labelM4CycleIdr.Text = "cycle n.";
+            this.labelM4CycleIdr.Text = "ciclos";
             // 
             // labelM4Status
             // 
@@ -11133,9 +11130,9 @@
             this.labelM4Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM4Status.Location = new System.Drawing.Point(185, 172);
             this.labelM4Status.Name = "labelM4Status";
-            this.labelM4Status.Size = new System.Drawing.Size(79, 16);
+            this.labelM4Status.Size = new System.Drawing.Size(82, 16);
             this.labelM4Status.TabIndex = 132;
-            this.labelM4Status.Text = "emergency";
+            this.labelM4Status.Text = "emergencia";
             // 
             // buttonM4Status
             // 
@@ -11330,9 +11327,9 @@
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label7.Location = new System.Drawing.Point(100, 85);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 16);
+            this.label7.Size = new System.Drawing.Size(35, 16);
             this.label7.TabIndex = 139;
-            this.label7.Text = "phase";
+            this.label7.Text = "fase";
             // 
             // labelM1CycleId
             // 
@@ -11367,9 +11364,9 @@
             this.labelM1CycleCounter.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM1CycleCounter.Location = new System.Drawing.Point(10, 85);
             this.labelM1CycleCounter.Name = "labelM1CycleCounter";
-            this.labelM1CycleCounter.Size = new System.Drawing.Size(60, 16);
+            this.labelM1CycleCounter.Size = new System.Drawing.Size(44, 16);
             this.labelM1CycleCounter.TabIndex = 136;
-            this.labelM1CycleCounter.Text = "cycle n.";
+            this.labelM1CycleCounter.Text = "ciclos";
             // 
             // numericUpDownM1SharpeningTime
             // 
@@ -11423,9 +11420,9 @@
             this.labelM1Status.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM1Status.Location = new System.Drawing.Point(185, 172);
             this.labelM1Status.Name = "labelM1Status";
-            this.labelM1Status.Size = new System.Drawing.Size(79, 16);
+            this.labelM1Status.Size = new System.Drawing.Size(82, 16);
             this.labelM1Status.TabIndex = 132;
-            this.labelM1Status.Text = "emergency";
+            this.labelM1Status.Text = "emergencia";
             // 
             // buttonM1Status
             // 
@@ -11633,7 +11630,7 @@
             tabPageFormatStyle23.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle23.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT0_2.FormatStyle = tabPageFormatStyle23;
-            this.tabPageT0_2.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT0_2.Location = new System.Drawing.Point(0, 0);
             this.tabPageT0_2.Name = "tabPageT0_2";
             tabPageColorStyle45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle45.BackFadeColor = System.Drawing.Color.Transparent;
@@ -11653,13 +11650,13 @@
             tabPageColorStyle48.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle48.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT0_2.SelectedStyle = tabPageColorStyle48;
-            this.tabPageT0_2.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT0_2.Size = new System.Drawing.Size(0, 0);
             this.tabPageT0_2.StyleFromParent = false;
             this.tabPageT0_2.TabIndex = 2;
             this.tabPageT0_2.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Left;
             this.tabPageT0_2.Text = "recipies";
             this.tabPageT0_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_2.TextBounds")));
-            this.tabPageT0_2.TextSize = new System.Drawing.SizeF(68.48957F, 21.44531F);
+            this.tabPageT0_2.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT0_2.UseParentTabStripPlacement = false;
             // 
             // textBoxManageD4Param4
@@ -12142,7 +12139,7 @@
             this.buttonAddNewRecipe.Name = "buttonAddNewRecipe";
             this.buttonAddNewRecipe.Size = new System.Drawing.Size(180, 64);
             this.buttonAddNewRecipe.TabIndex = 142;
-            this.buttonAddNewRecipe.Text = "CREATE RECIPE";
+            this.buttonAddNewRecipe.Text = "CREAR RECETA";
             this.buttonAddNewRecipe.UseVisualStyleBackColor = false;
             this.buttonAddNewRecipe.Click += new System.EventHandler(this.buttonAddNewRecipe_Click);
             // 
@@ -12173,7 +12170,7 @@
             this.groupBoxRecipeM5.Size = new System.Drawing.Size(200, 260);
             this.groupBoxRecipeM5.TabIndex = 119;
             this.groupBoxRecipeM5.TabStop = false;
-            this.groupBoxRecipeM5.Text = "manipulator";
+            this.groupBoxRecipeM5.Text = "manipulador";
             this.groupBoxRecipeM5.Visible = false;
             // 
             // labelM5Param1
@@ -12303,9 +12300,9 @@
             this.radioButtonM4Sel2Bottom.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonM4Sel2Bottom.Location = new System.Drawing.Point(83, 20);
             this.radioButtonM4Sel2Bottom.Name = "radioButtonM4Sel2Bottom";
-            this.radioButtonM4Sel2Bottom.Size = new System.Drawing.Size(52, 20);
+            this.radioButtonM4Sel2Bottom.Size = new System.Drawing.Size(60, 20);
             this.radioButtonM4Sel2Bottom.TabIndex = 148;
-            this.radioButtonM4Sel2Bottom.Text = "text";
+            this.radioButtonM4Sel2Bottom.Text = "texto";
             this.radioButtonM4Sel2Bottom.UseVisualStyleBackColor = false;
             // 
             // radioButtonM4Sel1Bottom
@@ -12316,10 +12313,10 @@
             this.radioButtonM4Sel1Bottom.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonM4Sel1Bottom.Location = new System.Drawing.Point(10, 20);
             this.radioButtonM4Sel1Bottom.Name = "radioButtonM4Sel1Bottom";
-            this.radioButtonM4Sel1Bottom.Size = new System.Drawing.Size(55, 20);
+            this.radioButtonM4Sel1Bottom.Size = new System.Drawing.Size(62, 20);
             this.radioButtonM4Sel1Bottom.TabIndex = 147;
             this.radioButtonM4Sel1Bottom.TabStop = true;
-            this.radioButtonM4Sel1Bottom.Text = "date";
+            this.radioButtonM4Sel1Bottom.Text = "fecha";
             this.radioButtonM4Sel1Bottom.UseVisualStyleBackColor = false;
             // 
             // groupBox3
@@ -12339,9 +12336,9 @@
             this.radioButtonM4Sel2Top.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonM4Sel2Top.Location = new System.Drawing.Point(86, 23);
             this.radioButtonM4Sel2Top.Name = "radioButtonM4Sel2Top";
-            this.radioButtonM4Sel2Top.Size = new System.Drawing.Size(52, 20);
+            this.radioButtonM4Sel2Top.Size = new System.Drawing.Size(60, 20);
             this.radioButtonM4Sel2Top.TabIndex = 146;
-            this.radioButtonM4Sel2Top.Text = "text";
+            this.radioButtonM4Sel2Top.Text = "texto";
             this.radioButtonM4Sel2Top.UseVisualStyleBackColor = false;
             // 
             // radioButtonM4Sel1Top
@@ -12352,10 +12349,10 @@
             this.radioButtonM4Sel1Top.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonM4Sel1Top.Location = new System.Drawing.Point(10, 20);
             this.radioButtonM4Sel1Top.Name = "radioButtonM4Sel1Top";
-            this.radioButtonM4Sel1Top.Size = new System.Drawing.Size(55, 20);
+            this.radioButtonM4Sel1Top.Size = new System.Drawing.Size(62, 20);
             this.radioButtonM4Sel1Top.TabIndex = 145;
             this.radioButtonM4Sel1Top.TabStop = true;
-            this.radioButtonM4Sel1Top.Text = "date";
+            this.radioButtonM4Sel1Top.Text = "fecha";
             this.radioButtonM4Sel1Top.UseVisualStyleBackColor = false;
             // 
             // labelPadLaserLine2
@@ -12365,9 +12362,9 @@
             this.labelPadLaserLine2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPadLaserLine2.Location = new System.Drawing.Point(15, 181);
             this.labelPadLaserLine2.Name = "labelPadLaserLine2";
-            this.labelPadLaserLine2.Size = new System.Drawing.Size(81, 16);
+            this.labelPadLaserLine2.Size = new System.Drawing.Size(51, 16);
             this.labelPadLaserLine2.TabIndex = 144;
-            this.labelPadLaserLine2.Text = "bottom line";
+            this.labelPadLaserLine2.Text = "debajo";
             // 
             // labelPadLaserLine1
             // 
@@ -12376,9 +12373,9 @@
             this.labelPadLaserLine1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPadLaserLine1.Location = new System.Drawing.Point(15, 90);
             this.labelPadLaserLine1.Name = "labelPadLaserLine1";
-            this.labelPadLaserLine1.Size = new System.Drawing.Size(56, 16);
+            this.labelPadLaserLine1.Size = new System.Drawing.Size(53, 16);
             this.labelPadLaserLine1.TabIndex = 143;
-            this.labelPadLaserLine1.Text = "top line";
+            this.labelPadLaserLine1.Text = "encima";
             // 
             // labelM4Param1
             // 
@@ -12458,9 +12455,9 @@
             this.labelFootOrder.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelFootOrder.Location = new System.Drawing.Point(20, 140);
             this.labelFootOrder.Name = "labelFootOrder";
-            this.labelFootOrder.Size = new System.Drawing.Size(78, 16);
+            this.labelFootOrder.Size = new System.Drawing.Size(103, 16);
             this.labelFootOrder.TabIndex = 142;
-            this.labelFootOrder.Text = "start order";
+            this.labelFootOrder.Text = "orden de inicio";
             // 
             // radioButtonFootOrderOpt2
             // 
@@ -12469,9 +12466,9 @@
             this.radioButtonFootOrderOpt2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonFootOrderOpt2.Location = new System.Drawing.Point(110, 160);
             this.radioButtonFootOrderOpt2.Name = "radioButtonFootOrderOpt2";
-            this.radioButtonFootOrderOpt2.Size = new System.Drawing.Size(47, 20);
+            this.radioButtonFootOrderOpt2.Size = new System.Drawing.Size(83, 20);
             this.radioButtonFootOrderOpt2.TabIndex = 142;
-            this.radioButtonFootOrderOpt2.Text = "left";
+            this.radioButtonFootOrderOpt2.Text = "izquierda";
             this.radioButtonFootOrderOpt2.UseVisualStyleBackColor = false;
             // 
             // labelM3Param1
@@ -12517,10 +12514,10 @@
             this.radioButtonFootOrderOpt1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonFootOrderOpt1.Location = new System.Drawing.Point(20, 160);
             this.radioButtonFootOrderOpt1.Name = "radioButtonFootOrderOpt1";
-            this.radioButtonFootOrderOpt1.Size = new System.Drawing.Size(55, 20);
+            this.radioButtonFootOrderOpt1.Size = new System.Drawing.Size(78, 20);
             this.radioButtonFootOrderOpt1.TabIndex = 120;
             this.radioButtonFootOrderOpt1.TabStop = true;
-            this.radioButtonFootOrderOpt1.Text = "right";
+            this.radioButtonFootOrderOpt1.Text = "derecha";
             this.radioButtonFootOrderOpt1.UseVisualStyleBackColor = false;
             // 
             // groupBoxRecipeM2
@@ -12582,7 +12579,7 @@
             this.groupBoxRecipeM1.Size = new System.Drawing.Size(300, 200);
             this.groupBoxRecipeM1.TabIndex = 114;
             this.groupBoxRecipeM1.TabStop = false;
-            this.groupBoxRecipeM1.Text = "trimmer";
+            this.groupBoxRecipeM1.Text = "refiladora";
             // 
             // labelM1Param1
             // 
@@ -12641,13 +12638,14 @@
             // labelRecipeNameT0_1
             // 
             this.labelRecipeNameT0_1.AutoSize = true;
+            this.labelRecipeNameT0_1.BackColor = System.Drawing.SystemColors.Control;
             this.labelRecipeNameT0_1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRecipeNameT0_1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelRecipeNameT0_1.Location = new System.Drawing.Point(20, 20);
             this.labelRecipeNameT0_1.Name = "labelRecipeNameT0_1";
-            this.labelRecipeNameT0_1.Size = new System.Drawing.Size(90, 16);
+            this.labelRecipeNameT0_1.Size = new System.Drawing.Size(53, 16);
             this.labelRecipeNameT0_1.TabIndex = 8;
-            this.labelRecipeNameT0_1.Text = "Recipe name";
+            this.labelRecipeNameT0_1.Text = "Receta";
             // 
             // textBoxMRecipeName
             // 
@@ -12750,9 +12748,9 @@
             this.label37.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.Location = new System.Drawing.Point(30, 50);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(56, 16);
+            this.label37.Size = new System.Drawing.Size(68, 16);
             this.label37.TabIndex = 173;
-            this.label37.Text = "trimmer";
+            this.label37.Text = "refiladora";
             // 
             // groupBox2
             // 
@@ -12771,9 +12769,9 @@
             this.radioButtonMRecipeBottomSel2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonMRecipeBottomSel2.Location = new System.Drawing.Point(90, 20);
             this.radioButtonMRecipeBottomSel2.Name = "radioButtonMRecipeBottomSel2";
-            this.radioButtonMRecipeBottomSel2.Size = new System.Drawing.Size(52, 20);
+            this.radioButtonMRecipeBottomSel2.Size = new System.Drawing.Size(60, 20);
             this.radioButtonMRecipeBottomSel2.TabIndex = 170;
-            this.radioButtonMRecipeBottomSel2.Text = "text";
+            this.radioButtonMRecipeBottomSel2.Text = "texto";
             this.radioButtonMRecipeBottomSel2.UseVisualStyleBackColor = false;
             // 
             // radioButtonMRecipeBottomSel1
@@ -12784,10 +12782,10 @@
             this.radioButtonMRecipeBottomSel1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonMRecipeBottomSel1.Location = new System.Drawing.Point(10, 20);
             this.radioButtonMRecipeBottomSel1.Name = "radioButtonMRecipeBottomSel1";
-            this.radioButtonMRecipeBottomSel1.Size = new System.Drawing.Size(55, 20);
+            this.radioButtonMRecipeBottomSel1.Size = new System.Drawing.Size(62, 20);
             this.radioButtonMRecipeBottomSel1.TabIndex = 169;
             this.radioButtonMRecipeBottomSel1.TabStop = true;
-            this.radioButtonMRecipeBottomSel1.Text = "date";
+            this.radioButtonMRecipeBottomSel1.Text = "fecha";
             this.radioButtonMRecipeBottomSel1.UseVisualStyleBackColor = false;
             // 
             // groupBox1
@@ -12807,9 +12805,9 @@
             this.radioButtonMRecipeTopSel2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonMRecipeTopSel2.Location = new System.Drawing.Point(88, 20);
             this.radioButtonMRecipeTopSel2.Name = "radioButtonMRecipeTopSel2";
-            this.radioButtonMRecipeTopSel2.Size = new System.Drawing.Size(52, 20);
+            this.radioButtonMRecipeTopSel2.Size = new System.Drawing.Size(60, 20);
             this.radioButtonMRecipeTopSel2.TabIndex = 168;
-            this.radioButtonMRecipeTopSel2.Text = "text";
+            this.radioButtonMRecipeTopSel2.Text = "texto";
             this.radioButtonMRecipeTopSel2.UseVisualStyleBackColor = false;
             // 
             // radioButtonMRecipeTopSel1
@@ -12820,10 +12818,10 @@
             this.radioButtonMRecipeTopSel1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonMRecipeTopSel1.Location = new System.Drawing.Point(10, 20);
             this.radioButtonMRecipeTopSel1.Name = "radioButtonMRecipeTopSel1";
-            this.radioButtonMRecipeTopSel1.Size = new System.Drawing.Size(55, 20);
+            this.radioButtonMRecipeTopSel1.Size = new System.Drawing.Size(62, 20);
             this.radioButtonMRecipeTopSel1.TabIndex = 167;
             this.radioButtonMRecipeTopSel1.TabStop = true;
-            this.radioButtonMRecipeTopSel1.Text = "date";
+            this.radioButtonMRecipeTopSel1.Text = "fecha";
             this.radioButtonMRecipeTopSel1.UseVisualStyleBackColor = false;
             // 
             // checkBox3
@@ -12845,24 +12843,26 @@
             // 
             // buttonMRecipeDeleteAll
             // 
+            this.buttonMRecipeDeleteAll.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonMRecipeDeleteAll.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMRecipeDeleteAll.Location = new System.Drawing.Point(580, 472);
             this.buttonMRecipeDeleteAll.Name = "buttonMRecipeDeleteAll";
             this.buttonMRecipeDeleteAll.Size = new System.Drawing.Size(180, 64);
             this.buttonMRecipeDeleteAll.TabIndex = 165;
-            this.buttonMRecipeDeleteAll.Text = "delete all";
-            this.buttonMRecipeDeleteAll.UseVisualStyleBackColor = true;
+            this.buttonMRecipeDeleteAll.Text = "eliminar todo";
+            this.buttonMRecipeDeleteAll.UseVisualStyleBackColor = false;
             this.buttonMRecipeDeleteAll.Click += new System.EventHandler(this.buttonMRecipeDeleteAll_Click);
             // 
             // buttonMRecipeDelete
             // 
+            this.buttonMRecipeDelete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonMRecipeDelete.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMRecipeDelete.Location = new System.Drawing.Point(580, 145);
             this.buttonMRecipeDelete.Name = "buttonMRecipeDelete";
             this.buttonMRecipeDelete.Size = new System.Drawing.Size(180, 64);
             this.buttonMRecipeDelete.TabIndex = 164;
-            this.buttonMRecipeDelete.Text = "delete";
-            this.buttonMRecipeDelete.UseVisualStyleBackColor = true;
+            this.buttonMRecipeDelete.Text = "eliminar";
+            this.buttonMRecipeDelete.UseVisualStyleBackColor = false;
             this.buttonMRecipeDelete.Click += new System.EventHandler(this.buttonMRecipeDelete_Click);
             // 
             // label36
@@ -12872,9 +12872,9 @@
             this.label36.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.Location = new System.Drawing.Point(407, 117);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(78, 16);
+            this.label36.Size = new System.Drawing.Size(103, 16);
             this.label36.TabIndex = 163;
-            this.label36.Text = "start order";
+            this.label36.Text = "orden de inicio";
             // 
             // radioButtonM3Option2Recipe
             // 
@@ -12896,10 +12896,10 @@
             this.radioButtonM3Option1Recipe.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonM3Option1Recipe.Location = new System.Drawing.Point(407, 137);
             this.radioButtonM3Option1Recipe.Name = "radioButtonM3Option1Recipe";
-            this.radioButtonM3Option1Recipe.Size = new System.Drawing.Size(55, 20);
+            this.radioButtonM3Option1Recipe.Size = new System.Drawing.Size(78, 20);
             this.radioButtonM3Option1Recipe.TabIndex = 161;
             this.radioButtonM3Option1Recipe.TabStop = true;
-            this.radioButtonM3Option1Recipe.Text = "right";
+            this.radioButtonM3Option1Recipe.Text = "derecha";
             this.radioButtonM3Option1Recipe.UseVisualStyleBackColor = false;
             // 
             // checkBoxM4RecipeModify
@@ -13014,9 +13014,9 @@
             this.label31.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(16, 289);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(81, 16);
+            this.label31.Size = new System.Drawing.Size(51, 16);
             this.label31.TabIndex = 160;
-            this.label31.Text = "bottom line";
+            this.label31.Text = "debajo";
             // 
             // label32
             // 
@@ -13025,9 +13025,9 @@
             this.label32.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.Location = new System.Drawing.Point(16, 232);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(56, 16);
+            this.label32.Size = new System.Drawing.Size(53, 16);
             this.label32.TabIndex = 159;
-            this.label32.Text = "top line";
+            this.label32.Text = "encima";
             // 
             // labelM3ParamRecipe
             // 
@@ -13160,24 +13160,26 @@
             // 
             // buttonMUpdateRecipe
             // 
+            this.buttonMUpdateRecipe.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonMUpdateRecipe.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMUpdateRecipe.Location = new System.Drawing.Point(580, 56);
             this.buttonMUpdateRecipe.Name = "buttonMUpdateRecipe";
             this.buttonMUpdateRecipe.Size = new System.Drawing.Size(180, 64);
             this.buttonMUpdateRecipe.TabIndex = 12;
-            this.buttonMUpdateRecipe.Text = "update";
-            this.buttonMUpdateRecipe.UseVisualStyleBackColor = true;
+            this.buttonMUpdateRecipe.Text = "actualizar";
+            this.buttonMUpdateRecipe.UseVisualStyleBackColor = false;
             this.buttonMUpdateRecipe.Click += new System.EventHandler(this.buttonMUpdateRecipe_Click);
             // 
             // buttonMRecipiesShowAll
             // 
+            this.buttonMRecipiesShowAll.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buttonMRecipiesShowAll.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMRecipiesShowAll.Location = new System.Drawing.Point(580, 399);
             this.buttonMRecipiesShowAll.Name = "buttonMRecipiesShowAll";
             this.buttonMRecipiesShowAll.Size = new System.Drawing.Size(180, 64);
             this.buttonMRecipiesShowAll.TabIndex = 11;
             this.buttonMRecipiesShowAll.Text = "show all";
-            this.buttonMRecipiesShowAll.UseVisualStyleBackColor = true;
+            this.buttonMRecipiesShowAll.UseVisualStyleBackColor = false;
             this.buttonMRecipiesShowAll.Click += new System.EventHandler(this.buttonMRecipiesShowAll_Click);
             // 
             // comboBoxMRecipeName
@@ -13197,9 +13199,9 @@
             this.labelRecipeNameT0_2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelRecipeNameT0_2.Location = new System.Drawing.Point(20, 20);
             this.labelRecipeNameT0_2.Name = "labelRecipeNameT0_2";
-            this.labelRecipeNameT0_2.Size = new System.Drawing.Size(90, 16);
+            this.labelRecipeNameT0_2.Size = new System.Drawing.Size(53, 16);
             this.labelRecipeNameT0_2.TabIndex = 9;
-            this.labelRecipeNameT0_2.Text = "Recipe name";
+            this.labelRecipeNameT0_2.Text = "Receta";
             // 
             // dataGridViewMEditRecipe
             // 
@@ -13245,7 +13247,7 @@
             tabPageFormatStyle26.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle26.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT0_3.FormatStyle = tabPageFormatStyle26;
-            this.tabPageT0_3.Location = new System.Drawing.Point(96, 36);
+            this.tabPageT0_3.Location = new System.Drawing.Point(0, 0);
             this.tabPageT0_3.Name = "tabPageT0_3";
             tabPageColorStyle49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle49.BackFadeColor = System.Drawing.Color.Transparent;
@@ -13262,14 +13264,14 @@
             tabPageColorStyle50.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle50.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT0_3.SelectedStyle = tabPageColorStyle50;
-            this.tabPageT0_3.Size = new System.Drawing.Size(914, 716);
+            this.tabPageT0_3.Size = new System.Drawing.Size(0, 0);
             this.tabPageT0_3.StyleFromParent = false;
             this.tabPageT0_3.TabIndex = 3;
             this.tabPageT0_3.TabShape = LidorSystems.IntegralUI.Containers.TabShape.Trapezoidal;
             this.tabPageT0_3.TabStripPlacement = LidorSystems.IntegralUI.Containers.TabStripPlacement.Bottom;
             this.tabPageT0_3.Text = "nodes";
             this.tabPageT0_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT0_3.TextBounds")));
-            this.tabPageT0_3.TextSize = new System.Drawing.SizeF(54.43489F, 21.44531F);
+            this.tabPageT0_3.TextSize = new System.Drawing.SizeF(0F, 0F);
             this.tabPageT0_3.UseParentTabStripPlacement = false;
             this.tabPageT0_3.Paint += new System.Windows.Forms.PaintEventHandler(this.tabPageT0_3_Paint);
             // 
@@ -13418,9 +13420,9 @@
             this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(615, 385);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 16);
+            this.label4.Size = new System.Drawing.Size(112, 16);
             this.label4.TabIndex = 115;
-            this.label4.Text = "MANIPULATOR";
+            this.label4.Text = "MANIPULADOR";
             // 
             // label3
             // 
@@ -13462,9 +13464,9 @@
             this.labelM1Name.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelM1Name.Location = new System.Drawing.Point(35, 385);
             this.labelM1Name.Name = "labelM1Name";
-            this.labelM1Name.Size = new System.Drawing.Size(72, 16);
+            this.labelM1Name.Size = new System.Drawing.Size(98, 16);
             this.labelM1Name.TabIndex = 111;
-            this.labelM1Name.Text = "TRIMMER";
+            this.labelM1Name.Text = "REFILADORA";
             // 
             // labelM5Node
             // 
@@ -13640,14 +13642,14 @@
             this.tabPage2.Controls.Add(this.label5);
             tabPageFormatStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage2.FormatStyle = tabPageFormatStyle27;
-            this.tabPage2.Location = new System.Drawing.Point(96, 36);
+            this.tabPage2.Location = new System.Drawing.Point(0, 0);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.ParentPage = this.tabPageT0;
-            this.tabPage2.Size = new System.Drawing.Size(914, 716);
+            this.tabPage2.Size = new System.Drawing.Size(0, 0);
             this.tabPage2.TabIndex = 27;
             this.tabPage2.Text = "diagnostics";
             this.tabPage2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPage2.TextBounds")));
-            this.tabPage2.TextSize = new System.Drawing.SizeF(97.48957F, 21.44531F);
+            this.tabPage2.TextSize = new System.Drawing.SizeF(0F, 0F);
             // 
             // labelM5ExitBelt3State
             // 
@@ -14134,7 +14136,7 @@
             tabPageFormatStyle28.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle28.Padding = new System.Windows.Forms.Padding(15, 5, 15, 5);
             this.tabPageT1_1.FormatStyle = tabPageFormatStyle28;
-            this.tabPageT1_1.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT1_1.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1_1.Name = "tabPageT1_1";
             tabPageColorStyle53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle53.BackFadeColor = System.Drawing.Color.Transparent;
@@ -14151,12 +14153,12 @@
             tabPageColorStyle63.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle63.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_1.SelectedStyle = tabPageColorStyle63;
-            this.tabPageT1_1.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT1_1.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1_1.StyleFromParent = false;
             this.tabPageT1_1.TabIndex = 5;
             this.tabPageT1_1.Text = "teach";
             this.tabPageT1_1.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_1.TextBounds")));
-            this.tabPageT1_1.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT1_1.TextSize = new System.Drawing.SizeF(50.55989F, 21.44531F);
             this.tabPageT1_1.UseParentTabStripPlacement = false;
             // 
             // checkBoxM1CuttingMotorOff
@@ -14228,9 +14230,9 @@
             this.label28.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label28.Location = new System.Drawing.Point(10, 60);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(90, 16);
+            this.label28.Size = new System.Drawing.Size(53, 16);
             this.label28.TabIndex = 291;
-            this.label28.Text = "Recipe name";
+            this.label28.Text = "Receta";
             // 
             // numericUpDownM1TimerBootTeach
             // 
@@ -14265,9 +14267,9 @@
             this.labelM1TeachBootDelay.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM1TeachBootDelay.Location = new System.Drawing.Point(10, 340);
             this.labelM1TeachBootDelay.Name = "labelM1TeachBootDelay";
-            this.labelM1TeachBootDelay.Size = new System.Drawing.Size(117, 16);
+            this.labelM1TeachBootDelay.Size = new System.Drawing.Size(129, 16);
             this.labelM1TeachBootDelay.TabIndex = 289;
-            this.labelM1TeachBootDelay.Text = "boot delay (sec)";
+            this.labelM1TeachBootDelay.Text = "retraso bota (sec)";
             // 
             // labelM1JogSpeed
             // 
@@ -14277,9 +14279,9 @@
             this.labelM1JogSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM1JogSpeed.Location = new System.Drawing.Point(775, 115);
             this.labelM1JogSpeed.Name = "labelM1JogSpeed";
-            this.labelM1JogSpeed.Size = new System.Drawing.Size(71, 16);
+            this.labelM1JogSpeed.Size = new System.Drawing.Size(94, 16);
             this.labelM1JogSpeed.TabIndex = 103;
-            this.labelM1JogSpeed.Text = "speed(%)";
+            this.labelM1JogSpeed.Text = "velocidad(%)";
             // 
             // labelM1StartQuote
             // 
@@ -14291,7 +14293,7 @@
             this.labelM1StartQuote.Name = "labelM1StartQuote";
             this.labelM1StartQuote.Size = new System.Drawing.Size(79, 16);
             this.labelM1StartQuote.TabIndex = 105;
-            this.labelM1StartQuote.Text = "quote(mm)";
+            this.labelM1StartQuote.Text = "cuota(mm)";
             // 
             // lbButtonM1JogUp
             // 
@@ -14343,9 +14345,9 @@
             this.labelM1HomingDone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM1HomingDone.Location = new System.Drawing.Point(637, 550);
             this.labelM1HomingDone.Name = "labelM1HomingDone";
-            this.labelM1HomingDone.Size = new System.Drawing.Size(117, 16);
+            this.labelM1HomingDone.Size = new System.Drawing.Size(95, 16);
             this.labelM1HomingDone.TabIndex = 134;
-            this.labelM1HomingDone.Text = "homing not done";
+            this.labelM1HomingDone.Text = "home no lista";
             // 
             // numericUpDownM1JogSpeed
             // 
@@ -14379,9 +14381,9 @@
             this.labelM1StartSpeed.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM1StartSpeed.Location = new System.Drawing.Point(775, 318);
             this.labelM1StartSpeed.Name = "labelM1StartSpeed";
-            this.labelM1StartSpeed.Size = new System.Drawing.Size(71, 16);
+            this.labelM1StartSpeed.Size = new System.Drawing.Size(94, 16);
             this.labelM1StartSpeed.TabIndex = 104;
-            this.labelM1StartSpeed.Text = "speed(%)";
+            this.labelM1StartSpeed.Text = "velocidad(%)";
             // 
             // labelM1TeachAxisQuoteName
             // 
@@ -14393,7 +14395,7 @@
             this.labelM1TeachAxisQuoteName.Name = "labelM1TeachAxisQuoteName";
             this.labelM1TeachAxisQuoteName.Size = new System.Drawing.Size(84, 16);
             this.labelM1TeachAxisQuoteName.TabIndex = 102;
-            this.labelM1TeachAxisQuoteName.Text = "quote (mm)";
+            this.labelM1TeachAxisQuoteName.Text = "cuota (mm)";
             // 
             // buttonM1HomingDone
             // 
@@ -14430,7 +14432,7 @@
             this.buttonM1StartQuote.Name = "buttonM1StartQuote";
             this.buttonM1StartQuote.Size = new System.Drawing.Size(254, 48);
             this.buttonM1StartQuote.TabIndex = 80;
-            this.buttonM1StartQuote.Text = "start quote";
+            this.buttonM1StartQuote.Text = "start cuota";
             this.buttonM1StartQuote.UseVisualStyleBackColor = false;
             this.buttonM1StartQuote.Click += new System.EventHandler(this.buttonM1StartQuote_Click);
             // 
@@ -14471,7 +14473,7 @@
             this.lbLed13.Enabled = false;
             this.lbLed13.Font = new System.Drawing.Font("Verdana", 8.25F);
             this.lbLed13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.lbLed13.Label = "servo ready";
+            this.lbLed13.Label = "servo listo";
             this.lbLed13.LabelPosition = LBSoft.IndustrialCtrls.Leds.LBLed.LedLabelPosition.Right;
             this.lbLed13.LedColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(227)))), ((int)(((byte)(162)))));
             this.lbLed13.LedSize = new System.Drawing.SizeF(24F, 24F);
@@ -14516,7 +14518,7 @@
             this.buttonM1ResetServo.Name = "buttonM1ResetServo";
             this.buttonM1ResetServo.Size = new System.Drawing.Size(130, 48);
             this.buttonM1ResetServo.TabIndex = 149;
-            this.buttonM1ResetServo.Text = "reset servo alarm";
+            this.buttonM1ResetServo.Text = "reinicio servo alarma";
             this.buttonM1ResetServo.UseVisualStyleBackColor = false;
             this.buttonM1ResetServo.Click += new System.EventHandler(this.buttonM1ResetServo_Click);
             // 
@@ -14529,7 +14531,7 @@
             this.buttonM1Home.Name = "buttonM1Home";
             this.buttonM1Home.Size = new System.Drawing.Size(100, 48);
             this.buttonM1Home.TabIndex = 8;
-            this.buttonM1Home.Text = "go home";
+            this.buttonM1Home.Text = "home";
             this.buttonM1Home.UseVisualStyleBackColor = false;
             this.buttonM1Home.Click += new System.EventHandler(this.buttonM1Home_Click);
             // 
@@ -14542,7 +14544,7 @@
             this.buttonM1ResetHome.Name = "buttonM1ResetHome";
             this.buttonM1ResetHome.Size = new System.Drawing.Size(100, 48);
             this.buttonM1ResetHome.TabIndex = 9;
-            this.buttonM1ResetHome.Text = "reset home";
+            this.buttonM1ResetHome.Text = "reinicio home";
             this.buttonM1ResetHome.UseVisualStyleBackColor = false;
             this.buttonM1ResetHome.Click += new System.EventHandler(this.buttonM1ResetHome_Click);
             // 
@@ -14602,9 +14604,9 @@
             this.checkBoxM1CuttingSuction.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.checkBoxM1CuttingSuction.Location = new System.Drawing.Point(405, 500);
             this.checkBoxM1CuttingSuction.Name = "checkBoxM1CuttingSuction";
-            this.checkBoxM1CuttingSuction.Size = new System.Drawing.Size(70, 90);
+            this.checkBoxM1CuttingSuction.Size = new System.Drawing.Size(83, 90);
             this.checkBoxM1CuttingSuction.TabIndex = 275;
-            this.checkBoxM1CuttingSuction.Text = "suction";
+            this.checkBoxM1CuttingSuction.Text = "aspiracion";
             this.checkBoxM1CuttingSuction.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxM1CuttingSuction.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.checkBoxM1CuttingSuction.UseVisualStyleBackColor = false;
@@ -14637,7 +14639,7 @@
             this.buttonM1BlockOpening.Name = "buttonM1BlockOpening";
             this.buttonM1BlockOpening.Size = new System.Drawing.Size(160, 48);
             this.buttonM1BlockOpening.TabIndex = 143;
-            this.buttonM1BlockOpening.Text = "block clamp opening";
+            this.buttonM1BlockOpening.Text = "abrazadera bloquear abierta";
             this.buttonM1BlockOpening.UseVisualStyleBackColor = false;
             this.buttonM1BlockOpening.Click += new System.EventHandler(this.buttonM1BlockOpening_Click);
             // 
@@ -14689,9 +14691,9 @@
             this.checkBoxM1CuttingDrainBlow.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.checkBoxM1CuttingDrainBlow.Location = new System.Drawing.Point(310, 500);
             this.checkBoxM1CuttingDrainBlow.Name = "checkBoxM1CuttingDrainBlow";
-            this.checkBoxM1CuttingDrainBlow.Size = new System.Drawing.Size(84, 90);
+            this.checkBoxM1CuttingDrainBlow.Size = new System.Drawing.Size(70, 90);
             this.checkBoxM1CuttingDrainBlow.TabIndex = 274;
-            this.checkBoxM1CuttingDrainBlow.Text = "drain blow";
+            this.checkBoxM1CuttingDrainBlow.Text = "aliento";
             this.checkBoxM1CuttingDrainBlow.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxM1CuttingDrainBlow.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.checkBoxM1CuttingDrainBlow.UseVisualStyleBackColor = false;
@@ -14706,7 +14708,7 @@
             this.buttonM1CutOpening.Name = "buttonM1CutOpening";
             this.buttonM1CutOpening.Size = new System.Drawing.Size(160, 48);
             this.buttonM1CutOpening.TabIndex = 143;
-            this.buttonM1CutOpening.Text = "cut clamp opening";
+            this.buttonM1CutOpening.Text = "abrazadera cortar abierta";
             this.buttonM1CutOpening.UseVisualStyleBackColor = false;
             this.buttonM1CutOpening.Click += new System.EventHandler(this.buttonM1CutOpening_Click);
             // 
@@ -14741,7 +14743,7 @@
             this.buttonM1BlockClosing.Name = "buttonM1BlockClosing";
             this.buttonM1BlockClosing.Size = new System.Drawing.Size(160, 48);
             this.buttonM1BlockClosing.TabIndex = 144;
-            this.buttonM1BlockClosing.Text = "block clamp closing";
+            this.buttonM1BlockClosing.Text = "abrazadera bloquear serrada";
             this.buttonM1BlockClosing.UseVisualStyleBackColor = false;
             this.buttonM1BlockClosing.Click += new System.EventHandler(this.buttonM1BlockClosing_Click);
             // 
@@ -14756,7 +14758,7 @@
             this.buttonM1CutSlideForward.Name = "buttonM1CutSlideForward";
             this.buttonM1CutSlideForward.Size = new System.Drawing.Size(100, 90);
             this.buttonM1CutSlideForward.TabIndex = 143;
-            this.buttonM1CutSlideForward.Text = "slide fwd";
+            this.buttonM1CutSlideForward.Text = "deslizar adelante";
             this.buttonM1CutSlideForward.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.buttonM1CutSlideForward.UseVisualStyleBackColor = false;
             this.buttonM1CutSlideForward.Click += new System.EventHandler(this.buttonM1CutSlideForward_Click);
@@ -14770,7 +14772,7 @@
             this.buttonM1CutClosing.Name = "buttonM1CutClosing";
             this.buttonM1CutClosing.Size = new System.Drawing.Size(160, 48);
             this.buttonM1CutClosing.TabIndex = 144;
-            this.buttonM1CutClosing.Text = "cut clamp closing";
+            this.buttonM1CutClosing.Text = "abrazadera cortar serrada";
             this.buttonM1CutClosing.UseVisualStyleBackColor = false;
             this.buttonM1CutClosing.Click += new System.EventHandler(this.buttonM1CutClosing_Click);
             // 
@@ -14785,7 +14787,7 @@
             this.buttonM1CutSlideBackward.Name = "buttonM1CutSlideBackward";
             this.buttonM1CutSlideBackward.Size = new System.Drawing.Size(100, 90);
             this.buttonM1CutSlideBackward.TabIndex = 144;
-            this.buttonM1CutSlideBackward.Text = "slide bwd";
+            this.buttonM1CutSlideBackward.Text = "deslizar atras";
             this.buttonM1CutSlideBackward.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.buttonM1CutSlideBackward.UseVisualStyleBackColor = false;
             this.buttonM1CutSlideBackward.Click += new System.EventHandler(this.buttonM1CutSlideBackward_Click);
@@ -14799,7 +14801,7 @@
             this.buttonM1SpringsOpening.Name = "buttonM1SpringsOpening";
             this.buttonM1SpringsOpening.Size = new System.Drawing.Size(160, 48);
             this.buttonM1SpringsOpening.TabIndex = 141;
-            this.buttonM1SpringsOpening.Text = "springs clamp opening";
+            this.buttonM1SpringsOpening.Text = "abrazaderas muelles abierta";
             this.buttonM1SpringsOpening.UseVisualStyleBackColor = false;
             this.buttonM1SpringsOpening.Click += new System.EventHandler(this.buttonM1SpringsOpening_Click);
             // 
@@ -14818,7 +14820,7 @@
             this.checkBoxM1LoadingBelt.Name = "checkBoxM1LoadingBelt";
             this.checkBoxM1LoadingBelt.Size = new System.Drawing.Size(70, 90);
             this.checkBoxM1LoadingBelt.TabIndex = 276;
-            this.checkBoxM1LoadingBelt.Text = "loading";
+            this.checkBoxM1LoadingBelt.Text = "carga";
             this.checkBoxM1LoadingBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.checkBoxM1LoadingBelt.UseVisualStyleBackColor = false;
             this.checkBoxM1LoadingBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM1LoadingBelt_CheckStateChanged);
@@ -14832,7 +14834,7 @@
             this.buttonM1SpringsClosing.Name = "buttonM1SpringsClosing";
             this.buttonM1SpringsClosing.Size = new System.Drawing.Size(160, 48);
             this.buttonM1SpringsClosing.TabIndex = 142;
-            this.buttonM1SpringsClosing.Text = "springs clamp closing";
+            this.buttonM1SpringsClosing.Text = "abrazaderas muelles serrada";
             this.buttonM1SpringsClosing.UseVisualStyleBackColor = false;
             this.buttonM1SpringsClosing.Click += new System.EventHandler(this.buttonM1SpringsClosing_Click);
             // 
@@ -14851,7 +14853,7 @@
             this.checkBoxM1ExitBelt.Name = "checkBoxM1ExitBelt";
             this.checkBoxM1ExitBelt.Size = new System.Drawing.Size(70, 90);
             this.checkBoxM1ExitBelt.TabIndex = 272;
-            this.checkBoxM1ExitBelt.Text = "exit";
+            this.checkBoxM1ExitBelt.Text = "salida";
             this.checkBoxM1ExitBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.checkBoxM1ExitBelt.UseVisualStyleBackColor = false;
             this.checkBoxM1ExitBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM1ExitBelt_CheckStateChanged);
@@ -14871,7 +14873,7 @@
             this.checkBoxM1WorkingBelt.Name = "checkBoxM1WorkingBelt";
             this.checkBoxM1WorkingBelt.Size = new System.Drawing.Size(70, 90);
             this.checkBoxM1WorkingBelt.TabIndex = 271;
-            this.checkBoxM1WorkingBelt.Text = "working";
+            this.checkBoxM1WorkingBelt.Text = "trabajo";
             this.checkBoxM1WorkingBelt.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.checkBoxM1WorkingBelt.UseVisualStyleBackColor = false;
             this.checkBoxM1WorkingBelt.CheckStateChanged += new System.EventHandler(this.checkBoxM1WorkingBelt_CheckStateChanged);
@@ -14931,7 +14933,7 @@
             dataGridViewCellStyle30.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle30;
             this.dataGridViewTextBoxColumn10.Frozen = true;
-            this.dataGridViewTextBoxColumn10.HeaderText = "point";
+            this.dataGridViewTextBoxColumn10.HeaderText = "punto";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -14941,30 +14943,30 @@
             // dataGridViewTextBoxColumn11
             // 
             this.dataGridViewTextBoxColumn11.Frozen = true;
-            this.dataGridViewTextBoxColumn11.HeaderText = "quote (mm)";
+            this.dataGridViewTextBoxColumn11.HeaderText = "cuota (mm)";
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.Width = 130;
             // 
             // dataGridViewTextBoxColumn12
             // 
             this.dataGridViewTextBoxColumn12.Frozen = true;
-            this.dataGridViewTextBoxColumn12.HeaderText = "speed (%)";
+            this.dataGridViewTextBoxColumn12.HeaderText = "velocidad (%)";
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             this.dataGridViewTextBoxColumn12.Width = 130;
             // 
             // dataGridViewButtonColumn3
             // 
-            this.dataGridViewButtonColumn3.HeaderText = "register";
+            this.dataGridViewButtonColumn3.HeaderText = "registra";
             this.dataGridViewButtonColumn3.Name = "dataGridViewButtonColumn3";
             // 
             // dataGridViewButtonColumn4
             // 
-            this.dataGridViewButtonColumn4.HeaderText = "start";
+            this.dataGridViewButtonColumn4.HeaderText = "inicio";
             this.dataGridViewButtonColumn4.Name = "dataGridViewButtonColumn4";
             // 
             // dataGridViewButtonColumn5
             // 
-            this.dataGridViewButtonColumn5.HeaderText = "reached";
+            this.dataGridViewButtonColumn5.HeaderText = "llegado";
             this.dataGridViewButtonColumn5.Name = "dataGridViewButtonColumn5";
             this.dataGridViewButtonColumn5.ReadOnly = true;
             this.dataGridViewButtonColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -14981,7 +14983,7 @@
             this.buttonM1TeachDeleteProgram.Name = "buttonM1TeachDeleteProgram";
             this.buttonM1TeachDeleteProgram.Size = new System.Drawing.Size(160, 53);
             this.buttonM1TeachDeleteProgram.TabIndex = 143;
-            this.buttonM1TeachDeleteProgram.Text = "delete program";
+            this.buttonM1TeachDeleteProgram.Text = "eliminar el programa";
             this.buttonM1TeachDeleteProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM1TeachDeleteProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM1TeachDeleteProgram.UseVisualStyleBackColor = false;
@@ -14998,7 +15000,7 @@
             this.buttonM1TeachNewProgram.Name = "buttonM1TeachNewProgram";
             this.buttonM1TeachNewProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM1TeachNewProgram.TabIndex = 142;
-            this.buttonM1TeachNewProgram.Text = "new program";
+            this.buttonM1TeachNewProgram.Text = "programa nuevo";
             this.buttonM1TeachNewProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM1TeachNewProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM1TeachNewProgram.UseVisualStyleBackColor = false;
@@ -15015,7 +15017,7 @@
             this.buttonM1TeachSaveProgram.Name = "buttonM1TeachSaveProgram";
             this.buttonM1TeachSaveProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM1TeachSaveProgram.TabIndex = 141;
-            this.buttonM1TeachSaveProgram.Text = "save program";
+            this.buttonM1TeachSaveProgram.Text = "guarde el programa";
             this.buttonM1TeachSaveProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM1TeachSaveProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM1TeachSaveProgram.UseVisualStyleBackColor = false;
@@ -15032,7 +15034,7 @@
             this.buttonM1TeachLoadProgram.Name = "buttonM1TeachLoadProgram";
             this.buttonM1TeachLoadProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM1TeachLoadProgram.TabIndex = 140;
-            this.buttonM1TeachLoadProgram.Text = "load program";
+            this.buttonM1TeachLoadProgram.Text = "cargar el programa";
             this.buttonM1TeachLoadProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM1TeachLoadProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM1TeachLoadProgram.UseVisualStyleBackColor = false;
@@ -15109,7 +15111,7 @@
             tabPageFormatStyle30.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle30.Padding = new System.Windows.Forms.Padding(22, 5, 22, 5);
             this.tabPageT1_2.FormatStyle = tabPageFormatStyle30;
-            this.tabPageT1_2.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT1_2.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1_2.Name = "tabPageT1_2";
             tabPageColorStyle56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle56.BackFadeColor = System.Drawing.Color.Transparent;
@@ -15126,12 +15128,12 @@
             tabPageColorStyle57.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle57.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_2.SelectedStyle = tabPageColorStyle57;
-            this.tabPageT1_2.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT1_2.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1_2.StyleFromParent = false;
             this.tabPageT1_2.TabIndex = 8;
             this.tabPageT1_2.Text = "test";
             this.tabPageT1_2.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_2.TextBounds")));
-            this.tabPageT1_2.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT1_2.TextSize = new System.Drawing.SizeF(36.72395F, 21.44531F);
             this.tabPageT1_2.UseParentTabStripPlacement = false;
             // 
             // contextMenuStripT1_2
@@ -15195,7 +15197,7 @@
             this.buttonM1ResetTest.Name = "buttonM1ResetTest";
             this.buttonM1ResetTest.Size = new System.Drawing.Size(120, 40);
             this.buttonM1ResetTest.TabIndex = 148;
-            this.buttonM1ResetTest.Text = "reset";
+            this.buttonM1ResetTest.Text = "reinicio del ciclo";
             this.buttonM1ResetTest.UseVisualStyleBackColor = false;
             this.buttonM1ResetTest.Click += new System.EventHandler(this.buttonM1ResetTest_Click);
             // 
@@ -15216,9 +15218,9 @@
             this.label29.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.label29.Location = new System.Drawing.Point(10, 60);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(90, 16);
+            this.label29.Size = new System.Drawing.Size(53, 16);
             this.label29.TabIndex = 146;
-            this.label29.Text = "Recipe name";
+            this.label29.Text = "Receta";
             // 
             // numericUpDownM1BootDelayTest
             // 
@@ -15253,9 +15255,9 @@
             this.labelM1Timeout.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.labelM1Timeout.Location = new System.Drawing.Point(10, 355);
             this.labelM1Timeout.Name = "labelM1Timeout";
-            this.labelM1Timeout.Size = new System.Drawing.Size(117, 16);
+            this.labelM1Timeout.Size = new System.Drawing.Size(129, 16);
             this.labelM1Timeout.TabIndex = 135;
-            this.labelM1Timeout.Text = "boot delay (sec)";
+            this.labelM1Timeout.Text = "retraso bota (sec)";
             // 
             // buttonM1StartTest
             // 
@@ -15266,7 +15268,7 @@
             this.buttonM1StartTest.Name = "buttonM1StartTest";
             this.buttonM1StartTest.Size = new System.Drawing.Size(140, 64);
             this.buttonM1StartTest.TabIndex = 128;
-            this.buttonM1StartTest.Text = "start test";
+            this.buttonM1StartTest.Text = "iniciar prueba";
             this.buttonM1StartTest.UseVisualStyleBackColor = false;
             this.buttonM1StartTest.Click += new System.EventHandler(this.buttonM1StartTest_Click);
             // 
@@ -15281,7 +15283,7 @@
             this.buttonM1TestSaveProgram.Name = "buttonM1TestSaveProgram";
             this.buttonM1TestSaveProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM1TestSaveProgram.TabIndex = 127;
-            this.buttonM1TestSaveProgram.Text = "save program";
+            this.buttonM1TestSaveProgram.Text = "guarde el programa";
             this.buttonM1TestSaveProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM1TestSaveProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM1TestSaveProgram.UseVisualStyleBackColor = false;
@@ -15298,7 +15300,7 @@
             this.buttonM1TestLoadProgram.Name = "buttonM1TestLoadProgram";
             this.buttonM1TestLoadProgram.Size = new System.Drawing.Size(140, 53);
             this.buttonM1TestLoadProgram.TabIndex = 126;
-            this.buttonM1TestLoadProgram.Text = "load program";
+            this.buttonM1TestLoadProgram.Text = "cargar el programa";
             this.buttonM1TestLoadProgram.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonM1TestLoadProgram.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonM1TestLoadProgram.UseVisualStyleBackColor = false;
@@ -15356,7 +15358,7 @@
             dataGridViewCellStyle35.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridViewTextBoxColumn13.DefaultCellStyle = dataGridViewCellStyle35;
             this.dataGridViewTextBoxColumn13.Frozen = true;
-            this.dataGridViewTextBoxColumn13.HeaderText = "point id";
+            this.dataGridViewTextBoxColumn13.HeaderText = "punto";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             this.dataGridViewTextBoxColumn13.ReadOnly = true;
             this.dataGridViewTextBoxColumn13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -15366,20 +15368,20 @@
             // dataGridViewTextBoxColumn14
             // 
             this.dataGridViewTextBoxColumn14.Frozen = true;
-            this.dataGridViewTextBoxColumn14.HeaderText = "quote (mm)";
+            this.dataGridViewTextBoxColumn14.HeaderText = "cuota (mm)";
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             this.dataGridViewTextBoxColumn14.Width = 130;
             // 
             // dataGridViewTextBoxColumn15
             // 
             this.dataGridViewTextBoxColumn15.Frozen = true;
-            this.dataGridViewTextBoxColumn15.HeaderText = "speed (%)";
+            this.dataGridViewTextBoxColumn15.HeaderText = "velocidad (%)";
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             this.dataGridViewTextBoxColumn15.Width = 130;
             // 
             // reached
             // 
-            this.reached.HeaderText = "reached";
+            this.reached.HeaderText = "llegado";
             this.reached.Name = "reached";
             this.reached.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.reached.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
@@ -15448,7 +15450,7 @@
             tabPageFormatStyle31.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle31.Padding = new System.Windows.Forms.Padding(17, 5, 17, 5);
             this.tabPageT1_3.FormatStyle = tabPageFormatStyle31;
-            this.tabPageT1_3.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT1_3.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1_3.Name = "tabPageT1_3";
             tabPageColorStyle58.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle58.BackFadeColor = System.Drawing.Color.Transparent;
@@ -15465,12 +15467,12 @@
             tabPageColorStyle59.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle59.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_3.SelectedStyle = tabPageColorStyle59;
-            this.tabPageT1_3.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT1_3.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1_3.StyleFromParent = false;
             this.tabPageT1_3.TabIndex = 6;
             this.tabPageT1_3.Text = "input";
             this.tabPageT1_3.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_3.TextBounds")));
-            this.tabPageT1_3.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT1_3.TextSize = new System.Drawing.SizeF(47.47395F, 21.44531F);
             // 
             // lbLed1040M1
             // 
@@ -16456,7 +16458,7 @@
             tabPageFormatStyle32.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             tabPageFormatStyle32.Padding = new System.Windows.Forms.Padding(10, 5, 10, 5);
             this.tabPageT1_4.FormatStyle = tabPageFormatStyle32;
-            this.tabPageT1_4.Location = new System.Drawing.Point(0, 0);
+            this.tabPageT1_4.Location = new System.Drawing.Point(96, 36);
             this.tabPageT1_4.Name = "tabPageT1_4";
             tabPageColorStyle60.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle60.BackFadeColor = System.Drawing.Color.Transparent;
@@ -16473,12 +16475,12 @@
             tabPageColorStyle61.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             tabPageColorStyle61.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.tabPageT1_4.SelectedStyle = tabPageColorStyle61;
-            this.tabPageT1_4.Size = new System.Drawing.Size(0, 0);
+            this.tabPageT1_4.Size = new System.Drawing.Size(914, 716);
             this.tabPageT1_4.StyleFromParent = false;
             this.tabPageT1_4.TabIndex = 7;
             this.tabPageT1_4.Text = "output";
             this.tabPageT1_4.TextBounds = ((System.Drawing.RectangleF)(resources.GetObject("tabPageT1_4.TextBounds")));
-            this.tabPageT1_4.TextSize = new System.Drawing.SizeF(0F, 0F);
+            this.tabPageT1_4.TextSize = new System.Drawing.SizeF(59.4427F, 21.44531F);
             // 
             // lbLed2040M1
             // 
@@ -17398,6 +17400,9 @@
             controlColorStyle1.BorderColor = System.Drawing.Color.Transparent;
             controlColorStyle1.FillStyle = LidorSystems.IntegralUI.Style.FillStyle.Flat;
             this.tabControlMain.ColorStyle = controlColorStyle1;
+            this.tabControlMain.Controls.Add(this.tabPageT1_2);
+            this.tabControlMain.Controls.Add(this.tabPageT1_1);
+            this.tabControlMain.Controls.Add(this.tabPageT1);
             this.tabControlMain.Controls.Add(this.tabPageT0_1);
             this.tabControlMain.Controls.Add(this.tabPageT7);
             this.tabControlMain.Controls.Add(this.tabPageT6);
@@ -17405,15 +17410,12 @@
             this.tabControlMain.Controls.Add(this.tabPageT4);
             this.tabControlMain.Controls.Add(this.tabPageT3);
             this.tabControlMain.Controls.Add(this.tabPageT2);
-            this.tabControlMain.Controls.Add(this.tabPageT1);
             this.tabControlMain.Controls.Add(this.tabPageT0);
             this.tabControlMain.Controls.Add(this.tabPageT0_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_1);
             this.tabControlMain.Controls.Add(this.tabPageT0_2_2);
             this.tabControlMain.Controls.Add(this.tabPageT0_3);
             this.tabControlMain.Controls.Add(this.tabPage2);
-            this.tabControlMain.Controls.Add(this.tabPageT1_1);
-            this.tabControlMain.Controls.Add(this.tabPageT1_2);
             this.tabControlMain.Controls.Add(this.tabPageT1_3);
             this.tabControlMain.Controls.Add(this.tabPageT1_4);
             this.tabControlMain.Controls.Add(this.tabPage1);
@@ -17466,7 +17468,7 @@
             this.tabPageT6,
             this.tabPageT7});
             this.tabControlMain.ScrollPos = new System.Drawing.Point(0, 0);
-            this.tabControlMain.SelectedPage = this.tabPageT0_1;
+            this.tabControlMain.SelectedPage = this.tabPageT1_2;
             tabPageColorStyle65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             tabPageColorStyle65.BackFadeColor = System.Drawing.Color.Transparent;
             tabPageColorStyle65.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(112)))), ((int)(((byte)(129)))));
@@ -18007,18 +18009,6 @@
         private System.Windows.Forms.Button buttonM3StartQuote;
         private System.Windows.Forms.NumericUpDown numericUpDownM3ManualQuote;
         private System.Windows.Forms.NumericUpDown numericUpDownM3ManualSpeed;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2PointID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMeQuote;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2Speed;
-        private System.Windows.Forms.DataGridViewButtonColumn ColumnM2Register;
-        private System.Windows.Forms.DataGridViewButtonColumn ColumnM2StartQuote;
-        private System.Windows.Forms.DataGridViewButtonColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn2;
-        private System.Windows.Forms.DataGridViewButtonColumn ColumnM3PReached;
         private System.Windows.Forms.Button buttonM3RotationCCW;
         private System.Windows.Forms.ImageList imageListRotation;
         private System.Windows.Forms.Button buttonM3RotationCW;
@@ -18029,12 +18019,6 @@
         private System.Windows.Forms.Button buttonM1TeachSaveProgram;
         private System.Windows.Forms.Button buttonM1TeachLoadProgram;
         private System.Windows.Forms.DataGridView dataGridViewM1TeachPoints;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn3;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn4;
-        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn5;
         private System.Windows.Forms.Label labelM1JogSpeed;
         private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM1JogUp;
         private LBSoft.IndustrialCtrls.Buttons.LBButton lbButtonM1JogDown;
@@ -18404,10 +18388,6 @@
         private System.Windows.Forms.CheckBox checkBoxM1CuttingMotorOn;
         private System.Windows.Forms.Button buttonM1CutSlideForward;
         private System.Windows.Forms.Button buttonM1CutSlideBackward;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewButtonColumn reached;
         private System.Windows.Forms.NumericUpDown numericUpDownM1TimerBootTeach;
         private System.Windows.Forms.Label labelM1TeachBootDelay;
         private System.Windows.Forms.Button buttonM3NormHoriFwd;
@@ -18437,14 +18417,6 @@
         private System.Windows.Forms.Label labelM5ParamRecipe;
         private System.Windows.Forms.Button buttonMRecipeDeleteAll;
         private System.Windows.Forms.Button buttonMRecipeDelete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reachedM2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn reachedM3;
         private System.Windows.Forms.ComboBox comboBoxM2TeachRecipeName;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.ComboBox comboBoxM2TestRecipeName;
@@ -18591,5 +18563,35 @@
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2PointID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnMeQuote;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnM2Speed;
+        private System.Windows.Forms.DataGridViewButtonColumn ColumnM2Register;
+        private System.Windows.Forms.DataGridViewButtonColumn ColumnM2StartQuote;
+        private System.Windows.Forms.DataGridViewButtonColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reachedM2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn1;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn2;
+        private System.Windows.Forms.DataGridViewButtonColumn ColumnM3PReached;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn reachedM3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn3;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn4;
+        private System.Windows.Forms.DataGridViewButtonColumn dataGridViewButtonColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewButtonColumn reached;
     }
 }

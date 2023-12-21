@@ -44,12 +44,12 @@ namespace GUI
                 else
                 {
                     checkBoxM1Inclusion.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "refiladora sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void checkBoxM1SharpeningInclusion_CheckStateChanged(object sender, EventArgs e)
@@ -71,12 +71,12 @@ namespace GUI
                 else
                 {
                     checkBoxM1SharpeningInclusion.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "refiladora sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void numericUpDownM1SharpeningTime_ValueChanged(object sender, EventArgs e)
@@ -118,12 +118,12 @@ namespace GUI
                 else
                 {
                     checkBoxM2Inclusion.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintInt, "padprint int offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintInt, "padprint int sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void checkBoxM3Inclusion_CheckStateChanged(object sender, EventArgs e)
@@ -145,12 +145,12 @@ namespace GUI
                 else
                 {
                     checkBoxM3Inclusion.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintExt, "padprint ext offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintExt, "padprint ext sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void checkBoxM4Inclusion_CheckStateChanged(object sender, EventArgs e)
@@ -172,12 +172,12 @@ namespace GUI
                 else
                 {
                     checkBoxM4Inclusion.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padLaser, "padlaser offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padLaser, "padlaser sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void checkBoxM5Inclusion_CheckStateChanged(object sender, EventArgs e)
@@ -199,12 +199,12 @@ namespace GUI
                 else
                 {
                     checkBoxM5Inclusion.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.manipulator, "manipulator offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.manipulator, "manipulador sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void checkBoxM6Inclusion_CheckStateChanged(object sender, EventArgs e)
@@ -226,12 +226,12 @@ namespace GUI
                 else
                 {
                     checkBoxM6Inclusion.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.oven, "oven offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.oven, "horno sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private void checkBoxM1Param1_CheckStateChanged(object sender, EventArgs e)
@@ -329,12 +329,12 @@ namespace GUI
                 else
                 {
                     checkBoxM1Start.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "refiladora sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void checkBoxM2Start_CheckStateChanged(object sender, EventArgs e)
@@ -354,12 +354,12 @@ namespace GUI
                 else
                 {
                     checkBoxM2Start.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintInt, "padprint int offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintInt, "padprint int sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void checkBoxM3Start_CheckStateChanged(object sender, EventArgs e)
@@ -379,12 +379,12 @@ namespace GUI
                 else
                 {
                     checkBoxM3Start.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintExt, "padprint ext offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintExt, "padprint ext sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void checkBoxM4Start_CheckStateChanged(object sender, EventArgs e)
@@ -404,12 +404,12 @@ namespace GUI
                 else
                 {
                     checkBoxM4Start.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padLaser, "padlaser offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padLaser, "padlaser sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void checkBoxM5Start_CheckStateChanged(object sender, EventArgs e)
@@ -429,12 +429,12 @@ namespace GUI
                 else
                 {
                     checkBoxM5Start.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.manipulator, "manipulator offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.manipulator, "manipulador sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void checkBoxM6Start_CheckStateChanged(object sender, EventArgs e)
@@ -454,12 +454,12 @@ namespace GUI
                 else
                 {
                     checkBoxM6Start.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.oven, "oven offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.oven, "oven sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void checkBoxM1Pause_CheckStateChanged(object sender, EventArgs e)
@@ -479,12 +479,12 @@ namespace GUI
                 else
                 {
                     checkBoxM1Pause.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "refiladora sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
 
         }
@@ -505,12 +505,12 @@ namespace GUI
                 else
                 {
                     checkBoxM2Pause.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintInt, "padprint int offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintInt, "padprint int sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void checkBoxM4Pause_CheckStateChanged(object sender, EventArgs e)
@@ -530,12 +530,12 @@ namespace GUI
                 else
                 {
                     checkBoxM4Pause.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padLaser, "padlaser offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padLaser, "padlaser sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void checkBoxM3Pause_CheckStateChanged(object sender, EventArgs e)
@@ -555,12 +555,12 @@ namespace GUI
                 else
                 {
                     checkBoxM3Pause.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintExt, "padprint ext offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintExt, "padprint ext sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void checkBoxM5Pause_CheckStateChanged(object sender, EventArgs e)
@@ -580,12 +580,12 @@ namespace GUI
                 else
                 {
                     checkBoxM5Pause.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.manipulator, "manipulator offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.manipulator, "manipulador sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void checkBoxM6Pause_CheckStateChanged(object sender, EventArgs e)
@@ -605,12 +605,12 @@ namespace GUI
                 else
                 {
                     checkBoxM6Pause.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.oven, "oven offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.oven, "oven sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void buttonM1Reset_Click(object sender, EventArgs e)
@@ -622,12 +622,12 @@ namespace GUI
 
                 if ((sendResult == null) || (sendResult.OpcResult == false))
                 {
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "trimmer offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "refiladora sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void buttonM2Reset_Click(object sender, EventArgs e)
@@ -639,12 +639,12 @@ namespace GUI
 
                 if ((sendResult == null) || (sendResult.OpcResult == false))
                 {
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintInt, "padprint int offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintInt, "padprint int sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
         private async void buttonM4Reset_Click(object sender, EventArgs e)
@@ -656,12 +656,12 @@ namespace GUI
 
                 if ((sendResult == null) || (sendResult.OpcResult == false))
                 {
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padLaser, "padlaser offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padLaser, "padlaser sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
 
@@ -674,12 +674,12 @@ namespace GUI
 
                 if ((sendResult == null) || (sendResult.OpcResult == false))
                 {
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.oven, "oven offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.oven, "horno sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
 
@@ -692,12 +692,12 @@ namespace GUI
 
                 if ((sendResult == null) || (sendResult.OpcResult == false))
                 {
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.manipulator, "manipulator offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.manipulator, "manipulador sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
 
@@ -710,12 +710,12 @@ namespace GUI
 
                 if ((sendResult == null) || (sendResult.OpcResult == false))
                 {
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintExt, "padprint ext offline");
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.padprintExt, "padprint ext sin conexión");
                 }
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
 
@@ -772,7 +772,7 @@ namespace GUI
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
 
@@ -823,7 +823,7 @@ namespace GUI
             }
             else
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "system offline");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
 
