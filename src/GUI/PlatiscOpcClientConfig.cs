@@ -61,8 +61,7 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM1Reset", $"ns=2;s=Tags.Rifilatrice/pc_reset_generale", typeof(bool)));
             //pause
             ClientDataConfig.Add(new OpcObjectData("pcM1Pause", $"ns=2;s=Tags.Rifilatrice/pc_pausa", typeof(bool)));
-            ClientDataConfig.Add(new OpcObjectData("pcM1StartStop", $"ns=2;s=Tags.Rifilatrice/pc_start_stop", typeof(bool)));
-            ClientDataConfig.Add(new OpcObjectData("pcM1Status", $"ns=2;s=Tags.Rifilatrice/pc_stato_macchina", typeof(short)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1StartStop", $"ns=2;s=Tags.Rifilatrice/pc_start_stop", typeof(bool)));            
             ClientDataConfig.Add(new OpcObjectData("pcM1TestQuote", $"ns=2;s=Tags.Rifilatrice/pc_quota_longitudinale_in_test", typeof(float[])));
             ClientDataConfig.Add(new OpcObjectData("pcM1TestSpeed", $"ns=2;s=Tags.Rifilatrice/pc_velocita_in_test", typeof(float[])));
             ClientDataConfig.Add(new OpcObjectData("pcM1TeachQuote", $"ns=2;s=Tags.Rifilatrice/pc_quota_longitudinale_in_teaching", typeof(float[])));
@@ -140,7 +139,7 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM2PadPrintIntState", $"ns=2;s=Tags.Pad_print_interna/pc_fase_ciclo_pad_print_interna", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM2ExitBeltState", $"ns=2;s=Tags.Pad_print_interna/pc_fase_ciclo_nastro_uscita", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM2WorkingBeltState", $"ns=2;s=Tags.Pad_print_interna/pc_fase_ciclo_nastro_lavoro", typeof(short)));
-
+            ClientDataConfig.Add(new OpcObjectData("pcM2AutoTimer", $"ns=2;s=Tags.Pad_print_interna/pc_timer_stop_stivale", typeof(float)));
             //digital input
             ClientDataConfig.Add(new OpcObjectData("pcM2DI", $"ns=2;s=Tags.Pad_print_interna/pc_input", typeof(bool[])));
             //digital output
@@ -155,6 +154,8 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM2ResetCycle", $"ns=2;s=Tags.Pad_print_interna/pc_reset_numero_cicli", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2RestartPlc", $"ns=2;s=Tags.Pad_print_interna/pc_riavvio_plc", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM2CycleTime", $"ns=2;s=Tags.Pad_print_interna/pc_tempo_ciclo", typeof(float)));
+            ClientDataConfig.Add(new OpcObjectData("pcM2AutoTimer", $"ns=2;s=Tags.Pad_print_interna/pc_timer_stop_stivale", typeof(float)));
+            ClientDataConfig.Add(new OpcObjectData("pcM2AutoTimerExitBelt", $"ns=2;s=Tags.Pad_print_interna/pc_timer_stop_nastro_uscita", typeof(float)));
             #endregion
 
             #region(* M3 OPCUA variables *)
@@ -231,6 +232,8 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM3StationRG", $"ns=2;s=Tags.Pad_print_esterna/pc_numero_stazione", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM3CycleTimeRG", $"ns=2;s=Tags.Pad_print_esterna/pc_tempo_ciclo_destro", typeof(float)));
             ClientDataConfig.Add(new OpcObjectData("pcM3CycleTimeLF", $"ns=2;s=Tags.Pad_print_esterna/pc_tempo_ciclo_sinistro", typeof(float)));
+            ClientDataConfig.Add(new OpcObjectData("pcM3AutoTimer", $"ns=2;s=Tags.Pad_print_esterna/pc_timer_stop_stivale", typeof(float)));
+            ClientDataConfig.Add(new OpcObjectData("pcM3AutoTimerExitBelt", $"ns=2;s=Tags.Pad_print_interna/pc_timer_stop_nastro_uscita", typeof(float)));
             #endregion
 
             #region(* M4 OPCUA variables *)
@@ -264,6 +267,12 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM4ResetCycle", $"ns=2;s=Tags.Rifilatrice/pc_pad_laser_reset_numero_cicli", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM4RestartPlc", $"ns=2;s=Tags.Rifilatrice/pc_pad_laser_riavvio_plc", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM4CycleTime", $"ns=2;s=Tags.Rifilatrice/pc_pad_laser_tempo_ciclo", typeof(float)));
+
+            //digital input
+            ClientDataConfig.Add(new OpcObjectData("pcM4DI", $"ns=2;s=Tags.Rifilatrice/pc_pad_laser_input", typeof(bool[])));
+            //digital output
+            ClientDataConfig.Add(new OpcObjectData("pcM4DO", $"ns=2;s=Tags.Rifilatrice/pc_pad_laser_output", typeof(bool[])));
+
             #endregion
 
             #region  (* M5 OPCUA variables *)
@@ -309,6 +318,10 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM5RestartPlc", $"ns=2;s=Tags.Manipolatore/pc_riavvio_plc", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM5CycleTime1", $"ns=2;s=Tags.Manipolatore/pc_tempo_ciclo_primo", typeof(float)));
             ClientDataConfig.Add(new OpcObjectData("pcM5CycleTime2", $"ns=2;s=Tags.Manipolatore/pc_tempo_ciclo_secondo", typeof(float)));
+
+            ClientDataConfig.Add(new OpcObjectData("pcM5TimeoutAlarms", $"ns=2;s=Tags.Manipolatore/pc_allarmi_timeout", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pcM5GeneralAlarms", $"ns=2;s=Tags.Manipolatore/pc_allarmi_generali", typeof(short[])));
+
             #endregion
 
             #region(* M6 OPCUA variables invalid*)
@@ -329,6 +342,14 @@ namespace GUI
             ClientDataConfig.Add(new OpcObjectData("pcM6RGLampsOFF", $"ns=2;s=Tags.Pad_print_esterna/pc_spegni_lampade_forno_DX", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM6StartStopSuction", $"ns=2;s=Tags.Pad_print_esterna/pc_start_stop_aspirazioni_forno", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM6ONPercentage", $"ns=2;s=Tags.Pad_print_esterna/pc_percentuale_accensione_lampade", typeof(short)));
+            #endregion
+
+            #region(* custom data *)
+            ClientDataConfig.Add(new OpcObjectData("pcCustomData1", $"ns=2;s=Tags.pc_custom_data_1", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pcCustomData2", $"ns=2;s=Tags.pc_custom_data_2", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pcCustomData3", $"ns=2;s=Tags.pc_custom_data_3", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pcCustomData4", $"ns=2;s=Tags.pc_custom_data_4", typeof(short[])));
+            ClientDataConfig.Add(new OpcObjectData("pcCustomData5", $"ns=2;s=Tags.pc_custom_data_5", typeof(short[])));
             #endregion
             return this;
         }

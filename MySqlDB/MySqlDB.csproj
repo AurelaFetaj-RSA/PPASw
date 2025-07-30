@@ -62,6 +62,10 @@
       <Project>{aa7764f7-d3a9-42fd-9eef-0ab1424b14e8}</Project>
       <Name>RSACommon</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ConfigurationTool\RSAInterface\RSAInterface\RSAInterface.csproj">
+      <Project>{7c1a9073-c280-4670-bc54-258ebce48bf0}</Project>
+      <Name>RSAInterface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PPAUtils\PPAUtils.csproj">
       <Project>{679C6923-E8B9-4CFF-869E-FFF1C6022CCB}</Project>
       <Name>PPAUtils</Name>

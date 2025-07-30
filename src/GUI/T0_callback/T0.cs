@@ -19,12 +19,6 @@ namespace GUI
 {
     public partial class FormApp : Form
     {
-
-        #region( * program change in automatic *)      
-     
-
-        #endregion
-
         private async void checkBoxM1Inclusion_CheckStateChanged(object sender, EventArgs e)
         {
             if (ccService.ClientIsConnected)
@@ -52,55 +46,10 @@ namespace GUI
                 AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
             }
         }
-        private async void checkBoxM1SharpeningInclusion_CheckStateChanged(object sender, EventArgs e)
-        {
-            if (ccService.ClientIsConnected)
-            {
-                string keyToSend = null;
-                bool chkValue = false;
-
-                keyToSend = "pcM1SharpeningInclusion";
-                chkValue = (checkBoxM1SharpeningInclusion.CheckState == CheckState.Checked) ? true : false;
-
-                var sendResult = await ccService.Send(keyToSend, chkValue);
-
-                if (sendResult.OpcResult)
-                {
-                    checkBoxM1SharpeningInclusion.ImageIndex = (chkValue) ? 0 : 1;
-                }
-                else
-                {
-                    checkBoxM1SharpeningInclusion.ImageIndex = 2;
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.trimmer, "refiladora sin conexión");
-                }
-            }
-            else
-            {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.critical, Machine.line, "sistema sin conexión");
-            }
-        }
-        private async void numericUpDownM1SharpeningTime_ValueChanged(object sender, EventArgs e)
-        {
-            if (ccService.ClientIsConnected)
-            {
-                string keyToSend = "pcM1SharpeningCycleNumber";
-
-                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1SharpeningTime.Value.ToString()));
-
-                if (sendResult.OpcResult)
-                {
-
-                }
-                else
-                {
-
-                }
-            }
-
-            
-        }
+   
         private async void checkBoxM2Inclusion_CheckStateChanged(object sender, EventArgs e)
         {
+            if (ccService == null) return;
             if (ccService.ClientIsConnected)
             {
                 string keyToSend = null;
@@ -128,6 +77,7 @@ namespace GUI
         }
         private async void checkBoxM3Inclusion_CheckStateChanged(object sender, EventArgs e)
         {
+            if (M3InLine == "0") return;
             if (ccService.ClientIsConnected)
             {
                 string keyToSend = null;
@@ -155,6 +105,7 @@ namespace GUI
         }
         private async void checkBoxM4Inclusion_CheckStateChanged(object sender, EventArgs e)
         {
+            if (ccService == null) return;
             if (ccService.ClientIsConnected)
             {
                 string keyToSend = null;
@@ -241,7 +192,7 @@ namespace GUI
             chkValue = (checkBoxM1Param1.CheckState == CheckState.Checked) ? true : false;
 
             checkBoxM1Param1.ImageIndex = (chkValue) ? 0 : 1;
-            labelM1Param1.Text = (chkValue) ? "on" : "off";
+            checkBoxM1Param1.Text = (chkValue) ? "refiladora on" : "refiladora off";
         }
         private void checkBoxM2Param1_CheckStateChanged(object sender, EventArgs e)
         {
@@ -250,7 +201,7 @@ namespace GUI
             chkValue = (checkBoxM2Param1.CheckState == CheckState.Checked) ? true : false;
 
             checkBoxM2Param1.ImageIndex = (chkValue) ? 0 : 1;
-            labelM2Param1.Text = (chkValue) ? "on" : "off";
+            checkBoxM2Param1.Text = (chkValue) ? "tamp. int. on" : "tamp. int. off";
         }
         private void checkBoxM3Param1_CheckStateChanged(object sender, EventArgs e)
         {
@@ -259,7 +210,7 @@ namespace GUI
             chkValue = (checkBoxM3Param1.CheckState == CheckState.Checked) ? true : false;
 
             checkBoxM3Param1.ImageIndex = (chkValue) ? 0 : 1;
-            labelM3Param1.Text = (chkValue) ? "on" : "off";
+            checkBoxM3Param1.Text = (chkValue) ? "tamp. ext. on" : "tamp. ext. off";
         }
         private void checkBoxM4Param1_CheckStateChanged(object sender, EventArgs e)
         {
@@ -268,7 +219,7 @@ namespace GUI
             chkValue = (checkBoxM4Param1.CheckState == CheckState.Checked) ? true : false;
 
             checkBoxM4Param1.ImageIndex = (chkValue) ? 0 : 1;
-            labelM4Param1.Text = (chkValue) ? "on" : "off";
+            checkBoxM4Param1.Text = (chkValue) ? "laser on" : "laser off";
         }
         private void checkBoxM5Param1_CheckStateChanged(object sender, EventArgs e)
         {
@@ -277,7 +228,7 @@ namespace GUI
             chkValue = (checkBoxM5Param1.CheckState == CheckState.Checked) ? true : false;
 
             checkBoxM5Param1.ImageIndex = (chkValue) ? 0 : 1;
-            labelM5Param1.Text = (chkValue) ? "on" : "off";
+            checkBoxM5Param1.Text = (chkValue) ? "horno on" : "horno off";
         }
         private void checkBoxM6Param1_CheckStateChanged(object sender, EventArgs e)
         {
@@ -286,7 +237,7 @@ namespace GUI
             chkValue = (checkBoxM6Param1.CheckState == CheckState.Checked) ? true : false;
 
             checkBoxM6Param1.ImageIndex = (chkValue) ? 0 : 1;
-            labelM6Param1.Text = (chkValue) ? "on" : "off";
+            checkBoxM6Param1.Text = (chkValue) ? "manip. on" : "manip. off";
         }
         private void tabPageT0_3_Paint(object sender, PaintEventArgs e)
         {
@@ -295,7 +246,7 @@ namespace GUI
 
             g = e.Graphics;
 
-            if (ccService.ClientIsConnected) myPen = new Pen(Color.FromArgb(107, 227, 162));
+            if (ccService != null) if (ccService.ClientIsConnected) myPen = new Pen(Color.FromArgb(107, 227, 162));
             
             myPen.Width = 10;
 
@@ -364,6 +315,7 @@ namespace GUI
         }
         private async void checkBoxM3Start_CheckStateChanged(object sender, EventArgs e)
         {
+            if (M3InLine == "0") return;
             if (ccService.ClientIsConnected)
             {
                 bool state = false;
@@ -540,6 +492,7 @@ namespace GUI
         }
         private async void checkBoxM3Pause_CheckStateChanged(object sender, EventArgs e)
         {
+            if (M3InLine == "0") return;
             if (ccService.ClientIsConnected)
             {
                 bool state = false;
@@ -703,6 +656,7 @@ namespace GUI
 
         private async void buttonM3Reset_Click(object sender, EventArgs e)
         {
+            if (M3InLine == "0") return;
             if (ccService.ClientIsConnected)
             {
                 string keyValue = "pcM3Reset";

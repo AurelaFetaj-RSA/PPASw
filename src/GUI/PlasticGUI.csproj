@@ -133,12 +133,6 @@
     <Compile Include="FormApp.Designer.cs">
       <DependentUpon>FormApp.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="MsgBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,14 +179,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormApp.resx">
       <DependentUpon>FormApp.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.aa.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MsgBox.resx">
@@ -339,6 +325,10 @@
     <ProjectReference Include="..\..\ConfigurationTool\RSAFile\RSAFile\RSAFile.csproj">
       <Project>{1bb88a69-db2f-4798-8719-ce5f2b8f8bba}</Project>
       <Name>RSAFile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ConfigurationTool\RSAInterface\RSAInterface\RSAInterface.csproj">
+      <Project>{7c1a9073-c280-4670-bc54-258ebce48bf0}</Project>
+      <Name>RSAInterface</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\ConfigurationTool\RSAPoints\RSAPoints\RSAPoints.csproj">
       <Project>{ba650f53-8dc8-43af-be28-1068f12bf005}</Project>

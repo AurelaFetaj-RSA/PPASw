@@ -78,7 +78,7 @@ namespace GUI
         {
             while (true)
             {
-                await UpdateOPCUAStatus();
+               await UpdateOPCUAStatus();
                 await Task.Delay(interval, cancellationToken.Token);
             }
         }
@@ -160,28 +160,95 @@ namespace GUI
             //}
         }
 
+        private string GetShiftString()
+        {
+            TimeSpan time1 = new TimeSpan(06, 0, 0);
+            TimeSpan time2 = new TimeSpan(14, 0, 0);
+            TimeSpan time3 = new TimeSpan(22, 0, 0);
+            TimeSpan time4 = new TimeSpan(00, 0, 0);
+
+            TimeSpan now = DateTime.Now.TimeOfDay;
+
+            if ((now > time4) && (now < time1))
+            {
+                return "V";
+            }
+
+            if ((now > time3) && (now < time4))
+            {
+                return "V";
+            }
+
+            if ((now > time1) && (now < time2))
+            {
+                return "M";
+            }
+
+            if ((now > time2) && (now < time3))
+            {
+                return "T";
+            }
+
+            return "";
+        }
+
+        private bool IsShiftChanged()
+        {
+            TimeSpan time1 = new TimeSpan(06, 0, 0);
+            TimeSpan time2 = new TimeSpan(06, 2, 0);
+
+            TimeSpan time3 = new TimeSpan(22, 0, 0);
+            TimeSpan time4 = new TimeSpan(22, 2, 0);
+
+            TimeSpan time5 = new TimeSpan(14, 0, 0);
+            TimeSpan time6 = new TimeSpan(14, 2, 0);
+
+            TimeSpan time7 = new TimeSpan(00, 0, 0);
+            TimeSpan time8 = new TimeSpan(00, 2, 0);
+
+            TimeSpan now = DateTime.Now.TimeOfDay;
+
+            if ((now > time1) && (now < time2))
+            {
+                return true;
+            }
+
+            if ((now > time3) && (now < time4))
+            {
+                return true;
+            }
+
+            if ((now > time5) && (now < time6))
+            {
+                return true;
+            }
+
+            if ((now > time7) && (now < time8))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         public async Task UpdateOPCUAStatus()
         {
-            
+            if (ccService == null) return;
 
-
-                try
+            try
             {
                 if (ccService.ClientIsConnected)
                 {
-                   
+                 //   string shift = GetShiftString();
+
+                    //if (IsShiftChanged())
+                    //{
+                        
+                    //    UpdateRecipeToM4(comboBoxMRecipeName.Text, shift);
+                    //}
+
                     try
-                    {
-                        if (!restartApp)
-                        {
-                            RestartRequestFromM1();
-                            RestartRequestFromM2();
-                            RestartRequestFromM3();
-                            RestartRequestFromM4();
-                            RestartRequestFromM5();
-                            RestartRequestFromM6();
-                            restartApp = true;
-                        }
+                    {                        
                         #region (* machine/line status *)
                         /*machine status
                          * = 0 -> emergency
@@ -202,24 +269,32 @@ namespace GUI
 
                         var readResult = await ccService.Read(keys);
 
-                        UpdateOPCUAMStatus(readResult["pcM1Status"], buttonM1Status, labelM1Status);
+                        UpdateOPCUAMStatus(readResult["pcM1Status"], M1AutoDictionary);
                         ManageOPCUAMBtnStatus(readResult["pcM1Status"], checkBoxM1Start);
 
-                        UpdateOPCUAMStatus(readResult["pcM2Status"], buttonM2Status, labelM2Status);
+                        UpdateOPCUAMStatus(readResult["pcM2Status"], M2AutoDictionary);
                         ManageOPCUAMBtnStatus(readResult["pcM2Status"], checkBoxM2Start);
 
-                        UpdateOPCUAMStatus(readResult["pcM3Status"], buttonM3Status, labelM3Status);
-                        ManageOPCUAMBtnStatus(readResult["pcM3Status"], checkBoxM3Start);
-
-                        UpdateOPCUAMStatus(readResult["pcM4Status"], buttonM4Status, labelM4Status);
+                        if (M3InLine == "1")
+                        {
+                            UpdateOPCUAMStatus(readResult["pcM3Status"], M3AutoDictionary);
+                            ManageOPCUAMBtnStatus(readResult["pcM3Status"], checkBoxM3Start);
+                        }
+                        UpdateOPCUAMStatus(readResult["pcM4Status"], M4AutoDictionary);
                         ManageOPCUAMBtnStatus(readResult["pcM4Status"], checkBoxM4Start);
 
-                        UpdateOPCUAMStatus(readResult["pcM5Status"], buttonM5Status, labelM5Status);
+                        UpdateOPCUAMStatus(readResult["pcM5Status"], M5AutoDictionary);
                         ManageOPCUAMBtnStatus(readResult["pcM5Status"], checkBoxM5Start);
 
-                        UpdateOPCUAMStatus(readResult["pcM6Status"], buttonM6Status, labelM6Status);
+                        UpdateOPCUAMStatus(readResult["pcM6Status"], M6AutoDictionary);
                         ManageOPCUAMBtnStatus(readResult["pcM6Status"], checkBoxM6Start);
-
+                        groupBoxM1.Invalidate();
+                        groupBoxM2.Invalidate();
+                        groupBoxM3.Invalidate();
+                        groupBoxM4.Invalidate();
+                        groupBoxM5.Invalidate();
+                        groupBoxM6.Invalidate();
+                        //tabPageT1_3.Invalidate();
                         //ManageStartStatus(readResult["pcM1Status"], readResult["pcM2Status"], readResult["pcM3Status"],
                         //readResult["pcM4Status"], readResult["pcM5Status"], readResult["pcM6Status"]);
                         #endregion
@@ -239,7 +314,7 @@ namespace GUI
 
                         ManageOPCUAMBtnPause(readResult["pcM1Pause"], checkBoxM1Pause);
                         ManageOPCUAMBtnPause(readResult["pcM2Pause"], checkBoxM2Pause);
-                        ManageOPCUAMBtnPause(readResult["pcM3Pause"], checkBoxM3Pause);
+                        if (M3InLine == "1") ManageOPCUAMBtnPause(readResult["pcM3Pause"], checkBoxM3Pause);
                         ManageOPCUAMBtnPause(readResult["pcM4Pause"], checkBoxM4Pause);
                         ManageOPCUAMBtnPause(readResult["pcM5Pause"], checkBoxM5Pause);
                         ManageOPCUAMBtnPause(readResult["pcM6Pause"], checkBoxM6Pause);
@@ -263,7 +338,8 @@ namespace GUI
                         readResult = await ccService.Read(keys);
                         UpdateOPCUAMKeepAlive(readResult["pcM1KeepAliveW"], lbLedM1PCKeepAlive);
                         UpdateOPCUAMKeepAlive(readResult["pcM2KeepAliveW"], lbLedM2PCKeepAlive);
-                        UpdateOPCUAMKeepAlive(readResult["pcM3KeepAliveW"], lbLedM3PCKeepAlive);
+                        if (M3InLine == "1") UpdateOPCUAMKeepAlive(readResult["pcM3KeepAliveW"], lbLedM3PCKeepAlive);
+                        else UpdateOPCUAMKeepAlive(null, lbLedM3PCKeepAlive);
                         UpdateOPCUAMKeepAlive(readResult["pcM4KeepAliveW"], lbLedM4PCKeepAlive);
                         UpdateOPCUAMKeepAlive(readResult["pcM5KeepAliveW"], lbLedM5PCKeepAlive);
 
@@ -281,12 +357,13 @@ namespace GUI
                         var readResultPLC = await ccService.Read(keys);
                         UpdateOPCUAMNodeConnection(readResultPLC["pcM1KeepAliveR"], lastLifeBit[0], ref LifeBitTimeout[0], ref LifeBitCounter[0], pictureBoxM1PLCNode, labelM1Node);
                         UpdateOPCUAMNodeConnection(readResultPLC["pcM2KeepAliveR"], lastLifeBit[1], ref LifeBitTimeout[1], ref LifeBitCounter[1], pictureBoxM2PLCNode, labelM2Node);
-                        UpdateOPCUAMNodeConnection(readResultPLC["pcM3KeepAliveR"], lastLifeBit[2], ref LifeBitTimeout[2], ref LifeBitCounter[2], pictureBoxM3PLCNode, labelM3Node);
+                        if (M3InLine == "1") UpdateOPCUAMNodeConnection(readResultPLC["pcM3KeepAliveR"], lastLifeBit[2], ref LifeBitTimeout[2], ref LifeBitCounter[2], pictureBoxM3PLCNode, labelM3Node);
+
                         UpdateOPCUAMNodeConnection(readResultPLC["pcM4KeepAliveR"], lastLifeBit[3], ref LifeBitTimeout[3], ref LifeBitCounter[3], pictureBoxM4PLCNode, labelM4Node);
                         UpdateOPCUAMNodeConnection(readResultPLC["pcM5KeepAliveR"], lastLifeBit[4], ref LifeBitTimeout[4], ref LifeBitCounter[4], pictureBoxM5PLCNode, labelM5Node);
                         ManageLastLifeBit(readResultPLC["pcM1KeepAliveR"], ref lastLifeBit[0]);
                         ManageLastLifeBit(readResultPLC["pcM2KeepAliveR"], ref lastLifeBit[1]);
-                        ManageLastLifeBit(readResultPLC["pcM3KeepAliveR"], ref lastLifeBit[2]);
+                        if (M3InLine == "1") ManageLastLifeBit(readResultPLC["pcM3KeepAliveR"], ref lastLifeBit[2]);
                         ManageLastLifeBit(readResultPLC["pcM4KeepAliveR"], ref lastLifeBit[3]);
                         ManageLastLifeBit(readResultPLC["pcM5KeepAliveR"], ref lastLifeBit[4]);
                         UpdateOPCUAMNodeConnection(readResultPLC["pcM1KeepAliveR"], lastLifeBit[0], ref LifeBitTimeout[0], ref LifeBitCounter[0], pictureBoxM1PLCNode, labelM1Node);
@@ -309,8 +386,8 @@ namespace GUI
                         readResult = await ccService.Read(keys);
                         UpdateOPCUAMHomingDone(readResult["pcM1HomingDone"], buttonM1HomingDone, labelM1HomingDone);
                         UpdateOPCUAMHomingDone(readResult["pcM2HomingDone"], buttonM2HomingDone, labelM2HomingDone);
-                        UpdateOPCUAMHomingDone(readResult["pcM3HomingDone"], buttonM3HomingDone, labelM3HomingDone);
-                        UpdateOPCUAMHomingDone(readResult["pcM4HomingDone"], buttonM4HomingDone, labelM4HomingDone);
+                        if (M3InLine == "1") UpdateOPCUAMHomingDone(readResult["pcM3HomingDone"], buttonM3HomingDone, labelM3HomingDone);
+                        //UpdateOPCUAMHomingDone(readResult["pcM4HomingDone"], buttonM4HomingDone, labelM4HomingDone);
                         //UpdateOPCUAMHomingDone(readResult["pcM5HomingDone"], buttonM5HomingDone, labelM5HomingDone);
                         //UpdateOPCUAMHomingDone(readResult["pcM6HomingDone"], buttonM6HomingDone, labelM6HomingDone);
                         #endregion
@@ -329,8 +406,8 @@ namespace GUI
                         readResult = await ccService.Read(keys);
                         WriteOnFloatLabelAsync(readResult["pcM1CurrentAxisQuote"], labelM1TeachAxisQuoteValue);
                         WriteOnFloatLabelAsync(readResult["pcM2CurrentAxisQuote"], labelM2TeachAxisQuoteValue);
-                        WriteOnFloatLabelAsync(readResult["pcM3CurrentAxisQuote"], labelM3TeachAxisQuoteValue);
-                        WriteOnFloatLabelAsync(readResult["pcM4CurrentAxisQuote"], labelM4TeachAxisQuoteValue);
+                        if (M3InLine == "1") WriteOnFloatLabelAsync(readResult["pcM3CurrentAxisQuote"], labelM3TeachAxisQuoteValue);
+                        //WriteOnFloatLabelAsync(readResult["pcM4CurrentAxisQuote"], labelM4TeachAxisQuoteValue);
                         #endregion
 
                         #region(* machine point reached - teach*)
@@ -353,9 +430,9 @@ namespace GUI
                         //force repaint
                         dataGridViewM2TeachPoints.Invalidate(false);
 
-                        WriteAsyncDataGridViewPointReached(readResult["pcM3PointReached"], dataGridViewM3TeachPoints, 5);
+                        if (M3InLine == "1") WriteAsyncDataGridViewPointReached(readResult["pcM3PointReached"], dataGridViewM3TeachPoints, 5);
                         //force repaint
-                        dataGridViewM3TeachPoints.Invalidate(false);
+                        if (M3InLine == "1") dataGridViewM3TeachPoints.Invalidate(false);
 
                         WriteAsyncDataGridViewPointReached(readResult["pcM1PointReached"], dataGridViewM1TestPoints, 3);
                         //force repaint
@@ -365,9 +442,9 @@ namespace GUI
                         //force repaint
                         dataGridViewM2TestPoints.Invalidate(false);
 
-                        WriteAsyncDataGridViewPointReached(readResult["pcM3PointReached"], dataGridViewM3TestPoints, 3);
+                        if (M3InLine == "1") WriteAsyncDataGridViewPointReached(readResult["pcM3PointReached"], dataGridViewM3TestPoints, 3);
                         //force repaint
-                        dataGridViewM3TestPoints.Invalidate(false);
+                        if (M3InLine == "1") dataGridViewM3TestPoints.Invalidate(false);
                         #endregion
 
                         #region(+ I/O *)
@@ -392,15 +469,28 @@ namespace GUI
                         UpdateOPCUAM2DI(readResult["pcM2DI"]);
                         UpdateOPCUAM2DO(readResult["pcM2DO"]);
 
-                        keys = new List<string>()
+                        if (M3InLine == "1")
+                        {
+                            keys = new List<string>()
                     {
                         "pcM3DI",
                         "pcM3DO"
                     };
 
+                            readResult = await ccService.Read(keys);
+                            UpdateOPCUAM3DI(readResult["pcM3DI"]);
+                            UpdateOPCUAM3DO(readResult["pcM3DO"]);
+                        }
+
+                        keys = new List<string>()
+                    {
+                        "pcM4DI",
+                        "pcM4DO"
+                    };
+
                         readResult = await ccService.Read(keys);
-                        UpdateOPCUAM3DI(readResult["pcM3DI"]);
-                        UpdateOPCUAM3DO(readResult["pcM3DO"]);
+                        UpdateOPCUAM4DI(readResult["pcM4DI"]);
+                        UpdateOPCUAM4DO(readResult["pcM4DO"]);
 
                         keys = new List<string>()
                     {
@@ -443,16 +533,18 @@ namespace GUI
                         UpdateOPCUAM4TimeoutAlarms(readResult["pcM4TimeoutAlarms"]);
                         UpdateOPCUAM4GeneralAlarms(readResult["pcM4GeneralAlarms"]);
 
-                        keys = new List<string>()
+                        if (M3InLine == "1")
+                        {
+                            keys = new List<string>()
                     {
                         "pcM3TimeoutAlarms",
                         "pcM3GeneralAlarms"
                     };
 
-                        readResult = await ccService.Read(keys);
-                        UpdateOPCUAM3TimeoutAlarms(readResult["pcM3TimeoutAlarms"]);
-                        UpdateOPCUAM3GeneralAlarms(readResult["pcM3GeneralAlarms"]);
-
+                            readResult = await ccService.Read(keys);
+                            UpdateOPCUAM3TimeoutAlarms(readResult["pcM3TimeoutAlarms"]);
+                            UpdateOPCUAM3GeneralAlarms(readResult["pcM3GeneralAlarms"]);
+                        }
                         keys = new List<string>()
                     {
                         "pcM5TimeoutAlarms",
@@ -474,14 +566,29 @@ namespace GUI
                         "pcM5CycleCounter"
                     };
 
-                        readResultPLC = await ccService.Read(keys);
-                        WriteOnLabelAsync(readResultPLC["pcM1CycleCounter"], labelM1CycleId);
-                        WriteOnLabelAsync(readResultPLC["pcM2CycleCounter"], labelM2CycleId);
-                        WriteOnLabelAsync(readResultPLC["pcM3CycleCounter"], labelM3CycleId);
-                        WriteOnLabelAsync(readResultPLC["pcM4CycleCounter"], labelM4CycleId);
-                        WriteOnLabelAsync(readResultPLC["pcM5CycleCounter"], labelM5CycleId);
+                        try
+                        {
+                            readResultPLC = await ccService.Read(keys);
+                            if (readResultPLC["pcM1CycleCounter"].Value != null)
+                            M1AutoDictionary[2] = short.Parse(readResultPLC["pcM1CycleCounter"].Value.ToString());
+                            //WriteOnLabelAsync(readResultPLC["pcM1CycleCounter"], labelM1CycleId);
+                            //WriteOnLabelAsync(readResultPLC["pcM2CycleCounter"], labelM2CycleId);
+                            if (readResultPLC["pcM2CycleCounter"].Value != null)
+                                M2AutoDictionary[2] = short.Parse(readResultPLC["pcM2CycleCounter"].Value.ToString());
+                            //WriteOnLabelAsync(readResultPLC["pcM3CycleCounter"], labelM3CycleId);
+                            if (readResultPLC["pcM3CycleCounter"].Value != null)
+                                if (M3InLine == "1") M3AutoDictionary[2] = short.Parse(readResultPLC["pcM3CycleCounter"].Value.ToString());
+                            //WriteOnLabelAsync(readResultPLC["pcM4CycleCounter"], labelM4CycleId);
+                            if (readResultPLC["pcM4CycleCounter"].Value != null)
+                                M4AutoDictionary[2] = short.Parse(readResultPLC["pcM4CycleCounter"].Value.ToString());
+                            //WriteOnLabelAsync(readResultPLC["pcM5CycleCounter"], labelM5CycleId);
+                            if (readResultPLC["pcM5CycleCounter"].Value != null)
+                                M5AutoDictionary[2] = short.Parse(readResultPLC["pcM5CycleCounter"].Value.ToString());
+                        }
+                        catch(Exception Ex)
+                        {
 
-
+                        }
 
                         #endregion
 
@@ -490,39 +597,30 @@ namespace GUI
                     {
                         "pcM1CycleTime",
                         "pcM2CycleTime",
-                        //"pcM3CycleTime",
-                        "pcM4CycleTime"
-                        //"pcM5CycleTIme"
+                        "pcM4CycleTime",
+                        "pcM5CycleTime1",
+                        "pcM5CycleTime2",
                     };
 
                         readResultPLC = await ccService.Read(keys);
-                        WriteOnLabelAsync(readResultPLC["pcM1CycleTime"], labelM1CycleTime, 100.0f);
-                        WriteOnLabelAsync(readResultPLC["pcM2CycleTime"], labelM2CycleTime, 100.0f);
-                        WriteOnLabelAsync(readResultPLC["pcM4CycleTime"], labelM4CycleTime, 100.0f);
+                        if(readResultPLC["pcM1CycleTime"].Value != null) M1AutoDictionary[3] = short.Parse(readResultPLC["pcM1CycleTime"].Value.ToString());
+                        if (readResultPLC["pcM2CycleTime"].Value != null) M2AutoDictionary[3] = short.Parse(readResultPLC["pcM2CycleTime"].Value.ToString());
+                        if (readResultPLC["pcM4CycleTime"].Value != null) M4AutoDictionary[3] = short.Parse(readResultPLC["pcM4CycleTime"].Value.ToString());
+                        if (readResultPLC["pcM5CycleTime1"].Value != null) M5AutoDictionary[3] = short.Parse(readResultPLC["pcM5CycleTime1"].Value.ToString());
+                        if (readResultPLC["pcM5CycleTime2"].Value != null) M5AutoDictionary[5] = short.Parse(readResultPLC["pcM5CycleTime2"].Value.ToString());
+                        if (M3InLine == "1")
+                        {
+                            keys = new List<string>()
+                            {
+                                "pcM3CycleTimeLF",
+                                "pcM3CycleTimeRG",
+                            };
+                            readResultPLC = await ccService.Read(keys);
+                            M3AutoDictionary[3] = short.Parse(readResultPLC["pcM3CycleTimeLF"].Value.ToString());
+                            M3AutoDictionary[5] = short.Parse(readResultPLC["pcM3CycleTimeRG"].Value.ToString());
+                        }
 
-
-                        #endregion
-
-                        #region(* phase *)
-                        keys = new List<string>()
-                    {
-                        "pcM1TrimmingState",
-                        "pcM2PadPrintIntState",
-                        "pcM3PadPrintExtState",
-                        "pcM4State",
-                        "pcM5State"
-                    };
-
-                        readResultPLC = await ccService.Read(keys);
-                        WriteOnLabelAsync(readResultPLC["pcM1TrimmingState"], labelM1Phase);
-                        WriteOnLabelAsync(readResultPLC["pcM2PadPrintIntState"], labelM2Phase);
-                        WriteOnLabelAsync(readResultPLC["pcM3PadPrintExtState"], labelM3Phase);
-                        WriteOnLabelAsync(readResultPLC["pcM4State"], labelM4Phase);
-                        WriteOnLabelAsync(readResultPLC["pcM5State"], labelM5Phase);
-
-
-
-                        #endregion
+                        #endregion                        
 
                         #region(* state machine *)
                         keys = new List<string>()
@@ -534,10 +632,10 @@ namespace GUI
                     };
 
                         readResultPLC = await ccService.Read(keys);
-                        WriteOnLabelAsync(readResultPLC["pcM1TrimmingState"], labelM1TrimmerState);
-                        WriteOnLabelAsync(readResultPLC["pcM1LoadingBeltState"], labelM1LoadingBeltState);
-                        WriteOnLabelAsync(readResultPLC["pcM1WorkingBeltState"], labelM1WorkingBeltState);
-                        WriteOnLabelAsync(readResultPLC["pcM1ExitBeltState"], labelM1ExitBeltState);
+                        if(readResultPLC["pcM1TrimmingState"].Value != null)M1StateDictionary[1] = short.Parse(readResultPLC["pcM1TrimmingState"].Value.ToString());
+                        if (readResultPLC["pcM1LoadingBeltState"].Value != null) M1StateDictionary[2] = short.Parse(readResultPLC["pcM1LoadingBeltState"].Value.ToString());
+                        if (readResultPLC["pcM1WorkingBeltState"].Value != null) M1StateDictionary[3] = short.Parse(readResultPLC["pcM1WorkingBeltState"].Value.ToString());
+                        if (readResultPLC["pcM1ExitBeltState"].Value != null) M1StateDictionary[4] = short.Parse(readResultPLC["pcM1ExitBeltState"].Value.ToString());
 
                         keys = new List<string>()
                     {
@@ -547,21 +645,24 @@ namespace GUI
                     };
 
                         readResultPLC = await ccService.Read(keys);
-                        WriteOnLabelAsync(readResultPLC["pcM4State"], labelM4State);
-                        WriteOnLabelAsync(readResultPLC["pcM4WorkingBeltState"], labelM4WorkingBeltState);
-                        WriteOnLabelAsync(readResultPLC["pcM4ExitBeltState"], labelM4ExitBeltState);
+                        if (readResultPLC["pcM4State"].Value !=null) M4StateDictionary[1] = short.Parse(readResultPLC["pcM4State"].Value.ToString());
+                        if (readResultPLC["pcM4WorkingBeltState"].Value != null) M4StateDictionary[2] = short.Parse(readResultPLC["pcM4WorkingBeltState"].Value.ToString());
+                        if (readResultPLC["pcM4ExitBeltState"].Value != null) M4StateDictionary[3] = short.Parse(readResultPLC["pcM4ExitBeltState"].Value.ToString());
 
-                        keys = new List<string>()
+                        if (M3InLine == "1")
+                        {
+                            keys = new List<string>()
                     {
                         "pcM3PadPrintExtState",
                         "pcM3WorkingBeltState",
                         "pcM3ExitBeltState"
                     };
 
-                        readResultPLC = await ccService.Read(keys);
-                        WriteOnLabelAsync(readResultPLC["pcM3PadPrintExtState"], labelM3State);
-                        WriteOnLabelAsync(readResultPLC["pcM3WorkingBeltState"], labelM3WorkingBeltState);
-                        WriteOnLabelAsync(readResultPLC["pcM3ExitBeltState"], labelM3ExitBeltState);
+                            readResultPLC = await ccService.Read(keys);
+                            M3StateDictionary[1] = short.Parse(readResultPLC["pcM3PadPrintExtState"].Value.ToString());
+                            M3StateDictionary[2] = short.Parse(readResultPLC["pcM3WorkingBeltState"].Value.ToString());
+                            M3StateDictionary[3] = short.Parse(readResultPLC["pcM3ExitBeltState"].Value.ToString());
+                        }
 
                         keys = new List<string>()
                     {
@@ -571,9 +672,9 @@ namespace GUI
                     };
 
                         readResultPLC = await ccService.Read(keys);
-                        WriteOnLabelAsync(readResultPLC["pcM2PadPrintIntState"], labelM2State);
-                        WriteOnLabelAsync(readResultPLC["pcM2WorkingBeltState"], labelM2WorkingBeltState);
-                        WriteOnLabelAsync(readResultPLC["pcM2ExitBeltState"], labelM2ExitBeltState);
+                        if (readResultPLC["pcM2PadPrintIntState"].Value !=null) M2StateDictionary[1] = short.Parse(readResultPLC["pcM2PadPrintIntState"].Value.ToString());
+                        if (readResultPLC["pcM2WorkingBeltState"].Value != null) M2StateDictionary[2] = short.Parse(readResultPLC["pcM2WorkingBeltState"].Value.ToString());
+                        if (readResultPLC["pcM2ExitBeltState"].Value != null) M2StateDictionary[3] = short.Parse(readResultPLC["pcM2ExitBeltState"].Value.ToString());
 
                         keys = new List<string>()
                     {
@@ -585,17 +686,12 @@ namespace GUI
                     };
 
                         readResultPLC = await ccService.Read(keys);
-                        WriteOnLabelAsync(readResultPLC["pcM5State"], labelM5State);
-                        WriteOnLabelAsync(readResultPLC["pcM5TranslationBeltState"], labelM5TranslatorBeltState);
-                        WriteOnLabelAsync(readResultPLC["pcM5ExitBelt1State"], labelM5ExitBelt1State);
-                        WriteOnLabelAsync(readResultPLC["pcM5ExitBelt2State"], labelM5ExitBelt2State);
-                        WriteOnLabelAsync(readResultPLC["pcM5ExitBelt3State"], labelM5ExitBelt3State);
-
+                        if (readResultPLC["pcM5State"].Value != null) M5StateDictionary[1] = short.Parse(readResultPLC["pcM5State"].Value.ToString());
+                        if (readResultPLC["pcM5TranslationBeltState"].Value != null) M5StateDictionary[2] = short.Parse(readResultPLC["pcM5TranslationBeltState"].Value.ToString());
+                        if (readResultPLC["pcM5ExitBelt1State"].Value != null) M5StateDictionary[3] = short.Parse(readResultPLC["pcM5ExitBelt1State"].Value.ToString());
+                        if (readResultPLC["pcM5ExitBelt2State"].Value != null) M5StateDictionary[4] = short.Parse(readResultPLC["pcM5ExitBelt2State"].Value.ToString());
+                        if (readResultPLC["pcM5ExitBelt3State"].Value != null) M5StateDictionary[5] = short.Parse(readResultPLC["pcM5ExitBelt3State"].Value.ToString());
                         #endregion
-
-
-
-
 
                         #region (* GUI *)
                         GUIWithOPCUAClientConnected();
@@ -634,69 +730,70 @@ namespace GUI
                                 }
                             }
 
-
-                            if (bool.Parse(readRes["pcM2RestartPlc"].Value.ToString()))
+                            if (readRes["pcM2RestartPlc"].Value != null)
                             {
-                                var readRes2 = await ccService.Send("pcM2RestartPlc", false);
+                                if (bool.Parse(readRes["pcM2RestartPlc"].Value.ToString()))
+                                {
+                                    var readRes2 = await ccService.Send("pcM2RestartPlc", false);
 
-                                RestartRequestFromM2();
-                            }
-                            else
-                            {
+                                    RestartRequestFromM2();
+                                }
+                                else
+                                {
 
-                            }
-
-                            if (bool.Parse(readRes["pcM3RestartPlc"].Value.ToString()))
-                            {
-                                var readRes2 = await ccService.Send("pcM3RestartPlc", false);
-
-                                RestartRequestFromM3();
-                            }
-                            else
-                            {
-
+                                }
                             }
 
-                            if (bool.Parse(readRes["pcM4RestartPlc"].Value.ToString()))
+                            if (readRes["pcM3RestartPlc"].Value != null)
                             {
-                                //var readRes2 = await ccService.Send("pcM4RestartPlc", false);
+                                if (bool.Parse(readRes["pcM3RestartPlc"].Value.ToString()))
+                                {
+                                    var readRes2 = await ccService.Send("pcM3RestartPlc", false);
 
-                                RestartRequestFromM4();
-                            }
-                            else
-                            {
-
-                            }
-
-                            if (bool.Parse(readRes["pcM5RestartPlc"].Value.ToString()))
-                            {
-                                var readRes2 = await ccService.Send("pcM5RestartPlc", false);
-
-                                RestartRequestFromM5();
-                            }
-                            else
-                            {
-
+                                    RestartRequestFromM3();
+                                }
                             }
 
-                            //if (bool.Parse(readRes["pcM6RestartPlc"].Value.ToString()))
-                            //{
-                            //    var readRes2 = await ccService.Send("pcM6RestartPlc", false);
+                            if (readRes["pcM4RestartPlc"].Value != null)
+                            {
+                                if (bool.Parse(readRes["pcM4RestartPlc"].Value.ToString()))
+                                {
+                                    //var readRes2 = await ccService.Send("pcM4RestartPlc", false);
 
-                            //    RestartRequestFromM6();
-                            //}
-                            //else
-                            //{
+                                    RestartRequestFromM4();
+                                }
+                                else
+                                {
 
-                            //}
+                                }
+                            }
+
+                            if (readRes["pcM5RestartPlc"].Value != null)
+                            {
+                                if (bool.Parse(readRes["pcM5RestartPlc"].Value.ToString()))
+                                {
+                                    var readRes2 = await ccService.Send("pcM5RestartPlc", false);
+
+                                    RestartRequestFromM5();
+                                }
+                                else
+                                {
+
+                                }
+                            }
+
                         }
                         catch (Exception ex)
                         {
 
                         }
                         #endregion
+
+                        #region(* send data to custom variables *)
+                       // SendDataToCustom();
+                        #endregion
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
 
                     }
@@ -713,7 +810,28 @@ namespace GUI
 
             }
         }
-      
+    
+        public async void SendDataToCustom()
+        {
+            List<string> keys = new List<string>()
+                    {
+                        "pcCustomData1",
+                        //"pcCustomData2",
+                        //"pcCustomData3",
+                        //"pcCustomData4",
+                        //"pcCustomData5",
+                    };
+
+            List<object> values = new List<object>()
+                    {
+                        new int[] {M1AutoDictionary[2], M2AutoDictionary[2], M3AutoDictionary[2], M4AutoDictionary[3], M5AutoDictionary[2],
+                        M1AutoDictionary[3], M2AutoDictionary[3], M3AutoDictionary[3], M4AutoDictionary[3], M5AutoDictionary[3],
+                        M1AutoDictionary[4], M2AutoDictionary[4], M3AutoDictionary[4], M4AutoDictionary[4], M5AutoDictionary[4]}
+                    };
+
+            var sendResults = await ccService.Send(keys, values);
+        }
+
         public void WriteOnCheckBoxStartAsync(ClientResult cr, CheckBox chk)
         {
             short value = -1;
@@ -793,7 +911,7 @@ namespace GUI
                     if (!founded)
                     {
                         chk.CheckState = CheckState.Indeterminate;
-                        chk.Image = imageListStart.Images[2];
+                        //chk.Image = imageListStart.Images[2];
                     }
                     else
                     {
@@ -975,27 +1093,27 @@ namespace GUI
         private void GUIWithOPCUAClientDisconnected()
         {
             //machines status
-            UpdateOPCUAMStatus(null, buttonM1Status, labelM1Status);
+            UpdateOPCUAMStatus(null, M1AutoDictionary);
             WriteOnCheckBoxStartAsync(null, checkBoxM1Start);
             WriteAsyncOnCheckBoxPause(null, checkBoxM1Pause);
 
-            UpdateOPCUAMStatus(null, buttonM2Status, labelM2Status);
+            UpdateOPCUAMStatus(null, M2AutoDictionary);
             WriteOnCheckBoxStartAsync(null, checkBoxM2Start);
             WriteAsyncOnCheckBoxPause(null, checkBoxM2Pause);
 
-            UpdateOPCUAMStatus(null, buttonM3Status, labelM3Status);
+            UpdateOPCUAMStatus(null, M3AutoDictionary);
             WriteOnCheckBoxStartAsync(null, checkBoxM3Start);
             WriteAsyncOnCheckBoxPause(null, checkBoxM3Pause);
 
-            UpdateOPCUAMStatus(null, buttonM4Status, labelM4Status);
+            UpdateOPCUAMStatus(null, M4AutoDictionary);
             WriteOnCheckBoxStartAsync(null, checkBoxM4Start);
             WriteAsyncOnCheckBoxPause(null, checkBoxM4Pause);
 
-            UpdateOPCUAMStatus(null, buttonM5Status, labelM5Status);
+            UpdateOPCUAMStatus(null, M5AutoDictionary);
             WriteOnCheckBoxStartAsync(null, checkBoxM5Start);
             WriteAsyncOnCheckBoxPause(null, checkBoxM5Pause);
 
-            UpdateOPCUAMStatus(null, buttonM6Status, labelM6Status);
+            //UpdateOPCUAMStatus(null, buttonM6Status, labelM6Status);
             WriteOnCheckBoxStartAsync(null, checkBoxM6Start);
             WriteAsyncOnCheckBoxPause(null, checkBoxM6Pause);
 
@@ -1027,16 +1145,16 @@ namespace GUI
             UpdateOPCUAMHomingDone(null, buttonM1HomingDone, labelM1HomingDone);
             UpdateOPCUAMHomingDone(null, buttonM2HomingDone, labelM2HomingDone);
             UpdateOPCUAMHomingDone(null, buttonM3HomingDone, labelM3HomingDone);
-            UpdateOPCUAMHomingDone(null, buttonM4HomingDone, labelM4HomingDone);
+            //UpdateOPCUAMHomingDone(null, buttonM4HomingDone, labelM4HomingDone);
             //UpdateOPCUAMHomingDone(readResult["pcM5HomingDone"], buttonM5HomingDone, labelM5HomingDone);
             //UpdateOPCUAMHomingDone(readResult["pcM6HomingDone"], buttonM6HomingDone, labelM6HomingDone);
 
             WriteOnLabelAsync(null, labelM1TeachAxisQuoteValue);
             WriteOnLabelAsync(null, labelM2TeachAxisQuoteValue);
             WriteOnLabelAsync(null, labelM3TeachAxisQuoteValue);
-            WriteOnLabelAsync(null, labelM4TeachAxisQuoteValue);
+            //WriteOnLabelAsync(null, labelM4TeachAxisQuoteValue);
             //WriteOnLabelAsync(null, labelM3TeachAxisQuoteValue);
-            WriteOnToolStripAsync(true, toolStripStatusLabelSystem);
+            //WriteOnToolStripAsync(true, toolStripStatusLabelSystem);
         }
 
         private void UpdateOPCUAMNodeConnection(ClientResult cr, bool oldValue, ref bool lBitTimeout, ref int lBitCounter, PictureBox pict, Label lbl)
@@ -1106,66 +1224,19 @@ namespace GUI
             {
                 int i = 0;
                 bool[] arrayBool = (bool[])cr.Value;
-
-                lbLed1001M5.State = (arrayBool[1] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1002M5.State = (arrayBool[2] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1003M5.State = (arrayBool[3] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1004M5.State = (arrayBool[4] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1005M5.State = (arrayBool[5] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1006M5.State = (arrayBool[6] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1007M5.State = (arrayBool[7] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1008M5.State = (arrayBool[8] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                
-                lbLed1009M5.State = (arrayBool[9] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1010M5.State = (arrayBool[10] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1011M5.State = (arrayBool[11] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1012M5.State = (arrayBool[12] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1013M5.State = (arrayBool[13] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1014M5.State = (arrayBool[14] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1015M5.State = (arrayBool[15] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1016M5.State = (arrayBool[16] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed1017M5.State = (arrayBool[17] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1018M5.State = (arrayBool[18] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1019M5.State = (arrayBool[19] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1020M5.State = (arrayBool[20] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1021M5.State = (arrayBool[21] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1022M5.State = (arrayBool[22] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1023M5.State = (arrayBool[23] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1024M5.State = (arrayBool[24] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed1025M5.State = (arrayBool[25] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1026M5.State = (arrayBool[26] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1027M5.State = (arrayBool[27] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1028M5.State = (arrayBool[28] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1029M5.State = (arrayBool[29] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1030M5.State = (arrayBool[30] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1031M5.State = (arrayBool[31] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1032M5.State = (arrayBool[32] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed1033M5.State = (arrayBool[33] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1034M5.State = (arrayBool[34] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1035M5.State = (arrayBool[35] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1036M5.State = (arrayBool[36] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1037M5.State = (arrayBool[37] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1038M5.State = (arrayBool[38] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1039M5.State = (arrayBool[39] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1040M5.State = (arrayBool[40] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1041M5.State = (arrayBool[41] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1042M5.State = (arrayBool[42] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1043M5.State = (arrayBool[43] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1044M5.State = (arrayBool[44] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1045M5.State = (arrayBool[45] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1046M5.State = (arrayBool[46] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1047M5.State = (arrayBool[47] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1048M5.State = (arrayBool[48] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                foreach (bool item in arrayBool)
+                {
+                    if (i != 0)
+                    {
+                        M5InputDictionary[i] = item;
+                    }
+                    i = i + 1;
+                }
             }
-
         }
 
         public void UpdateOPCUAM1DI(ClientResult cr)
         {
-
             if ((cr == null) || (cr.OpcResult == false))
             {
                 //todo da gestire
@@ -1174,67 +1245,19 @@ namespace GUI
             {
                 int i = 0;
                 bool[] arrayBool = (bool[])cr.Value;
-
-                lbLed1001M1.State = (arrayBool[1] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1002M1.State = (arrayBool[2] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1003M1.State = (arrayBool[3] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1004M1.State = (arrayBool[4] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1005M1.State = (arrayBool[5] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1006M1.State = (arrayBool[6] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1007M1.State = (arrayBool[7] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1008M1.State = (arrayBool[8] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed1009M1.State = (arrayBool[9] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1010M1.State = (arrayBool[10] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1011M1.State = (arrayBool[11] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1012M1.State = (arrayBool[12] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1013M1.State = (arrayBool[13] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1014M1.State = (arrayBool[14] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1015M1.State = (arrayBool[15] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1016M1.State = (arrayBool[16] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed1017M1.State = (arrayBool[17] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1018M1.State = (arrayBool[18] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1019M1.State = (arrayBool[19] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1020M1.State = (arrayBool[20] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1021M1.State = (arrayBool[21] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1022M1.State = (arrayBool[22] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1023M1.State = (arrayBool[23] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1024M1.State = (arrayBool[24] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed1025M1.State = (arrayBool[25] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1026M1.State = (arrayBool[26] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1027M1.State = (arrayBool[27] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1028M1.State = (arrayBool[28] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1029M1.State = (arrayBool[29] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1030M1.State = (arrayBool[30] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1031M1.State = (arrayBool[31] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1032M1.State = (arrayBool[32] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed1033M1.State = (arrayBool[33] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1034M1.State = (arrayBool[34] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1035M1.State = (arrayBool[35] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1036M1.State = (arrayBool[36] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1037M1.State = (arrayBool[37] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1038M1.State = (arrayBool[38] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1039M1.State = (arrayBool[39] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1040M1.State = (arrayBool[40] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1041M1.State = (arrayBool[41] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1042M1.State = (arrayBool[42] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1043M1.State = (arrayBool[43] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1044M1.State = (arrayBool[44] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1045M1.State = (arrayBool[45] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1046M1.State = (arrayBool[46] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1047M1.State = (arrayBool[47] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1048M1.State = (arrayBool[48] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                foreach (bool item in arrayBool)
+                {
+                    if (i != 0)
+                    {
+                        M1InputDictionary[i] = item;
+                    }
+                    i = i + 1;
+                }
             }
-
-
         }
 
         public void UpdateOPCUAM1DO(ClientResult cr)
         {
-
             if ((cr == null) || (cr.OpcResult == false))
             {
                 //todo da gestire
@@ -1243,67 +1266,55 @@ namespace GUI
             {
                 int i = 0;
                 bool[] arrayBool = (bool[])cr.Value;
-
-                lbLed2001M1.State = (arrayBool[1] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2002M1.State = (arrayBool[2] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2003M1.State = (arrayBool[3] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2004M1.State = (arrayBool[4] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2005M1.State = (arrayBool[5] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2006M1.State = (arrayBool[6] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2007M1.State = (arrayBool[7] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2008M1.State = (arrayBool[8] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed2009M1.State = (arrayBool[9] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2010M1.State = (arrayBool[10] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2011M1.State = (arrayBool[11] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2012M1.State = (arrayBool[12] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2013M1.State = (arrayBool[13] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2014M1.State = (arrayBool[14] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2015M1.State = (arrayBool[15] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2016M1.State = (arrayBool[16] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed2017M1.State = (arrayBool[17] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2018M1.State = (arrayBool[18] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2019M1.State = (arrayBool[19] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2020M1.State = (arrayBool[20] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2021M1.State = (arrayBool[21] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2022M1.State = (arrayBool[22] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2023M1.State = (arrayBool[23] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2024M1.State = (arrayBool[24] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed2025M1.State = (arrayBool[25] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2026M1.State = (arrayBool[26] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2027M1.State = (arrayBool[27] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2028M1.State = (arrayBool[28] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2029M1.State = (arrayBool[29] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2030M1.State = (arrayBool[30] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2031M1.State = (arrayBool[31] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2032M1.State = (arrayBool[32] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed2033M1.State = (arrayBool[33] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2034M1.State = (arrayBool[34] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2035M1.State = (arrayBool[35] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2036M1.State = (arrayBool[36] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2037M1.State = (arrayBool[37] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2038M1.State = (arrayBool[38] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2039M1.State = (arrayBool[39] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2040M1.State = (arrayBool[40] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2041M1.State = (arrayBool[41] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2042M1.State = (arrayBool[42] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2043M1.State = (arrayBool[43] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2044M1.State = (arrayBool[44] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2045M1.State = (arrayBool[45] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2046M1.State = (arrayBool[46] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2047M1.State = (arrayBool[47] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2048M1.State = (arrayBool[48] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                foreach (bool item in arrayBool)
+                {
+                    if (i != 0)
+                    {
+                        M1OutputDictionary[i] = item;
+                    }
+                    i = i + 1;
+                }
             }
+        }
 
+        public void UpdateOPCUAM4DI(ClientResult cr)
+        {
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                //todo da gestire
+            }
+            else
+            {
+                int i = 0;
+                bool[] arrayBool = (bool[])cr.Value;
+                foreach (bool item in arrayBool)
+                {
+                    if (i != 0) M4InputDictionary[i] = item;
+                    i = i + 1;
+                }
+            }
+        }
 
+        public void UpdateOPCUAM4DO(ClientResult cr)
+        {
+            if ((cr == null) || (cr.OpcResult == false))
+            {
+                //todo da gestire
+            }
+            else
+            {
+                int i = 0;
+                bool[] arrayBool = (bool[])cr.Value;
+                foreach (bool item in arrayBool)
+                {
+                    if (i != 0) M4OutputDictionary[i] = item;
+                    i = i + 1;
+                }
+            }
         }
 
         public void UpdateOPCUAM2DO(ClientResult cr)
         {
-
             if ((cr == null) || (cr.OpcResult == false))
             {
                 //todo da gestire
@@ -1312,67 +1323,16 @@ namespace GUI
             {
                 int i = 0;
                 bool[] arrayBool = (bool[])cr.Value;
-
-                lbLed2001M2.State = (arrayBool[1] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2002M2.State = (arrayBool[2] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2003M2.State = (arrayBool[3] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2004M2.State = (arrayBool[4] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2005M2.State = (arrayBool[5] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2006M2.State = (arrayBool[6] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2007M2.State = (arrayBool[7] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2008M2.State = (arrayBool[8] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed2009M2.State = (arrayBool[9] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2010M2.State = (arrayBool[10] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2011M2.State = (arrayBool[11] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2012M2.State = (arrayBool[12] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2013M2.State = (arrayBool[13] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2014M2.State = (arrayBool[14] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2015M2.State = (arrayBool[15] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2016M2.State = (arrayBool[16] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed2017M2.State = (arrayBool[17] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2018M2.State = (arrayBool[18] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2019M2.State = (arrayBool[19] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2020M2.State = (arrayBool[20] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2021M2.State = (arrayBool[21] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2022M2.State = (arrayBool[22] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2023M2.State = (arrayBool[23] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2024M2.State = (arrayBool[24] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed2025M2.State = (arrayBool[25] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2026M2.State = (arrayBool[26] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2027M2.State = (arrayBool[27] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2028M2.State = (arrayBool[28] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2029M2.State = (arrayBool[29] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2030M2.State = (arrayBool[30] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2031M2.State = (arrayBool[31] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2032M2.State = (arrayBool[32] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed2033M2.State = (arrayBool[33] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2034M2.State = (arrayBool[34] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2035M2.State = (arrayBool[35] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2036M2.State = (arrayBool[36] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2037M2.State = (arrayBool[37] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2038M2.State = (arrayBool[38] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2039M2.State = (arrayBool[39] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2040M2.State = (arrayBool[40] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2041M2.State = (arrayBool[41] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2042M2.State = (arrayBool[42] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2043M2.State = (arrayBool[43] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2044M2.State = (arrayBool[44] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2045M2.State = (arrayBool[45] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2046M2.State = (arrayBool[46] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2047M2.State = (arrayBool[47] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2048M2.State = (arrayBool[48] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                foreach (bool item in arrayBool)
+                {
+                    if (i != 0) M2OutputDictionary[i] = item;
+                    i = i + 1;
+                }
             }
-
-
         }
 
         public void UpdateOPCUAM3DO(ClientResult cr)
         {
-
             if ((cr == null) || (cr.OpcResult == false))
             {
                 //todo da gestire
@@ -1381,67 +1341,16 @@ namespace GUI
             {
                 int i = 0;
                 bool[] arrayBool = (bool[])cr.Value;
-
-                lbLed2001M3.State = (arrayBool[1] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2002M3.State = (arrayBool[2] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2003M3.State = (arrayBool[3] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2004M3.State = (arrayBool[4] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2005M3.State = (arrayBool[5] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2006M3.State = (arrayBool[6] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2007M3.State = (arrayBool[7] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2008M3.State = (arrayBool[8] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed2009M3.State = (arrayBool[9] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2010M3.State = (arrayBool[10] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2011M3.State = (arrayBool[11] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2012M3.State = (arrayBool[12] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2013M3.State = (arrayBool[13] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2014M3.State = (arrayBool[14] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2015M3.State = (arrayBool[15] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2016M3.State = (arrayBool[16] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed2017M3.State = (arrayBool[17] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2018M3.State = (arrayBool[18] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2019M3.State = (arrayBool[19] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2020M3.State = (arrayBool[20] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2021M3.State = (arrayBool[21] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2022M3.State = (arrayBool[22] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2023M3.State = (arrayBool[23] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2024M3.State = (arrayBool[24] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            
-                lbLed2025M3.State = (arrayBool[25] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2026M3.State = (arrayBool[26] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2027M3.State = (arrayBool[27] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2028M3.State = (arrayBool[28] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2029M3.State = (arrayBool[29] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2030M3.State = (arrayBool[30] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2031M3.State = (arrayBool[31] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2032M3.State = (arrayBool[32] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            
-                lbLed2033M3.State = (arrayBool[33] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2034M3.State = (arrayBool[34] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2035M3.State = (arrayBool[35] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2036M3.State = (arrayBool[36] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2037M3.State = (arrayBool[37] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2038M3.State = (arrayBool[38] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2039M3.State = (arrayBool[39] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2040M3.State = (arrayBool[40] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2041M3.State = (arrayBool[41] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2042M3.State = (arrayBool[42] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2043M3.State = (arrayBool[43] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2044M3.State = (arrayBool[44] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2045M3.State = (arrayBool[45] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2046M3.State = (arrayBool[46] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2047M3.State = (arrayBool[47] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2048M3.State = (arrayBool[48] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
+                foreach (bool item in arrayBool)
+                {
+                    if (i != 0) M3OutputDictionary[i] = item;
+                    i = i + 1;
+                }
             }
-
-
         }
 
         public void UpdateOPCUAM5DO(ClientResult cr)
         {
-
             if ((cr == null) || (cr.OpcResult == false))
             {
                 //todo da gestire
@@ -1450,46 +1359,12 @@ namespace GUI
             {
                 int i = 0;
                 bool[] arrayBool = (bool[])cr.Value;
-
-                lbLed2001M5.State = (arrayBool[1] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2002M5.State = (arrayBool[2] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2003M5.State = (arrayBool[3] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2004M5.State = (arrayBool[4] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2005M5.State = (arrayBool[5] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2006M5.State = (arrayBool[6] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2007M5.State = (arrayBool[7] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2008M5.State = (arrayBool[8] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed2009M5.State = (arrayBool[9] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2010M5.State = (arrayBool[10] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2011M5.State = (arrayBool[11] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2012M5.State = (arrayBool[12] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2013M5.State = (arrayBool[13] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2014M5.State = (arrayBool[14] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2015M5.State = (arrayBool[15] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2016M5.State = (arrayBool[16] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed2017M5.State = (arrayBool[17] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2018M5.State = (arrayBool[18] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2019M5.State = (arrayBool[19] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2020M5.State = (arrayBool[20] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2021M5.State = (arrayBool[21] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2022M5.State = (arrayBool[22] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2023M5.State = (arrayBool[23] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2024M5.State = (arrayBool[24] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-            
-                lbLed2025M5.State = (arrayBool[25] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2026M5.State = (arrayBool[26] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2027M5.State = (arrayBool[27] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2028M5.State = (arrayBool[28] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2029M5.State = (arrayBool[29] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2030M5.State = (arrayBool[30] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2031M5.State = (arrayBool[31] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed2032M5.State = (arrayBool[32] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-             }
-
-
+                foreach (bool item in arrayBool)
+                {
+                    if (i != 0) M5OutputDictionary[i] = item;
+                    i = i + 1;
+                }
+            }
         }
 
         public void UpdateOPCUAM1TimeoutAlarms(ClientResult cr)
@@ -1500,54 +1375,70 @@ namespace GUI
             }
             else
             {
+                int k = 0;
+                for (k = 0; k <= 32; k++)
+                {
+                    M1AlarmsDictionary[k] = 0;
+
+                }
                 short[] arrayShort = (short[])cr.Value;
+
                 string alarms = ToBinary(arrayShort[1]);
                 alarms = alarms.PadLeft(16, '0');
                 int i = 0;
-
-                for (i = alarms.Length - 1; i>=0;i--)
+                int j = 1;
+                
+                for (i = alarms.Length - 1; i >= 0; i--)
                 {
-                    string exe = alarms.Substring(i,1);
-                    
+                    string exe = alarms.Substring(i, 1);
+
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
                     {
-                        Console.WriteLine("trimmer timeout start motore");
+                        M1AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
                     {
-                        Console.WriteLine("trimmer timeout homing motore");
+                        Console.WriteLine("timeout homing motore");
+                        M1AlarmsDictionary[j] = 1;
                     }
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
                     {
-                        Console.WriteLine("trimmer timeout start posizionamento motore");
+                        Console.WriteLine("timeout start posizionamento motore");
+                        M1AlarmsDictionary[j] = 1;
                     }
 
-                    if ((Int32.Parse(exe) == 1) &(i == alarms.Length - 4))
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
                     {
-                        Console.WriteLine("trimmer timeout posizionamento motore");
+                        Console.WriteLine("timeout posizionamento motore");
+                        M1AlarmsDictionary[j] = 1;
                     }
 
-                    if ((Int32.Parse(exe) == 1) &(i == alarms.Length - 5))
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
                     {
-                        Console.WriteLine("trimmer timeout slitta motore taglio");
+                        Console.WriteLine("timeout pinza bordo stivale");
+                        M1AlarmsDictionary[j] = 1;
                     }
 
-                    if ((Int32.Parse(exe) == 1) &(i == alarms.Length - 6))
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
                     {
-                        Console.WriteLine("timeout pinza taglio stivale");
+                        Console.WriteLine("timeout pinza grande stivale");
+                        M1AlarmsDictionary[j] = 1;
                     }
 
-                    if ((Int32.Parse(exe) == 1) &(i == alarms.Length - 7))
+                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
                     {
-                        Console.WriteLine("trimmer timeout pinza molle");
+                        Console.WriteLine("timeout pinza centraggio 1");
+                        M1AlarmsDictionary[j] = 1;
                     }
 
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
                     {
-                        Console.WriteLine("trimmer timeout pinza blocco");
+                        Console.WriteLine("timeout pinza centraggio 2");
+                        M1AlarmsDictionary[j] = 1;
                     }
+                    j = j + 1;
                 }
 
             }
@@ -1561,10 +1452,18 @@ namespace GUI
             }
             else
             {
+                int k = 0;
+                for (k = 0; k <= 32; k++)
+                {
+                    M2AlarmsDictionary[k] = 0;
+
+                }
                 short[] arrayShort = (short[])cr.Value;
+
                 string alarms = ToBinary(arrayShort[1]);
                 alarms = alarms.PadLeft(16, '0');
                 int i = 0;
+                int j = 1;
 
                 for (i = alarms.Length - 1; i >= 0; i--)
                 {
@@ -1572,50 +1471,51 @@ namespace GUI
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
                     {
-                        Console.WriteLine("padint timeout start motore");
+                        M2AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
                     {
-                        Console.WriteLine("padint timeout homing motore");
+                        Console.WriteLine("timeout homing motore");
+                        M2AlarmsDictionary[j] = 1;
                     }
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
                     {
-                        Console.WriteLine("padint timeout start posizionamento motore");
+                        Console.WriteLine("timeout start posizionamento motore");
+                        M2AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
                     {
-                        Console.WriteLine("padint timeout posizionamento motore");
+                        Console.WriteLine("timeout posizionamento motore");
+                        M2AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
                     {
-                        Console.WriteLine("padint timeout pinza bordo stivale");
+                        Console.WriteLine("timeout pinza bordo stivale");
+                        M2AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
                     {
-                        Console.WriteLine("padint timeout pinza grande stivale");
+                        Console.WriteLine("timeout pinza grande stivale");
+                        M2AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
                     {
-                        Console.WriteLine("padint timeout pinza centraggio 1");
+                        Console.WriteLine("timeout pinza centraggio 1");
+                        M2AlarmsDictionary[j] = 1;
                     }
 
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
                     {
-                        Console.WriteLine("padint timeout pinza centraggio 2");
+                        M2AlarmsDictionary[j] = 1;
                     }
-
-                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 9))
-                    {
-                        Console.WriteLine("padint timeout contrasto");
-                    }
+                    j = j + 1;
                 }
-
             }
         }
 
@@ -1627,54 +1527,61 @@ namespace GUI
             }
             else
             {
+                int k = 0;
+                for (k = 0; k <= 32; k++)
+                {
+                    M4AlarmsDictionary[k] = 0;
+
+                }
                 short[] arrayShort = (short[])cr.Value;
                 string alarms = ToBinary(arrayShort[1]);
                 alarms = alarms.PadLeft(16, '0');
                 int i = 0;
-
+                int j = 1; 
                 for (i = alarms.Length - 1; i >= 0; i--)
                 {
                     string exe = alarms.Substring(i, 1);
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
                     {
-                        Console.WriteLine("timeout start motore");
+                        M4AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
                     {
-                        Console.WriteLine("timeout homing motore");
+                        M4AlarmsDictionary[j] = 1;
                     }
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
                     {
-                        Console.WriteLine("timeout start posizionamento motore");
+                        M4AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
                     {
-                        Console.WriteLine("timeout posizionamento motore");
+                        M4AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
                     {
-                        Console.WriteLine("timeout pinza bordo stivale");
+                        M4AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
                     {
-                        Console.WriteLine("timeout pinza grande stivale");
+                        M4AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
                     {
-                        Console.WriteLine("timeout pinza centraggio 1");
+                        M4AlarmsDictionary[j] = 1;
                     }
 
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
                     {
-                        Console.WriteLine("timeout pinza centraggio 2");
+                        M4AlarmsDictionary[j] = 1;
                     }
+                    j = j + 1;
                 }
 
             }
@@ -1688,10 +1595,18 @@ namespace GUI
             }
             else
             {
+                int k = 0;
+                for (k = 0; k <= 32; k++)
+                {
+                    M3AlarmsDictionary[k] = 0;
+
+                }
                 short[] arrayShort = (short[])cr.Value;
+
                 string alarms = ToBinary(arrayShort[1]);
                 alarms = alarms.PadLeft(16, '0');
                 int i = 0;
+                int j = 1;
 
                 for (i = alarms.Length - 1; i >= 0; i--)
                 {
@@ -1699,48 +1614,43 @@ namespace GUI
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
                     {
-                        Console.WriteLine("padext timeout start motore");
+                        M3AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
                     {
-                        Console.WriteLine("padext timeout homing motore");
+                        M3AlarmsDictionary[j] = 1;
                     }
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
                     {
-                        Console.WriteLine("padext timeout start posizionamento motore");
+                        M3AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
                     {
-                        Console.WriteLine("padext timeout posizionamento motore");
+                        M3AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
                     {
-                        Console.WriteLine("padext timeout pinza bordo stivale");
+                        M3AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
                     {
-                        Console.WriteLine("padext timeout pinza grande stivale");
+                        M3AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
                     {
-                        Console.WriteLine("padext timeout pinza centraggio 1");
+                        M3AlarmsDictionary[j] = 1;
                     }
-
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
                     {
-                        Console.WriteLine("padext timeout pinza centraggio 2");
+                        M3AlarmsDictionary[j] = 1;
                     }
-
-                    if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 9))
-                    {
-                        Console.WriteLine("padext timeout contrasto");
-                    }
+                    j = j + 1;
                 }
 
             }
@@ -1754,10 +1664,18 @@ namespace GUI
             }
             else
             {
+                int k = 0;
+                for (k = 0; k <= 32; k++)
+                {
+                    M5AlarmsDictionary[k] = 0;
+
+                }
                 short[] arrayShort = (short[])cr.Value;
+
                 string alarms = ToBinary(arrayShort[1]);
                 alarms = alarms.PadLeft(16, '0');
                 int i = 0;
+                int j = 1;
 
                 for (i = alarms.Length - 1; i >= 0; i--)
                 {
@@ -1765,43 +1683,43 @@ namespace GUI
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
                     {
-                        Console.WriteLine("manip timeout traslatore");
+                        M5AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
                     {
-                        Console.WriteLine("manip timeout avanzamento pinza");
+                        M5AlarmsDictionary[j] = 1;
                     }
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
                     {
-                        Console.WriteLine("manip timeout pinza");
+                        M5AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
                     {
-                        Console.WriteLine("manip timeout rotazione antioraria");
+                        M5AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
                     {
-                        Console.WriteLine("manip timeout rotazione oraria");
+                        M5AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
                     {
-                        Console.WriteLine("manip timeout estensione verticale 1");
+                        M5AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
                     {
-                        Console.WriteLine("manip timeout estensione verticale 2");
+                        M5AlarmsDictionary[j] = 1;
                     }
-
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
                     {
-                    //    Console.WriteLine("timeout pinza centraggio 2");
+                        M5AlarmsDictionary[j] = 1;
                     }
+                    j = j + 1;
                 }
 
             }
@@ -1815,54 +1733,60 @@ namespace GUI
             }
             else
             {
+                int k = 0;
+                for (k = 33; k <= 64; k++)
+                {
+                    M1AlarmsDictionary[k] = 0;
+
+                }
                 short[] arrayShort = (short[])cr.Value;
                 string alarms = ToBinary(arrayShort[1]);
                 alarms = alarms.PadLeft(16, '0');
                 int i = 0;
-
+                int j = 33;
                 for (i = alarms.Length - 1; i >= 0; i--)
                 {
                     string exe = alarms.Substring(i, 1);
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
                     {
-                        Console.WriteLine("trimmer motore nastro carico in allarme");
+                        M1AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
                     {
-                        Console.WriteLine("trimmer motore nastro lavoro in allarme");
+                        M1AlarmsDictionary[j] = 1;
                     }
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
                     {
-                        Console.WriteLine("trimmer servo in allarme");
+                        M1AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
                     {
-                        Console.WriteLine("trimmer dispositivo fpi4C disconnesso");
+                        M1AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
                     {
-                        Console.WriteLine("");
+                        M1AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
                     {
-                        Console.WriteLine("");
+                        M1AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
                     {
-                        Console.WriteLine("");
+                        M1AlarmsDictionary[j] = 1;
                     }
-
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
-                    {
-                        Console.WriteLine("");
+                    {                        
+                        M1AlarmsDictionary[j] = 1;
                     }
+                    j = j + 1;
                 }
 
             }
@@ -1876,54 +1800,62 @@ namespace GUI
             }
             else
             {
+                int k = 0;
+                for (k = 33; k <= 64; k++)
+                {
+                    M4AlarmsDictionary[k] = 0;
+
+                }
                 short[] arrayShort = (short[])cr.Value;
                 string alarms = ToBinary(arrayShort[1]);
                 alarms = alarms.PadLeft(16, '0');
                 int i = 0;
-
+                int j = 33;
                 for (i = alarms.Length - 1; i >= 0; i--)
                 {
                     string exe = alarms.Substring(i, 1);
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
-                    {
-                        Console.WriteLine("motore nastro lavoro in allarme");
-                    }
+                    {                        
+                        M4AlarmsDictionary[j] = 1;
+                    } 
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
-                    {
-                        Console.WriteLine("motore nastro uscita in allarme");
+                    {                        
+                        M4AlarmsDictionary[j] = 1;
                     }
+
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
                     {
-                        Console.WriteLine("servo in allarme");
+                        M4AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
                     {
-                        Console.WriteLine("HMI disconnesso");
+                        M4AlarmsDictionary[j] = 1;
                     }
-
+                   
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
                     {
-                        Console.WriteLine("air pressure missing");
+                        M4AlarmsDictionary[j] = 1;
                     }
-
+                    
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
-                    {
-                        //Console.WriteLine("");
+                    {                        
+                        M4AlarmsDictionary[j] = 1;
                     }
-
+                    
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
-                    {
-                        //Console.WriteLine("");
+                    {                    
+                        M4AlarmsDictionary[j] = 1;
                     }
-
-
+                    
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
                     {
-                        //Console.WriteLine("");
+                        M4AlarmsDictionary[j] = 1;
                     }
+                    
+                    j = j + 1;
                 }
 
             }
@@ -1937,54 +1869,61 @@ namespace GUI
             }
             else
             {
+                int k = 0;
+                for (k = 33; k <= 64; k++)
+                {
+                    M3AlarmsDictionary[k] = 0;
+
+                }
                 short[] arrayShort = (short[])cr.Value;
                 string alarms = ToBinary(arrayShort[1]);
                 alarms = alarms.PadLeft(16, '0');
                 int i = 0;
-
+                int j = 33;
                 for (i = alarms.Length - 1; i >= 0; i--)
                 {
                     string exe = alarms.Substring(i, 1);
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
-                    {
-                        Console.WriteLine("motore nastro lavoro in allarme");
+                    {                        
+                        M3AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
-                    {
-                        Console.WriteLine("motore nastro uscita in allarme");
+                    {                        
+                        M3AlarmsDictionary[j] = 1;
                     }
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
-                    {
-                        Console.WriteLine("servo in allarme");
+                    {                        
+                        M3AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
-                    {
-                        Console.WriteLine("FP-i4C disconnesso");
+                    {                        
+                        M3AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
-                    {
-                        Console.WriteLine("air pressure missing");
+                    {                        
+                        M3AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
-                    {
-                        Console.WriteLine("inverter aspirazione forno");
+                    {                        
+                        M3AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
-                    {
-                        Console.WriteLine("resistenza controllo temperatura in allarme");
+                    {                        
+                        M3AlarmsDictionary[j] = 1;
                     }
 
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
-                    {
-                        Console.WriteLine("allarme padprint");
+                    {                        
+                        M3AlarmsDictionary[j] = 1;
                     }
+                    j = j + 1;
                 }
 
             }
@@ -1998,54 +1937,63 @@ namespace GUI
             }
             else
             {
+                int k = 0;
+                for (k = 33; k <= 64; k++)
+                {
+                    M2AlarmsDictionary[k] = 0;
+
+                }
+                M2AlarmsDictionary[k] = 0;
+                //}
                 short[] arrayShort = (short[])cr.Value;
                 string alarms = ToBinary(arrayShort[1]);
                 alarms = alarms.PadLeft(16, '0');
                 int i = 0;
-
+                int j = 33;
                 for (i = alarms.Length - 1; i >= 0; i--)
                 {
                     string exe = alarms.Substring(i, 1);
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
-                    {
-                        Console.WriteLine("padint motore nastro lavoro in allarme");
+                    {                        
+                        M2AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
-                    {
-                        Console.WriteLine("padint motore nastro uscita in allarme");
+                    {                        
+                        M2AlarmsDictionary[j] = 1;
                     }
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
-                    {
-                        Console.WriteLine("padint servo in allarme");
+                    {                        
+                        M2AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
-                    {
-                        Console.WriteLine("padint FP-i4C disconnesso");
+                    {                        
+                        M2AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
-                    {
-                        Console.WriteLine("padint air pressure missing");
+                    {                        
+                        M2AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
-                    {
-                        Console.WriteLine("padint allarme padprint");
+                    {                        
+                        M2AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
-                    {
-                        
+                    {                        
+                        M2AlarmsDictionary[j] = 1;
                     }
 
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
-                    {
-                        
+                    {                        
+                        M2AlarmsDictionary[j] = 1;
                     }
+                    j = j + 1;
                 }
 
             }
@@ -2059,54 +2007,61 @@ namespace GUI
             }
             else
             {
+                int k = 0;
+                for (k = 33; k <= 64; k++)
+                {
+                    M5AlarmsDictionary[k] = 0;
+
+                }
                 short[] arrayShort = (short[])cr.Value;
                 string alarms = ToBinary(arrayShort[1]);
                 alarms = alarms.PadLeft(16, '0');
                 int i = 0;
-
+                int j = 33;
                 for (i = alarms.Length - 1; i >= 0; i--)
                 {
                     string exe = alarms.Substring(i, 1);
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 1))
-                    {
-                        Console.WriteLine("manip motore nastro traslazione in allarme");
+                    {                        
+                        M5AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 2))
-                    {
-                        Console.WriteLine("manip motore nastro uscita uscita 1 in allarme");
+                    {                     
+                        M5AlarmsDictionary[j] = 1;
                     }
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 3))
-                    {
-                        Console.WriteLine("manip motore nastro uscita 2 in allarme");
+                    {                     
+                        M5AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 4))
-                    {
-                        Console.WriteLine("manip motore nastro uscita 3 in allarme");
+                    {                        
+                        M5AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 5))
-                    {
-                        Console.WriteLine("manip dispositivo opc disconnesso");
+                    {                     
+                        M5AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 6))
-                    {
-                        Console.WriteLine("manip air pressure missing");
+                    {                       
+                        M5AlarmsDictionary[j] = 1;
                     }
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 7))
-                    {
-                        //Console.WriteLine("");
+                    {                        
+                        M5AlarmsDictionary[j] = 1;
                     }
 
 
                     if ((Int32.Parse(exe) == 1) & (i == alarms.Length - 8))
-                    {
-                        //Console.WriteLine("");
+                    {                        
+                        M5AlarmsDictionary[j] = 1;
                     }
+                    j = j + 1;
                 }
 
             }
@@ -2133,67 +2088,14 @@ namespace GUI
             {
                 int i = 0;
                 bool[] arrayBool = (bool[])cr.Value;
-
-                lbLed1001M2.State = (arrayBool[1] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1002M2_T.State = lbLed1002M2.State;
-                lbLed1002M2.State = (arrayBool[2] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1003M2_T.State = lbLed1003M2.State;
-                lbLed1003M2.State = (arrayBool[3] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1004M2.State = (arrayBool[4] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1005M2.State = (arrayBool[5] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1006M2.State = (arrayBool[6] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1007M2.State = (arrayBool[7] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1008M2.State = (arrayBool[8] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1008M2.Label = (arrayBool[8] == true) ? "selector in AUTO" : "selector in MANUAL";
-                lbLed1009M2.State = (arrayBool[9] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1010M2.State = (arrayBool[10] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1011M2.State = (arrayBool[11] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1012M2.State = (arrayBool[12] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1013M2.State = (arrayBool[13] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1014M2.State = (arrayBool[14] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1015M2.State = (arrayBool[15] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1016M2.State = (arrayBool[16] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                //lbLed1016M2_T.State = lbLed1016M2.State;
-                lbLed1017M2.State = (arrayBool[17] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1018M2.State = (arrayBool[18] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1018M2_T.State = lbLed1018M2.State;
-                lbLed1019M2.State = (arrayBool[19] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1020M2.State = (arrayBool[20] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1021M2.State = (arrayBool[21] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1022M2.State = (arrayBool[22] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1023M2.State = (arrayBool[23] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1024M2.State = (arrayBool[24] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                
-                lbLed1025M2.State = (arrayBool[25] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1026M2.State = (arrayBool[26] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1027M2.State = (arrayBool[27] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1028M2.State = (arrayBool[28] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1029M2.State = (arrayBool[29] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1028M2_T.State = lbLed1028M2.State;
-                lbLed1029M2_T.State = lbLed1029M2.State;
-                lbLed1030M2.State = (arrayBool[30] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1031M2.State = (arrayBool[31] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1032M2.State = (arrayBool[32] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed1033M2.State = (arrayBool[33] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1034M2.State = (arrayBool[34] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1035M2.State = (arrayBool[35] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1036M2.State = (arrayBool[36] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1037M2.State = (arrayBool[37] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1038M2.State = (arrayBool[38] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1039M2.State = (arrayBool[39] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1040M2.State = (arrayBool[40] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed1041M2.State = (arrayBool[41] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1042M2.State = (arrayBool[42] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed1043M2.State = (arrayBool[43] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1044M2.State = (arrayBool[44] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1045M2.State = (arrayBool[45] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1046M2.State = (arrayBool[46] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1047M2.State = (arrayBool[47] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1048M2.State = (arrayBool[48] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
+                foreach (bool item in arrayBool)
+                {
+                    if (i != 0)
+                    {
+                        M2InputDictionary[i] = item;
+                    }
+                    i = i + 1;
+                }
             }
         }
 
@@ -2207,64 +2109,14 @@ namespace GUI
             {
                 int i = 0;
                 bool[] arrayBool = (bool[])cr.Value;
-
-                lbLed1001M3.State = (arrayBool[1] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                
-                lbLed1002M3.State = (arrayBool[2] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                
-                lbLed1003M3.State = (arrayBool[3] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1004M3.State = (arrayBool[4] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1005M3.State = (arrayBool[5] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1006M3.State = (arrayBool[6] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1007M3.State = (arrayBool[7] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1008M3.State = (arrayBool[8] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1008M3.Label = (arrayBool[8] == true) ? "selector in AUTO" : "selector in MANUAL";
-                lbLed1009M3.State = (arrayBool[9] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1010M3.State = (arrayBool[10] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1011M3.State = (arrayBool[11] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1012M3.State = (arrayBool[12] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1013M3.State = (arrayBool[13] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1014M3.State = (arrayBool[14] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1015M3.State = (arrayBool[15] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1016M3.State = (arrayBool[16] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                //lbLed1016M2_T.State = lbLed1016M2.State;
-                lbLed1017M3.State = (arrayBool[17] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1018M3.State = (arrayBool[18] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1019M3.State = (arrayBool[19] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1020M3.State = (arrayBool[20] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1021M3.State = (arrayBool[21] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1022M3.State = (arrayBool[22] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1023M3.State = (arrayBool[23] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1024M3.State = (arrayBool[24] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed1025M3.State = (arrayBool[25] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1026M3.State = (arrayBool[26] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1027M3.State = (arrayBool[27] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1028M3.State = (arrayBool[28] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1029M3.State = (arrayBool[29] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1030M3.State = (arrayBool[30] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1031M3.State = (arrayBool[31] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1032M3.State = (arrayBool[32] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed1033M3.State = (arrayBool[33] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1034M3.State = (arrayBool[34] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1035M3.State = (arrayBool[35] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1036M3.State = (arrayBool[36] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1037M3.State = (arrayBool[37] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1038M3.State = (arrayBool[38] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1039M3.State = (arrayBool[39] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1040M3.State = (arrayBool[40] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed1041M3.State = (arrayBool[41] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1042M3.State = (arrayBool[42] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
-                lbLed1043M3.State = (arrayBool[43] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1044M3.State = (arrayBool[44] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1045M3.State = (arrayBool[45] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1046M3.State = (arrayBool[46] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1047M3.State = (arrayBool[47] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-                lbLed1048M3.State = (arrayBool[48] == true) ? LBSoft.IndustrialCtrls.Leds.LBLed.LedState.On : LBSoft.IndustrialCtrls.Leds.LBLed.LedState.Off;
-
+                foreach (bool item in arrayBool)
+                {
+                    if (i != 0)
+                    {
+                        M3InputDictionary[i] = item;
+                    }
+                    i = i + 1;
+                }
             }
         }
         public void WriteAsyncDataGridViewPointReached(ClientResult cr, DataGridView dt, int dtIndex)
@@ -2325,51 +2177,54 @@ namespace GUI
             
         }
 
-        public void UpdateOPCUAMStatus(ClientResult cr, Button btn, Label lbl)
+        public void UpdateOPCUAMStatus(ClientResult cr, Dictionary<int, short> myDict)
         {
             short value = -1;
 
             if (cr == null)
             {
-                btn.BackColor = Color.Black;               
+                myDict[4] = -1;
+                //btn.BackColor = Color.Black;               
             }
             else
             {
                 if (cr.OpcResult == false)
                 {
-                    btn.BackColor = Color.Black;
+                    myDict[4] = -1;
+                    //btn.BackColor = Color.Black;
                 }
                 else
                 {
-                    value = (short)cr.Value;
+                    myDict[4] = (short)cr.Value;
+                    //value = (short)cr.Value;
 
-                    if (value == 0)
-                    {
-                        btn.BackColor = Color.Red;
-                    }
+                    //if (value == 0)
+                    //{
+                    //    btn.BackColor = Color.Red;
+                    //}
 
-                    if (value == 1)
-                    {
-                        btn.BackColor = Color.FromArgb(59, 130, 246);
-                    }
+                    //if (value == 1)
+                    //{
+                    //    btn.BackColor = Color.FromArgb(59, 130, 246);
+                    //}
 
-                    if (value == 2)
-                    {
-                        btn.BackColor = Color.Orange;
-                    }
+                    //if (value == 2)
+                    //{
+                    //    btn.BackColor = Color.Orange;
+                    //}
 
-                    if (value == 3)
-                    {
-                        btn.BackColor = Color.FromArgb(107, 227, 162);
-                    }
+                    //if (value == 3)
+                    //{
+                    //    btn.BackColor = Color.FromArgb(107, 227, 162);
+                    //}
 
-                    if (value == 4)
-                    {
-                        btn.BackColor = Color.DarkOrange;
-                    }
+                    //if (value == 4)
+                    //{
+                    //    btn.BackColor = Color.DarkOrange;
+                    //}
                 }
             }
-            WriteOnLabelMStatusAsync(cr, lbl);
+          //  WriteOnLabelMStatusAsync(cr, lbl);
         }       
 
         public void ManageOPCUAMBtnStatus(ClientResult cr, CheckBox btn)
@@ -2433,8 +2288,8 @@ namespace GUI
                     if (value == 0)
                     {
                         chk.CheckState = CheckState.Indeterminate;
-                        chk.Image = imageListStartStop.Images[4];
-                        chk.Text = "NO CONECTADO";
+                        //chk.Image = imageListStartStop.Images[4];
+                        //chk.Text = "NO CONECTADO";
                     }
 
                     if (value == 1)
@@ -2463,7 +2318,7 @@ namespace GUI
                     if (value == 0)
                     {
                         chk.CheckState = CheckState.Indeterminate;
-                        chk.Image = imageListStartStop.Images[4];
+                        //chk.Image = imageListStartStop.Images[4];
                         chk.Text = "NO CONECTADO";
                     }
 

@@ -39,12 +39,43 @@ namespace GUI
                     dataGridViewM2TeachPoints[2, 1].Value = objPoints.Points[0].V2;
                     dataGridViewM2TeachPoints[2, 2].Value = objPoints.Points[0].V3;
                     dataGridViewM2TeachPoints[2, 3].Value = objPoints.Points[0].V4;
+                    numericUpDownM2TimerBootTeach.Value = Convert.ToDecimal(objPoints.Points[0].CustomFloatParam.ToString());                    
                 }
             }
         }
 
+        public async void M2TeachLoadProgram()
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + comboBoxM2TeachProgramList.Text + config.Extensions[0]);
+                if (objPoints != null)
+                {
+                    dataGridViewM2TeachPoints[1, 0].Value = objPoints.Points[0].Q1;
+                    dataGridViewM2TeachPoints[1, 1].Value = objPoints.Points[0].Q2;
+                    dataGridViewM2TeachPoints[1, 2].Value = objPoints.Points[0].Q3;
+                    dataGridViewM2TeachPoints[1, 3].Value = objPoints.Points[0].Q4;
+                    dataGridViewM2TeachPoints[2, 0].Value = objPoints.Points[0].V1;
+                    dataGridViewM2TeachPoints[2, 1].Value = objPoints.Points[0].V2;
+                    dataGridViewM2TeachPoints[2, 2].Value = objPoints.Points[0].V3;
+                    dataGridViewM2TeachPoints[2, 3].Value = objPoints.Points[0].V4;
+                    numericUpDownM2TimerBootTeach.Value = Convert.ToDecimal(objPoints.Points[0].CustomFloatParam.ToString());                    
+                }
+            }
+        }
         private void buttonM2TeachSaveProgram_Click(object sender, EventArgs e)
         {
+            if (comboBoxM2TeachProgramList.Text == "") return;
+            if (CheckProgramSyntaxName(comboBoxM2TeachProgramList.Text) == false)
+            {
+                xDialog.MsgBox.Show("Nombre de programa incorrecto. Ejemplo: PRXXXX-YYY-XX00", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+                return;
+            }
+
             var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
             if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
@@ -59,11 +90,16 @@ namespace GUI
                 int s2 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 1].Value);
                 int s3 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 2].Value);
                 int s4 = Convert.ToInt32(dataGridViewM2TeachPoints[2, 3].Value);
-                ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM2TeachProgramList.Text);
-                prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
+
+                ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM1TeachProgramList.Text);
+                PointAxis p = new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4);
+                p.CustomFloatParam = float.Parse((numericUpDownM2TimerBootTeach.Value.ToString()));
+                
+                prgObj.AddPoint(p);
+
                 prgObj.Save(comboBoxM2TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[1], true);
                 //check if is in auto
-                if (comboBoxM2TeachProgramList.Text == comboBoxM2PrgName.Text)
+                if (comboBoxM2TeachProgramList.Text == M2PrgName)
                 {
                     RestartRequestFromM2();
                 }
@@ -82,14 +118,16 @@ namespace GUI
             if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxM1TeachRecipeName.Text);
-                comboBoxM1TeachProgramList.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
+                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxM2TeachRecipeName.Text);
+                comboBoxM2TeachProgramList.Items.Clear();
+                if (pList != null)
                 {
-                    //filter by model name
-                    if (prgName.ProgramName.Contains(comboBoxM1TeachRecipeName.Text))
-                        comboBoxM1TeachProgramList.Items.Add(prgName.ProgramName);
+                    foreach (IObjProgram prgName in pList)
+                    {
+                        //filter by model name
+                        if (prgName.ProgramName.Contains(comboBoxM2TeachRecipeName.Text))
+                            comboBoxM2TeachProgramList.Items.Add(prgName.ProgramName);
+                    }
                 }
             }
         }
@@ -605,13 +643,45 @@ namespace GUI
                     dataGridViewM2TestPoints[2, 1].Value = objPoints.Points[0].V2;
                     dataGridViewM2TestPoints[2, 2].Value = objPoints.Points[0].V3;
                     dataGridViewM2TestPoints[2, 3].Value = objPoints.Points[0].V4;
+                    numericUpDownM2BootDelayTest.Value = Convert.ToDecimal(objPoints.Points[0].CustomFloatParam);
+                }
+            }
+        }
 
+        public async void M2TestLoadProgram()
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + comboBoxM2TestProgramList.Text + config.Extensions[0]);
+                if (objPoints != null)
+                {
+
+                    dataGridViewM2TestPoints[1, 0].Value = objPoints.Points[0].Q1;
+                    dataGridViewM2TestPoints[1, 1].Value = objPoints.Points[0].Q2;
+                    dataGridViewM2TestPoints[1, 2].Value = objPoints.Points[0].Q3;
+                    dataGridViewM2TestPoints[1, 3].Value = objPoints.Points[0].Q4;
+                    dataGridViewM2TestPoints[2, 0].Value = objPoints.Points[0].V1;
+                    dataGridViewM2TestPoints[2, 1].Value = objPoints.Points[0].V2;
+                    dataGridViewM2TestPoints[2, 2].Value = objPoints.Points[0].V3;
+                    dataGridViewM2TestPoints[2, 3].Value = objPoints.Points[0].V4;
+                    numericUpDownM2BootDelayTest.Value = Convert.ToDecimal(objPoints.Points[0].CustomFloatParam);
                 }
             }
         }
 
         private void buttonM2TestSaveProgram_Click(object sender, EventArgs e)
         {
+            if (comboBoxM2TestProgramList.Text == "") return;
+            if (CheckProgramSyntaxName(comboBoxM2TestProgramList.Text) == false)
+            {
+                xDialog.MsgBox.Show("Nombre de programa incorrecto. Ejemplo: PRXXXX-YYY-XX00", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+                return;
+            }
+
             var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
             if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
@@ -627,12 +697,15 @@ namespace GUI
                 int s3 = Convert.ToInt32(dataGridViewM2TestPoints[2, 2].Value);
                 int s4 = Convert.ToInt32(dataGridViewM2TestPoints[2, 3].Value);
                 ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM2TestProgramList.Text);
-                prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
+                PointAxis p = new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4);
+                p.CustomFloatParam = float.Parse(numericUpDownM2BootDelayTest.Value.ToString());
+                prgObj.AddPoint(p);
                 prgObj.Save(comboBoxM2TestProgramList.Text + config.Extensions[0], config.ProgramsPath[1], true);
-                if (comboBoxM2TestProgramList.Text == comboBoxM2PrgName.Text)
+                if (comboBoxM2TestProgramList.Text == M2PrgName)
                 {
                     RestartRequestFromM2();
                 }
+
                 //program succesfully saved
                 xDialog.MsgBox.Show("programa " + comboBoxM2TestProgramList.Text + " guardado correctamente", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
 

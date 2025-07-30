@@ -18,7 +18,7 @@ namespace GUI
 {
     public partial class FormApp : Form
     {
-        private async void buttonM1TeachLoadProgram_Click(object sender, EventArgs e)
+        public async void buttonM1TeachLoadProgram_Click(object sender, EventArgs e)
         {
             if (comboBoxM1TeachProgramList.Text == "") return;
 
@@ -63,9 +63,58 @@ namespace GUI
             }
         }
 
+        public async void M1TeachLoadProgram()
+        {
+            if (comboBoxM1TeachProgramList.Text == "") return;
+
+            try
+            {
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                {
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                    ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                    objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM1TeachProgramList.Text + config.Extensions[0]);
+                    if (objPoints != null)
+                    {
+                        dataGridViewM1TeachPoints[1, 0].Value = objPoints.Points[0].Q1;
+                        dataGridViewM1TeachPoints[1, 1].Value = objPoints.Points[0].Q2;
+                        dataGridViewM1TeachPoints[1, 2].Value = objPoints.Points[0].Q3;
+                        dataGridViewM1TeachPoints[1, 3].Value = objPoints.Points[0].Q4;
+                        dataGridViewM1TeachPoints[2, 0].Value = objPoints.Points[0].V1;
+                        dataGridViewM1TeachPoints[2, 1].Value = objPoints.Points[0].V2;
+                        dataGridViewM1TeachPoints[2, 2].Value = objPoints.Points[0].V3;
+                        dataGridViewM1TeachPoints[2, 3].Value = objPoints.Points[0].V4;
+                        numericUpDownM1TimerBootTeach.Value = Convert.ToDecimal(objPoints.Points[0].CustomFloatParam.ToString());
+                        //program succesfully loaded
+                       // xDialog.MsgBox.Show("programa " + comboBoxM1TeachProgramList.Text + " cargado correctamente", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+                    }
+                    else
+                    {
+                        //parsing failed
+                       // xDialog.MsgBox.Show("programa " + comboBoxM1TeachProgramList.Text + " no cargado correctamente", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+                    }
+                }
+                else
+                {
+                    //parsing failed
+                    //xDialog.MsgBox.Show("programa " + comboBoxM1TeachProgramList.Text + " no cargado correctamente", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
         private async void buttonM1TeachSaveProgram_Click(object sender, EventArgs e)
         {
             if (comboBoxM1TeachProgramList.Text == "") return;
+            if (CheckProgramSyntaxName(comboBoxM1TeachProgramList.Text) == false)
+            {
+                xDialog.MsgBox.Show("Nombre de programa incorrecto. Ejemplo: PRXXXX-YYY-XX00", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+                return;
+            }
 
             try
             {
@@ -90,8 +139,8 @@ namespace GUI
 
                     prgObj.Save(comboBoxM1TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[0], true);
 
-                    //check if is in auto
-                    if (comboBoxM1TeachProgramList.Text == comboBoxM1PrgName.Text)
+                    //check if program is in auto
+                    if (comboBoxM1TeachProgramList.Text == M1PrgName)
                     {
                         RestartRequestFromM1();
                     }
@@ -702,7 +751,7 @@ namespace GUI
         {
             string keyToSend = null;
 
-            keyToSend = "pcM1StartCuttingMotor";
+            keyToSend = "pcM1StopCuttingMotor";
 
             var sendResult = await ccService.Send(keyToSend, true);
         }
@@ -711,7 +760,7 @@ namespace GUI
         {
             string keyToSend = null;
 
-            keyToSend = "pcM1StopCuttingMotor";
+            keyToSend = "pcM1StartCuttingMotor";
 
             var sendResult = await ccService.Send(keyToSend, true);
         }
@@ -865,7 +914,7 @@ namespace GUI
             }
         }
 
-        private async void buttonM1TestLoadProgram_Click(object sender, EventArgs e)
+        public async void buttonM1TestLoadProgram_Click(object sender, EventArgs e)
         {
             if (comboBoxM1TestProgramList.Text == "") return;
 
@@ -906,11 +955,56 @@ namespace GUI
             }
         }
 
+        public async void M1TestLoadProgram()
+        {
+            if (comboBoxM1TestProgramList.Text == "") return;
+
+            try
+            {
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                {
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                    ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+
+                    objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM1TestProgramList.Text + config.Extensions[0]);
+                    if (objPoints != null)
+                    {
+                        dataGridViewM1TestPoints[1, 0].Value = objPoints.Points[0].Q1;
+                        dataGridViewM1TestPoints[1, 1].Value = objPoints.Points[0].Q2;
+                        dataGridViewM1TestPoints[1, 2].Value = objPoints.Points[0].Q3;
+                        dataGridViewM1TestPoints[1, 3].Value = objPoints.Points[0].Q4;
+                        dataGridViewM1TestPoints[2, 0].Value = objPoints.Points[0].V1;
+                        dataGridViewM1TestPoints[2, 1].Value = objPoints.Points[0].V2;
+                        dataGridViewM1TestPoints[2, 2].Value = objPoints.Points[0].V3;
+                        dataGridViewM1TestPoints[2, 3].Value = objPoints.Points[0].V4;
+                        numericUpDownM1BootDelayTest.Value = Convert.ToDecimal(objPoints.Points[0].CustomFloatParam);
+                        //program succesfully loaded
+                        //xDialog.MsgBox.Show("programa " + comboBoxM1TestProgramList.Text + " cargado correctamente", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+                    }
+                    else
+                    {
+                        //program succesfully loaded
+                        //xDialog.MsgBox.Show("programa " + comboBoxM1TestProgramList.Text + " No se ha cargado correctamente", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Warning, xDialog.MsgBox.AnimateStyle.FadeIn);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
 
 
         private void buttonM1TestSaveProgram_Click(object sender, EventArgs e)
         {
             if (comboBoxM1TestProgramList.Text == "") return;
+            if (CheckProgramSyntaxName(comboBoxM1TestProgramList.Text) == false)
+            {
+                xDialog.MsgBox.Show("Nombre de programa incorrecto. Ejemplo: PRXXXX-YYY-XX00", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+                return;
+            }
 
             try
             {
@@ -935,7 +1029,7 @@ namespace GUI
                     prgObj.Save(comboBoxM1TestProgramList.Text + config.Extensions[0], config.ProgramsPath[0], true);
 
                     //check if is in auto
-                    if (comboBoxM1TestProgramList.Text == comboBoxM1PrgName.Text)
+                    if (comboBoxM1TestProgramList.Text == M1PrgName)
                     {
                         RestartRequestFromM1();
                     }
@@ -1079,7 +1173,7 @@ namespace GUI
 
                 e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
                 e.Handled = true;
-            }
+            }           
         }
 
         private void dataGridViewM1TestPoints_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -1104,6 +1198,72 @@ namespace GUI
                 e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
                 e.Handled = true;
             }
+        }
+
+
+        private void tabPageT1_5_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
+            Pen pExt = new Pen(Color.Red, 10);
+            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
+            Brush bExt = new SolidBrush(Color.Red);
+            Brush bText = new SolidBrush(Color.Black);
+            int w = 12;
+            int h = 12;
+            int i = 1;
+            g.TranslateTransform(10, 10);
+
+            foreach (KeyValuePair<int, short> entry in M1AlarmsDictionary)
+            {
+                if ( (i <= 8) || ((i > 32) & (i < 39)))
+                    {
+                    if (entry.Value == 0)
+                    {
+                        g.DrawEllipse(pInc, 0, 0, w, h);
+                        g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
+                    }
+                    else
+                    {
+                        g.DrawEllipse(pExt, 0, 0, w, h);
+                        g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
+                    }
+                }
+                string tmp1 = "M1";
+                string tmp2 = "A" + i.ToString();
+
+                if (i <= 8)
+                {
+                    g.DrawString(alarmsConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                    g.DrawString("consulte el alarma " + tmp2 + " en el manual.", new Font("Verdana", 10), bText, new Point(300, 0));
+                    g.TranslateTransform(0, 30);
+                }
+                else if ((i > 32) & (i < 39))
+                {
+                    g.DrawString(alarmsConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                    g.DrawString("consulte el alarma " + tmp2 + " en el manual.", new Font("Verdana", 10), bText, new Point(300, 0));
+                    g.TranslateTransform(0, 30);
+
+                }
+                i = i + 1;
+            }
+
+            g.TranslateTransform(0, 100);
+
+            foreach (KeyValuePair<int, short> entry in M1StateDictionary)
+            {
+                string stateStr = "";
+                if (entry.Key == 1) stateStr = "fase del ciclo";
+                if (entry.Key == 2) stateStr = "fase del la banda de carga";
+                if (entry.Key == 3) stateStr = "fase del la banda de trabajo";
+                if (entry.Key == 4) stateStr = "fase del la banda de salida";
+
+                g.DrawString(stateStr + " " + entry.Value, new Font("Verdana", 10), bText, new Point(0, 0));
+               
+                g.TranslateTransform(0, 30);
+            }
+
+            tabPageT1_5.Invalidate();
         }
     }
 }

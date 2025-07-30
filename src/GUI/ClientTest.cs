@@ -116,7 +116,7 @@ namespace GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            _clientUri = Helper.BuildUri(schemeTxtbox.Text, hostTxtbox.Text, Int32.Parse(portTxtbox.Text));
+            _clientUri = RSAInterface.Helper.Helper.BuildUri(schemeTxtbox.Text, hostTxtbox.Text, Int32.Parse(portTxtbox.Text));
             AddressLabel.Text = _clientUri.AbsoluteUri;
         }
 
@@ -131,7 +131,7 @@ namespace GUI
             {
                 try
                 {
-                    _clientUri = Helper.BuildUri(schemeTxtbox.Text, hostTxtbox.Text, Int32.Parse(portTxtbox.Text));
+                    _clientUri = RSAInterface.Helper.Helper.BuildUri(schemeTxtbox.Text, hostTxtbox.Text, Int32.Parse(portTxtbox.Text));
                     AddressLabel.Text = _clientUri.AbsoluteUri;
                     await Task.Run(() => ThreadSafeWriteMessage($"Automatically generated URI: {_clientUri.AbsoluteUri}"));
                 }
@@ -143,7 +143,7 @@ namespace GUI
             }
 
             bool connectionResult = await _client.Connect(_clientUri.AbsoluteUri);
-
+            
             if (connectionResult)
             {
                 await Task.Run(() => ThreadSafeWriteMessage("Connected"));

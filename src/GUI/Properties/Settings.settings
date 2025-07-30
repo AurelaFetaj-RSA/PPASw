@@ -9,7 +9,7 @@
       <Value Profile="(Default)">C:\PRODUCTION\Programs\R2</Value>
     </Setting>
     <Setting Name="SplashScreenFilepath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\RSA\github_repositories\PPASw\src\GUI\images\splash_screen.png</Value>
+      <Value Profile="(Default)">C:\Robotsys\PPASw\src\GUI\images\splash_screen.png</Value>
     </Setting>
     <Setting Name="OpcClient_1_URI" Type="System.String" Scope="User">
       <Value Profile="(Default)">opc.tcp://172.31.20.101:48011</Value>
@@ -21,16 +21,19 @@
       <Value Profile="(Default)">S/N: RSA9999</Value>
     </Setting>
     <Setting Name="ImagesFilepath" Type="System.String" Scope="User">
-      <Value Profile="(Default)">C:\RSA\github_repositories\PPASw\src\GUI\images</Value>
+      <Value Profile="(Default)">C:\Robotsys\PPASw\src\GUI\images</Value>
     </Setting>
     <Setting Name="OpcSimulation" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">True</Value>
+      <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="PadLaserFilePathTop" Type="System.String" Scope="User">
       <Value Profile="(Default)">\\172.31.20.90\PRODUCTION\recipe_from_pc_top.txt</Value>
     </Setting>
     <Setting Name="PadLaserFilePathBottom" Type="System.String" Scope="User">
       <Value Profile="(Default)">\\172.31.20.90\PRODUCTION\recipe_from_pc_bottom.txt</Value>
+    </Setting>
+    <Setting Name="PadLaserFilePathMedium" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\172.31.20.90\PRODUCTION\recipe_from_pc_medium.txt</Value>
     </Setting>
   </Settings>
 </SettingsFile>

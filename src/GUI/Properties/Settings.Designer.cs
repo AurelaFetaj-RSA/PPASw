@@ -12,7 +12,7 @@ namespace GUI.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.2.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.6.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -49,7 +49,7 @@ namespace GUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images\\splash_screen.png")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Robotsys\\PPASw\\src\\GUI\\images\\splash_screen.png")]
         public string SplashScreenFilepath {
             get {
                 return ((string)(this["SplashScreenFilepath"]));
@@ -97,7 +97,7 @@ namespace GUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\RSA\\github_repositories\\PPASw\\src\\GUI\\images")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Robotsys\\PPASw\\src\\GUI\\images")]
         public string ImagesFilepath {
             get {
                 return ((string)(this["ImagesFilepath"]));
@@ -109,7 +109,7 @@ namespace GUI.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool OpcSimulation {
             get {
                 return ((bool)(this["OpcSimulation"]));
@@ -140,6 +140,18 @@ namespace GUI.Properties {
             }
             set {
                 this["PadLaserFilePathBottom"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("\\\\172.31.20.90\\PRODUCTION\\recipe_from_pc_medium.txt")]
+        public string PadLaserFilePathMedium {
+            get {
+                return ((string)(this["PadLaserFilePathMedium"]));
+            }
+            set {
+                this["PadLaserFilePathMedium"] = value;
             }
         }
     }

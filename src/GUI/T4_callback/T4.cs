@@ -16,10 +16,7 @@ using RSAPoints.ConcretePoints;
 
 namespace GUI
 {
-    public partial class FormApp : Form
-    {
-      
-
+    public partial class FormApp : Form    {
         private async void buttonM3TeachLoadProgram_Click(object sender, EventArgs e)
         {
             var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
@@ -39,12 +36,20 @@ namespace GUI
                     dataGridViewM3TeachPoints[2, 1].Value = objPoints.Points[0].V2;
                     dataGridViewM3TeachPoints[2, 2].Value = objPoints.Points[0].V3;
                     dataGridViewM3TeachPoints[2, 3].Value = objPoints.Points[0].V4;
+                    numericUpDownM3TimerBootTeach.Value = Convert.ToDecimal(objPoints.Points[0].CustomFloatParam.ToString());
                 }
             }
         }
 
         private void buttonM3TeachSaveProgram_Click(object sender, EventArgs e)
         {
+            if (comboBoxM3TeachProgramList.Text == "") return;
+            if (CheckProgramSyntaxName(comboBoxM3TeachProgramList.Text) == false)
+            {
+                xDialog.MsgBox.Show("Nombre de programa incorrecto. Ejemplo: PRXXXX-YYY-XX00", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+                return;
+            }
+
             var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
             if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
@@ -59,8 +64,12 @@ namespace GUI
                 int s2 = Convert.ToInt32(dataGridViewM3TeachPoints[2, 1].Value);
                 int s3 = Convert.ToInt32(dataGridViewM3TeachPoints[2, 2].Value);
                 int s4 = Convert.ToInt32(dataGridViewM3TeachPoints[2, 3].Value);
-                ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM3TeachProgramList.Text);
-                prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
+
+                ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM1TeachProgramList.Text);
+                PointAxis p = new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4);
+                p.CustomFloatParam = float.Parse((numericUpDownM3TimerBootTeach.Value.ToString()));
+                prgObj.AddPoint(p);
+
                 prgObj.Save(comboBoxM3TeachProgramList.Text + config.Extensions[0], config.ProgramsPath[2], true);
                 if ((comboBoxM3TeachProgramList.Text == comboBoxM3PrgName_st1.Text) || (comboBoxM3TeachProgramList.Text == comboBoxM3PrgName_st2.Text))
                 {
@@ -825,7 +834,7 @@ namespace GUI
                     dataGridViewM3TestPoints[2, 1].Value = objPoints.Points[0].V2;
                     dataGridViewM3TestPoints[2, 2].Value = objPoints.Points[0].V3;
                     dataGridViewM3TestPoints[2, 3].Value = objPoints.Points[0].V4;
-
+                    numericUpDownM3BootDelayTest.Value = Convert.ToDecimal(objPoints.Points[0].CustomFloatParam);
                 }
             }
         }
@@ -833,6 +842,13 @@ namespace GUI
 
         private void buttonM3TestSaveProgram_Click(object sender, EventArgs e)
         {
+            if (comboBoxM3TestProgramList.Text == "") return;
+            if (CheckProgramSyntaxName(comboBoxM3TestProgramList.Text) == false)
+            {
+                xDialog.MsgBox.Show("Nombre de programa incorrecto. Ejemplo: PRXXXX-YYY-XX00", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+                return;
+            }
+
             var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
             if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
@@ -848,7 +864,10 @@ namespace GUI
                 int s3 = Convert.ToInt32(dataGridViewM3TestPoints[2, 2].Value);
                 int s4 = Convert.ToInt32(dataGridViewM3TestPoints[2, 3].Value);
                 ConcretePointsContainer<PointAxis> prgObj = new ConcretePointsContainer<PointAxis>(comboBoxM3TestProgramList.Text);
-                prgObj.AddPoint(new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4));
+
+                PointAxis p = new PointAxis(p1, p2, p3, p4, s1, s2, s3, s4);
+                p.CustomFloatParam = float.Parse(numericUpDownM3BootDelayTest.Value.ToString());
+                prgObj.AddPoint(p);
                 prgObj.Save(comboBoxM3TestProgramList.Text + config.Extensions[0], config.ProgramsPath[2], true);
                 if ((comboBoxM3TestProgramList.Text == comboBoxM3PrgName_st1.Text) || (comboBoxM3TestProgramList.Text == comboBoxM3PrgName_st2.Text))
                 {
@@ -856,6 +875,94 @@ namespace GUI
                 }
                 //program succesfully saved
                 xDialog.MsgBox.Show("program " + comboBoxM3TestProgramList.Text + " succesfully saved", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Application, xDialog.MsgBox.AnimateStyle.FadeIn);
+            }
+        }
+
+        private void tabPageT4_3_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
+            Pen pExt = new Pen(Color.Black, 10);
+            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
+            Brush bExt = new SolidBrush(Color.Black);
+            Brush bText = new SolidBrush(Color.Black);
+            int w = 12;
+            int h = 12;
+            int i = 1001;
+            g.TranslateTransform(10, 10);
+
+            foreach (KeyValuePair<int, bool> entry in M3InputDictionary)
+            {
+                if (entry.Value == true)
+                {
+                    g.DrawEllipse(pInc, 0, 0, w, h);
+                    g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                else
+                {
+                    g.DrawEllipse(pExt, 0, 0, w, h);
+                    g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                string tmp1 = "M3" + "_INPUT";
+                string tmp2 = i.ToString();
+                g.DrawString(inputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                if (i < 1024)
+                    g.TranslateTransform(0, 30);
+                else if (i == 1024)
+                {
+                    g.ResetTransform();
+                    g.TranslateTransform(360, 10);
+                }
+                else
+                {
+                    g.TranslateTransform(0, 30);
+
+                }
+                i = i + 1;
+            }
+        }
+
+        private void tabPageT4_4_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
+            Pen pExt = new Pen(Color.Black, 10);
+            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
+            Brush bExt = new SolidBrush(Color.Black);
+            Brush bText = new SolidBrush(Color.Black);
+            int w = 12;
+            int h = 12;
+            int i = 2001;
+            g.TranslateTransform(10, 10);
+
+            foreach (KeyValuePair<int, bool> entry in M4OutputDictionary)
+            {
+                if (entry.Value == true)
+                {
+                    g.DrawEllipse(pInc, 0, 0, w, h);
+                    g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                else
+                {
+                    g.DrawEllipse(pExt, 0, 0, w, h);
+                    g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                string tmp1 = "M4" + "_OUTPUT";
+                string tmp2 = i.ToString();
+                g.DrawString(outputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                if (i < 2024)
+                    g.TranslateTransform(0, 30);
+                else if (i == 2024)
+                {
+                    g.ResetTransform();
+                    g.TranslateTransform(360, 10);
+                }
+                else
+                {
+                    g.TranslateTransform(0, 30);
+
+                }
+                i = i + 1;
             }
         }
     }

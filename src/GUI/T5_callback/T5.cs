@@ -283,6 +283,93 @@ namespace GUI
         }
 
 
+        private void tabPageT5_3_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
+            Pen pExt = new Pen(Color.Black, 10);
+            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
+            Brush bExt = new SolidBrush(Color.Black);
+            Brush bText = new SolidBrush(Color.Black);
+            int w = 12;
+            int h = 12;
+            int i = 2001;
+            g.TranslateTransform(10, 10);
+
+            foreach (KeyValuePair<int, bool> entry in M5OutputDictionary)
+            {
+                if (entry.Value == true)
+                {
+                    g.DrawEllipse(pInc, 0, 0, w, h);
+                    g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                else
+                {
+                    g.DrawEllipse(pExt, 0, 0, w, h);
+                    g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                string tmp1 = "M5" + "_OUTPUT";
+                string tmp2 = i.ToString();
+                g.DrawString(outputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                if (i < 2024)
+                    g.TranslateTransform(0, 30);
+                else if (i == 2024)
+                {
+                    g.ResetTransform();
+                    g.TranslateTransform(360, 10);
+                }
+                else
+                {
+                    g.TranslateTransform(0, 30);
+
+                }
+                i = i + 1;
+            }
+        }
+
+        private void tabPageT5_2_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
+            Pen pExt = new Pen(Color.Black, 10);
+            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
+            Brush bExt = new SolidBrush(Color.Black);
+            Brush bText = new SolidBrush(Color.Black);
+            int w = 12;
+            int h = 12;
+            int i = 1001;
+            g.TranslateTransform(10, 10);
+
+            foreach (KeyValuePair<int, bool> entry in M5InputDictionary)
+            {
+                if (entry.Value == true)
+                {
+                    g.DrawEllipse(pInc, 0, 0, w, h);
+                    g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                else
+                {
+                    g.DrawEllipse(pExt, 0, 0, w, h);
+                    g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                string tmp1 = "M5" + "_INPUT";
+                string tmp2 = i.ToString();
+                g.DrawString(inputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                if (i < 1024)
+                    g.TranslateTransform(0, 30);
+                else if (i == 1024)
+                {
+                    g.ResetTransform();
+                    g.TranslateTransform(360, 10);
+                }
+                else
+                {
+                    g.TranslateTransform(0, 30);
+
+                }
+                i = i + 1;
+            }
+        }
 
     }
 }

@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using WebApi;
-using RSACommon.Logger;
+using RSAInterface.Logger;
 using RSACommon.WebApiDefinitions;
 using LidorSystems.IntegralUI.Containers;
 using System.IO;
@@ -36,6 +36,7 @@ using xDialog;
 using PPAUtils;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using RSAInterface;
 
 namespace GUI
 {
@@ -58,13 +59,16 @@ namespace GUI
 
         //create static instance of gui configurator (singleton)
         public static Configurator guiConfigurator = new Configurator();
-        //create static instance of io configurator (singleton)
-        public static Configurator ioConfigurator = new Configurator();
+        //create static instance of input configurator (singleton)
+        public static Configurator inputConfigurator = new Configurator();
+        //create static instance of output configurator (singleton)
+        public static Configurator outputConfigurator = new Configurator();
         //create static instance of alarms configurator (singleton)
         public static Configurator alarmsConfigurator = new Configurator();
         //create static instance of auto configurator (singleton)
         public static Configurator autoConfigurator = new Configurator();
-
+        public static string loginLevel = "Operador";
+        public static string loginPassword = "";
         public static string M1PrgName = "";
         public static string M2PrgName = "";
         public static string M3PrgName1 = "";
@@ -77,9 +81,55 @@ namespace GUI
         public static string M4inc = "";
         public static string M5inc = "";
         public static string M6inc = "";
+        public static string M3InLine = "0";
         public static bool restartApp = false;
 
         public DateTime dt = DateTime.Now;
+
+        public Dictionary<int, bool> M1InputDictionary = new Dictionary<int, bool>();
+        public Dictionary<int, bool> M1OutputDictionary = new Dictionary<int, bool>();
+        public Dictionary<int, bool> M2InputDictionary = new Dictionary<int, bool>();
+        public Dictionary<int, bool> M2OutputDictionary = new Dictionary<int, bool>();
+        public Dictionary<int, bool> M3InputDictionary = new Dictionary<int, bool>();
+        public Dictionary<int, bool> M3OutputDictionary = new Dictionary<int, bool>();
+        public Dictionary<int, bool> M4InputDictionary = new Dictionary<int, bool>();
+        public Dictionary<int, bool> M4OutputDictionary = new Dictionary<int, bool>();
+        public Dictionary<int, bool> M5InputDictionary = new Dictionary<int, bool>();
+        public Dictionary<int, bool> M5OutputDictionary = new Dictionary<int, bool>();
+
+        public Dictionary<int, short> M1AlarmsDictionary = new Dictionary<int, short>();
+        public Dictionary<int, short> M2AlarmsDictionary = new Dictionary<int, short>();
+        public Dictionary<int, short> M3AlarmsDictionary = new Dictionary<int, short>();
+        public Dictionary<int, short> M4AlarmsDictionary = new Dictionary<int, short>();
+        public Dictionary<int, short> M5AlarmsDictionary = new Dictionary<int, short>();
+
+        public Dictionary<int, short> M1StateDictionary = new Dictionary<int, short>();
+        public Dictionary<int, short> M2StateDictionary = new Dictionary<int, short>();
+        public Dictionary<int, short> M3StateDictionary = new Dictionary<int, short>();
+        public Dictionary<int, short> M4StateDictionary = new Dictionary<int, short>();
+        public Dictionary<int, short> M5StateDictionary = new Dictionary<int, short>();
+
+        public Dictionary<int, short> M1AutoDictionary = new Dictionary<int, short>();
+        public Dictionary<int, short> M2AutoDictionary = new Dictionary<int, short>();
+        public Dictionary<int, short> M3AutoDictionary = new Dictionary<int, short>();
+        public Dictionary<int, short> M4AutoDictionary = new Dictionary<int, short>();
+        public Dictionary<int, short> M5AutoDictionary = new Dictionary<int, short>();
+        public Dictionary<int, short> M6AutoDictionary = new Dictionary<int, short>();
+        public Dictionary<int, string> ModelNameDictionary = new Dictionary<int, string>();
+        public Dictionary<int, string> DescriptionDictionary = new Dictionary<int, string>();
+
+        public Pen pBlack = new Pen(Color.Black, 10);
+        public Brush bBlack = new SolidBrush(Color.Black);
+        public Pen pRed = new Pen(Color.Red, 10);
+        public Brush bRed = new SolidBrush(Color.Red);
+        public Pen pOrange = new Pen(Color.Orange, 10);
+        public Brush bOrange = new SolidBrush(Color.Orange);
+        public Pen pDarkOrange = new Pen(Color.DarkOrange, 10);
+        public Brush bDarkOrange = new SolidBrush(Color.DarkOrange);
+        public Pen pc1 = new Pen(Color.FromArgb(59, 130, 246), 10);
+        public Brush bc1 = new SolidBrush(Color.FromArgb(59, 130, 246));
+        public Pen pc2 = new Pen(Color.FromArgb(107, 227, 162), 10);
+        public Brush bc2 = new SolidBrush(Color.FromArgb(107, 227, 162));
 
         public enum Priority
         {
@@ -99,7 +149,7 @@ namespace GUI
             line = 6
         }
         public FormApp(SplashScreen splashScreen)
-        {
+        {            
             _splashScreen = splashScreen;
             _splashScreen?.WriteOnTextboxAsync($"Initialization...");
 
@@ -112,7 +162,7 @@ namespace GUI
             InitGUI();
 
             _splashScreen?.WriteOnTextboxAsync($"Set the GUI");
-            //StartDiagnosticGUI();
+            StartDiagnosticGUI();
             _splashScreen?.WriteOnTextboxAsync($"Loaded Diagnostic File");
 
             //Splash Screen filler
@@ -191,6 +241,16 @@ namespace GUI
 
         private async void InitLastParameter()
         {
+            //load all config files
+            guiConfigurator.LoadFromFile("guiconfig.xml", Configurator.FileType.Xml);
+            RefreshModelNameComboBox();
+            InitGUISettings();
+            inputConfigurator.LoadFromFile("inputconfig.xml", Configurator.FileType.Xml);
+            outputConfigurator.LoadFromFile("outputconfig.xml", Configurator.FileType.Xml);
+
+            alarmsConfigurator.LoadFromFile("alarmsconfig.xml", Configurator.FileType.Xml);
+            autoConfigurator.LoadFromFile("autoconfig.xml", Configurator.FileType.Xml);
+
             #region (* init datagridviewM1 *)
             dataGridViewM1TeachPoints.Rows.Add(4);
             dataGridViewM1TeachPoints.Rows[0].Cells[0].Value = 1;
@@ -302,22 +362,26 @@ namespace GUI
             dataGridViewM3TestPoints.ClearSelection();
             #endregion
 
-            RefreshModelNameComboBox();
+            
 
             #region(* init tabControlMain *)
-            tabPageT0.Text = "";
-            tabPageT1.Text = "";
-            tabPageT2.Text = "";
-            tabPageT3.Text = "";
-            tabPageT4.Text = "";
-            tabPageT5.Text = "";
-            tabPageT6.Text = "";
-            tabPageT7.Text = "";
             tabControlMain.SelectedPage = tabPageT0;
+            if (M3InLine == "1")
+            {
+                tabPageT4.Enabled = true;
+                groupBoxM3.Visible = true;
+                groupBoxM6.Visible = true;
+            }
+            else
+            {
+                tabPageT4.Enabled = false;
+                groupBoxM3.Visible = false;
+                groupBoxM6.Visible = false;
+            }
             #endregion
 
-            #region(* init T0 *)
-            TimeZone zone = TimeZone.CurrentTimeZone;
+                #region(* init T0 *)
+                TimeZone zone = TimeZone.CurrentTimeZone;
             DateTime local = zone.ToLocalTime(DateTime.Now);
             toolStripStatusLabelDateTime.Text = local.ToString();
             toolStripStatusLabelSN.Text = Properties.Settings.Default.RSASN;
@@ -334,23 +398,63 @@ namespace GUI
             #endregion
 
 
-            guiConfigurator.LoadFromFile("guiconfig.xml", Configurator.FileType.Xml);
-            InitGUISettings();
-            ioConfigurator.LoadFromFile("ioconfig.xml", Configurator.FileType.Xml);
-            InitM1IOSettings();
-            InitM2IOSettings();
-            InitM3IOSettings();
-            InitM5IOSettings();
-            alarmsConfigurator.LoadFromFile("alarmsconfig.xml", Configurator.FileType.Xml);
-            InitM1AlarmsSettings();
-            autoConfigurator.LoadFromFile("autoconfig.xml", Configurator.FileType.Xml);
             InitAutoSettings();
 
-            DateTime value = DateTime.Now;
+            //DateTime value = DateTime.Now;
+            int i = 1;
+            for(i = 1; i<=48;i++)
+            {
+                M1InputDictionary.Add(i, false);
+                M1OutputDictionary.Add(i, false);
+                M2InputDictionary.Add(i, false);
+                M2OutputDictionary.Add(i, false);
+                M3InputDictionary.Add(i, false);
+                M3OutputDictionary.Add(i, false);
+                M4InputDictionary.Add(i, false);
+                M4OutputDictionary.Add(i, false);
+                M5InputDictionary.Add(i, false);
+                M5OutputDictionary.Add(i, false);
+            }          
 
-            
+            for (i = 1; i <= 64; i++)
+            {
+                M1AlarmsDictionary.Add(i, 0);
+                M2AlarmsDictionary.Add(i, 0);
+                M3AlarmsDictionary.Add(i, 0);
+                M4AlarmsDictionary.Add(i, 0);
+                M5AlarmsDictionary.Add(i, 0);
+            }
 
+            for (i = 1; i <= 4; i++)
+            {
+                M1StateDictionary.Add(i, 0);
+            }
 
+            for (i = 1; i <= 5; i++)
+            {
+                M5StateDictionary.Add(i, 0);
+            }
+
+            for (i = 1; i <= 3; i++)
+            {
+                M2StateDictionary.Add(i, 0);
+                M3StateDictionary.Add(i, 0);
+                M4StateDictionary.Add(i, 0);
+            }
+
+            for (i = 1; i <= 4; i++)
+            {
+                M1AutoDictionary.Add(i, 0);
+                M2AutoDictionary.Add(i, 0);
+                M4AutoDictionary.Add(i, 0);
+            }
+            for (i = 1; i <= 5; i++)
+            {
+                M3AutoDictionary.Add(i, 0);
+                M5AutoDictionary.Add(i, 0);
+            }
+            M6AutoDictionary.Add(1, 0);
+            M6AutoDictionary.Add(4, 0);
         }
         public void Start()
         {
@@ -375,7 +479,7 @@ namespace GUI
                 //modelCombobox.Items.AddRange(progRS.ModelDictionary.Keys.ToArray<string>());
             }
         }
-
+        public LidorSystems.IntegralUI.Containers.TabPage current = null;
         private void tabControlMain_SelectedPageChanged(object sender, LidorSystems.IntegralUI.ObjectEventArgs e)
         {
             if (this.tabControlMain.SelectedPage != null)
@@ -386,6 +490,7 @@ namespace GUI
                 LidorSystems.IntegralUI.Containers.TabPage parentPage = this.tabControlMain.SelectedPage;
 
                 if (parentPage.Pages.Count != 0) nextPage = parentPage.Pages[0];
+            //    else nextPage = this.tabControlMain.SelectedPage;
                 if (nextPage != null)
                 {
 
@@ -401,7 +506,35 @@ namespace GUI
                     nextPage.ResumeLayout();
                 }
                 parentPage.SuspendLayout();
-                
+
+                if (parentPage.Index == 1)
+                {
+                    //trimmer tab
+                    //carico il programma in TEACH
+                    comboBoxM1TeachProgramList.Text = M1PrgName;
+                    M1TeachLoadProgram();
+                    //carico il programma in TEST
+                    comboBoxM1TestProgramList.Text = M1PrgName;
+                    M1TestLoadProgram();
+                }
+
+                if (parentPage.Index == 3)
+                {
+                    //padint tab
+                    //carico il programma in TEACH
+                    comboBoxM2TeachProgramList.Text = M2PrgName;
+                    M2TeachLoadProgram();
+                    //carico il programma in TEST
+                    comboBoxM2TestProgramList.Text = M2PrgName;
+                    M2TestLoadProgram();
+                }
+
+                if (parentPage.Index == 6)
+                {
+                    //ask user to close application
+                    this.WindowState = FormWindowState.Minimized;
+                }
+
                 if (parentPage.Index == 7)
                 {
                     //ask user to close application
@@ -414,6 +547,7 @@ namespace GUI
                         System.Windows.Forms.Application.Exit();
                     }
                 }
+
             }
             else
             {
@@ -424,12 +558,9 @@ namespace GUI
         public void SaveGUISettings()
         {
             //save configuration file plconfig.xml
-            guiConfigurator.AddValue("T0", "M1PRGNAME", comboBoxM1PrgName.Text, true);
-            guiConfigurator.AddValue("T0", "M2PRGNAME", comboBoxM2PrgName.Text, true);
             guiConfigurator.AddValue("T0", "M3PRGNAME1", comboBoxM3PrgName_st1.Text, true);
             guiConfigurator.AddValue("T0", "M3PRGNAME2", comboBoxM3PrgName_st2.Text, true);
-            guiConfigurator.AddValue("T0", "M4PRGNAME", comboBoxM4PrgName.Text, true);
-
+            guiConfigurator.AddValue("T0", "AUTOPRGNAME", comboBoxAutoPrgName.Text, true);
             guiConfigurator.AddValue("T0", "M1INC", (checkBoxM1Inclusion.CheckState == CheckState.Checked)?"1":"0", true);
             guiConfigurator.AddValue("T0", "M2INC", (checkBoxM2Inclusion.CheckState == CheckState.Checked) ? "1" : "0", true);
             guiConfigurator.AddValue("T0", "M3INC", (checkBoxM3Inclusion.CheckState == CheckState.Checked) ? "1" : "0", true);
@@ -466,11 +597,13 @@ namespace GUI
             
             guiConfigurator.AddValue("T3_2", "PRGNAME", comboBoxM3TestProgramList.Text, true);
             guiConfigurator.AddValue("T3_2", "RECIPENAME", comboBoxM3TestRecipeName.Text, true);
-
+            guiConfigurator.AddValue("LOGIN", "PWD", loginPassword, true);
+            guiConfigurator.AddValue("T2_1", "TIMEREXITBELT", numericUpDownM2ExitBeltTimer.Value.ToString(), true);
+            guiConfigurator.AddValue("T3_1", "TIMEREXITBELT", numericUpDownM3TimerExitBelt.Value.ToString(), true);
             guiConfigurator.Save("guiconfig.xml", Configurator.FileType.Xml);
         }
 
-        private async void InitAutoSettings()
+        private void InitAutoSettings()
         {
             //save configuration file plconfig.xml
             groupBoxM1.Text = autoConfigurator.GetValue("T0", "G1NAME", "");
@@ -479,28 +612,21 @@ namespace GUI
             groupBoxM4.Text = autoConfigurator.GetValue("T0", "G4NAME", "");
             groupBoxM5.Text = autoConfigurator.GetValue("T0", "G5NAME", "");
             groupBoxM6.Text = autoConfigurator.GetValue("T0", "G6NAME", "");
-            groupBoxM6.Text = autoConfigurator.GetValue("T0", "PHASE", "");
-            groupBoxM6.Text = autoConfigurator.GetValue("T0", "CYCLENUMBER", "");
         }
 
         private async void InitGUISettings()
         {
             //save configuration file plconfig.xml
-            comboBoxM1PrgName.Text = guiConfigurator.GetValue("T0", "M1PRGNAME", "");
-            M1PrgName = comboBoxM1PrgName.Text;
-            SendSizeFromM1ProgramToOpc();
-
-            comboBoxM2PrgName.Text = guiConfigurator.GetValue("T0", "M2PRGNAME", "");
-            M2PrgName = comboBoxM2PrgName.Text;
-            comboBoxM3PrgName_st1.Text = guiConfigurator.GetValue("T0", "M3PRGNAME1", "");
+            comboBoxAutoPrgName.Text = guiConfigurator.GetValue("T0", "AUTOPRGNAME", "");
+            M1PrgName = comboBoxAutoPrgName.Text;
+            M2PrgName = comboBoxAutoPrgName.Text;
             M3PrgName1 = comboBoxM3PrgName_st1.Text;
             comboBoxM3PrgName_st2.Text = guiConfigurator.GetValue("T0", "M3PRGNAME2", "");
             M3PrgName2 = comboBoxM3PrgName_st2.Text;
             SendStationRGM3ToOpc(M3PrgName1, M3PrgName2);
-            comboBoxM4PrgName.Text = guiConfigurator.GetValue("T0", "M4PRGNAME", "");
-            M4PrgName = comboBoxM4PrgName.Text;
+            SendSizeFromM1ProgramToOpc();
+            M4PrgName = comboBoxAutoPrgName.Text;
             checkBoxM1Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M1INC", "") == "1")?CheckState.Checked:CheckState.Unchecked;
-
             checkBoxM2Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M2INC", "") == "1") ? CheckState.Checked : CheckState.Unchecked;
             checkBoxM3Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M3INC", "") == "1") ? CheckState.Checked : CheckState.Unchecked;
             checkBoxM4Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M4INC", "") == "1") ? CheckState.Checked : CheckState.Unchecked;
@@ -512,15 +638,132 @@ namespace GUI
             M4inc = guiConfigurator.GetValue("T0", "M4INC", "");
             M5inc = guiConfigurator.GetValue("T0", "M5INC", "");
             M6inc = guiConfigurator.GetValue("T0", "M6INC", "");
+            M3InLine = guiConfigurator.GetValue("MAIN", "M3INLINE", "0");
+            loginPassword = guiConfigurator.GetValue("LOGIN", "PWD", "RSA");
             RestartRequestFromM1();
+            comboBoxM1TeachProgramList.Text = M1PrgName;
+            comboBoxM1TestProgramList.Text = M1PrgName;
+            M1TeachLoadProgram();            
+            M1TestLoadProgram();
             RestartRequestFromM2();
+            comboBoxM2TeachProgramList.Text = M2PrgName;
+            comboBoxM2TestProgramList.Text = M2PrgName;
+            M2TeachLoadProgram();            
+            M2TestLoadProgram();
             RestartRequestFromM3();
             RestartRequestFromM4();
             RestartRequestFromM5();
             RestartRequestFromM6();
-
+            UpdateGUIByUser();
+            comboBoxT0RecipeName.Text = guiConfigurator.GetValue("T0", "RECIPENAME", "");
+            comboBoxM1TeachRecipeName.Text = comboBoxT0RecipeName.Text;
+            comboBoxM1TestRecipeName.Text = comboBoxT0RecipeName.Text;
+            comboBoxM2TeachRecipeName.Text = comboBoxT0RecipeName.Text;
+            comboBoxM2TestRecipeName.Text = comboBoxT0RecipeName.Text;
+            comboBoxM3TeachRecipeName.Text = comboBoxT0RecipeName.Text;
+            comboBoxM3TestRecipeName.Text = comboBoxT0RecipeName.Text;
             string keyToSend = null;
 
+            //init machine inclusion to OPC
+            InitSendInclusionToOpc();
+
+            if (ccService == null) return;
+
+            numericUpDownM6OnPercentage.Value = short.Parse(guiConfigurator.GetValue("T0", "M6PERCENTAGE", ""));
+            if (ccService.ClientIsConnected)
+            {
+                keyToSend = "pcM6ONPercentage";
+                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM6OnPercentage.Value.ToString()));
+            }        
+
+          
+
+            numericUpDownM1JogSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T1_1", "JOGSPEED", "10"));
+            if (ccService.ClientIsConnected)
+            {
+                keyToSend = "pcM1JogSpeed";
+                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1JogSpeed.Value.ToString()));
+            }
+            
+            numericUpDownM1ManualQuote.Value = Convert.ToDecimal(guiConfigurator.GetValue("T1_1", "MANUALQUOTE", "10"));
+            if (ccService.ClientIsConnected)
+            {
+                keyToSend = "pcM1ManualQuote";
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM1ManualQuote.Value.ToString()));
+            }
+
+            numericUpDownM1ManualSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T1_1", "MANUALSPEED", "10"));
+            if (ccService.ClientIsConnected)
+            {
+                keyToSend = "pcM1ManualSpeed";
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM1ManualSpeed.Value.ToString()));
+            }
+
+            numericUpDownM2JogSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T2_1", "JOGSPEED", "10"));
+            if (ccService.ClientIsConnected)
+            {
+                keyToSend = "pcM2JogSpeed";
+
+                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM2JogSpeed.Value.ToString()));
+            }
+
+            numericUpDownM2ManualQuote.Value = Convert.ToDecimal(guiConfigurator.GetValue("T2_1", "MANUALQUOTE", "10"));
+            if (ccService.ClientIsConnected)
+            {
+                keyToSend = "pcM2ManualQuote";
+                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM2ManualQuote.Value.ToString()));
+            }
+
+            numericUpDownM2ManualSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T2_1", "MANUALSPEED", "10"));
+            if (ccService.ClientIsConnected)
+            {
+                keyToSend = "pcM2ManualSpeed";
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM2ManualSpeed.Value.ToString()));
+            }
+
+            comboBoxM3TeachProgramList.Text = guiConfigurator.GetValue("T3_1", "PRGNAME", "");
+            comboBoxM3TeachRecipeName.Text = guiConfigurator.GetValue("T3_1", "RECIPENAME", "");
+            numericUpDownM3JogSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T3_1", "JOGSPEED", "10"));
+            if (ccService.ClientIsConnected)
+            {
+                keyToSend = "pcM3JogSpeed";
+                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3JogSpeed.Value.ToString()));
+            }
+
+            numericUpDownM3ManualQuote.Value = Convert.ToDecimal(guiConfigurator.GetValue("T3_1", "MANUALQUOTE", "10"));
+            if (ccService.ClientIsConnected)
+            {
+                keyToSend = "pcM3ManualQuote";
+                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3ManualQuote.Value.ToString()));
+            }
+            numericUpDownM3ManualSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T3_1", "MANUALSPEED", "10"));
+            if (ccService.ClientIsConnected)
+            {
+                keyToSend = "pcM3ManualSpeed";
+                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3ManualSpeed.Value.ToString()));
+            }
+            comboBoxM3TestProgramList.Text = guiConfigurator.GetValue("T3_2", "PRGNAME", "");
+            comboBoxM3TestRecipeName.Text = guiConfigurator.GetValue("T3_2", "RECIPENAME", "");
+
+            numericUpDownM3TimerExitBelt.Value = Convert.ToDecimal(guiConfigurator.GetValue("T3_1", "TIMEREXITBELT", "0.1"));
+            if (ccService.ClientIsConnected)
+            {
+                keyToSend = "pcM3AutoTimerExitBelt";
+                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3TimerExitBelt.Value.ToString()));
+            }
+
+            numericUpDownM2ExitBeltTimer.Value = Convert.ToDecimal(guiConfigurator.GetValue("T2_1", "TIMEREXITBELT", "0.1"));
+            if (ccService.ClientIsConnected)
+            {
+                keyToSend = "pcM2AutoTimerExitBelt";
+                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM2ExitBeltTimer.Value.ToString()));
+            }
+        }
+
+        private async void InitSendInclusionToOpc()
+        {
+            string keyToSend = null;
+            if (ccService == null) return;
 
             if (ccService.ClientIsConnected)
             {
@@ -555,18 +798,21 @@ namespace GUI
                     checkBoxM2Inclusion.ImageIndex = 2;
                 }
 
-                keyToSend = "pcM3Inclusion";
-                chkValue = (M3inc == "1") ? true : false;
-
-                sendResult = await ccService.Send(keyToSend, chkValue);
-
-                if (sendResult.OpcResult)
+                if (M3InLine == "1")
                 {
-                    checkBoxM3Inclusion.ImageIndex = (chkValue) ? 0 : 1;
-                }
-                else
-                {
-                    checkBoxM3Inclusion.ImageIndex = 2;
+                    keyToSend = "pcM3Inclusion";
+                    chkValue = (M3inc == "1") ? true : false;
+
+                    sendResult = await ccService.Send(keyToSend, chkValue);
+
+                    if (sendResult.OpcResult)
+                    {
+                        checkBoxM3Inclusion.ImageIndex = (chkValue) ? 0 : 1;
+                    }
+                    else
+                    {
+                        checkBoxM3Inclusion.ImageIndex = 2;
+                    }
                 }
 
 
@@ -614,227 +860,12 @@ namespace GUI
                     checkBoxM6Inclusion.ImageIndex = 2;
                 }
             }
-
-            numericUpDownM6OnPercentage.Value = short.Parse(guiConfigurator.GetValue("T0", "M6PERCENTAGE", ""));
-            if (ccService.ClientIsConnected)
-            {
-                keyToSend = "pcM6ONPercentage";
-
-                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM6OnPercentage.Value.ToString()));
-
-                if (sendResult.OpcResult)
-                {
-                }
-                else
-                {
-
-                }
-            }        
-
-            comboBoxT0RecipeName.Text = guiConfigurator.GetValue("T0", "RECIPENAME", "");
-            comboBoxM1TeachProgramList.Text = guiConfigurator.GetValue("T1_1", "PRGNAME", "");
-            comboBoxM1TeachRecipeName.Text = guiConfigurator.GetValue("T1_1", "RECIPENAME", "");
-
-            numericUpDownM1JogSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T1_1", "JOGSPEED", "10"));
-            if (ccService.ClientIsConnected)
-            {
-                keyToSend = "pcM1JogSpeed";
-
-                var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1JogSpeed.Value.ToString()));
-
-                if (sendResult.OpcResult)
-                {
-                }
-                else
-                {
-
-                }
-            }
-
-            
-            numericUpDownM1ManualQuote.Value = Convert.ToDecimal(guiConfigurator.GetValue("T1_1", "MANUALQUOTE", "10"));
-            if (ccService.ClientIsConnected)
-            {
-                keyToSend = "pcM1ManualQuote";
-                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM1ManualQuote.Value.ToString()));
-
-                if (sendResult.OpcResult)
-                {
-                }
-                else
-                {
-
-                }
-            }
-
-            numericUpDownM1ManualSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T1_1", "MANUALSPEED", "10"));
-            if (ccService.ClientIsConnected)
-            {
-                keyToSend = "pcM1ManualSpeed";
-                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM1ManualSpeed.Value.ToString()));
-
-                if (sendResult.OpcResult)
-                {
-                }
-                else
-                {
-
-                }
-            }
-            comboBoxM1TestProgramList.Text = guiConfigurator.GetValue("T1_2", "PRGNAME", "");
-            comboBoxM1TestRecipeName.Text = guiConfigurator.GetValue("T1_2", "RECIPENAME", "");
-
-
-            comboBoxM2TeachProgramList.Text = guiConfigurator.GetValue("T2_1", "PRGNAME", "");
-            comboBoxM2TeachRecipeName.Text = guiConfigurator.GetValue("T2_1", "RECIPENAME", "");
-            numericUpDownM2JogSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T2_1", "JOGSPEED", "10"));
-            if (ccService.ClientIsConnected)
-            {
-                keyToSend = "pcM2JogSpeed";
-
-                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM2JogSpeed.Value.ToString()));
-
-                if (sendResult.OpcResult)
-                {
-                }
-                else
-                {
-
-                }
-            }
-
-            numericUpDownM2ManualQuote.Value = Convert.ToDecimal(guiConfigurator.GetValue("T2_1", "MANUALQUOTE", "10"));
-            if (ccService.ClientIsConnected)
-            {
-                keyToSend = "pcM2ManualQuote";
-                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM2ManualQuote.Value.ToString()));
-
-                if (sendResult.OpcResult)
-                {
-                }
-                else
-                {
-
-                }
-            }
-            numericUpDownM2ManualSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T2_1", "MANUALSPEED", "10"));
-            if (ccService.ClientIsConnected)
-            {
-                keyToSend = "pcM2ManualSpeed";
-                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM2ManualSpeed.Value.ToString()));
-
-                if (sendResult.OpcResult)
-                {
-                }
-                else
-                {
-
-                }
-            }
-            comboBoxM2TestProgramList.Text = guiConfigurator.GetValue("T2_2", "PRGNAME", "");
-            comboBoxM2TestRecipeName.Text = guiConfigurator.GetValue("T2_2", "RECIPENAME", "");
-
-            comboBoxM3TeachProgramList.Text = guiConfigurator.GetValue("T3_1", "PRGNAME", "");
-            comboBoxM3TeachRecipeName.Text = guiConfigurator.GetValue("T3_1", "RECIPENAME", "");
-            numericUpDownM3JogSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T3_1", "JOGSPEED", "10"));
-            if (ccService.ClientIsConnected)
-            {
-                keyToSend = "pcM3JogSpeed";
-
-                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3JogSpeed.Value.ToString()));
-
-                if (sendResult.OpcResult)
-                {
-                }
-                else
-                {
-
-                }
-            }
-
-            numericUpDownM3ManualQuote.Value = Convert.ToDecimal(guiConfigurator.GetValue("T3_1", "MANUALQUOTE", "10"));
-            if (ccService.ClientIsConnected)
-            {
-                keyToSend = "pcM3ManualQuote";
-                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3ManualQuote.Value.ToString()));
-
-                if (sendResult.OpcResult)
-                {
-                }
-                else
-                {
-
-                }
-            }
-            numericUpDownM3ManualSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T3_1", "MANUALSPEED", "10"));
-            if (ccService.ClientIsConnected)
-            {
-                keyToSend = "pcM3ManualSpeed";
-                var sendResult = await ccService.Send(keyToSend, Convert.ToDecimal(numericUpDownM3ManualSpeed.Value.ToString()));
-
-                if (sendResult.OpcResult)
-                {
-                }
-                else
-                {
-
-                }
-            }
-            comboBoxM3TestProgramList.Text = guiConfigurator.GetValue("T3_2", "PRGNAME", "");
-            comboBoxM3TestRecipeName.Text = guiConfigurator.GetValue("T3_2", "RECIPENAME", "");
-
-            //update pad laser file
-            M4PrgName = comboBoxM4PrgName.Text;
-            string modelName = "";
-
-            if (M4PrgName != "")
-            {
-               modelName = M4PrgName.Substring(2, 4);
-
-                //get data from DB
-                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
-
-                if ((recs.Error == 0) & (recs.Result.Count != 0))
-                {
-                    string top = "";
-                    string bottom = "";
-
-                    //aggiornare controlli
-                    if (recs.Result[0].m4_param2 == 0)
-                    {
-                        top = recs.Result[0].m4_param3.ToString();
-                        bottom = recs.Result[0].m4_param4.ToString();
-                    }
-
-                    if (recs.Result[0].m4_param2 == 1)
-                    {
-                        top = DateTime.Now.ToString("dd-MM-yyyy");
-                        bottom = bottom = recs.Result[0].m4_param4.ToString();
-                    }
-
-                    if (recs.Result[0].m4_param2 == 2)
-                    {
-                        top = recs.Result[0].m4_param3.ToString();
-                        bottom = DateTime.Now.ToString("dd-MM-yyyy");
-                    }
-
-                    if (recs.Result[0].m4_param2 == 3)
-                    {
-                        top = DateTime.Now.ToString("dd-MM-yyyy");
-                        bottom = DateTime.Now.ToString("dd-MM-yyyy");
-                    }
-
-
-                    WritePadLaserRecipe(top, Properties.Settings.Default.PadLaserFilePathTop);
-                    WritePadLaserRecipe(bottom, Properties.Settings.Default.PadLaserFilePathBottom);
-                }
-            }
         }
 
         private async void SendSizeFromM1ProgramToOpc()
         {
             if (M1PrgName == "") return;
-
+            if (ccService == null) return;
             short size = 0;
 
             try
@@ -896,467 +927,6 @@ namespace GUI
             {
 
             }
-        }
-
-        private void InitM1AlarmsSettings()
-        {
-            try
-            {
-                //dataGridView1.Rows.Clear();
-                //dataGridView1.Rows.Add(8);
-
-                //dataGridView1.Rows[0].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A1", "");
-                //dataGridView1.Rows[1].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A2", "");
-                //dataGridView1.Rows[2].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A3", "");
-                //dataGridView1.Rows[3].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A4", "");
-                //dataGridView1.Rows[4].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A5", "");
-                //dataGridView1.Rows[5].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A6", "");
-                //dataGridView1.Rows[6].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A7", "");
-                //dataGridView1.Rows[7].Cells[0].Value = alarmsConfigurator.GetValue("M1", "A8", "");
-                //dataGridViewM1AlarmsTimeout.Rows[0].Cells[1]. = ;
-
-                //dataGridViewM1AlarmsTimeout.Rows[0].Cells[1].Value = "1";
-                //dataGridViewM1AlarmsTimeout.Rows[1].Cells[1].Value = "1";
-                //dataGridViewM1AlarmsTimeout.Rows[2].Cells[1].Value = "1";
-                //dataGridViewM1AlarmsTimeout.Rows[3].Cells[1].Value = "1";
-                //dataGridViewM1AlarmsTimeout.Rows[4].Cells[1].Value = "1";
-                //dataGridViewM1AlarmsTimeout.Rows[5].Cells[1].Value = "1";
-                //dataGridViewM1AlarmsTimeout.Rows[6].Cells[1].Value = "1";
-                //dataGridViewM1AlarmsTimeout.Rows[7].Cells[1].Value = "1";
-            }
-            catch(Exception Ex)
-            {
-
-            }
-
-        }
-
-            private void InitM1IOSettings()
-        {
-            //digital input
-            lbLed1001M1.Label = ioConfigurator.GetValue("M1_INPUT", "1001", "");
-            lbLed1002M1.Label = ioConfigurator.GetValue("M1_INPUT", "1002", "");
-            lbLed1003M1.Label = ioConfigurator.GetValue("M1_INPUT", "1003", "");
-            lbLed1004M1.Label = ioConfigurator.GetValue("M1_INPUT", "1004", "");
-            lbLed1005M1.Label = ioConfigurator.GetValue("M1_INPUT", "1005", "");
-            lbLed1006M1.Label = ioConfigurator.GetValue("M1_INPUT", "1006", "");
-            lbLed1007M1.Label = ioConfigurator.GetValue("M1_INPUT", "1007", "");
-            lbLed1008M1.Label = ioConfigurator.GetValue("M1_INPUT", "1008", "");
-            lbLed1009M1.Label = ioConfigurator.GetValue("M1_INPUT", "1009", "");
-            lbLed1010M1.Label = ioConfigurator.GetValue("M1_INPUT", "1010", "");
-
-            lbLed1011M1.Label = ioConfigurator.GetValue("M1_INPUT", "1011", "");
-            lbLed1012M1.Label = ioConfigurator.GetValue("M1_INPUT", "1012", "");
-            lbLed1013M1.Label = ioConfigurator.GetValue("M1_INPUT", "1013", "");
-            lbLed1014M1.Label = ioConfigurator.GetValue("M1_INPUT", "1014", "");
-            lbLed1015M1.Label = ioConfigurator.GetValue("M1_INPUT", "1015", "");
-            lbLed1016M1.Label = ioConfigurator.GetValue("M1_INPUT", "1016", "");
-            lbLed1017M1.Label = ioConfigurator.GetValue("M1_INPUT", "1017", "");
-            lbLed1018M1.Label = ioConfigurator.GetValue("M1_INPUT", "1018", "");
-            lbLed1019M1.Label = ioConfigurator.GetValue("M1_INPUT", "1019", "");
-            lbLed1020M1.Label = ioConfigurator.GetValue("M1_INPUT", "1020", "");
-
-            lbLed1021M1.Label = ioConfigurator.GetValue("M1_INPUT", "1021", "");
-            lbLed1022M1.Label = ioConfigurator.GetValue("M1_INPUT", "1022", "");
-            lbLed1023M1.Label = ioConfigurator.GetValue("M1_INPUT", "1023", "");
-            lbLed1024M1.Label = ioConfigurator.GetValue("M1_INPUT", "1024", "");
-            lbLed1025M1.Label = ioConfigurator.GetValue("M1_INPUT", "1025", "");
-            lbLed1026M1.Label = ioConfigurator.GetValue("M1_INPUT", "1026", "");
-            lbLed1027M1.Label = ioConfigurator.GetValue("M1_INPUT", "1027", "");
-            lbLed1028M1.Label = ioConfigurator.GetValue("M1_INPUT", "1028", "");
-            lbLed1029M1.Label = ioConfigurator.GetValue("M1_INPUT", "1029", "");
-            lbLed1030M1.Label = ioConfigurator.GetValue("M1_INPUT", "1030", "");
-
-            lbLed1031M1.Label = ioConfigurator.GetValue("M1_INPUT", "1031", "");
-            lbLed1032M1.Label = ioConfigurator.GetValue("M1_INPUT", "1032", "");
-            lbLed1033M1.Label = ioConfigurator.GetValue("M1_INPUT", "1033", "");
-            lbLed1034M1.Label = ioConfigurator.GetValue("M1_INPUT", "1034", "");
-            lbLed1035M1.Label = ioConfigurator.GetValue("M1_INPUT", "1035", "");
-            lbLed1036M1.Label = ioConfigurator.GetValue("M1_INPUT", "1036", "");
-            lbLed1037M1.Label = ioConfigurator.GetValue("M1_INPUT", "1037", "");
-            lbLed1038M1.Label = ioConfigurator.GetValue("M1_INPUT", "1038", "");
-            lbLed1039M1.Label = ioConfigurator.GetValue("M1_INPUT", "1039", "");
-            lbLed1040M1.Label = ioConfigurator.GetValue("M1_INPUT", "1040", "");
-
-            lbLed1041M1.Label = ioConfigurator.GetValue("M1_INPUT", "1041", "");
-            lbLed1042M1.Label = ioConfigurator.GetValue("M1_INPUT", "1042", "");
-            lbLed1043M1.Label = ioConfigurator.GetValue("M1_INPUT", "1043", "");
-            lbLed1044M1.Label = ioConfigurator.GetValue("M1_INPUT", "1044", "");
-            lbLed1045M1.Label = ioConfigurator.GetValue("M1_INPUT", "1045", "");
-            lbLed1046M1.Label = ioConfigurator.GetValue("M1_INPUT", "1046", "");
-            lbLed1047M1.Label = ioConfigurator.GetValue("M1_INPUT", "1047", "");
-            lbLed1048M1.Label = ioConfigurator.GetValue("M1_INPUT", "1048", "");
-
-            //digital output
-            lbLed2001M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2001", "");
-            lbLed2002M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2002", "");
-            lbLed2003M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2003", "");
-            lbLed2004M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2004", "");
-            lbLed2005M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2005", "");
-            lbLed2006M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2006", "");
-            lbLed2007M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2007", "");
-            lbLed2008M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2008", "");
-            lbLed2009M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2009", "");
-            lbLed2010M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2010", "");
-
-            lbLed2011M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2011", "");
-            lbLed2012M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2012", "");
-            lbLed2013M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2013", "");
-            lbLed2014M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2014", "");
-            lbLed2015M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2015", "");
-            lbLed2016M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2016", "");
-            lbLed2017M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2017", "");
-            lbLed2018M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2018", "");
-            lbLed2019M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2019", "");
-            lbLed2020M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2020", "");
-
-            lbLed2021M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2021", "");
-            lbLed2022M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2022", "");
-            lbLed2023M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2023", "");
-            lbLed2024M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2024", "");
-            lbLed2025M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2025", "");
-            lbLed2026M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2026", "");
-            lbLed2027M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2027", "");
-            lbLed2028M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2028", "");
-            lbLed2029M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2029", "");
-            lbLed2030M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2030", "");
-
-            lbLed2031M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2031", "");
-            lbLed2032M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2032", "");
-            lbLed2033M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2033", "");
-            lbLed2034M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2034", "");
-            lbLed2035M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2035", "");
-            lbLed2036M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2036", "");
-            lbLed2037M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2037", "");
-            lbLed2038M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2038", "");
-            lbLed2039M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2039", "");
-            lbLed2040M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2040", "");
-
-            lbLed2041M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2041", "");
-            lbLed2042M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2042", "");
-            lbLed2043M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2043", "");
-            lbLed2044M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2044", "");
-            lbLed2045M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2045", "");
-            lbLed2046M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2046", "");
-            lbLed2047M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2047", "");
-            lbLed2048M1.Label = ioConfigurator.GetValue("M1_OUTPUT", "2048", "");
-        }
-
-        private void InitM2IOSettings()
-        {
-            //digital input
-            lbLed1001M2.Label = ioConfigurator.GetValue("M2_INPUT", "1001", "");
-            lbLed1002M2.Label = ioConfigurator.GetValue("M2_INPUT", "1002", "");
-            lbLed1003M2.Label = ioConfigurator.GetValue("M2_INPUT", "1003", "");
-            lbLed1004M2.Label = ioConfigurator.GetValue("M2_INPUT", "1004", "");
-            lbLed1005M2.Label = ioConfigurator.GetValue("M2_INPUT", "1005", "");
-            lbLed1006M2.Label = ioConfigurator.GetValue("M2_INPUT", "1006", "");
-            lbLed1007M2.Label = ioConfigurator.GetValue("M2_INPUT", "1007", "");
-            lbLed1008M2.Label = ioConfigurator.GetValue("M2_INPUT", "1008", "");
-            lbLed1009M2.Label = ioConfigurator.GetValue("M2_INPUT", "1009", "");
-            lbLed1010M2.Label = ioConfigurator.GetValue("M2_INPUT", "1010", "");
-
-            lbLed1011M2.Label = ioConfigurator.GetValue("M2_INPUT", "1011", "");
-            lbLed1012M2.Label = ioConfigurator.GetValue("M2_INPUT", "1012", "");
-            lbLed1013M2.Label = ioConfigurator.GetValue("M2_INPUT", "1013", "");
-            lbLed1014M2.Label = ioConfigurator.GetValue("M2_INPUT", "1014", "");
-            lbLed1015M2.Label = ioConfigurator.GetValue("M2_INPUT", "1015", "");
-            lbLed1016M2.Label = ioConfigurator.GetValue("M2_INPUT", "1016", "");
-            lbLed1017M2.Label = ioConfigurator.GetValue("M2_INPUT", "1017", "");
-            lbLed1018M2.Label = ioConfigurator.GetValue("M2_INPUT", "1018", "");
-            lbLed1019M2.Label = ioConfigurator.GetValue("M2_INPUT", "1019", "");
-            lbLed1020M2.Label = ioConfigurator.GetValue("M2_INPUT", "1020", "");
-
-            lbLed1021M2.Label = ioConfigurator.GetValue("M2_INPUT", "1021", "");
-            lbLed1022M2.Label = ioConfigurator.GetValue("M2_INPUT", "1022", "");
-            lbLed1023M2.Label = ioConfigurator.GetValue("M2_INPUT", "1023", "");
-            lbLed1024M2.Label = ioConfigurator.GetValue("M2_INPUT", "1024", "");
-            lbLed1025M2.Label = ioConfigurator.GetValue("M2_INPUT", "1025", "");
-            lbLed1026M2.Label = ioConfigurator.GetValue("M2_INPUT", "1026", "");
-            lbLed1027M2.Label = ioConfigurator.GetValue("M2_INPUT", "1027", "");
-            lbLed1028M2.Label = ioConfigurator.GetValue("M2_INPUT", "1028", "");
-            lbLed1029M2.Label = ioConfigurator.GetValue("M2_INPUT", "1029", "");
-            lbLed1030M2.Label = ioConfigurator.GetValue("M2_INPUT", "1030", "");
-
-            lbLed1031M2.Label = ioConfigurator.GetValue("M2_INPUT", "1031", "");
-            lbLed1032M2.Label = ioConfigurator.GetValue("M2_INPUT", "1032", "");
-            lbLed1033M2.Label = ioConfigurator.GetValue("M2_INPUT", "1033", "");
-            lbLed1034M2.Label = ioConfigurator.GetValue("M2_INPUT", "1034", "");
-            lbLed1035M2.Label = ioConfigurator.GetValue("M2_INPUT", "1035", "");
-            lbLed1036M2.Label = ioConfigurator.GetValue("M2_INPUT", "1036", "");
-            lbLed1037M2.Label = ioConfigurator.GetValue("M2_INPUT", "1037", "");
-            lbLed1038M2.Label = ioConfigurator.GetValue("M2_INPUT", "1038", "");
-            lbLed1039M2.Label = ioConfigurator.GetValue("M2_INPUT", "1039", "");
-            lbLed1040M2.Label = ioConfigurator.GetValue("M2_INPUT", "1040", "");
-
-            lbLed1041M2.Label = ioConfigurator.GetValue("M2_INPUT", "1041", "");
-            lbLed1042M2.Label = ioConfigurator.GetValue("M2_INPUT", "1042", "");
-            lbLed1043M2.Label = ioConfigurator.GetValue("M2_INPUT", "1043", "");
-            lbLed1044M2.Label = ioConfigurator.GetValue("M2_INPUT", "1044", "");
-            lbLed1045M2.Label = ioConfigurator.GetValue("M2_INPUT", "1045", "");
-            lbLed1046M2.Label = ioConfigurator.GetValue("M2_INPUT", "1046", "");
-            lbLed1047M2.Label = ioConfigurator.GetValue("M2_INPUT", "1047", "");
-            lbLed1048M2.Label = ioConfigurator.GetValue("M2_INPUT", "1048", "");
-
-            //digital output
-            lbLed2001M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2001", "");
-            lbLed2002M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2002", "");
-            lbLed2003M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2003", "");
-            lbLed2004M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2004", "");
-            lbLed2005M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2005", "");
-            lbLed2006M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2006", "");
-            lbLed2007M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2007", "");
-            lbLed2008M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2008", "");
-            lbLed2009M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2009", "");
-            lbLed2010M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2010", "");
-
-            lbLed2011M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2011", "");
-            lbLed2012M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2012", "");
-            lbLed2013M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2013", "");
-            lbLed2014M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2014", "");
-            lbLed2015M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2015", "");
-            lbLed2016M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2016", "");
-            lbLed2017M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2017", "");
-            lbLed2018M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2018", "");
-            lbLed2019M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2019", "");
-            lbLed2020M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2020", "");
-
-            lbLed2021M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2021", "");
-            lbLed2022M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2022", "");
-            lbLed2023M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2023", "");
-            lbLed2024M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2024", "");
-            lbLed2025M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2025", "");
-            lbLed2026M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2026", "");
-            lbLed2027M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2027", "");
-            lbLed2028M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2028", "");
-            lbLed2028M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2029", "");
-            lbLed2029M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2030", "");
-
-            lbLed2030M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2031", "");
-            lbLed2031M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2032", "");
-            lbLed2032M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2033", "");
-            lbLed2033M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2034", "");
-            lbLed2034M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2035", "");
-            lbLed2035M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2036", "");
-            lbLed2036M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2037", "");
-            lbLed2038M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2038", "");
-            lbLed2039M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2039", "");
-            lbLed2040M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2040", "");
-
-            lbLed2041M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2041", "");
-            lbLed2042M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2042", "");
-            lbLed2043M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2043", "");
-            lbLed2044M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2044", "");
-            lbLed2045M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2045", "");
-            lbLed2046M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2046", "");
-            lbLed2047M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2047", "");
-            lbLed2048M2.Label = ioConfigurator.GetValue("M2_OUTPUT", "2048", "");
-        }
-
-        private void InitM5IOSettings()
-        {
-            //digital input
-            lbLed1001M5.Label = ioConfigurator.GetValue("M5_INPUT", "1001", "");
-            lbLed1002M5.Label = ioConfigurator.GetValue("M5_INPUT", "1002", "");
-            lbLed1003M5.Label = ioConfigurator.GetValue("M5_INPUT", "1003", "");
-            lbLed1004M5.Label = ioConfigurator.GetValue("M5_INPUT", "1004", "");
-            lbLed1005M5.Label = ioConfigurator.GetValue("M5_INPUT", "1005", "");
-            lbLed1006M5.Label = ioConfigurator.GetValue("M5_INPUT", "1006", "");
-            lbLed1007M5.Label = ioConfigurator.GetValue("M5_INPUT", "1007", "");
-            lbLed1008M5.Label = ioConfigurator.GetValue("M5_INPUT", "1008", "");
-            lbLed1009M5.Label = ioConfigurator.GetValue("M5_INPUT", "1009", "");
-            lbLed1010M5.Label = ioConfigurator.GetValue("M5_INPUT", "1010", "");
-
-            lbLed1011M5.Label = ioConfigurator.GetValue("M5_INPUT", "1011", "");
-            lbLed1012M5.Label = ioConfigurator.GetValue("M5_INPUT", "1012", "");
-            lbLed1013M5.Label = ioConfigurator.GetValue("M5_INPUT", "1013", "");
-            lbLed1014M5.Label = ioConfigurator.GetValue("M5_INPUT", "1014", "");
-            lbLed1015M5.Label = ioConfigurator.GetValue("M5_INPUT", "1015", "");
-            lbLed1016M5.Label = ioConfigurator.GetValue("M5_INPUT", "1016", "");
-            lbLed1017M5.Label = ioConfigurator.GetValue("M5_INPUT", "1017", "");
-            lbLed1018M5.Label = ioConfigurator.GetValue("M5_INPUT", "1018", "");
-            lbLed1019M5.Label = ioConfigurator.GetValue("M5_INPUT", "1019", "");
-            lbLed1020M5.Label = ioConfigurator.GetValue("M5_INPUT", "1020", "");
-
-            lbLed1021M5.Label = ioConfigurator.GetValue("M5_INPUT", "1021", "");
-            lbLed1022M5.Label = ioConfigurator.GetValue("M5_INPUT", "1022", "");
-            lbLed1023M5.Label = ioConfigurator.GetValue("M5_INPUT", "1023", "");
-            lbLed1024M5.Label = ioConfigurator.GetValue("M5_INPUT", "1024", "");
-            lbLed1025M5.Label = ioConfigurator.GetValue("M5_INPUT", "1025", "");
-            lbLed1026M5.Label = ioConfigurator.GetValue("M5_INPUT", "1026", "");
-            lbLed1027M5.Label = ioConfigurator.GetValue("M5_INPUT", "1027", "");
-            lbLed1028M5.Label = ioConfigurator.GetValue("M5_INPUT", "1028", "");
-            lbLed1029M5.Label = ioConfigurator.GetValue("M5_INPUT", "1029", "");
-            lbLed1030M5.Label = ioConfigurator.GetValue("M5_INPUT", "1030", "");
-
-            lbLed1031M5.Label = ioConfigurator.GetValue("M5_INPUT", "1031", "");
-            lbLed1032M5.Label = ioConfigurator.GetValue("M5_INPUT", "1032", "");
-            lbLed1033M5.Label = ioConfigurator.GetValue("M5_INPUT", "1033", "");
-            lbLed1034M5.Label = ioConfigurator.GetValue("M5_INPUT", "1034", "");
-            lbLed1035M5.Label = ioConfigurator.GetValue("M5_INPUT", "1035", "");
-            lbLed1036M5.Label = ioConfigurator.GetValue("M5_INPUT", "1036", "");
-            lbLed1037M5.Label = ioConfigurator.GetValue("M5_INPUT", "1037", "");
-            lbLed1038M5.Label = ioConfigurator.GetValue("M5_INPUT", "1038", "");
-            lbLed1039M5.Label = ioConfigurator.GetValue("M5_INPUT", "1039", "");
-            lbLed1040M5.Label = ioConfigurator.GetValue("M5_INPUT", "1040", "");
-
-            lbLed1041M5.Label = ioConfigurator.GetValue("M5_INPUT", "1041", "");
-            lbLed1042M5.Label = ioConfigurator.GetValue("M5_INPUT", "1042", "");
-            lbLed1043M5.Label = ioConfigurator.GetValue("M5_INPUT", "1043", "");
-            lbLed1044M5.Label = ioConfigurator.GetValue("M5_INPUT", "1044", "");
-            lbLed1045M5.Label = ioConfigurator.GetValue("M5_INPUT", "1045", "");
-            lbLed1046M5.Label = ioConfigurator.GetValue("M5_INPUT", "1046", "");
-            lbLed1047M5.Label = ioConfigurator.GetValue("M5_INPUT", "1047", "");
-            lbLed1048M5.Label = ioConfigurator.GetValue("M5_INPUT", "1048", "");
-
-            //digital output
-            lbLed2001M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2001", "");
-            lbLed2002M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2002", "");
-            lbLed2003M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2003", "");
-            lbLed2004M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2004", "");
-            lbLed2005M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2005", "");
-            lbLed2006M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2006", "");
-            lbLed2007M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2007", "");
-            lbLed2008M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2008", "");
-            lbLed2009M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2009", "");
-            lbLed2010M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2010", "");
-
-            lbLed2011M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2011", "");
-            lbLed2012M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2012", "");
-            lbLed2013M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2013", "");
-            lbLed2014M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2014", "");
-            lbLed2015M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2015", "");
-            lbLed2016M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2016", "");
-            lbLed2017M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2017", "");
-            lbLed2018M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2018", "");
-            lbLed2019M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2019", "");
-            lbLed2020M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2020", "");
-
-            lbLed2021M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2021", "");
-            lbLed2022M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2022", "");
-            lbLed2023M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2023", "");
-            lbLed2024M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2024", "");
-            lbLed2025M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2025", "");
-            lbLed2026M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2026", "");
-            lbLed2027M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2027", "");
-            lbLed2028M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2028", "");
-            lbLed2028M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2029", "");
-            lbLed2029M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2030", "");
-
-            lbLed2030M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2031", "");
-            lbLed2031M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2032", "");
-            lbLed2032M5.Label = ioConfigurator.GetValue("M5_OUTPUT", "2033", "");            
-        }
-
-        private void InitM3IOSettings()
-        {
-            //digital input
-            lbLed1001M3.Label = ioConfigurator.GetValue("M3_INPUT", "1001", "");
-            lbLed1002M3.Label = ioConfigurator.GetValue("M3_INPUT", "1002", "");
-            lbLed1003M3.Label = ioConfigurator.GetValue("M3_INPUT", "1003", "");
-            lbLed1004M3.Label = ioConfigurator.GetValue("M3_INPUT", "1004", "");
-            lbLed1005M3.Label = ioConfigurator.GetValue("M3_INPUT", "1005", "");
-            lbLed1006M3.Label = ioConfigurator.GetValue("M3_INPUT", "1006", "");
-            lbLed1007M3.Label = ioConfigurator.GetValue("M3_INPUT", "1007", "");
-            lbLed1008M3.Label = ioConfigurator.GetValue("M3_INPUT", "1008", "");
-            lbLed1009M3.Label = ioConfigurator.GetValue("M3_INPUT", "1009", "");
-            lbLed1010M3.Label = ioConfigurator.GetValue("M3_INPUT", "1010", "");
-
-            lbLed1011M3.Label = ioConfigurator.GetValue("M3_INPUT", "1011", "");
-            lbLed1012M3.Label = ioConfigurator.GetValue("M3_INPUT", "1012", "");
-            lbLed1013M3.Label = ioConfigurator.GetValue("M3_INPUT", "1013", "");
-            lbLed1014M3.Label = ioConfigurator.GetValue("M3_INPUT", "1014", "");
-            lbLed1015M3.Label = ioConfigurator.GetValue("M3_INPUT", "1015", "");
-            lbLed1016M3.Label = ioConfigurator.GetValue("M3_INPUT", "1016", "");
-            lbLed1017M3.Label = ioConfigurator.GetValue("M3_INPUT", "1017", "");
-            lbLed1018M3.Label = ioConfigurator.GetValue("M3_INPUT", "1018", "");
-            lbLed1019M3.Label = ioConfigurator.GetValue("M3_INPUT", "1019", "");
-            lbLed1020M3.Label = ioConfigurator.GetValue("M3_INPUT", "1020", "");
-
-            lbLed1021M3.Label = ioConfigurator.GetValue("M3_INPUT", "1021", "");
-            lbLed1022M3.Label = ioConfigurator.GetValue("M3_INPUT", "1022", "");
-            lbLed1023M3.Label = ioConfigurator.GetValue("M3_INPUT", "1023", "");
-            lbLed1024M3.Label = ioConfigurator.GetValue("M3_INPUT", "1024", "");
-            lbLed1025M3.Label = ioConfigurator.GetValue("M3_INPUT", "1025", "");
-            lbLed1026M3.Label = ioConfigurator.GetValue("M3_INPUT", "1026", "");
-            lbLed1027M3.Label = ioConfigurator.GetValue("M3_INPUT", "1027", "");
-            lbLed1028M3.Label = ioConfigurator.GetValue("M3_INPUT", "1028", "");
-            lbLed1029M3.Label = ioConfigurator.GetValue("M3_INPUT", "1029", "");
-            lbLed1030M3.Label = ioConfigurator.GetValue("M3_INPUT", "1030", "");
-
-            lbLed1031M3.Label = ioConfigurator.GetValue("M3_INPUT", "1031", "");
-            lbLed1032M3.Label = ioConfigurator.GetValue("M3_INPUT", "1032", "");
-            lbLed1033M3.Label = ioConfigurator.GetValue("M3_INPUT", "1033", "");
-            lbLed1034M3.Label = ioConfigurator.GetValue("M3_INPUT", "1034", "");
-            lbLed1035M3.Label = ioConfigurator.GetValue("M3_INPUT", "1035", "");
-            lbLed1036M3.Label = ioConfigurator.GetValue("M3_INPUT", "1036", "");
-            lbLed1037M3.Label = ioConfigurator.GetValue("M3_INPUT", "1037", "");
-            lbLed1038M3.Label = ioConfigurator.GetValue("M3_INPUT", "1038", "");
-            lbLed1039M3.Label = ioConfigurator.GetValue("M3_INPUT", "1039", "");
-            lbLed1040M3.Label = ioConfigurator.GetValue("M3_INPUT", "1040", "");
-
-            lbLed1041M3.Label = ioConfigurator.GetValue("M3_INPUT", "1041", "");
-            lbLed1042M3.Label = ioConfigurator.GetValue("M3_INPUT", "1042", "");
-            lbLed1043M3.Label = ioConfigurator.GetValue("M3_INPUT", "1043", "");
-            lbLed1044M3.Label = ioConfigurator.GetValue("M3_INPUT", "1044", "");
-            lbLed1045M3.Label = ioConfigurator.GetValue("M3_INPUT", "1045", "");
-            lbLed1046M3.Label = ioConfigurator.GetValue("M3_INPUT", "1046", "");
-            lbLed1047M3.Label = ioConfigurator.GetValue("M3_INPUT", "1047", "");
-            lbLed1048M3.Label = ioConfigurator.GetValue("M3_INPUT", "1048", "");
-
-            //digital output
-            lbLed2001M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2001", "");
-            lbLed2002M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2002", "");
-            lbLed2003M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2003", "");
-            lbLed2004M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2004", "");
-            lbLed2005M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2005", "");
-            lbLed2006M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2006", "");
-            lbLed2007M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2007", "");
-            lbLed2008M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2008", "");
-            lbLed2009M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2009", "");
-            lbLed2010M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2010", "");
-
-            lbLed2011M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2011", "");
-            lbLed2012M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2012", "");
-            lbLed2013M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2013", "");
-            lbLed2014M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2014", "");
-            lbLed2015M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2015", "");
-            lbLed2016M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2016", "");
-            lbLed2017M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2017", "");
-            lbLed2018M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2018", "");
-            lbLed2019M2.Label = ioConfigurator.GetValue("M3_OUTPUT", "2019", "");
-            lbLed2020M2.Label = ioConfigurator.GetValue("M3_OUTPUT", "2020", "");
-
-            lbLed2021M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2021", "");
-            lbLed2022M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2022", "");
-            lbLed2023M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2023", "");
-            lbLed2024M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2024", "");
-            lbLed2025M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2025", "");
-            lbLed2026M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2026", "");
-            lbLed2027M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2027", "");
-            lbLed2028M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2028", "");
-            lbLed2028M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2029", "");
-            lbLed2029M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2030", "");
-
-            lbLed2030M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2031", "");
-            lbLed2031M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2032", "");
-            lbLed2032M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2033", "");
-            lbLed2033M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2034", "");
-            lbLed2034M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2035", "");
-            lbLed2035M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2036", "");
-            lbLed2036M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2037", "");
-            lbLed2038M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2038", "");
-            lbLed2039M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2039", "");
-            lbLed2040M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2040", "");
-
-            lbLed2041M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2041", "");
-            lbLed2042M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2042", "");
-            lbLed2043M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2043", "");
-            lbLed2044M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2044", "");
-            lbLed2045M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2045", "");
-            lbLed2046M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2046", "");
-            lbLed2047M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2047", "");
-            lbLed2048M3.Label = ioConfigurator.GetValue("M3_OUTPUT", "2048", "");
         }
 
         private void AddMessageToDataGridOnTop(DateTime dt, Priority pr, Machine machine, string messageText)
@@ -1432,13 +1002,15 @@ namespace GUI
             //UpdateColorToDataGridRow();
         }
 
-        private async void RefreshModelNameComboBox()
+        private void RefreshModelNameComboBox()
         {
             #region (* refresh combobox model name list *)
             List<string> mList = new List<string>();
+            List<string> dList = new List<string>();
             //get model name list from DB
-            MySqlResult<recipies> result = await mysqlService.DBTable[0].SelectAllAsync<recipies>();
+            MySqlResult<recipies> result = mysqlService.DBTable[0].SelectAll<recipies>();
             result.Result.ForEach(x => mList.Add(x.model_name));
+            result.Result.ForEach(x => dList.Add(x.m_description));
             comboBoxMRecipeName.Items.Clear();
             comboBoxT0RecipeName.Items.Clear();
             comboBoxM1TeachRecipeName.Items.Clear();
@@ -1447,24 +1019,45 @@ namespace GUI
             comboBoxM2TestRecipeName.Items.Clear();
             comboBoxM3TeachRecipeName.Items.Clear();
             comboBoxM3TestRecipeName.Items.Clear();
+            comboBoxOriginRecipe.Items.Clear();
+            comboBoxDestinationRecipe.Items.Clear();
+            comboBoxRecipeDelete.Items.Clear();
+            ModelNameDictionary.Clear();
+            DescriptionDictionary.Clear();
+            int i = 1;
             foreach (string modelName in mList)
-            {                
+            {
                 comboBoxMRecipeName.Items.Add(modelName);
                 comboBoxMRecipeName.SelectedIndex = 0;
                 comboBoxT0RecipeName.Items.Add(modelName);
-                comboBoxT0RecipeName.SelectedIndex = 0;
+                //comboBoxT0RecipeName.SelectedIndex = 0;
                 comboBoxM1TeachRecipeName.Items.Add(modelName);
-                comboBoxM1TeachRecipeName.SelectedIndex = 0;
+                //comboBoxM1TeachRecipeName.SelectedIndex = 0;
                 comboBoxM2TeachRecipeName.Items.Add(modelName);
-                comboBoxM2TeachRecipeName.SelectedIndex = 0;
+                //comboBoxM2TeachRecipeName.SelectedIndex = 0;
                 comboBoxM3TeachRecipeName.Items.Add(modelName);
-                comboBoxM3TeachRecipeName.SelectedIndex = 0;
+                //comboBoxM3TeachRecipeName.SelectedIndex = 0;
                 comboBoxM1TestRecipeName.Items.Add(modelName);
-                comboBoxM1TestRecipeName.SelectedIndex = 0;
+                //comboBoxM1TestRecipeName.SelectedIndex = 0;
                 comboBoxM2TestRecipeName.Items.Add(modelName);
-                comboBoxM2TestRecipeName.SelectedIndex = 0;
+                //comboBoxM2TestRecipeName.SelectedIndex = 0;
                 comboBoxM3TestRecipeName.Items.Add(modelName);
-                comboBoxM3TestRecipeName.SelectedIndex = 0;
+                //comboBoxM3TestRecipeName.SelectedIndex = 0;
+                comboBoxOriginRecipe.Items.Add(modelName);
+                //comboBoxOriginRecipe.SelectedIndex = 0;
+                comboBoxDestinationRecipe.Items.Add(modelName);
+                //comboBoxDestinationRecipe.SelectedIndex = 0;
+                comboBoxRecipeDelete.Items.Add(modelName);
+                //comboBoxRecipeDelete.SelectedIndex = 0;
+                ModelNameDictionary[i] = modelName;
+
+                i = i + 1;
+            }
+            i = 1;
+            foreach (string description in dList)
+            {
+                DescriptionDictionary[i] = description;
+                i = i + 1;
             }
         }
         #endregion
@@ -1478,10 +1071,12 @@ namespace GUI
             }
 
             string top = GetTopFromPadLaserAddNewRecipe();
-            string bottom = GetBottomFromPadLaserAddNewRecipe();
+            string medium = GetMediumFromPadLaserAddNewRecipe();
+            string bottom = GetBottomFromPadLaserAddNewRecipe();            
 
             object[] value = new object[]
                    {
+                    //recipe name
                     textBoxMRecipeName.Text,
                     //M1 params
                     (checkBoxM1Param1.CheckState == CheckState.Checked)?1:0,
@@ -1490,19 +1085,28 @@ namespace GUI
                     (checkBoxM2Param1.CheckState == CheckState.Checked)?1:0,
                     0,
                     //M3 params
-                    (checkBoxM3Param1.CheckState == CheckState.Checked)?1:0,
+                    (checkBoxM3Param1.CheckState == CheckState.Checked)?1:0,                    
                     (radioButtonFootOrderOpt1.Checked)?1:2,
                     //M4 params
+                    //m4_param1
                     (checkBoxM4Param1.CheckState == CheckState.Checked)?1:0,
-                    GetSelOptionTopBottomAddNewRecipe(),
+                    //m4_param2
+                    //GetSelOptionTopBottomAddNewRecipe(),
+                    GetM4RowsSelOptionAddNewRecipe(),
+                    //m4_param3
                     top,
+                    //m4_param4
                     bottom,
+                    //m4_param5
+                    medium,
                     //M6 params
                     (checkBoxM5Param1.CheckState == CheckState.Checked)?1:0,
                     0,
                     //M6 params
                     (checkBoxM6Param1.CheckState == CheckState.Checked)?1:0,
                     0,
+                    textBoxRecipeDescription.Text,
+
                    };
 
             var testResult = await mysqlService.DBTable[0].InsertAutomaticAsync(value);
@@ -1524,7 +1128,7 @@ namespace GUI
             }
             else
             {
-                //manage db error
+                xDialog.MsgBox.Show("Receta non creada. Error" + " " + testResult.Message, "PBoot", xDialog.MsgBox.Buttons.OK);
             }
         }
 
@@ -1536,9 +1140,22 @@ namespace GUI
                 //dateontop
                 strTop = DateTime.Now.ToString("dd-MM-yyyy");
             }
-            else strTop = textBoxLaserLine1.Text;
+            else strTop = textBoxLaserLine1New.Text;
 
             return strTop;
+        }
+
+        private string GetMediumFromPadLaserAddNewRecipe()
+        {
+            string strMedio = "";
+            if (radioButtonM4Sel1Medio.Checked)
+            {
+                //dateontop
+                strMedio = DateTime.Now.ToString("dd-MM-yyyy");
+            }
+            else strMedio = textBoxLaserLine12New.Text;
+
+            return strMedio;
         }
 
         private string GetBottomFromPadLaserAddNewRecipe()
@@ -1549,7 +1166,7 @@ namespace GUI
                 //dateontop
                 strBottom = DateTime.Now.ToString("dd-MM-yyyy");
             }
-            else strBottom = textBoxLaserLine2.Text;
+            else strBottom = textBoxLaserLine2New.Text;
 
             return strBottom;
         }
@@ -1580,6 +1197,26 @@ namespace GUI
             return seloption;
         }
 
+        private string GetM4RowsSelOptionAddNewRecipe()
+        {
+            string seloption = "";
+            seloption = (radioButtonM4Sel1Top.Checked) ? "1" : "0";
+            seloption = seloption + ((radioButtonM4Sel1Medio.Checked) ? "1" : "0");
+            seloption = seloption + ((radioButtonM4Sel1Bottom.Checked) ? "1" : "0");
+
+            return seloption;
+        }
+
+        private string GetM4RowsSelOptionUpdateRecipe()
+        {
+            string seloption = "";
+            seloption = (radioButtonMRecipeTopSel1.Checked) ? "1" : "0";
+            seloption = seloption + ((radioButtonMRecipeMedioSel1.Checked) ? "1" : "0");
+            seloption = seloption + ((radioButtonMRecipeBottomSel1.Checked) ? "1" : "0");
+
+            return seloption; 
+        }
+
         private int GetSelOptionTopBottomUpdateRecipe()
         {
             int seloption = 0;
@@ -1608,6 +1245,7 @@ namespace GUI
 
         private async void comboBoxM3PrgName_st1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (ccService.ClientIsConnected == false) return;            
             if (comboBoxM3PrgName_st1.Text == "") return;
             //get model name
             string prgName = comboBoxM3PrgName_st1.Text;
@@ -1637,9 +1275,10 @@ namespace GUI
                 //type order 2: LF, RG
                 keyValue = "pcM3Param2";
                 sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
-
-                labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
-                labelM3Param2Value.Text = ((recs.Result[0].m3_param2 == 1)? "start from derecha" : "start from izquierda");
+                M3AutoDictionary[1] = short.Parse(recs.Result[0].m3_param1.ToString());
+                //labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
+                //labelM3Param2Value.Text = ((recs.Result[0].m3_param2 == 1)? "start from derecha" : "start from izquierda");
+                groupBoxM3.Text = "tampografia ext - " + ((recs.Result[0].m3_param2 == 1) ? "inicio derecha" : "inicio izquierda");
 
                 //send quote, speed
                 var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
@@ -1676,7 +1315,7 @@ namespace GUI
                             }
                             allsent = allsent & result.Value.OpcResult;
                         }
-                        if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padprintExt, "program sent succesfully " + "station 1");
+                        if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padprintExt, "programa enviado exitosamente " + "station 1");
                     }
                 }
                 else
@@ -1719,9 +1358,9 @@ namespace GUI
 
                 keyValue = "pcM3Param2";
                 sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
-
-                labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
-                labelM3Param2Value.Text = ((recs.Result[0].m3_param2 == 1) ? "start from derecha" : "start from izquierda");
+                M3AutoDictionary[1] = short.Parse(recs.Result[0].m3_param1.ToString());
+                //labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
+                groupBoxM3.Text = "tampografia ext - " + ((recs.Result[0].m3_param2 == 1) ? "inicio derecha" : "inicio izquierda");
                 //send quote, speed
                 var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
@@ -1757,7 +1396,7 @@ namespace GUI
                             }
                             allsent = allsent & result.Value.OpcResult;
                         }
-                        if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padprintExt, "program sent succesfully " + "station 2");
+                        if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padprintExt, "programa enviado exitosamente " + "station 2");
                     }
                 }
                 else
@@ -1769,267 +1408,7 @@ namespace GUI
             {
                 //manage db error
             }
-        }
-
-        private async void comboBoxM4PrgName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBoxM4PrgName.Text == "") return;
-
-            //get model name
-            string prgName = comboBoxM4PrgName.Text;
-            M4PrgName = comboBoxM4PrgName.Text;
-            string modelName = prgName.Substring(2, 4);
-
-            //check model name
-            if (modelName == "")
-            {
-                //program name with incorrect format
-                //todo add message to the operator
-                return;
-            }
-
-            //get data from DB
-            MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
-
-            if ((recs.Error == 0) & (recs.Result.Count != 0))
-            {
-                //send recipe
-                string keyValue = "pcM4Param1";
-                var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m4_param1.ToString()));
-                labelM4Param1Value.Text = recs.Result[0].m4_param1.ToString();
-
-                string keyToSend = "pcM4ProgramName";
-
-                var readResult = await ccService.Send(keyToSend, "");
-                if (readResult.OpcResult)
-                {
-
-                }
-                else
-                {
-
-                }
-
-                keyToSend = "pcM4ProgramName";
-
-                readResult = await ccService.Send(keyToSend, comboBoxM4PrgName.Text);
-                if (readResult.OpcResult)
-                {
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padLaser, "program sent succesfully");
-                }
-                else
-                {
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padLaser, "error sending " + readResult.NodeString);
-                }
-
-                string top = "";
-                string bottom = "";
-
-                //aggiornare controlli
-                if (recs.Result[0].m4_param2 == 0)
-                {
-                    top = recs.Result[0].m4_param3.ToString();
-                    bottom = recs.Result[0].m4_param4.ToString();
-                }
-
-                if (recs.Result[0].m4_param2 == 1)
-                {
-                    top = DateTime.Now.ToString("dd-MM-yyyy");
-                    bottom = bottom = recs.Result[0].m4_param4.ToString();
-                }
-
-                if (recs.Result[0].m4_param2 == 2)
-                {
-                    top = recs.Result[0].m4_param3.ToString();
-                    bottom = DateTime.Now.ToString("dd-MM-yyyy");
-                }
-
-                if (recs.Result[0].m4_param2 == 3)
-                {
-                    top = DateTime.Now.ToString("dd-MM-yyyy");
-                    bottom = DateTime.Now.ToString("dd-MM-yyyy");
-                }
-
-
-                //sned to padlaser
-                WritePadLaserRecipe(top, Properties.Settings.Default.PadLaserFilePathTop);
-                WritePadLaserRecipe(bottom, Properties.Settings.Default.PadLaserFilePathBottom);
-            }
-            else
-            {
-                //db error manage
-            }
-        }
-
-        private async void comboBoxM2PrgName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBoxM2PrgName.Text == "") return;
-
-            //get model name
-            string prgName = comboBoxM2PrgName.Text;
-            M2PrgName = comboBoxM2PrgName.Text;
-            string modelName = prgName.Substring(2, 4);
-
-            //check model name
-            if (modelName == "")
-            {
-                //program name with incorrect format
-                //todo add message to the operator
-                return;
-            }
-
-            //get data from DB
-            MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
-
-            if ((recs.Error == 0) & (recs.Result.Count != 0))
-            {
-                //todo: send recipe (todo: waiting mysql integration)
-                string keyValue = "pcM2Param1";
-                var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m2_param1.ToString()));
-                if (sendResult.OpcResult)
-                {
-                    labelM2Param1Value.Text = recs.Result[0].m2_param1.ToString();
-                }
-                else
-                {
-                    //todo manage log/user error
-                }
-
-                //send quote, speed
-                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-                {
-                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                    ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                    objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + comboBoxM2PrgName.Text + config.Extensions[0]);
-                    if (objPoints != null)
-                    {
-                        List<string> keys = new List<string>()
-                    {
-                        "pcM2AutoQuote",
-                        "pcM2AutoSpeed"
-                    };
-
-                        List<object> values = new List<object>()
-                    {
-                        new float[] {0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
-                        new short[] {0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
-                    };
-
-                        var sendResults = await ccService.Send(keys, values);
-                        bool allsent = true;
-                        foreach (var result in sendResults)
-                        {
-                            if (result.Value.OpcResult)
-                            {
-                            }
-                            else
-                            {
-                                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintInt, "error sending " + result.Value.NodeString);
-                            }
-                            allsent = allsent & result.Value.OpcResult;
-                        }
-                        if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padprintInt, "program sent succesfully");
-                    }
-                }
-                else
-                {
-                    AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintInt, "verify program file");
-                }
-            }
-        }
-
-        private async void comboBoxM1PrgName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBoxM1PrgName.Text == "") return;
-
-            //get model name
-            string prgName = comboBoxM1PrgName.Text;
-            M1PrgName = comboBoxM1PrgName.Text;
-            string modelName = prgName.Substring(2, 4);
-
-            //check model name
-            if (modelName == "")
-            {
-                //program name with incorrect format
-                //todo add message to the operator
-                return;
-            }
-
-            SendSizeFromM1ProgramToOpc();
-
-            //get data from DB
-            MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
-
-            if ((recs.Error == 0) & (recs.Result.Count != 0))
-            {
-                //send recipe (todo: waiting mysql)
-                string keyValue = "pcM1Param1";
-                var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m1_param1.ToString()));
-                labelM1Param1Value.Text = recs.Result[0].m1_param1.ToString();
-
-                //send quote, speed
-                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-                {
-                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                    ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                    objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxM1PrgName.Text + config.Extensions[0]);
-                    if (objPoints != null)
-                    {
-                        List<string> keys = new List<string>()
-                    {
-                        "pcM1AutoQuote",
-                        "pcM1AutoSpeed"
-                    };
-
-                        List<object> values = new List<object>()
-                    {
-                        new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
-                        new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
-                    };
-
-                        var sendResults = await ccService.Send(keys, values);
-                        bool allsent = true;
-                        foreach (var result in sendResults)
-                        {
-                            if (result.Value.OpcResult)
-                            {
-                            }
-                            else
-                            {
-                                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
-                            }
-                            allsent = allsent & result.Value.OpcResult;
-                        }
-                        if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.trimmer, "program sent succesfully");
-
-                        string key = "pc_timer_stop_stivale";
-                        var sendResultsTimer = await ccService.Send("pcM1AutoTimer", objPoints.Points[0].CustomFloatParam);
-                        if (sendResultsTimer.OpcResult)
-                        {
-                        }
-                        else
-                        {
-
-                        }
-                    }
-                }
-
-                //carico il programma in TEST
-
-            }
-            else
-            {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "verify program file");
-            }
-        }
-        private void dataGridViewM2TeachPoints_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-
-        }
+        }     
 
         private void ResetM1Datagrid()
         {
@@ -2208,45 +1587,7 @@ namespace GUI
             else xDialog.MsgBox.Show("sin conexión", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
         }
 
-        private void buttonMRecipiesShowAll_Click(object sender, EventArgs e)
-        {
-
-            return;
-
-            //fill data
-            string connectionString = "Data Source=localhost;database=plasticaucho;uid=USER;pwd=Robots2023!";
-            string query = "Select * from models";
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                using (MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn))
-                {
-                    DataSet ds = new DataSet();
-                    adapter.Fill(ds);
-                    dataGridViewMEditRecipe.DataSource = ds.Tables[0];
-                    dataGridViewMEditRecipe.Columns[0].HeaderText = "receta";
-                    dataGridViewMEditRecipe.Columns[0].Width = 120;
-                    dataGridViewMEditRecipe.Columns[1].HeaderText = "refiladora on/off";
-                    dataGridViewMEditRecipe.Columns[1].Width = 140;
-                    dataGridViewMEditRecipe.Columns[2].Visible = false;
-                    dataGridViewMEditRecipe.Columns[3].HeaderText = "padprint int on/off";
-                    dataGridViewMEditRecipe.Columns[3].Width = 140;
-                    dataGridViewMEditRecipe.Columns[4].Visible = false;
-                    dataGridViewMEditRecipe.Columns[5].HeaderText = "padprint ext on/off";
-                    dataGridViewMEditRecipe.Columns[5].Width = 140;
-                    dataGridViewMEditRecipe.Columns[6].HeaderText = "padprint ext foot";
-                    dataGridViewMEditRecipe.Columns[6].Width = 140;
-
-                    //dataGridViewMEditRecipe.Columns[6].Visible = false;
-
-                    dataGridViewMEditRecipe.Columns[7].HeaderText = "padlaser on/off";
-                    dataGridViewMEditRecipe.Columns[7].Width = 140;
-                    dataGridViewMEditRecipe.Columns[8].HeaderText = "line top";
-                    dataGridViewMEditRecipe.Columns[8].Width = 140;
-                    dataGridViewMEditRecipe.Columns[9].HeaderText = "line bottom";
-                    dataGridViewMEditRecipe.Columns[9].Width = 140;
-                }
-            }
-        }
+     
 
         private async void radioButtonFootOrderOpt1Test_CheckedChanged(object sender, EventArgs e)
         {
@@ -2290,8 +1631,10 @@ namespace GUI
             //sendResult = await ccService.Send(keyToSend, true);
         }
 
+
         public async void RestartRequestFromM1()
         {
+            if (ccService == null) return;
             if (M1PrgName == "" || ccService.ClientIsConnected == false)
             {
 
@@ -2304,20 +1647,17 @@ namespace GUI
                 //check model name
                 if (modelName == "")
                 {
-                    //program name with incorrect format
-                    //todo add message to the operator
                     return;
                 }
 
                 //get data from DB
-                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+                MySqlResult<recipies> recs = mysqlService.DBTable[0].SelectByPrimaryKey<recipies>(modelName);
 
-                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                if ((recs.Result.Count != 0))
                 {
                     string keyValue = "pcM1Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m1_param1.ToString()));
-
-                    WriteOnLabelAsync(labelM1Param1Value, recs.Result[0].m1_param1.ToString());
+                    M1AutoDictionary[1] = short.Parse(recs.Result[0].m1_param1.ToString());                    
 
                     //send quote, speed
                     var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
@@ -2362,6 +1702,8 @@ namespace GUI
                             {
 
                             }
+
+
                         }
                     }
                 }
@@ -2374,95 +1716,12 @@ namespace GUI
 
                 var sendResult = await ccService.Send(keyToSend, chkValue);
             } 
-        }
-
-        public async void RestartRequestFromM1NoAsync()
-        {
-            if (M1PrgName == "" || ccService.ClientIsConnected == false)
-            {
-
-            }
-            else
-            {
-                string prgName = M1PrgName;
-                string modelName = prgName.Substring(2, 4);
-
-                //check model name
-                if (modelName == "")
-                {
-                    //program name with incorrect format
-                    //todo add message to the operator
-                    return;
-                }
-
-                //get data from DB
-                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
-
-                if ((recs.Error == 0) & (recs.Result.Count != 0))
-                {
-                    string keyValue = "pcM1Param1";
-                    var sendResult1 = ccService.Send(keyValue, short.Parse(recs.Result[0].m1_param1.ToString()));
-
-                    labelM1Param1Value.Text = recs.Result[0].m1_param1.ToString();
-                    //send quote, speed
-                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-                    {
-                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                        ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                        objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + prgName + config.Extensions[0]);
-                        if (objPoints != null)
-                        {
-                            List<string> keys = new List<string>()
-                            {
-                                "pcM1AutoQuote",
-                                "pcM1AutoSpeed"
-                            };
-
-                            List<object> values = new List<object>()
-                            {
-                                new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
-                                new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
-                            };
-
-                            var sendResults = await ccService.Send(keys, values);
-
-                            foreach (var result in sendResults)
-                            {
-                                if (result.Value.OpcResult)
-                                {
-                                }
-                                else
-                                {
-                                    //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
-                                }
-                            }
-
-                            var sendResultsTimer = await ccService.Send("pcM1AutoTimer", objPoints.Points[0].CustomFloatParam);
-                            if (sendResultsTimer.OpcResult)
-                            {
-                            }
-                            else
-                            {
-
-                            }
-                        }
-                    }
-                }
-
-                string keyToSend = null;
-                bool chkValue = false;
-
-                keyToSend = "pcM1Inclusion";
-                chkValue = (M1inc == "1") ? true : false;
-
-                var sendResult = ccService.Send(keyToSend, chkValue);
-            }
-        }
+        }     
 
         public async void UpdateRecipeToM1(string modelName)
         {
+            if (ccService == null) return;
+
             if (M1PrgName == "" || ccService.ClientIsConnected == false)
             {
 
@@ -2478,19 +1737,21 @@ namespace GUI
                 //get data from DB
                 MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
 
-                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                if ((recs.Result.Count != 0))
                 {
                     string keyValue = "pcM1Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m1_param1.ToString()));
 
-                    //WriteOnLabelAsync(labelM1Param1Value, recs.Result[0].m1_param1.ToString());
-                    labelM1Param1Value.Text = recs.Result[0].m1_param1.ToString();
+                    labelAutoDescription.Text = recs.Result[0].m_description.ToString();
+                    //labelM1Param1Value.Text = recs.Result[0].m1_param1.ToString();
+                    M1AutoDictionary[1] = short.Parse(recs.Result[0].m1_param1.ToString());
                 }
             }
         }
 
         public async void UpdateRecipeToM2(string modelName)
         {
+            if (ccService == null) return;
             if (M2PrgName == "" || ccService.ClientIsConnected == false)
             {
 
@@ -2506,13 +1767,13 @@ namespace GUI
                 //get data from DB
                 MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
 
-                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                if ((recs.Result.Count != 0))
                 {
                     string keyValue = "pcM2Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m2_param1.ToString()));
 
-                    //WriteOnLabelAsync(labelM2Param1Value, recs.Result[0].m2_param1.ToString());
-                    labelM2Param1Value.Text = recs.Result[0].m2_param1.ToString();
+                    //labelM2Param1Value.Text = recs.Result[0].m2_param1.ToString();
+                    M2AutoDictionary[1] = short.Parse(recs.Result[0].m2_param1.ToString());
                 }
             }
         }
@@ -2534,26 +1795,25 @@ namespace GUI
                 //get data from DB
                 MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
 
-                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                if ((recs.Result.Count != 0))
                 {
                     string keyValue = "pcM3Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param1.ToString()));
 
-                    //WriteOnLabelAsync(labelM3Param1Value, recs.Result[0].m3_param1.ToString());
-                    labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
+                    M3AutoDictionary[1] = short.Parse(recs.Result[0].m3_param1.ToString());
                     keyValue = "pcM3Param2";
                     sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
-
-                    string txtFoot = ((recs.Result[0].m3_param2 == 1) ? "start from derecha" : "start from izquierda");
-
                     //WriteOnLabelAsync(labelM3Param2Value, txtFoot);
-                    labelM3Param2Value.Text = txtFoot;
+                    //labelM3Param2Value.Text = txtFoot;
+                    groupBoxM3.Text = "tampografia ext - " + ((recs.Result[0].m3_param2 == 1) ? "inicio derecha" : "inicio izquierda");
                 }
             }
         }
 
-        public async void UpdateRecipeToM4(string modelName)
+        public async void UpdateRecipeToM4(string modelName, string shift)
         {
+            if (ccService == null) return;
+
             if (M4PrgName == "" || ccService.ClientIsConnected == false)
             {
 
@@ -2571,50 +1831,47 @@ namespace GUI
                 //get data from DB
                 MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
 
-                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                if ((recs.Result.Count != 0))
                 {
                     string keyValue = "pcM4Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m4_param1.ToString()));
 
                     //WriteOnLabelAsync(labelM3Param1Value, recs.Result[0].m3_param1.ToString());
-                    labelM4Param1Value.Text = recs.Result[0].m4_param1.ToString();
+                    //labelM4Param1Value.Text = recs.Result[0].m4_param1.ToString();
+                    M4AutoDictionary[1] = short.Parse(recs.Result[0].m4_param1.ToString());
                     string top = "";
                     string bottom = "";
+                    string medium = "";
 
-                    //aggiornare controlli
-                    if (recs.Result[0].m4_param2 == 0)
+                    //selection code
+                    if (recs.Result[0].m4_param2.Substring(0, 1).Equals("0"))
                     {
                         top = recs.Result[0].m4_param3.ToString();
-                        bottom = recs.Result[0].m4_param4.ToString();
                     }
+                    else top = DateTime.Now.ToString("dd-MM-yyyy");
 
-                    if (recs.Result[0].m4_param2 == 1)
+                    if (recs.Result[0].m4_param2.Substring(1, 1).Equals("0"))
                     {
-                        top = DateTime.Now.ToString("dd-MM-yyyy");
-                        bottom = bottom = recs.Result[0].m4_param4.ToString(); 
+                        medium = recs.Result[0].m4_param4.ToString();
                     }
+                    else medium = DateTime.Now.ToString("dd-MM-yyyy");
 
-                    if (recs.Result[0].m4_param2 == 2)
+                    if (recs.Result[0].m4_param2.Substring(2, 1).Equals("0"))
                     {
-                        top = recs.Result[0].m4_param3.ToString();
-                        bottom = DateTime.Now.ToString("dd-MM-yyyy");
+                        bottom = recs.Result[0].m4_param5.ToString();
                     }
-
-                    if (recs.Result[0].m4_param2 == 3)
-                    {
-                        top = DateTime.Now.ToString("dd-MM-yyyy");
-                        bottom = DateTime.Now.ToString("dd-MM-yyyy");
-                    }
-
-
+                    else bottom = DateTime.Now.ToString("dd-MM-yyyy");
+                    shift = comboBoxShift.Text;
                     WritePadLaserRecipe(top, Properties.Settings.Default.PadLaserFilePathTop);
-                    WritePadLaserRecipe(bottom, Properties.Settings.Default.PadLaserFilePathBottom);
+                    WritePadLaserRecipe(medium , Properties.Settings.Default.PadLaserFilePathMedium);
+                    WritePadLaserRecipe(comboBoxInj.Text + " " + bottom + " " + shift, Properties.Settings.Default.PadLaserFilePathBottom);
                 }
             }
         }
 
         public async void UpdateRecipeToM6(string modelName)
         {
+            if (ccService == null) return;
             if (M1PrgName == "" || ccService.ClientIsConnected == false)
             {
 
@@ -2624,19 +1881,21 @@ namespace GUI
                 //get data from DB
                 MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
 
-                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                if ( (recs.Result.Count != 0))
                 {
                     string keyValue = "pcM6Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m6_param1.ToString()));
 
-                    //WriteOnLabelAsync(labelM6Param1Value, recs.Result[0].m6_param1.ToString());
-                    labelM6Param1Value.Text = recs.Result[0].m6_param1.ToString();
+                    //labelM6Param1Value.Text = recs.Result[0].m6_param1.ToString();
+                    M6AutoDictionary[1] = short.Parse(recs.Result[0].m6_param1.ToString());
                 }
             }
-        }
+        }       
 
         public async void RestartRequestFromM2()
         {
+            if (ccService == null) return;
+
             if (M2PrgName == "" || ccService.ClientIsConnected == false)
             {
 
@@ -2655,14 +1914,14 @@ namespace GUI
                 }
 
                 //get data from DB
-                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+                MySqlResult<recipies> recs = mysqlService.DBTable[0].SelectByPrimaryKey<recipies>(modelName);
 
-                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                if ( (recs.Result.Count != 0))
                 {
                     string keyValue = "pcM2Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m2_param1.ToString()));
-
-                    WriteOnLabelAsync(labelM2Param1Value, recs.Result[0].m2_param1.ToString());
+                    M2AutoDictionary[1] = short.Parse(recs.Result[0].m2_param1.ToString());
+                   // WriteOnLabelAsync(labelM2Param1Value, recs.Result[0].m2_param1.ToString());
 
                     //send quote, speed
                     var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
@@ -2698,83 +1957,17 @@ namespace GUI
                                     //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
                                 }
                             }
-                        }
-                    }
-                }
 
-                string keyToSend = null;
-                bool chkValue = false;
-
-                keyToSend = "pcM2Inclusion";
-                chkValue = (M2inc == "1") ? true : false;
-
-                var sendResult = await ccService.Send(keyToSend, chkValue);
-            }
-        }
-
-        public async void RestartRequestFromM2NoAsync()
-        {
-            if (M2PrgName == "" || ccService.ClientIsConnected == false)
-            {
-
-            }
-            else
-            {
-                string prgName = M2PrgName;
-                string modelName = prgName.Substring(2, 4);
-
-                //check model name
-                if (modelName == "")
-                {
-                    //program name with incorrect format
-                    //todo add message to the operator
-                    return;
-                }
-
-                //get data from DB
-                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
-
-                if ((recs.Error == 0) & (recs.Result.Count != 0))
-                {
-                    string keyValue = "pcM2Param1";
-                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m2_param1.ToString()));
-
-                    //WriteOnLabelAsync(labelM2Param1Value, recs.Result[0].m2_param1.ToString());
-                    labelM2Param1Value.Text = recs.Result[0].m2_param1.ToString();
-                    //send quote, speed
-                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-                    {
-                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                        ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                        objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + prgName + config.Extensions[0]);
-                        if (objPoints != null)
-                        {
-                            List<string> keys = new List<string>()
+                            var sendResultsTimer = await ccService.Send("pcM2AutoTimer", objPoints.Points[0].CustomFloatParam);
+                            if (sendResultsTimer.OpcResult)
                             {
-                                "pcM2AutoQuote",
-                                "pcM2AutoSpeed"
-                            };
-
-                            List<object> values = new List<object>()
-                            {
-                                new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
-                                new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
-                            };
-
-                            var sendResults = await ccService.Send(keys, values);
-
-                            foreach (var result in sendResults)
-                            {
-                                if (result.Value.OpcResult)
-                                {
-                                }
-                                else
-                                {
-                                    //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
-                                }
                             }
+                            else
+                            {
+
+                            }
+
+
                         }
                     }
                 }
@@ -2787,10 +1980,12 @@ namespace GUI
 
                 var sendResult = await ccService.Send(keyToSend, chkValue);
             }
-        }
+        }     
 
         public async void RestartRequestFromM3()
         {
+            if (M3InLine == "1") return;
+
             if (M3PrgName1 == "" || ccService.ClientIsConnected == false)
             {
 
@@ -2809,24 +2004,21 @@ namespace GUI
                 }
 
                 //get data from DB
-                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+                MySqlResult<recipies> recs = mysqlService.DBTable[0].SelectByPrimaryKey<recipies>(modelName);
 
-                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                if ( (recs.Result.Count != 0))
                 {
                     string keyValue = "pcM3Param1";
-                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param1.ToString()));
-
-                    WriteOnLabelAsync(labelM3Param1Value, recs.Result[0].m3_param1.ToString());
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param1.ToString()));                   
+                    M3AutoDictionary[1] = short.Parse(recs.Result[0].m3_param1.ToString());
 
                     keyValue = "pcM3Param2";
                     sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
 
-                    string txtFoot = ((recs.Result[0].m3_param2 == 1) ? "start from derecha" : "start from izquierda");
+                    //string txtFoot = ((recs.Result[0].m3_param2 == 1) ? "start from derecha" : "start from izquierda");
 
-                    WriteOnLabelAsync(labelM3Param2Value, txtFoot);
-
-                    
-
+                    //WriteOnLabelAsync(labelM3Param2Value, txtFoot);
+                    groupBoxM3.Text = "tampografia ext - " + ((recs.Result[0].m3_param2 == 1) ? "inicio derecha" : "inicio izquierda");
                     //send quote, speed
                     var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
@@ -2860,6 +2052,15 @@ namespace GUI
                                 {
                                     //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
                                 }
+                            }
+
+                            var sendResultsTimer = await ccService.Send("pcM3AutoTimer", objPoints.Points[0].CustomFloatParam);
+                            if (sendResultsTimer.OpcResult)
+                            {
+                            }
+                            else
+                            {
+
                             }
                         }
                     }
@@ -2934,157 +2135,11 @@ namespace GUI
 
                 var sendResult = await ccService.Send(keyToSend, chkValue);
             }
-        }
-
-        public async void RestartRequestFromM3NoAsync()
-        {
-            if (M3PrgName1 == "" || ccService.ClientIsConnected == false)
-            {
-
-            }
-            else
-            {
-                string prgName = M3PrgName1;
-                string modelName = prgName.Substring(2, 4);
-
-                //check model name
-                if (modelName == "")
-                {
-                    //program name with incorrect format
-                    //todo add message to the operator
-                    return;
-                }
-
-                //get data from DB
-                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
-
-                if ((recs.Error == 0) & (recs.Result.Count != 0))
-                {
-                    string keyValue = "pcM3Param1";
-                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param1.ToString()));
-
-                    //WriteOnLabelAsync(labelM3Param1Value, recs.Result[0].m3_param1.ToString());
-                    labelM3Param1Value.Text = recs.Result[0].m3_param1.ToString();
-                    keyValue = "pcM3Param2";
-                    sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param2.ToString()));
-
-                    string txtFoot = ((recs.Result[0].m3_param2 == 1) ? "start from derecha" : "start from izquierda");
-
-                    //WriteOnLabelAsync(labelM3Param2Value, txtFoot);
-                    labelM3Param2Value.Text = txtFoot;
-
-
-                    //send quote, speed
-                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-                    {
-                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                        ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                        objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + prgName + config.Extensions[0]);
-                        if (objPoints != null)
-                        {
-                            List<string> keys = new List<string>()
-                            {
-                                "pcM3AutoQuoteSt1",
-                                "pcM3AutoSpeedSt1"
-                            };
-
-                            List<object> values = new List<object>()
-                            {
-                                new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
-                                new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
-                            };
-
-                            var sendResults = await ccService.Send(keys, values);
-
-                            foreach (var result in sendResults)
-                            {
-                                if (result.Value.OpcResult)
-                                {
-                                }
-                                else
-                                {
-                                    //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            if (M3PrgName2 == "" || ccService.ClientIsConnected == false)
-            {
-
-            }
-            else
-            {
-                string prgName = M3PrgName2;
-                string modelName = prgName.Substring(2, 4);
-
-                //check model name
-                if (modelName == "")
-                {
-                    //program name with incorrect format
-                    //todo add message to the operator
-                    return;
-                }
-
-                //get data from DB
-                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
-
-                if ((recs.Error == 0) & (recs.Result.Count != 0))
-                {
-                    //send quote, speed
-                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-                    {
-                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                        ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                        objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + prgName + config.Extensions[0]);
-                        if (objPoints != null)
-                        {
-                            List<string> keys = new List<string>()
-                            {
-                                "pcM3AutoQuoteSt2",
-                                "pcM3AutoSpeedSt2"
-                            };
-
-                            List<object> values = new List<object>()
-                            {
-                                new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
-                                new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
-                            };
-
-                            var sendResults = await ccService.Send(keys, values);
-
-                            foreach (var result in sendResults)
-                            {
-                                if (result.Value.OpcResult)
-                                {
-                                }
-                                else
-                                {
-                                    //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
-                                }
-                            }
-                        }
-                    }
-                }
-
-                string keyToSend = null;
-                bool chkValue = false;
-
-                keyToSend = "pcM3Inclusion";
-                chkValue = (M3inc == "1") ? true : false;
-
-                var sendResult = await ccService.Send(keyToSend, chkValue);
-            }
-        }
+        }   
 
         public async void RestartRequestFromM4()
         {
+            if (ccService == null) return;
             if (M4PrgName == "" || ccService.ClientIsConnected == false)
             {
 
@@ -3103,69 +2158,7 @@ namespace GUI
                 }
 
                 //get data from DB
-                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
-
-                if ((recs.Error == 0) & (recs.Result.Count != 0))
-                {
-                    string keyValue = "pcM4Param1";
-                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m4_param1.ToString()));
-
-                    WriteOnLabelAsync(labelM4Param1Value, recs.Result[0].m4_param1.ToString());
-
-                    keyValue = "pcM4ProgramName";
-
-                    var readResult = await ccService.Send(keyValue, "");
-                    if (readResult.OpcResult)
-                    {
-
-                    }
-                    else
-                    {
-
-                    }
-
-                    keyValue = "pcM4ProgramName";
-                    readResult = await ccService.Send(keyValue, M4PrgName);
-                    if (readResult.OpcResult)
-                    {
-                    }
-                    else
-                    {
-                    }
-                }
-
-                string keyToSend = null;
-                bool chkValue = false;
-
-                keyToSend = "pcM4Inclusion";
-                chkValue = (M4inc == "1") ? true : false;
-
-                var sendResult = await ccService.Send(keyToSend, chkValue);
-
-            }
-        }
-
-        public async void RestartRequestFromM4NoAsync()
-        {
-            if (M4PrgName == "" || ccService.ClientIsConnected == false)
-            {
-
-            }
-            else
-            {
-                string prgName = M4PrgName;
-                string modelName = prgName.Substring(2, 4);
-
-                //check model name
-                if (modelName == "")
-                {
-                    //program name with incorrect format
-                    //todo add message to the operator
-                    return;
-                }
-
-                //get data from DB
-                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+                MySqlResult<recipies> recs = mysqlService.DBTable[0].SelectByPrimaryKey<recipies>(modelName);
 
                 if ((recs.Error == 0) & (recs.Result.Count != 0))
                 {
@@ -3173,27 +2166,42 @@ namespace GUI
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m4_param1.ToString()));
 
                     //WriteOnLabelAsync(labelM4Param1Value, recs.Result[0].m4_param1.ToString());
-                    labelM4Param1Value.Text = recs.Result[0].m4_param1.ToString();
+                    M4AutoDictionary[1] = short.Parse(recs.Result[0].m4_param1.ToString());
                     keyValue = "pcM4ProgramName";
 
                     var readResult = await ccService.Send(keyValue, "");
-                    if (readResult.OpcResult)
-                    {
-
-                    }
-                    else
-                    {
-
-                    }
 
                     keyValue = "pcM4ProgramName";
                     readResult = await ccService.Send(keyValue, M4PrgName);
-                    if (readResult.OpcResult)
+
+                    //aggiornare controlli
+                    string top = "";
+                    string medium = "";
+                    string bottom = "";
+
+                    //selection code
+                    if (recs.Result[0].m4_param2.Substring(0, 1).Equals("0"))
                     {
+                        top = recs.Result[0].m4_param3.ToString();
                     }
-                    else
+                    else top = DateTime.Now.ToString("dd-MM-yyyy");
+
+                    if (recs.Result[0].m4_param2.Substring(1, 1).Equals("0"))
                     {
+                        medium = recs.Result[0].m4_param4.ToString();
                     }
+                    else medium = DateTime.Now.ToString("dd-MM-yyyy");
+
+                    if (recs.Result[0].m4_param2.Substring(2, 1).Equals("0"))
+                    {
+                        bottom = recs.Result[0].m4_param5.ToString();
+                    }
+                    else bottom = DateTime.Now.ToString("dd-MM-yyyy");
+
+                    string shift = comboBoxShift.Text;
+                    WritePadLaserRecipe(top, Properties.Settings.Default.PadLaserFilePathTop);
+                    WritePadLaserRecipe(medium , Properties.Settings.Default.PadLaserFilePathMedium);
+                    WritePadLaserRecipe(comboBoxInj.Text + " " + bottom + " " + shift, Properties.Settings.Default.PadLaserFilePathBottom);
                 }
 
                 string keyToSend = null;
@@ -3206,9 +2214,12 @@ namespace GUI
 
             }
         }
+  
 
         public async void RestartRequestFromM5()
         {
+            if (ccService == null) return;
+
             if (M1PrgName == "" || ccService.ClientIsConnected == false)
             {
 
@@ -3227,14 +2238,15 @@ namespace GUI
                 }
 
                 //get data from DB
-                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+                MySqlResult<recipies> recs = mysqlService.DBTable[0].SelectByPrimaryKey<recipies>(modelName);
 
                 if ((recs.Error == 0) & (recs.Result.Count != 0))
                 {
                     string keyValue = "pcM5Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m5_param1.ToString()));
 
-                    WriteOnLabelAsync(labelM5Param1Value, recs.Result[0].m5_param1.ToString());
+                    //WriteOnLabelAsync(labelM5Param1Value, recs.Result[0].m5_param1.ToString());                    
+                    M5AutoDictionary[1] = short.Parse(recs.Result[0].m5_param1.ToString());
                 }
 
                 string keyToSend = null;
@@ -3247,53 +2259,11 @@ namespace GUI
 
 
             }
-        }
-
-        public async void RestartRequestFromM5NoAsync()
-        {
-            if (M1PrgName == "" || ccService.ClientIsConnected == false)
-            {
-
-            }
-            else
-            {
-                string prgName = M1PrgName;
-                string modelName = prgName.Substring(2, 4);
-
-                //check model name
-                if (modelName == "")
-                {
-                    //program name with incorrect format
-                    //todo add message to the operator
-                    return;
-                }
-
-                //get data from DB
-                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
-
-                if ((recs.Error == 0) & (recs.Result.Count != 0))
-                {
-                    string keyValue = "pcM5Param1";
-                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m5_param1.ToString()));
-
-                    //WriteOnLabelAsync(labelM5Param1Value, recs.Result[0].m5_param1.ToString());
-                    labelM5Param1Value.Text = recs.Result[0].m5_param1.ToString();
-                }
-
-                string keyToSend = null;
-                bool chkValue = false;
-
-                keyToSend = "pcM5Inclusion";
-                chkValue = (M5inc == "1") ? true : false;
-
-                var sendResult = await ccService.Send(keyToSend, chkValue);
-
-
-            }
-        }
+        }     
 
         public async void RestartRequestFromM6()
         {
+            if (ccService == null) return;
             if (M1PrgName == "" || ccService.ClientIsConnected == false)
             {
 
@@ -3312,48 +2282,7 @@ namespace GUI
                 }
 
                 //get data from DB
-                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
-
-                if ((recs.Error == 0) & (recs.Result.Count != 0))
-                {
-                    string keyValue = "pcM6Param1";
-                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m6_param1.ToString()));
-
-                    WriteOnLabelAsync(labelM6Param1Value, recs.Result[0].m6_param1.ToString());
-                }
-
-                string keyToSend = null;
-                bool chkValue = false;
-
-                keyToSend = "pcM6Inclusion";
-                chkValue = (M6inc == "1") ? true : false;
-
-                var sendResult = await ccService.Send(keyToSend, chkValue);
-
-            }
-        }
-
-        public async void RestartRequestFromM6NoAsync()
-        {
-            if (M1PrgName == "" || ccService.ClientIsConnected == false)
-            {
-
-            }
-            else
-            {
-                string prgName = M1PrgName;
-                string modelName = prgName.Substring(2, 4);
-
-                //check model name
-                if (modelName == "")
-                {
-                    //program name with incorrect format
-                    //todo add message to the operator
-                    return;
-                }
-
-                //get data from DB
-                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+                MySqlResult<recipies> recs = mysqlService.DBTable[0].SelectByPrimaryKey<recipies>(modelName);
 
                 if ((recs.Error == 0) & (recs.Result.Count != 0))
                 {
@@ -3361,7 +2290,7 @@ namespace GUI
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m6_param1.ToString()));
 
                     //WriteOnLabelAsync(labelM6Param1Value, recs.Result[0].m6_param1.ToString());
-                    labelM6Param1Value.Text = recs.Result[0].m6_param1.ToString();
+                    M6AutoDictionary[1] = short.Parse(recs.Result[0].m6_param1.ToString());
                 }
 
                 string keyToSend = null;
@@ -3373,7 +2302,7 @@ namespace GUI
                 var sendResult = await ccService.Send(keyToSend, chkValue);
 
             }
-        }
+        }    
 
         private async void comboBoxMRecipeName_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -3390,42 +2319,48 @@ namespace GUI
                 checkBoxM6RecipeModify.CheckState = ((short.Parse(recs.Result[0].m6_param1.ToString()) == 1) ? CheckState.Checked : CheckState.Unchecked);
                 radioButtonM3Option1Recipe.Checked = ((short.Parse(recs.Result[0].m3_param2.ToString()) == 1) ? true : false);
                 radioButtonM3Option2Recipe.Checked = ((short.Parse(recs.Result[0].m3_param2.ToString()) == 2) ? true : false);
+                textBoxModifyDescription.Text = recs.Result[0].m_description.ToString();
 
                 //aggiornare controlli
-                if (recs.Result[0].m4_param2 == 0)
+                if (recs.Result[0].m4_param2.Substring(0,1) == "0")
                 {
                     radioButtonMRecipeTopSel1.Checked = false;
                     radioButtonMRecipeTopSel2.Checked = true;
+                }
+
+                if (recs.Result[0].m4_param2.Substring(0, 1) == "1")
+                {
+                    radioButtonMRecipeTopSel1.Checked = true;
+                    radioButtonMRecipeTopSel2.Checked = false;
+                }
+
+                if (recs.Result[0].m4_param2.Substring(1, 1) == "0")
+                {
+                    radioButtonMRecipeMedioSel1.Checked = false;
+                    radioButtonMRecipeMedioSel2.Checked = true;
+                }
+
+                if (recs.Result[0].m4_param2.Substring(1, 1) == "1")
+                {
+                    radioButtonMRecipeMedioSel1.Checked = true;
+                    radioButtonMRecipeMedioSel2.Checked = false;
+                }
+
+                if (recs.Result[0].m4_param2.Substring(2, 1) == "0")
+                {
                     radioButtonMRecipeBottomSel1.Checked = false;
                     radioButtonMRecipeBottomSel2.Checked = true;
                 }
 
-                if (recs.Result[0].m4_param2 == 1)
+                if (recs.Result[0].m4_param2.Substring(2, 1) == "1")
                 {
-                    radioButtonMRecipeTopSel1.Checked = true;
-                    radioButtonMRecipeTopSel2.Checked = false;
-                    radioButtonMRecipeBottomSel1.Checked = false;
-                    radioButtonMRecipeBottomSel2.Checked = true;
-                }
-
-                if (recs.Result[0].m4_param2 == 2)
-                {
-                    radioButtonMRecipeTopSel1.Checked = false;
-                    radioButtonMRecipeTopSel2.Checked = true;
                     radioButtonMRecipeBottomSel1.Checked = true;
                     radioButtonMRecipeBottomSel2.Checked = false;
                 }
 
-                if (recs.Result[0].m4_param2 == 3)
-                {
-                    radioButtonMRecipeTopSel1.Checked = true;
-                    radioButtonMRecipeTopSel2.Checked = false;
-                    radioButtonMRecipeBottomSel1.Checked = true;
-                    radioButtonMRecipeBottomSel2.Checked = false;
-                }
-
-                textBoxM4TopLineRecipe.Text = recs.Result[0].m4_param3.ToString();
+                textBoxM4TopLineRecipe.Text = recs.Result[0].m4_param3.ToString();                
                 textBoxM4BottomLineRecipe.Text = recs.Result[0].m4_param4.ToString();
+                textBoxM4MedioLineRecipe.Text = recs.Result[0].m4_param5.ToString();
             }
         }
 
@@ -3437,8 +2372,6 @@ namespace GUI
             DialogResult res = xDialog.MsgBox.Show("Estás seguro de que quieres actualizar la receta?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
             if (res == DialogResult.Yes)
             {
-                
-
                 if (comboBoxMRecipeName.Text == "") return;
                 object[] values = new object[]
                         {
@@ -3450,10 +2383,12 @@ namespace GUI
                                     (checkBoxM6RecipeModify.CheckState == CheckState.Checked) ? 1 : 0,
 
             (radioButtonM3Option1Recipe.Checked == true) ? 1 : 2,
-            GetSelOptionTopBottomUpdateRecipe(),
+            //GetSelOptionTopBottomUpdateRecipe(),
+            GetM4RowsSelOptionUpdateRecipe(),
             textBoxM4TopLineRecipe.Text,
+            textBoxM4MedioLineRecipe.Text,
+            textBoxModifyDescription.Text,
             textBoxM4BottomLineRecipe.Text,
-
             };
                 string[] rParams = new string[]
                         {
@@ -3467,6 +2402,8 @@ namespace GUI
                         "m4_param2",
                         "m4_param3",
                         "m4_param4",
+                        "m_description",
+                        "m4_param5",
                         };
 
                 MySqlResult recs = mysqlService.DBTable[0].UpdateAutomaticPrimaryKey(comboBoxMRecipeName.Text, rParams, values);
@@ -3480,8 +2417,10 @@ namespace GUI
             UpdateRecipeToM1(comboBoxMRecipeName.Text);
             UpdateRecipeToM2(comboBoxMRecipeName.Text);
             UpdateRecipeToM3(comboBoxMRecipeName.Text);
-            UpdateRecipeToM4(comboBoxMRecipeName.Text);
+            string shift = comboBoxShift.Text;
+            UpdateRecipeToM4(comboBoxMRecipeName.Text, shift);            
             UpdateRecipeToM6(comboBoxMRecipeName.Text);
+            RefreshModelNameComboBox();
         }
 
         private void checkBoxM1RecipeModify_CheckedChanged(object sender, EventArgs e)
@@ -3491,7 +2430,7 @@ namespace GUI
             chkValue = (checkBoxM1RecipeModify.CheckState == CheckState.Checked) ? true : false;
 
             checkBoxM1RecipeModify.ImageIndex = (chkValue) ? 0 : 1;
-            labelM1ParamRecipe.Text = (chkValue) ? "on" : "off";
+            checkBoxM1RecipeModify.Text = (chkValue) ? "on" : "off";
         }
 
         private void checkBoxM2RecipeModify_CheckStateChanged(object sender, EventArgs e)
@@ -3501,7 +2440,7 @@ namespace GUI
             chkValue = (checkBoxM2RecipeModify.CheckState == CheckState.Checked) ? true : false;
 
             checkBoxM2RecipeModify.ImageIndex = (chkValue) ? 0 : 1;
-            labelM2ParamRecipe.Text = (chkValue) ? "on" : "off";
+            checkBoxM2RecipeModify.Text = (chkValue) ? "on" : "off";
         }
 
         private void checkBoxM3RecipeModify_CheckStateChanged(object sender, EventArgs e)
@@ -3511,7 +2450,7 @@ namespace GUI
             chkValue = (checkBoxM3RecipeModify.CheckState == CheckState.Checked) ? true : false;
 
             checkBoxM3RecipeModify.ImageIndex = (chkValue) ? 0 : 1;
-            labelM3ParamRecipe.Text = (chkValue) ? "on" : "off";
+            checkBoxM3RecipeModify.Text = (chkValue) ? "on" : "off";
         }
 
         private void checkBoxM4RecipeModify_CheckStateChanged(object sender, EventArgs e)
@@ -3521,7 +2460,7 @@ namespace GUI
             chkValue = (checkBoxM4RecipeModify.CheckState == CheckState.Checked) ? true : false;
 
             checkBoxM4RecipeModify.ImageIndex = (chkValue) ? 0 : 1;
-            labelM4ParamRecipe.Text = (chkValue) ? "on" : "off";
+            checkBoxM4RecipeModify.Text = (chkValue) ? "on" : "off";
         }
 
         private void checkBoxM5RecipeModify_CheckStateChanged(object sender, EventArgs e)
@@ -3531,7 +2470,7 @@ namespace GUI
             chkValue = (checkBoxM5RecipeModify.CheckState == CheckState.Checked) ? true : false;
 
             checkBoxM5RecipeModify.ImageIndex = (chkValue) ? 0 : 1;
-            labelM5ParamRecipe.Text = (chkValue) ? "on" : "off";
+            checkBoxM5RecipeModify.Text = (chkValue) ? "on" : "off";
         }
 
         private void checkBoxM6RecipeModify_CheckStateChanged(object sender, EventArgs e)
@@ -3541,7 +2480,7 @@ namespace GUI
             chkValue = (checkBoxM6RecipeModify.CheckState == CheckState.Checked) ? true : false;
 
             checkBoxM6RecipeModify.ImageIndex = (chkValue) ? 0 : 1;
-            labelM6ParamRecipe.Text = (chkValue) ? "on" : "off";
+            checkBoxM6RecipeModify.Text = (chkValue) ? "on" : "off";
         }
 
         private async void buttonMRecipeDeleteAll_Click(object sender, EventArgs e)
@@ -3584,57 +2523,97 @@ namespace GUI
 
         private void comboBoxT0RecipeName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-            List<IObjProgram> pList = new List<IObjProgram>();
-
-            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            try
             {
-                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, comboBoxT0RecipeName.Text);
-                comboBoxM1PrgName.Items.Clear();
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+                List<IObjProgram> pList = new List<IObjProgram>();
+                List<string> prgNameList = new List<string>();
 
-                foreach (IObjProgram prgName in pList)
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
                 {
-                    comboBoxM1PrgName.Items.Add(prgName.ProgramName);
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                    pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, comboBoxT0RecipeName.Text);
+
+                    if (pList != null)
+                    {
+                        foreach (IObjProgram prgName in pList)
+                        {
+                            prgNameList.Add(prgName.ProgramName);
+                        }
+                    }
+
+                    pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxT0RecipeName.Text);
+
+                    if (pList != null)
+                    {
+                        foreach (IObjProgram prgName in pList)
+                        {
+                            prgNameList.Add(prgName.ProgramName);
+                        }
+                    }
+                    pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxT0RecipeName.Text);
+                    comboBoxM3PrgName_st1.Items.Clear();
+
+                    if (pList != null)
+                    {
+                        foreach (IObjProgram prgName in pList)
+                        {
+                            comboBoxM3PrgName_st1.Items.Add(prgName.ProgramName);
+                            //prgNameList.Add(prgName.ProgramName);
+                        }
+                    }
+
+                    pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxT0RecipeName.Text);
+                    comboBoxM3PrgName_st2.Items.Clear();
+                    if (pList != null)
+                    {
+                        foreach (IObjProgram prgName in pList)
+                        {
+                            comboBoxM3PrgName_st2.Items.Add(prgName.ProgramName);
+                            //prgNameList.Add(prgName.ProgramName);
+                        }
+                    }
+
+                    //pad laser combobox
+                    List<string> mList = new List<string>();
+                    MySqlResult<padlaserprogram> result = mysqlService.DBTable[1].SelectAll<padlaserprogram>();
+                    result.Result.ForEach(x => mList.Add(x.program_name));
+
+                    if (mList != null)
+                    {
+                        foreach (string prgName in mList)
+                        {
+                            //filter by model name
+                            if (prgName.Contains(comboBoxT0RecipeName.Text))
+                                prgNameList.Add((string)prgName);
+                        }
+                    }
+                    List<string> distinctList = prgNameList.Distinct().ToList();
+
+                    comboBoxAutoPrgName.Items.Clear();
+
+                    foreach (string item in distinctList.FindAll(X => X.Length == 15))
+                    {
+                        comboBoxAutoPrgName.Items.Add(item);
+                    }
+                    MySqlResult<recipies> resultA = mysqlService.DBTable[0].SelectByPrimaryKey<recipies>(comboBoxT0RecipeName.Text);
+                    {
+                        if (resultA.Result.Count != 0)
+                        {
+                            labelAutoDescription.Text = resultA.Result[0].m_description;
+                        }
+                    }
                 }
+                comboBoxM1TeachRecipeName.Text = comboBoxT0RecipeName.Text;
+                comboBoxM1TestRecipeName.Text = comboBoxT0RecipeName.Text;
+                comboBoxM2TeachRecipeName.Text = comboBoxT0RecipeName.Text;
+                comboBoxM2TestRecipeName.Text = comboBoxT0RecipeName.Text;
+                comboBoxM3TeachRecipeName.Text = comboBoxT0RecipeName.Text;
+                comboBoxM3TestRecipeName.Text = comboBoxT0RecipeName.Text;
+            }
+            catch(Exception ex)
+            {
 
-                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxT0RecipeName.Text);
-                comboBoxM2PrgName.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM2PrgName.Items.Add(prgName.ProgramName);
-                }
-
-                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxT0RecipeName.Text);
-                comboBoxM3PrgName_st1.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM3PrgName_st1.Items.Add(prgName.ProgramName);
-                }
-
-                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxT0RecipeName.Text);
-                comboBoxM3PrgName_st2.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
-                {
-                    comboBoxM3PrgName_st2.Items.Add(prgName.ProgramName);
-                }
-
-                //pad laser combobox
-                List<string> mList = new List<string>();
-                MySqlResult<padlaserprogram> result = mysqlService.DBTable[1].SelectAll<padlaserprogram>();
-                result.Result.ForEach(x => mList.Add(x.program_name));
-
-
-                comboBoxM4PrgName.Items.Clear();
-                foreach (string prgName in mList)
-                {
-                    //filter by model name
-                    if (prgName.Contains(comboBoxT0RecipeName.Text))
-                        comboBoxM4PrgName.Items.Add(prgName);
-                }
             }
         }
 
@@ -3649,11 +2628,14 @@ namespace GUI
                 pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, comboBoxM1TeachRecipeName.Text);
                 comboBoxM1TeachProgramList.Items.Clear();
 
-                foreach (IObjProgram prgName in pList)
+                if (pList != null)
                 {
-                    //filter by model name
-                    if (prgName.ProgramName.Contains(comboBoxM1TeachRecipeName.Text))
-                        comboBoxM1TeachProgramList.Items.Add(prgName.ProgramName);
+                    foreach (IObjProgram prgName in pList)
+                    {
+                        //filter by model name
+                        if (prgName.ProgramName.Contains(comboBoxM1TeachRecipeName.Text))
+                            comboBoxM1TeachProgramList.Items.Add(prgName.ProgramName);
+                    }
                 }
             }
         }
@@ -3668,12 +2650,14 @@ namespace GUI
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, comboBoxM1TeachRecipeName.Text);
                 comboBoxM1TeachProgramList.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
+                if (pList != null)
                 {
-                    //filter by model name
-                    if (prgName.ProgramName.Contains(comboBoxM1TeachRecipeName.Text))
-                        comboBoxM1TeachProgramList.Items.Add(prgName.ProgramName);
+                    foreach (IObjProgram prgName in pList)
+                    {
+                        //filter by model name
+                        if (prgName.ProgramName.Contains(comboBoxM1TeachRecipeName.Text))
+                            comboBoxM1TeachProgramList.Items.Add(prgName.ProgramName);
+                    }
                 }
             }
         }
@@ -3688,12 +2672,14 @@ namespace GUI
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, comboBoxM1TestRecipeName.Text);
                 comboBoxM1TestProgramList.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
+                if (pList != null)
                 {
-                    //filter by model name
-                    if (prgName.ProgramName.Contains(comboBoxM1TestRecipeName.Text))
-                        comboBoxM1TestProgramList.Items.Add(prgName.ProgramName);
+                    foreach (IObjProgram prgName in pList)
+                    {
+                        //filter by model name
+                        if (prgName.ProgramName.Contains(comboBoxM1TestRecipeName.Text))
+                            comboBoxM1TestProgramList.Items.Add(prgName.ProgramName);
+                    }
                 }
             }
         }
@@ -3708,12 +2694,14 @@ namespace GUI
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxM2TeachRecipeName.Text);
                 comboBoxM2TeachProgramList.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
+                if (pList != null)
                 {
-                    //filter by model name
-                    if (prgName.ProgramName.Contains(comboBoxM2TeachRecipeName.Text))
-                        comboBoxM2TeachProgramList.Items.Add(prgName.ProgramName);
+                    foreach (IObjProgram prgName in pList)
+                    {
+                        //filter by model name
+                        if (prgName.ProgramName.Contains(comboBoxM2TeachRecipeName.Text))
+                            comboBoxM2TeachProgramList.Items.Add(prgName.ProgramName);
+                    }
                 }
             }
         }
@@ -3728,12 +2716,14 @@ namespace GUI
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxM2TestRecipeName.Text);
                 comboBoxM2TestProgramList.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
+                if (pList != null)
                 {
-                    //filter by model name
-                    if (prgName.ProgramName.Contains(comboBoxM2TestRecipeName.Text))
-                        comboBoxM2TestProgramList.Items.Add(prgName.ProgramName);
+                    foreach (IObjProgram prgName in pList)
+                    {
+                        //filter by model name
+                        if (prgName.ProgramName.Contains(comboBoxM2TestRecipeName.Text))
+                            comboBoxM2TestProgramList.Items.Add(prgName.ProgramName);
+                    }
                 }
             }
         }
@@ -3748,12 +2738,14 @@ namespace GUI
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxM3TeachRecipeName.Text);
                 comboBoxM3TeachProgramList.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
+                if (pList != null)
                 {
-                    //filter by model name
-                    if (prgName.ProgramName.Contains(comboBoxM3TeachRecipeName.Text))
-                        comboBoxM3TeachProgramList.Items.Add(prgName.ProgramName);
+                    foreach (IObjProgram prgName in pList)
+                    {
+                        //filter by model name
+                        if (prgName.ProgramName.Contains(comboBoxM3TeachRecipeName.Text))
+                            comboBoxM3TeachProgramList.Items.Add(prgName.ProgramName);
+                    }
                 }
             }
         }
@@ -3768,12 +2760,14 @@ namespace GUI
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxM3TestRecipeName.Text);
                 comboBoxM3TestProgramList.Items.Clear();
-
-                foreach (IObjProgram prgName in pList)
+                if (pList != null)
                 {
-                    //filter by model name
-                    if (prgName.ProgramName.Contains(comboBoxM3TestRecipeName.Text))
-                        comboBoxM3TestProgramList.Items.Add(prgName.ProgramName);
+                    foreach (IObjProgram prgName in pList)
+                    {
+                        //filter by model name
+                        if (prgName.ProgramName.Contains(comboBoxM3TestRecipeName.Text))
+                            comboBoxM3TestProgramList.Items.Add(prgName.ProgramName);
+                    }
                 }
             }
         }
@@ -3870,49 +2864,2074 @@ namespace GUI
                 using (TextWriter tw = new StreamWriter(FileName, false))
                 {
                     tw.Write(strLine);
-                }                
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padLaser, "parameter " + strLine + "succesfully sent");
+                }
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padLaser, "parametro " + strLine + "enviado a la laser");
             }
             catch (Exception ex)  //Writing to log has failed, send message to trace in case anyone is listening.
             {
-                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padLaser, "check il file is opened");
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padLaser, "error de acceso a la láser PC");
+            }
+        }
+
+        private void radioButtonMRecipeTopSel1_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxM4TopLineRecipe.Enabled = (radioButtonMRecipeTopSel1.Checked)?false:true;
+            if (radioButtonMRecipeTopSel1.Checked) textBoxM4TopLineRecipe.Text = "___________________";
+        }
+
+        private void tabPageT1_3_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
+            Pen pExt = new Pen(Color.Black, 10);
+            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
+            Brush bExt = new SolidBrush(Color.Black);
+            Brush bText = new SolidBrush(Color.Black);
+            int w = 12;
+            int h = 12;
+            int i = 1001;
+            g.TranslateTransform(10, 10);
+
+            foreach (KeyValuePair<int, bool> entry in M1InputDictionary)
+            {
+                if (entry.Value == true)
+                {
+                    g.DrawEllipse(pInc, 0, 0, w, h);
+                    g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                else
+                {
+                    g.DrawEllipse(pExt, 0, 0, w, h);
+                    g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                string tmp1 = "M1" + "_INPUT";
+                string tmp2 = i.ToString();
+                g.DrawString(inputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                if (i < 1024)
+                    g.TranslateTransform(0, 30);
+                else if (i == 1024)
+                {
+                    g.ResetTransform();
+                    g.TranslateTransform(360, 10);
+                }
+                else
+                {
+                    g.TranslateTransform(0, 30);
+
+                }
+                i = i + 1;
+            }
+            tabPageT1_3.Invalidate();
+        
+            }
+
+        private void tabPageT1_4_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
+            Pen pExt = new Pen(Color.Black, 10);
+            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
+            Brush bExt = new SolidBrush(Color.Black);
+            Brush bText = new SolidBrush(Color.Black);
+            int w = 12;
+            int h = 12;
+            int i = 2001;
+            g.TranslateTransform(10, 10);
+
+            foreach (KeyValuePair<int, bool> entry in M1OutputDictionary)
+            {
+                if (entry.Value == true)
+                {
+                    g.DrawEllipse(pInc, 0, 0, w, h);
+                    g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                else
+                {
+                    g.DrawEllipse(pExt, 0, 0, w, h);
+                    g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                string tmp1 = "M1" + "_OUTPUT";
+                string tmp2 = i.ToString();
+                g.DrawString(outputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                if (i < 2024)
+                    g.TranslateTransform(0, 30);
+                else if (i == 2024)
+                {
+                    g.ResetTransform();
+                    g.TranslateTransform(360, 10);
+                }
+                else
+                {  
+                    g.TranslateTransform(0, 30);
+
+                }
+                i = i + 1;
+            }
+            tabPageT1_4.Invalidate();
+        }
+
+        private void tabPageT2_2_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
+            Pen pExt = new Pen(Color.Black, 10);
+            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
+            Brush bExt = new SolidBrush(Color.Black);
+            Brush bText = new SolidBrush(Color.Black);
+            int w = 12;
+            int h = 12;
+            int i = 1001;
+            g.TranslateTransform(10, 10);
+
+            foreach (KeyValuePair<int, bool> entry in M4InputDictionary)
+            {
+                if (entry.Value == true)
+                {
+                    g.DrawEllipse(pInc, 0, 0, w, h);
+                    g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                else
+                {
+                    g.DrawEllipse(pExt, 0, 0, w, h);
+                    g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                string tmp1 = "M4" + "_INPUT";
+                string tmp2 = i.ToString();
+                g.DrawString(inputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                if (i < 1024)
+                    g.TranslateTransform(0, 30);
+                else if (i == 1024)
+                {
+                    g.ResetTransform();
+                    g.TranslateTransform(360, 10);
+                }
+                else
+                {
+                    g.TranslateTransform(0, 30);
+
+                }
+                i = i + 1;
+            }
+            tabPageT2_2.Invalidate();
+        }
+
+        private void tabPageT2_3_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
+            Pen pExt = new Pen(Color.Black, 10);
+            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
+            Brush bExt = new SolidBrush(Color.Black);
+            Brush bText = new SolidBrush(Color.Black);
+            int w = 12;
+            int h = 12;
+            int i = 2001;
+            g.TranslateTransform(10, 10);
+
+            foreach (KeyValuePair<int, bool> entry in M4OutputDictionary)
+            {
+                if (entry.Value == true)
+                {
+                    g.DrawEllipse(pInc, 0, 0, w, h);
+                    g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                else
+                {
+                    g.DrawEllipse(pExt, 0, 0, w, h);
+                    g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                string tmp1 = "M4" + "_OUTPUT";
+                string tmp2 = i.ToString();
+                g.DrawString(outputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                if (i < 2024)
+                    g.TranslateTransform(0, 30);
+                else if (i == 2024)
+                {
+                    g.ResetTransform();
+                    g.TranslateTransform(360, 10);
+                }
+                else
+                {
+                    g.TranslateTransform(0, 30);
+
+                }
+                i = i + 1;
+            }
+            tabPageT2_3.Invalidate();
+        }
+
+        private void tabPageT3_3_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
+            Pen pExt = new Pen(Color.Black, 10);
+            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
+            Brush bExt = new SolidBrush(Color.Black);
+            Brush bText = new SolidBrush(Color.Black);
+            int w = 12;
+            int h = 12;
+            int i = 1001;
+            g.TranslateTransform(10, 10);
+
+            foreach (KeyValuePair<int, bool> entry in M2InputDictionary)
+            {
+                if (entry.Value == true)
+                {
+                    g.DrawEllipse(pInc, 0, 0, w, h);
+                    g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                else
+                {
+                    g.DrawEllipse(pExt, 0, 0, w, h);
+                    g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                string tmp1 = "M2" + "_INPUT";
+                string tmp2 = i.ToString();
+                g.DrawString(inputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                if (i < 1024)
+                    g.TranslateTransform(0, 30);
+                else if (i == 1024)
+                {
+                    g.ResetTransform();
+                    g.TranslateTransform(360, 10);
+                }
+                else
+                {
+                    g.TranslateTransform(0, 30);
+
+                }
+                i = i + 1;
+            }
+            tabPageT3_3.Invalidate();
+        }
+
+        private void tabPageT3_4_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
+            Pen pExt = new Pen(Color.Black, 10);
+            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
+            Brush bExt = new SolidBrush(Color.Black);
+            Brush bText = new SolidBrush(Color.Black);
+            int w = 12;
+            int h = 12;
+            int i = 2001;
+            g.TranslateTransform(10, 10);
+
+            foreach (KeyValuePair<int, bool> entry in M2OutputDictionary)
+            {
+                if (entry.Value == true)
+                {
+                    g.DrawEllipse(pInc, 0, 0, w, h);
+                    g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                else
+                {
+                    g.DrawEllipse(pExt, 0, 0, w, h);
+                    g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
+                }
+                string tmp1 = "M2" + "_OUTPUT";
+                string tmp2 = i.ToString();
+                g.DrawString(outputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                if (i < 2024)
+                    g.TranslateTransform(0, 30);
+                else if (i == 2024)
+                {
+                    g.ResetTransform();
+                    g.TranslateTransform(360, 10);
+                }
+                else
+                {
+                    g.TranslateTransform(0, 30);
+
+                }
+                i = i + 1;
+            }
+            tabPageT3_4.Invalidate();
+        }
+
+        public bool CheckProgramSyntaxName(string prgName)
+        {
+            //check lenght
+            int size = prgName.Length;
+            if (size > 15) return false;
+            //check separator
+            string[] splitted = prgName.Split('-');
+            if (splitted.Length != 3) return false;
+
+            return true;
+        }
+
+        private async void buttonCopyPrograms_Click(object sender, EventArgs e)
+        {
+            List<IObjProgram> pList = new List<IObjProgram>();
+
+            //check if origin recipe and destination recipe is already created
+            //get data from DB
+            MySqlResult<recipies> recO = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(comboBoxOriginRecipe.Text);
+            MySqlResult<recipies> recD = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(comboBoxDestinationRecipe.Text);
+
+            if ((recO.Error != 0) || (recO.Result.Count == 0))
+            {
+                xDialog.MsgBox.Show("La receta de ORIGEN no esiste", "PBoot", xDialog.MsgBox.Buttons.OK);
+                return;
+            }
+
+            if ((recD.Error != 0) || (recD.Result.Count == 0))
+            {
+                xDialog.MsgBox.Show("La receta de DESTINACION no esiste", "PBoot", xDialog.MsgBox.Buttons.OK);
+                return;
+            }
+
+            //condition to copy
+            if ((comboBoxOriginRecipe.Text != "" & comboBoxDestinationRecipe.Text != ""))
+            {
+                //ask user to close application
+                DialogResult res = xDialog.MsgBox.Show("Está seguro de que desea copiar la receta?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
+                if (res == DialogResult.Yes)
+                {
+                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+                    List<string> prgNameList = new List<string>();
+
+                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                    {
+                        //copy trimmer programs
+                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                        pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, comboBoxOriginRecipe.Text);
+
+                        if (pList != null)
+                        {
+                            foreach (IObjProgram prgName in pList)
+                            {
+                                string suffix = prgName.ProgramName.Substring(13, 2);
+                                //copy program with destination
+                                string destinationFile = config.ProgramsPath[0] + "\\" + "PR" + comboBoxDestinationRecipe.Text + "-" + prgName.Size + "-" + prgName.Foot + suffix + ".prog";
+                                File.Copy(prgName.FilePath, destinationFile, true);
+                            }
+                        }
+
+                        //copy padint programs
+                        pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxOriginRecipe.Text);
+
+                        if (pList != null)
+                        {
+                            foreach (IObjProgram prgName in pList)
+                            {
+                                string suffix = prgName.ProgramName.Substring(13, 2);
+                                //copy program with destination
+                                string destinationFile = config.ProgramsPath[1] + "\\" + "PR" + comboBoxDestinationRecipe.Text + "-" + prgName.Size + "-" + prgName.Foot + suffix + ".prog";
+                                File.Copy(prgName.FilePath, destinationFile, true);
+                            }
+                        }
+
+                        //copy padext programs
+                        pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxOriginRecipe.Text);
+
+                        if (pList != null)
+                        {
+                            foreach (IObjProgram prgName in pList)
+                            {
+                                string suffix = prgName.ProgramName.Substring(13, 2);
+                                //copy program with destination
+                                string destinationFile = config.ProgramsPath[2] + "\\" + "PR" + comboBoxDestinationRecipe.Text + "-" + prgName.Size + "-" + prgName.Foot + suffix + ".prog";
+                                File.Copy(prgName.FilePath, destinationFile, true);
+                            }
+                        }
+
+                        CopyLaserProgram(comboBoxOriginRecipe.Text, comboBoxDestinationRecipe.Text);
+                    }
+                }
+                xDialog.MsgBox.Show("copia realizada exitosamente", "PBoot", xDialog.MsgBox.Buttons.OK);
+            }
+            else xDialog.MsgBox.Show("receta no seleccionada", "PBoot", xDialog.MsgBox.Buttons.OK);
+        }
+
+        private void buttonDeleteByRecipeM1_Click(object sender, EventArgs e)
+        {
+            List<IObjProgram> pList = new List<IObjProgram>();
+
+            if (comboBoxRecipeDelete.Text == "") return;
+            //ask user to close application
+            DialogResult res = xDialog.MsgBox.Show("Está seguro de que desea eliminar todos los programas de la receta en la REFILADORA?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+                List<string> prgNameList = new List<string>();
+
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                {
+                    //copy trimmer programsReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                    pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, comboBoxRecipeDelete.Text);
+
+                    if (pList != null)
+                    {
+                        foreach (IObjProgram prgName in pList)
+                        {
+                            //DELETE program with destination
+                            File.Delete(prgName.FilePath);
+                        }
+                    }
+                    xDialog.MsgBox.Show("todos los programas de la refiladora con receta " + comboBoxRecipeDelete.Text + "eliminados.", "PBoot", xDialog.MsgBox.Buttons.OK);
+                }
+            }
+        }
+
+        private void buttonDeleteByRecipeM2_Click(object sender, EventArgs e)
+        {
+            List<IObjProgram> pList = new List<IObjProgram>();
+
+            if (comboBoxRecipeDelete.Text == "") return;
+            //ask user to close application
+            DialogResult res = xDialog.MsgBox.Show("Está seguro de que desea eliminar todos los programas de la receta " + comboBoxRecipeDelete.Text + " en la TAMPOGRAFIA INTIERNA?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+                List<string> prgNameList = new List<string>();
+
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                {
+                    //copy trimmer programsReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                    pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxRecipeDelete.Text);
+
+                    if (pList != null)
+                    {
+                        foreach (IObjProgram prgName in pList)
+                        {
+                            //DELETE program with destination
+                            File.Delete(prgName.FilePath);
+                        }
+                    }
+                    xDialog.MsgBox.Show("todos los programas de la TAMPOGRAFIA INTIERNA con receta " + comboBoxRecipeDelete.Text + " eliminados.", "PBoot", xDialog.MsgBox.Buttons.OK);
+                }
+            }
+        }
+
+        private void buttonDeleteByRecipeM3_Click(object sender, EventArgs e)
+        {
+            List<IObjProgram> pList = new List<IObjProgram>();
+
+            if (comboBoxRecipeDelete.Text == "") return;
+            //ask user to close application
+            DialogResult res = xDialog.MsgBox.Show("Está seguro de que desea eliminar todos los programas de la receta " + comboBoxRecipeDelete.Text + " en la TAMPOGRAFIA ESTERNA?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+                List<string> prgNameList = new List<string>();
+
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                {
+                    //copy trimmer programsReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                    pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxRecipeDelete.Text);
+
+                    if (pList != null)
+                    {
+                        foreach (IObjProgram prgName in pList)
+                        {
+                            //DELETE program with destination
+                            File.Delete(prgName.FilePath);
+                        }
+                    }
+                    xDialog.MsgBox.Show("todos los programas de la TAMPOGRAFIA ESTERNA con receta " + comboBoxRecipeDelete.Text + " eliminados.", "PBoot", xDialog.MsgBox.Buttons.OK);
+                }
+            }
+        }
+
+        private void buttonDeleteByRecipeM4_Click(object sender, EventArgs e)
+        {
+            List<string> pList = new List<string>();
+
+            if (comboBoxRecipeDelete.Text == "") return;
+            //ask user to close application
+            DialogResult res = xDialog.MsgBox.Show("Está seguro de que desea eliminar todos los programas de la receta " + comboBoxRecipeDelete.Text + " en la LASER?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                MySqlResult<padlaserprogram> result = mysqlService.DBTable[1].SelectPrimaryCointains<padlaserprogram>(comboBoxRecipeDelete.Text);
+
+
+                result.Result.ForEach(x => pList.Add(x.program_name));
+
+                if (pList != null)
+                {
+                    foreach (string prgName in pList)
+                    {
+                        MySqlResult recd = mysqlService.DBTable[1].DeleteRowPrimaryKey(prgName);
+                    }
+                    xDialog.MsgBox.Show("todos los programas de la LASER con receta " + comboBoxRecipeDelete.Text + " eliminados.", "PBoot", xDialog.MsgBox.Buttons.OK);
+                }                
+            }
+        }
+
+
+        private void CopyLaserProgram(string modelOrigin, string modelDestination)
+        {
+            object[] value2 = null;
+
+            //get all programs with model name origin
+            MySqlResult<padlaserprogram> result = mysqlService.DBTable[1].SelectPrimaryCointains<padlaserprogram>(modelOrigin);
+            if (result.Result.Count != 0)
+            {
+                foreach (var key in result.Result)
+                {
+                    //new program name
+                    string copyPrgName = "PR" + modelDestination + "-" + key.program_name.Substring(7, 8);
+
+                    value2 = new object[]
+                    {
+                        copyPrgName,
+                        key.Q1,
+                        key.Q2,
+                        key.Q3,
+                        key.Q4,
+                        key.S1,
+                        key.S2,
+                        key.S3,
+                        key.S4,
+                        key.T1,
+                    };
+
+                    string[] rParams = new string[]
+                       {
+                        "Q1",
+                        "Q2",
+                        "Q3",
+                        "Q4",
+                        "S1",
+                        "S2",
+                        "S3",
+                        "S4",
+                        "T1",                        
+                       };
+
+                    //check if it's present
+                    MySqlResult<padlaserprogram> resultP = mysqlService.DBTable[1].SelectByPrimaryKey<padlaserprogram>(copyPrgName);
+                    if (resultP.Result.Count != 0)
+                    {
+                        //it's present update
+                        MySqlResult resultI = mysqlService.DBTable[1].UpdateAutomaticPrimaryKey(copyPrgName, rParams, value2);
+                    }
+                    else if (resultP.Result.Count == 0)
+                    {
+                        //not present insert
+                        MySqlResult resultI = mysqlService.DBTable[1].InsertAutomatic(value2);
+
+                        if (resultI.Error == 0)
+                        {
+
+                        }
+                    }
+                }
+            }
+        }
+
+        private void comboBoxRecipeDelete_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+            List<IObjProgram> pList = new List<IObjProgram>();
+            List<string> prgNameList = new List<string>();
+
+            if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+            {
+                ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, comboBoxRecipeDelete.Text);
+                
+                if (pList != null)
+                {
+                    foreach (IObjProgram prgName in pList)
+                    {                        
+                        prgNameList.Add(prgName.ProgramName);
+                    }
+                }
+
+                pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxRecipeDelete.Text);
+               
+                if (pList != null)
+                {
+                    foreach (IObjProgram prgName in pList)
+                    {                       
+                        prgNameList.Add(prgName.ProgramName);
+                    }
+                }
+                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxRecipeDelete.Text);
+               
+                if (pList != null)
+                {
+                    foreach (IObjProgram prgName in pList)
+                    {                       
+                        prgNameList.Add(prgName.ProgramName);
+                    }
+                }
+
+                pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxRecipeDelete.Text);
+              
+                if (pList != null)
+                {
+                    foreach (IObjProgram prgName in pList)
+                    {                      
+                        prgNameList.Add(prgName.ProgramName);
+                    }
+                }
+
+                //pad laser combobox
+                List<string> mList = new List<string>();
+                MySqlResult<padlaserprogram> result = mysqlService.DBTable[1].SelectAll<padlaserprogram>();
+                result.Result.ForEach(x => mList.Add(x.program_name));
+                List<string> distinctList = prgNameList.Distinct().ToList();
+
+                comboBoxProgramNameDelete.Items.Clear();
+
+                foreach (string item in distinctList.FindAll(X => X.Length == 15))
+                {
+                    comboBoxProgramNameDelete.Items.Add(item);
+                }
+            }
+        }
+
+        private void buttonDeleteProgramM1_Click(object sender, EventArgs e)
+        {
+            if (comboBoxProgramNameDelete.Text == "") return;
+            //ask user to close application
+            DialogResult res = xDialog.MsgBox.Show("Está seguro de que desea eliminar el programa " + comboBoxProgramNameDelete.Text + "en la REFILADORA?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+                List<string> prgNameList = new List<string>();
+
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                {                    
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+
+                    //DELETE program with destination
+                    File.Delete(config.ProgramsPath[0] + "\\" + comboBoxProgramNameDelete.Text + ".prog");
+
+                    xDialog.MsgBox.Show("el programa de la refiladora " + comboBoxProgramNameDelete.Text + "eliminado.", "PBoot", xDialog.MsgBox.Buttons.OK);
+                }
+            }
+        }
+
+        private void buttonDeleteProgramM4_Click(object sender, EventArgs e)
+        {
+            List<string> pList = new List<string>();
+
+            if (comboBoxProgramNameDelete.Text == "") return;
+            //ask user to close application
+            DialogResult res = xDialog.MsgBox.Show("Está seguro de que desea eliminar el programa " + comboBoxProgramNameDelete.Text + " en la LASER?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                MySqlResult recd = mysqlService.DBTable[1].DeleteRowPrimaryKey(comboBoxProgramNameDelete.Text);
+                if (recd.Error == 0)
+                    xDialog.MsgBox.Show("el programa " + comboBoxProgramNameDelete.Text + " eliminado en la LASER.", "PBoot", xDialog.MsgBox.Buttons.OK);
+                else
+                    xDialog.MsgBox.Show("el programa " + comboBoxProgramNameDelete.Text + " non esiste en la LASER.", "PBoot", xDialog.MsgBox.Buttons.OK);
+            }
+        }
+
+        private void buttonDeleteProgramM2_Click(object sender, EventArgs e)
+        {
+            if (comboBoxProgramNameDelete.Text == "") return;
+            //ask user to close application
+            DialogResult res = xDialog.MsgBox.Show("Está seguro de que desea eliminar el programa " + comboBoxProgramNameDelete.Text + "en la TAMPOGRAFIA INTIERNA?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+                List<string> prgNameList = new List<string>();
+
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                {
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+
+                    //DELETE program with destination
+                    File.Delete(config.ProgramsPath[1] + "\\" + comboBoxProgramNameDelete.Text + ".prog");
+
+                    xDialog.MsgBox.Show("el programa de la tampografia intierna " + comboBoxProgramNameDelete.Text + "eliminado.", "PBoot", xDialog.MsgBox.Buttons.OK);
+                }
+            }
+
+        }
+
+        private void buttonDeleteProgramM3_Click(object sender, EventArgs e)
+        {
+            if (comboBoxProgramNameDelete.Text == "") return;
+            //ask user to close application
+            DialogResult res = xDialog.MsgBox.Show("Está seguro de que desea eliminar el programa " + comboBoxProgramNameDelete.Text + "en la TAMPOGRAFIA ESTERNA?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
+            if (res == DialogResult.Yes)
+            {
+                var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+                List<string> prgNameList = new List<string>();
+
+                if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                {
+                    ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+
+                    //DELETE program with destination
+                    File.Delete(config.ProgramsPath[2] + "\\" + comboBoxProgramNameDelete.Text + ".prog");
+
+                    xDialog.MsgBox.Show("el programa de la tampografia esterna " + comboBoxProgramNameDelete.Text + "eliminado.", "PBoot", xDialog.MsgBox.Buttons.OK);
+                }
+            }
+        }
+
+        private async void comboBoxAutoPrgName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected == false) return;
+
+            bool allProgramsPresent = true;
+            #region(* send to trimmer *)
+            //send to trimmer
+            if (comboBoxAutoPrgName.Text == "") return;
+
+            //get model name
+            string prgName = comboBoxAutoPrgName.Text;
+            M1PrgName = comboBoxAutoPrgName.Text;
+            string modelName = prgName.Substring(2, 4);
+
+            //check model name
+            if (modelName == "")
+            {
+                //program name with incorrect format
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.line, "nombre de receta incorrecto " + modelName);
+                return;
+            }
+
+            //send size in production (to be shown on panel)
+            SendSizeFromM1ProgramToOpc();
+
+            try
+            {
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    //send recipe on/off
+                    string keyValue = "pcM1Param1";
+                    var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m1_param1.ToString()));
+                    //                labelM1Param1Value.Text = recs.Result[0].m1_param1.ToString();
+                    M1AutoDictionary[1] = short.Parse(recs.Result[0].m1_param1.ToString());
+
+                    //send quote, speed, timer
+                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                    {
+                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                        ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                        objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[0] + "\\" + comboBoxAutoPrgName.Text + config.Extensions[0]);
+                        if (objPoints != null)
+                        {
+                            List<string> keys = new List<string>()
+                    {
+                        "pcM1AutoQuote",
+                        "pcM1AutoSpeed"
+                    };
+
+                            List<object> values = new List<object>()
+                    {
+                        new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
+                        new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                    };
+
+                            var sendResults = await ccService.Send(keys, values);
+                            bool allsent = true;
+                            foreach (var result in sendResults)
+                            {
+                                if (result.Value.OpcResult)
+                                {
+                                }
+                                else
+                                {
+                                    AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error al enviar quotas " + result.Value.NodeString);
+                                }
+                                allsent = allsent & result.Value.OpcResult;
+                            }
+                            if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.trimmer, "programa enviado exitosamente " + M1PrgName);
+
+                            string key = "pc_timer_stop_stivale";
+                            var sendResultsTimer = await ccService.Send("pcM1AutoTimer", objPoints.Points[0].CustomFloatParam);
+                            if (sendResultsTimer.OpcResult)
+                            {
+                            }
+                            else
+                            {
+
+                            }
+                            groupBoxM1.Text = "refiladora " + M1PrgName;
+                        }
+                        else
+                        {
+                            allProgramsPresent = allProgramsPresent & false;
+                        }
+                    }
+                }
+                else
+                {
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "revisa el programa " + M1PrgName);
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            #endregion
+
+            #region(* send to padint *)
+            //get model name
+            M2PrgName = comboBoxAutoPrgName.Text;
+
+            try
+            {
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    //send recipe on/off
+                    string keyValue = "pcM2Param1";
+                    var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m2_param1.ToString()));
+                    if (sendResult.OpcResult)
+                    {
+                        //labelM2Param1Value.Text = recs.Result[0].m2_param1.ToString();
+                        M2AutoDictionary[1] = short.Parse(recs.Result[0].m2_param1.ToString());
+                    }
+                    else
+                    {
+                        //todo manage log/user error
+                    }
+
+                    //send quote, speed
+                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
+
+                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                    {
+                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                        ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                        objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[1] + "\\" + comboBoxAutoPrgName.Text + config.Extensions[0]);
+                        if (objPoints != null)
+                        {
+                            List<string> keys = new List<string>()
+                    {
+                        "pcM2AutoQuote",
+                        "pcM2AutoSpeed"
+                    };
+
+                            List<object> values = new List<object>()
+                    {
+                        new float[] {0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
+                        new short[] {0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
+                    };
+
+                            var sendResults = await ccService.Send(keys, values);
+                            bool allsent = true;
+                            foreach (var result in sendResults)
+                            {
+                                if (result.Value.OpcResult)
+                                {
+                                }
+                                else
+                                {
+                                    AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintInt, "error al enviar quotas  " + result.Value.NodeString);
+                                }
+                                allsent = allsent & result.Value.OpcResult;
+                            }
+                            if (allsent) AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padprintInt, "programa enviado exitosamente " + M2PrgName);
+                            string key = "pc_timer_stop_stivale";
+                            var sendResultsTimer = await ccService.Send("pcM2AutoTimer", objPoints.Points[0].CustomFloatParam);
+                            if (sendResultsTimer.OpcResult)
+                            {
+                            }
+                            else
+                            {
+
+                            }
+                            groupBoxM2.Text = "tamp. int. " + M2PrgName;
+                        }
+                    }
+                    else
+                    {
+                        AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintInt, "revisa el programa " + M2PrgName);
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            #endregion
+
+            #region(* send to laser *)
+            //if (comboBoxM4PrgName.Text == "") return;
+
+            //get model name
+            //string prgName = comboBoxM4PrgName.Text;
+            M4PrgName = comboBoxAutoPrgName.Text;
+            //string modelName = prgName.Substring(2, 4);
+
+            try
+            {
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
+                {
+                    //send recipe
+                    string keyValue = "pcM4Param1";
+                    var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m4_param1.ToString()));
+                    //labelM4Param1Value.Text = recs.Result[0].m4_param1.ToString();
+                    M4AutoDictionary[1] = short.Parse(recs.Result[0].m4_param1.ToString());
+                    string keyToSend = "pcM4ProgramName";
+
+                    var readResult = await ccService.Send(keyToSend, "");
+                    if (readResult.OpcResult)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+
+                    keyToSend = "pcM4ProgramName";
+
+                    readResult = await ccService.Send(keyToSend, M4PrgName);
+                    if (readResult.OpcResult)
+                    {
+                        AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padLaser, "programa enviado exitosamente " + M4PrgName);
+                    }
+                    else
+                    {
+                        AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padLaser, "error en enviar programa " + readResult.NodeString);
+                    }
+
+                    string top = "";
+                    string medium = "";
+                    string bottom = "";
+
+                    //selection code
+                    if (recs.Result[0].m4_param2.Substring(0, 1).Equals("0"))
+                    {
+                        top = recs.Result[0].m4_param3.ToString();
+                    }
+                    else top = DateTime.Now.ToString("dd-MM-yyyy");
+
+                    if (recs.Result[0].m4_param2.Substring(1, 1).Equals("0"))
+                    {
+                        medium = recs.Result[0].m4_param4.ToString();
+                    }
+                    else medium = DateTime.Now.ToString("dd-MM-yyyy");
+
+                    if (recs.Result[0].m4_param2.Substring(2, 1).Equals("0"))
+                    {
+                        bottom = recs.Result[0].m4_param5.ToString();
+                    }
+                    else bottom = DateTime.Now.ToString("dd-MM-yyyy");
+                    string shift = comboBoxShift.Text;
+                    //sned to padlaser
+                    WritePadLaserRecipe(top, Properties.Settings.Default.PadLaserFilePathTop);
+                    WritePadLaserRecipe(medium, Properties.Settings.Default.PadLaserFilePathMedium);
+                    WritePadLaserRecipe(comboBoxInj.Text + " " + bottom + " " + shift, Properties.Settings.Default.PadLaserFilePathBottom);
+
+                    groupBoxM4.Text = "laser " + M4PrgName;
+                }
+                else
+                {
+                    //db error manage
+                }
+            }catch(Exception ex)
+            {
+
+            }
+
+            ////check all programs
+            //if (M1PrgName.Equals(comboBoxAutoPrgName.Text))
+            //{
+            //    groupBoxM1.ForeColor = Color.Black;
+            //}
+            //else
+            //{
+            //    groupBoxM1.ForeColor = Color.Red;
+            //    AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "programa no existe ");
+            //}
+            //if (M2PrgName.Equals(comboBoxAutoPrgName.Text))
+            //{
+            //    groupBoxM2.ForeColor = Color.Black;
+            //}
+            //else
+            //{
+            //    groupBoxM2.ForeColor = Color.Red;
+            //    AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padprintInt, "programa no existe ");
+            //}
+            //if (M4PrgName.Equals(comboBoxAutoPrgName.Text))
+            //{
+            //    groupBoxM4.ForeColor = Color.Black;
+            //} groupBoxM4.ForeColor = Color.Red;
+
+            #endregion
+        }
+
+        private void UpdateGUIByUser()
+        {
+            tabPageT0_5.Enabled = (loginLevel == "Operador") ? false : true;           
+        }      
+
+        private void buttonSwitchOperator_Click(object sender, EventArgs e)
+        {
+            loginLevel = "Operador";
+            labelUserLogin.Text = loginLevel;
+            UpdateGUIByUser();
+            AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.line, "usuario actual: Operador");            
+        }
+
+        private void buttonAdminLogin_Click(object sender, EventArgs e)
+        {
+            if ((textBoxPasswordLogin.Text).Equals(loginPassword))
+            {
+                loginLevel = "Administrador";
+                labelUserLogin.Text = loginLevel;
+                UpdateGUIByUser();
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.line, "usuario actual: Administrador");
+            }
+            else
+            {
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.line, "password incorrecta");
+            }
+        }
+
+        private void buttonChangePassword_Click(object sender, EventArgs e)
+        {
+            groupBoxLogin.Visible = true;
+        }
+
+        private void buttonApplyNewPassword_Click(object sender, EventArgs e)
+        {
+            if ((RemoveWhitespace(textBoxCurrentPassword.Text)).Equals(loginPassword))
+            {
+                if ((RemoveWhitespace(textBoxNewPassword.Text)).Equals(RemoveWhitespace(textBoxRepeatNewPassword.Text)))
+                {
+                    loginPassword = textBoxNewPassword.Text;
+                    groupBoxLogin.Visible = false;
+                }
+                else
+                {
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.line, "password repetida incorrecta");
+                }
+            }
+            else
+            {
+                AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.line, "password incorrecta");
+            }
+        }
+        public string RemoveWhitespace(string input)
+        {
+            return new string(input.ToCharArray()
+                .Where(c => !Char.IsWhiteSpace(c))
+                .ToArray());
+        }
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            groupBoxLogin.Visible = false;
+        }
+
+        private void tabPageT2_4_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
+            Pen pExt = new Pen(Color.Red, 10);
+            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
+            Brush bExt = new SolidBrush(Color.Red);
+            Brush bText = new SolidBrush(Color.Black);
+            int w = 12;
+            int h = 12;
+            int i = 1;
+            g.TranslateTransform(10, 10);
+
+            foreach (KeyValuePair<int, short> entry in M4AlarmsDictionary)
+            {
+                if ((i <= 8) || ((i > 32) & (i < 39)))
+                {
+                    if (entry.Value == 0)
+                    {
+                        g.DrawEllipse(pInc, 0, 0, w, h);
+                        g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
+                    }
+                    else
+                    {
+                        g.DrawEllipse(pExt, 0, 0, w, h);
+                        g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
+                    }
+                }
+                string tmp1 = "M4";
+                string tmp2 = "A" + i.ToString();
+
+                if (i <= 8)
+                {
+                    g.DrawString(alarmsConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                    g.DrawString("consulte el alarma " + tmp2 + " en el manual.", new Font("Verdana", 10), bText, new Point(300, 0));
+                    g.TranslateTransform(0, 30);
+                }
+                else if ((i > 32) & (i < 39))
+                {
+                    g.DrawString(alarmsConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                    g.DrawString("consulte el alarma " + tmp2 + " en el manual.", new Font("Verdana", 10), bText, new Point(300, 0));
+                    g.TranslateTransform(0, 30);
+
+                }
+                i = i + 1;
+            }
+
+            g.TranslateTransform(0, 100);
+
+            foreach (KeyValuePair<int, short> entry in M4StateDictionary)
+            {
+                string stateStr = "";
+                if (entry.Key == 1) stateStr = "fase del ciclo";
+                if (entry.Key == 2) stateStr = "fase del la banda de carga";
+                if (entry.Key == 3) stateStr = "fase del la banda de salida";
+
+                g.DrawString(stateStr + " " + entry.Value, new Font("Verdana", 10), bText, new Point(0, 0));
+
+                g.TranslateTransform(0, 30);
+            }
+            tabPageT2_4.Invalidate();
+        }
+
+        private void tabPageT4_5_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
+            Pen pExt = new Pen(Color.Red, 10);
+            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
+            Brush bExt = new SolidBrush(Color.Red);
+            Brush bText = new SolidBrush(Color.Black);
+            int w = 12;
+            int h = 12;
+            int i = 1;
+            g.TranslateTransform(10, 10);
+
+            foreach (KeyValuePair<int, short> entry in M3AlarmsDictionary)
+            {
+                if ((i <= 11) || ((i > 32) & (i < 41)))
+                {
+                    if (entry.Value == 0)
+                    {
+                        g.DrawEllipse(pInc, 0, 0, w, h);
+                        g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
+                    }
+                    else
+                    {
+                        g.DrawEllipse(pExt, 0, 0, w, h);
+                        g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
+                    }
+                }
+                string tmp1 = "M3";
+                string tmp2 = "A" + i.ToString();
+
+                if (i <= 11)
+                {
+                    g.DrawString(alarmsConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                    g.DrawString("consulte el alarma " + tmp2 + " en el manual.", new Font("Verdana", 10), bText, new Point(380, 0));
+                    g.TranslateTransform(0, 30);
+                }
+                else if ((i > 32) & (i < 41))
+                {
+                    g.DrawString(alarmsConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                    g.DrawString("consulte el alarma " + tmp2 + " en el manual.", new Font("Verdana", 10), bText, new Point(380, 0));
+                    g.TranslateTransform(0, 30);
+
+                }
+                i = i + 1;
+            }
+
+            g.TranslateTransform(0, 80);
+
+            foreach (KeyValuePair<int, short> entry in M3StateDictionary)
+            {
+                string stateStr = "";
+                if (entry.Key == 1) stateStr = "fase del ciclo";
+                if (entry.Key == 2) stateStr = "fase del la banda de carga";
+                if (entry.Key == 3) stateStr = "fase del la banda de salida";
+
+                g.DrawString(stateStr + " " + entry.Value, new Font("Verdana", 10), bText, new Point(0, 0));
+
+                g.TranslateTransform(0, 30);
+            }
+            tabPageT4_5.Invalidate();
+        }
+
+        private void tabPageT5_4_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
+            Pen pExt = new Pen(Color.Red, 10);
+            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
+            Brush bExt = new SolidBrush(Color.Red);
+            Brush bText = new SolidBrush(Color.Black);
+            int w = 12;
+            int h = 12;
+            int i = 1;
+            g.TranslateTransform(10, 10);
+
+            foreach (KeyValuePair<int, short> entry in M5AlarmsDictionary)
+            {
+                if ((i <= 7) || ((i > 32) & (i < 39)))
+                {
+                    if (entry.Value == 0)
+                    {
+                        g.DrawEllipse(pInc, 0, 0, w, h);
+                        g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
+                    }
+                    else
+                    {
+                        g.DrawEllipse(pExt, 0, 0, w, h);
+                        g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
+                    }
+                }
+                string tmp1 = "M5";
+                string tmp2 = "A" + i.ToString();
+
+                if (i <= 7)
+                {
+                    g.DrawString(alarmsConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                    g.DrawString("consulte el alarma " + tmp2 + " en el manual.", new Font("Verdana", 10), bText, new Point(300, 0));
+                    g.TranslateTransform(0, 30);
+                }
+                else if ((i > 32) & (i < 39))
+                {
+                    g.DrawString(alarmsConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                    g.DrawString("consulte el alarma " + tmp2 + " en el manual.", new Font("Verdana", 10), bText, new Point(300, 0));
+                    g.TranslateTransform(0, 30);
+
+                }
+                i = i + 1;
+            }
+
+            g.TranslateTransform(0, 100);
+
+            foreach (KeyValuePair<int, short> entry in M5StateDictionary)
+            {
+                string stateStr = "";
+                if (entry.Key == 1) stateStr = "fase del ciclo";
+                if (entry.Key == 2) stateStr = "fase del la banda de traslacion";
+                if (entry.Key == 3) stateStr = "fase del la banda de salida 1";
+                if (entry.Key == 4) stateStr = "fase del la banda de salida 2";
+                if (entry.Key == 5) stateStr = "fase del la banda de salida 3";
+
+                g.DrawString(stateStr + " " + entry.Value, new Font("Verdana", 10), bText, new Point(0, 0));
+
+                g.TranslateTransform(0, 30);
+            }
+            tabPageT5_4.Invalidate();
+        }
+
+        private void tabPageT3_5_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
+            Pen pExt = new Pen(Color.Red, 10);
+            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
+            Brush bExt = new SolidBrush(Color.Red);
+            Brush bText = new SolidBrush(Color.Black);
+            int i = 1;
+            int w = 12;
+            int h = 12;
+            g.TranslateTransform(10, 10);
+
+            foreach (KeyValuePair<int, short> entry in M2AlarmsDictionary)
+            {
+                if ((i <= 9) || ((i > 32) & (i < 39)))
+                {
+                    if (entry.Value == 0)
+                    {
+                        g.DrawEllipse(pInc, 0, 0, w, h);
+                        g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
+                    }
+                    else
+                    {
+                        g.DrawEllipse(pExt, 0, 0, w, h);
+                        g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
+                    }
+                }
+                string tmp1 = "M2";
+                string tmp2 = "A" + i.ToString();
+
+                if (i <= 9)
+                {
+                    g.DrawString(alarmsConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                    g.DrawString("consulte el alarma " + tmp2 + " en el manual.", new Font("Verdana", 10), bText, new Point(300, 0));
+                    g.TranslateTransform(0, 30);
+                }
+                else if ((i > 32) & (i < 39))
+                {
+                    g.DrawString(alarmsConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                    g.DrawString("consulte el alarma " + tmp2 + " en el manual.", new Font("Verdana", 10), bText, new Point(300, 0));
+                    g.TranslateTransform(0, 30);
+
+                }
+                i = i + 1;
+            }
+
+            g.TranslateTransform(0, 100);
+
+            foreach (KeyValuePair<int, short> entry in M2StateDictionary)
+            {
+                string stateStr = "";
+                if (entry.Key == 1) stateStr = "fase del ciclo";
+                if (entry.Key == 2) stateStr = "fase del la banda de carga";
+                if (entry.Key == 3) stateStr = "fase del la banda de salida";
+
+                g.DrawString(stateStr + " " + entry.Value, new Font("Verdana", 10), bText, new Point(0, 0));
+
+                g.TranslateTransform(0, 30);
+            }
+            tabPageT3_5.Invalidate();
+        }
+
+        private void groupBoxM1_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;            
+            Brush bText = new SolidBrush(Color.Black);
+            int w = 12;
+            int h = 12;
+            int i = 1;
+            g.TranslateTransform(10, 20);
+            g.DrawString((M1AutoDictionary[1] == 0)? "par. receta OFF" : "par. receta ON", new Font("Verdana", 10), bText, new Point(0, 0));
+            g.TranslateTransform(0, 30);
+            //cycle counter
+            g.DrawString("ciclos " + M1AutoDictionary[2], new Font("Verdana", 10), bText, new Point(0, 0));
+            g.TranslateTransform(0, 30);
+            float value = float.Parse((M1AutoDictionary[3] / 100.0f).ToString());
+            g.DrawString("tiempo (s) " + value.ToString(), new Font("Verdana", 10), bText, new Point(0, 0));
+            g.TranslateTransform(140, -54);
+            Rectangle r = new Rectangle(new Point(0,0), new Size(6,6));
+
+            string statusStr = "";
+            if (M1AutoDictionary[4] == - 1)
+            {
+                g.DrawRectangle(pBlack, r);
+                g.FillRectangle(bBlack, r);
+                statusStr = "sin conexión";
+            }
+            if (M1AutoDictionary[4] == 0)
+            {
+                g.DrawRectangle(pRed, r);
+                g.FillRectangle(bRed, r);
+                statusStr = "emergencia";
+            }
+            if (M1AutoDictionary[4] == 1)
+            {
+                g.DrawRectangle(pc1, r);
+                g.FillRectangle(bc1, r);
+                statusStr = "automatico";
+            }
+            if (M1AutoDictionary[4] == 2)
+            {
+                g.DrawRectangle(pOrange, r);
+                g.FillRectangle(bOrange, r);
+                statusStr = "manual";
+            }
+            if (M1AutoDictionary[4] == 3)
+            {
+                g.DrawRectangle(pc2, r);
+                g.FillRectangle(bc2, r);
+                statusStr = "en ciclo";
+            }
+            if (M1AutoDictionary[4] == 4)
+            {
+                g.DrawRectangle(pDarkOrange, r);
+                g.FillRectangle(bDarkOrange, r);
+                statusStr = "en alarma";
+            }
+            g.DrawString(statusStr, new Font("Verdana", 10), bText, new Point(10, -5));
+            
+        }
+
+        private void checkboxKeyboardLogin_Click(object sender, EventArgs e)
+        {
+            RunKeyboard();
+        }
+
+        private void buttonRecipeTable_Click(object sender, EventArgs e)
+        {
+            this.tabControlMain.SelectedPage = tabPageT0_2_3;
+        }
+
+        private void tabPageT0_2_3_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
+            Pen pExt = new Pen(Color.Red, 10);
+            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
+            Brush bExt = new SolidBrush(Color.Red);
+            Brush bText = new SolidBrush(Color.Black);
+            int i = 1;
+
+            g.TranslateTransform(10, 10);
+            g.DrawString("receta" + "  " + "descripcion", new Font("Verdana", 14), bText, new Point(20, 0));
+            g.TranslateTransform(0, 30);
+            int j = 1;
+            foreach (var key in ModelNameDictionary)
+            {
+
+                g.DrawString(key.Value + "      " + DescriptionDictionary[j], new Font("Verdana", 12), bText, new Point(20, 0));
+                if ((i > 25))
+                {
+                    g.TranslateTransform(160, 0);
+                }
+
+                if ((i > 50))
+                {
+                    g.TranslateTransform(320, 0);
+                }
+                g.TranslateTransform(0, 30);
+                i = i + 1;
+                j = j + 1;
+            }
+            tabPageT2_3.Invalidate();
+        }
+
+        private void groupBoxM2_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Brush bText = new SolidBrush(Color.Black);
+            int w = 12;
+            int h = 12;
+            int i = 1;
+            g.TranslateTransform(10, 20);
+            g.DrawString((M2AutoDictionary[1] == 0) ? "par. receta OFF" : "par. receta ON", new Font("Verdana", 10), bText, new Point(0, 0));
+            g.TranslateTransform(0, 30);
+            //cycle counter
+            g.DrawString("ciclos " + M2AutoDictionary[2], new Font("Verdana", 10), bText, new Point(0, 0));
+            g.TranslateTransform(0, 30);
+            float value = float.Parse((M2AutoDictionary[3] / 100.0f).ToString());
+            g.DrawString("tiempo (s) " + value.ToString(), new Font("Verdana", 10), bText, new Point(0, 0));
+            
+            g.TranslateTransform(140, -54);
+            Rectangle r = new Rectangle(new Point(0, 0), new Size(6, 6));
+
+            string statusStr = "";
+            if (M2AutoDictionary[4] == -1)
+            {
+                g.DrawRectangle(pBlack, r);
+                g.FillRectangle(bBlack, r);
+                statusStr = "sin conexión";
+            }
+            if (M2AutoDictionary[4] == 0)
+            {
+                g.DrawRectangle(pRed, r);
+                g.FillRectangle(bRed, r);
+                statusStr = "emergencia";
+            }
+            if (M2AutoDictionary[4] == 1)
+            {
+                g.DrawRectangle(pc1, r);
+                g.FillRectangle(bc1, r);
+                statusStr = "automatico";
+            }
+            if (M2AutoDictionary[4] == 2)
+            {
+                g.DrawRectangle(pOrange, r);
+                g.FillRectangle(bOrange, r);
+                statusStr = "manual";
+            }
+            if (M2AutoDictionary[4] == 3)
+            {
+                g.DrawRectangle(pc2, r);
+                g.FillRectangle(bc2, r);
+                statusStr = "en ciclo";
+            }
+            if (M2AutoDictionary[4] == 4)
+            {
+                g.DrawRectangle(pDarkOrange, r);
+                g.FillRectangle(bDarkOrange, r);
+                statusStr = "en alarma";
+            }
+            g.DrawString(statusStr, new Font("Verdana", 10), bText, new Point(10, -5));
+            //groupBoxM2.Invalidate();
+        }
+
+        private void groupBoxM4_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Brush bText = new SolidBrush(Color.Black);
+            g.TranslateTransform(10, 20);
+            g.DrawString((M4AutoDictionary[1] == 0) ? "par. receta OFF" : "par. receta ON", new Font("Verdana", 10), bText, new Point(0, 0));
+            g.TranslateTransform(0, 30);
+            //cycle counter
+            g.DrawString("ciclos " + M4AutoDictionary[2], new Font("Verdana", 10), bText, new Point(0, 0));
+            g.TranslateTransform(0, 30);
+            float value = float.Parse((M4AutoDictionary[3] / 100.0f).ToString());
+            g.DrawString("tiempo (s) " + value.ToString(), new Font("Verdana", 10), bText, new Point(0, 0));
+
+            g.TranslateTransform(140, -54);
+            Rectangle r = new Rectangle(new Point(0, 0), new Size(6, 6));
+
+            string statusStr = "";
+            if (M4AutoDictionary[4] == -1)
+            {
+                g.DrawRectangle(pBlack, r);
+                g.FillRectangle(bBlack, r);
+                statusStr = "sin conexión";
+            }
+            if (M4AutoDictionary[4] == 0)
+            {
+                g.DrawRectangle(pRed, r);
+                g.FillRectangle(bRed, r);
+                statusStr = "emergencia";
+            }
+            if (M4AutoDictionary[4] == 1)
+            {
+                g.DrawRectangle(pc1, r);
+                g.FillRectangle(bc1, r);
+                statusStr = "automatico";
+            }
+            if (M4AutoDictionary[4] == 2)
+            {
+                g.DrawRectangle(pOrange, r);
+                g.FillRectangle(bOrange, r);
+                statusStr = "manual";
+            }
+            if (M4AutoDictionary[4] == 3)
+            {
+                g.DrawRectangle(pc2, r);
+                g.FillRectangle(bc2, r);
+                statusStr = "en ciclo";
+            }
+            if (M4AutoDictionary[4] == 4)
+            {
+                g.DrawRectangle(pDarkOrange, r);
+                g.FillRectangle(bDarkOrange, r);
+                statusStr = "en alarma";
+            }
+            g.DrawString(statusStr, new Font("Verdana", 10), bText, new Point(10, -5));
+            //groupBoxM4.Invalidate();
+        }
+
+        private void groupBoxM5_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Brush bText = new SolidBrush(Color.Black);
+            g.TranslateTransform(10, 20);
+//            g.DrawString((M5AutoDictionary[1] == 0) ? "par. receta OFF" : "par. receta ON", new Font("Verdana", 10), bText, new Point(0, 0));
+//            g.TranslateTransform(0, 30);
+            //cycle counter
+            g.DrawString("ciclos " + M5AutoDictionary[2], new Font("Verdana", 10), bText, new Point(0, 0));
+            g.TranslateTransform(0, 30);
+            float value = float.Parse((M5AutoDictionary[3] / 100.0f).ToString());
+            g.DrawString("tiempo (s) " + value.ToString(), new Font("Verdana", 10), bText, new Point(0, 0));
+            g.TranslateTransform(0, 30);
+            value = float.Parse((M5AutoDictionary[5] / 100.0f).ToString());
+            g.DrawString("tiempo (s) " + value.ToString(), new Font("Verdana", 10), bText, new Point(0, 0));
+
+            g.TranslateTransform(140, -54);
+            Rectangle r = new Rectangle(new Point(0, 0), new Size(6, 6));
+
+            string statusStr = "";
+            if (M5AutoDictionary[4] == -1)
+            {
+                g.DrawRectangle(pBlack, r);
+                g.FillRectangle(bBlack, r);
+                statusStr = "sin conexión";
+            }
+            if (M5AutoDictionary[4] == 0)
+            {
+                g.DrawRectangle(pRed, r);
+                g.FillRectangle(bRed, r);
+                statusStr = "emergencia";
+            }
+            if (M5AutoDictionary[4] == 1)
+            {
+                g.DrawRectangle(pc1, r);
+                g.FillRectangle(bc1, r);
+                statusStr = "automatico";
+            }
+            if (M5AutoDictionary[4] == 2)
+            {
+                g.DrawRectangle(pOrange, r);
+                g.FillRectangle(bOrange, r);
+                statusStr = "manual";
+            }
+            if (M5AutoDictionary[4] == 3)
+            {
+                g.DrawRectangle(pc2, r);
+                g.FillRectangle(bc2, r);
+                statusStr = "en ciclo";
+            }
+            if (M5AutoDictionary[4] == 4)
+            {
+                g.DrawRectangle(pDarkOrange, r);
+                g.FillRectangle(bDarkOrange, r);
+                statusStr = "en alarma";
+            }
+            g.DrawString(statusStr, new Font("Verdana", 10), bText, new Point(10, -5));
+            //groupBoxM5.Invalidate();
+        }
+
+        private void tabPageT0_2_1_Paint(object sender, PaintEventArgs e)
+        {
+            //Graphics g = e.Graphics;
+            //Pen pExt = new Pen(Color.LightGray, 5);
+            //Brush pText = new SolidBrush(Color.Black);
+            //Rectangle rM1 = new Rectangle(new Point(20, 80), new Size(260, 200));
+            //g.DrawRectangle(pExt, rM1);
+            //g.DrawString("refiladora", new Font("Verdana", 10), pText, new Point(20, 60));
+
+            //Rectangle rM2 = new Rectangle(new Point(300, 80), new Size(200, 200));
+            //g.DrawString("tampografia intierna", new Font("Verdana", 10), pText, new Point(300, 60));
+            //g.DrawRectangle(pExt, rM2);
+
+            //Rectangle rM3 = new Rectangle(new Point(540, 80), new Size(200, 200));
+            //g.DrawString("tampografia extierna", new Font("Verdana", 10), pText, new Point(540, 60));
+            //g.DrawRectangle(pExt, rM3);
+
+
+            //tabPageT0_2_1.Invalidate();
+        }
+
+        private void groupBoxM6_Paint(object sender, PaintEventArgs e)
+        {            
+            Graphics g = e.Graphics;
+            Brush bText = new SolidBrush(Color.Black);
+            g.TranslateTransform(10, 20);
+            g.DrawString((M6AutoDictionary[1] == 0) ? "par. receta OFF" : "par. receta ON", new Font("Verdana", 10), bText, new Point(0, 0));            
+
+            g.TranslateTransform(140, -54);
+            Rectangle r = new Rectangle(new Point(0, 0), new Size(6, 6));
+
+            string statusStr = "";
+            if (M6AutoDictionary[4] == -1)
+            {
+                g.DrawRectangle(pBlack, r);
+                g.FillRectangle(bBlack, r);
+                statusStr = "sin conexión";
+            }
+            if (M6AutoDictionary[4] == 0)
+            {
+                g.DrawRectangle(pRed, r);
+                g.FillRectangle(bRed, r);
+                statusStr = "emergencia";
+            }
+            if (M6AutoDictionary[4] == 1)
+            {
+                g.DrawRectangle(pc1, r);
+                g.FillRectangle(bc1, r);
+                statusStr = "automatico";
+            }
+            if (M6AutoDictionary[4] == 2)
+            {
+                g.DrawRectangle(pOrange, r);
+                g.FillRectangle(bOrange, r);
+                statusStr = "manual";
+            }
+            if (M6AutoDictionary[4] == 3)
+            {
+                g.DrawRectangle(pc2, r);
+                g.FillRectangle(bc2, r);
+                statusStr = "en ciclo";
+            }
+            if (M6AutoDictionary[4] == 4)
+            {
+                g.DrawRectangle(pDarkOrange, r);
+                g.FillRectangle(bDarkOrange, r);
+                statusStr = "en alarma";
+            }
+            g.DrawString(statusStr, new Font("Verdana", 10), bText, new Point(10, -5));
+            //groupBoxM6.Invalidate();
+        }
+
+        private void groupBoxM3_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            Brush bText = new SolidBrush(Color.Black);
+
+            g.DrawString((M3AutoDictionary[1] == 0) ? "par. receta OFF" : "par. receta ON", new Font("Verdana", 10), bText, new Point(10, 90));
+            //cycle counter
+            g.DrawString("ciclos " + M3AutoDictionary[2], new Font("Verdana", 10), bText, new Point(10, 110));
+            //cycle time 1
+            g.DrawString("tiempo (s)", new Font("Verdana", 10), bText, new Point(195, 12));                        
+            float value = float.Parse((M3AutoDictionary[3] / 100.0f).ToString());
+            g.DrawString(value.ToString(), new Font("Verdana", 10), bText, new Point(195, 30));
+            value = float.Parse((M3AutoDictionary[5] / 100.0f).ToString());
+            g.DrawString(value.ToString(), new Font("Verdana", 10), bText, new Point(195, 60));
+
+            Rectangle r = new Rectangle(new Point(165, 100), new Size(6, 6));
+
+            string statusStr = "";
+            if (M3AutoDictionary[4] == -1)
+            {
+                g.DrawRectangle(pBlack, r);
+                g.FillRectangle(bBlack, r);
+                statusStr = "sin conexión";
+            }
+            if (M3AutoDictionary[4] == 0)
+            {
+                g.DrawRectangle(pRed, r);
+                g.FillRectangle(bRed, r);
+                statusStr = "emergencia";
+            }
+            if (M3AutoDictionary[4] == 1)
+            {
+                g.DrawRectangle(pc1, r);
+                g.FillRectangle(bc1, r);
+                statusStr = "automatico";
+            }
+            if (M3AutoDictionary[4] == 2)
+            {
+                g.DrawRectangle(pOrange, r);
+                g.FillRectangle(bOrange, r);
+                statusStr = "manual";
+            }
+            if (M3AutoDictionary[4] == 3)
+            {
+                g.DrawRectangle(pc2, r);
+                g.FillRectangle(bc2, r);
+                statusStr = "en ciclo";
+            }
+            if (M3AutoDictionary[4] == 4)
+            {
+                g.DrawRectangle(pDarkOrange, r);
+                g.FillRectangle(bDarkOrange, r);
+                statusStr = "en alarma";
+            }
+            g.DrawString(statusStr, new Font("Verdana", 10), bText, new Point(175, 95));
+            //groupBoxM3.Invalidate();
+        }
+
+        private async void numericUpDownM2ExitBeltTimer_ValueChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM2AutoTimerExitBelt";
+
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM2ExitBeltTimer.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private async void numericUpDownM3TimerExitBelt_ValueChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM3AutoTimerExitBelt";
+
+                var sendResult = await ccService.Send(keyToSend, float.Parse(numericUpDownM3TimerExitBelt.Value.ToString()));
+
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
             }
         }
 
 
 
+        private async void buttonV1Up_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1PosV1Up";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private async void buttonV1Down_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM1PosV1Down";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private async void buttonV2up_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM2PosV2Up";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private async void buttonV2down_Click(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected)
+            {
+                string keyToSend = "pcM2PosV2Down";
+
+                var sendResult = await ccService.Send(keyToSend, true);
+
+                if (sendResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private void radioButtonMRecipeTopSel2_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxM4TopLineRecipe.Enabled = (radioButtonMRecipeTopSel2.Checked) ? true : false;
+        }
+
+        private void radioButtonMRecipeMedioSel1_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxM4MedioLineRecipe.Enabled = (radioButtonMRecipeMedioSel1.Checked) ? false : true;
+            if (radioButtonMRecipeMedioSel1.Checked) textBoxM4MedioLineRecipe.Text = "___________________";
+        }
+
+        private void radioButtonMRecipeMedioSel2_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxM4MedioLineRecipe.Enabled = (radioButtonMRecipeMedioSel2.Checked) ? true : false;
+        }
+
+        private void radioButtonMRecipeBottomSel1_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxM4BottomLineRecipe.Enabled = (radioButtonMRecipeBottomSel1.Checked) ? false : true;
+            if (radioButtonMRecipeBottomSel1.Checked) textBoxM4MedioLineRecipe.Text = "___________________";
+        }
+
+        private void radioButtonMRecipeBottomSel2_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxM4BottomLineRecipe.Enabled = (radioButtonMRecipeBottomSel2.Checked) ? true : false;
+        }
+
+        private void radioButtonM4Sel1Top_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxLaserLine1New.Enabled = (radioButtonM4Sel1Top.Checked) ? false : true;
+            if (radioButtonM4Sel1Top.Checked) textBoxLaserLine1New.Text = "___________________";
+        }
+
+        private void radioButtonM4Sel2Top_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxLaserLine1New.Enabled = (radioButtonM4Sel2Top.Checked) ? true : false;
+        }
+
+        private void radioButtonM4Sel1Medio_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxLaserLine12New.Enabled = (radioButtonM4Sel1Medio.Checked) ? false : true;
+            if (radioButtonM4Sel1Medio.Checked) textBoxLaserLine12New.Text = "___________________";
+        }
+
+        private void radioButtonM4Sel2Medio_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxLaserLine12New.Enabled = (radioButtonM4Sel2Medio.Checked) ? true : false;
+        }
+
+        private void radioButtonM4Sel1Bottom_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxLaserLine2New.Enabled = (radioButtonM4Sel1Bottom.Checked) ? false : true;
+            if (radioButtonM4Sel1Bottom.Checked) textBoxLaserLine2New.Text = "___________________";
+        }
+
+        private void radioButtonM4Sel2Bottom_CheckedChanged(object sender, EventArgs e)
+        {
+            textBoxLaserLine2New.Enabled = (radioButtonM4Sel2Bottom.Checked) ? true : false;
+        }
+
+        private async void comboBoxInj_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected == false) return;
+            if (comboBoxAutoPrgName.Text == "") return;
+            M4PrgName = comboBoxAutoPrgName.Text;
+            //string modelName = prgName.Substring(2, 4);
+            string prgName = comboBoxAutoPrgName.Text;
+            
+            string modelName = prgName.Substring(2, 4);
+            //get data from DB
+            MySqlResult<recipies>  recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+            if ((recs.Error == 0) & (recs.Result.Count != 0))
+            {
+                //send recipe
+                string keyValue = "pcM4Param1";
+                var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m4_param1.ToString()));
+                //labelM4Param1Value.Text = recs.Result[0].m4_param1.ToString();
+                M4AutoDictionary[1] = short.Parse(recs.Result[0].m4_param1.ToString());
+                string keyToSend = "pcM4ProgramName";
+
+                var readResult = await ccService.Send(keyToSend, "");
+                if (readResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+
+                keyToSend = "pcM4ProgramName";
+
+                readResult = await ccService.Send(keyToSend, M4PrgName);
+                if (readResult.OpcResult)
+                {
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padLaser, "programa enviado exitosamente " + M4PrgName);
+                }
+                else
+                {
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padLaser, "error en enviar programa " + readResult.NodeString);
+                }
+
+                string top = "";
+                string medium = "";
+                string bottom = "";
+
+                //selection code
+                if (recs.Result[0].m4_param2.Substring(0, 1).Equals("0"))
+                {
+                    top = recs.Result[0].m4_param3.ToString();
+                }
+                else top = DateTime.Now.ToString("dd-MM-yyyy");
+
+                if (recs.Result[0].m4_param2.Substring(1, 1).Equals("0"))
+                {
+                    medium = recs.Result[0].m4_param4.ToString();
+                }
+                else medium = DateTime.Now.ToString("dd-MM-yyyy");
+
+                if (recs.Result[0].m4_param2.Substring(2, 1).Equals("0"))
+                {
+                    bottom = recs.Result[0].m4_param5.ToString();
+                }
+                else bottom = DateTime.Now.ToString("dd-MM-yyyy");
+                string shift = comboBoxShift.Text;
+                //sned to padlaser
+                WritePadLaserRecipe(top, Properties.Settings.Default.PadLaserFilePathTop);
+                WritePadLaserRecipe(medium , Properties.Settings.Default.PadLaserFilePathMedium);
+                WritePadLaserRecipe(comboBoxInj.Text + " " + bottom + " " + shift, Properties.Settings.Default.PadLaserFilePathBottom);
+
+                groupBoxM4.Text = "laser " + M4PrgName;
+            }
+            else
+            {
+                //db error manage
+            }
+
+        }
+
+        private async void comboBoxShift_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ccService.ClientIsConnected == false) return;
+            if (comboBoxAutoPrgName.Text == "") return;
+            M4PrgName = comboBoxAutoPrgName.Text;
+            //string modelName = prgName.Substring(2, 4);
+            string prgName = comboBoxAutoPrgName.Text;
+
+            string modelName = prgName.Substring(2, 4);
+            //get data from DB
+            MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+            if ((recs.Error == 0) & (recs.Result.Count != 0))
+            {
+                //send recipe
+                string keyValue = "pcM4Param1";
+                var sendResult = await ccService.Send(keyValue, short.Parse(recs.Result[0].m4_param1.ToString()));
+                //labelM4Param1Value.Text = recs.Result[0].m4_param1.ToString();
+                M4AutoDictionary[1] = short.Parse(recs.Result[0].m4_param1.ToString());
+                string keyToSend = "pcM4ProgramName";
+
+                var readResult = await ccService.Send(keyToSend, "");
+                if (readResult.OpcResult)
+                {
+
+                }
+                else
+                {
+
+                }
+
+                keyToSend = "pcM4ProgramName";
+
+                readResult = await ccService.Send(keyToSend, M4PrgName);
+                if (readResult.OpcResult)
+                {
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.padLaser, "programa enviado exitosamente " + M4PrgName);
+                }
+                else
+                {
+                    AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.padLaser, "error en enviar programa " + readResult.NodeString);
+                }
+
+                string top = "";
+                string medium = "";
+                string bottom = "";
+
+                //selection code
+                if (recs.Result[0].m4_param2.Substring(0, 1).Equals("0"))
+                {
+                    top = recs.Result[0].m4_param3.ToString();
+                }
+                else top = DateTime.Now.ToString("dd-MM-yyyy");
+
+                if (recs.Result[0].m4_param2.Substring(1, 1).Equals("0"))
+                {
+                    medium = recs.Result[0].m4_param4.ToString();
+                }
+                else medium = DateTime.Now.ToString("dd-MM-yyyy");
+
+                if (recs.Result[0].m4_param2.Substring(2, 1).Equals("0"))
+                {
+                    bottom = recs.Result[0].m4_param5.ToString();
+                }
+                else bottom = DateTime.Now.ToString("dd-MM-yyyy");
+                string shift = comboBoxShift.Text;
+                //sned to padlaser
+                WritePadLaserRecipe(top, Properties.Settings.Default.PadLaserFilePathTop);
+                WritePadLaserRecipe(medium, Properties.Settings.Default.PadLaserFilePathMedium);
+                WritePadLaserRecipe(comboBoxInj.Text + " " + bottom + " " + shift, Properties.Settings.Default.PadLaserFilePathBottom);
+
+                groupBoxM4.Text = "laser " + M4PrgName;
+            }
+            else
+            {
+                //db error manage
+            }
 
 
-
-
-
-
-        //private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        //{
-        //    if ((e.ColumnIndex == 1) && (e.RowIndex >= 0))
-        //    {
-        //        System.Drawing.Image img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\notinalarm.png");
-        //        e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-        //        if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].ToolTipText == "notinalarm")
-        //        {
-        //            img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\notinalarm.png");
-        //        }
-        //        else
-        //        {
-        //            img = new Bitmap(Properties.Settings.Default.ImagesFilepath + "\\inalarm.png");
-        //        }
-        //        var w = 24;// img.Width;
-        //        var h = 24;// img.Height;
-        //        var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
-        //        var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
-
-        //        e.Graphics.DrawImage(img, new Rectangle(x, y, w, h));
-        //        e.Handled = true;
-        //    }
-        //}
-
-
+        }
     }    
-
-        
 }
