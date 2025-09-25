@@ -1,42 +1,44 @@
 ﻿using FutureServerCore;
 using FutureServerCore.Core;
+using GUI.Properties;
+using LidorSystems.IntegralUI.Containers;
+using log4net;
+using MySql.Data;
+using MySql.Data.MySqlClient;
+using Newtonsoft.Json.Linq;
+using Opc.UaFx;
+using OpcCustom;
+using PPAUtils;
 using Robot;
 using RSACommon;
+using RSACommon.Configuration;
+using RSACommon.Event;
+using RSACommon.GraphicsForm;
+using RSACommon.Points;
+using RSACommon.ProgramParser;
+using RSACommon.Service;
+using RSACommon.WebApiDefinitions;
+using RSAInterface;
+using RSAInterface.Logger;
+using RSAPoints.ConcretePoints;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Diagnostics;
-using WebApi;
-using RSAInterface.Logger;
-using RSACommon.WebApiDefinitions;
-using LidorSystems.IntegralUI.Containers;
-using System.IO;
-using System.Web.UI.WebControls;
-using log4net;
 using System.Threading;
-using RSACommon.GraphicsForm;
-using GUI.Properties;
-using RSACommon.Event;
-using Newtonsoft.Json.Linq;
+using System.Threading.Tasks;
 using System.Timers;
-using Opc.UaFx;
-using OpcCustom;
-using RSACommon.Service;
-using RSACommon.Configuration;
-using RSACommon.ProgramParser;
-using RSACommon.Points;
-using RSAPoints.ConcretePoints;
+using System.Web.UI.WebControls;
+using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Linq;
+using WebApi;
 using xDialog;
-using PPAUtils;
-using MySql.Data;
-using MySql.Data.MySqlClient;
-using RSAInterface;
 
 namespace GUI
 {
@@ -131,6 +133,13 @@ namespace GUI
         public Pen pc2 = new Pen(Color.FromArgb(107, 227, 162), 10);
         public Brush bc2 = new SolidBrush(Color.FromArgb(107, 227, 162));
 
+        private ContextMenuStrip languageMenu;
+        private string currentLanguage = "es";
+
+        private string currentLanguageCode = "en";
+
+        private Dictionary<string, Dictionary<string, string>> translations;
+
         public enum Priority
         {
             normal = 0,
@@ -149,7 +158,7 @@ namespace GUI
             line = 6
         }
         public FormApp(SplashScreen splashScreen)
-        {            
+        {
             _splashScreen = splashScreen;
             _splashScreen?.WriteOnTextboxAsync($"Initialization...");
 
@@ -158,6 +167,8 @@ namespace GUI
             InitCore();
 
             InitializeComponent();
+
+            InitializeLanguageMenu();
 
             InitGUI();
 
@@ -206,7 +217,7 @@ namespace GUI
                 StandardProgramParser standardParser = new StandardProgramParser();
                 progRS.SetProgramParser(standardParser);
                 //await progRS.LoadProgramAsync<PointAxis>();
-                
+
             }
 
             listFound = myCore.FindPerType(typeof(MySQLService));
@@ -225,7 +236,7 @@ namespace GUI
                 ccService.SetObjectData(new PlasticOpcClientConfig().Config());
             }
 
-            myCore?.Start();            
+            myCore?.Start();
 
             _splashScreen?.WriteOnTextboxAsync($"Core Configuration ended");
             _splashScreen?.WriteOnTextboxAsync($"Core Started");
@@ -245,11 +256,15 @@ namespace GUI
             guiConfigurator.LoadFromFile("guiconfig.xml", Configurator.FileType.Xml);
             RefreshModelNameComboBox();
             InitGUISettings();
-            inputConfigurator.LoadFromFile("inputconfig.xml", Configurator.FileType.Xml);
-            outputConfigurator.LoadFromFile("outputconfig.xml", Configurator.FileType.Xml);
+            //inputConfigurator.LoadFromFile("inputconfig.xml", Configurator.FileType.Xml);
+            inputConfigurator.LoadFromFile("inputLocalizationConfig.xml", Configurator.FileType.Xml);
+            //outputConfigurator.LoadFromFile("outputconfig.xml", Configurator.FileType.Xml);
+            outputConfigurator.LoadFromFile("outputLocalizationConfig.xml", Configurator.FileType.Xml);
 
             alarmsConfigurator.LoadFromFile("alarmsconfig.xml", Configurator.FileType.Xml);
             autoConfigurator.LoadFromFile("autoconfig.xml", Configurator.FileType.Xml);
+
+            LoadSavedLanguage();
 
             #region (* init datagridviewM1 *)
             dataGridViewM1TeachPoints.Rows.Add(4);
@@ -362,26 +377,24 @@ namespace GUI
             dataGridViewM3TestPoints.ClearSelection();
             #endregion
 
-            
+
 
             #region(* init tabControlMain *)
             tabControlMain.SelectedPage = tabPageT0;
             if (M3InLine == "1")
             {
-                tabPageT4.Enabled = true;
                 groupBoxM3.Visible = true;
                 groupBoxM6.Visible = true;
             }
             else
             {
-                tabPageT4.Enabled = false;
                 groupBoxM3.Visible = false;
                 groupBoxM6.Visible = false;
             }
             #endregion
 
-                #region(* init T0 *)
-                TimeZone zone = TimeZone.CurrentTimeZone;
+            #region(* init T0 *)
+            TimeZone zone = TimeZone.CurrentTimeZone;
             DateTime local = zone.ToLocalTime(DateTime.Now);
             toolStripStatusLabelDateTime.Text = local.ToString();
             toolStripStatusLabelSN.Text = Properties.Settings.Default.RSASN;
@@ -402,7 +415,7 @@ namespace GUI
 
             //DateTime value = DateTime.Now;
             int i = 1;
-            for(i = 1; i<=48;i++)
+            for (i = 1; i <= 48; i++)
             {
                 M1InputDictionary.Add(i, false);
                 M1OutputDictionary.Add(i, false);
@@ -414,7 +427,7 @@ namespace GUI
                 M4OutputDictionary.Add(i, false);
                 M5InputDictionary.Add(i, false);
                 M5OutputDictionary.Add(i, false);
-            }          
+            }
 
             for (i = 1; i <= 64; i++)
             {
@@ -490,7 +503,7 @@ namespace GUI
                 LidorSystems.IntegralUI.Containers.TabPage parentPage = this.tabControlMain.SelectedPage;
 
                 if (parentPage.Pages.Count != 0) nextPage = parentPage.Pages[0];
-            //    else nextPage = this.tabControlMain.SelectedPage;
+                //    else nextPage = this.tabControlMain.SelectedPage;
                 if (nextPage != null)
                 {
 
@@ -520,22 +533,11 @@ namespace GUI
 
                 if (parentPage.Index == 3)
                 {
-                    //padint tab
-                    //carico il programma in TEACH
-                    comboBoxM2TeachProgramList.Text = M2PrgName;
-                    M2TeachLoadProgram();
-                    //carico il programma in TEST
-                    comboBoxM2TestProgramList.Text = M2PrgName;
-                    M2TestLoadProgram();
-                }
-
-                if (parentPage.Index == 6)
-                {
                     //ask user to close application
                     this.WindowState = FormWindowState.Minimized;
                 }
 
-                if (parentPage.Index == 7)
+                if (parentPage.Index == 4)
                 {
                     //ask user to close application
                     DialogResult res = xDialog.MsgBox.Show("Está seguro de que desea salir de la aplicación?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
@@ -561,7 +563,7 @@ namespace GUI
             guiConfigurator.AddValue("T0", "M3PRGNAME1", comboBoxM3PrgName_st1.Text, true);
             guiConfigurator.AddValue("T0", "M3PRGNAME2", comboBoxM3PrgName_st2.Text, true);
             guiConfigurator.AddValue("T0", "AUTOPRGNAME", comboBoxAutoPrgName.Text, true);
-            guiConfigurator.AddValue("T0", "M1INC", (checkBoxM1Inclusion.CheckState == CheckState.Checked)?"1":"0", true);
+            guiConfigurator.AddValue("T0", "M1INC", (checkBoxM1Inclusion.CheckState == CheckState.Checked) ? "1" : "0", true);
             guiConfigurator.AddValue("T0", "M2INC", (checkBoxM2Inclusion.CheckState == CheckState.Checked) ? "1" : "0", true);
             guiConfigurator.AddValue("T0", "M3INC", (checkBoxM3Inclusion.CheckState == CheckState.Checked) ? "1" : "0", true);
             guiConfigurator.AddValue("T0", "M4INC", (checkBoxM4Inclusion.CheckState == CheckState.Checked) ? "1" : "0", true);
@@ -575,7 +577,7 @@ namespace GUI
             guiConfigurator.AddValue("T1_1", "JOGSPEED", numericUpDownM1JogSpeed.Value.ToString(), true);
             guiConfigurator.AddValue("T1_1", "MANUALQUOTE", numericUpDownM1ManualQuote.Value.ToString(), true);
             guiConfigurator.AddValue("T1_1", "MANUALSPEED", numericUpDownM1ManualSpeed.Value.ToString(), true);
-            
+
             guiConfigurator.AddValue("T1_2", "PRGNAME", comboBoxM1TestProgramList.Text, true);
             guiConfigurator.AddValue("T1_2", "RECIPENAME", comboBoxM1TestRecipeName.Text, true);
 
@@ -583,7 +585,7 @@ namespace GUI
             guiConfigurator.AddValue("T2_1", "RECIPENAME", comboBoxM2TeachRecipeName.Text, true);
             guiConfigurator.AddValue("T2_1", "JOGSPEED", numericUpDownM2JogSpeed.Value.ToString(), true);
             guiConfigurator.AddValue("T2_1", "MANUALQUOTE", numericUpDownM2ManualQuote.Value.ToString(), true);
-            
+
             guiConfigurator.AddValue("T2_1", "MANUALSPEED", numericUpDownM2ManualSpeed.Value.ToString(), true);
 
             guiConfigurator.AddValue("T2_2", "PRGNAME", comboBoxM2TestProgramList.Text, true);
@@ -594,7 +596,7 @@ namespace GUI
             guiConfigurator.AddValue("T3_1", "JOGSPEED", numericUpDownM3JogSpeed.Value.ToString(), true);
             guiConfigurator.AddValue("T3_1", "MANUALQUOTE", numericUpDownM3ManualQuote.Value.ToString(), true);
             guiConfigurator.AddValue("T3_1", "MANUALSPEED", numericUpDownM3ManualSpeed.Value.ToString(), true);
-            
+
             guiConfigurator.AddValue("T3_2", "PRGNAME", comboBoxM3TestProgramList.Text, true);
             guiConfigurator.AddValue("T3_2", "RECIPENAME", comboBoxM3TestRecipeName.Text, true);
             guiConfigurator.AddValue("LOGIN", "PWD", loginPassword, true);
@@ -626,7 +628,7 @@ namespace GUI
             SendStationRGM3ToOpc(M3PrgName1, M3PrgName2);
             SendSizeFromM1ProgramToOpc();
             M4PrgName = comboBoxAutoPrgName.Text;
-            checkBoxM1Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M1INC", "") == "1")?CheckState.Checked:CheckState.Unchecked;
+            checkBoxM1Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M1INC", "") == "1") ? CheckState.Checked : CheckState.Unchecked;
             checkBoxM2Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M2INC", "") == "1") ? CheckState.Checked : CheckState.Unchecked;
             checkBoxM3Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M3INC", "") == "1") ? CheckState.Checked : CheckState.Unchecked;
             checkBoxM4Inclusion.CheckState = (guiConfigurator.GetValue("T0", "M4INC", "") == "1") ? CheckState.Checked : CheckState.Unchecked;
@@ -643,12 +645,12 @@ namespace GUI
             RestartRequestFromM1();
             comboBoxM1TeachProgramList.Text = M1PrgName;
             comboBoxM1TestProgramList.Text = M1PrgName;
-            M1TeachLoadProgram();            
+            M1TeachLoadProgram();
             M1TestLoadProgram();
             RestartRequestFromM2();
             comboBoxM2TeachProgramList.Text = M2PrgName;
             comboBoxM2TestProgramList.Text = M2PrgName;
-            M2TeachLoadProgram();            
+            M2TeachLoadProgram();
             M2TestLoadProgram();
             RestartRequestFromM3();
             RestartRequestFromM4();
@@ -674,9 +676,9 @@ namespace GUI
             {
                 keyToSend = "pcM6ONPercentage";
                 var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM6OnPercentage.Value.ToString()));
-            }        
+            }
 
-          
+
 
             numericUpDownM1JogSpeed.Value = Convert.ToDecimal(guiConfigurator.GetValue("T1_1", "JOGSPEED", "10"));
             if (ccService.ClientIsConnected)
@@ -684,7 +686,7 @@ namespace GUI
                 keyToSend = "pcM1JogSpeed";
                 var sendResult = await ccService.Send(keyToSend, short.Parse(numericUpDownM1JogSpeed.Value.ToString()));
             }
-            
+
             numericUpDownM1ManualQuote.Value = Convert.ToDecimal(guiConfigurator.GetValue("T1_1", "MANUALQUOTE", "10"));
             if (ccService.ClientIsConnected)
             {
@@ -886,7 +888,7 @@ namespace GUI
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
@@ -923,7 +925,7 @@ namespace GUI
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
@@ -1004,6 +1006,7 @@ namespace GUI
 
         private void RefreshModelNameComboBox()
         {
+            return;
             #region (* refresh combobox model name list *)
             List<string> mList = new List<string>();
             List<string> dList = new List<string>();
@@ -1072,7 +1075,7 @@ namespace GUI
 
             string top = GetTopFromPadLaserAddNewRecipe();
             string medium = GetMediumFromPadLaserAddNewRecipe();
-            string bottom = GetBottomFromPadLaserAddNewRecipe();            
+            string bottom = GetBottomFromPadLaserAddNewRecipe();
 
             object[] value = new object[]
                    {
@@ -1085,7 +1088,7 @@ namespace GUI
                     (checkBoxM2Param1.CheckState == CheckState.Checked)?1:0,
                     0,
                     //M3 params
-                    (checkBoxM3Param1.CheckState == CheckState.Checked)?1:0,                    
+                    (checkBoxM3Param1.CheckState == CheckState.Checked)?1:0,
                     (radioButtonFootOrderOpt1.Checked)?1:2,
                     //M4 params
                     //m4_param1
@@ -1214,7 +1217,7 @@ namespace GUI
             seloption = seloption + ((radioButtonMRecipeMedioSel1.Checked) ? "1" : "0");
             seloption = seloption + ((radioButtonMRecipeBottomSel1.Checked) ? "1" : "0");
 
-            return seloption; 
+            return seloption;
         }
 
         private int GetSelOptionTopBottomUpdateRecipe()
@@ -1245,7 +1248,7 @@ namespace GUI
 
         private async void comboBoxM3PrgName_st1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (ccService.ClientIsConnected == false) return;            
+            if (ccService.ClientIsConnected == false) return;
             if (comboBoxM3PrgName_st1.Text == "") return;
             //get model name
             string prgName = comboBoxM3PrgName_st1.Text;
@@ -1253,7 +1256,7 @@ namespace GUI
             string modelName = prgName.Substring(2, 4);
 
             //check model name
-            if (modelName == "" )
+            if (modelName == "")
             {
                 //program name with incorrect format
                 //todo add message to the operator
@@ -1408,7 +1411,7 @@ namespace GUI
             {
                 //manage db error
             }
-        }     
+        }
 
         private void ResetM1Datagrid()
         {
@@ -1587,7 +1590,7 @@ namespace GUI
             else xDialog.MsgBox.Show("sin conexión", "PBoot", xDialog.MsgBox.Buttons.OK, xDialog.MsgBox.Icon.Exclamation, xDialog.MsgBox.AnimateStyle.FadeIn);
         }
 
-     
+
 
         private async void radioButtonFootOrderOpt1Test_CheckedChanged(object sender, EventArgs e)
         {
@@ -1657,7 +1660,7 @@ namespace GUI
                 {
                     string keyValue = "pcM1Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m1_param1.ToString()));
-                    M1AutoDictionary[1] = short.Parse(recs.Result[0].m1_param1.ToString());                    
+                    M1AutoDictionary[1] = short.Parse(recs.Result[0].m1_param1.ToString());
 
                     //send quote, speed
                     var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
@@ -1715,8 +1718,8 @@ namespace GUI
                 chkValue = (M1inc == "1") ? true : false;
 
                 var sendResult = await ccService.Send(keyToSend, chkValue);
-            } 
-        }     
+            }
+        }
 
         public async void UpdateRecipeToM1(string modelName)
         {
@@ -1863,7 +1866,7 @@ namespace GUI
                     else bottom = DateTime.Now.ToString("dd-MM-yyyy");
                     shift = comboBoxShift.Text;
                     WritePadLaserRecipe(top, Properties.Settings.Default.PadLaserFilePathTop);
-                    WritePadLaserRecipe(medium , Properties.Settings.Default.PadLaserFilePathMedium);
+                    WritePadLaserRecipe(medium, Properties.Settings.Default.PadLaserFilePathMedium);
                     WritePadLaserRecipe(comboBoxInj.Text + " " + bottom + " " + shift, Properties.Settings.Default.PadLaserFilePathBottom);
                 }
             }
@@ -1881,7 +1884,7 @@ namespace GUI
                 //get data from DB
                 MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
 
-                if ( (recs.Result.Count != 0))
+                if ((recs.Result.Count != 0))
                 {
                     string keyValue = "pcM6Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m6_param1.ToString()));
@@ -1890,7 +1893,7 @@ namespace GUI
                     M6AutoDictionary[1] = short.Parse(recs.Result[0].m6_param1.ToString());
                 }
             }
-        }       
+        }
 
         public async void RestartRequestFromM2()
         {
@@ -1916,12 +1919,12 @@ namespace GUI
                 //get data from DB
                 MySqlResult<recipies> recs = mysqlService.DBTable[0].SelectByPrimaryKey<recipies>(modelName);
 
-                if ( (recs.Result.Count != 0))
+                if ((recs.Result.Count != 0))
                 {
                     string keyValue = "pcM2Param1";
                     var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m2_param1.ToString()));
                     M2AutoDictionary[1] = short.Parse(recs.Result[0].m2_param1.ToString());
-                   // WriteOnLabelAsync(labelM2Param1Value, recs.Result[0].m2_param1.ToString());
+                    // WriteOnLabelAsync(labelM2Param1Value, recs.Result[0].m2_param1.ToString());
 
                     //send quote, speed
                     var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
@@ -1980,7 +1983,7 @@ namespace GUI
 
                 var sendResult = await ccService.Send(keyToSend, chkValue);
             }
-        }     
+        }
 
         public async void RestartRequestFromM3()
         {
@@ -2006,10 +2009,10 @@ namespace GUI
                 //get data from DB
                 MySqlResult<recipies> recs = mysqlService.DBTable[0].SelectByPrimaryKey<recipies>(modelName);
 
-                if ( (recs.Result.Count != 0))
+                if ((recs.Result.Count != 0))
                 {
                     string keyValue = "pcM3Param1";
-                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param1.ToString()));                   
+                    var sendResult1 = await ccService.Send(keyValue, short.Parse(recs.Result[0].m3_param1.ToString()));
                     M3AutoDictionary[1] = short.Parse(recs.Result[0].m3_param1.ToString());
 
                     keyValue = "pcM3Param2";
@@ -2067,67 +2070,67 @@ namespace GUI
                 }
             }
 
-                if (M3PrgName2 == "" || ccService.ClientIsConnected == false)
-                {
+            if (M3PrgName2 == "" || ccService.ClientIsConnected == false)
+            {
 
+            }
+            else
+            {
+                string prgName = M3PrgName2;
+                string modelName = prgName.Substring(2, 4);
+
+                //check model name
+                if (modelName == "")
+                {
+                    //program name with incorrect format
+                    //todo add message to the operator
+                    return;
                 }
-                else
+
+                //get data from DB
+                MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+
+                if ((recs.Error == 0) & (recs.Result.Count != 0))
                 {
-                    string prgName = M3PrgName2;
-                    string modelName = prgName.Substring(2, 4);
+                    //send quote, speed
+                    var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
 
-                    //check model name
-                    if (modelName == "")
+                    if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
                     {
-                        //program name with incorrect format
-                        //todo add message to the operator
-                        return;
-                    }
-
-                    //get data from DB
-                    MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
-
-                    if ((recs.Error == 0) & (recs.Result.Count != 0))
-                    {
-                        //send quote, speed
-                        var dummyS = myCore.FindPerType(typeof(ReadProgramsService));
-
-                        if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
+                        ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
+                        ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
+                        objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + prgName + config.Extensions[0]);
+                        if (objPoints != null)
                         {
-                            ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
-                            ConcretePointsContainer<PointAxis> objPoints = new ConcretePointsContainer<PointAxis>("xxxx");
-                            objPoints = (ConcretePointsContainer<PointAxis>)await progRS.LoadProgramByNameAsync<PointAxis>(config.ProgramsPath[2] + "\\" + prgName + config.Extensions[0]);
-                            if (objPoints != null)
-                            {
-                                List<string> keys = new List<string>()
+                            List<string> keys = new List<string>()
                             {
                                 "pcM3AutoQuoteSt2",
                                 "pcM3AutoSpeedSt2"
                             };
 
-                                List<object> values = new List<object>()
+                            List<object> values = new List<object>()
                             {
                                 new float[] { 0, (float)objPoints.Points[0].Q1, (float)objPoints.Points[0].Q2, (float)objPoints.Points[0].Q3, (float)objPoints.Points[0].Q4},
                                 new short[] { 0, (short)objPoints.Points[0].V1, (short)objPoints.Points[0].V2, (short)objPoints.Points[0].V3, (short)objPoints.Points[0].V4}
                             };
 
-                                var sendResults = await ccService.Send(keys, values);
+                            var sendResults = await ccService.Send(keys, values);
 
-                                foreach (var result in sendResults)
+                            foreach (var result in sendResults)
+                            {
+                                if (result.Value.OpcResult)
                                 {
-                                    if (result.Value.OpcResult)
-                                    {
-                                    }
-                                    else
-                                    {
-                                        //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
-                                    }
+                                }
+                                else
+                                {
+                                    //AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "error sending " + result.Value.NodeString);
                                 }
                             }
                         }
                     }
+                }
 
-                    string keyToSend = null;
+                string keyToSend = null;
                 bool chkValue = false;
 
                 keyToSend = "pcM3Inclusion";
@@ -2135,7 +2138,7 @@ namespace GUI
 
                 var sendResult = await ccService.Send(keyToSend, chkValue);
             }
-        }   
+        }
 
         public async void RestartRequestFromM4()
         {
@@ -2200,7 +2203,7 @@ namespace GUI
 
                     string shift = comboBoxShift.Text;
                     WritePadLaserRecipe(top, Properties.Settings.Default.PadLaserFilePathTop);
-                    WritePadLaserRecipe(medium , Properties.Settings.Default.PadLaserFilePathMedium);
+                    WritePadLaserRecipe(medium, Properties.Settings.Default.PadLaserFilePathMedium);
                     WritePadLaserRecipe(comboBoxInj.Text + " " + bottom + " " + shift, Properties.Settings.Default.PadLaserFilePathBottom);
                 }
 
@@ -2214,7 +2217,7 @@ namespace GUI
 
             }
         }
-  
+
 
         public async void RestartRequestFromM5()
         {
@@ -2259,7 +2262,7 @@ namespace GUI
 
 
             }
-        }     
+        }
 
         public async void RestartRequestFromM6()
         {
@@ -2302,7 +2305,7 @@ namespace GUI
                 var sendResult = await ccService.Send(keyToSend, chkValue);
 
             }
-        }    
+        }
 
         private async void comboBoxMRecipeName_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -2322,7 +2325,7 @@ namespace GUI
                 textBoxModifyDescription.Text = recs.Result[0].m_description.ToString();
 
                 //aggiornare controlli
-                if (recs.Result[0].m4_param2.Substring(0,1) == "0")
+                if (recs.Result[0].m4_param2.Substring(0, 1) == "0")
                 {
                     radioButtonMRecipeTopSel1.Checked = false;
                     radioButtonMRecipeTopSel2.Checked = true;
@@ -2358,7 +2361,7 @@ namespace GUI
                     radioButtonMRecipeBottomSel2.Checked = false;
                 }
 
-                textBoxM4TopLineRecipe.Text = recs.Result[0].m4_param3.ToString();                
+                textBoxM4TopLineRecipe.Text = recs.Result[0].m4_param3.ToString();
                 textBoxM4BottomLineRecipe.Text = recs.Result[0].m4_param4.ToString();
                 textBoxM4MedioLineRecipe.Text = recs.Result[0].m4_param5.ToString();
             }
@@ -2418,7 +2421,7 @@ namespace GUI
             UpdateRecipeToM2(comboBoxMRecipeName.Text);
             UpdateRecipeToM3(comboBoxMRecipeName.Text);
             string shift = comboBoxShift.Text;
-            UpdateRecipeToM4(comboBoxMRecipeName.Text, shift);            
+            UpdateRecipeToM4(comboBoxMRecipeName.Text, shift);
             UpdateRecipeToM6(comboBoxMRecipeName.Text);
             RefreshModelNameComboBox();
         }
@@ -2484,7 +2487,7 @@ namespace GUI
         }
 
         private async void buttonMRecipeDeleteAll_Click(object sender, EventArgs e)
-        {            
+        {
             //update recipe
             DialogResult res = xDialog.MsgBox.Show("Are you sure you want to DELETE all recipies?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
             if (res == DialogResult.Yes)
@@ -2508,11 +2511,11 @@ namespace GUI
             //update recipe
             DialogResult res = xDialog.MsgBox.Show("Are you sure you want to DELETE recipe?", "PBoot", xDialog.MsgBox.Buttons.YesNo);
             if (res == DialogResult.Yes)
-            {               
+            {
                 MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(comboBoxMRecipeName.Text);
 
                 if ((recs.Error == 0) & (recs.Result.Count != 0))
-                {                
+                {
                     mysqlService.DBTable[0].DeleteRowPrimaryKey(comboBoxMRecipeName.Text);
                     comboBoxMRecipeName.Text = "";
                 }
@@ -2611,7 +2614,7 @@ namespace GUI
                 comboBoxM3TeachRecipeName.Text = comboBoxT0RecipeName.Text;
                 comboBoxM3TestRecipeName.Text = comboBoxT0RecipeName.Text;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
@@ -2875,7 +2878,7 @@ namespace GUI
 
         private void radioButtonMRecipeTopSel1_CheckedChanged(object sender, EventArgs e)
         {
-            textBoxM4TopLineRecipe.Enabled = (radioButtonMRecipeTopSel1.Checked)?false:true;
+            textBoxM4TopLineRecipe.Enabled = (radioButtonMRecipeTopSel1.Checked) ? false : true;
             if (radioButtonMRecipeTopSel1.Checked) textBoxM4TopLineRecipe.Text = "___________________";
         }
 
@@ -2906,7 +2909,9 @@ namespace GUI
                 }
                 string tmp1 = "M1" + "_INPUT";
                 string tmp2 = i.ToString();
-                g.DrawString(inputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                //g.DrawString(inputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                string localizedText = inputConfigurator.GetValueWithLanguage(tmp1, tmp2, currentLanguageCode, "");
+                g.DrawString(localizedText, new Font("Verdana", 10), bText, new Point(20, 0));
                 if (i < 1024)
                     g.TranslateTransform(0, 30);
                 else if (i == 1024)
@@ -2922,8 +2927,8 @@ namespace GUI
                 i = i + 1;
             }
             tabPageT1_3.Invalidate();
-        
-            }
+
+        }
 
         private void tabPageT1_4_Paint(object sender, PaintEventArgs e)
         {
@@ -2952,7 +2957,9 @@ namespace GUI
                 }
                 string tmp1 = "M1" + "_OUTPUT";
                 string tmp2 = i.ToString();
-                g.DrawString(outputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                //g.DrawString(outputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
+                string localizedText = outputConfigurator.GetValueWithLanguage(tmp1, tmp2, currentLanguageCode, "");
+                g.DrawString(localizedText, new Font("Verdana", 10), bText, new Point(20, 0));
                 if (i < 2024)
                     g.TranslateTransform(0, 30);
                 else if (i == 2024)
@@ -2961,193 +2968,13 @@ namespace GUI
                     g.TranslateTransform(360, 10);
                 }
                 else
-                {  
+                {
                     g.TranslateTransform(0, 30);
 
                 }
                 i = i + 1;
             }
             tabPageT1_4.Invalidate();
-        }
-
-        private void tabPageT2_2_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
-            Pen pExt = new Pen(Color.Black, 10);
-            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
-            Brush bExt = new SolidBrush(Color.Black);
-            Brush bText = new SolidBrush(Color.Black);
-            int w = 12;
-            int h = 12;
-            int i = 1001;
-            g.TranslateTransform(10, 10);
-
-            foreach (KeyValuePair<int, bool> entry in M4InputDictionary)
-            {
-                if (entry.Value == true)
-                {
-                    g.DrawEllipse(pInc, 0, 0, w, h);
-                    g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
-                }
-                else
-                {
-                    g.DrawEllipse(pExt, 0, 0, w, h);
-                    g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
-                }
-                string tmp1 = "M4" + "_INPUT";
-                string tmp2 = i.ToString();
-                g.DrawString(inputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
-                if (i < 1024)
-                    g.TranslateTransform(0, 30);
-                else if (i == 1024)
-                {
-                    g.ResetTransform();
-                    g.TranslateTransform(360, 10);
-                }
-                else
-                {
-                    g.TranslateTransform(0, 30);
-
-                }
-                i = i + 1;
-            }
-            tabPageT2_2.Invalidate();
-        }
-
-        private void tabPageT2_3_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
-            Pen pExt = new Pen(Color.Black, 10);
-            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
-            Brush bExt = new SolidBrush(Color.Black);
-            Brush bText = new SolidBrush(Color.Black);
-            int w = 12;
-            int h = 12;
-            int i = 2001;
-            g.TranslateTransform(10, 10);
-
-            foreach (KeyValuePair<int, bool> entry in M4OutputDictionary)
-            {
-                if (entry.Value == true)
-                {
-                    g.DrawEllipse(pInc, 0, 0, w, h);
-                    g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
-                }
-                else
-                {
-                    g.DrawEllipse(pExt, 0, 0, w, h);
-                    g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
-                }
-                string tmp1 = "M4" + "_OUTPUT";
-                string tmp2 = i.ToString();
-                g.DrawString(outputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
-                if (i < 2024)
-                    g.TranslateTransform(0, 30);
-                else if (i == 2024)
-                {
-                    g.ResetTransform();
-                    g.TranslateTransform(360, 10);
-                }
-                else
-                {
-                    g.TranslateTransform(0, 30);
-
-                }
-                i = i + 1;
-            }
-            tabPageT2_3.Invalidate();
-        }
-
-        private void tabPageT3_3_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
-            Pen pExt = new Pen(Color.Black, 10);
-            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
-            Brush bExt = new SolidBrush(Color.Black);
-            Brush bText = new SolidBrush(Color.Black);
-            int w = 12;
-            int h = 12;
-            int i = 1001;
-            g.TranslateTransform(10, 10);
-
-            foreach (KeyValuePair<int, bool> entry in M2InputDictionary)
-            {
-                if (entry.Value == true)
-                {
-                    g.DrawEllipse(pInc, 0, 0, w, h);
-                    g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
-                }
-                else
-                {
-                    g.DrawEllipse(pExt, 0, 0, w, h);
-                    g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
-                }
-                string tmp1 = "M2" + "_INPUT";
-                string tmp2 = i.ToString();
-                g.DrawString(inputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
-                if (i < 1024)
-                    g.TranslateTransform(0, 30);
-                else if (i == 1024)
-                {
-                    g.ResetTransform();
-                    g.TranslateTransform(360, 10);
-                }
-                else
-                {
-                    g.TranslateTransform(0, 30);
-
-                }
-                i = i + 1;
-            }
-            tabPageT3_3.Invalidate();
-        }
-
-        private void tabPageT3_4_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
-            Pen pExt = new Pen(Color.Black, 10);
-            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
-            Brush bExt = new SolidBrush(Color.Black);
-            Brush bText = new SolidBrush(Color.Black);
-            int w = 12;
-            int h = 12;
-            int i = 2001;
-            g.TranslateTransform(10, 10);
-
-            foreach (KeyValuePair<int, bool> entry in M2OutputDictionary)
-            {
-                if (entry.Value == true)
-                {
-                    g.DrawEllipse(pInc, 0, 0, w, h);
-                    g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
-                }
-                else
-                {
-                    g.DrawEllipse(pExt, 0, 0, w, h);
-                    g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
-                }
-                string tmp1 = "M2" + "_OUTPUT";
-                string tmp2 = i.ToString();
-                g.DrawString(outputConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
-                if (i < 2024)
-                    g.TranslateTransform(0, 30);
-                else if (i == 2024)
-                {
-                    g.ResetTransform();
-                    g.TranslateTransform(360, 10);
-                }
-                else
-                {
-                    g.TranslateTransform(0, 30);
-
-                }
-                i = i + 1;
-            }
-            tabPageT3_4.Invalidate();
         }
 
         public bool CheckProgramSyntaxName(string prgName)
@@ -3360,7 +3187,7 @@ namespace GUI
                         MySqlResult recd = mysqlService.DBTable[1].DeleteRowPrimaryKey(prgName);
                     }
                     xDialog.MsgBox.Show("todos los programas de la LASER con receta " + comboBoxRecipeDelete.Text + " eliminados.", "PBoot", xDialog.MsgBox.Buttons.OK);
-                }                
+                }
             }
         }
 
@@ -3402,7 +3229,7 @@ namespace GUI
                         "S2",
                         "S3",
                         "S4",
-                        "T1",                        
+                        "T1",
                        };
 
                     //check if it's present
@@ -3436,40 +3263,40 @@ namespace GUI
             {
                 ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
                 pList = progRS.GetProgram(config.ProgramsPath[0], config.Extensions, comboBoxRecipeDelete.Text);
-                
+
                 if (pList != null)
                 {
                     foreach (IObjProgram prgName in pList)
-                    {                        
+                    {
                         prgNameList.Add(prgName.ProgramName);
                     }
                 }
 
                 pList = progRS.GetProgram(config.ProgramsPath[1], config.Extensions, comboBoxRecipeDelete.Text);
-               
+
                 if (pList != null)
                 {
                     foreach (IObjProgram prgName in pList)
-                    {                       
+                    {
                         prgNameList.Add(prgName.ProgramName);
                     }
                 }
                 pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxRecipeDelete.Text);
-               
+
                 if (pList != null)
                 {
                     foreach (IObjProgram prgName in pList)
-                    {                       
+                    {
                         prgNameList.Add(prgName.ProgramName);
                     }
                 }
 
                 pList = progRS.GetProgram(config.ProgramsPath[2], config.Extensions, comboBoxRecipeDelete.Text);
-              
+
                 if (pList != null)
                 {
                     foreach (IObjProgram prgName in pList)
-                    {                      
+                    {
                         prgNameList.Add(prgName.ProgramName);
                     }
                 }
@@ -3500,7 +3327,7 @@ namespace GUI
                 List<string> prgNameList = new List<string>();
 
                 if (dummyS != null && dummyS.Count > 0 && dummyS[0] is ReadProgramsService progRS)
-                {                    
+                {
                     ReadProgramsConfiguration config = progRS.Configuration as ReadProgramsConfiguration;
 
                     //DELETE program with destination
@@ -3670,7 +3497,7 @@ namespace GUI
                     AddMessageToDataGridOnTop(DateTime.Now, Priority.high, Machine.trimmer, "revisa el programa " + M1PrgName);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
@@ -3754,7 +3581,7 @@ namespace GUI
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
@@ -3838,7 +3665,8 @@ namespace GUI
                 {
                     //db error manage
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
 
             }
@@ -3872,15 +3700,15 @@ namespace GUI
 
         private void UpdateGUIByUser()
         {
-            tabPageT0_5.Enabled = (loginLevel == "Operador") ? false : true;           
-        }      
+            tabPageT0_5.Enabled = (loginLevel == "Operador") ? false : true;
+        }
 
         private void buttonSwitchOperator_Click(object sender, EventArgs e)
         {
             loginLevel = "Operador";
             labelUserLogin.Text = loginLevel;
             UpdateGUIByUser();
-            AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.line, "usuario actual: Operador");            
+            AddMessageToDataGridOnTop(DateTime.Now, Priority.normal, Machine.line, "usuario actual: Operador");
         }
 
         private void buttonAdminLogin_Click(object sender, EventArgs e)
@@ -3931,132 +3759,6 @@ namespace GUI
         private void buttonCancel_Click(object sender, EventArgs e)
         {
             groupBoxLogin.Visible = false;
-        }
-
-        private void tabPageT2_4_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
-            Pen pExt = new Pen(Color.Red, 10);
-            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
-            Brush bExt = new SolidBrush(Color.Red);
-            Brush bText = new SolidBrush(Color.Black);
-            int w = 12;
-            int h = 12;
-            int i = 1;
-            g.TranslateTransform(10, 10);
-
-            foreach (KeyValuePair<int, short> entry in M4AlarmsDictionary)
-            {
-                if ((i <= 8) || ((i > 32) & (i < 39)))
-                {
-                    if (entry.Value == 0)
-                    {
-                        g.DrawEllipse(pInc, 0, 0, w, h);
-                        g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
-                    }
-                    else
-                    {
-                        g.DrawEllipse(pExt, 0, 0, w, h);
-                        g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
-                    }
-                }
-                string tmp1 = "M4";
-                string tmp2 = "A" + i.ToString();
-
-                if (i <= 8)
-                {
-                    g.DrawString(alarmsConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
-                    g.DrawString("consulte el alarma " + tmp2 + " en el manual.", new Font("Verdana", 10), bText, new Point(300, 0));
-                    g.TranslateTransform(0, 30);
-                }
-                else if ((i > 32) & (i < 39))
-                {
-                    g.DrawString(alarmsConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
-                    g.DrawString("consulte el alarma " + tmp2 + " en el manual.", new Font("Verdana", 10), bText, new Point(300, 0));
-                    g.TranslateTransform(0, 30);
-
-                }
-                i = i + 1;
-            }
-
-            g.TranslateTransform(0, 100);
-
-            foreach (KeyValuePair<int, short> entry in M4StateDictionary)
-            {
-                string stateStr = "";
-                if (entry.Key == 1) stateStr = "fase del ciclo";
-                if (entry.Key == 2) stateStr = "fase del la banda de carga";
-                if (entry.Key == 3) stateStr = "fase del la banda de salida";
-
-                g.DrawString(stateStr + " " + entry.Value, new Font("Verdana", 10), bText, new Point(0, 0));
-
-                g.TranslateTransform(0, 30);
-            }
-            tabPageT2_4.Invalidate();
-        }
-
-        private void tabPageT4_5_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
-            Pen pExt = new Pen(Color.Red, 10);
-            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
-            Brush bExt = new SolidBrush(Color.Red);
-            Brush bText = new SolidBrush(Color.Black);
-            int w = 12;
-            int h = 12;
-            int i = 1;
-            g.TranslateTransform(10, 10);
-
-            foreach (KeyValuePair<int, short> entry in M3AlarmsDictionary)
-            {
-                if ((i <= 11) || ((i > 32) & (i < 41)))
-                {
-                    if (entry.Value == 0)
-                    {
-                        g.DrawEllipse(pInc, 0, 0, w, h);
-                        g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
-                    }
-                    else
-                    {
-                        g.DrawEllipse(pExt, 0, 0, w, h);
-                        g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
-                    }
-                }
-                string tmp1 = "M3";
-                string tmp2 = "A" + i.ToString();
-
-                if (i <= 11)
-                {
-                    g.DrawString(alarmsConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
-                    g.DrawString("consulte el alarma " + tmp2 + " en el manual.", new Font("Verdana", 10), bText, new Point(380, 0));
-                    g.TranslateTransform(0, 30);
-                }
-                else if ((i > 32) & (i < 41))
-                {
-                    g.DrawString(alarmsConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
-                    g.DrawString("consulte el alarma " + tmp2 + " en el manual.", new Font("Verdana", 10), bText, new Point(380, 0));
-                    g.TranslateTransform(0, 30);
-
-                }
-                i = i + 1;
-            }
-
-            g.TranslateTransform(0, 80);
-
-            foreach (KeyValuePair<int, short> entry in M3StateDictionary)
-            {
-                string stateStr = "";
-                if (entry.Key == 1) stateStr = "fase del ciclo";
-                if (entry.Key == 2) stateStr = "fase del la banda de carga";
-                if (entry.Key == 3) stateStr = "fase del la banda de salida";
-
-                g.DrawString(stateStr + " " + entry.Value, new Font("Verdana", 10), bText, new Point(0, 0));
-
-                g.TranslateTransform(0, 30);
-            }
-            tabPageT4_5.Invalidate();
         }
 
         private void tabPageT5_4_Paint(object sender, PaintEventArgs e)
@@ -4124,78 +3826,15 @@ namespace GUI
             tabPageT5_4.Invalidate();
         }
 
-        private void tabPageT3_5_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-            Pen pInc = new Pen(Color.FromArgb(107, 227, 162), 10);
-            Pen pExt = new Pen(Color.Red, 10);
-            Brush bInc = new SolidBrush(Color.FromArgb(107, 227, 162));
-            Brush bExt = new SolidBrush(Color.Red);
-            Brush bText = new SolidBrush(Color.Black);
-            int i = 1;
-            int w = 12;
-            int h = 12;
-            g.TranslateTransform(10, 10);
-
-            foreach (KeyValuePair<int, short> entry in M2AlarmsDictionary)
-            {
-                if ((i <= 9) || ((i > 32) & (i < 39)))
-                {
-                    if (entry.Value == 0)
-                    {
-                        g.DrawEllipse(pInc, 0, 0, w, h);
-                        g.FillEllipse(bInc, new Rectangle(new Point(0, 0), new Size(w, h)));
-                    }
-                    else
-                    {
-                        g.DrawEllipse(pExt, 0, 0, w, h);
-                        g.FillEllipse(bExt, new Rectangle(new Point(0, 0), new Size(w, h)));
-                    }
-                }
-                string tmp1 = "M2";
-                string tmp2 = "A" + i.ToString();
-
-                if (i <= 9)
-                {
-                    g.DrawString(alarmsConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
-                    g.DrawString("consulte el alarma " + tmp2 + " en el manual.", new Font("Verdana", 10), bText, new Point(300, 0));
-                    g.TranslateTransform(0, 30);
-                }
-                else if ((i > 32) & (i < 39))
-                {
-                    g.DrawString(alarmsConfigurator.GetValue(tmp1, tmp2, ""), new Font("Verdana", 10), bText, new Point(20, 0));
-                    g.DrawString("consulte el alarma " + tmp2 + " en el manual.", new Font("Verdana", 10), bText, new Point(300, 0));
-                    g.TranslateTransform(0, 30);
-
-                }
-                i = i + 1;
-            }
-
-            g.TranslateTransform(0, 100);
-
-            foreach (KeyValuePair<int, short> entry in M2StateDictionary)
-            {
-                string stateStr = "";
-                if (entry.Key == 1) stateStr = "fase del ciclo";
-                if (entry.Key == 2) stateStr = "fase del la banda de carga";
-                if (entry.Key == 3) stateStr = "fase del la banda de salida";
-
-                g.DrawString(stateStr + " " + entry.Value, new Font("Verdana", 10), bText, new Point(0, 0));
-
-                g.TranslateTransform(0, 30);
-            }
-            tabPageT3_5.Invalidate();
-        }
-
         private void groupBoxM1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics g = e.Graphics;            
+            Graphics g = e.Graphics;
             Brush bText = new SolidBrush(Color.Black);
             int w = 12;
             int h = 12;
             int i = 1;
             g.TranslateTransform(10, 20);
-            g.DrawString((M1AutoDictionary[1] == 0)? "par. receta OFF" : "par. receta ON", new Font("Verdana", 10), bText, new Point(0, 0));
+            g.DrawString((M1AutoDictionary[1] == 0) ? "par. receta OFF" : "par. receta ON", new Font("Verdana", 10), bText, new Point(0, 0));
             g.TranslateTransform(0, 30);
             //cycle counter
             g.DrawString("ciclos " + M1AutoDictionary[2], new Font("Verdana", 10), bText, new Point(0, 0));
@@ -4203,10 +3842,10 @@ namespace GUI
             float value = float.Parse((M1AutoDictionary[3] / 100.0f).ToString());
             g.DrawString("tiempo (s) " + value.ToString(), new Font("Verdana", 10), bText, new Point(0, 0));
             g.TranslateTransform(140, -54);
-            Rectangle r = new Rectangle(new Point(0,0), new Size(6,6));
+            Rectangle r = new Rectangle(new Point(0, 0), new Size(6, 6));
 
             string statusStr = "";
-            if (M1AutoDictionary[4] == - 1)
+            if (M1AutoDictionary[4] == -1)
             {
                 g.DrawRectangle(pBlack, r);
                 g.FillRectangle(bBlack, r);
@@ -4243,7 +3882,7 @@ namespace GUI
                 statusStr = "en alarma";
             }
             g.DrawString(statusStr, new Font("Verdana", 10), bText, new Point(10, -5));
-            
+
         }
 
         private void checkboxKeyboardLogin_Click(object sender, EventArgs e)
@@ -4287,7 +3926,7 @@ namespace GUI
                 i = i + 1;
                 j = j + 1;
             }
-            tabPageT2_3.Invalidate();
+            //tabPageT2_3.Invalidate();
         }
 
         private void groupBoxM2_Paint(object sender, PaintEventArgs e)
@@ -4305,7 +3944,7 @@ namespace GUI
             g.TranslateTransform(0, 30);
             float value = float.Parse((M2AutoDictionary[3] / 100.0f).ToString());
             g.DrawString("tiempo (s) " + value.ToString(), new Font("Verdana", 10), bText, new Point(0, 0));
-            
+
             g.TranslateTransform(140, -54);
             Rectangle r = new Rectangle(new Point(0, 0), new Size(6, 6));
 
@@ -4412,8 +4051,8 @@ namespace GUI
             Graphics g = e.Graphics;
             Brush bText = new SolidBrush(Color.Black);
             g.TranslateTransform(10, 20);
-//            g.DrawString((M5AutoDictionary[1] == 0) ? "par. receta OFF" : "par. receta ON", new Font("Verdana", 10), bText, new Point(0, 0));
-//            g.TranslateTransform(0, 30);
+            //            g.DrawString((M5AutoDictionary[1] == 0) ? "par. receta OFF" : "par. receta ON", new Font("Verdana", 10), bText, new Point(0, 0));
+            //            g.TranslateTransform(0, 30);
             //cycle counter
             g.DrawString("ciclos " + M5AutoDictionary[2], new Font("Verdana", 10), bText, new Point(0, 0));
             g.TranslateTransform(0, 30);
@@ -4489,11 +4128,11 @@ namespace GUI
         }
 
         private void groupBoxM6_Paint(object sender, PaintEventArgs e)
-        {            
+        {
             Graphics g = e.Graphics;
             Brush bText = new SolidBrush(Color.Black);
             g.TranslateTransform(10, 20);
-            g.DrawString((M6AutoDictionary[1] == 0) ? "par. receta OFF" : "par. receta ON", new Font("Verdana", 10), bText, new Point(0, 0));            
+            g.DrawString((M6AutoDictionary[1] == 0) ? "par. receta OFF" : "par. receta ON", new Font("Verdana", 10), bText, new Point(0, 0));
 
             g.TranslateTransform(140, -54);
             Rectangle r = new Rectangle(new Point(0, 0), new Size(6, 6));
@@ -4548,7 +4187,7 @@ namespace GUI
             //cycle counter
             g.DrawString("ciclos " + M3AutoDictionary[2], new Font("Verdana", 10), bText, new Point(10, 110));
             //cycle time 1
-            g.DrawString("tiempo (s)", new Font("Verdana", 10), bText, new Point(195, 12));                        
+            g.DrawString("tiempo (s)", new Font("Verdana", 10), bText, new Point(195, 12));
             float value = float.Parse((M3AutoDictionary[3] / 100.0f).ToString());
             g.DrawString(value.ToString(), new Font("Verdana", 10), bText, new Point(195, 30));
             value = float.Parse((M3AutoDictionary[5] / 100.0f).ToString());
@@ -4780,10 +4419,10 @@ namespace GUI
             M4PrgName = comboBoxAutoPrgName.Text;
             //string modelName = prgName.Substring(2, 4);
             string prgName = comboBoxAutoPrgName.Text;
-            
+
             string modelName = prgName.Substring(2, 4);
             //get data from DB
-            MySqlResult<recipies>  recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
+            MySqlResult<recipies> recs = await mysqlService.DBTable[0].SelectByPrimaryKeyAsync<recipies>(modelName);
 
             if ((recs.Error == 0) & (recs.Result.Count != 0))
             {
@@ -4841,7 +4480,7 @@ namespace GUI
                 string shift = comboBoxShift.Text;
                 //sned to padlaser
                 WritePadLaserRecipe(top, Properties.Settings.Default.PadLaserFilePathTop);
-                WritePadLaserRecipe(medium , Properties.Settings.Default.PadLaserFilePathMedium);
+                WritePadLaserRecipe(medium, Properties.Settings.Default.PadLaserFilePathMedium);
                 WritePadLaserRecipe(comboBoxInj.Text + " " + bottom + " " + shift, Properties.Settings.Default.PadLaserFilePathBottom);
 
                 groupBoxM4.Text = "laser " + M4PrgName;
@@ -4933,5 +4572,114 @@ namespace GUI
 
 
         }
-    }    
+
+        private void InitializeLanguageMenu()
+        {
+            languageComboBox.DataSource = new[]
+            {
+                new { Code = "en", DisplayName = "English" },
+                new { Code = "it", DisplayName = "Italian" },
+                new { Code = "es", DisplayName = "Spanish" }
+            };
+            languageComboBox.DisplayMember = "DisplayName";
+            languageComboBox.ValueMember = "Code";
+
+            languageComboBox2.DataSource = new[]
+            {
+                new { Code = "en", DisplayName = "English" },
+                new { Code = "it", DisplayName = "Italian" },
+                new { Code = "es", DisplayName = "Spanish" }
+            };
+            languageComboBox2.DisplayMember = "DisplayName";
+            languageComboBox2.ValueMember = "Code";
+        }
+
+        public class Language
+        {
+            public string Code { get; set; }
+            public string DisplayName { get; set; }
+        }
+
+        private void comboBoxLanguageName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (languageComboBox.SelectedItem != null)
+            {
+                // Get selected language code
+                var selectedItem = languageComboBox.SelectedItem;
+                var codeProperty = selectedItem.GetType().GetProperty("Code");
+                if (codeProperty != null)
+                {
+                    currentLanguageCode = codeProperty.GetValue(selectedItem)?.ToString() ?? "en";
+
+                    // Save the language preference
+                    Properties.Settings.Default.SelectedLanguage = currentLanguageCode;
+                    Properties.Settings.Default.Save();
+
+                    // Simply refresh/repaint the tab to show new language
+                    tabPageT1_3.Invalidate();
+                }
+            }
+        }
+
+        private void LoadSavedLanguage()
+        {
+            try
+            {
+                string savedLanguage = Properties.Settings.Default.SelectedLanguage;
+                if (string.IsNullOrEmpty(savedLanguage))
+                {
+                    savedLanguage = "en"; // Default
+                }
+
+                currentLanguageCode = savedLanguage;
+
+                // Set combo box to saved language
+                for (int i = 0; i < languageComboBox.Items.Count; i++)
+                {
+                    var item = languageComboBox.Items[i];
+                    var item2 = languageComboBox2.Items[i];
+                    var codeProperty = item.GetType().GetProperty("Code");
+                    var codeProperty2 = item2.GetType().GetProperty("Code");
+
+                    if (codeProperty?.GetValue(item)?.ToString() == savedLanguage)
+                    {
+                        languageComboBox.SelectedIndex = i;
+                        break;
+                    }
+
+                    if (codeProperty2?.GetValue(item2)?.ToString() == savedLanguage)
+                    {
+                        languageComboBox2.SelectedIndex = i;
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading saved language: {ex.Message}");
+                currentLanguageCode = "en";
+            }
+        }
+
+        private void comboBoxLanguageName2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (languageComboBox2.SelectedItem != null)
+            {
+                // Get selected language code
+                var selectedItem = languageComboBox2.SelectedItem;
+                var codeProperty = selectedItem.GetType().GetProperty("Code");
+                if (codeProperty != null)
+                {
+                    currentLanguageCode = codeProperty.GetValue(selectedItem)?.ToString() ?? "en";
+
+                    // Save the language preference
+                    Properties.Settings.Default.SelectedLanguage = currentLanguageCode;
+                    Properties.Settings.Default.Save();
+
+                    // Simply refresh/repaint the tab to show new language
+                    tabPageT1_4.Invalidate();
+                }
+            }
+        }
+    }
 }

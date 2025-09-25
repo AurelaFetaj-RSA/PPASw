@@ -14,8 +14,8 @@ namespace GUI
         public IOpcClientConfigurator Config()
         {
             #region(* M1 OPCUA variables *)
-            ClientDataConfig.Add(new OpcObjectData("pcM1JogDown", $"ns=2;s=Tags.Rifilatrice/pc_jog_basso", typeof(bool)));
-            ClientDataConfig.Add(new OpcObjectData("pcM1JogUp", $"ns=2;s=Tags.Rifilatrice/pc_jog_alto", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1JogDown", $"ns=2;s=Tags.Rifilatrice/pc_jog_backward", typeof(bool)));
+            ClientDataConfig.Add(new OpcObjectData("pcM1JogUp", $"ns=2;s=Tags.Rifilatrice/pc_jog_forward", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM1JogSpeed", $"ns=2;s=Tags.Rifilatrice/pc_velocita_a_jog", typeof(short)));
             ClientDataConfig.Add(new OpcObjectData("pcM1QuoteStart", $"ns=2;s=Tags.Rifilatrice/pc_start_a_quota", typeof(bool)));
             ClientDataConfig.Add(new OpcObjectData("pcM1ResetServoAlarm", $"ns=2;s=Tags.Rifilatrice/pc_reset_allarme_servo", typeof(bool)));

@@ -2,168 +2,217 @@
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Xml.Linq;
 
 namespace GUI
 {
-	public sealed class Configurator
-	{
+    public sealed class Configurator
+    {
 
-		#region Declarations
-		
-		public DataTable Settings; //this is the main Table
+        #region Declarations
 
-		private string fileName = ""; //this is the filename that was loaded
+        public DataTable Settings; //this is the main Table
 
-		public enum FileType //this specifies if the file is an xml or an ini
-		{
-			Ini, Xml
-		}
+        private string fileName = ""; //this is the filename that was loaded
 
-		#endregion
+        public enum FileType //this specifies if the file is an xml or an ini
+        {
+            Ini, Xml
+        }
 
-		#region Public Methods
+        #endregion
 
-		public Configurator() //creates the settings
-		{
-			initializeDataTable();
-		}
+        #region Public Methods
 
-		public void LoadFromFile(string file, FileType ft) //loads settings from a file (xml or ini)
-		{
-			fileName = Path.GetFullPath(file); //saves the filename for future use
+        public Configurator() //creates the settings
+        {
+            initializeDataTable();
+        }
 
-			if (ft == FileType.Ini)
-				LoadFromIni();
-			else
-				LoadFromXml();
-		}
+        public void LoadFromFile(string file, FileType ft) //loads settings from a file (xml or ini)
+        {
+            fileName = Path.GetFullPath(file); //saves the filename for future use
 
-		public void AddValue(string Category, string Key, string Value, bool OverwriteExisting) //adds a new setting to the table
-		{
-			if (OverwriteExisting)
-			{
-				foreach (DataRow row in Settings.Rows.Cast<DataRow>().Where(row => (string) row[0] == Category && (string) row[1] == Key))
-				{
-					row[2] = Value;
-					return;
-				}
+            if (ft == FileType.Ini)
+                LoadFromIni();
+            else
+                LoadFromXml();
+        }
 
-				Settings.Rows.Add(Category, Key, Value);
-			}
-			else
-				Settings.Rows.Add(Category, Key, Value);
-		}
+        public void AddValue(string Category, string Key, string Value, bool OverwriteExisting) //adds a new setting to the table
+        {
+            if (OverwriteExisting)
+            {
+                foreach (DataRow row in Settings.Rows.Cast<DataRow>().Where(row => (string)row[0] == Category && (string)row[1] == Key))
+                {
+                    row[2] = Value;
+                    return;
+                }
 
-		public string GetValue(string Category, string Key, string DefaultValue) //gets a value or returns a default value
-		{
-			foreach (DataRow row in Settings.Rows.Cast<DataRow>().Where(row => (string)row[0] == Category && (string)row[1] == Key))
-			{
-				return (string)row[2];
-			}
+                Settings.Rows.Add(Category, Key, Value);
+            }
+            else
+                Settings.Rows.Add(Category, Key, Value);
+        }
 
-			return DefaultValue;
-		}
+        public string GetValue(string Category, string Key, string DefaultValue) //gets a value or returns a default value
+        {
+            foreach (DataRow row in Settings.Rows.Cast<DataRow>().Where(row => (string)row[0] == Category && (string)row[1] == Key))
+            {
+                return (string)row[2];
+            }
 
-		public void Save(FileType ft) //saves the file to the previously loaded file
-		{
-			//sorts the table for saving
+            return DefaultValue;
+        }
 
-			if (fileName == "") throw new FileNotFoundException("The file name was not previously defined");
+        public void Save(FileType ft) //saves the file to the previously loaded file
+        {
+            //sorts the table for saving
 
-			DataView dv = Settings.DefaultView;
-			dv.Sort = "Category asc";
-			DataTable sortedDT = dv.ToTable();
+            if (fileName == "") throw new FileNotFoundException("The file name was not previously defined");
 
-			if (ft == FileType.Xml)
-				sortedDT.WriteXml(fileName);
-			else
-			{
-				StreamWriter sw = new StreamWriter(fileName);
+            DataView dv = Settings.DefaultView;
+            dv.Sort = "Category asc";
+            DataTable sortedDT = dv.ToTable();
 
-				string lastCategory ="";
+            if (ft == FileType.Xml)
+                sortedDT.WriteXml(fileName);
+            else
+            {
+                StreamWriter sw = new StreamWriter(fileName);
 
-				foreach (DataRow row in sortedDT.Rows)
-				{
-					if ((string) row[0] != lastCategory)
-					{
-						lastCategory = (string) row[0];
-						sw.WriteLine("[" + lastCategory + "]");
-					}
+                string lastCategory = "";
 
-					sw.WriteLine((string) row[1] + "=" + (string)row[2]);
-				}
+                foreach (DataRow row in sortedDT.Rows)
+                {
+                    if ((string)row[0] != lastCategory)
+                    {
+                        lastCategory = (string)row[0];
+                        sw.WriteLine("[" + lastCategory + "]");
+                    }
 
-				sw.Close();
-			}
-		}
+                    sw.WriteLine((string)row[1] + "=" + (string)row[2]);
+                }
 
-		public void Save(string file, FileType ft) //saves the file to a file
-		{
-			fileName = Path.GetFullPath(file); //saves the filename for future use
+                sw.Close();
+            }
+        }
 
-			Save(ft);
-		}
+        public void Save(string file, FileType ft) //saves the file to a file
+        {
+            fileName = Path.GetFullPath(file); //saves the filename for future use
 
- 
+            Save(ft);
+        }
 
-		#endregion
 
-		#region Private Methods
+        public string GetValueWithLanguage(string category, string key, string languageCode, string defaultValue = "")
+        {
+            try
+            {
+                XDocument xmlDoc = XDocument.Load("inputLocalizationConfig.xml");
 
-		private void LoadFromIni() //loads settings from ini
-		{
-			if (!File.Exists(fileName))return;
+                XDocument xmlDoc2 = XDocument.Load("outputLocalizationConfig.xml");
 
-			StreamReader sr = new StreamReader(fileName); //stream reader that will read the settings
+                var setting = xmlDoc.Descendants("Settings")
+                    .FirstOrDefault(s =>
+                        s.Element("Category")?.Value == category &&
+                        s.Element("SettingKey")?.Value == key);
 
-			string currentCategory = ""; //holds the category we're at
+                var setting2 = xmlDoc2.Descendants("Settings")
+                    .FirstOrDefault(s =>
+                        s.Element("Category")?.Value == category &&
+                        s.Element("SettingKey")?.Value == key);
 
-			while (!sr.EndOfStream) //goes through the file
-			{
-				string currentLine = sr.ReadLine(); //reads the current file
+                if (setting != null)
+                {
+                    var langElement = setting.Descendants("Lang")
+                        .FirstOrDefault(lang => lang.Attribute("code")?.Value == languageCode);
 
-				if (currentLine.Length < 3) continue; //checks that the line is usable
+                    if (langElement != null)
+                    {
+                        return langElement.Value;
+                    }
+                }
 
-				if (currentLine.StartsWith("[") && currentLine.EndsWith("]")) //checks if the line is a category marker
-				{
-					currentCategory = currentLine.Substring(1, currentLine.Length - 2);
-					continue;
-				}
+                if (setting2 != null)
+                {
+                    var langElement = setting2.Descendants("Lang")
+                        .FirstOrDefault(lang => lang.Attribute("code")?.Value == languageCode);
 
-				if (!currentLine.Contains("=")) continue; //or an actual setting
+                    if (langElement != null)
+                    {
+                        return langElement.Value;
+                    }
+                }
 
-				string currentKey = currentLine.Substring(0, currentLine.IndexOf("=", StringComparison.Ordinal));
+                return defaultValue;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting localized value: {ex.Message}");
+                return defaultValue;
+            }
+        }
 
-				string currentValue = currentLine.Substring(currentLine.IndexOf("=", StringComparison.Ordinal) + 1);
+        #endregion
 
-				AddValue(currentCategory, currentKey, currentValue, true);
-			}
+        #region Private Methods
 
-			sr.Close(); //closes the stream
-		}
+        private void LoadFromIni() //loads settings from ini
+        {
+            if (!File.Exists(fileName)) return;
 
-		private void LoadFromXml() //loads the settings from an xml file
-		{
-			try
-			{
-				Settings.ReadXml(fileName);
-			}
-			catch(Exception Exception)
+            StreamReader sr = new StreamReader(fileName); //stream reader that will read the settings
+
+            string currentCategory = ""; //holds the category we're at
+
+            while (!sr.EndOfStream) //goes through the file
+            {
+                string currentLine = sr.ReadLine(); //reads the current file
+
+                if (currentLine.Length < 3) continue; //checks that the line is usable
+
+                if (currentLine.StartsWith("[") && currentLine.EndsWith("]")) //checks if the line is a category marker
+                {
+                    currentCategory = currentLine.Substring(1, currentLine.Length - 2);
+                    continue;
+                }
+
+                if (!currentLine.Contains("=")) continue; //or an actual setting
+
+                string currentKey = currentLine.Substring(0, currentLine.IndexOf("=", StringComparison.Ordinal));
+
+                string currentValue = currentLine.Substring(currentLine.IndexOf("=", StringComparison.Ordinal) + 1);
+
+                AddValue(currentCategory, currentKey, currentValue, true);
+            }
+
+            sr.Close(); //closes the stream
+        }
+
+        private void LoadFromXml() //loads the settings from an xml file
+        {
+            try
+            {
+                Settings.ReadXml(fileName);
+            }
+            catch (Exception Exception)
             {
 
             }
-		}
+        }
 
-		private void initializeDataTable() //re-initializes the table with the proper columns
-		{
-			Settings = new DataTable {TableName = "Settings"};
+        private void initializeDataTable() //re-initializes the table with the proper columns
+        {
+            Settings = new DataTable { TableName = "Settings" };
 
             Settings.Columns.Add("Category", typeof(string));
             Settings.Columns.Add("SettingKey", typeof(string));
-			Settings.Columns.Add("SettingsValue", typeof(string));
-		}
+            Settings.Columns.Add("SettingsValue", typeof(string));
+        }
 
-		#endregion
+        #endregion
 
-	}
+    }
 }

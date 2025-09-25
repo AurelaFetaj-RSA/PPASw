@@ -35,5 +35,8 @@
     <Setting Name="PadLaserFilePathMedium" Type="System.String" Scope="User">
       <Value Profile="(Default)">\\172.31.20.90\PRODUCTION\recipe_from_pc_medium.txt</Value>
     </Setting>
+    <Setting Name="SelectedLanguage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">en</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
